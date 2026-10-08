@@ -59,6 +59,7 @@ powerpoint_sample_evidence = "migration/powerpoint-sample-acceptance.json"
 dark_surface_evidence = "migration/dark-surface-regression.json"
 powerpoint_metadata_evidence = "migration/powerpoint-metadata-repair.json"
 editor_target_evidence = "migration/editor-target-acceptance.json"
+git_publication_evidence = "migration/git-publication.json"
 
 [agent]
 read_first = ["AGENTS.md", "Logos-And-Theming.manifest.toml", "Project-Proposal.md", "Project-README.md"]

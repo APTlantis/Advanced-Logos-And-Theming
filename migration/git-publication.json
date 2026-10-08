@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-08",
+  "remote": "https://github.com/APTlantis/Advanced-Logos-And-Theming.git",
+  "branch": "Cobra",
+  "operator_authorized_history_conversion": true,
+  "original_head": "d4b7c6ae04a83968335dc4ff9f8cccd325512ac4",
+  "converted_head": "682e9e45222eea8587679544b55f9caaaa09976a",
+  "backup": {
+    "path": "output/git-recovery/before-lfs-2026-10-08.bundle",
+    "git_bundle_verify": "passed; complete history"
+  },
+  "archive": {
+    "path": "migration/archives/aptlantis-logos.zip",
+    "size": 599298196,
+    "sha256": "e2e73341a5321fec383e5e834b079e7feb0b09d1603fc0a6934d0ae261d13886",
+    "original_and_hydrated_hash_equal": true,
+    "git_lfs_fsck": "passed"
+  },
+  "publication": "LFS upload and Cobra push succeeded",
+  "verification": {
+    "remote_branch_head": "682e9e45222eea8587679544b55f9caaaa09976a",
+    "local_head_and_origin_equal": true,
+    "git_lfs_fsck_after_push": "passed",
+    "lfs_upload": "100% (1/1), 599 MB, completed",
+    "force_push": false,
+    "scope": "Source repository publication only; no theme installation, activation or marketplace publication."
+  }
+}
