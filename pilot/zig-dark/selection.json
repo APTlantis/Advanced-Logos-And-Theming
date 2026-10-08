@@ -1,0 +1,17 @@
+{
+  "canonical": {
+    "weighted_mean_oklab_distance": 0.020904322504826246,
+    "max_sample_oklab_distance": 0.10370174034740423,
+    "minimum_palette_spacing": 0.03919461205882244,
+    "coverage": "normalized visible pixel sample",
+    "limitation": "Coverage and spacing do not establish aesthetic quality"
+  },
+  "previous": {
+    "weighted_mean_oklab_distance": 0.027404365038083668,
+    "max_sample_oklab_distance": 0.15224424208909298,
+    "minimum_palette_spacing": 0.01394393312004912,
+    "coverage": "normalized visible pixel sample",
+    "limitation": "Coverage and spacing do not establish aesthetic quality"
+  },
+  "comparison_sha256": "4a10942b4cf608e040000c023986170cc283ac55af736cb0ff8bc5d95e9e0f4c"
+}

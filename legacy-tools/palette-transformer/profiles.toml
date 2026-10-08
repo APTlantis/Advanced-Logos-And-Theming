@@ -1,0 +1,23 @@
+# Counts are budgets for named colors; generation may stop below budget.
+[profiles.terminal]
+target_count = 20
+[profiles.notepad]
+target_count = 32
+[profiles.sublime]
+target_count = 40
+surface_depth = 4
+[profiles.siyuan]
+target_count = 64
+surface_depth = 5
+[profiles.jetbrains]
+target_count = 96
+surface_depth = 7
+[profiles.website]
+target_count = 112
+surface_depth = 7
+[profiles.powerpoint]
+target_count = 24
+[profiles.desktop]
+target_count = 80
+surface_depth = 6
+minimum_distance = 0.012

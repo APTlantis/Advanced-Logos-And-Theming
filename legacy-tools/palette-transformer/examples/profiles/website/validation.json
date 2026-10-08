@@ -1,0 +1,298 @@
+{
+  "contrast_checks": [
+    {
+      "role": "text.fg_primary",
+      "background": "structural_dark_02",
+      "ratio": 19.183,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "text.fg_secondary",
+      "background": "structural_dark_02",
+      "ratio": 9.318,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "text.fg_muted",
+      "background": "structural_dark_02",
+      "ratio": 3.495,
+      "required": 4.5,
+      "pass": false
+    },
+    {
+      "role": "text.fg_accent",
+      "background": "structural_dark_02",
+      "ratio": 18.688,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "text.fg_warm",
+      "background": "structural_dark_02",
+      "ratio": 14.193,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.keyword",
+      "background": "structural_dark_02",
+      "ratio": 5.375,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.type",
+      "background": "structural_dark_02",
+      "ratio": 8.603,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.function",
+      "background": "structural_dark_02",
+      "ratio": 18.688,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.string",
+      "background": "structural_dark_02",
+      "ratio": 14.193,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.number",
+      "background": "structural_dark_02",
+      "ratio": 6.306,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.comment",
+      "background": "structural_dark_02",
+      "ratio": 8.966,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.constant",
+      "background": "structural_dark_02",
+      "ratio": 6.475,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.operator",
+      "background": "structural_dark_02",
+      "ratio": 9.318,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.error",
+      "background": "structural_dark_02",
+      "ratio": 5.443,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "base.border_subtle",
+      "background": "structural_dark_02",
+      "ratio": 5.754,
+      "required": 3.0,
+      "pass": true
+    },
+    {
+      "role": "base.border_strong",
+      "background": "structural_dark_02",
+      "ratio": 1.569,
+      "required": 3.0,
+      "pass": false
+    }
+  ],
+  "contrast_failures": 2,
+  "near_colors": [
+    {
+      "a": "structural_dark_02",
+      "b": "structural_dark_03",
+      "distance_oklab": 0.013944,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "structural_dark_02",
+      "b": "structural_dark_03_variant_02",
+      "distance_oklab": 0.019741,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "structural_dark_04",
+      "b": "structural_dark_03_variant_02",
+      "distance_oklab": 0.013583,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "text_light_01",
+      "b": "text_light_03",
+      "distance_oklab": 0.019864,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "text_light_02",
+      "b": "accent_primary_hover",
+      "distance_oklab": 0.017887,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "accent_05",
+      "b": "text_fg_secondary_pressed",
+      "distance_oklab": 0.012154,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "accent_05",
+      "b": "text_light_02_variant_02",
+      "distance_oklab": 0.01421,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "neutral_03",
+      "b": "syntax_comment_subdued",
+      "distance_oklab": 0.017506,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "data_02",
+      "b": "accent_01_variant_02",
+      "distance_oklab": 0.014717,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "surface_depth_01",
+      "b": "structural_dark_03_variant_01",
+      "distance_oklab": 0.018103,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "surface_depth_02",
+      "b": "structural_dark_03_variant_01",
+      "distance_oklab": 0.019832,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "accent_primary_pressed",
+      "b": "accent_secondary_hover",
+      "distance_oklab": 0.014138,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "accent_primary_pressed",
+      "b": "accent_01_variant_01",
+      "distance_oklab": 0.019043,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "accent_primary_subdued",
+      "b": "syntax_number_pressed",
+      "distance_oklab": 0.019183,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "accent_primary_subdued",
+      "b": "syntax_constant_pressed",
+      "distance_oklab": 0.017717,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "accent_secondary_hover",
+      "b": "accent_highlight_pressed",
+      "distance_oklab": 0.018778,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "accent_highlight_hover",
+      "b": "text_light_02_variant_01",
+      "distance_oklab": 0.019572,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "text_fg_primary_pressed",
+      "b": "text_fg_accent_pressed",
+      "distance_oklab": 0.017839,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "text_fg_primary_pressed",
+      "b": "text_light_01_variant_02",
+      "distance_oklab": 0.018427,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "text_fg_primary_pressed",
+      "b": "text_light_03_variant_02",
+      "distance_oklab": 0.016821,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "text_fg_primary_subdued",
+      "b": "text_fg_accent_subdued",
+      "distance_oklab": 0.012599,
+      "same_family": true,
+      "severity": "review"
+    },
+    {
+      "a": "text_fg_muted_pressed",
+      "b": "neutral_04_variant_01",
+      "distance_oklab": 0.018259,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "text_fg_accent_pressed",
+      "b": "text_light_03_variant_02",
+      "distance_oklab": 0.019266,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "syntax_comment_hover",
+      "b": "neutral_02_variant_01",
+      "distance_oklab": 0.018629,
+      "same_family": false,
+      "severity": "review"
+    },
+    {
+      "a": "text_light_01_variant_02",
+      "b": "text_light_03_variant_02",
+      "distance_oklab": 0.017598,
+      "same_family": true,
+      "severity": "review"
+    }
+  ],
+  "notices": [],
+  "coverage": "Declared text/syntax and borders against app_bg only; exporter must validate actual component pairings.",
+  "apca": "Not computed; reported ratios use WCAG relative luminance.",
+  "semantic_note": "Source semantic and ANSI mappings are preserved, including unconventional hue assignments."
+}

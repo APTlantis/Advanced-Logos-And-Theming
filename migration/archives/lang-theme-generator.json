@@ -1,0 +1,3371 @@
+{
+  "source": "D:\\CTS\\Lang-Theme-Generator",
+  "files": {
+    ".idea/.gitignore": {
+      "sha256": "99cf8e0c674840955d03ff19a4501c7ed49bbb2529ca9a1f6761a80108ee4ebe",
+      "bytes": 238
+    },
+    ".idea/copilot.data.migration.ask2agent.xml": {
+      "sha256": "65753465e271eed78cc36dce8b8a00ed3c8fc75eeeb3e2b1fde04a51bcd786c6",
+      "bytes": 199
+    },
+    ".idea/go.imports.xml": {
+      "sha256": "dcca22054ad23a4cb45a460194d2dfcd55268f4e13ccad78f623a728d827c9d0",
+      "bytes": 308
+    },
+    ".idea/inspectionProfiles/profiles_settings.xml": {
+      "sha256": "6172c5997eeb3cd19c9ca2b5b97d6e2983cdd1fa60b2460d7bbb74055edcaa46",
+      "bytes": 174
+    },
+    ".idea/inspectionProfiles/Project_Default.xml": {
+      "sha256": "725960a07196ca7e40f4c7343c9b56132ec0a79956ab048cd6568c27dc68d50c",
+      "bytes": 251
+    },
+    ".idea/LangThemeXMLGenerator.iml": {
+      "sha256": "29722770a8edf21acce9d400de0f2229e71f17dfc927c6c1707fda6cf2d99430",
+      "bytes": 393
+    },
+    ".idea/material_theme_project_new.xml": {
+      "sha256": "041311649aab3e59e69c92f282b26d22fb6e423bca8eb6c1bcaaf79947b92beb",
+      "bytes": 426
+    },
+    ".idea/misc.xml": {
+      "sha256": "56957b410fad6da3dcb98c90bdf98f768fef34815950209ff8a8ff601d3d20e8",
+      "bytes": 332
+    },
+    ".idea/modules.xml": {
+      "sha256": "63422068bf4c7ca298213f3511ffdae06d3561d9fd6a997d277cb9ec4b11d602",
+      "bytes": 301
+    },
+    ".idea/workspace.xml": {
+      "sha256": "b9eec239c4cf31cc2bb0e958e4932519f72daa863791c3b54530a6eb4b7d84c5",
+      "bytes": 8204
+    },
+    "__pycache__/generate_theme.cpython-312.pyc": {
+      "sha256": "011fa344d7ca7da4a0f42cc9e50d7a02a6eb057c025498225c9b89906427b3da",
+      "bytes": 40180
+    },
+    "__pycache__/generate_theme32.cpython-312.pyc": {
+      "sha256": "67857855cc2edc58ea6d962bf7ad004ef50bba3d106a7159b34b72b0a25ee5a3",
+      "bytes": 17297
+    },
+    "AGENTS.md": {
+      "sha256": "df3d5e14557934d040e7f06123a186849debca7a779a889a07fc69f5b3f84929",
+      "bytes": 692
+    },
+    "Docs/OVERVIEW.md": {
+      "sha256": "7638d1e00a2665dfbb4edc644b42383a41c0c800e22364a6ff357d99fa4945e1",
+      "bytes": 3116
+    },
+    "Docs/THEMEMAPPING.md": {
+      "sha256": "34d77427e89a14e464dc1a1c26fe5aa1e03bf5ca71d0b541f450a506a73eb427",
+      "bytes": 3521
+    },
+    "Gen2/apt-assembly-logo.png": {
+      "sha256": "585b056b403500d2c86a760038e165a84aa791be342e040d2c2f8168bd587e0b",
+      "bytes": 1860648
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/01.png": {
+      "sha256": "88cc5f4dba2100c136d09f904d50403b004219fa3feede0f357df7385f6f7c6d",
+      "bytes": 15945
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/02.png": {
+      "sha256": "1899dd3fc8fa0190a6557d770f5c01611763411c2e2cb11c565ea010db805971",
+      "bytes": 17847
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/03.png": {
+      "sha256": "6d353783c05194a2fc37846fed1605af7f97e0fc40af266fae2153eca983c6be",
+      "bytes": 17415
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/04.png": {
+      "sha256": "9d59fc77c7c024bf7c0d70ecdfad0c4b1460d62e517f2b561d75cb418a3ad533",
+      "bytes": 17427
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/05.png": {
+      "sha256": "081c99a4f439f7ea3f0b53a29f11b5f8e4fae5f613aed162304e6abd9eadb0fa",
+      "bytes": 16592
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/06.png": {
+      "sha256": "13ab03437336c761c67e168d16fb29a3544210858c342410b81e4d625904351b",
+      "bytes": 17533
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/07.png": {
+      "sha256": "4c2d62a73b68670655dd0b782d1270871bb0a4882c97afe11a3a22b49a10cedc",
+      "bytes": 17715
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/08.png": {
+      "sha256": "21dcdacf8c6991ffec3da9eec652148b403f91102bf49915285be3836e61cf9c",
+      "bytes": 17175
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/09.png": {
+      "sha256": "9509ecbccfc7ecbe83874b1ea185581b70537827759be49be45c67ff302ca50a",
+      "bytes": 15059
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/10.png": {
+      "sha256": "f90029d6e8635e2fe6275c4c7b035c280c8fa552bbc4b323598a6dc19a4a0761",
+      "bytes": 17114
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/11.png": {
+      "sha256": "a5cc648086d2670a3020c575d08f7fd4e30e127dc88658d79545da9e62c2c7f6",
+      "bytes": 16872
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/12.png": {
+      "sha256": "eb344668afa48e667ac2c66f7ac3da347da036248fd314da654c074b4107885d",
+      "bytes": 15344
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/13.png": {
+      "sha256": "2f3b6c9467d50cb2caa7330896eccbe0a71b99d6abeee371c055d7970e3d007b",
+      "bytes": 13973
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/14.png": {
+      "sha256": "60027e5199c9a5747702e2000795d77540c94565447b3f837132fac5c756b685",
+      "bytes": 15602
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/15.png": {
+      "sha256": "9c133f6d77b7fb338ab596489b83877aaa5c09fdacba697c11e53b120629361e",
+      "bytes": 16436
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/16.png": {
+      "sha256": "2ee5ea2367976b094a011836bdbd9704b3548937576f31f59a452ef03eca31f0",
+      "bytes": 16153
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/17.png": {
+      "sha256": "690af7d5e5643bc086c76dfd11ee7b21400821acbfefe4bc85cf2955a92e4a1c",
+      "bytes": 15170
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/18.png": {
+      "sha256": "bed6f7c6459ef4deca3f913e745d132e91272d8929d75a12f06197049e86cc5e",
+      "bytes": 16088
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/19.png": {
+      "sha256": "a9cb4e903375546ed348809023011ce928c30b3c5f09f9fff65df11e8d053769",
+      "bytes": 17168
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/20.png": {
+      "sha256": "f6fd43e1c2e079e713b18fb439583c4204e8990fe61fdb4b2ec1d30a2e50c67b",
+      "bytes": 16355
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/21.png": {
+      "sha256": "ed895b73d09bd25eeb6dc4b57b950805b4633e5712f6880647eae1dc67273914",
+      "bytes": 16313
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/22.png": {
+      "sha256": "3b50daeeed23728023783dbf1065e3eebe1bc752525b31a640cbfcb67dd31af1",
+      "bytes": 16947
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/23.png": {
+      "sha256": "967b39177b2fc459eccf2484ab5c95acb89c1dfc2a44926483c8f267b0e7e70e",
+      "bytes": 16539
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/24.png": {
+      "sha256": "0e268692a0289e38978f3f2b19d8aa0c39fe154789c85b750ea4cfa0ddde0aec",
+      "bytes": 16081
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/25.png": {
+      "sha256": "55afd21825ac2bed7870a6dd1e881f12ed162e1cafd67e7d6b5e14b5dd0d5382",
+      "bytes": 14980
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/26.png": {
+      "sha256": "c54aee546b1e3e9df90432ae725bc1b9344d12ec7783566888063a50890110cb",
+      "bytes": 14599
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/27.png": {
+      "sha256": "71c48db1c49e46a520dcb0dc7e6d94f43ff69e2b8f419bee5843e52bf2518705",
+      "bytes": 14773
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/28.png": {
+      "sha256": "082499e949a52c224d542c0e6d3095cc614391f0b10066ec3db4c8382be349eb",
+      "bytes": 15667
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/29.png": {
+      "sha256": "1df35d4918db10da1b0e031ac8a1fa4638d547d6428aaa732a5355ea0f667529",
+      "bytes": 15851
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/30.png": {
+      "sha256": "57b62e9b0b2d9e66226928555d697185e6e3c8f478043f5ca4c1a8641c062313",
+      "bytes": 15907
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/31.png": {
+      "sha256": "9e157849d4f722a1d919679306d27ba43ccea6fbdd93d193821b6971ad8f5987",
+      "bytes": 14520
+    },
+    "Gen2/apt-assembly-palette32/_work/swatches/32.png": {
+      "sha256": "2ae02f8c3c254d4711346331e782845527669f2c454b8c5129ab6184b3ad8b48",
+      "bytes": 15963
+    },
+    "Gen2/apt-assembly-palette32/palette.css": {
+      "sha256": "dd81c5cebc44c51c3f5964f98374b420193a61f59edc7d2b8e23748178b6b87f",
+      "bytes": 2610
+    },
+    "Gen2/apt-assembly-palette32/palette.png": {
+      "sha256": "4ea69f54eba27120ccd6b5b9b940a5c05d2db4f3db519059acedfd965c5bbf9a",
+      "bytes": 524694
+    },
+    "Gen2/apt-assembly-palette32/palette.toml": {
+      "sha256": "0b665c54e1b674e9f382de17f4e6b36bfaab2f95c78d40a9b253146cecbcd0d7",
+      "bytes": 5331
+    },
+    "Gen2/apt-assembly-palette32/palette.txt": {
+      "sha256": "1929b8862d94b77d1034fb511c45dfb83c49bc549ec18d47bca44ff5c23dcebd",
+      "bytes": 2572
+    },
+    "Gen2/apt-holyc-logo.png": {
+      "sha256": "ffa3dd87532a8057af076dba78ab0ff1304d009aacfc975ba12d4ddde349d413",
+      "bytes": 1771615
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/01.png": {
+      "sha256": "4980b0237de67b16420fc5f84f909af56105593026c2bb30080e576e7ea71b32",
+      "bytes": 16787
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/02.png": {
+      "sha256": "e818ef31b79fd40ee68dbd410fed7eeb358aa000546a9a4f6e5fc4f2a9621086",
+      "bytes": 15113
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/03.png": {
+      "sha256": "5560346a7299544717eebbe1a279f596811dda0f6206060b2ef55697d129f02e",
+      "bytes": 18023
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/04.png": {
+      "sha256": "c745d70f3b81806c6ca3e2e71fc859c7c9ada4bc11a1974ea8b6250b4621ac63",
+      "bytes": 17870
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/05.png": {
+      "sha256": "6d90d720bb79c79c7806bfec96ebf8b1bff6bbc8667b5a0ad7fc01bf1d6a6874",
+      "bytes": 17196
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/06.png": {
+      "sha256": "33955213c703b028c1182699504bc37937aec99cf7e831889de21d0e7f4946fc",
+      "bytes": 18062
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/07.png": {
+      "sha256": "db3ab973389b192e1302c63fe0c5f1d54bbe9eb84beeb51a8899718776191c9c",
+      "bytes": 17075
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/08.png": {
+      "sha256": "872e934ae1d16bac1b3e2ceaffa91c227d21cc4140f54f792bdfd3159ea2a3c4",
+      "bytes": 16916
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/09.png": {
+      "sha256": "71985a1a4be10f5cea8d741e2e68d2a4cd1740618322531ee4411f18d0ba7085",
+      "bytes": 14839
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/10.png": {
+      "sha256": "1bb87b81ab97e2c7f13047f70c7ee19d061c7c1665c52edf7740b62d3e62f0c0",
+      "bytes": 17097
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/11.png": {
+      "sha256": "d1a744cecffab7c9119d8178a85d2beb3bc2c41e2ab9bdadf5e09853ca9adc23",
+      "bytes": 15925
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/12.png": {
+      "sha256": "5519bf25ce2c44872355aeaac70d919138e53dd9067375a911f9b1e4812c825c",
+      "bytes": 15694
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/13.png": {
+      "sha256": "697dc521fd185be3ab372a6fd3ecbdd411562ba0d544bf27a7084a9f50b21799",
+      "bytes": 15213
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/14.png": {
+      "sha256": "e3d363fe4c261c75bb589d51748893b8a1057598d7442685fda13452cfc3b9e8",
+      "bytes": 15019
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/15.png": {
+      "sha256": "3f690255c8b87dd7fee7d9efacabef56b0b2065301be54835099f5971c7a03d9",
+      "bytes": 16711
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/16.png": {
+      "sha256": "bc3ebd45644a25cc8e669f1ba33dd727106c730f4df4a9523352127e3532bc8b",
+      "bytes": 15991
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/17.png": {
+      "sha256": "218ac2b66a0fd8a90ab953706eee929ddea2ef62b2800384ed56bdfa25e725f6",
+      "bytes": 16609
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/18.png": {
+      "sha256": "51a377eeac1b019efffab478c5c82460ad36774434ae9f67d4eab6aa8b81284e",
+      "bytes": 15731
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/19.png": {
+      "sha256": "83c1a568bcc2a3960d7081b3b273f0c57a0565213365c14c4e2186909a612f83",
+      "bytes": 16107
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/20.png": {
+      "sha256": "2ebc6c634a48412ee786b7e74067ae0302b7f09287cd26fd558fbf44486a0bca",
+      "bytes": 17049
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/21.png": {
+      "sha256": "5c2162b6df43958f5edb554128b023aa2d26c36df776673d848574cdbb01a259",
+      "bytes": 16561
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/22.png": {
+      "sha256": "d2a69071c1526a88b7cb4ea6a17ac4c9663578b01182167c5e5f1f6133f4b88d",
+      "bytes": 16433
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/23.png": {
+      "sha256": "54d2c303ec036eb6e45986703799227fd7fc3cbe2ae0777d4530712f2d29c7c6",
+      "bytes": 16224
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/24.png": {
+      "sha256": "7b9438d0ebf2d5f7ff1e56a360464a8668626768b07b4f9c34ff284b2953524f",
+      "bytes": 16783
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/25.png": {
+      "sha256": "79ff8cc811642c95090afd847afccd47723013cceaa45a16bea8c0ff2d2788ed",
+      "bytes": 13366
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/26.png": {
+      "sha256": "e6a1e9a65b683b111a5151d4bdbea1bd6c7955e64b976fc073dfa7d2afd093a6",
+      "bytes": 16451
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/27.png": {
+      "sha256": "8f918bbd2b9cb4d3ecb28263d0f8a4eb8c46c008597b94fb182705584890e9e7",
+      "bytes": 15349
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/28.png": {
+      "sha256": "9ae1bb43ca35fd0067074700fbf1ae9ec745e7bc587de22ae50305ffafb633b1",
+      "bytes": 14546
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/29.png": {
+      "sha256": "26a0bd6a96d2375218423270efb36b30f2ce252522523be6b3c8c023bce63c7b",
+      "bytes": 15949
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/30.png": {
+      "sha256": "e3804c366408d4f0de8883c6fe150a6499d54836e2fb9527e195f2469e88852a",
+      "bytes": 16260
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/31.png": {
+      "sha256": "789ec827348fe74b998e875446bf3ef8d848456878f4e269d837a4a2d39c57b0",
+      "bytes": 16096
+    },
+    "Gen2/apt-holyc-palette32/_work/swatches/32.png": {
+      "sha256": "57d1f212cf18628039567a4adef307f70daa0ac69d9a3b4f17a5c0e93f8e3539",
+      "bytes": 15484
+    },
+    "Gen2/apt-holyc-palette32/_work/working-16bit.tif": {
+      "sha256": "b15b369cc3745828c3e0e457e6e6b6d45eb311f207b3e5c067d019d90d44ca05",
+      "bytes": 9830836
+    },
+    "Gen2/apt-holyc-palette32/palette.css": {
+      "sha256": "6f4de90ac90e844e866eb165859e1f7b88951306f462f4b112049b251ff3e828",
+      "bytes": 2626
+    },
+    "Gen2/apt-holyc-palette32/palette.png": {
+      "sha256": "2e74d51b0d58253fe9ae61c8b60690f3754781165b05732865b1b1ba43dd678d",
+      "bytes": 527710
+    },
+    "Gen2/apt-holyc-palette32/palette.toml": {
+      "sha256": "be1dd3782788c82719bba8ee3581bc0e2892bebe8300d86e08175c5ba2f551b5",
+      "bytes": 5307
+    },
+    "Gen2/apt-holyc-palette32/palette.txt": {
+      "sha256": "95bab8a2a86971d783d4c5c4dfc8f9f3e68c13fa0b550c59da5d7592ecf815bd",
+      "bytes": 2592
+    },
+    "Gen2/apt-julia-logo.png": {
+      "sha256": "a4103f995659789192911a130359e4cab2bebdf663283d7759fa7d972d49aa37",
+      "bytes": 1913982
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/01.png": {
+      "sha256": "0b0280ec7f44a67131e843b52944a1fe2aa5bd61c28c0cf57834d2a822f7f5ee",
+      "bytes": 14995
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/02.png": {
+      "sha256": "6e1d1ac78682cbb5e0a78cf0ace8397bbff98a5e182a932d98048b406830f615",
+      "bytes": 17383
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/03.png": {
+      "sha256": "c14fe3708b08dc4c9c5339ae9daf1e2f0deb811f753fc70d63507f4026db836b",
+      "bytes": 17581
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/04.png": {
+      "sha256": "eb124a198106e6a84663284963d2063d5d3142bcd58630c986a11fb353f65471",
+      "bytes": 17383
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/05.png": {
+      "sha256": "d3b5524d9796be6993bc6e16a60a1b2a15aa60487eaff99a2a0c78af375db2cb",
+      "bytes": 17778
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/06.png": {
+      "sha256": "212618c87eddea697f237f1026306c6a57b40b5b82530ec43636481506fa2ed5",
+      "bytes": 17582
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/07.png": {
+      "sha256": "4f3ed062ae44d9827980df318166f14baf88e85c4b4278ca64685a43db6d63db",
+      "bytes": 17039
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/08.png": {
+      "sha256": "6a7ef5a907cd9d2e073173c2f4d84afbb7edf460ba31c65b3b7b377631327658",
+      "bytes": 17898
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/09.png": {
+      "sha256": "5b5508d12315a328f7a974c4a97932ffe0efcd8de12fe0230bbfe050c0e9212f",
+      "bytes": 14660
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/10.png": {
+      "sha256": "d2617f68e358deafa501ff4cee1df6ead59251b03b660b835e47a19dbfc8d653",
+      "bytes": 17219
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/11.png": {
+      "sha256": "0342b75e965eaa1d013fef1a6254bd2b35e9e6713a0cc400dc11029092639b7a",
+      "bytes": 17349
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/12.png": {
+      "sha256": "77dd581f629463c13723d73137c3b24e1342fa426f12616fe60931dec01867b0",
+      "bytes": 16388
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/13.png": {
+      "sha256": "b424f13fd2627eb98e2ea326334ccedab6f638d79591d21ec5a38c97982ec0b0",
+      "bytes": 15302
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/14.png": {
+      "sha256": "7661f2ffc9887e49ba870fff9ce7e2df3dadb797ac8f7a719521a0f7f6067c62",
+      "bytes": 16084
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/15.png": {
+      "sha256": "8f4a865a84b9c911d03391bd46d1bf767b6fef02013de916f35383cb4b3a6364",
+      "bytes": 16758
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/16.png": {
+      "sha256": "12162cade9cf6ce16d3f01076f25390c142904499fa62da770d1a4dc8a33bd2a",
+      "bytes": 15621
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/17.png": {
+      "sha256": "f6bd18690460a9ac27f556685f7247c0e8f19a599e1f528f4c66f63617c6f26c",
+      "bytes": 15793
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/18.png": {
+      "sha256": "ba49a9cb419db135047336929ccad33ff4dccb5adf3fae7a78ff22d6efe697fe",
+      "bytes": 15750
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/19.png": {
+      "sha256": "e175a0baba1370bec609f128eb14b5ec0d4fad2986be6b6ca3aacd62df6f06bf",
+      "bytes": 17988
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/20.png": {
+      "sha256": "20472ccaa053f61937f8c83ea0aaf64eba8b4159a41c26cda562a01e78e9196f",
+      "bytes": 17933
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/21.png": {
+      "sha256": "037608b9e2da9c45bef87ace6b9090696529599c29fe17d3ee7fff72b703ca8b",
+      "bytes": 17434
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/22.png": {
+      "sha256": "7f658fa61274ddcca842c3e30dc53f8c48175e2ce12a4e4914e57e3a572e87ef",
+      "bytes": 18198
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/23.png": {
+      "sha256": "9c8cf95c32ce31443550dc69c921a425831ee1ac663b49341bb43c9cd620481f",
+      "bytes": 14966
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/24.png": {
+      "sha256": "cd7b4446e6e748c029f5a36fc5e51f62e9ca7d5ed7ed2bbb1b38ecf01c7a419d",
+      "bytes": 15023
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/25.png": {
+      "sha256": "4b81470f2675a3e245865213b6997e429b6cee8000ccfb7fd633e8f9202f386f",
+      "bytes": 15177
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/26.png": {
+      "sha256": "247e7c668aae77a0378fccc877eae4cd5c6fb90d859987d083d9578f02736e6b",
+      "bytes": 17215
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/27.png": {
+      "sha256": "efd10d4769a27c19f3d9184b7d7053a7b9f09bbe2b1a82220ab991fb9e4e7234",
+      "bytes": 15454
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/28.png": {
+      "sha256": "935a8dc86e25812874a0c8734f3466239c3f1f747b9be72a45a36866922ed72a",
+      "bytes": 15513
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/29.png": {
+      "sha256": "39a9825fb018f0950a56d9cf86500a90db6c99a3366d483abf89cf87b0837a40",
+      "bytes": 15652
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/30.png": {
+      "sha256": "df6c61cdfa48b1f23464bfb17624e7d20a04f3381ccec72a19e6570c27e59300",
+      "bytes": 15632
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/31.png": {
+      "sha256": "69e24f3264db68d827f1a7a85449c2280a0b7ac55ac4c38fe8199e4afd4a0a30",
+      "bytes": 15422
+    },
+    "Gen2/apt-julia-palette32/_work/swatches/32.png": {
+      "sha256": "1c6c5d31949b9b57155be6510924628c09c8b526672d3de162ba11343c074dd3",
+      "bytes": 15969
+    },
+    "Gen2/apt-julia-palette32/palette.css": {
+      "sha256": "736dcc6de7f490704770c99eb8086d5b4c7dae54f1aed5e750950a6dbd987c20",
+      "bytes": 2625
+    },
+    "Gen2/apt-julia-palette32/palette.png": {
+      "sha256": "a385278c15661c8041bec1d784d12d3df0d98b1ee35a1dba33e28835e88944ac",
+      "bytes": 535006
+    },
+    "Gen2/apt-julia-palette32/palette.toml": {
+      "sha256": "8b5ab552532df0b6a37845b2c8d57fce5ef0a11bcf0a68c4b1856225154113a6",
+      "bytes": 5317
+    },
+    "Gen2/apt-julia-palette32/palette.txt": {
+      "sha256": "b8526089cfeb61703c276e0d1a8f4f7f12f849269a6498046a13a502907ec53a",
+      "bytes": 2587
+    },
+    "Gen2/apt-qbasic-logo.png": {
+      "sha256": "aaddb635f33406c7bdc1eb47379402cb8875a7ed0b65d66401e043c94d78b761",
+      "bytes": 1928781
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/01.png": {
+      "sha256": "6e2306346edebc61c6dfb22f3f3f386f0d4bb1acc4a0ca44ba56ea210e3ca9bb",
+      "bytes": 14757
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/02.png": {
+      "sha256": "42d79902aee9cab03a66493e59b14124150fff3d04a12d22ef253880e619cc44",
+      "bytes": 18059
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/03.png": {
+      "sha256": "f915856fe46f0bf9c017769fe86f613cf076d8cd12e52a235d45e0fa97d5090b",
+      "bytes": 17454
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/04.png": {
+      "sha256": "8e40b25528c3c658675c0e9ac4452b93ce53c50d29c913b396f4eea9fe86b1bd",
+      "bytes": 18491
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/05.png": {
+      "sha256": "2ecec1ab97a717d96b0e687795b576bb5eb4398f79aa11ac064dee30fff90edb",
+      "bytes": 17242
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/06.png": {
+      "sha256": "f470cdad45456a32864020c31ca060aecbe7c979ff4d18bf658841d36c4ff3cb",
+      "bytes": 16695
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/07.png": {
+      "sha256": "ffc7957a998f182590f2dbbdeb6e79bb0e0971a72045b975ba7dbbaf65af4f01",
+      "bytes": 17642
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/08.png": {
+      "sha256": "a7de8f84a65e2c673eee245d81738f985cfe02b26b8231c63313392a75bb17cc",
+      "bytes": 17610
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/09.png": {
+      "sha256": "fe96882d48b89db56d36089dd9a3a94899b003da13f6e9a4cb6443bd01f52057",
+      "bytes": 13815
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/10.png": {
+      "sha256": "6aa916f69ca14852bb5d0e7e17d5671f9e8d03117aff1630766018f8f42883ad",
+      "bytes": 16331
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/11.png": {
+      "sha256": "cd824bb68cd0183ad24386ab569919cc0422184c80835f15f7e872055153097a",
+      "bytes": 15900
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/12.png": {
+      "sha256": "846e093a49cc83d98f6e3b3bc06e79d6cb12d38ca70c0f3f2cf634b266a142f7",
+      "bytes": 16089
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/13.png": {
+      "sha256": "ebe1eab93d7e1c5b3db0302098cd3eabb9a247dae7644e881120b56cb6f2c50f",
+      "bytes": 15237
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/14.png": {
+      "sha256": "ed9b0fbb62250ebac28bfb8dc768f2d04b2fee89d3ed2951d089a2e4a8bd6128",
+      "bytes": 15666
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/15.png": {
+      "sha256": "038f020638804f8347685659c2b8db3bec7dd56c976a029199f2bb915550a179",
+      "bytes": 14626
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/16.png": {
+      "sha256": "3177996ce0927d98b580dd86008472600c8082540b470568736de3d33bdab9ef",
+      "bytes": 15069
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/17.png": {
+      "sha256": "d5b5cca4d8d0693a2ca66367162c434d733743009abde562c11a5d84f46ab4e9",
+      "bytes": 16188
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/18.png": {
+      "sha256": "9aca18beee7c4619c660e83324983455cc4d9d7606930260c88a07a473a0df01",
+      "bytes": 16153
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/19.png": {
+      "sha256": "e52b75e9877b98d219d88885aac758bc42532cbd597633c498f386819dfb33af",
+      "bytes": 17664
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/20.png": {
+      "sha256": "92291f8ff03453e6d35ea96d4cb2d7b7a250ec0b0dcf767d1eda4828e80ca98f",
+      "bytes": 17885
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/21.png": {
+      "sha256": "4c288a2e97bfb25aaad769b1a40f2a6e42bce56939063b437133964bca5fe17c",
+      "bytes": 18368
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/22.png": {
+      "sha256": "c162020b89cf4456c7cf5aa4f3ac59aa84cfd736199ede454d42dd27816dd630",
+      "bytes": 18035
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/23.png": {
+      "sha256": "9f622f973dcb8a66b1b22cdb3b462e9aad240db6121837367e2dcbb71cab3b38",
+      "bytes": 14235
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/24.png": {
+      "sha256": "e8b710a860ff1805d4d6c87a4930e3dc4dc9c8e4e921b0e816a4ed225785ffca",
+      "bytes": 15797
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/25.png": {
+      "sha256": "0c74148305a8c5d58f0efd43aa89ecb868ddf81fd6390acf5fe8dc96c96b2004",
+      "bytes": 15192
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/26.png": {
+      "sha256": "e6e62c3bca30fce33cfe2ab2569ad4a505166bd01651598f6a23b331e6ad644f",
+      "bytes": 16700
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/27.png": {
+      "sha256": "03a9f6ac6a7aac5968895b84dae96af67eb19553670d5f3c75030a917218c383",
+      "bytes": 15687
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/28.png": {
+      "sha256": "92233ec586577b2ab55e14f89b1920b7da66fa39d2f32d6d38f7acacb92b7153",
+      "bytes": 15363
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/29.png": {
+      "sha256": "c3974b7c4cadea7412b27a75ecfd1ca4def0275d6f2667f48bd03769ca739ced",
+      "bytes": 15792
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/30.png": {
+      "sha256": "143c43d480d4779cd14baa946f2273573367baf2f22494c8de0bcd0d4ebc471b",
+      "bytes": 16375
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/31.png": {
+      "sha256": "61c5eb45eb8c4531dc2ee4346a540056f5d7fee9b7404335b3d4c1a342ea0e83",
+      "bytes": 14957
+    },
+    "Gen2/apt-qbasic-palette32/_work/swatches/32.png": {
+      "sha256": "bae4abec490fa5829f574a2182662b70350b9b52f24f380741d0b26da8e88710",
+      "bytes": 17022
+    },
+    "Gen2/apt-qbasic-palette32/_work/working-16bit.tif": {
+      "sha256": "948ee8ccecc0497b9b3b8b5c279019431cf693ca1001a497617b2296e27c6eb6",
+      "bytes": 9435440
+    },
+    "Gen2/apt-qbasic-palette32/palette.css": {
+      "sha256": "489ed0c2795f3184eb53c904fb98f3b3c81455fc9d165af062e5cdea72a72198",
+      "bytes": 2627
+    },
+    "Gen2/apt-qbasic-palette32/palette.png": {
+      "sha256": "4b9531c4c8d1de0afe2b3cc4ec327b7277e0a8b9b96682232be169f763aa6908",
+      "bytes": 530074
+    },
+    "Gen2/apt-qbasic-palette32/palette.toml": {
+      "sha256": "424adbf52910b0c0251750aaa279c085cf777f19b7786d1dd6cd114f20ce5f97",
+      "bytes": 5319
+    },
+    "Gen2/apt-qbasic-palette32/palette.txt": {
+      "sha256": "de7968b7ed333ef1466efe3aaa508214e9d3c3a06760f21ce9b39c49a0ae78fd",
+      "bytes": 2587
+    },
+    "Gen2/apt-scratch-logo.png": {
+      "sha256": "67a871c9a43fe3cf08df82fc0ba070bd316c285b9c72915b931c13889bb5caec",
+      "bytes": 2036567
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/01.png": {
+      "sha256": "aaff2ec695c37ae1fe2d84ab9ed5aff47b9cb8cd52b8b9073ed2f4e55e707323",
+      "bytes": 16710
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/02.png": {
+      "sha256": "8d58c4006447df6950d7eb28f3ca9823df9df1d3f1873fbfe07acccb6d6419dc",
+      "bytes": 16917
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/03.png": {
+      "sha256": "5de95cf350a673c07c6debc62b87206e1b33fe815f887667416c4b2f10ea4ccd",
+      "bytes": 16693
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/04.png": {
+      "sha256": "d16429bc24db1853296e66019f0cb52d85659f71af4fae1cd86436dbc181aff5",
+      "bytes": 17168
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/05.png": {
+      "sha256": "7b7af4ecb51e127f3ab9026612be3287f958ec2bce90a9eecff49c4e3670cf89",
+      "bytes": 17351
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/06.png": {
+      "sha256": "451f6892dd17e4f20395f9cfafaee76632467059c50429f8a8bf391f6e93850b",
+      "bytes": 17058
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/07.png": {
+      "sha256": "5b49e47a79ceceef9f769396abb35fc5ab06bb9e44c125cfccf6d26f4931b7b4",
+      "bytes": 18332
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/08.png": {
+      "sha256": "b06bc07d795ad2e55241af4af6093655823adceaf659281644247ee8c2326ea2",
+      "bytes": 16439
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/09.png": {
+      "sha256": "8a29af6296f05cd3fa3cf852bd621e7abe55011a1705b96c548ec25baf9648fd",
+      "bytes": 14753
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/10.png": {
+      "sha256": "0e1501629c0f4c8677ef8cfde848eb45ea32f966bede78edc91364f074a0466e",
+      "bytes": 15807
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/11.png": {
+      "sha256": "66a147d17de819446fd75e52786b46862f9eb7c196bfebff87b00aded86b291b",
+      "bytes": 15106
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/12.png": {
+      "sha256": "158c4c9a1f2cb1d34ddaafe517278e1fed985bf8859225a57687ce4986937272",
+      "bytes": 15170
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/13.png": {
+      "sha256": "02ce59a6cc9c2f90611d63753a4eecaa6c1f724ae685231c55ba991aa45b1722",
+      "bytes": 16664
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/14.png": {
+      "sha256": "724512cc0e014e2cfa627bc315719610ac6b96797a8d4168986f351a993d4388",
+      "bytes": 15001
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/15.png": {
+      "sha256": "fb12f3ede67d2130943cfd719f83c1b79fcfd1b2d11684e62d44c2c2d927f6d4",
+      "bytes": 15770
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/16.png": {
+      "sha256": "8fde67789ea422cb7309084ee8f7d444289224e405c6c1219803ed4893b97e2b",
+      "bytes": 14908
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/17.png": {
+      "sha256": "d6bb906462e97bd642bafb1e4412a288e2b5640f02b94d3ba4fd75098c375262",
+      "bytes": 16078
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/18.png": {
+      "sha256": "7441472246a1ba34ed3ac728cab57aa34e9475bc3119873749bd961f6582c79c",
+      "bytes": 15633
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/19.png": {
+      "sha256": "d9bf08004472580c49e8d6c8f70923e1dacb51f503c9f96b9e2e8402b4e8151a",
+      "bytes": 15957
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/20.png": {
+      "sha256": "12bcb5cd15ca67a8be4d651f992e6a64669f08ff880c39d155f25f5d028d1175",
+      "bytes": 17665
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/21.png": {
+      "sha256": "ce3907dd391939814a8224e2b50e329ef110e4907228a86c7aa3b69121602f39",
+      "bytes": 17320
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/22.png": {
+      "sha256": "cada7a435b649a6d3cfb0c35953bda8e4dc64870bc71ed43f181bd35f96bf692",
+      "bytes": 16962
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/23.png": {
+      "sha256": "568475707083204a1996a4eb141d15bd939f38dc2840d202240bf4ce28ba470e",
+      "bytes": 15245
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/24.png": {
+      "sha256": "6d71be4013c87359a5fb962bc2175d2bca04b204bada05281389c5bc175cb2d3",
+      "bytes": 15392
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/25.png": {
+      "sha256": "d8a001fc3b2f30aa3943d8a1cc619c0619e49e52984731244b83f087607ca459",
+      "bytes": 15426
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/26.png": {
+      "sha256": "b4cdd449fff6099c4bc140e13f6f4995bca05dbef34e3b4f0d3ecfd1947955d1",
+      "bytes": 15245
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/27.png": {
+      "sha256": "eda00766cc9c64c84b8297ca17292005fb9b5c5c887ac63ce7e8ed9beccd898d",
+      "bytes": 16122
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/28.png": {
+      "sha256": "a9264fdf29def2c370794def5ddfe0e98cdb6462bd89359c95e756b1e3cf102c",
+      "bytes": 16729
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/29.png": {
+      "sha256": "78fbd094d86469adcd1110b41097f7cf08dedcbee89d54a253b27bb14d3337fa",
+      "bytes": 16351
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/30.png": {
+      "sha256": "7fe16e3e4680b1a8e5fa9453a24392223420cf36f88aa3e86cf1019018632e10",
+      "bytes": 15572
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/31.png": {
+      "sha256": "1252c2173a2fa6140960d93c2c9e427325dff4ba63df016ce34243f07ac646ec",
+      "bytes": 15506
+    },
+    "Gen2/apt-scratch-palette32/_work/swatches/32.png": {
+      "sha256": "36eb178ef979eeea42c86731605ce5c5eb2beee3e9e0eac6ba82d5cca460c35f",
+      "bytes": 17340
+    },
+    "Gen2/apt-scratch-palette32/palette.css": {
+      "sha256": "dce8e42ce5a7a8fab376f8cf35024f57c523f966bb9db761f766e502e979a4a7",
+      "bytes": 2617
+    },
+    "Gen2/apt-scratch-palette32/palette.png": {
+      "sha256": "c24eabb4338a7c7c6bd23450055231165456e0719f27014f84133a7b3072c8ea",
+      "bytes": 527244
+    },
+    "Gen2/apt-scratch-palette32/palette.toml": {
+      "sha256": "cee5c3453bc16fabc8227cbdf6c3be96bee58b976dd779419c225db64d436f46",
+      "bytes": 5307
+    },
+    "Gen2/apt-scratch-palette32/palette.txt": {
+      "sha256": "44668d7829fdc04034f2257e6d6026e89e1d1802fb4b64c7a348f57bca84957a",
+      "bytes": 2568
+    },
+    "Gen2/apt-toml-logo.png": {
+      "sha256": "4c841ce67712fff004d9ed74018c5a2fc3c1c2df6eb6e34b3e6c8a5b777a002c",
+      "bytes": 1881258
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/01.png": {
+      "sha256": "e96cc99bb96247be49eb25ee437ffb6c121e61e52351a64aa6052f26b7b56a1d",
+      "bytes": 13323
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/02.png": {
+      "sha256": "460f2a83700a18d030ab818e2618183da88594ac506335ac55c9640afb894f08",
+      "bytes": 17711
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/03.png": {
+      "sha256": "c0cf33b66c31b75894fb9edd019c845d87d1f133babc1bf6d4a62a2b977ae91c",
+      "bytes": 16943
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/04.png": {
+      "sha256": "cfc1cb65178cd9e12feefde5b4461fb950554561a0637e79e06cab17cd9357eb",
+      "bytes": 17031
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/05.png": {
+      "sha256": "325edbc50230f532d5f3735649cfc7ab8428009b3e92c3e04aed6c5813c11bd6",
+      "bytes": 16900
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/06.png": {
+      "sha256": "3298a5a95c42d0b410d9e1a3e07eb2635190b9ad3871d3bba8ff95cfaadb31a0",
+      "bytes": 17377
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/07.png": {
+      "sha256": "5323f3c319ccd4fe8a59aee3bed786fb9715516ba7ee4c90d6fa4625251f2076",
+      "bytes": 16947
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/08.png": {
+      "sha256": "331fbf08ddca20878467d3bc5a2652e6ba37367fce1f48cacc74dbe8cb3826b8",
+      "bytes": 17354
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/09.png": {
+      "sha256": "260c95c57fab87f86f4f07e01d6b51b81f01ee0a79f2878cf17cee54f6d26169",
+      "bytes": 15430
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/10.png": {
+      "sha256": "94c7168d572d3a3005418763de1a14b60b54403f4aba6cd3be400b64497ef6d6",
+      "bytes": 16833
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/11.png": {
+      "sha256": "f2c58d07494f27bf6ee8f328bffea8fcc31f124e144dd07691411e730cb8b13c",
+      "bytes": 16732
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/12.png": {
+      "sha256": "a15adfeee28c263a2d754963d1470e650167cfc36af5339b11031bfb81687db7",
+      "bytes": 16683
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/13.png": {
+      "sha256": "d8e85a1319fa298e3f78fd8bea16f945b3e2d8a1de4846679c1bb9a551d87bbc",
+      "bytes": 16099
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/14.png": {
+      "sha256": "ed265643d748be69c452d0cd7edf28d003a20911f46e60f6446321beeaa5ae58",
+      "bytes": 15599
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/15.png": {
+      "sha256": "caaebfcc9beb474a34696af1199952126839c59565ffa5edd21bfa9bfb428a22",
+      "bytes": 17077
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/16.png": {
+      "sha256": "68c80652c07a9ffc201bb784db7ecfb16f81279c3a396d6be53490527b9cb663",
+      "bytes": 15570
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/17.png": {
+      "sha256": "d4e5d8924496fefb6da98216ecd4122138052fba91759148786014e9ece28d4d",
+      "bytes": 17500
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/18.png": {
+      "sha256": "a34cd0aef9f7a9eea8c80423cda64140657230222f9f1144fbca7bfec4ad5195",
+      "bytes": 16650
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/19.png": {
+      "sha256": "0d0175b5cd8ae3b2bd26ac8ca0a073d8e1ba73f9ad8d7a5195666ac1905186bc",
+      "bytes": 17147
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/20.png": {
+      "sha256": "6618212e37bc4283e5f268ee4d9f8f4b82340066a4cc35b26dd6b27e58c5128a",
+      "bytes": 17385
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/21.png": {
+      "sha256": "47e2192a753cc8239ff414c0ba1e337320f50335d3eb74a035a108f4f5f28820",
+      "bytes": 18038
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/22.png": {
+      "sha256": "813fc49dd0f609635423af6f19882cb33a4b14e2a4a7c06fd022807f56e666b1",
+      "bytes": 17037
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/23.png": {
+      "sha256": "cff6c0ce98f4fffe9fa5701cfe527af4210930e8ac7e0c1c928ca75a9737a4df",
+      "bytes": 15702
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/24.png": {
+      "sha256": "976e03fb357f6bd33c0a3eab6e1a28010bf44767c61d28d199aeed43a8a235fc",
+      "bytes": 17573
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/25.png": {
+      "sha256": "7d1db5c45bfac681b4a7c852a43a0f4a8b256a17d5fa5cf27ea1cbbf12373373",
+      "bytes": 16498
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/26.png": {
+      "sha256": "7b47dcca1ac183804195cf437da1a763a4e9066b506cb3978c87d5ae9c9a3a42",
+      "bytes": 16991
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/27.png": {
+      "sha256": "c284c68151cd1a6746663064cb4e7499b1dd0fd7cb2f743c0119bc5cf57bb287",
+      "bytes": 14421
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/28.png": {
+      "sha256": "88316f371dce5cb7094e63baa091ba623f9f951dde3f4fc0c0f37d23000f562d",
+      "bytes": 15599
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/29.png": {
+      "sha256": "93db3bb610619f1504ad8ad675d11ff238258d87f26f32b7b434bfa93a6d4485",
+      "bytes": 15513
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/30.png": {
+      "sha256": "587c5657df0fd3c5323c078abbb8b19e8d51eed877e79c325525a3bc810d9238",
+      "bytes": 15981
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/31.png": {
+      "sha256": "7e7ccffd6546092dc3374d41f04b0a8afacb2f2a2fb46760289cae3ffc0f2486",
+      "bytes": 16601
+    },
+    "Gen2/apt-toml-palette32/_work/swatches/32.png": {
+      "sha256": "9d4552b64b4dd3b65c17323c43bfc6137ab361441c7ae155313a9d73dca0ffe4",
+      "bytes": 15325
+    },
+    "Gen2/apt-toml-palette32/palette.css": {
+      "sha256": "5b0f4af130ccfc1554a3704bb2ddf5eb7b2198bc96c9cfe6b6b6beaec08afa86",
+      "bytes": 2612
+    },
+    "Gen2/apt-toml-palette32/palette.png": {
+      "sha256": "d2a4ab38b14a9b1e0951bd4ddc2a3333ca2d9f9991d7663e0180c867566198ee",
+      "bytes": 535135
+    },
+    "Gen2/apt-toml-palette32/palette.toml": {
+      "sha256": "eb9a7447a66ed59b0266a19ee1b0ecea9a06332133d62b12828d8db2560220b0",
+      "bytes": 5287
+    },
+    "Gen2/apt-toml-palette32/palette.txt": {
+      "sha256": "c78a12f306b0de753335bd3263d12d8a02a5c98865b69f28908c133cd3e7f488",
+      "bytes": 2578
+    },
+    "Gen2/apt-zig-logo.png": {
+      "sha256": "b0c907d7173e9dae7b9a1c3b4f28deb14a1cad9d5c2eb543054a45ad998b4b01",
+      "bytes": 2038695
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/01.png": {
+      "sha256": "f5650f54f5a8bf16ce3eb6e6f46ae315b2734be297a75d2b3cd8f929b30fa150",
+      "bytes": 16531
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/02.png": {
+      "sha256": "b83dcf2167a2922fc797b1674633ae1a5923bf4ff0c0a590030ad6f0dcbe4122",
+      "bytes": 15448
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/03.png": {
+      "sha256": "e833d162fdb31f72ee77e3acdf6e70fe86a5b51533805935ab5192b2f2624fd7",
+      "bytes": 17401
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/04.png": {
+      "sha256": "87dd851e303f56401fe12d2f45e3beb43d130d11d0523b0a8bc2451065070c00",
+      "bytes": 16933
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/05.png": {
+      "sha256": "c0afbaf18f7c2c0b7432d6bd5050356f09098f3a9abc866f1c3e2f62ee951cfa",
+      "bytes": 16630
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/06.png": {
+      "sha256": "92a70828f8dc3bdbc6322cf3452364dcf05e536d678bbcd8e4cf78151d8f9b63",
+      "bytes": 17512
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/07.png": {
+      "sha256": "04521ab0a66f9ed9e59fd0021ec1beca2b719186f40f69050d55bbd133e8113a",
+      "bytes": 17358
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/08.png": {
+      "sha256": "5c89066cbcae5beefb0b75d7d2482c7fcfb82c4013bb963cf57de230e2aadbeb",
+      "bytes": 17228
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/09.png": {
+      "sha256": "d55c16ae2c201a5b5d5309beb41cd5b5954e6b46eb703e4f45e25adda97365b7",
+      "bytes": 15554
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/10.png": {
+      "sha256": "33762c853f2d91b62c0adcc36d855271d5819fd37112c6c591bda02939d783b6",
+      "bytes": 15485
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/11.png": {
+      "sha256": "4e2767f9dacb037c1989de9f82e3ab8ea8a8c0ec3d74216107174ab1d87288a3",
+      "bytes": 16635
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/12.png": {
+      "sha256": "90a1cfd78ef4ff1330c53ad5ac4d5b2af78e2e4531a7cb38983ce8f39ac66db5",
+      "bytes": 16345
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/13.png": {
+      "sha256": "69bc24db02bdd66ca1461d64a7794bec2fad98163a4cfe4134484c7cebf01580",
+      "bytes": 16238
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/14.png": {
+      "sha256": "f224d3eca60306bd691ef21cf2b8d874a3e2bfa796cb56e7e16df7f2138004be",
+      "bytes": 15161
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/15.png": {
+      "sha256": "05aa0e851fa78e30884d3bf969b5a5aa38a7513105dde771f79e24f7997fc911",
+      "bytes": 16484
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/16.png": {
+      "sha256": "e686948320d169cfcfb4a0494c82118eae4d71ce254c40e0e83332974aa590c8",
+      "bytes": 16023
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/17.png": {
+      "sha256": "f23ef2c7ce07b641132d093a7f98decdee54ac59629046d595b3a458dcf7353d",
+      "bytes": 14913
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/18.png": {
+      "sha256": "5a1aea9483382b47f05a1ab9ec7e18cc12f0542141cf41c92c1a06ccf6310387",
+      "bytes": 16771
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/19.png": {
+      "sha256": "a396abeb5335c56c44a83879c9df160310b1bfe99a33c2c5474388d08df8b7a6",
+      "bytes": 16306
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/20.png": {
+      "sha256": "8f0fdd5a5f7691c7d5261ebecaa284ef32d8414a359ddbff93825a331ec90b56",
+      "bytes": 16176
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/21.png": {
+      "sha256": "71048e4367607b41b7d4c69002d0481a65b48924243e9b167f21393972c61a47",
+      "bytes": 17846
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/22.png": {
+      "sha256": "9948afbea4a1b46529c1bfcc992170c7ea07d9dbdb323335948fa5e6ceadcdf7",
+      "bytes": 13398
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/23.png": {
+      "sha256": "25a1f507f948ab596b0114abc63cfe5af69a2c0f01cce04f9f15262a70d24260",
+      "bytes": 15736
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/24.png": {
+      "sha256": "b945a3acc0503070a219017a7dcff09bdeaa62a6d54259d34a562e6158f7cd8c",
+      "bytes": 15408
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/25.png": {
+      "sha256": "34b1834b0bc49a43b908d8e31b1aa0abad1e23836bbea79db1361d29aac8f8e8",
+      "bytes": 15539
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/26.png": {
+      "sha256": "bad3425b3c48ee66e115975b9b97903a0a43cc40d31484b62f8d0040c74b7956",
+      "bytes": 15666
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/27.png": {
+      "sha256": "d98eff9f4d8c5e6941adbf9cdc47a7b76abca19e98fbc03d16ba451dba30062f",
+      "bytes": 16201
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/28.png": {
+      "sha256": "a3d216589cf013e68395acf12ff36dd3f25220a8c4078ed61ee08d6313fb64ed",
+      "bytes": 15761
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/29.png": {
+      "sha256": "a49f99aa9be7e9f5f9913b88cc813b4ae020e2c07d260489706fa178f9af4971",
+      "bytes": 15829
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/30.png": {
+      "sha256": "d9d7d4afe1e25e8b7c33ef6bd9bbd8182358d308be7df5e14cee2b53fb74cd48",
+      "bytes": 15936
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/31.png": {
+      "sha256": "be3b091ab0039d96be6f2e88027327ee3fd9aedc9e55aee80a70b5d5738b24c5",
+      "bytes": 15805
+    },
+    "Gen2/apt-zig-palette32/_work/swatches/32.png": {
+      "sha256": "bda9343699caa6c00f2275baadeb59eaead3f6b539111dcbb3e0e329e7261ddd",
+      "bytes": 16335
+    },
+    "Gen2/apt-zig-palette32/palette.css": {
+      "sha256": "0f81f187e328413d13845420a9f122a7ba19bffc765ec1497220aaa8d0170a49",
+      "bytes": 2617
+    },
+    "Gen2/apt-zig-palette32/palette.png": {
+      "sha256": "92e44dec9fd53ac5c99322c1ffe2975b8cf5a4567a7ccfa7002231397929e7f6",
+      "bytes": 521857
+    },
+    "Gen2/apt-zig-palette32/palette.toml": {
+      "sha256": "8766a9dc9d2b3251a80e6d1ba158366e0c3bd5a6017502089f9d634602bc1a97",
+      "bytes": 5291
+    },
+    "Gen2/apt-zig-palette32/palette.txt": {
+      "sha256": "0133f00e753198440129fc8815214f8ec4632935e1e60bc939018ceec3247a80",
+      "bytes": 2587
+    },
+    "Gen2/AptlantisPaletteGenerator.ps1": {
+      "sha256": "8cea9d86db56ab83893813c188bf034871cab96de316f95f4267d135bbbf2077",
+      "bytes": 24660
+    },
+    "Gen2/generated/apt-assembly-palette32/assembly.xml": {
+      "sha256": "3d519ba7d6cda26e9b369b1c4ceac98127f5047bf7d24e6f014a8eaed606f3d6",
+      "bytes": 9361
+    },
+    "Gen2/generated/apt-assembly-palette32/jetbrains.icls": {
+      "sha256": "f109d9932e7e824598f65a10c6cb842ded4c5e82f10a23b8fd0be695446b03b1",
+      "bytes": 6464
+    },
+    "Gen2/generated/apt-assembly-palette32/provenance.json": {
+      "sha256": "ef25e3a2dbc8c8a9d41f8b13ad4233e900c332155339e3861d839e7755772c4d",
+      "bytes": 1555
+    },
+    "Gen2/generated/apt-assembly-palette32/windows-terminal.json": {
+      "sha256": "cd1e97f2e35f55cf13d93a05a2465f9572adaee5f11741ac5d507b811bccc67d",
+      "bytes": 572
+    },
+    "Gen2/generated/apt-holyc-palette32/jetbrains.icls": {
+      "sha256": "b870dd2fe5c1a26c68f62cda9262a5a5cfa983053af85bec42d4a59c3fc10099",
+      "bytes": 6458
+    },
+    "Gen2/generated/apt-holyc-palette32/notepadpp.xml": {
+      "sha256": "90ffa217192855f9525df0390bec178c0b41acd097e348e025ea9a1a92e7f570",
+      "bytes": 9361
+    },
+    "Gen2/generated/apt-holyc-palette32/provenance.json": {
+      "sha256": "6a2286836c71cf9a320c6a158874adebf5fb279a94b04f93a00cdf8c919cb8dc",
+      "bytes": 1551
+    },
+    "Gen2/generated/apt-holyc-palette32/windows-terminal.json": {
+      "sha256": "12c41c6c8f213374c32a3d17fc987aed4931159505109255164618cadedc97f2",
+      "bytes": 569
+    },
+    "Gen2/generated/apt-julia-palette32/jetbrains.icls": {
+      "sha256": "adb1c5b4483b4bb33cf8d210ca3a93a77053c10f76a89c5e39facd37247b8013",
+      "bytes": 6458
+    },
+    "Gen2/generated/apt-julia-palette32/notepadpp.xml": {
+      "sha256": "decb184f9e9eeb744a5423e0b92a35071c247ff816b2637c8b566c189b1036cd",
+      "bytes": 9361
+    },
+    "Gen2/generated/apt-julia-palette32/provenance.json": {
+      "sha256": "7ec46b4568e71b4b97fa5e284e48e0de01780d98bc588c15be16b4528c1d3a69",
+      "bytes": 1560
+    },
+    "Gen2/generated/apt-julia-palette32/windows-terminal.json": {
+      "sha256": "d77fb33c678731cdce39a33ca0f0ac8b6e8e468a2e4eea4a513a1770516a3386",
+      "bytes": 569
+    },
+    "Gen2/generated/apt-qbasic-palette32/jetbrains.icls": {
+      "sha256": "70c49e71ee9bbd3a91cb7187345d3e69939368b5a33643cbb3cf14e6ff2eaa0c",
+      "bytes": 6460
+    },
+    "Gen2/generated/apt-qbasic-palette32/notepadpp.xml": {
+      "sha256": "3dc0a6898a1131f650c17c97475dfa84073c7c4dd4cb453bef7b20edc67674d7",
+      "bytes": 9361
+    },
+    "Gen2/generated/apt-qbasic-palette32/provenance.json": {
+      "sha256": "4b3a81193f6a0ff1a832782905ba35d74724726f29d6f5957d3614e6a9836156",
+      "bytes": 1546
+    },
+    "Gen2/generated/apt-qbasic-palette32/windows-terminal.json": {
+      "sha256": "d163d2d608446d29e4de7b9049cf9b8a430aa40e54f11e69a994590d84729c67",
+      "bytes": 570
+    },
+    "Gen2/generated/apt-scratch-palette32/jetbrains.icls": {
+      "sha256": "be0bfe7f9153ab621121afee5ca87edadc81f547014bb70537b8cc45305dee17",
+      "bytes": 6462
+    },
+    "Gen2/generated/apt-scratch-palette32/notepadpp.xml": {
+      "sha256": "a1c2c267b8b1ea8c657b52dfd233492c5b448264b13739bcc094a6f73894a5eb",
+      "bytes": 9361
+    },
+    "Gen2/generated/apt-scratch-palette32/provenance.json": {
+      "sha256": "ce7185c3025a751387f87add26139d36448142b45cb2e80043a1d8e0bd7e57bc",
+      "bytes": 1618
+    },
+    "Gen2/generated/apt-scratch-palette32/windows-terminal.json": {
+      "sha256": "d0a776c257dca6b9d338ed85a9cd54b072e08828b15256017385d21cd11bb346",
+      "bytes": 571
+    },
+    "Gen2/generated/apt-toml-palette32/jetbrains.icls": {
+      "sha256": "5d7eb18e914af152f2e3709eaaee4ae48c67a71cb74a864908e04190b0d6199d",
+      "bytes": 6456
+    },
+    "Gen2/generated/apt-toml-palette32/notepadpp.xml": {
+      "sha256": "1116cb98af92cd6f0e9ed1786d5bd25cd0ae72a1612dd6157a8a0ff54005512a",
+      "bytes": 9361
+    },
+    "Gen2/generated/apt-toml-palette32/provenance.json": {
+      "sha256": "20462486afcdfb5d3257110f885da0d3109594c78e23d76236e5602f370bce73",
+      "bytes": 1533
+    },
+    "Gen2/generated/apt-toml-palette32/windows-terminal.json": {
+      "sha256": "cdf1ab1e9972e2e579523a1fd02a34f3b9e23350ce29b0f3fcf9fa43b43be376",
+      "bytes": 568
+    },
+    "Gen2/generated/apt-zig-palette32/jetbrains.icls": {
+      "sha256": "a5e61bc557ae21ad7aaa8b43a3a3abf93a3d921f3ba17a9528399daf70740202",
+      "bytes": 6454
+    },
+    "Gen2/generated/apt-zig-palette32/notepadpp.xml": {
+      "sha256": "a748161a2b82d793f833403a54f4a42194244f57ce3c59992c438939c5f164bc",
+      "bytes": 9361
+    },
+    "Gen2/generated/apt-zig-palette32/provenance.json": {
+      "sha256": "a9ccd00aa02fc64f4add384eee8cfae649f61ed9e8a1440bcea7ff9d702b4878",
+      "bytes": 1590
+    },
+    "Gen2/generated/apt-zig-palette32/windows-terminal.json": {
+      "sha256": "e850d8cb553754ba1c683dbfe927914e2efbcf06bfe85b4769f4b94f4234d56e",
+      "bytes": 567
+    },
+    "generate_theme.py": {
+      "sha256": "0f83e9c291bb3d340b362b40942f2fb0ab43ff91da89f42c29f9196e102a1089",
+      "bytes": 37655
+    },
+    "generate_theme32.py": {
+      "sha256": "879bd7a467b79f55945d617c27f3ea392c11029bd0b5fd410c4a292ae50b04b8",
+      "bytes": 10581
+    },
+    "LangThemeGenerator.manifest.toml": {
+      "sha256": "cc9548b98eb8a10f59dc042f3c97724979de829a3b397ef298a2822ea16d497f",
+      "bytes": 2720
+    },
+    "PaletteGenerator32.ps1": {
+      "sha256": "8cea9d86db56ab83893813c188bf034871cab96de316f95f4267d135bbbf2077",
+      "bytes": 24660
+    },
+    "palettes/apt-ada-logo-palette.txt": {
+      "sha256": "e948dcae38019156ceb5fc943fdc56e0317654df56289df393644ac08a43b845",
+      "bytes": 2050
+    },
+    "palettes/apt-ansible-logo-palette.txt": {
+      "sha256": "4a79357838970e21020de2c4f9b8a0d3a6c569ad4dbbef15cfb1030939911859",
+      "bytes": 2052
+    },
+    "palettes/apt-aptlantisstudio-logo-palette.txt": {
+      "sha256": "ac4e8b40aa3a5b133bf6c2991c362b5681554d59a4efbf90df23235d0b728acd",
+      "bytes": 2064
+    },
+    "palettes/apt-assembly-logo-palette.txt": {
+      "sha256": "843ae0095fe54df6c9a8f587a7d5ea67446d75063b6cc8286b8f43903cff05e3",
+      "bytes": 2056
+    },
+    "palettes/apt-bash-logo-palette.txt": {
+      "sha256": "dbda7e9a7051cf5e83a80773c7277c5bfb5fd41d3dc4d9221fe7b26a9f25ba91",
+      "bytes": 2058
+    },
+    "palettes/apt-bioconductor-logo-palette.txt": {
+      "sha256": "0c02cd214937632563da3cd6eaa6ed99bfae7112ebd237cd03ec73b07c0200d6",
+      "bytes": 2064
+    },
+    "palettes/apt-c-logo-palette.txt": {
+      "sha256": "7e04753cfc4951813c096c7514a51c67be737123aa01aa5e1e9f1c8f8fe6954f",
+      "bytes": 2050
+    },
+    "palettes/apt-caddy-logo-palette.txt": {
+      "sha256": "e92366133f4b75027f334c0a212ba53dbd075b84a4ad3828f2b0a98b1a53ba42",
+      "bytes": 2052
+    },
+    "palettes/apt-clojure-logo-palette.txt": {
+      "sha256": "da3d3451b89868fbdb67f761b2fcb30f4df34f062bd260294681bcd1b03016dc",
+      "bytes": 2056
+    },
+    "palettes/apt-cloudflare-logo-palette.txt": {
+      "sha256": "b23f11ea61f71dd56af841f41974ea5750b2b6b5df61008b9f60eb7c5d0fa86e",
+      "bytes": 2044
+    },
+    "palettes/apt-cobol-logo-palette.txt": {
+      "sha256": "f754841b1ad5b1c7bb25472677baed2924135c60a933cc22d6c79752d6d31bca",
+      "bytes": 2060
+    },
+    "palettes/apt-coffeescript-logo-palette.txt": {
+      "sha256": "62a78ac140ebe09a64d538097691ad1d36d3bb0c248b9afde58261ace85f0010",
+      "bytes": 2060
+    },
+    "palettes/apt-cpan-logo-palette.txt": {
+      "sha256": "428ccec3dec1d68724fb3ec5da4d4a7f38bb7a70ccf9745df0b58af790c3172d",
+      "bytes": 2042
+    },
+    "palettes/apt-cpp-logo-palette.txt": {
+      "sha256": "0bc9f7d19959795de31c8a5858ad1b289e8e1b3df10344b986f0fa1770266716",
+      "bytes": 2044
+    },
+    "palettes/apt-csharp-logo-palette.txt": {
+      "sha256": "078f4517af5333cc64660b56b94d42ea7a8d93722d8e6f9711cfa51661d0be6c",
+      "bytes": 2066
+    },
+    "palettes/apt-dbase-logo-palette.txt": {
+      "sha256": "f35ade5acf221674506d7a7dae21e2fb9df2b6ad55125f4118322bbcdf2608d7",
+      "bytes": 2070
+    },
+    "palettes/apt-docker-logo-palette.txt": {
+      "sha256": "b176784ee0cb85f62a2e24ff17a4485ad225857e1abbcb9295ab7d2a246cd89e",
+      "bytes": 2060
+    },
+    "palettes/apt-flathub-logo-palette.txt": {
+      "sha256": "f62a99d4dbb1625485034fe87f705412466c6d2bf470b0ac70449248de202fa1",
+      "bytes": 2056
+    },
+    "palettes/apt-fortran-logo-palette.txt": {
+      "sha256": "e0bcbbe6d66d86b938228928eee3816db008438dc0e148e1f8ce33fc6af5f571",
+      "bytes": 2062
+    },
+    "palettes/apt-fsharp-logo-palette.txt": {
+      "sha256": "157f902ef95f9cafb23f88a24b7f460eaaec3cca42cbd31f6d1102e8ec15baaa",
+      "bytes": 2050
+    },
+    "palettes/apt-grafana-logo-palette.txt": {
+      "sha256": "b3d3413938c20157c4b476b740741b65afc53019fcd3bd79f704060976c036a1",
+      "bytes": 2028
+    },
+    "palettes/apt-html-logo-palette.txt": {
+      "sha256": "722a18261f787c5234625a1dd525c27ad6fdad022f09bb527faad26fd48818d8",
+      "bytes": 2036
+    },
+    "palettes/apt-jave-logo-palette.txt": {
+      "sha256": "487575670c89b1370833d3beb54432cc7106afd4c07e366822f1f45651ecf75f",
+      "bytes": 2050
+    },
+    "palettes/apt-julia-logo-palette.txt": {
+      "sha256": "43f18a8d78056ceaf7987189c80506ed93daa802f75db738e6a3bd3072adf2fe",
+      "bytes": 2060
+    },
+    "palettes/apt-kotlin-logo-palette.txt": {
+      "sha256": "d011006a6bc9ed0f257137b52d877c41fe4f59a4470a5e332ad031a239e3c0ca",
+      "bytes": 2064
+    },
+    "palettes/apt-kubernetes-logo-palette.txt": {
+      "sha256": "910fdd44486460ad83b536a81c2e403c99b4e0acdba49bfa08640eb1a9ff8c11",
+      "bytes": 2056
+    },
+    "palettes/apt-lisp-logo-palette.txt": {
+      "sha256": "919ab22650ff2aea9cb159645ea9c5e68de88f573a3dd5e5b5768725208b9c30",
+      "bytes": 2076
+    },
+    "palettes/apt-lua-logo-palette.txt": {
+      "sha256": "ec11aba975ce85ed6978046845fe59602b53833d11fa3c3f06f0bdfc77aed360",
+      "bytes": 2070
+    },
+    "palettes/apt-malbolge-logo-palette.txt": {
+      "sha256": "1972577ce6d7f16f7a785588be2b16418e94f3e1acb19058fab9706379dc5654",
+      "bytes": 1914
+    },
+    "palettes/apt-markdown-logo-palette.txt": {
+      "sha256": "53da9cde6b49e911670bd33ee41a29b384444a1b7d2b281c92f9b320905364a6",
+      "bytes": 2068
+    },
+    "palettes/apt-matlab-logo-palette.txt": {
+      "sha256": "36c29a3e866689c4d59df545082087a2586b131713f6ebc4edc5b5d0b3a39b6c",
+      "bytes": 2050
+    },
+    "palettes/apt-mtlab-logo-palette.txt": {
+      "sha256": "36c29a3e866689c4d59df545082087a2586b131713f6ebc4edc5b5d0b3a39b6c",
+      "bytes": 2050
+    },
+    "palettes/apt-mumps-logo-palette.txt": {
+      "sha256": "69cc3eee2e8bb3bb0596113c43c8c8d709a97cd60a11d4b770e5f24e214fc0ef",
+      "bytes": 2080
+    },
+    "palettes/apt-nginx-logo-palette.txt": {
+      "sha256": "02a05f12a79ea583f4896474027dcc41c144f022d16068a6821f478730121bdc",
+      "bytes": 2058
+    },
+    "palettes/apt-nim-logo-palette.txt": {
+      "sha256": "1cddf42ddfa69772cea7eddb9106cbdaa75f045c2c48318094cd01c38b8fd721",
+      "bytes": 1888
+    },
+    "palettes/apt-node-logo-palette.txt": {
+      "sha256": "4d25f5f56229b13d328d8a7b686521e71ff7632a8a548822750c93ce41513ede",
+      "bytes": 1808
+    },
+    "palettes/apt-node-logo.pngu7-palette.txt": {
+      "sha256": "68912003e3877b8bdb19ff729894d740904d8822edd566e60d8ebd19a4087e0b",
+      "bytes": 2046
+    },
+    "palettes/apt-objectivec-logo-palette.txt": {
+      "sha256": "c23ca32e6418f7bf27958f4614a72c7dbe75a18d2c6e7f4e418d20491fca15be",
+      "bytes": 2066
+    },
+    "palettes/apt-ocaml-logo-palette.txt": {
+      "sha256": "e181821d88f8b4b9406588680cd322d61eba82a94d7ea4f169884858bb634a2e",
+      "bytes": 2044
+    },
+    "palettes/apt-perl-logo-palette.txt": {
+      "sha256": "428ccec3dec1d68724fb3ec5da4d4a7f38bb7a70ccf9745df0b58af790c3172d",
+      "bytes": 2042
+    },
+    "palettes/apt-php-logo-palette.txt": {
+      "sha256": "8e9355afb993bd0c0dcb339532d75f141cf0e20592f04ec90d3dd9b1eae16832",
+      "bytes": 2064
+    },
+    "palettes/apt-powershell-logo-palette.txt": {
+      "sha256": "b1de7de713e8441fc0abf7435e641a1cd1b3d5e8d9605c92ff82dd4a40990522",
+      "bytes": 2060
+    },
+    "palettes/apt-prolog-logo-palette.txt": {
+      "sha256": "66891d220d89ea0c20aacbff7b65e956f048f29a3514f771a9305245c1ab3683",
+      "bytes": 2054
+    },
+    "palettes/apt-prometheus-logo-palette.txt": {
+      "sha256": "68912003e3877b8bdb19ff729894d740904d8822edd566e60d8ebd19a4087e0b",
+      "bytes": 2046
+    },
+    "palettes/apt-promis-logo-palette.txt": {
+      "sha256": "0a9b899cacbbafc201c5ca29c1d0cd5f37705790ee82ea8d179b7e3dfc2f6c5a",
+      "bytes": 2076
+    },
+    "palettes/apt-purescript-logo-palette.txt": {
+      "sha256": "b0783b33330631e60ad37ad39701b393e1bcba0514b2537195bcfd5f2e431d5f",
+      "bytes": 2072
+    },
+    "palettes/apt-python-logo-palette.txt": {
+      "sha256": "db18066c92a098b603cdd7e3bcadef5168a607a5777963e6fa29619a5b783b99",
+      "bytes": 2062
+    },
+    "palettes/apt-qbasic-logo-palette.txt": {
+      "sha256": "2099d6a48c8bf8b9230c52feb050952a597111a52280e15262f99141a33fbef2",
+      "bytes": 2048
+    },
+    "palettes/apt-r-logo-palette.txt": {
+      "sha256": "5c96b4056e27affdefbf2984c2ecda72cab264946998401b6097c7a98f34205d",
+      "bytes": 2062
+    },
+    "palettes/apt-react-logo-palette.txt": {
+      "sha256": "084bd5e641318fd9952b4558ce09c8a51796783ee7a8218451117928e0f5ffc2",
+      "bytes": 2062
+    },
+    "palettes/apt-ruby-logo-palette.txt": {
+      "sha256": "ee04242d2f7590fb13e78000ac672e71032d46c3edab98d6f5c7c473d858ca5e",
+      "bytes": 2060
+    },
+    "palettes/apt-rust-logo-palette.txt": {
+      "sha256": "7e92f2ae49a9a4a6726c39d040b9a855d98c0adf790cef6310c1b3774924c331",
+      "bytes": 2044
+    },
+    "palettes/apt-scala-logo-palette.txt": {
+      "sha256": "98d02b9e68db64b0bd4e8948e7664349fdcc57c35ecbcfb12595cc24e9073c10",
+      "bytes": 2046
+    },
+    "palettes/apt-scratch-logo-palette.txt": {
+      "sha256": "8330592a51536b9934d1a923a4d7af6a1398b127c9c922287603c1ddd06676ac",
+      "bytes": 2062
+    },
+    "palettes/apt-sgml-logo-palette.txt": {
+      "sha256": "1d0c14bab64a0626db40ac92142ab9268f0e5ab1a8e156b8a318e5468d49dd95",
+      "bytes": 1940
+    },
+    "palettes/apt-sql-logo-palette.txt": {
+      "sha256": "2e0365f7ce4700844405c327bac3a1e7f08fd8fe315ffdba58f4fe1ea29ec132",
+      "bytes": 2064
+    },
+    "palettes/apt-svelte-logo-palette.txt": {
+      "sha256": "63a8a3883ecf20042e309e627dcd9db07d066d11d6107667432e062d4c592e76",
+      "bytes": 2044
+    },
+    "palettes/apt-swift-logo -palette.txt": {
+      "sha256": "c8cf9583e75d161c57fb35049ac794dad0538eacaf556b7309df94539b3f6a44",
+      "bytes": 2058
+    },
+    "palettes/apt-terraform-logo-palette.txt": {
+      "sha256": "bd1b02e23734b0038f3fe6285f4e8fad5ced813027697d8d1dc1174ff054c36b",
+      "bytes": 2066
+    },
+    "palettes/apt-tex-logo-palette.txt": {
+      "sha256": "6b83faecd6c4b1f110f9e8b2b1181921917eb27717877d05a910d1e3f5f92158",
+      "bytes": 2064
+    },
+    "palettes/apt-toml-logo-palette.txt": {
+      "sha256": "6136db003af1aa4d073265c65363bed625e7dc1a8f18ec7c902d66e0c052644c",
+      "bytes": 2078
+    },
+    "palettes/apt-typescript-logo-palette.txt": {
+      "sha256": "a4b4531b55129d9ec76bac612cd676120fe5472eaa5e7f49ce7e1504e97f3a93",
+      "bytes": 2060
+    },
+    "palettes/apt-vbsix-logo-palette.txt": {
+      "sha256": "1f35508b39d865268321caeb9cae7e07f84582c8ebbab3baa5b0c887e5254ccb",
+      "bytes": 2054
+    },
+    "palettes/apt-vue-logo-palette.txt": {
+      "sha256": "c8ec5c77b1cdfbfd5313a09d7d8dc9b4974b30305628994b255c4d006fd74c37",
+      "bytes": 2058
+    },
+    "palettes/apt-wasm-logo-palette.txt": {
+      "sha256": "f368279e2d6428357264ecf1dcd28f3237baf361bd300590c6a4b86d0c59be8c",
+      "bytes": 2066
+    },
+    "palettes/apt-zig-logo-palette.txt": {
+      "sha256": "80637a28178f8bf66296a00b0b89564b4f9e13d5fc38dbc9f6bd174a4071d607",
+      "bytes": 2060
+    },
+    "Project-Proposal.md": {
+      "sha256": "2a64dfc8c73653aa50a4cfe14062411a6fdf30b82ebc2140574a9f0979d8a12d",
+      "bytes": 2965
+    },
+    "Project-README.md": {
+      "sha256": "936a9bae291d909df97c29ea76e728b41b39a45bd3450e2c69ebfaccccc3eac0",
+      "bytes": 1121
+    },
+    "project_images/jb-ada.png": {
+      "sha256": "2de89b685c7e4b9134c5747398248d021ae603c332cc901b73deff9df0afbb61",
+      "bytes": 171067
+    },
+    "project_images/jb-assembly.png": {
+      "sha256": "96e9ce376d1db3233cf2e8d440943293cf05cd9b0fca05baf1dc592f775df769",
+      "bytes": 170545
+    },
+    "project_images/jb-scratch.png": {
+      "sha256": "22dd73d679b83c23380f06821f6e0ee4480e94c6be3efd31441925a360535620",
+      "bytes": 169429
+    },
+    "project_images/jb-zig.png": {
+      "sha256": "bc5460c431ec4abed256f3f64bc7a0986f1e4ed81f8fd197cf4b2dced6a0878a",
+      "bytes": 172551
+    },
+    "README.md": {
+      "sha256": "21b2bca08ba12f3df5d2df44bd4d0912da6ee8bf05b6da54f7e941e789a0906d",
+      "bytes": 8955
+    },
+    "themes/jetbrains/apt-ada-theme.icls": {
+      "sha256": "b23329e73fc75d9c5daa68fd2326c2432d95fe44d1a0986c5f0aaf179990f64f",
+      "bytes": 6454
+    },
+    "themes/jetbrains/apt-ansible-theme.icls": {
+      "sha256": "e7190fcf577e6af853bb172a3c8407f99eaab22db50899fdf781a67498729097",
+      "bytes": 6462
+    },
+    "themes/jetbrains/apt-aptlantisstudio-theme.icls": {
+      "sha256": "13eab6801704ad780b669be04b91c3a88f0fb120122bc683aeaf5ace3e748b2d",
+      "bytes": 6478
+    },
+    "themes/jetbrains/apt-assembly-theme.icls": {
+      "sha256": "4c00a8d1d21bf6857cfd3bb59f5383c8fab8c8c770e6081bcfc4cf43ed150a70",
+      "bytes": 6464
+    },
+    "themes/jetbrains/apt-bash-theme.icls": {
+      "sha256": "fbc6d4ac9cfad6c39c71c468c7c3050731d35adbc08e2937ded7d87350bc364b",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-bioconductor-theme.icls": {
+      "sha256": "1d457f7fb756146fe4613a36e66d10a9501ae38714392ed50c851a4cd83c5750",
+      "bytes": 6472
+    },
+    "themes/jetbrains/apt-c-theme.icls": {
+      "sha256": "ce56168a1b3d5527486e1947e32006584acb92e49b3b7b8d27aa5b03cb98c3fc",
+      "bytes": 6450
+    },
+    "themes/jetbrains/apt-caddy-theme.icls": {
+      "sha256": "0e7b7c67050acd80df8c540d929688738d582970833120aa8be9648e1c573829",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-clojure-theme.icls": {
+      "sha256": "5db1422a1de9020b162a2c8ed5f7bd93314b6857e80d1bfaed96ee415ac9aec3",
+      "bytes": 6462
+    },
+    "themes/jetbrains/apt-cloudflare-theme.icls": {
+      "sha256": "ede07a46e41d713faeca27a69a4a6dbf7fb89f8d94bc1436d677eae985f6c7ce",
+      "bytes": 6468
+    },
+    "themes/jetbrains/apt-cobol-theme.icls": {
+      "sha256": "06af5923c80fd6957a45a864061a1cb2b32d8a32443672e5575d45c60db77a8f",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-coffeescript-theme.icls": {
+      "sha256": "db6d54b2a4bf8ea7dba56245fcd555da03f276b471729ca6e5f5413598177c69",
+      "bytes": 6472
+    },
+    "themes/jetbrains/apt-cpan-theme.icls": {
+      "sha256": "837a71540020807d950b801218a48ddaf6ba0a84c5560b7d305206fe189369a8",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-cpp-theme.icls": {
+      "sha256": "965c28628fe5b4aaa7b96e9ab0fddfd337b7648fef40fedda36898ad31a5b32d",
+      "bytes": 6454
+    },
+    "themes/jetbrains/apt-csharp-theme.icls": {
+      "sha256": "f71fc69761bb8a65145ed5dc02f982456496b2dd08a6b6ec20d5ad65e2839998",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-dbase-theme.icls": {
+      "sha256": "eca064dc3f65b618f9fb7f685b27c669414c4d69db9318ec25ac5fbc038fdc74",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-docker-theme.icls": {
+      "sha256": "9528fd513abdf157a31809a3ea32d97d7064e4bb38615a9bcb91f793a6398919",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-flathub-theme.icls": {
+      "sha256": "6e1f8f0547935a3bde9a6a71d83c25e0dd7e6c0ef9a91c533a5c3cc4ebe41fe6",
+      "bytes": 6462
+    },
+    "themes/jetbrains/apt-fortran-theme.icls": {
+      "sha256": "34689cacac5ea5964d5eaa743fd2610c0c0bbbf9076e4c73b2af739e44a9fe6a",
+      "bytes": 6462
+    },
+    "themes/jetbrains/apt-fsharp-theme.icls": {
+      "sha256": "f9ca805124049ba0d04300e1eff73b0fdc351805282418e4bd958c4a83211c87",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-grafana-theme.icls": {
+      "sha256": "322801ab938ef178b49071fe7ff2b61ace10c32cdad933dd4a2db6afe03902ea",
+      "bytes": 6462
+    },
+    "themes/jetbrains/apt-html-theme.icls": {
+      "sha256": "53df34a5fcddbaf88906551de23e6f7a7b49f99424b3b8a6f40759240e88b445",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-jave-theme.icls": {
+      "sha256": "6481ae61c4cf4f5a458325cc64652ca304be31c904c7bc54994a18a230587f6c",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-julia-theme.icls": {
+      "sha256": "c78a1849631e191eba3579a37c51c9a0c1a25f578222a44eef4936d0178315dd",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-kotlin-theme.icls": {
+      "sha256": "008d0c0a684106884676e85e71f0970f269edc9fca33777e380fc7450718d64a",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-kubernetes-theme.icls": {
+      "sha256": "9196169f46a622c07be471c26bfdc32042500a967175d2160a41136dc65dc563",
+      "bytes": 6468
+    },
+    "themes/jetbrains/apt-lisp-theme.icls": {
+      "sha256": "25429360e6c267308b0941619267844f962bed2d1623fc3719e3659fd5d48e35",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-lua-theme.icls": {
+      "sha256": "35d1015a80d0741e160b34a16c97b3c9f3549040614fb67e0ccb9e00090a6def",
+      "bytes": 6454
+    },
+    "themes/jetbrains/apt-malbolge-theme.icls": {
+      "sha256": "ceea7e170fa1dd28aaffb0cbe085b062f23b2261760582593d18b6ad779c8665",
+      "bytes": 6464
+    },
+    "themes/jetbrains/apt-markdown-theme.icls": {
+      "sha256": "1f92267a5cc43944c47531f6c60642cba08c4ad81d88354425912c3782718797",
+      "bytes": 6464
+    },
+    "themes/jetbrains/apt-matlab-theme.icls": {
+      "sha256": "a1ee50b8342b5a50f3c3594d9964cf148a377fd953bd0da2921de276b9578201",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-mtlab-theme.icls": {
+      "sha256": "8cd3cee3c845ac23cd07bab0a130ff00b6ce6d40a4a28bb28ca752112c123820",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-mumps-theme.icls": {
+      "sha256": "dea5534468420d7336a5f2906fbb52f1ae89514c38e9aecab914858dea4ea3e7",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-nginx-theme.icls": {
+      "sha256": "a49ac640e919a68c27473de925e591c3619ca3f58bd84afd03e24fec296a353f",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-nim-theme.icls": {
+      "sha256": "6245b1e884f854109dee7e559be3e23776f10ef74e78a214335daa01d8d0a102",
+      "bytes": 6454
+    },
+    "themes/jetbrains/apt-node-theme.icls": {
+      "sha256": "a775cdf747a8d2c2d3409f88d1f5312f1e51ed46d43df832d43f0be59bef0623",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-objectivec-theme.icls": {
+      "sha256": "3f692679250cd3a1c22ba9c8b343e283a1f1765ea0999494a52b0a16416edb44",
+      "bytes": 6468
+    },
+    "themes/jetbrains/apt-ocaml-theme.icls": {
+      "sha256": "8a82f00c99010da1abc153290ae6d344887a5453695009488210eaec57cc012b",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-perl-theme.icls": {
+      "sha256": "5eea420c7ea8e94e8132b0f46f606342763027415872a5580fbe17ba08983fe4",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-php-theme.icls": {
+      "sha256": "205bec617a44b58210dcca4cde5850dfc865eb9e9394a8615376ae2aec1ba8bf",
+      "bytes": 6454
+    },
+    "themes/jetbrains/apt-powershell-theme.icls": {
+      "sha256": "a37d0a888a879342a1df4d24521bf759ffa71e6876f10f2025464405fd10232a",
+      "bytes": 6468
+    },
+    "themes/jetbrains/apt-prolog-theme.icls": {
+      "sha256": "2adade7b86e6fc80b8b48782fdc5ee9254ecc59ccb0847642d44b24b9509b91d",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-prometheus-theme.icls": {
+      "sha256": "1224d49b3f5925fab795d45d398702c0bf97bcc550f229b5c08ff751bbc795cc",
+      "bytes": 6468
+    },
+    "themes/jetbrains/apt-promis-theme.icls": {
+      "sha256": "293daaf7721e1418e51db99a50dc986bbce132c46fb741f17d0576d4e0bd717a",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-purescript-theme.icls": {
+      "sha256": "c5cdd372c761843a2b217c926e5cea317ea52150c2c166940dd1b15664c9e280",
+      "bytes": 6468
+    },
+    "themes/jetbrains/apt-python-theme.icls": {
+      "sha256": "316707b4fd73a81449b1f0f71269176b29fdc1c1957801e6ed844707cec61563",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-qbasic-theme.icls": {
+      "sha256": "7553a0209993ba30208d25f470e423df9f1764fa427bded2846e9671cef0b169",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-r-theme.icls": {
+      "sha256": "061d9b89de87aa4fb677ab942e8f9fcee5d1faf9a5dc3bfb09451d4b78e0e8df",
+      "bytes": 6450
+    },
+    "themes/jetbrains/apt-react-theme.icls": {
+      "sha256": "a6c544cd0372d475188a3284976a9234ae1db0273c122876c3cb268eda69032f",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-ruby-theme.icls": {
+      "sha256": "affc20a3322df389981d0d442cb97a44d42c48274b4cd87f26c74f8bf5afc1af",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-rust-theme.icls": {
+      "sha256": "6a057a32296845d97f7bb0bd32b037536bba862b97616654fde4caede1ed2ab0",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-scala-theme.icls": {
+      "sha256": "9ebc98b480de6104d08af152bf65629ad83a561cc95bf987037f9bf85980a7b1",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-scratch-theme.icls": {
+      "sha256": "0494b1dc45d34bd0bd115c872860d586e8b7c291281368419bdfb6affcb5916f",
+      "bytes": 6462
+    },
+    "themes/jetbrains/apt-sgml-theme.icls": {
+      "sha256": "81270acc88d2916adfb59791bfa4d56db6f136845ba618a5b2515ce721068314",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-sql-theme.icls": {
+      "sha256": "db54a7e837233c20f5b476def68edc74b3ec5254ca663f9140f8a092144490a5",
+      "bytes": 6454
+    },
+    "themes/jetbrains/apt-svelte-theme.icls": {
+      "sha256": "ba2db794ffd9423ff70c3609cc6f6c011dd565b9d18660451363ecd229d10ff5",
+      "bytes": 6460
+    },
+    "themes/jetbrains/apt-swift-theme.icls": {
+      "sha256": "bed2ee23e7f2864bb37b2ecdd06770de7272c73b4c1f490cd7cc020224318fe9",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-terraform-theme.icls": {
+      "sha256": "f2344812bae1459e9ee7a5ff481df6a9750a3fecd59c64f4ade60c05c204b629",
+      "bytes": 6466
+    },
+    "themes/jetbrains/apt-tex-theme.icls": {
+      "sha256": "1c7a1ac6e703a144d6e69deb01ea2f63798ebfe61816c65dec6a5f33799e4871",
+      "bytes": 6454
+    },
+    "themes/jetbrains/apt-toml-theme.icls": {
+      "sha256": "1c40484141bbe461678b05cc5cbd23528428e771471661d8d28d28bc178b79da",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-typescript-theme.icls": {
+      "sha256": "f28eb7c051a4bd789433322c06fb33a40676eee8f5c192527665ad4d52aef25c",
+      "bytes": 6468
+    },
+    "themes/jetbrains/apt-vbsix-theme.icls": {
+      "sha256": "f41bbed0c368f9f51889c4a94d7710ba257d70db2d0a3ddfc0b58f14e61e2cb2",
+      "bytes": 6458
+    },
+    "themes/jetbrains/apt-vue-theme.icls": {
+      "sha256": "76631bf3d3322ba8e1e78838eefb371d2e0bbcebab6654c256e0c0b56e8c88bc",
+      "bytes": 6454
+    },
+    "themes/jetbrains/apt-wasm-theme.icls": {
+      "sha256": "cac95f1b840b1f2cfb43a8a612acfc7aa0c52b2079fcda967caa56a3b1ad18c9",
+      "bytes": 6456
+    },
+    "themes/jetbrains/apt-zig-theme.icls": {
+      "sha256": "5f60443b7dac17bdcd24e06e5ef8e81f5e4211c61bfbee7d991348994c36d9ef",
+      "bytes": 6454
+    },
+    "themes/LogoPage.toml": {
+      "sha256": "ecfee070c4961f12a43efe398da3dd81e3eed99d3a98e6cb7e51f999d0a1bd5f",
+      "bytes": 332
+    },
+    "themes/notepadpp/apt-ada-theme.xml": {
+      "sha256": "2627ffc64632c2b84908cb111e25cedf9b55fe41166fd2bcdceb211c4203658d",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-ansible-theme.xml": {
+      "sha256": "23d79545fdf6e033df63deb5846bcd2524571db3c81f138679ca0f672673818c",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-aptlantisstudio-theme.xml": {
+      "sha256": "122f0a759f9031e2b24d81e1d11658da76067aa93df445c887d64f57273512b0",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-assembly-theme.xml": {
+      "sha256": "f2540efde751652cf9519722f31a3e858d8af5f4709a4256a7d4e674997e6f99",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-bash-theme.xml": {
+      "sha256": "85d416f06a71b87ea9e17b8170fc3fe01f558030b54a8dec1186a3dee9f2e729",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-bioconductor-theme.xml": {
+      "sha256": "68cba9cfa3346903cad6929eba89df9af915659aa63ad2a4f4fa2595764ab765",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-c-theme.xml": {
+      "sha256": "2c93948da21825be0d8b6555957dcd881928c3dab76b1c559a9ddaa31ddb9a35",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-caddy-theme.xml": {
+      "sha256": "cfab69697821389c4f635f0f969418193f9b1afc718e4488cd870f4d7a10d16b",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-clojure-theme.xml": {
+      "sha256": "b2c21dd822a989c4bc98f9fec15ea7fb98ad5627c93fffa8ef2fd97d0876793e",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-cloudflare-theme.xml": {
+      "sha256": "06b85875cf0a3b7c31d306e05a3a5bb5740bceac256b685a37922638923aafa5",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-cobol-theme.xml": {
+      "sha256": "43088b4c4d38a3d35d78ad8451493fe12c2cf5d4ab55f266750a787739a024e6",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-coffeescript-theme.xml": {
+      "sha256": "9da0a19aafdd658820d174cbdf78c78994b9ed2f6bc7e0b7cfe79e060b8820c3",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-cpan-theme.xml": {
+      "sha256": "9e07a5c6995b145f19f75c678b2d364f7909b24e49e2df9a007f9b1df92830e6",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-cpp-theme.xml": {
+      "sha256": "067c18570f07c3fe7aef082d351136f2a3ba5b51a4641e8f75db43941aa2be51",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-csharp-theme.xml": {
+      "sha256": "5e5f5f6d7a4eae77752ee3cff01b15bdff3d80921d6ec095d77eafbadeac19d1",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-dbase-theme.xml": {
+      "sha256": "cb19ff8c49f46a5067c54b663e668e90735bdf9faa7d67f3402bfd9aa2bf648d",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-docker-theme.xml": {
+      "sha256": "2a72cba5d4b1a77d81ee3ae1e6d280cef94aa47785cc4272f9bf28e2fb8df7b3",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-flathub-theme.xml": {
+      "sha256": "31d7c757d5f73d4a21863ebabec6bacc6564cead2f1ea97da813878769143d9a",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-fortran-theme.xml": {
+      "sha256": "84bebbd42acff8f86b7243520d855497d0fc3086dee432d2800e581c97de2f66",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-fsharp-theme.xml": {
+      "sha256": "1042da27fd35277b5ca18f24ef467785ded5620fa9c268acf4ebec8cb3d8b46e",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-grafana-theme.xml": {
+      "sha256": "1e31c1a0ce005f86b36cd0129b8f703a7155ee21488e09935f1d2bcf3b2c9a0b",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-html-theme.xml": {
+      "sha256": "1d637633315f00bc584fd6cf1a481fe14e561b6a9ff1f0039314f8848b075010",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-jave-theme.xml": {
+      "sha256": "3473f38d9e7837fa27c4faee589f0d31a519c175aebc1ce194378b82dc818496",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-julia-theme.xml": {
+      "sha256": "d88fe42ff71b4165079213f7e5e6064acb4ae0e64a482e2f57baeda57cfa2cef",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-kotlin-theme.xml": {
+      "sha256": "f61fbb56471a19344a1e55edef62179cceb4d924bc48019cd1c5044f9ccf7357",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-kubernetes-theme.xml": {
+      "sha256": "e6a80d81d40954c5d23414040f1dc3c066363445489f2270050e8c08d87c5c3e",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-lisp-theme.xml": {
+      "sha256": "7d772371c19556aa0ba270c933b777d851ad2574b92023e7c5d3f0b760dbcd8e",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-lua-theme.xml": {
+      "sha256": "9e24383d0f3abbbcce9da1228bcfe4bb5073cf23bf518ec4ff77e642135514a4",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-malbolge-theme.xml": {
+      "sha256": "df4c58fe3c68be2b5f1aea7ad11c5ad995e6cf8bf9d9d2eb0b6658a9e62d1d78",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-markdown-theme.xml": {
+      "sha256": "b7e562e9d92d5360813e152f4a5985420bbd55e77fae2fb4f94547de8449031f",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-matlab-theme.xml": {
+      "sha256": "957975649647ed4d7eaf0ed1fe513f30876da12cf47188fa2b60b57ea072bdf0",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-mtlab-theme.xml": {
+      "sha256": "957975649647ed4d7eaf0ed1fe513f30876da12cf47188fa2b60b57ea072bdf0",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-mumps-theme.xml": {
+      "sha256": "0e74d55a87a56e42bb81457bd3dcf9403dccfe1853b8890a5d37b472642e97db",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-nginx-theme.xml": {
+      "sha256": "6afa1fd143993a9fa11bce1b4f1ea6f018970f6bfe75d033aa500062fa4c998e",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-nim-theme.xml": {
+      "sha256": "be84e43938f914007e9d2a568b1848b454c04896dece6296ba68e7f3cadb674a",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-node-theme.xml": {
+      "sha256": "f5b293087e3506303f86f3e7a6557d2c2c81000d36ba2d2ddf9288e8c68d28b0",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-objectivec-theme.xml": {
+      "sha256": "16187ac96499a256e598c90bd7ee13ef00a94103cc51ab3c6b85e7329922d882",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-ocaml-theme.xml": {
+      "sha256": "9bb4afc45e5f9b03c646e66e767c20a642fca60a400bf0e50ca3a7ce9992a2b5",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-perl-theme.xml": {
+      "sha256": "9e07a5c6995b145f19f75c678b2d364f7909b24e49e2df9a007f9b1df92830e6",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-php-theme.xml": {
+      "sha256": "17ff862fc9b0f0e35d5e2946279360872da1bd3ae2ce965185ec9baecfc6fc99",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-powershell-theme.xml": {
+      "sha256": "de32cc299b542e2f15f0186846f1d9aab74ef086b8d684d43c954b333b374a51",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-prolog-theme.xml": {
+      "sha256": "ffd00290ee98a88c8aedd9e027af58ae5e4a37800cfb0acf1e9e7a11b3cecbf1",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-prometheus-theme.xml": {
+      "sha256": "f5b293087e3506303f86f3e7a6557d2c2c81000d36ba2d2ddf9288e8c68d28b0",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-promis-theme.xml": {
+      "sha256": "11bb2349957b8e1a708fe7833dc0258af73948946bfa018d11818fb95a9466e0",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-purescript-theme.xml": {
+      "sha256": "8e3b359c3d39fb9892097a04a264d210093680ac20d00639ed0ffad270a19859",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-python-theme.xml": {
+      "sha256": "536c2ebaf87976e9fbb85deb5069cbbcaa1cb631e2f5d78cb902b92211f8b60a",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-qbasic-theme.xml": {
+      "sha256": "4e4969b8320eea207eac753692c5104750f567b731cb356ef5ea748b5ce290d5",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-r-theme.xml": {
+      "sha256": "a4f16b2e4d9471b4ed0dee6be3eaca0852da1ca9c697cf1c0a7abf2f89becc09",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-react-theme.xml": {
+      "sha256": "bd728902efdb1b686d44da883c83f7913ad882739e3b55e8420716979ac1cea3",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-ruby-theme.xml": {
+      "sha256": "0c646dae543bc9b72b16afba8fece5b329aab652db805e7d64228be55f0ab50b",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-rust-theme.xml": {
+      "sha256": "91cb95b32ba96a74fec3ebddf9fc1952d27a8ec8fc825b63c473861ed363a359",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-scala-theme.xml": {
+      "sha256": "0fa545d320b84fc07f95189274ee62777a99e31229c994944b16f2ff35c2f68d",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-scratch-theme.xml": {
+      "sha256": "f299515533bb21854ead5fd6219ff7ed8c5b48db941a89eaf4ed97bfac5f0977",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-sgml-theme.xml": {
+      "sha256": "69a9cbcd2ecf3b8ce2ce93d6ed390edfe63ea7051aa2cc3daf8afe8566f8c5c5",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-sql-theme.xml": {
+      "sha256": "69dc0f9a5445ba2bff77e2371509d797894be03435bf687480a7b6f0ea710bcb",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-svelte-theme.xml": {
+      "sha256": "26684e008160559b7d2100ec0192a3a1e25b4f86d741f9cf178c34eb4879de1f",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-swift-theme.xml": {
+      "sha256": "292b6932f289cf3d930068df6abf6524505abf52527abe47593e239750be1528",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-terraform-theme.xml": {
+      "sha256": "3da67347c52132f4d838e1301b62eba97c1fcf6f2aaf4358e4851f9d477f997a",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-tex-theme.xml": {
+      "sha256": "32999dd452cee15b37c5d876414599d72ef8b92dbb77a1f101eb37fe96498faf",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-toml-theme.xml": {
+      "sha256": "219b2eeadfb493f16b396225223a2914078232b0791f477dcbadbf7838ad2b79",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-typescript-theme.xml": {
+      "sha256": "e2e9bada805da24c53ea8c2d7d2f9585600e6c5bb6fe9f3af902267f3621bec5",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-vbsix-theme.xml": {
+      "sha256": "ad479ffd207a2451305c956817fbaf2f3b5b18da72c2f86c40c7cc5aba286e74",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-vue-theme.xml": {
+      "sha256": "7da7b5cd975df169e7b16b339f930f5feb7cadf9505c00bb34080aabd3d3c4e6",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-wasm-theme.xml": {
+      "sha256": "d95bc24fbc80faf693360848d60b68a823fda95cfa8734ca004b0d3e3413dd60",
+      "bytes": 9361
+    },
+    "themes/notepadpp/apt-zig-theme.xml": {
+      "sha256": "634140d0a56212e6506f61b5e1ae50962c92fa3a1dcf675e621e7e1fdffd10de",
+      "bytes": 9361
+    },
+    "themes/terminal/alacritty/apt-ada-theme.toml": {
+      "sha256": "e97c4ce1d6b67c3a0b93430ddadb5e7637995974c54788c682dc09da0fa72617",
+      "bytes": 646
+    },
+    "themes/terminal/alacritty/apt-ansible-theme.toml": {
+      "sha256": "f2d26113b228e3f30ddb7779d5e2f3ce571ffd69d1c24594c81a76d940d53a8a",
+      "bytes": 650
+    },
+    "themes/terminal/alacritty/apt-aptlantisstudio-theme.toml": {
+      "sha256": "f79a8a55ab25b0d2b05719827dd438d9097f6884337b0b60a13c20bd88dd5c3f",
+      "bytes": 658
+    },
+    "themes/terminal/alacritty/apt-assembly-theme.toml": {
+      "sha256": "af4e9141be1a3ede0455ad977b6e2e5bf50e8875e20d3ad3bfa1f5cf1bb316f3",
+      "bytes": 651
+    },
+    "themes/terminal/alacritty/apt-bash-theme.toml": {
+      "sha256": "f2324f39ca5aac20558453d413323fb409d6f991261f9764976de640a4f782c8",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-bioconductor-theme.toml": {
+      "sha256": "7a5eddceb931bf9af2b77fc79c29185ccbc716366420baf84e93cc36eb5b43bc",
+      "bytes": 655
+    },
+    "themes/terminal/alacritty/apt-c-theme.toml": {
+      "sha256": "f0d777fba386cdd3f77d578ba8c502e3364b007fc659bb3cebf9f68e92cee2ca",
+      "bytes": 644
+    },
+    "themes/terminal/alacritty/apt-caddy-theme.toml": {
+      "sha256": "dee27b685ad027cfca2cdc3d487325b628105b0792576f29cdb606493c96f945",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-clojure-theme.toml": {
+      "sha256": "ddf46011eee4f379186004206ae3ceda5da0cc425ab8b4dc359f53f91082037f",
+      "bytes": 650
+    },
+    "themes/terminal/alacritty/apt-cloudflare-theme.toml": {
+      "sha256": "c7e8069c8b5e6ad8d73d95dcbd5e265963fa30286c9a35080f8b58f537911d74",
+      "bytes": 653
+    },
+    "themes/terminal/alacritty/apt-cobol-theme.toml": {
+      "sha256": "0afb7dd43da9137a44255b90ba968870690c3828a59dac34400ea7cdec65eb66",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-coffeescript-theme.toml": {
+      "sha256": "728c5fc38a3a8c6d651eaf72b9e454658d755ebff1a92291bf5e7e737d87ed78",
+      "bytes": 655
+    },
+    "themes/terminal/alacritty/apt-cpan-theme.toml": {
+      "sha256": "b937a8444e23a49285c1095d76ddfdfdbd02d85dae31b300d5ecac796ca934a2",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-cpp-theme.toml": {
+      "sha256": "01658c320f9e17637f3a2c57538d621e484cc2c52b8c55cc96286924723fceb5",
+      "bytes": 646
+    },
+    "themes/terminal/alacritty/apt-csharp-theme.toml": {
+      "sha256": "ce26217a38473dee6513bf5653591af98606eb813c07c18673bf235314dd0dd8",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-dbase-theme.toml": {
+      "sha256": "f533b63f84b57e25c1e1fc694e4e8b5e7b1c37ddbc2449768f6981667f335dbc",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-docker-theme.toml": {
+      "sha256": "7be1b182a4a417c3bd6e26e6d41873ff9cb53580a9e8f516a6dad47b24ce853f",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-flathub-theme.toml": {
+      "sha256": "84aced1dc47b17b4d8175c637c731d72e41f3b698cf7061076d103000624ec8e",
+      "bytes": 650
+    },
+    "themes/terminal/alacritty/apt-fortran-theme.toml": {
+      "sha256": "d4db47c9199da29c5d7e7b6ed6d310f18ac62a2b5b9e8604131af8d11ac26706",
+      "bytes": 650
+    },
+    "themes/terminal/alacritty/apt-fsharp-theme.toml": {
+      "sha256": "50e1e8708d2fb0cef1323bdf3756459d92b25ca8b2d5064ff0640115d51ad8c6",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-grafana-theme.toml": {
+      "sha256": "8470d8cf471f4c66934a4a434e070c73abbc711d282235afeb27c775669cc418",
+      "bytes": 650
+    },
+    "themes/terminal/alacritty/apt-html-theme.toml": {
+      "sha256": "22aedbf9cc97207aeefe2fe432baa501556f5d74e7e3dcbf4a6729be4c80e002",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-jave-theme.toml": {
+      "sha256": "e7248e3e07cdca0ad88176c9334a6bc7e3c5ea491aa640ba3b56f9f60d50907a",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-julia-theme.toml": {
+      "sha256": "40f69a9176c7c4f917dba73b13ca01f368d5bb3aeb08c5d146f2f338f94165af",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-kotlin-theme.toml": {
+      "sha256": "89a848456bfd40b0c30485758978f900bc081f2ac43c4f0fa04217ae58d4c33c",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-kubernetes-theme.toml": {
+      "sha256": "813154e2e166f42d94fd359d15461fa317f065320e7e80bdc56bc104d29e93e4",
+      "bytes": 653
+    },
+    "themes/terminal/alacritty/apt-lisp-theme.toml": {
+      "sha256": "448e124cc9a83ab678625d823a9874d363f2b1373b9aa99848449c2d973e03bc",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-lua-theme.toml": {
+      "sha256": "28fb64bf6b6335794f9a4dffb8189e81534593e1276bd730a53de24e92d83a23",
+      "bytes": 646
+    },
+    "themes/terminal/alacritty/apt-malbolge-theme.toml": {
+      "sha256": "9c7a94ee3e253fdde245012293d79e3f00fb791cb0b71f8fc54c29a33b163255",
+      "bytes": 651
+    },
+    "themes/terminal/alacritty/apt-markdown-theme.toml": {
+      "sha256": "c03bb7afa291225fff73bd5f72f88f04eff4c2d31a3099098f945deee7579bbd",
+      "bytes": 651
+    },
+    "themes/terminal/alacritty/apt-matlab-theme.toml": {
+      "sha256": "6957e71a06139e6b39dd34bea2fe79faf35325e3de9678a83226a8b9208f604c",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-mtlab-theme.toml": {
+      "sha256": "53801c0a7235aa2295b581365e327e36a3a70c3e931f4ec08ec1c571382ab412",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-mumps-theme.toml": {
+      "sha256": "7824220431dd0a95b98b00678ac6c56f6fc40ea7c4436162cd47ba4f1b476b73",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-nginx-theme.toml": {
+      "sha256": "062c21185bf73e6aa38d38e76ad645669b89e4e5c33cfa9a46e326f9a25c0c31",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-nim-theme.toml": {
+      "sha256": "b4c86007b38c10dcb9d2337f5b3942f98b7b40bfec974b93326b49a2c1bd090d",
+      "bytes": 646
+    },
+    "themes/terminal/alacritty/apt-node-theme.toml": {
+      "sha256": "b428a499faa47fd82cf74004d6550584d8ce44072262daed7133273610be822b",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-objectivec-theme.toml": {
+      "sha256": "77c6102eba972829f1b464d6cab293abc834ed10bd85a82f0bac9f43009865b9",
+      "bytes": 653
+    },
+    "themes/terminal/alacritty/apt-ocaml-theme.toml": {
+      "sha256": "91d009ddac6ed94bec008e59109b0fbe4d2b579b47457f122d695a62320b8152",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-perl-theme.toml": {
+      "sha256": "74f3b0ff1f50be23071637f7ab44349b580916bc68bc896868214a863db8bda2",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-php-theme.toml": {
+      "sha256": "57a4dc584c467931cc68549a1c082de29bdc2f2538706855cc3043ad3b35e990",
+      "bytes": 646
+    },
+    "themes/terminal/alacritty/apt-powershell-theme.toml": {
+      "sha256": "3225b6db56f6c95925d0f8da266559a0a625b11391aef80bf56e67d18c8b9778",
+      "bytes": 653
+    },
+    "themes/terminal/alacritty/apt-prolog-theme.toml": {
+      "sha256": "74ba6b0753cd337cee0e796e37939e77facc4c6979699d4b326b7b53eb47b062",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-prometheus-theme.toml": {
+      "sha256": "c34ce5b992b7000a4a5b416847f6555c822f2f1056efa1c4101de7e3bfa3a611",
+      "bytes": 653
+    },
+    "themes/terminal/alacritty/apt-promis-theme.toml": {
+      "sha256": "ca8284fb93d819f199fe4eeda75b8468846662209c95bd38dcb580ed35b0b36c",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-purescript-theme.toml": {
+      "sha256": "f195d81b127b6d6bb2a101b0ecd2fa22299757746ada4d5bad236278865e8124",
+      "bytes": 653
+    },
+    "themes/terminal/alacritty/apt-python-theme.toml": {
+      "sha256": "d4d8a898ea364efb413d104a3fa2bd7b574038e4bd4eeecc8458442f52e83fb9",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-qbasic-theme.toml": {
+      "sha256": "1b321ec5d8d8e3cfc4a5b6d865dd7cd16154be2043291577f72c19e468c71588",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-r-theme.toml": {
+      "sha256": "496ef24829c7777144e84665a7a3da50a49defae5ff1a06c4791a5456efbe66e",
+      "bytes": 644
+    },
+    "themes/terminal/alacritty/apt-react-theme.toml": {
+      "sha256": "667bd6fa001b066730660446519c7c46c83f8857c01fd33f9703588c952f8910",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-ruby-theme.toml": {
+      "sha256": "89f2e36b174e74734d7baa9a789accb0a6f0bf8468daa4d438e198680aa90afb",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-rust-theme.toml": {
+      "sha256": "c06d3fef91b5b053f020eea3f0f38da5c461c0685bb9c81edcde829136712db6",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-scala-theme.toml": {
+      "sha256": "9800d15c4c4efd36e4cc8f9dbfb1f4ab2981605c1ca72f2e55312afac4f55bac",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-scratch-theme.toml": {
+      "sha256": "5ab30a7e4c05e1b937dc8c22795dc60a2122a31d6d62c278de3a89fcebb27785",
+      "bytes": 650
+    },
+    "themes/terminal/alacritty/apt-sgml-theme.toml": {
+      "sha256": "f563af7032ea26b0661aebb8b93c2e65a256364ffd52ad2ae600215b5deec9db",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-sql-theme.toml": {
+      "sha256": "eb67e3ec06ba81325677acc4d3a8c4610e49ebdd356701dc576be96bfc252001",
+      "bytes": 646
+    },
+    "themes/terminal/alacritty/apt-svelte-theme.toml": {
+      "sha256": "6c56097da60855db8fe5940965103871959100868cb5871e70a7cabf22fff7de",
+      "bytes": 649
+    },
+    "themes/terminal/alacritty/apt-swift-theme.toml": {
+      "sha256": "8ac12b69fbe1a5bcecc68cddc7eb7d5b2980031dac59592f721f8e69eb3bb8e0",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-terraform-theme.toml": {
+      "sha256": "38916993c0ce52ba934bb32868fcd8ed5fbd87832ae60435f4295960827d7548",
+      "bytes": 652
+    },
+    "themes/terminal/alacritty/apt-tex-theme.toml": {
+      "sha256": "5f5ec7d5d5522b595963c79cc06a85dbb2fdd0daf2b592b477e270b8db50e5d4",
+      "bytes": 646
+    },
+    "themes/terminal/alacritty/apt-toml-theme.toml": {
+      "sha256": "ea24f9afb961727438e1231cf0623e53409df665192123c52d22b33bfae6359c",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-typescript-theme.toml": {
+      "sha256": "e2b7384614ef46be96e04d6cacaee164e8ce701240101ede7b1a569390f6ef80",
+      "bytes": 653
+    },
+    "themes/terminal/alacritty/apt-vbsix-theme.toml": {
+      "sha256": "379dd8c100860810b1b7aa16c3a5a7f64012b7652acbc7f87f4c23eb5b08774b",
+      "bytes": 648
+    },
+    "themes/terminal/alacritty/apt-vue-theme.toml": {
+      "sha256": "c744dbed69276df343afaf8e276e3cd197d2f446421d3eaee2625efa2d0099c4",
+      "bytes": 646
+    },
+    "themes/terminal/alacritty/apt-wasm-theme.toml": {
+      "sha256": "adeade55e830a8465ff4ed952e3c44e2cca7060663dc1b446be1a46cb4a04ec6",
+      "bytes": 647
+    },
+    "themes/terminal/alacritty/apt-zig-theme.toml": {
+      "sha256": "c69ef8c444c5348010f04a3e5710a690924a303e25a10d9ba1c3e5d08bd5b983",
+      "bytes": 646
+    },
+    "themes/terminal/windows/apt-ada-theme.json": {
+      "sha256": "9fc97c48595beec650e7e17ef0d4cf04ad81d28e92dcb21ed8694078a2acb5d3",
+      "bytes": 559
+    },
+    "themes/terminal/windows/apt-ansible-theme.json": {
+      "sha256": "73de074beec6154e736616e778d8ffdecc85948b97c47846543a5a3acb4ae88c",
+      "bytes": 563
+    },
+    "themes/terminal/windows/apt-aptlantisstudio-theme.json": {
+      "sha256": "ff4f9c0182290b3caa87837060e7d810b391ef3b62af011be507227a23a51df6",
+      "bytes": 571
+    },
+    "themes/terminal/windows/apt-assembly-theme.json": {
+      "sha256": "9a0106f06fa9e2a2aa0674f834d04934460c613cb4abedb41946e3c6b884d7e9",
+      "bytes": 564
+    },
+    "themes/terminal/windows/apt-bash-theme.json": {
+      "sha256": "7fa506b4baf5f2215996b80e155a18ea5f94dc7313fe54774d952e500746e68f",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-bioconductor-theme.json": {
+      "sha256": "900bb1fadf7bf2ab09d07124e62942f128108d5a61fa9fb92bb04f6021b1ce67",
+      "bytes": 568
+    },
+    "themes/terminal/windows/apt-c-theme.json": {
+      "sha256": "9b386ab7448076324248b10e4bdaf51e7b61d0e0ed05952b4d7dcc3120c18c7b",
+      "bytes": 557
+    },
+    "themes/terminal/windows/apt-caddy-theme.json": {
+      "sha256": "6c72935444839a2e637b511aad4865f19714e9ba47f1c62ea637cabe007064ed",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-clojure-theme.json": {
+      "sha256": "4b9b74366c324e5428567c3ece0737219f4fb0206dfaf36ba5eff1ee9f9af3d6",
+      "bytes": 563
+    },
+    "themes/terminal/windows/apt-cloudflare-theme.json": {
+      "sha256": "a09a6fc74dbe576bb94a192308da41967f2256e6c7f690675daa5126ead724fd",
+      "bytes": 566
+    },
+    "themes/terminal/windows/apt-cobol-theme.json": {
+      "sha256": "b15d4aa56e160aac7da4ec66e9f2ce3e3ddaffbe6405d44029bc9c1b436450cf",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-coffeescript-theme.json": {
+      "sha256": "361d8c1b17c6c808e49e531272fcdf6b3be0b9fa4aae13d8f6f17bf6ab183add",
+      "bytes": 568
+    },
+    "themes/terminal/windows/apt-cpan-theme.json": {
+      "sha256": "923ad201af3d0fb94d82a7cb9c4380c5c590b15872dbacf088a6622a7b605eac",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-cpp-theme.json": {
+      "sha256": "b6d8037c9aec76326b62e5d2029e6af1901873f3ae115d61feaa0bffee354e4a",
+      "bytes": 559
+    },
+    "themes/terminal/windows/apt-csharp-theme.json": {
+      "sha256": "192cecf9fbd856a9cc9b7d0acb8c45555f1ca43244a62e2b29a20658ee398caf",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-dbase-theme.json": {
+      "sha256": "bcf0dd0d9b63d2dea24ab89e73746df6a18c09d0c8e0ec52e7d4ff50681e35e3",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-docker-theme.json": {
+      "sha256": "84c53cee7a916d78eac3071b87a0984ea537eed891501968d3b763d6e6a39fe6",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-flathub-theme.json": {
+      "sha256": "d854f0349c2a0f27c528b4912fc9733249811f1dae9c4c208791dd5e4710ff06",
+      "bytes": 563
+    },
+    "themes/terminal/windows/apt-fortran-theme.json": {
+      "sha256": "2c6f6b84277d25c079630f86a5c8fd47258e4b4e446000974ab2f5b3ce7b9bf2",
+      "bytes": 563
+    },
+    "themes/terminal/windows/apt-fsharp-theme.json": {
+      "sha256": "444df11dd23cff3f43c5fc382875c315cd79d28eb2510add4bfcbe39c6cedfb7",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-grafana-theme.json": {
+      "sha256": "32a84e5687f57c48441de1d35016b466bab681688b8a9c5d7a18053195bfd540",
+      "bytes": 563
+    },
+    "themes/terminal/windows/apt-html-theme.json": {
+      "sha256": "9b1fa454ae08b3d0342b5b028ce7a9f5c81812276893bd4c23a7582d0476e1f5",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-jave-theme.json": {
+      "sha256": "575cd643a9f7c11322fd8b1aee9f5117a7267680f589b3a2ae16fd49a25cb36a",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-julia-theme.json": {
+      "sha256": "ff256c86d1de254af7a760dfebb070f84c3daf954759215d11d973a981711dad",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-kotlin-theme.json": {
+      "sha256": "3fa07e21fc66108cc11be4dede83fab5b5c37be2f72b264df621d6fc5cd72a8c",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-kubernetes-theme.json": {
+      "sha256": "f42754a76c8b50bf9f4d0023bef4f5cfedaf1dfd8216828ad36f4cd68678691b",
+      "bytes": 566
+    },
+    "themes/terminal/windows/apt-lisp-theme.json": {
+      "sha256": "e8f435dac506445291744f33b26f1d2566f3db17f65f555be432486d5304397e",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-lua-theme.json": {
+      "sha256": "0af11572afce49789bf634ac7e29cb40c4a65436f9dc3ac1f2b2161a893696c2",
+      "bytes": 559
+    },
+    "themes/terminal/windows/apt-malbolge-theme.json": {
+      "sha256": "f8ccf9f3f23b94f2ace9c7ab56a1df65764389a7bead287c830c9739b469e469",
+      "bytes": 564
+    },
+    "themes/terminal/windows/apt-markdown-theme.json": {
+      "sha256": "922f88a8d0877cdbc77768cf49704858c29a16234a39a297ff6e585662159c08",
+      "bytes": 564
+    },
+    "themes/terminal/windows/apt-matlab-theme.json": {
+      "sha256": "15435550742b3b4816b14eb1467a857fdf25043942742bf5e194770818ab3526",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-mtlab-theme.json": {
+      "sha256": "3c6bee5eed16fdff679244514d8e49019304d0196a52fea7ab09f504ea2d034a",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-mumps-theme.json": {
+      "sha256": "36f6f5ac0d37aab267197bf283121078f844bdd655c1b592a4a546e22b366173",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-nginx-theme.json": {
+      "sha256": "90f20dea32f7c7286eb86bcbb9a669959ecbd06c8813ddefdbac88cdae67346a",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-nim-theme.json": {
+      "sha256": "7898c4ed1df4efda559dd2b5347b97866137ec6e20b09615dc9fdebffb67bc69",
+      "bytes": 559
+    },
+    "themes/terminal/windows/apt-node-theme.json": {
+      "sha256": "d1b1d2800863ce05708aa170ce3e8d709cb32c1dbcdbdbc1ad0967620837fe27",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-objectivec-theme.json": {
+      "sha256": "e633b27e7c3a6e4fd9c79a7d28042864834594fa8b09fa3163db124014935a03",
+      "bytes": 566
+    },
+    "themes/terminal/windows/apt-ocaml-theme.json": {
+      "sha256": "2cf75dcc9e34c39c0c7be65b76404ca8caf3bde4b2afd239039c7d4d513f71ee",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-perl-theme.json": {
+      "sha256": "da063fabe4e6a0235a3b7bc46d8eb24d4ea4bdff2834d3e07889dddcee8b19ef",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-php-theme.json": {
+      "sha256": "2e60c215bc2db4c05ba371abf121845e819fd0722298580a577f088c5cdd2f46",
+      "bytes": 559
+    },
+    "themes/terminal/windows/apt-powershell-theme.json": {
+      "sha256": "dc367f45404138714c2a39099dd1a1fd88c81093469fcfdace2f9ebd311e4eab",
+      "bytes": 566
+    },
+    "themes/terminal/windows/apt-prolog-theme.json": {
+      "sha256": "c54f43ec2d4fbcc4a659cb4c4643354c03278e5399722bced85718ba7c5aedba",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-prometheus-theme.json": {
+      "sha256": "d363937241bbec36143d0ff26f61d1f94828037d1de9a99bf453190b994c5bb4",
+      "bytes": 566
+    },
+    "themes/terminal/windows/apt-promis-theme.json": {
+      "sha256": "bc655a9be5c8a1f59ffd1bcb8f40a079c6254838f348f8781e5d4620c4d66881",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-purescript-theme.json": {
+      "sha256": "f0c7c4ff571d6685ce7a1d24bcc05f189040b71417401371dfc8cfbd7fad3c7c",
+      "bytes": 566
+    },
+    "themes/terminal/windows/apt-python-theme.json": {
+      "sha256": "e307e881b3f90322acac20118b52e0e5b2d53019b6ba65f5960c6561037ce1e1",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-qbasic-theme.json": {
+      "sha256": "18fc733ba8521f3e4fe139b3cbaab8a49a58dc62fe2ef620efa6282e7484abb9",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-r-theme.json": {
+      "sha256": "01df948b2cbdd344f926ec9494db7da1d05347d83a4e2611481c198a64fa2baa",
+      "bytes": 557
+    },
+    "themes/terminal/windows/apt-react-theme.json": {
+      "sha256": "b0baf019773b11034558622c8d8206bd47acc8e46ae94bace6f9e63ca724aebe",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-ruby-theme.json": {
+      "sha256": "dad93382ee241cf4016b5e6cbd7e997acb74a4d7afb558e53770eb4bf49aa5cd",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-rust-theme.json": {
+      "sha256": "c7472256d76aaa7a2b4e843dc4d39eb1e6ce8d1016f151644e93ee453b3021d4",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-scala-theme.json": {
+      "sha256": "fabb6a4bab0ca81e449cef4f31d70def707e3a4e790272e13f92ec1718190e96",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-scratch-theme.json": {
+      "sha256": "dcadcb00c78cf646e3349ae8c83be1305330c96601cfc15c1ad2955af6cf37f6",
+      "bytes": 563
+    },
+    "themes/terminal/windows/apt-sgml-theme.json": {
+      "sha256": "5147946f843ab6673fdd2a8bf40d282911b6a53cc94b87fafd0f6faf64ed5f4d",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-sql-theme.json": {
+      "sha256": "39e6612a6784a91e7e3a5456f6bbf9042bfe045004bfe54d44ceca22d86b23cc",
+      "bytes": 559
+    },
+    "themes/terminal/windows/apt-svelte-theme.json": {
+      "sha256": "0ff085d8c6d416fe3756c686533ac798f4fb5177a6f5dfbe162a235b356f6a92",
+      "bytes": 562
+    },
+    "themes/terminal/windows/apt-swift-theme.json": {
+      "sha256": "02058102c96f31752074f848a04d2a7fbacfae7b77e293e3cf27b62f76ecbc2b",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-terraform-theme.json": {
+      "sha256": "299b53c1de8e4d00bb32946cb2ec3282b5194cb742a170d0e8420159e1cb7670",
+      "bytes": 565
+    },
+    "themes/terminal/windows/apt-tex-theme.json": {
+      "sha256": "962cdf5e4017bdbd2ee8f3b671dda0f72946bcdcbed3ba110bbe1233a28dd396",
+      "bytes": 559
+    },
+    "themes/terminal/windows/apt-toml-theme.json": {
+      "sha256": "9acca46d0ff4bc4595b87482cdc176837747fdee7a70ac9a068b0a44aceeda72",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-typescript-theme.json": {
+      "sha256": "e689a1a2ea87515d173f5ef4a7461665f63d8b1d2bb6c286414c9ed211355c54",
+      "bytes": 566
+    },
+    "themes/terminal/windows/apt-vbsix-theme.json": {
+      "sha256": "48b7c9a6a10a647e846cdaf9da5cf90a6b60a42eaa8440b368c8f61ece90c955",
+      "bytes": 561
+    },
+    "themes/terminal/windows/apt-vue-theme.json": {
+      "sha256": "332e508f666a25c019b6405261bc5efaae454bac0aefcd918e65fe79ec3d7d47",
+      "bytes": 559
+    },
+    "themes/terminal/windows/apt-wasm-theme.json": {
+      "sha256": "3448b3b23f004e1a30037a125d9ea5def0a2ab8a46c2ac3f0ed5635702f09261",
+      "bytes": 560
+    },
+    "themes/terminal/windows/apt-zig-theme.json": {
+      "sha256": "02cf0742db4345d1c8698ee04edfa68c448ba3469b9fb26c1c80a3c362988457",
+      "bytes": 559
+    },
+    "themes/vscode/apt-ada-theme.json": {
+      "sha256": "b315abdb26c45ff2b5ec7b709a8cdfa86560a74c0ed5651868ff600a0f755ff7",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-ansible-theme.json": {
+      "sha256": "989812d5d1f8cb413bdef74da759551e8b8dee4b01890b080d727dd896e5aa8e",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-aptlantisstudio-theme.json": {
+      "sha256": "82fa17420913e8e9f19aaed73639a0e187f6b287ee767af98433e97b5106337a",
+      "bytes": 6899
+    },
+    "themes/vscode/apt-assembly-theme.json": {
+      "sha256": "231217959749a00a8356789b7185f781de67ef65097b891d2b73aee3d67a0e33",
+      "bytes": 6892
+    },
+    "themes/vscode/apt-bash-theme.json": {
+      "sha256": "4e5acbe919c96bf232b36d25c0b6f64935d0c79456982c55cf2363adb11d615d",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-bioconductor-theme.json": {
+      "sha256": "bdf8560dfa4a41b3e79e63c66320c49933da010d7fe3c975be264ae1c777ccbf",
+      "bytes": 6896
+    },
+    "themes/vscode/apt-c-theme.json": {
+      "sha256": "87332d23e3fec98ca1924a0e6c1f7b221c3caa3143d80a3c2aea2a0168681cfe",
+      "bytes": 6885
+    },
+    "themes/vscode/apt-caddy-theme.json": {
+      "sha256": "253c19f0acb0b058b636c29cda648cf961969a727a47d09a2b96259089e1db3e",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-clojure-theme.json": {
+      "sha256": "619485f9d3b601c9c2d0e892847c58d5177e52a8ca68b19a9fdfe67ee943df67",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-cloudflare-theme.json": {
+      "sha256": "dcc4be1224a0b51c3d8a9d6bb971dd9c22baecc5c81ee081af5c40db9562a0f1",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-cobol-theme.json": {
+      "sha256": "b2917d8b7354d23324f962f2ee075eb1bf4197e564ecc60dc08af06df8009b19",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-coffeescript-theme.json": {
+      "sha256": "6ac7e989c845af2cb82a983cd51c9a7ec47b4f83beb91ccea12944dc47242478",
+      "bytes": 6896
+    },
+    "themes/vscode/apt-cpan-theme.json": {
+      "sha256": "c5435a00128dd96e72b35dd4a1b4ef57fb7b8c9576568dab5cf3a9365c06aa4a",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-cpp-theme.json": {
+      "sha256": "de18053e0b55da963c6902284d711f2e7292573379e212fa5e249302b0dc2580",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-csharp-theme.json": {
+      "sha256": "23dd106c1a648b1d722f01d879dd9d5eb8a489834264b01215a7fee1bd32f544",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-dbase-theme.json": {
+      "sha256": "6cfee161f2062d15a546d492281db15015e188d78ea8e2f6e653868610baae50",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-docker-theme.json": {
+      "sha256": "be651b970090177613264ee852ea9af3292236e6ece5caae65662a8710dc5771",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-flathub-theme.json": {
+      "sha256": "71962e2dbc58faa877d8e6f7229222cbf441728b9874b9932c3f807a28af3980",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-fortran-theme.json": {
+      "sha256": "6eb665fa2539679c48a03979be036d1b83f61e14bf2c53710c316f60b6c9ccce",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-fsharp-theme.json": {
+      "sha256": "5813f38505c58da9505007d3ee4812e49361b8dace022892f9d7d0f3656d6f1d",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-grafana-theme.json": {
+      "sha256": "ce04da364e22cf7ffb68f4f84695709a3ac570d13e3c7e7616f9ff0fba744ae1",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-html-theme.json": {
+      "sha256": "e273e9f70e3c2389966a5267b4f7712dd812046aa7c5c0f70c0cfbbb3b125a88",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-jave-theme.json": {
+      "sha256": "b5fcad27424c4f21a515da0f8e18e4ad1e34db58e367a8f4fef8d80ce46ed6f2",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-julia-theme.json": {
+      "sha256": "a00e949aee67661ffe28f25c4135a8064845850a48d9fc8a9d6c39805aeea9d9",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-kotlin-theme.json": {
+      "sha256": "818889c52c0cab5be6755e981dca9cf55bafcd8714f9793cc2d62ba9d19136e6",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-kubernetes-theme.json": {
+      "sha256": "7aa61c455aedf708406f0bd7f33b58284367b3b6e0f671d680c94b0c9be4a162",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-lisp-theme.json": {
+      "sha256": "9112bafce961eac68ec2998bcc4cfbfd8f58f5027524f0e5af9f4db9994fd55b",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-lua-theme.json": {
+      "sha256": "2bf440f7d5cf12e42fb69a5aa9ce6d6d714bb3e5c721dd6bc2aedec73eee38c5",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-malbolge-theme.json": {
+      "sha256": "3e03c9598dedc3f268a1d4ffd8b6e019e10c574fcac2094acf01837cde2617da",
+      "bytes": 6892
+    },
+    "themes/vscode/apt-markdown-theme.json": {
+      "sha256": "8e3dec62d981669af8d07cae98fe85b933bb99887cfa921fb09038541ade7d84",
+      "bytes": 6892
+    },
+    "themes/vscode/apt-matlab-theme.json": {
+      "sha256": "934bbd534f30c8faa6e4dc8759c671b58db98762218952940005879ccd512995",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-mtlab-theme.json": {
+      "sha256": "c47b8b4647acf23c151771cdba272db98e1d509db8f0fb06bb32bb88cc938805",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-mumps-theme.json": {
+      "sha256": "617406b8fd10ba574efced3247a3198670e1a6c6f796bbd290d83e7d93fec8cc",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-nginx-theme.json": {
+      "sha256": "0d3dd1c51085017b8e25988df225e6017cb23799e0d04aac465394a527a19d53",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-nim-theme.json": {
+      "sha256": "4607d9da61e47354d4f70288fa854d2c9f76263126db3c111a71d55b255e9903",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-node-theme.json": {
+      "sha256": "9bd2e1bfcab2b70ea9bd79549b1464fe018926ca95f5c0ae865a48e9b67e66a3",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-objectivec-theme.json": {
+      "sha256": "cb880a671a2805c8cc21e5fe24dfd1f79d791f04fb2868efb244c146224796b0",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-ocaml-theme.json": {
+      "sha256": "09af402163920d665cb9916c34836f0aadded0c4ab8f83f408592ba8249c6d53",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-perl-theme.json": {
+      "sha256": "296c01facb728575c9e99cdd72e58b4df8ba05d86b42b83474626b086b5b588f",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-php-theme.json": {
+      "sha256": "9b7931431712d52689a660eaec007b5ff459132da9eb178aff2efb6a7cfa6592",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-powershell-theme.json": {
+      "sha256": "53e3f524b061aa4b3717fe42fbf25c9f8548c24be1c3b34d12533c06fbd63f18",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-prolog-theme.json": {
+      "sha256": "1638901c61f6fa494e502d724c4efed03c4a90624ca08b6ac2e3a56bb27ea1aa",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-prometheus-theme.json": {
+      "sha256": "ed62d7177025cc76b3cfe6f8349717426251e5de542ae98806c1f2726b1bfcf2",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-promis-theme.json": {
+      "sha256": "5e30dc5e7d5ba27173577fc9552862352f21f39fcb1bef6c1a721b41ebbd8749",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-purescript-theme.json": {
+      "sha256": "970312f1c7ddd3f43f9450c0b1055af4b80f2c32fe66ed1517b3f6f50ebbf2ce",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-python-theme.json": {
+      "sha256": "1b228005f4ed84b5536cbca03201b351519d205f76c2e70b1d4ea4d17a7ca1c1",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-qbasic-theme.json": {
+      "sha256": "b33b42a0ad726f343b08ae4e71c11befb8cadc3b711c0a53fdec90e0a22d30af",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-r-theme.json": {
+      "sha256": "1859020e56798ff56cf3999a202bb5e61517d7d43f1a4fe566ccba9c84a544d6",
+      "bytes": 6885
+    },
+    "themes/vscode/apt-react-theme.json": {
+      "sha256": "5779c6265e50e189cadd72651b5f0d05fecc84e50b03cc5f80ef732f3b983dec",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-ruby-theme.json": {
+      "sha256": "7d2da1e97d59428680c090b2f39af35145250767b7eb6ce8d2d00f8e152e0427",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-rust-theme.json": {
+      "sha256": "85fc3be27bddc280a951e3a73d7f44c02a94e5a149d82099b5a33e31f82e9ae7",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-scala-theme.json": {
+      "sha256": "5a835a4478b017ca636665265f2bf084cac80a72311bfb66c8d4df0cece0b760",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-scratch-theme.json": {
+      "sha256": "3eb8123af0073b7815f5f59a4b0566cd5f39450c0747e4d2d08892aef54d2915",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-sgml-theme.json": {
+      "sha256": "03efa3f1f7f1f51be20870ea06e4f26e745e54bcc3242100960c7c307bdd2c04",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-sql-theme.json": {
+      "sha256": "44bfa8a1ec61967df62ebaabae020a87073da969699348ddbe850099a46b9d83",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-svelte-theme.json": {
+      "sha256": "3e5c0d4ab18e3dabdd45ffe43d3a862d0c23f9ed4fce5100066c2b90c56798ac",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-swift-theme.json": {
+      "sha256": "ba58c6239103e681c377a1275d2310850cf06d945859551a89869e5b0461850f",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-terraform-theme.json": {
+      "sha256": "e72fbb8bed952b3e0c22979af639dac9e1448276304cb6300570ad07d5aca0a8",
+      "bytes": 6893
+    },
+    "themes/vscode/apt-tex-theme.json": {
+      "sha256": "7bb0fc2666eafb78eda9554c73fa4a21a8155150107cc6a47b6dbc44acb942a5",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/apt-themes-0.0.1.vsix": {
+      "sha256": "e9b89167a6f8004857ea72d7a1406a4c00850eae72720a72903299de32a0b4c7",
+      "bytes": 88457
+    },
+    "themes/vscode/apt-themes-extension/package.json": {
+      "sha256": "b2e8825e693d06ad6c0f8af53fe88150b8acb3fb19fa82565ba9540f23233584",
+      "bytes": 8305
+    },
+    "themes/vscode/apt-themes-extension/README.md": {
+      "sha256": "4b13793337ee3883f3638ac36341cf83c3ce2c1c794f7142cece20b979d1d948",
+      "bytes": 401
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-ada-theme.json": {
+      "sha256": "b315abdb26c45ff2b5ec7b709a8cdfa86560a74c0ed5651868ff600a0f755ff7",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-ansible-theme.json": {
+      "sha256": "989812d5d1f8cb413bdef74da759551e8b8dee4b01890b080d727dd896e5aa8e",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-assembly-theme.json": {
+      "sha256": "231217959749a00a8356789b7185f781de67ef65097b891d2b73aee3d67a0e33",
+      "bytes": 6892
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-bash-theme.json": {
+      "sha256": "4e5acbe919c96bf232b36d25c0b6f64935d0c79456982c55cf2363adb11d615d",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-bioconductor-theme.json": {
+      "sha256": "bdf8560dfa4a41b3e79e63c66320c49933da010d7fe3c975be264ae1c777ccbf",
+      "bytes": 6896
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-c-theme.json": {
+      "sha256": "87332d23e3fec98ca1924a0e6c1f7b221c3caa3143d80a3c2aea2a0168681cfe",
+      "bytes": 6885
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-caddy-theme.json": {
+      "sha256": "253c19f0acb0b058b636c29cda648cf961969a727a47d09a2b96259089e1db3e",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-clojure-theme.json": {
+      "sha256": "619485f9d3b601c9c2d0e892847c58d5177e52a8ca68b19a9fdfe67ee943df67",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-cloudflare-theme.json": {
+      "sha256": "dcc4be1224a0b51c3d8a9d6bb971dd9c22baecc5c81ee081af5c40db9562a0f1",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-cobol-theme.json": {
+      "sha256": "b2917d8b7354d23324f962f2ee075eb1bf4197e564ecc60dc08af06df8009b19",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-coffeescript-theme.json": {
+      "sha256": "6ac7e989c845af2cb82a983cd51c9a7ec47b4f83beb91ccea12944dc47242478",
+      "bytes": 6896
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-cpan-theme.json": {
+      "sha256": "c5435a00128dd96e72b35dd4a1b4ef57fb7b8c9576568dab5cf3a9365c06aa4a",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-cpp-theme.json": {
+      "sha256": "de18053e0b55da963c6902284d711f2e7292573379e212fa5e249302b0dc2580",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-csharp-theme.json": {
+      "sha256": "23dd106c1a648b1d722f01d879dd9d5eb8a489834264b01215a7fee1bd32f544",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-dbase-theme.json": {
+      "sha256": "6cfee161f2062d15a546d492281db15015e188d78ea8e2f6e653868610baae50",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-docker-theme.json": {
+      "sha256": "be651b970090177613264ee852ea9af3292236e6ece5caae65662a8710dc5771",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-flathub-theme.json": {
+      "sha256": "71962e2dbc58faa877d8e6f7229222cbf441728b9874b9932c3f807a28af3980",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-fortran-theme.json": {
+      "sha256": "6eb665fa2539679c48a03979be036d1b83f61e14bf2c53710c316f60b6c9ccce",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-fsharp-theme.json": {
+      "sha256": "5813f38505c58da9505007d3ee4812e49361b8dace022892f9d7d0f3656d6f1d",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-grafana-theme.json": {
+      "sha256": "ce04da364e22cf7ffb68f4f84695709a3ac570d13e3c7e7616f9ff0fba744ae1",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-html-theme.json": {
+      "sha256": "e273e9f70e3c2389966a5267b4f7712dd812046aa7c5c0f70c0cfbbb3b125a88",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-jave-theme.json": {
+      "sha256": "b5fcad27424c4f21a515da0f8e18e4ad1e34db58e367a8f4fef8d80ce46ed6f2",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-julia-theme.json": {
+      "sha256": "a00e949aee67661ffe28f25c4135a8064845850a48d9fc8a9d6c39805aeea9d9",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-kotlin-theme.json": {
+      "sha256": "818889c52c0cab5be6755e981dca9cf55bafcd8714f9793cc2d62ba9d19136e6",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-kubernetes-theme.json": {
+      "sha256": "7aa61c455aedf708406f0bd7f33b58284367b3b6e0f671d680c94b0c9be4a162",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-lisp-theme.json": {
+      "sha256": "9112bafce961eac68ec2998bcc4cfbfd8f58f5027524f0e5af9f4db9994fd55b",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-lua-theme.json": {
+      "sha256": "2bf440f7d5cf12e42fb69a5aa9ce6d6d714bb3e5c721dd6bc2aedec73eee38c5",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-malbolge-theme.json": {
+      "sha256": "3e03c9598dedc3f268a1d4ffd8b6e019e10c574fcac2094acf01837cde2617da",
+      "bytes": 6892
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-markdown-theme.json": {
+      "sha256": "8e3dec62d981669af8d07cae98fe85b933bb99887cfa921fb09038541ade7d84",
+      "bytes": 6892
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-matlab-theme.json": {
+      "sha256": "934bbd534f30c8faa6e4dc8759c671b58db98762218952940005879ccd512995",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-mtlab-theme.json": {
+      "sha256": "c47b8b4647acf23c151771cdba272db98e1d509db8f0fb06bb32bb88cc938805",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-mumps-theme.json": {
+      "sha256": "617406b8fd10ba574efced3247a3198670e1a6c6f796bbd290d83e7d93fec8cc",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-nginx-theme.json": {
+      "sha256": "0d3dd1c51085017b8e25988df225e6017cb23799e0d04aac465394a527a19d53",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-nim-theme.json": {
+      "sha256": "4607d9da61e47354d4f70288fa854d2c9f76263126db3c111a71d55b255e9903",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-node-theme.json": {
+      "sha256": "9bd2e1bfcab2b70ea9bd79549b1464fe018926ca95f5c0ae865a48e9b67e66a3",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-objectivec-theme.json": {
+      "sha256": "cb880a671a2805c8cc21e5fe24dfd1f79d791f04fb2868efb244c146224796b0",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-ocaml-theme.json": {
+      "sha256": "09af402163920d665cb9916c34836f0aadded0c4ab8f83f408592ba8249c6d53",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-perl-theme.json": {
+      "sha256": "296c01facb728575c9e99cdd72e58b4df8ba05d86b42b83474626b086b5b588f",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-php-theme.json": {
+      "sha256": "9b7931431712d52689a660eaec007b5ff459132da9eb178aff2efb6a7cfa6592",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-powershell-theme.json": {
+      "sha256": "53e3f524b061aa4b3717fe42fbf25c9f8548c24be1c3b34d12533c06fbd63f18",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-prolog-theme.json": {
+      "sha256": "1638901c61f6fa494e502d724c4efed03c4a90624ca08b6ac2e3a56bb27ea1aa",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-prometheus-theme.json": {
+      "sha256": "ed62d7177025cc76b3cfe6f8349717426251e5de542ae98806c1f2726b1bfcf2",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-promis-theme.json": {
+      "sha256": "5e30dc5e7d5ba27173577fc9552862352f21f39fcb1bef6c1a721b41ebbd8749",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-purescript-theme.json": {
+      "sha256": "970312f1c7ddd3f43f9450c0b1055af4b80f2c32fe66ed1517b3f6f50ebbf2ce",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-python-theme.json": {
+      "sha256": "1b228005f4ed84b5536cbca03201b351519d205f76c2e70b1d4ea4d17a7ca1c1",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-qbasic-theme.json": {
+      "sha256": "b33b42a0ad726f343b08ae4e71c11befb8cadc3b711c0a53fdec90e0a22d30af",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-r-theme.json": {
+      "sha256": "1859020e56798ff56cf3999a202bb5e61517d7d43f1a4fe566ccba9c84a544d6",
+      "bytes": 6885
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-react-theme.json": {
+      "sha256": "5779c6265e50e189cadd72651b5f0d05fecc84e50b03cc5f80ef732f3b983dec",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-ruby-theme.json": {
+      "sha256": "7d2da1e97d59428680c090b2f39af35145250767b7eb6ce8d2d00f8e152e0427",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-rust-theme.json": {
+      "sha256": "85fc3be27bddc280a951e3a73d7f44c02a94e5a149d82099b5a33e31f82e9ae7",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-scala-theme.json": {
+      "sha256": "5a835a4478b017ca636665265f2bf084cac80a72311bfb66c8d4df0cece0b760",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-scratch-theme.json": {
+      "sha256": "3eb8123af0073b7815f5f59a4b0566cd5f39450c0747e4d2d08892aef54d2915",
+      "bytes": 6891
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-sgml-theme.json": {
+      "sha256": "03efa3f1f7f1f51be20870ea06e4f26e745e54bcc3242100960c7c307bdd2c04",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-sql-theme.json": {
+      "sha256": "44bfa8a1ec61967df62ebaabae020a87073da969699348ddbe850099a46b9d83",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-svelte-theme.json": {
+      "sha256": "3e5c0d4ab18e3dabdd45ffe43d3a862d0c23f9ed4fce5100066c2b90c56798ac",
+      "bytes": 6890
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-swift-theme.json": {
+      "sha256": "ba58c6239103e681c377a1275d2310850cf06d945859551a89869e5b0461850f",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-terraform-theme.json": {
+      "sha256": "e72fbb8bed952b3e0c22979af639dac9e1448276304cb6300570ad07d5aca0a8",
+      "bytes": 6893
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-tex-theme.json": {
+      "sha256": "7bb0fc2666eafb78eda9554c73fa4a21a8155150107cc6a47b6dbc44acb942a5",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-toml-theme.json": {
+      "sha256": "0cf67647ea01bb0369535cc8e568968500d95845900ca663250c6fe31f739b04",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-typescript-theme.json": {
+      "sha256": "c95862f71addd95d4a1119c5006b81386978804edaad67deb331b5f44c23576a",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-vbsix-theme.json": {
+      "sha256": "a0e53f8b594e04c1eca800cb77ec5fdfa2547a787e53e003e8bf4e39f7fea2d0",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-vue-theme.json": {
+      "sha256": "bb0a19ae3fb1025696dfbc612ca4c9eae3d6b2bbba9b04c6045812c1b7a57f54",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-wasm-theme.json": {
+      "sha256": "19e3003f83c1684bc2d383d8769f8a3885245adcc6f6a02d62e3a21e553c4afc",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-themes-extension/themes/apt-zig-theme.json": {
+      "sha256": "c2e9c3aa95640e8764cfdbb4e28b1cb38fd878d920438d9c0bd59dbb326b9df2",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-toml-theme.json": {
+      "sha256": "0cf67647ea01bb0369535cc8e568968500d95845900ca663250c6fe31f739b04",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-typescript-theme.json": {
+      "sha256": "c95862f71addd95d4a1119c5006b81386978804edaad67deb331b5f44c23576a",
+      "bytes": 6894
+    },
+    "themes/vscode/apt-vbsix-theme.json": {
+      "sha256": "a0e53f8b594e04c1eca800cb77ec5fdfa2547a787e53e003e8bf4e39f7fea2d0",
+      "bytes": 6889
+    },
+    "themes/vscode/apt-vue-theme.json": {
+      "sha256": "bb0a19ae3fb1025696dfbc612ca4c9eae3d6b2bbba9b04c6045812c1b7a57f54",
+      "bytes": 6887
+    },
+    "themes/vscode/apt-wasm-theme.json": {
+      "sha256": "19e3003f83c1684bc2d383d8769f8a3885245adcc6f6a02d62e3a21e553c4afc",
+      "bytes": 6888
+    },
+    "themes/vscode/apt-zig-theme.json": {
+      "sha256": "c2e9c3aa95640e8764cfdbb4e28b1cb38fd878d920438d9c0bd59dbb326b9df2",
+      "bytes": 6887
+    },
+    "themes/vscode/generate-vscode-extension.js": {
+      "sha256": "97d83215adac1c63fb74883830491bcd951306a9bb634a387e27db8e30e219cc",
+      "bytes": 2222
+    },
+    "themes/web/apt-ada-tokens.json": {
+      "sha256": "2362fa40be35a1e7b61dba636d29979cdd0b86dfed69191e6aeb04635a98c6a0",
+      "bytes": 324
+    },
+    "themes/web/apt-ansible-tokens.json": {
+      "sha256": "07d1e0b82a9848a42a25a0e43f9f2b1b700e1c1aeddf56396e25459dd294ac35",
+      "bytes": 328
+    },
+    "themes/web/apt-aptlantisstudio-tokens.json": {
+      "sha256": "a5d588f90315d68e822c0559bad0f7747e30e2e4dee9a03bbb42955f88c93719",
+      "bytes": 336
+    },
+    "themes/web/apt-assembly-tokens.json": {
+      "sha256": "d114caf65d0061b42635454e13ed41d0eb122d1107c1d3861968a8fa917c9dc6",
+      "bytes": 329
+    },
+    "themes/web/apt-bash-tokens.json": {
+      "sha256": "cf3781a6d3378723967f024205c23461f5ae2f7b8230119b74228a4db3fd7402",
+      "bytes": 325
+    },
+    "themes/web/apt-bioconductor-tokens.json": {
+      "sha256": "5615e40706eea269944a0a06e250f06811e0c487ff047f2bd990baa46c8d913f",
+      "bytes": 333
+    },
+    "themes/web/apt-c-tokens.json": {
+      "sha256": "d28d7520c7ba17a0f19d0ddd88011094c20c121985cf7fa9de9151472d260752",
+      "bytes": 322
+    },
+    "themes/web/apt-caddy-tokens.json": {
+      "sha256": "0cebc8aaf8b7705ed7eedeff26cea576543aa2ff3a5dfa30d657683dc3e1dbaa",
+      "bytes": 326
+    },
+    "themes/web/apt-clojure-tokens.json": {
+      "sha256": "beabe57207ad5fc83cacc8c67721447ee22f359a9b3ad010689cea1439cbcbb2",
+      "bytes": 328
+    },
+    "themes/web/apt-cloudflare-tokens.json": {
+      "sha256": "6bca08adaa4d1362355f40f883a38caf5b8fdf25ba908cc175afc642cda0d926",
+      "bytes": 331
+    },
+    "themes/web/apt-cobol-tokens.json": {
+      "sha256": "0a34b9fdffe66e6de297c151bcad597a59318b4f5cac8e44be2678aa671d342a",
+      "bytes": 326
+    },
+    "themes/web/apt-coffeescript-tokens.json": {
+      "sha256": "a380b5c4d2bae8337ee3b7539f2742656787c5f81d23e6e9caed758982b4d014",
+      "bytes": 333
+    },
+    "themes/web/apt-cpan-tokens.json": {
+      "sha256": "f264900ba3a73f49969e90ac4756b0eef84ea2dceb625dd5b049ea4b161c13e9",
+      "bytes": 325
+    },
+    "themes/web/apt-cpp-tokens.json": {
+      "sha256": "ebd8751b9dae95d046875434102686af8b1c4b657eb957e2480cb13fa3b6bc03",
+      "bytes": 324
+    },
+    "themes/web/apt-csharp-tokens.json": {
+      "sha256": "0ae531fffd67eaacd02c629c85865a6d6937ba5a71874f928d2f9b6b43b1f093",
+      "bytes": 327
+    },
+    "themes/web/apt-dbase-tokens.json": {
+      "sha256": "1866688c61ddd090ed6585ac366308e0268e4ee9ac0873c5f961eea7b699be3c",
+      "bytes": 326
+    },
+    "themes/web/apt-docker-tokens.json": {
+      "sha256": "086bedcd6388efbe4577087ebe62d81a878c4be265033c4d6ee35174c2b14bc7",
+      "bytes": 327
+    },
+    "themes/web/apt-flathub-tokens.json": {
+      "sha256": "4d095db6a3b53823ff44805fcdaf0bb396eba6c8c33790b5c0943d7ea734422f",
+      "bytes": 328
+    },
+    "themes/web/apt-fortran-tokens.json": {
+      "sha256": "4bd0e3e5292636b37d22962309216da35115444af3d9c199b75612df1b43c091",
+      "bytes": 328
+    },
+    "themes/web/apt-fsharp-tokens.json": {
+      "sha256": "e9c58bb3f70d8a8edb69595fa1b3a60ee3070bf7dc449515300087256d39bd8d",
+      "bytes": 327
+    },
+    "themes/web/apt-grafana-tokens.json": {
+      "sha256": "3faaad2d4b0574c874ef3ab4d317e12c58af1c83b583d503e2203242771ced1c",
+      "bytes": 328
+    },
+    "themes/web/apt-html-tokens.json": {
+      "sha256": "aba60fc806cbb727f8f24b8a494f6df328c4b628e281aa78e3581ff6511ba9e5",
+      "bytes": 325
+    },
+    "themes/web/apt-jave-tokens.json": {
+      "sha256": "7e5a9aab1210e62e592c047a88e8bd78a8d359e68ec25a0bf5a9cdeb8110b522",
+      "bytes": 325
+    },
+    "themes/web/apt-julia-tokens.json": {
+      "sha256": "0d33b80345961343f20eac5036e36b49504ea6310dfc9a717f1199d693027b3f",
+      "bytes": 326
+    },
+    "themes/web/apt-kotlin-tokens.json": {
+      "sha256": "41d765ecaeb12fc37239fea4b71692dee28f6cff0f0c4b055aa054e306573f6d",
+      "bytes": 327
+    },
+    "themes/web/apt-kubernetes-tokens.json": {
+      "sha256": "7b58d77712f616ae8dc0921c7983ac5b7e4c02ee2ca2373e6d8c23290264eb1d",
+      "bytes": 331
+    },
+    "themes/web/apt-lisp-tokens.json": {
+      "sha256": "91dd5aa55845e97152d5000cc717ceab6ed100809a695ed9d21fe517402b4714",
+      "bytes": 325
+    },
+    "themes/web/apt-lua-tokens.json": {
+      "sha256": "01b9739de86b891c9299abddf87deffaa307103fa5cb3ab904a79acc7291a66c",
+      "bytes": 324
+    },
+    "themes/web/apt-malbolge-tokens.json": {
+      "sha256": "6148adc97e6969c1491f236b9b54bd323472511e8dc0dceb546295dbfe91475c",
+      "bytes": 329
+    },
+    "themes/web/apt-markdown-tokens.json": {
+      "sha256": "34dd90060abb376353924666bf51b9b1bb5b4d1c322e3b4d277506eddf527d5c",
+      "bytes": 329
+    },
+    "themes/web/apt-matlab-tokens.json": {
+      "sha256": "ff6ac56f5811b1b7688d119b381ab0dacd1cc5326092903aea1d0bef52b63b06",
+      "bytes": 327
+    },
+    "themes/web/apt-mtlab-tokens.json": {
+      "sha256": "425fb034b64cf282494a03d971a2736809936a87a9f580e273f03885bff23d42",
+      "bytes": 326
+    },
+    "themes/web/apt-mumps-tokens.json": {
+      "sha256": "f787a4d62cb32d02adaa9b01885f0c6456cc37475ba51466c80992dcb497a10a",
+      "bytes": 326
+    },
+    "themes/web/apt-nginx-tokens.json": {
+      "sha256": "a9c66a3f0a83d480e5472615dc35c008b6e0526c4775e7d129956ef6ac72e40b",
+      "bytes": 326
+    },
+    "themes/web/apt-nim-tokens.json": {
+      "sha256": "b882905db1e1c18e3b9015889b8a463fab28b60e87b38abde95ffdbed2653bcc",
+      "bytes": 324
+    },
+    "themes/web/apt-node-tokens.json": {
+      "sha256": "6a4a591ebdd98266338f392cf6ff9e070f022c172c438b470ac547541b5f79c5",
+      "bytes": 325
+    },
+    "themes/web/apt-objectivec-tokens.json": {
+      "sha256": "11c772f81dc6ceb82679819c65fa8d845c0eb702847dc425fe8794a0498d1d54",
+      "bytes": 331
+    },
+    "themes/web/apt-ocaml-tokens.json": {
+      "sha256": "6d472b66ddb87f81d6b2c5e46d80fb558efb0c466eccc78b2fa62ea0606b462c",
+      "bytes": 326
+    },
+    "themes/web/apt-perl-tokens.json": {
+      "sha256": "8f49a35d9e058beb1d6bd05de6758e6377712196e77666b0ed6d42e0eddd7e45",
+      "bytes": 325
+    },
+    "themes/web/apt-php-tokens.json": {
+      "sha256": "4e2b824c179c9229973f2a94d1a96b016a57ea52f0e574b03cc23cb40011b753",
+      "bytes": 324
+    },
+    "themes/web/apt-powershell-tokens.json": {
+      "sha256": "ed08c3fb5d9f5060dc5ba6a81c4a54ed31b9241cb02e0f4f1c266cba6657412f",
+      "bytes": 331
+    },
+    "themes/web/apt-prolog-tokens.json": {
+      "sha256": "883857bfea65bb46b4e699b3c8db44f09267165ff53b0ff4194cb3ac60471a6a",
+      "bytes": 327
+    },
+    "themes/web/apt-prometheus-tokens.json": {
+      "sha256": "72ba272c214482928146b6afc7016a5b7ee97a9fe09290b4d730ed958f06b884",
+      "bytes": 331
+    },
+    "themes/web/apt-promis-tokens.json": {
+      "sha256": "858c515e9ad7d3459128e8b46317167e61c3586205aaa38e870b5d92c313ae56",
+      "bytes": 327
+    },
+    "themes/web/apt-purescript-tokens.json": {
+      "sha256": "31cd8a246c62b5549559f52cd83ed263daef3ea3fa0b4f4789344c01aebc7ea6",
+      "bytes": 331
+    },
+    "themes/web/apt-python-tokens.json": {
+      "sha256": "5e92d4cf850a712ff3b3ecc0399e9c0afcff17b145cd6a0eadc2a7a559c7f454",
+      "bytes": 327
+    },
+    "themes/web/apt-qbasic-tokens.json": {
+      "sha256": "504c0ddfa0ee3d32ea9c449c70d9ad9caabf7ddedb1d780f2fc6bb6fa06c9984",
+      "bytes": 327
+    },
+    "themes/web/apt-r-tokens.json": {
+      "sha256": "fa1e109e9d02ae37301f0b96b06ad0c8c6a3ed897d589c26198a0cadee21bbe7",
+      "bytes": 322
+    },
+    "themes/web/apt-react-tokens.json": {
+      "sha256": "0072f1610c38bfbc9196e763183773ac7a2c3b7f1fa4ee3932421b45ffc6f7fe",
+      "bytes": 326
+    },
+    "themes/web/apt-ruby-tokens.json": {
+      "sha256": "17d6b76ecbdea86d43b26a73972b3d0edd9acda89a94921ef0bafb9102d2e2ca",
+      "bytes": 325
+    },
+    "themes/web/apt-rust-tokens.json": {
+      "sha256": "a3c6d768209104f83006d5d06eb0a26c04c06ef6e493ef2df743701548307cf9",
+      "bytes": 325
+    },
+    "themes/web/apt-scala-tokens.json": {
+      "sha256": "a40b6804097ddf39a81dfa60131d56d60bf9e11f9e5c18d23291852e5848fd9a",
+      "bytes": 326
+    },
+    "themes/web/apt-scratch-tokens.json": {
+      "sha256": "5c5f16551185a34cbb97b48550e11d6731ddf9fd7c8ec892995b8b78b7af8631",
+      "bytes": 328
+    },
+    "themes/web/apt-sgml-tokens.json": {
+      "sha256": "b3e02da8f66210a5bc888f88418eb48ff5cfe17fb8edea5c80825a69f6bd19e6",
+      "bytes": 325
+    },
+    "themes/web/apt-sql-tokens.json": {
+      "sha256": "b5aa975dff2663fb8962bc11536bf0008c4403031c67a78ab471589553712408",
+      "bytes": 324
+    },
+    "themes/web/apt-svelte-tokens.json": {
+      "sha256": "7659e688e976a1b5b00c46c68da7ff8a15d3b835455f67795774e4e22c9f5950",
+      "bytes": 327
+    },
+    "themes/web/apt-swift-tokens.json": {
+      "sha256": "44c71590bf8d72160c5b41d160a4eb5e56c11e240ea3e1fb491499fc0cacbf39",
+      "bytes": 326
+    },
+    "themes/web/apt-terraform-tokens.json": {
+      "sha256": "234d34fafaa97401906c5d47ce3a691d10b578ead9c4f2a8825e39a71324ee7f",
+      "bytes": 330
+    },
+    "themes/web/apt-tex-tokens.json": {
+      "sha256": "54f8e63fa43bba237a01e29c7667fa92231671f7184532f7cb0d9f98c1133ec5",
+      "bytes": 324
+    },
+    "themes/web/apt-toml-tokens.json": {
+      "sha256": "8581cddfa8413554f99fddc3d2714c954c1ac0415f9fa7ef22671266190fb262",
+      "bytes": 325
+    },
+    "themes/web/apt-typescript-tokens.json": {
+      "sha256": "03b00e363c92b8d097df7500f228f46ada6aadbe7099bfc5aa7bc10f0e930678",
+      "bytes": 331
+    },
+    "themes/web/apt-vbsix-tokens.json": {
+      "sha256": "069afa6750ccb218895f084e3e26e2701cbea7d40c329c8a59e8a7ef71eee939",
+      "bytes": 326
+    },
+    "themes/web/apt-vue-tokens.json": {
+      "sha256": "84f6c96514470755fe3722db33b6c1d8ea6046cdfbf1ffdfa8afe8b2b6009fd4",
+      "bytes": 324
+    },
+    "themes/web/apt-wasm-tokens.json": {
+      "sha256": "56336a5c9400ff82861d7fa700814d1a0be7aed8de53512771675aca7bc9ac8b",
+      "bytes": 325
+    },
+    "themes/web/apt-zig-tokens.json": {
+      "sha256": "774022741ae849867da97470238af346e571a18a2537a415de805be4f9e585fb",
+      "bytes": 324
+    }
+  },
+  "archive_sha256": "546506ff4a2263636aee4c0e49bfac4f9ef29be9bcb686e62a31d68cebbd30bb",
+  "full_restore_verified": true
+}

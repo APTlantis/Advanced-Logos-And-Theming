@@ -1,0 +1,15 @@
+[profiles.windows_terminal]
+budget = 20
+[profiles.siyuan]
+budget = 64
+[profiles.typora]
+budget = 40
+[profiles.powerpoint]
+budget = 24
+
+[extraction]
+candidates = 192
+sample_limit = 65536
+seed = 32
+
+# Optional: [overrides] warning = "color_07"

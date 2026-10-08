@@ -1,0 +1,121 @@
+﻿[theme]
+id = "aptlantis-zig"
+name = "Aptlantis Zig"
+family = "Aptlantis"
+variant = "dark"
+source_image = "E:/NBLM-Refs/SiYiuan-Theme-Zig/apt-zig-dark-logo.png"
+generated_at = "2026-10-05T15:17:34.3023702-04:00"
+candidate_colors = 192
+final_colors = 32
+
+[source]
+language = "Zig"
+inspiration = "Zig language"
+notes = "Derived from Aptlantis Zig-Dark crest"
+
+[palette.structural_dark]
+structural_dark_01 = { hex = "#010101", rgb = [1, 1, 1], oklch = { l = 0.067205, c = 0.000000, h = 89.876 } }
+structural_dark_02 = { hex = "#030B14", rgb = [3, 11, 20], oklch = { l = 0.145180, c = 0.025064, h = 246.539 } }
+structural_dark_03 = { hex = "#040E18", rgb = [4, 14, 24], oklch = { l = 0.158954, c = 0.027233, h = 246.535 } }
+structural_dark_04 = { hex = "#01050C", rgb = [1, 5, 12], oklch = { l = 0.112026, c = 0.022990, h = 248.780 } }
+
+[palette.structural_mid]
+structural_mid_01 = { hex = "#078BB1", rgb = [7, 139, 177], oklch = { l = 0.593406, c = 0.112211, h = 226.021 } }
+structural_mid_02 = { hex = "#684627", rgb = [104, 70, 39], oklch = { l = 0.425215, c = 0.065053, h = 61.973 } }
+structural_mid_03 = { hex = "#033656", rgb = [3, 54, 86], oklch = { l = 0.320155, c = 0.075481, h = 243.410 } }
+structural_mid_04 = { hex = "#326A72", rgb = [50, 106, 114], oklch = { l = 0.489847, c = 0.060004, h = 207.724 } }
+
+[palette.text_light]
+text_light_01 = { hex = "#FBFCF7", rgb = [251, 252, 247], oklch = { l = 0.988933, c = 0.006653, h = 115.702 } }
+text_light_02 = { hex = "#EAA445", rgb = [234, 164, 69], oklch = { l = 0.769686, c = 0.136522, h = 71.223 } }
+text_light_03 = { hex = "#FCF9E7", rgb = [252, 249, 231], oklch = { l = 0.979622, c = 0.023819, h = 99.098 } }
+text_light_04 = { hex = "#FBD687", rgb = [251, 214, 135], oklch = { l = 0.890559, c = 0.106132, h = 85.237 } }
+text_light_05 = { hex = "#64D9E9", rgb = [100, 217, 233], oklch = { l = 0.824013, c = 0.107262, h = 207.411 } }
+
+[palette.accent]
+accent_01 = { hex = "#B77737", rgb = [183, 119, 55], oklch = { l = 0.624533, c = 0.112736, h = 62.943 } }
+accent_02 = { hex = "#0EAFD1", rgb = [14, 175, 209], oklch = { l = 0.697016, c = 0.123951, h = 218.622 } }
+accent_03 = { hex = "#8A582D", rgb = [138, 88, 45], oklch = { l = 0.507024, c = 0.088065, h = 59.449 } }
+accent_04 = { hex = "#02568A", rgb = [2, 86, 138], oklch = { l = 0.438182, c = 0.109916, h = 245.250 } }
+accent_05 = { hex = "#D99648", rgb = [217, 150, 72], oklch = { l = 0.724687, c = 0.123569, h = 67.652 } }
+
+[palette.accent_strong]
+accent_strong_01 = { hex = "#FDB827", rgb = [253, 184, 39], oklch = { l = 0.825903, c = 0.162599, h = 79.664 } }
+accent_strong_02 = { hex = "#FBA622", rgb = [251, 166, 34], oklch = { l = 0.790560, c = 0.162593, h = 70.859 } }
+accent_strong_03 = { hex = "#CE6C14", rgb = [206, 108, 20], oklch = { l = 0.633077, c = 0.151629, h = 54.407 } }
+accent_strong_04 = { hex = "#FCC730", rgb = [252, 199, 48], oklch = { l = 0.853752, c = 0.163081, h = 87.493 } }
+
+[palette.neutral]
+neutral_01 = { hex = "#6F6656", rgb = [111, 102, 86], oklch = { l = 0.513971, c = 0.026865, h = 82.018 } }
+neutral_02 = { hex = "#AFB191", rgb = [175, 177, 145], oklch = { l = 0.750223, c = 0.044256, h = 110.359 } }
+neutral_03 = { hex = "#938A70", rgb = [147, 138, 112], oklch = { l = 0.634215, c = 0.038749, h = 91.211 } }
+neutral_04 = { hex = "#54514A", rgb = [84, 81, 74], oklch = { l = 0.435528, c = 0.011910, h = 87.536 } }
+
+[palette.data]
+data_01 = { hex = "#F9C667", rgb = [249, 198, 103], oklch = { l = 0.853338, c = 0.126794, h = 81.218 } }
+data_02 = { hex = "#A76A34", rgb = [167, 106, 52], oklch = { l = 0.579749, c = 0.104423, h = 59.834 } }
+data_03 = { hex = "#E49C43", rgb = [228, 156, 67], oklch = { l = 0.747921, c = 0.134028, h = 68.603 } }
+data_04 = { hex = "#056D93", rgb = [5, 109, 147], oklch = { l = 0.502307, c = 0.100752, h = 231.724 } }
+data_05 = { hex = "#B28B4E", rgb = [178, 139, 78], oklch = { l = 0.660741, c = 0.092083, h = 77.249 } }
+data_06 = { hex = "#AD8E6F", rgb = [173, 142, 111], oklch = { l = 0.667492, c = 0.057390, h = 66.577 } }
+
+[roles.base]
+app_bg = "structural_dark_02"
+panel_bg = "structural_dark_01"
+editor_bg = "structural_dark_04"
+elevated_bg = "structural_mid_04"
+border_subtle = "neutral_03"
+border_strong = "structural_mid_03"
+
+[roles.text]
+fg_primary = "text_light_01"
+fg_secondary = "text_light_02"
+fg_muted = "neutral_01"
+fg_accent = "text_light_03"
+fg_warm = "text_light_04"
+
+[roles.accent]
+primary = "accent_05"
+secondary = "accent_01"
+success = "accent_03"
+warning = "accent_02"
+highlight = "data_03"
+
+[roles.syntax]
+keyword = "accent_01"
+type = "data_03"
+function = "text_light_03"
+string = "text_light_04"
+number = "data_05"
+comment = "neutral_02"
+constant = "data_06"
+operator = "text_light_02"
+error = "accent_strong_03"
+
+[roles.terminal]
+black = "structural_dark_02"
+red = "accent_01"
+green = "accent_03"
+yellow = "data_05"
+blue = "data_04"
+magenta = "accent_04"
+cyan = "data_03"
+white = "text_light_05"
+
+[targets.jetbrains]
+ui_theme = "Aptlantis Zig"
+editor_scheme = "Aptlantis Zig"
+
+[targets.alacritty]
+flavor = "dark"
+
+[targets.windows_terminal]
+scheme_name = "Aptlantis Zig"
+
+[targets.siyuan]
+css_prefix = "--apt-zig"
+
+[validation]
+minimum_contrast_body = 4.5
+minimum_contrast_ui = 3.0
+apca_preferred = true

@@ -1,0 +1,152 @@
+{
+  "archives": {
+    "aptlantis-logos": {
+      "source": "D:\\CTS\\Aptlantis Logos",
+      "file_count": 465,
+      "archive_sha256": "e2e73341a5321fec383e5e834b079e7feb0b09d1603fc0a6934d0ae261d13886",
+      "full_restore_verified": true
+    },
+    "lang-theme-generator": {
+      "source": "D:\\CTS\\Lang-Theme-Generator",
+      "file_count": 841,
+      "archive_sha256": "546506ff4a2263636aee4c0e49bfac4f9ef29be9bcb686e62a31d68cebbd30bb",
+      "full_restore_verified": true
+    },
+    "palette-transformer": {
+      "source": "D:\\CTS\\.cts_holding\\palette-transformer",
+      "file_count": 1190,
+      "archive_sha256": "3ffccc79ca0e40d8bb7a42f3f66f732491dbc88af0f86d4ca662b5a3dd4549f9",
+      "full_restore_verified": true
+    },
+    "advanced-documents": {
+      "source": "C:\\Users\\Administrator\\Documents\\Advanced-Logos-And-Theming",
+      "file_count": 1247,
+      "archive_sha256": "169fa3b854c6b1208418a0f81c1ff23db3e0dac106e9c771de9156eafd8a9e0f",
+      "full_restore_verified": true
+    }
+  },
+  "duplicate_scripts": {
+    "Convert-to-ICO.py": [
+      {
+        "source": "aptlantis-logos",
+        "path": "scripts/Convert-to-ICO.py",
+        "sha256": "fba30338ab782f6b06f8810e126072317d781b4e52678d6f05930b0bf3020731"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-1-Scripts/Convert-to-ICO.py",
+        "sha256": "fba30338ab782f6b06f8810e126072317d781b4e52678d6f05930b0bf3020731"
+      }
+    ],
+    "Convert-to-SVG.py": [
+      {
+        "source": "aptlantis-logos",
+        "path": "scripts/Convert-to-SVG.py",
+        "sha256": "14dce3cbe8221b3c95fe14193dab507eed93371fa01686b1edc3cc9f98c576d5"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-1-Scripts/Convert-to-SVG.py",
+        "sha256": "14dce3cbe8221b3c95fe14193dab507eed93371fa01686b1edc3cc9f98c576d5"
+      }
+    ],
+    "Embed-SESM.py": [
+      {
+        "source": "aptlantis-logos",
+        "path": "scripts/Embed-SESM.py",
+        "sha256": "7c1bc6bc810db2d3bd683b9e66f110727f5a3761007c3ba3b5a4d1657e954d89"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-1-Scripts/Embed-SESM.py",
+        "sha256": "7c1bc6bc810db2d3bd683b9e66f110727f5a3761007c3ba3b5a4d1657e954d89"
+      }
+    ],
+    "generate_atlas.py": [
+      {
+        "source": "aptlantis-logos",
+        "path": "scripts/generate_atlas.py",
+        "sha256": "8b3a7c9c25ba006285cd89dec977f58fe14d3d3fff8a48cb50562e60a837363a"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-1-Scripts/generate_atlas.py",
+        "sha256": "8b3a7c9c25ba006285cd89dec977f58fe14d3d3fff8a48cb50562e60a837363a"
+      }
+    ],
+    "AptlantisPaletteGenerator.ps1": [
+      {
+        "source": "lang-theme-generator",
+        "path": "Gen2/AptlantisPaletteGenerator.ps1",
+        "sha256": "8cea9d86db56ab83893813c188bf034871cab96de316f95f4267d135bbbf2077"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "AptlantisPaletteGenerator.ps1",
+        "sha256": "7865cceffeeae6b98f0115de389e2ff6805e2d31969c764b7f281d181cce1329"
+      }
+    ],
+    "generate_theme.py": [
+      {
+        "source": "lang-theme-generator",
+        "path": "generate_theme.py",
+        "sha256": "0f83e9c291bb3d340b362b40942f2fb0ab43ff91da89f42c29f9196e102a1089"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-3-GeneratingThemes/generate_theme.py",
+        "sha256": "0f83e9c291bb3d340b362b40942f2fb0ab43ff91da89f42c29f9196e102a1089"
+      }
+    ],
+    "generate_theme32.py": [
+      {
+        "source": "lang-theme-generator",
+        "path": "generate_theme32.py",
+        "sha256": "879bd7a467b79f55945d617c27f3ea392c11029bd0b5fd410c4a292ae50b04b8"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-3-GeneratingThemes/generate_theme32.py",
+        "sha256": "879bd7a467b79f55945d617c27f3ea392c11029bd0b5fd410c4a292ae50b04b8"
+      }
+    ],
+    "palette_transformer.py": [
+      {
+        "source": "palette-transformer",
+        "path": "palette_transformer.py",
+        "sha256": "8cfba54c8e595d018fbc46655fd38973c17861bb447736f32496efd7236d31ba"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-2-Palette-Transformer/palette_transformer.py",
+        "sha256": "8cfba54c8e595d018fbc46655fd38973c17861bb447736f32496efd7236d31ba"
+      }
+    ],
+    "test_transformer.py": [
+      {
+        "source": "palette-transformer",
+        "path": "tests/test_transformer.py",
+        "sha256": "ec98a6fc63c173887461562749d4d7dc0f722accddb820c8ea4ef944fb309e8c"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-2-Palette-Transformer/tests/test_transformer.py",
+        "sha256": "ec98a6fc63c173887461562749d4d7dc0f722accddb820c8ea4ef944fb309e8c"
+      }
+    ],
+    "Transform-Palette.ps1": [
+      {
+        "source": "palette-transformer",
+        "path": "Transform-Palette.ps1",
+        "sha256": "23a8c505e79b96e85ee095912d5a9ef4415fea348820bc7f84a9fea3e120decd"
+      },
+      {
+        "source": "advanced-documents",
+        "path": "Stage-2-Palette-Transformer/Transform-Palette.ps1",
+        "sha256": "23a8c505e79b96e85ee095912d5a9ef4415fea348820bc7f84a9fea3e120decd"
+      }
+    ]
+  },
+  "active_implementation": "Reviewed D-drive converters and SESM; new theme engine; all differing scripts preserved in archives",
+  "status": "retired after verified archival, destination checks and reference updates"
+}

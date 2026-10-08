@@ -1,0 +1,386 @@
+{
+  "reviewed_on": "2026-10-08",
+  "timezone": "America/New_York",
+  "ready_to_retire": true,
+  "commands": [
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "CONVERTED C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools iw9l_fgm\\wide logo.png -> C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools iw9l_fgm SVG results\\wide logo.svg\nProcessed 1 input(s); failures: 0\nCONVERTED C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools agqwznue\\wide logo.png -> C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools agqwznue\\icon.ico\nProcessed 1 input(s); failures: 0\nSKIP exists: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools agqwznue\\icon.ico\nProcessed 1 input(s); failures: 0\nCONVERTED C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools zfox81ko\\wide logo.png -> C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools zfox81ko\\wrapped.svg\nProcessed 1 input(s); failures: 0\nCONVERTED C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools gjmnwr86\\wide logo.png -> C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools gjmnwr86\\normalized.svg\nProcessed 1 input(s); failures: 0\nCONVERTED C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools 16g2qo4b\\wide logo.png -> C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools 16g2qo4b\\traced.svg\nProcessed 1 input(s); failures: 0\nGenerated windows_terminal, siyuan, typora, powerpoint; 0 contrast failures. Review: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmpokt8zq1s\\output\\review.html\nGenerated windows_terminal, siyuan, typora, powerpoint; 0 contrast failures. Review: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmpokt8zq1s\\output\\review.html\nGenerated windows_terminal, siyuan, typora, powerpoint; 94 contrast failures. Review: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmpmu3zobdt\\strict\\review.html\n",
+      "stderr": "test_batch_output_and_collision_guards (test_logo_tools.LogoToolTests.test_batch_output_and_collision_guards) ... Error: batch output directory must be outside the input tree\nok\ntest_ico_frames_and_collision (test_logo_tools.LogoToolTests.test_ico_frames_and_collision) ... ok\ntest_svg_embed_preserves_bytes_and_dimensions (test_logo_tools.LogoToolTests.test_svg_embed_preserves_bytes_and_dimensions) ... ok\ntest_svg_normalize_and_trace_dependency (test_logo_tools.LogoToolTests.test_svg_normalize_and_trace_dependency) ... Error: [WinError 2] The system cannot find the file specified\nok\ntest_trace_output_contract_with_stub (test_logo_tools.LogoToolTests.test_trace_output_contract_with_stub) ... ok\ntest_gamut_and_hue_derivation (test_pipeline.PipelineTests.test_gamut_and_hue_derivation) ... ok\ntest_import_roundtrip_determinism_and_overwrite (test_pipeline.PipelineTests.test_import_roundtrip_determinism_and_overwrite) ... Generating image-derived dark themes...\nGenerating image-derived dark themes...\nError: Output already exists; use --overwrite explicitly\nGenerating image-derived dark themes...\nok\ntest_invalid_input_config_and_nonpipeline_overwrite (test_pipeline.PipelineTests.test_invalid_input_config_and_nonpipeline_overwrite) ... Generating image-derived dark themes...\nError: Expected '=' after a key in a key/value pair (at line 1, column 9)\nGenerating image-derived dark themes...\nError: Unknown configuration section\nGenerating image-derived dark themes...\nError: Refusing to overwrite a non-pipeline directory\nok\ntest_json_envelope_and_bom_configuration (test_pipeline.PipelineTests.test_json_envelope_and_bom_configuration) ... Generating image-derived dark themes...\nok\ntest_math_and_vector_conversion (test_pipeline.PipelineTests.test_math_and_vector_conversion) ... ok\ntest_native_exports_and_canonical_immutability (test_pipeline.PipelineTests.test_native_exports_and_canonical_immutability) ... ok\ntest_selection_observed_exact32_and_determinism (test_pipeline.PipelineTests.test_selection_observed_exact32_and_determinism) ... ok\ntest_semantics_hue_suitability_overrides_and_findings (test_pipeline.PipelineTests.test_semantics_hue_suitability_overrides_and_findings) ... ok\ntest_strict_mode_still_writes_failed_results (test_pipeline.PipelineTests.test_strict_mode_still_writes_failed_results) ... Generating image-derived dark themes...\nok\ntest_transparency_monochrome_and_insufficient_colors (test_pipeline.PipelineTests.test_transparency_monochrome_and_insufficient_colors) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 4.582s\n\nOK\n"
+    },
+    {
+      "command": [
+        "D:\\CTS\\SESM-Metadata-Embedder\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "D:\\CTS\\SESM-Metadata-Embedder",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_sesm_fallback_duplicate_and_schema_error (test_embedding.LogoToolTests.test_sesm_fallback_duplicate_and_schema_error) ... FAILED C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\logo tools 7oavjhiw\\plain.svg: duplicate SESM blocks\nok\ntest_sesm_preview_config_preservation_and_replace (test_embedding.LogoToolTests.test_sesm_preview_config_preservation_and_replace) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.207s\n\nOK\n"
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming\\legacy-tools\\palette-transformer",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_profile_sizes_roles_and_preservation (test_transformer.TransformerTests.test_all_profile_sizes_roles_and_preservation) ... ok\ntest_deterministic_and_roundtrip_outputs (test_transformer.TransformerTests.test_deterministic_and_roundtrip_outputs) ... ok\ntest_fallbacks_and_bad_references (test_transformer.TransformerTests.test_fallbacks_and_bad_references) ... ok\ntest_gamut_mapping (test_transformer.TransformerTests.test_gamut_mapping) ... ok\ntest_impossible_anchor_budget (test_transformer.TransformerTests.test_impossible_anchor_budget) ... ok\ntest_light_direction (test_transformer.TransformerTests.test_light_direction) ... ok\ntest_rgb_roundtrip_and_contrast (test_transformer.TransformerTests.test_rgb_roundtrip_and_contrast) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.425s\n\nOK\n"
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "scripts/generate_atlas.py"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "Written: D:\\CTS\\Logos-And-Theming\\assets\\palette-atlas.html\n  62 logos, 989 colors total\n  [ada                 ] site=https://www.adacore.com/about-ada  files=[svg, png, ico, palette]\n  [ansible             ] site=https://www.ansible.com/  files=[svg, png, ico, palette]\n  [assembly            ] site=https://www.nasm.us/  files=[svg, png, ico, palette]\n  [bash                ] site=https://www.gnu.org/software/bash/  files=[svg, png, ico, palette]\n  [bioconductor        ] site=https://www.bioconductor.org/  files=[svg, ico, palette]\n  [c                   ] site=https://en.cppreference.com/w/c  files=[svg, png, ico, palette]\n  [caddy               ] site=https://caddyserver.com/  files=[svg, png, ico, palette]\n  [clojure             ] site=https://clojure.org/  files=[svg, png, ico, palette]\n  [cloudflare          ] site=https://www.cloudflare.com/  files=[svg, png, ico, palette]\n  [cobol               ] site=https://en.wikipedia.org/wiki/COBOL  files=[svg, png, ico, palette]\n  [coffeescript        ] site=https://coffeescript.org/  files=[svg, png, ico, palette]\n  [cpan                ] site=https://www.cpan.org/  files=[svg, png, ico, palette]\n  [cpp                 ] site=https://isocpp.org/  files=[svg, png, ico, palette]\n  [csharp              ] site=https://dotnet.microsoft.com/languages/c  files=[svg, png, ico, palette]\n  [dbase               ] site=http://www.dbase.com/  files=[svg, png, ico, palette]\n  [docker              ] site=https://www.docker.com/  files=[svg, png, ico, palette]\n  [flathub             ] site=https://flathub.org/  files=[svg, png, ico, palette]\n  [fortran             ] site=https://fortran-lang.org/  files=[svg, png, ico, palette]\n  [fsharp              ] site=https://fsharp.org/  files=[svg, png, ico, palette]\n  [grafana             ] site=https://grafana.com/  files=[svg, ico, palette]\n  [jave                ] site=https://www.java.com/  files=[svg, ico, palette]\n  [julia               ] site=https://julialang.org/  files=[svg, png, ico, palette]\n  [kotlin              ] site=https://kotlinlang.org/  files=[svg, png, ico, palette]\n  [kubernetes          ] site=https://kubernetes.io/  files=[svg, png, ico, palette]\n  [lisp                ] site=https://common-lisp.net/  files=[svg, ico, palette]\n  [lua                 ] site=https://www.lua.org/  files=[svg, ico, palette]\n  [malbolge            ] site=https://en.wikipedia.org/wiki/Malbolge  files=[svg, ico, palette]\n  [markdown            ] site=https://daringfireball.net/projects/mark  files=[svg, png, ico, palette]\n  [matlab              ] site=https://www.mathworks.com/products/matla  files=[svg, png, ico, palette]\n  [mumps               ] site=https://en.wikipedia.org/wiki/MUMPS  files=[svg, ico, palette]\n  [nginx               ] site=https://www.nginx.com/  files=[svg, png, ico, palette]\n  [nim                 ] site=https://nim-lang.org/  files=[svg, png, ico, palette]\n  [node                ] site=https://nodejs.org/  files=[svg, ico, palette]\n  [node.pngu7          ] site=#  files=[svg, png, ico, palette]\n  [objectivec          ] site=https://developer.apple.com/library/arch  files=[svg, png, ico, palette]\n  [ocaml               ] site=https://ocaml.org/  files=[svg, png, ico, palette]\n  [perl                ] site=https://www.perl.org/  files=[svg, png, ico, palette]\n  [php                 ] site=https://www.php.net/  files=[svg, png, ico, palette]\n  [powershell          ] site=https://learn.microsoft.com/en-us/powers  files=[svg, png, ico, palette]\n  [prolog              ] site=https://www.swi-prolog.org/  files=[svg, png, ico, palette]\n  [prometheus          ] site=https://prometheus.io/  files=[svg, png, ico, palette]\n  [promis              ] site=https://en.wikipedia.org/wiki/Promis  files=[svg, png, ico, palette]\n  [purescript          ] site=https://www.purescript.org/  files=[svg, png, ico, palette]\n  [python              ] site=https://www.python.org/  files=[svg, ico, palette]\n  [qbasic              ] site=https://www.qb64.com/  files=[svg, png, ico, palette]\n  [r                   ] site=https://www.r-project.org/  files=[svg, png, ico, palette]\n  [react               ] site=https://react.dev/  files=[svg, png, ico, palette]\n  [ruby                ] site=https://www.ruby-lang.org/  files=[svg, png, ico, palette]\n  [rust                ] site=https://www.rust-lang.org/  files=[svg, png, ico, palette]\n  [scala               ] site=https://www.scala-lang.org/  files=[svg, png, ico, palette]\n  [scratch             ] site=https://scratch.mit.edu/  files=[svg, png, ico, palette]\n  [sgml                ] site=https://en.wikipedia.org/wiki/Standard_G  files=[svg, png, ico, palette]\n  [sql                 ] site=https://en.wikipedia.org/wiki/SQL  files=[svg, ico, palette]\n  [svelte              ] site=https://svelte.dev/  files=[svg, png, ico, palette]\n  [swift               ] site=#  files=[svg, ico, palette]\n  [terraform           ] site=https://www.terraform.io/  files=[svg, ico, palette]\n  [tex                 ] site=https://www.tug.org/  files=[svg, png, ico, palette]\n  [toml                ] site=https://toml.io/  files=[svg, png, ico, palette]\n  [typescript          ] site=https://www.typescriptlang.org/  files=[svg, png, ico, palette]\n  [vue                 ] site=https://vuejs.org/  files=[svg, png, ico, palette]\n  [wasm                ] site=https://webassembly.org/  files=[svg, png, ico, palette]\n  [zig                 ] site=https://ziglang.org/  files=[svg, png, ico, palette]\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\CTS\\tools\\cts_lint_contract.py",
+        "docs/COMMAND-CONTRACT.md"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "CTS contract lint passed.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "D:\\CTS\\SESM-Metadata-Embedder\\Invoke-SESM.ps1",
+        "--input",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos",
+        "--root",
+        "D:\\CTS\\Logos-And-Theming\\assets",
+        "--config",
+        "D:\\CTS\\SESM-Metadata-Embedder\\sesm-metadata.toml"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "SKIP existing SESM: svg-embed-logos/aamhs.svg\nSKIP existing SESM: svg-embed-logos/aas.svg\nSKIP existing SESM: svg-embed-logos/arhs.svg\nSKIP existing SESM: svg-embed-logos/ats.svg\nSKIP existing SESM: svg-embed-logos/blue-slate.svg\nSKIP existing SESM: svg-embed-logos/cts.svg\nSKIP existing SESM: svg-embed-logos/dds.svg\nSKIP existing SESM: svg-embed-logos/drs.svg\nSKIP existing SESM: svg-embed-logos/lds.svg\nSKIP existing SESM: svg-embed-logos/neonink.svg\nSKIP existing SESM: svg-embed-logos/pps.svg\nSKIP existing SESM: svg-embed-logos/sesm.svg\nSKIP existing SESM: svg-embed-logos/sfds.svg\nSKIP existing SESM: svg-embed-logos/sis.svg\nSKIP existing SESM: svg-embed-logos/wds.svg\nSKIP existing SESM: svg-embed-logos/wgs.svg\nProcessed 16 SVG(s); failures: 0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\aamhs.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\aamhs.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\aas.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\aas.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\arhs.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\arhs.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\ats.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\ats.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\blue-slate.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\blue-slate.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\cts.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\cts.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\dds.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\dds.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\drs.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\drs.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\lds.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\lds.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\neonink.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\neonink.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\pps.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\pps.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\sesm.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\sesm.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\sfds.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\sfds.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\sis.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\sis.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\wds.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\wds.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+        "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py",
+        "D:\\CTS\\Logos-And-Theming\\assets\\svg-embed-logos\\wgs.svg",
+        "--safe-profile",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"ok\",\n  \"profile\": \"sesm-safe\",\n  \"file\": \"D:\\\\CTS\\\\Logos-And-Theming\\\\assets\\\\svg-embed-logos\\\\wgs.svg\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"metadata_version\": \"0.3.0\",\n  \"schema\": \"D:\\\\.city_hall\\\\SESM\\\\svg_asset.schema.json\",\n  \"safe_profile_checked\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "D:\\CTS\\Logos-And-Theming\\Invoke-AptTheme.ps1",
+        "generate",
+        "D:\\CTS\\Logos-And-Theming\\assets\\sources\\apt-zig-dark-16bit-logo.tif",
+        "--output",
+        "D:\\CTS\\Logos-And-Theming\\pilot\\zig-dark",
+        "--name",
+        "Aptlantis Zig Dark",
+        "--compare",
+        "D:\\CTS\\Logos-And-Theming\\assets\\references\\Aptlantis-Black-Gold\\palette.toml",
+        "--overwrite",
+        "--strict",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"warning\", \"tool\": \"apt-theme\", \"version\": \"0.1.0\", \"data\": {\"schema\": \"aptlantis.theme-run.v1\", \"name\": \"Aptlantis Zig Dark\", \"variant\": \"dark\", \"source_sha256\": \"51469b52879efe4293af8f292caeed2c0bcfd290152b9894d7ecd1df246c07d8\", \"targets\": [\"windows_terminal\", \"siyuan\", \"typora\", \"powerpoint\"], \"contrast_failures\": 0, \"semantic_findings\": [{\"role\": \"magenta\", \"kind\": \"unavailable_conventional_hue\", \"source\": \"color_12\", \"hue_distance\": 76.79084219878402, \"message\": \"Closest image hue used; no new hue introduced\"}], \"native_application_acceptance\": \"pending\", \"installation\": \"not performed\"}, \"warnings\": [\"{\\\"role\\\": \\\"magenta\\\", \\\"kind\\\": \\\"unavailable_conventional_hue\\\", \\\"source\\\": \\\"color_12\\\", \\\"hue_distance\\\": 76.79084219878402, \\\"message\\\": \\\"Closest image hue used; no new hue introduced\\\"}\"], \"errors\": []}\n",
+      "stderr": "Generating image-derived dark themes...\n"
+    },
+    {
+      "command": [
+        "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\apt-theme.exe",
+        "generate",
+        "D:\\CTS\\Logos-And-Theming\\assets\\sources\\apt-zig-dark-16bit-logo.tif",
+        "--output",
+        "D:\\CTS\\Logos-And-Theming\\pilot\\zig-dark",
+        "--name",
+        "Aptlantis Zig Dark",
+        "--compare",
+        "D:\\CTS\\Logos-And-Theming\\assets\\references\\Aptlantis-Black-Gold\\palette.toml",
+        "--overwrite",
+        "--strict",
+        "--json"
+      ],
+      "cwd": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"warning\", \"tool\": \"apt-theme\", \"version\": \"0.1.0\", \"data\": {\"schema\": \"aptlantis.theme-run.v1\", \"name\": \"Aptlantis Zig Dark\", \"variant\": \"dark\", \"source_sha256\": \"51469b52879efe4293af8f292caeed2c0bcfd290152b9894d7ecd1df246c07d8\", \"targets\": [\"windows_terminal\", \"siyuan\", \"typora\", \"powerpoint\"], \"contrast_failures\": 0, \"semantic_findings\": [{\"role\": \"magenta\", \"kind\": \"unavailable_conventional_hue\", \"source\": \"color_12\", \"hue_distance\": 76.79084219878402, \"message\": \"Closest image hue used; no new hue introduced\"}], \"native_application_acceptance\": \"pending\", \"installation\": \"not performed\"}, \"warnings\": [\"{\\\"role\\\": \\\"magenta\\\", \\\"kind\\\": \\\"unavailable_conventional_hue\\\", \\\"source\\\": \\\"color_12\\\", \\\"hue_distance\\\": 76.79084219878402, \\\"message\\\": \\\"Closest image hue used; no new hue introduced\\\"}\"], \"errors\": []}\n",
+      "stderr": "Generating image-derived dark themes...\n"
+    }
+  ],
+  "deterministic_full_pilot": true,
+  "determinism_changed_files": [],
+  "canonical_count": 32,
+  "warning_hex": "#FAE0A0",
+  "warm_warning": true,
+  "native_checks": {
+    "windows_terminal": {
+      "named": 20,
+      "unique": 17,
+      "declared_pairs": 19,
+      "failures": 0
+    },
+    "siyuan": {
+      "named": 62,
+      "unique": 38,
+      "declared_pairs": 80,
+      "failures": 0
+    },
+    "typora": {
+      "named": 40,
+      "unique": 35,
+      "declared_pairs": 58,
+      "failures": 0
+    },
+    "powerpoint": {
+      "named": 22,
+      "unique": 17,
+      "declared_pairs": 40,
+      "failures": 0
+    }
+  },
+  "active_references_updated": true,
+  "svg_artwork_metadata_bytes_preserved": true,
+  "archive_full_restore": "verified during staging for all four trees",
+  "browser_report": "loaded and visually inspected; source image decodes; all four target samples present; no horizontal overflow at 1288px",
+  "native_application_import_and_visual_acceptance": "pending",
+  "vtracer_actual_trace": "not exercised; migrated contract test uses a stub",
+  "public_asset_copies": "not modified",
+  "release": "not established",
+  "legacy_locations_retired": true
+}

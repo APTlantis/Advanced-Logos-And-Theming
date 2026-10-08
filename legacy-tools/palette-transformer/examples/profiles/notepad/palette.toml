@@ -1,0 +1,394 @@
+
+["theme"]
+"id" = "aptlantis-zig"
+"name" = "Aptlantis Zig"
+"family" = "Aptlantis"
+"variant" = "dark"
+"source_image" = "E:/NBLM-Refs/SiYiuan-Theme-Zig/apt-zig-dark-logo.png"
+"generated_at" = "2026-10-05T15:17:34.3023702-04:00"
+"candidate_colors" = 192
+"final_colors" = 32
+
+["transformation"]
+"version" = "1.0.0"
+"profile" = "notepad"
+"mode" = "preserve"
+"requested_count" = 32
+"actual_count" = 32
+"unique_hex_count" = 32
+"source_sha256" = "eda8262025c5f8a9d5a6e41a39ba3a4ad182dd5750da28337093467fc61914b2"
+"canonical_count" = 32
+
+["palette"]
+
+["palette"."structural_dark"]
+
+["palette"."structural_dark"."structural_dark_01"]
+"hex" = "#010101"
+"rgb" = [1, 1, 1]
+
+["palette"."structural_dark"."structural_dark_01"."oklch"]
+"l" = 0.06720461525885704
+"c" = 2.5049845489589324e-09
+"h" = 89.87556366242349
+
+["palette"."structural_dark"."structural_dark_02"]
+"hex" = "#030B14"
+"rgb" = [3, 11, 20]
+
+["palette"."structural_dark"."structural_dark_02"."oklch"]
+"l" = 0.14518015000405035
+"c" = 0.025064062153061405
+"h" = 246.53883514595407
+
+["palette"."structural_dark"."structural_dark_03"]
+"hex" = "#040E18"
+"rgb" = [4, 14, 24]
+
+["palette"."structural_dark"."structural_dark_03"."oklch"]
+"l" = 0.15895435452227658
+"c" = 0.027233060406645974
+"h" = 246.535060285171
+
+["palette"."structural_dark"."structural_dark_04"]
+"hex" = "#01050C"
+"rgb" = [1, 5, 12]
+
+["palette"."structural_dark"."structural_dark_04"."oklch"]
+"l" = 0.11202623874013076
+"c" = 0.02298984740229518
+"h" = 248.77961671513924
+
+["palette"."structural_mid"]
+
+["palette"."structural_mid"."structural_mid_01"]
+"hex" = "#078BB1"
+"rgb" = [7, 139, 177]
+
+["palette"."structural_mid"."structural_mid_01"."oklch"]
+"l" = 0.5934056984343115
+"c" = 0.11221063277517195
+"h" = 226.02114015275464
+
+["palette"."structural_mid"."structural_mid_02"]
+"hex" = "#684627"
+"rgb" = [104, 70, 39]
+
+["palette"."structural_mid"."structural_mid_02"."oklch"]
+"l" = 0.4252149533317483
+"c" = 0.0650534334228548
+"h" = 61.97320988520847
+
+["palette"."structural_mid"."structural_mid_03"]
+"hex" = "#033656"
+"rgb" = [3, 54, 86]
+
+["palette"."structural_mid"."structural_mid_03"."oklch"]
+"l" = 0.32015536006475037
+"c" = 0.0754811898263707
+"h" = 243.40960450914906
+
+["palette"."structural_mid"."structural_mid_04"]
+"hex" = "#326A72"
+"rgb" = [50, 106, 114]
+
+["palette"."structural_mid"."structural_mid_04"."oklch"]
+"l" = 0.4898469401577748
+"c" = 0.06000388054655245
+"h" = 207.7238759817958
+
+["palette"."text_light"]
+
+["palette"."text_light"."text_light_01"]
+"hex" = "#FBFCF7"
+"rgb" = [251, 252, 247]
+
+["palette"."text_light"."text_light_01"."oklch"]
+"l" = 0.9889328611652213
+"c" = 0.006653239277371041
+"h" = 115.70175275974825
+
+["palette"."text_light"."text_light_02"]
+"hex" = "#EAA445"
+"rgb" = [234, 164, 69]
+
+["palette"."text_light"."text_light_02"."oklch"]
+"l" = 0.7696863426865547
+"c" = 0.1365224891427219
+"h" = 71.22272689507096
+
+["palette"."text_light"."text_light_03"]
+"hex" = "#FCF9E7"
+"rgb" = [252, 249, 231]
+
+["palette"."text_light"."text_light_03"."oklch"]
+"l" = 0.9796223275168197
+"c" = 0.02381935010935956
+"h" = 99.09808805148278
+
+["palette"."text_light"."text_light_04"]
+"hex" = "#FBD687"
+"rgb" = [251, 214, 135]
+
+["palette"."text_light"."text_light_04"."oklch"]
+"l" = 0.8905585289851979
+"c" = 0.10613206806920471
+"h" = 85.23715584124375
+
+["palette"."text_light"."text_light_05"]
+"hex" = "#64D9E9"
+"rgb" = [100, 217, 233]
+
+["palette"."text_light"."text_light_05"."oklch"]
+"l" = 0.8240134992842342
+"c" = 0.10726164815112348
+"h" = 207.4112218458209
+
+["palette"."accent"]
+
+["palette"."accent"."accent_01"]
+"hex" = "#B77737"
+"rgb" = [183, 119, 55]
+
+["palette"."accent"."accent_01"."oklch"]
+"l" = 0.6245326699580834
+"c" = 0.11273602891991434
+"h" = 62.94316569816986
+
+["palette"."accent"."accent_02"]
+"hex" = "#0EAFD1"
+"rgb" = [14, 175, 209]
+
+["palette"."accent"."accent_02"."oklch"]
+"l" = 0.6970158236164788
+"c" = 0.12395102302507896
+"h" = 218.62233772772305
+
+["palette"."accent"."accent_03"]
+"hex" = "#8A582D"
+"rgb" = [138, 88, 45]
+
+["palette"."accent"."accent_03"."oklch"]
+"l" = 0.5070238670420204
+"c" = 0.08806486106546055
+"h" = 59.44910727934884
+
+["palette"."accent"."accent_04"]
+"hex" = "#02568A"
+"rgb" = [2, 86, 138]
+
+["palette"."accent"."accent_04"."oklch"]
+"l" = 0.4381816439661933
+"c" = 0.10991648906490192
+"h" = 245.25024548518095
+
+["palette"."accent"."accent_05"]
+"hex" = "#D99648"
+"rgb" = [217, 150, 72]
+
+["palette"."accent"."accent_05"."oklch"]
+"l" = 0.7246874168412691
+"c" = 0.12356925351852331
+"h" = 67.65193358080565
+
+["palette"."accent_strong"]
+
+["palette"."accent_strong"."accent_strong_01"]
+"hex" = "#FDB827"
+"rgb" = [253, 184, 39]
+
+["palette"."accent_strong"."accent_strong_01"."oklch"]
+"l" = 0.8259034942834014
+"c" = 0.16259899008776016
+"h" = 79.6638643803206
+
+["palette"."accent_strong"."accent_strong_02"]
+"hex" = "#FBA622"
+"rgb" = [251, 166, 34]
+
+["palette"."accent_strong"."accent_strong_02"."oklch"]
+"l" = 0.7905595783667624
+"c" = 0.16259300942902258
+"h" = 70.85857102354684
+
+["palette"."accent_strong"."accent_strong_03"]
+"hex" = "#CE6C14"
+"rgb" = [206, 108, 20]
+
+["palette"."accent_strong"."accent_strong_03"."oklch"]
+"l" = 0.6330768520076528
+"c" = 0.15162911947900604
+"h" = 54.40749301084004
+
+["palette"."accent_strong"."accent_strong_04"]
+"hex" = "#FCC730"
+"rgb" = [252, 199, 48]
+
+["palette"."accent_strong"."accent_strong_04"."oklch"]
+"l" = 0.8537518675376689
+"c" = 0.16308064404502054
+"h" = 87.49322654433726
+
+["palette"."neutral"]
+
+["palette"."neutral"."neutral_01"]
+"hex" = "#6F6656"
+"rgb" = [111, 102, 86]
+
+["palette"."neutral"."neutral_01"."oklch"]
+"l" = 0.5139708726478065
+"c" = 0.026865021482165626
+"h" = 82.01820406638437
+
+["palette"."neutral"."neutral_02"]
+"hex" = "#AFB191"
+"rgb" = [175, 177, 145]
+
+["palette"."neutral"."neutral_02"."oklch"]
+"l" = 0.7502230634880142
+"c" = 0.04425552521738959
+"h" = 110.3592705418205
+
+["palette"."neutral"."neutral_03"]
+"hex" = "#938A70"
+"rgb" = [147, 138, 112]
+
+["palette"."neutral"."neutral_03"."oklch"]
+"l" = 0.6342152881708318
+"c" = 0.038749138030486636
+"h" = 91.21072675439997
+
+["palette"."neutral"."neutral_04"]
+"hex" = "#54514A"
+"rgb" = [84, 81, 74]
+
+["palette"."neutral"."neutral_04"."oklch"]
+"l" = 0.4355277384546581
+"c" = 0.011909655816710288
+"h" = 87.53589010556668
+
+["palette"."data"]
+
+["palette"."data"."data_01"]
+"hex" = "#F9C667"
+"rgb" = [249, 198, 103]
+
+["palette"."data"."data_01"."oklch"]
+"l" = 0.8533383326394822
+"c" = 0.1267938492452751
+"h" = 81.2181975350745
+
+["palette"."data"."data_02"]
+"hex" = "#A76A34"
+"rgb" = [167, 106, 52]
+
+["palette"."data"."data_02"."oklch"]
+"l" = 0.5797494060312516
+"c" = 0.10442279911094199
+"h" = 59.8342115063672
+
+["palette"."data"."data_03"]
+"hex" = "#E49C43"
+"rgb" = [228, 156, 67]
+
+["palette"."data"."data_03"."oklch"]
+"l" = 0.7479211275175455
+"c" = 0.13402783417027817
+"h" = 68.60342239031166
+
+["palette"."data"."data_04"]
+"hex" = "#056D93"
+"rgb" = [5, 109, 147]
+
+["palette"."data"."data_04"."oklch"]
+"l" = 0.5023069602352824
+"c" = 0.10075172599242035
+"h" = 231.72375852493926
+
+["palette"."data"."data_05"]
+"hex" = "#B28B4E"
+"rgb" = [178, 139, 78]
+
+["palette"."data"."data_05"."oklch"]
+"l" = 0.6607407785691701
+"c" = 0.09208257079840901
+"h" = 77.2492364096444
+
+["palette"."data"."data_06"]
+"hex" = "#AD8E6F"
+"rgb" = [173, 142, 111]
+
+["palette"."data"."data_06"."oklch"]
+"l" = 0.6674918573237969
+"c" = 0.05739005299218655
+"h" = 66.57734931589975
+
+["roles"]
+
+["roles"."base"]
+"app_bg" = "structural_dark_02"
+"panel_bg" = "structural_dark_01"
+"editor_bg" = "structural_dark_04"
+"elevated_bg" = "structural_mid_04"
+"border_subtle" = "neutral_03"
+"border_strong" = "structural_mid_03"
+
+["roles"."text"]
+"fg_primary" = "text_light_01"
+"fg_secondary" = "text_light_02"
+"fg_muted" = "neutral_01"
+"fg_accent" = "text_light_03"
+"fg_warm" = "text_light_04"
+
+["roles"."accent"]
+"primary" = "accent_05"
+"secondary" = "accent_01"
+"success" = "accent_03"
+"warning" = "accent_02"
+"highlight" = "data_03"
+
+["roles"."syntax"]
+"keyword" = "accent_01"
+"type" = "data_03"
+"function" = "text_light_03"
+"string" = "text_light_04"
+"number" = "data_05"
+"comment" = "neutral_02"
+"constant" = "data_06"
+"operator" = "text_light_02"
+"error" = "accent_strong_03"
+
+["roles"."terminal"]
+"black" = "structural_dark_02"
+"red" = "accent_01"
+"green" = "accent_03"
+"yellow" = "data_05"
+"blue" = "data_04"
+"magenta" = "accent_04"
+"cyan" = "data_03"
+"white" = "text_light_05"
+
+["validation"]
+"minimum_contrast_body" = 4.5
+"minimum_contrast_ui" = 3.0
+"apca_preferred" = true
+
+["source"]
+"language" = "Zig"
+"inspiration" = "Zig language"
+"notes" = "Derived from Aptlantis Zig-Dark crest"
+
+["targets"]
+
+["targets"."jetbrains"]
+"ui_theme" = "Aptlantis Zig"
+"editor_scheme" = "Aptlantis Zig"
+
+["targets"."alacritty"]
+"flavor" = "dark"
+
+["targets"."windows_terminal"]
+"scheme_name" = "Aptlantis Zig"
+
+["targets"."siyuan"]
+"css_prefix" = "--apt-zig"

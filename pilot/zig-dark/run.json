@@ -1,0 +1,24 @@
+{
+  "schema": "aptlantis.theme-run.v1",
+  "name": "Aptlantis Zig Dark",
+  "variant": "dark",
+  "source_sha256": "51469b52879efe4293af8f292caeed2c0bcfd290152b9894d7ecd1df246c07d8",
+  "targets": [
+    "windows_terminal",
+    "siyuan",
+    "typora",
+    "powerpoint"
+  ],
+  "contrast_failures": 0,
+  "semantic_findings": [
+    {
+      "role": "magenta",
+      "kind": "unavailable_conventional_hue",
+      "source": "color_12",
+      "hue_distance": 76.79084219878402,
+      "message": "Closest image hue used; no new hue introduced"
+    }
+  ],
+  "native_application_acceptance": "pending",
+  "installation": "not performed"
+}

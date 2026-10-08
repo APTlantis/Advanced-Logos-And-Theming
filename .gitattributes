@@ -1,0 +1,1 @@
+migration/archives/aptlantis-logos.zip filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,23 @@
+{
+  "name": "Aptlantis Zig Dark",
+  "background": "#000000",
+  "foreground": "#FCFDF7",
+  "cursorColor": "#365D7B",
+  "selectionBackground": "#422700",
+  "black": "#777777",
+  "brightBlack": "#8F8F8F",
+  "red": "#A98C76",
+  "brightRed": "#C2A58E",
+  "green": "#B4BC9A",
+  "brightGreen": "#CDD6B3",
+  "yellow": "#FAE0A0",
+  "brightYellow": "#FFFCF3",
+  "blue": "#317AB9",
+  "brightBlue": "#4A92D4",
+  "magenta": "#317AB9",
+  "brightMagenta": "#4A92D4",
+  "cyan": "#3A929C",
+  "brightCyan": "#55ABB5",
+  "white": "#FCFDF7",
+  "brightWhite": "#FBFCF6"
+}

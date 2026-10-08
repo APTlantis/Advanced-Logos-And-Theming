@@ -1,0 +1,97 @@
+{
+  "source_sha256": "eda8262025c5f8a9d5a6e41a39ba3a4ad182dd5750da28337093467fc61914b2",
+  "retained": [
+    "structural_dark_02",
+    "structural_dark_04",
+    "structural_mid_01",
+    "structural_mid_02",
+    "structural_mid_03",
+    "text_light_01",
+    "text_light_04",
+    "text_light_05",
+    "accent_01",
+    "accent_02",
+    "accent_03",
+    "accent_04",
+    "accent_strong_01",
+    "neutral_01",
+    "neutral_02",
+    "neutral_03",
+    "neutral_04",
+    "data_03",
+    "data_04",
+    "data_05"
+  ],
+  "added": [],
+  "omitted": [
+    "structural_dark_01",
+    "structural_dark_03",
+    "structural_mid_04",
+    "text_light_02",
+    "text_light_03",
+    "accent_05",
+    "accent_strong_02",
+    "accent_strong_03",
+    "accent_strong_04",
+    "data_01",
+    "data_02",
+    "data_06"
+  ],
+  "modified_canonical": [],
+  "role_remaps": [
+    {
+      "role": "base.panel_bg",
+      "from": "structural_dark_01",
+      "to": "structural_dark_04",
+      "distance_oklab": 0.050373714599351756
+    },
+    {
+      "role": "base.elevated_bg",
+      "from": "structural_mid_04",
+      "to": "data_04",
+      "distance_oklab": 0.0534878477157156
+    },
+    {
+      "role": "text.fg_secondary",
+      "from": "text_light_02",
+      "to": "data_03",
+      "distance_oklab": 0.02276361004427128
+    },
+    {
+      "role": "text.fg_accent",
+      "from": "text_light_03",
+      "to": "text_light_01",
+      "distance_oklab": 0.019863960326935104
+    },
+    {
+      "role": "accent.primary",
+      "from": "accent_05",
+      "to": "data_03",
+      "distance_oklab": 0.0255686233514741
+    },
+    {
+      "role": "syntax.function",
+      "from": "text_light_03",
+      "to": "text_light_01",
+      "distance_oklab": 0.019863960326935104
+    },
+    {
+      "role": "syntax.constant",
+      "from": "data_06",
+      "to": "data_05",
+      "distance_oklab": 0.03784119320424819
+    },
+    {
+      "role": "syntax.operator",
+      "from": "text_light_02",
+      "to": "data_03",
+      "distance_oklab": 0.02276361004427128
+    },
+    {
+      "role": "syntax.error",
+      "from": "accent_strong_03",
+      "to": "accent_01",
+      "distance_oklab": 0.04432104930481167
+    }
+  ]
+}

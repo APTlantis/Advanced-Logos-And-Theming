@@ -1,0 +1,97 @@
+{
+  "source_sha256": "eda8262025c5f8a9d5a6e41a39ba3a4ad182dd5750da28337093467fc61914b2",
+  "retained": [
+    "structural_dark_01",
+    "structural_dark_02",
+    "structural_dark_04",
+    "structural_mid_01",
+    "structural_mid_02",
+    "structural_mid_03",
+    "structural_mid_04",
+    "text_light_01",
+    "text_light_02",
+    "text_light_04",
+    "text_light_05",
+    "accent_02",
+    "accent_03",
+    "accent_04",
+    "accent_05",
+    "accent_strong_01",
+    "accent_strong_03",
+    "neutral_01",
+    "neutral_02",
+    "neutral_03",
+    "neutral_04",
+    "data_02",
+    "data_04",
+    "data_05"
+  ],
+  "added": [],
+  "omitted": [
+    "structural_dark_03",
+    "text_light_03",
+    "accent_01",
+    "accent_strong_02",
+    "accent_strong_04",
+    "data_01",
+    "data_03",
+    "data_06"
+  ],
+  "modified_canonical": [],
+  "role_remaps": [
+    {
+      "role": "text.fg_accent",
+      "from": "text_light_03",
+      "to": "text_light_01",
+      "distance_oklab": 0.019863960326935104
+    },
+    {
+      "role": "accent.secondary",
+      "from": "accent_01",
+      "to": "accent_strong_03",
+      "distance_oklab": 0.04432104930481167
+    },
+    {
+      "role": "accent.highlight",
+      "from": "data_03",
+      "to": "text_light_02",
+      "distance_oklab": 0.02276361004427128
+    },
+    {
+      "role": "syntax.keyword",
+      "from": "accent_01",
+      "to": "accent_strong_03",
+      "distance_oklab": 0.04432104930481167
+    },
+    {
+      "role": "syntax.type",
+      "from": "data_03",
+      "to": "text_light_02",
+      "distance_oklab": 0.02276361004427128
+    },
+    {
+      "role": "syntax.function",
+      "from": "text_light_03",
+      "to": "text_light_01",
+      "distance_oklab": 0.019863960326935104
+    },
+    {
+      "role": "syntax.constant",
+      "from": "data_06",
+      "to": "data_05",
+      "distance_oklab": 0.03784119320424819
+    },
+    {
+      "role": "terminal.red",
+      "from": "accent_01",
+      "to": "accent_strong_03",
+      "distance_oklab": 0.04432104930481167
+    },
+    {
+      "role": "terminal.cyan",
+      "from": "data_03",
+      "to": "text_light_02",
+      "distance_oklab": 0.02276361004427128
+    }
+  ]
+}

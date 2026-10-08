@@ -1,0 +1,122 @@
+{
+  "contrast_checks": [
+    {
+      "role": "text.fg_primary",
+      "background": "structural_dark_02",
+      "ratio": 19.183,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "text.fg_secondary",
+      "background": "structural_dark_02",
+      "ratio": 9.318,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "text.fg_muted",
+      "background": "structural_dark_02",
+      "ratio": 3.495,
+      "required": 4.5,
+      "pass": false
+    },
+    {
+      "role": "text.fg_accent",
+      "background": "structural_dark_02",
+      "ratio": 19.183,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "text.fg_warm",
+      "background": "structural_dark_02",
+      "ratio": 14.193,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.keyword",
+      "background": "structural_dark_02",
+      "ratio": 5.443,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.type",
+      "background": "structural_dark_02",
+      "ratio": 9.318,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.function",
+      "background": "structural_dark_02",
+      "ratio": 19.183,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.string",
+      "background": "structural_dark_02",
+      "ratio": 14.193,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.number",
+      "background": "structural_dark_02",
+      "ratio": 6.306,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.comment",
+      "background": "structural_dark_02",
+      "ratio": 8.966,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.constant",
+      "background": "structural_dark_02",
+      "ratio": 6.306,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.operator",
+      "background": "structural_dark_02",
+      "ratio": 9.318,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "syntax.error",
+      "background": "structural_dark_02",
+      "ratio": 5.443,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "role": "base.border_subtle",
+      "background": "structural_dark_02",
+      "ratio": 5.754,
+      "required": 3.0,
+      "pass": true
+    },
+    {
+      "role": "base.border_strong",
+      "background": "structural_dark_02",
+      "ratio": 1.569,
+      "required": 3.0,
+      "pass": false
+    }
+  ],
+  "contrast_failures": 2,
+  "near_colors": [],
+  "notices": [],
+  "coverage": "Declared text/syntax and borders against app_bg only; exporter must validate actual component pairings.",
+  "apca": "Not computed; reported ratios use WCAG relative luminance.",
+  "semantic_note": "Source semantic and ANSI mappings are preserved, including unconventional hue assignments."
+}

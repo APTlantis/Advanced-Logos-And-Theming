@@ -1,0 +1,41 @@
+{
+  "roles": {
+    "background": "color_01",
+    "foreground": "color_32",
+    "primary": "color_25",
+    "secondary": "color_08",
+    "panel": "color_02",
+    "muted": "color_17",
+    "selection": "color_25",
+    "cursor": "color_08",
+    "warning": "color_31",
+    "error": "color_21",
+    "success": "color_27",
+    "info": "color_17",
+    "red": "color_21",
+    "green": "color_27",
+    "yellow": "color_31",
+    "blue": "color_12",
+    "magenta": "color_12",
+    "cyan": "color_19",
+    "black": "color_01",
+    "white": "color_32",
+    "keyword": "color_23",
+    "string": "color_08",
+    "number": "color_29",
+    "function": "color_20",
+    "type": "color_31",
+    "operator": "color_15",
+    "constant": "color_24",
+    "comment": "color_17"
+  },
+  "findings": [
+    {
+      "role": "magenta",
+      "kind": "unavailable_conventional_hue",
+      "source": "color_12",
+      "hue_distance": 76.79084219878402,
+      "message": "Closest image hue used; no new hue introduced"
+    }
+  ]
+}
