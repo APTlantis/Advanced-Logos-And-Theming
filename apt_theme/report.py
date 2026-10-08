@@ -79,6 +79,7 @@ def review(directory, name, colors, candidates, roles, notices, results, diagnos
             sample += f'<span style="background:{t["selection"]["hex"]};color:{t["selection_text"]["hex"]}">Selected document text</span>'
             if "native_slots" in result:
                 sample += table([{"Office slot": s, "token": token, "hex": t[token]["hex"]} for s, token in result["native_slots"].items()])
+                sample += f'<p><a href="powerpoint/{html.escape(result["sample_deck"]["file"], quote=True)}">Open the editable four-slide sample deck</a>. Chart values are illustrative. Native PowerPoint acceptance remains pending.</p>'
         pieces += [f'<div style="{style}">{sample}</div>', tiles(t),
                    "<details><summary>Contrast, provenance and omissions</summary>",
                    table([{**c, "ratio": round(c["ratio"], 3)} for c in result["checks"]]),

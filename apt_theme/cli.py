@@ -7,9 +7,9 @@ import tempfile
 import tomllib
 from pathlib import Path
 
-from .extraction import digest, extract, load_palette, metrics, palette_toml, select
+from .extraction import digest, extract, load_palette, metrics, palette_toml, select, selection_diagnostics
 from .report import review, swatch
-from .semantics import assign
+from .semantics import assign, background_choice
 from .targets import DEFAULTS, adapt, export
 
 
@@ -31,7 +31,7 @@ def build(args):
     config = {}
     if args.config:
         config = tomllib.loads(args.config.read_text(encoding="utf-8-sig"))
-    if set(config) - {"profiles", "extraction", "overrides"}:
+    if set(config) - {"profiles", "extraction", "semantics", "overrides"}:
         raise ValueError("Unknown configuration section")
     targets = args.targets.split(",")
     if len(set(targets)) != len(targets) or any(t not in DEFAULTS for t in targets):
@@ -41,7 +41,7 @@ def build(args):
     if args.command == "generate":
         candidates, provenance, coords, weights = extract(source, config.get("extraction", {}))
         colors = select(candidates, int(config.get("extraction", {}).get("seed", 32)))
-        diagnostics = {"canonical": metrics(coords, weights, colors)}
+        diagnostics = {"canonical": metrics(coords, weights, colors), "selection_policy": selection_diagnostics(candidates, colors)}
     else:
         colors, old = load_palette(source)
         provenance = {"sha256": digest(source), "kind": "imported_palette", "legacy_roles": old.get("roles", {})}
@@ -52,7 +52,14 @@ def build(args):
         if args.command == "generate":
             diagnostics["previous"] = metrics(coords, weights, comparison)
         diagnostics["comparison_sha256"] = digest(args.compare)
-    roles, notices = assign(colors, config.get("overrides", {}))
+    semantic_settings = config.get("semantics", {})
+    roles, notices = assign(colors, config.get("overrides", {}), semantic_settings)
+    _, reason = background_choice(colors, semantic_settings)
+    diagnostics["background_selection"] = {"source": roles["background"], "hex": colors[roles["background"]]["hex"],
+        "reason": "Explicit semantic override" if "background" in config.get("overrides", {}) else reason,
+        "mode": semantic_settings.get("background_mode", "identity"),
+        "target_oklch_lightness": semantic_settings.get("background_lightness", .20),
+        "darkest_hex": min(colors.values(), key=lambda c: c["oklch"][0])["hex"]}
     results = [adapt(colors, roles, target, int(config.get("profiles", {}).get(target, {}).get("budget", DEFAULTS[target]))) for target in targets]
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="apt-build-", dir=output.parent) as temp:

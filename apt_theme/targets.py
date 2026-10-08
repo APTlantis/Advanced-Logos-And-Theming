@@ -196,6 +196,8 @@ def export(result, directory, name):
             ET.SubElement(child, f"{{{ns}}}srgbClr", val=h(token)[1:])
         ET.ElementTree(root).write(directory / (slug(name) + ".xml"), encoding="utf-8", xml_declaration=True)
         result["native_slots"] = slots
+        from .powerpoint import sample_deck
+        sample_deck(result, directory, name, slug(name))
     else:
         css = editor_css(tokens, target == "siyuan")
         filename = "theme.css" if target == "siyuan" else slug(name) + ".css"

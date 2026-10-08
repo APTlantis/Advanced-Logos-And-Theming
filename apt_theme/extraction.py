@@ -86,9 +86,36 @@ def extract(path, settings):
         "alpha": "Fully transparent excluded; partial opacity weights population", "seed": seed}, coords, weights
 
 
+def selection_pool(candidates):
+    """Coalesce the sRGB near-black noise floor when alternatives exist.
+
+    OKLab separates tiny encoded channel changes surprisingly far near zero.
+    These must not consume several slots at the expense of visible image tones.
+    Keep an observed darkest anchor; never alter candidate RGB values.
+    """
+    near_black = [i for i, c in enumerate(candidates) if max(c["rgb"]) <= 12]
+    if len(near_black) <= 1 or len(candidates) - len(near_black) + 1 < 32:
+        return candidates
+    anchor = min(near_black, key=lambda i: (candidates[i]["oklch"][0], candidates[i]["hex"]))
+    collapsed = dict(candidates[anchor])
+    collapsed["weight"] = sum(candidates[i].get("weight", 1) for i in near_black)
+    return [collapsed if i == anchor else c for i, c in enumerate(candidates)
+            if i == anchor or i not in near_black]
+
+
+def selection_diagnostics(candidates, colors):
+    pool = selection_pool(candidates)
+    return {"near_black_definition": "All 8-bit sRGB channels <= 12",
+            "near_black_candidates": sum(max(c["rgb"]) <= 12 for c in candidates),
+            "near_black_canonical": sum(max(c["rgb"]) <= 12 for c in colors.values()),
+            "coalesced_candidates": len(candidates) - len(pool),
+            "policy": "One observed near-black anchor when at least 32 representatives remain; preserve sparse inputs"}
+
+
 def select(candidates, seed=32):
     if len({c["hex"] for c in candidates}) < 32:
         raise ValueError("Need at least 32 distinct candidate colors")
+    candidates = selection_pool(candidates)
     coords = np.array([lab(c) for c in candidates])
     weights = np.array([c.get("weight", 1) for c in candidates])
     with threadpool_limits(limits=1):

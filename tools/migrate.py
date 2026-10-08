@@ -113,7 +113,7 @@ def stage():
         copy_verified(lang / folder, assets / "legacy-lang-theme" / folder)
     for folder in ("Aptlantis-Black-Gold", "before-edit-refs"):
         copy_verified(docs / folder, assets / "references" / folder)
-    copy_verified(docs / "apt-zig-dark-16bit-logo.tif", assets / "sources" / "apt-zig-dark-16bit-logo.tif")
+    copy_verified(docs / "apt-aptlantis-blackgold-16bit-logo.tif", assets / "sources" / "apt-aptlantis-blackgold-16bit-logo.tif")
     scripts = ROOT / "scripts"
     for name in ("Convert-to-ICO.py", "Convert-to-SVG.py", "generate_atlas.py", "help.md"):
         copy_verified(logos / "scripts" / name, scripts / name)

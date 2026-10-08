@@ -12,7 +12,7 @@ title = "Logos-And-Theming"
 kind = "project-group"
 class = "project-group"
 status = "active"
-description = "Image-derived dark theme pipeline and related logo utilities"
+description = "Image-derived dark theme pipeline, editable PowerPoint samples and related logo utilities"
 
 [project]
 type = "command-tool"
@@ -53,6 +53,9 @@ artifact_verified = true
 release_verified = false
 installation_verified = false
 evidence = "migration/acceptance.json"
+powerpoint_sample_evidence = "migration/powerpoint-sample-acceptance.json"
+dark_surface_evidence = "migration/dark-surface-regression.json"
+powerpoint_metadata_evidence = "migration/powerpoint-metadata-repair.json"
 
 [agent]
 read_first = ["AGENTS.md", "Logos-And-Theming.manifest.toml", "Project-Proposal.md", "Project-README.md"]

@@ -12,4 +12,10 @@ candidates = 192
 sample_limit = 65536
 seed = 32
 
+[semantics]
+# Prefer a colored dark surface from the image; black remains available for ANSI.
+background_mode = "identity"
+background_lightness = 0.20
+# Set background_mode = "darkest" to explicitly request the old pipeline policy.
+
 # Optional: [overrides] warning = "color_07"

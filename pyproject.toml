@@ -14,3 +14,6 @@ apt-theme = "apt_theme.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["apt_theme*"]
+
+[tool.setuptools.package-data]
+apt_theme = ["*.mjs"]

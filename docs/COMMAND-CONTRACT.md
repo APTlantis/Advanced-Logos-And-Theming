@@ -6,6 +6,8 @@ Version: 0.1.0. Input: one image (`generate`) or 32-color TOML (`import`). Outpu
 
 `apt-theme {generate|import} INPUT --output DIRECTORY [--name NAME] [--targets windows_terminal,siyuan,typora,powerpoint] [--config TOML] [--compare TOML] [--overwrite] [--strict] [--json]`
 
+The `powerpoint` target writes both `<name>.xml` (12 Office color slots) and `<name>-sample.pptx` (four editable sample slides). It requires the local Node.js/Artifact Tool runtime described in [POWERPOINT.md](POWERPOINT.md); missing runtime is a processing error (exit 1). Other targets do not require it. The sample deck embeds the exported colors and illustrative chart data. Generation does not open or install it.
+
 PowerShell launcher: `Invoke-AptTheme.ps1` forwards arguments and exit codes. `Setup.ps1` installs only a project-local environment. Generation never downloads dependencies or modifies installed themes.
 
 ## Streams and exit codes
@@ -17,6 +19,8 @@ Machine output uses the CTS envelope (`status`, `tool`, `version`, `data`, `warn
 ## Outputs and compatibility
 
 Canonical TOML uses `[theme]` and `[palette.canonical]`, with per-color hex, RGB, OKLCH and population weight. `semantics.json` is separate. Original source bytes and SHA-256 are retained. Application tokens and validation are JSON. The HTML report embeds artwork and needs no network connection.
+
+TOML configuration accepts `[profiles]`, `[extraction]`, `[semantics]` and `[overrides]`. Semantic settings are `background_mode = "identity"` (default) or `"darkest"`, and `background_lightness = 0.20` (range .12–.32). Explicit background overrides take precedence and participate in foreground/secondary-text mapping. Canonical selection coalesces the near-black sRGB noise floor when enough observed alternatives remain. Imports preserve the supplied canonical values. Re-generation can change canonical IDs; review ID-based overrides when changing images or selection versions. Existing outputs are not automatically rewritten.
 
 The new canonical format does not masquerade as the old language-template format with positional semantic sections. Import accepts the old grouped palette structure, UTF-8 BOM, hex/RGB/OKLCH representations and references; exactly 32 entries are required. Hex is authoritative. Legacy scripts and their original contracts remain archived.
 

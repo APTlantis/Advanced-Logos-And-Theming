@@ -8,6 +8,7 @@ import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 import zipfile
+from unittest.mock import patch
 from contextlib import redirect_stdout
 from pathlib import Path
 
@@ -18,6 +19,7 @@ from apt_theme.colors import derive, distance, from_rgb, lab
 from apt_theme.extraction import extract, load_palette, rgb_labs, select
 from apt_theme.semantics import assign, hue_distance
 from apt_theme.targets import DEFAULTS, adapt, export
+from apt_theme.powerpoint import normalize_core_properties, validate_core_properties
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -60,6 +62,44 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             assign(self.colors, {"warning": "missing"})
 
+    def test_near_black_noise_does_not_consume_visible_color_slots(self):
+        noise = [from_rgb(rgb, weight=100) for rgb in
+                 ([0, 0, 0], [0, 0, 2], [0, 2, 6], [1, 1, 1], [4, 4, 4], [10, 10, 10])]
+        candidates = noise + [c for c in self.colors.values() if max(c["rgb"]) > 12]
+        candidates += [from_rgb(rgb, weight=20) for rgb in ([26, 55, 73], [52, 85, 119], [179, 116, 51])]
+        palette = select(candidates)
+        self.assertEqual(len(palette), 32)
+        self.assertEqual(sum(max(c["rgb"]) <= 12 for c in palette.values()), 1)
+        self.assertEqual(palette, select(candidates))
+        self.assertTrue({c["hex"] for c in palette.values()} <= {c["hex"] for c in candidates})
+        self.assertEqual(sum(c["weight"] for c in noise), next(c["weight"] for c in palette.values() if max(c["rgb"]) <= 12))
+        # Exact/sparse palettes are preserved rather than padded with invented colors.
+        sparse = [from_rgb([i * 8] * 3) for i in range(32)]
+        self.assertEqual({c["hex"] for c in select(sparse).values()}, {c["hex"] for c in sparse})
+
+    def test_surface_identity_is_separate_from_black_anchor(self):
+        colors = {**self.colors, "absolute_black": from_rgb([0, 0, 0], weight=10000),
+                  "blue_surface": from_rgb([12, 25, 38], weight=5000)}
+        roles, _ = assign(colors)
+        self.assertNotEqual(roles["background"], "absolute_black")
+        self.assertEqual(roles["black"], "absolute_black")
+        self.assertGreaterEqual(colors[roles["background"]]["oklch"][0], .12)
+        self.assertGreaterEqual(colors[roles["background"]]["oklch"][1], .015)
+        darkest, _ = assign(colors, settings={"background_mode": "darkest"})
+        self.assertEqual(darkest["background"], "absolute_black")
+        explicit, _ = assign(colors, {"background": "absolute_black"})
+        self.assertEqual(explicit["background"], "absolute_black")
+        # A grayscale image retains its neutral identity; a sparse bright palette
+        # falls back visibly rather than silently inventing a dark hue.
+        gray = {str(i): from_rgb([i * 8] * 3) for i in range(32)}
+        gray_roles, _ = assign(gray)
+        self.assertGreater(gray[gray_roles["background"]]["oklch"][0], 0)
+        bright = {str(i): from_rgb([180 + i, 180 + i, 180 + i]) for i in range(32)}
+        _, notices = assign(bright)
+        self.assertTrue(any(n["kind"] == "background_fallback" for n in notices))
+        with self.assertRaises(ValueError):
+            assign(colors, settings={"background_mode": "unknown"})
+
     def test_gamut_and_hue_derivation(self):
         source = from_rgb([255, 0, 0])
         changed = derive(source, .85)
@@ -85,6 +125,26 @@ class PipelineTests(unittest.TestCase):
             elif target == "powerpoint":
                 root = ET.parse(next(destination.glob("*.xml"))).getroot()
                 self.assertEqual(len(root), 12)
+                ns = {"a": "http://schemas.openxmlformats.org/drawingml/2006/main",
+                      "c": "http://schemas.openxmlformats.org/drawingml/2006/chart"}
+                with zipfile.ZipFile(next(destination.glob("*.pptx"))) as deck:
+                    validate_core_properties(deck.read("docProps/core.xml"))
+                    slides = [n for n in deck.namelist() if re.fullmatch(r"ppt/slides/slide\d+.xml", n)]
+                    self.assertEqual(len(slides), 4)
+                    theme = ET.fromstring(deck.read("ppt/theme/theme1.xml")).find("a:themeElements/a:clrScheme", ns)
+                    self.assertEqual({s.tag: s[0].attrib for s in theme}, {s.tag: s[0].attrib for s in root})
+                    # Followed-link colors must remain native theme bindings,
+                    # including the swatch, rather than disappear into black.
+                    for n in ("ppt/slides/slide2.xml", "ppt/slides/slide3.xml"):
+                        self.assertTrue(any(c.get("val") == "folHlink" for c in ET.fromstring(deck.read(n)).findall(".//a:schemeClr", ns)))
+                    self.assertTrue(any(ET.fromstring(deck.read(n)).find(".//a:tbl", ns) is not None for n in slides))
+                    chart = ET.fromstring(deck.read(next(n for n in deck.namelist() if n.endswith("/chart1.xml"))))
+                    self.assertEqual(len(chart.findall(".//c:ser", ns)), 6)
+                    self.assertEqual({c.get("val") for c in chart.findall(".//c:ser//a:schemeClr", ns)}, {f"accent{i}" for i in range(1, 7)})
+                    self.assertIsNotNone(chart.find("c:externalData", ns))
+                    with zipfile.ZipFile(io.BytesIO(deck.read("ppt/embeddings/sample-data.xlsx"))) as book:
+                        sheet = ET.fromstring(book.read("xl/worksheets/sheet1.xml"))
+                        self.assertEqual(len(sheet.findall(".//{*}row")), 3)
             else:
                 css = next(destination.glob("*.css")).read_text()
                 declared = set(re.findall(r"(--[\w-]+)\s*:", css))
@@ -126,6 +186,45 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(main(["import", str(path), "--config", str(config), "--output", str(output), "--strict"]), 2)
         self.assertTrue((output / "windows_terminal" / "windows-terminal.json").exists())
         self.assertGreater(json.loads((output / "run.json").read_text())["contrast_failures"], 0)
+
+    def test_powerpoint_runtime_failure_preserves_previous_output(self):
+        output = self.root / "previous"
+        output.mkdir()
+        (output / "run.json").write_text('{"preserved": true}')
+        (output / "operator-note.txt").write_text("Previous generated output")
+        before = hashes(output)
+        with patch("apt_theme.powerpoint.runtime", side_effect=ValueError("PowerPoint runtime unavailable")):
+            self.assertEqual(main(["import", str(self.fixture_palette()), "--output", str(output),
+                                   "--targets", "powerpoint", "--overwrite"]), 1)
+        self.assertEqual(hashes(output), before)
+
+    def test_powerpoint_timestamp_type_namespace_is_preserved(self):
+        # Reproduces the undeclared QName produced by the original serializer.
+        damaged = b'<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:ns2="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ns2:created xsi:type="dcterms:W3CDTF">2026-01-01T00:00:00Z</ns2:created><ns2:modified xsi:type="dcterms:W3CDTF">2026-01-01T00:00:00Z</ns2:modified></cp:coreProperties>'
+        with self.assertRaisesRegex(ValueError, 'namespace'):
+            validate_core_properties(damaged)
+        repaired = normalize_core_properties(damaged)
+        validate_core_properties(repaired)
+        self.assertEqual(normalize_core_properties(repaired), repaired)
+        self.assertIn(b'xmlns:dcterms="http://purl.org/dc/terms/"', repaired)
+
+    def test_powerpoint_metadata_repair_preserves_other_package_bytes(self):
+        from tools.repair_powerpoint_metadata import repair
+        source, destination = self.root / 'before.pptx', self.root / 'after.pptx'
+        core = b'<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dcterms:created xsi:type="dcterms:W3CDTF">2026-01-01T00:00:00Z</dcterms:created></cp:coreProperties>'
+        with zipfile.ZipFile(source, 'w') as package:
+            package.writestr('docProps/core.xml', core)
+            package.writestr('ppt/slides/slide1.xml', b'<preserve>slides and colors</preserve>')
+            package.writestr('ppt/embeddings/data.xlsx', b'embedded workbook bytes')
+        before = source.read_bytes()
+        repair(source, destination)
+        self.assertEqual(source.read_bytes(), before)
+        with zipfile.ZipFile(destination) as package:
+            validate_core_properties(package.read('docProps/core.xml'))
+            self.assertEqual(package.read('ppt/slides/slide1.xml'), b'<preserve>slides and colors</preserve>')
+            self.assertEqual(package.read('ppt/embeddings/data.xlsx'), b'embedded workbook bytes')
+        with self.assertRaises(ValueError):
+            repair(source, destination)
 
     def test_transparency_monochrome_and_insufficient_colors(self):
         from PIL import Image
