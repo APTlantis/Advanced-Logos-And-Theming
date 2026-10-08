@@ -11,3 +11,7 @@ Recovery: verify a ZIP against its adjacent JSON `archive_sha256`; extract into 
 `tools/migrate.py stage` creates/restores archives and copies reviewed content. `retire` requires the acceptance gate, rechecks every old source against its original inventory and every archive hash, and rejects symlinks/junctions or changed source files. Old locations are removed only after those checks and documented destination validation.
 
 The Writerside handbook is a dated snapshot. Its historical source identities, comparison hashes and copied resources are intentionally retained; it must not be silently recaptured as current evidence. The new project records provide current discovery paths.
+
+The 2026-10-08 editor extension has a separate `pilot/editor-targets` palette-import run and `editor-target-acceptance.json`. Earlier pilot output and archives are preserved. Parent/index registration already covers this project group; adding target adapters changes no ownership or discovery root and requires no parent registration change.
+
+Git publication remains pending: unpublished history contains `migration/archives/aptlantis-logos.zip` as a 599,298,196-byte regular Git blob. The HTTPS remote inspection returned no refs. Converting this archive to Git LFS would preserve bytes but change local commit IDs; automatic approval review requires explicit operator authorization before that history rewrite. No rewrite was performed.

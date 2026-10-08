@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-08 — Terminal and editor exporters
+
+- Added Alacritty TOML, Notepad++ XML (globals and Python/C++/JSON lexers) and Sublime Text 4 color-scheme JSON to default generation.
+- Added native parsing and canonical-preservation coverage; documented budgets and application acceptance limits in docs/EDITOR-TARGETS.md. Native loading and rendering remain pending.
+
+
 ## 2026-10-08 — PowerPoint repair warning
 
 - Fixed an undeclared `dcterms` prefix in the core timestamp `xsi:type` values created during deterministic metadata normalization. Added a dedicated QName validation check because slide/package schema checks did not catch it.

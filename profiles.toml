@@ -6,6 +6,12 @@ budget = 64
 budget = 40
 [profiles.powerpoint]
 budget = 24
+[profiles.alacritty]
+budget = 20
+[profiles.notepad_plus_plus]
+budget = 32
+[profiles.sublime_text]
+budget = 40
 
 [extraction]
 candidates = 192

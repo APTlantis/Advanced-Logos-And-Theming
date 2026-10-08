@@ -5,6 +5,7 @@ import json
 import re
 import subprocess
 import tempfile
+import tomllib
 import unittest
 import xml.etree.ElementTree as ET
 import zipfile
@@ -122,6 +123,33 @@ class PipelineTests(unittest.TestCase):
                 self.assertTrue(all(re.fullmatch(r"#[0-9A-F]{6}", v) for k, v in scheme.items() if k != "name"))
                 self.assertLess(hue_distance(result["tokens"]["yellow"]["oklch"][2], 85), 45)
                 self.assertLess(hue_distance(result["tokens"]["cyan"]["oklch"][2], 205), 45)
+            elif target == "alacritty":
+                native = tomllib.loads(next(destination.glob("*.toml")).read_text())['colors']
+                self.assertEqual(set(native), {"primary", "cursor", "selection", "normal", "bright"})
+                self.assertEqual(len(native["normal"]), 8)
+                self.assertEqual(len(native["bright"]), 8)
+                self.assertEqual(native["selection"]["text"], result["tokens"]["foreground"]["hex"])
+                self.assertEqual(native["normal"]["yellow"], result["tokens"]["yellow"]["hex"])
+            elif target == "notepad_plus_plus":
+                native = ET.parse(next(destination.glob("*.xml"))).getroot()
+                self.assertEqual(native.tag, "NotepadPlus")
+                lexers = native.findall("LexerStyles/LexerType")
+                self.assertEqual({l.get("name") for l in lexers}, {"python", "cpp", "json"})
+                for lexer in lexers:
+                    ids = [s.get("styleID") for s in lexer]
+                    self.assertEqual(len(ids), len(set(ids)))
+                self.assertTrue(all(re.fullmatch(r"[0-9A-F]{6}", s.get("fgColor"))
+                                    for s in native.findall(".//WordsStyle")))
+                selection = next(s for s in native.findall("GlobalStyles/WidgetStyle")
+                                 if s.get("name") == "Selected text colour")
+                self.assertEqual(selection.get("bgColor"), result["tokens"]["selection"]["hex"][1:])
+                keyword = native.find("LexerStyles/LexerType[@name='python']/WordsStyle[@styleID='5']")
+                self.assertEqual(keyword.get("keywordClass"), "instre1")
+            elif target == "sublime_text":
+                native = json.loads(next(destination.glob("*.sublime-color-scheme")).read_text())
+                self.assertEqual(native["globals"]["selection_foreground"], result["tokens"]["selection_text"]["hex"])
+                self.assertEqual(len(native["rules"]), 16)
+                self.assertTrue(all(re.fullmatch(r"#[0-9A-F]{6}", r["foreground"]) for r in native["rules"]))
             elif target == "powerpoint":
                 root = ET.parse(next(destination.glob("*.xml"))).getroot()
                 self.assertEqual(len(root), 12)

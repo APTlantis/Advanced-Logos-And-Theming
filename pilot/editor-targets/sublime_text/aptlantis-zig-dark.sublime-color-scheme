@@ -1,0 +1,88 @@
+{
+  "name": "Aptlantis Zig Dark",
+  "globals": {
+    "background": "#0A1924",
+    "foreground": "#FCFDF7",
+    "caret": "#FCFDF7",
+    "line_highlight": "#18222A",
+    "gutter": "#18222A",
+    "gutter_foreground": "#C38651",
+    "selection": "#3E2900",
+    "selection_foreground": "#FCFDF7",
+    "selection_border": "#A66B35",
+    "inactive_selection": "#3E2900",
+    "inactive_selection_foreground": "#FCFDF7",
+    "find_highlight": "#3E2900",
+    "find_highlight_foreground": "#FCFDF7",
+    "accent": "#F8C265",
+    "line_diff_added": "#C0C8A9",
+    "line_diff_deleted": "#A98C76",
+    "line_diff_modified": "#FBD484"
+  },
+  "rules": [
+    {
+      "scope": "comment",
+      "foreground": "#C38651"
+    },
+    {
+      "scope": "string",
+      "foreground": "#6F95B6"
+    },
+    {
+      "scope": "constant",
+      "foreground": "#73DDEA"
+    },
+    {
+      "scope": "constant.numeric",
+      "foreground": "#FDEFB4"
+    },
+    {
+      "scope": "keyword",
+      "foreground": "#89B2A7"
+    },
+    {
+      "scope": "keyword.operator",
+      "foreground": "#3B9BC6"
+    },
+    {
+      "scope": "entity.name.function, support.function",
+      "foreground": "#BD885D"
+    },
+    {
+      "scope": "entity.name.type, support.type, support.class",
+      "foreground": "#EDAF57"
+    },
+    {
+      "scope": "entity.name.tag",
+      "foreground": "#89B2A7"
+    },
+    {
+      "scope": "entity.other.attribute-name",
+      "foreground": "#EDAF57"
+    },
+    {
+      "scope": "constant.character.escape",
+      "foreground": "#73DDEA"
+    },
+    {
+      "scope": "entity.name.label",
+      "foreground": "#BD885D"
+    },
+    {
+      "scope": "invalid",
+      "foreground": "#A98C76"
+    },
+    {
+      "scope": "markup.inserted",
+      "foreground": "#C0C8A9"
+    },
+    {
+      "scope": "markup.deleted",
+      "foreground": "#A98C76"
+    },
+    {
+      "scope": "markup.changed",
+      "foreground": "#FBD484"
+    }
+  ]
+}

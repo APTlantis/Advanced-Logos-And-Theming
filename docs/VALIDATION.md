@@ -2,6 +2,8 @@
 
 Date: 2026-10-08, America/New_York.
 
+Alacritty, Notepad++ and Sublime Text exporters are covered by the 20-test focused pipeline/converter suite, including native TOML/XML/JSON parsing, canonical immutability and deterministic default regeneration with all seven targets. Tests passed outside the Windows sandbox after sandbox filesystem restrictions blocked temporary path resolution. See `migration/editor-target-acceptance.json` and [editor contracts](EDITOR-TARGETS.md). Native loading, installation and rendering of these three targets remain pending; existing pilot and historical acceptance records remain unchanged.
+
 PowerPoint's reported repair warning was reproduced in native PowerPoint with repair disabled. The malformed timestamp QName in `docProps/core.xml` was corrected without changing slide, theme or workbook parts. All six repaired current decks and a fresh exporter run opened and rendered in native PowerPoint without repair, retaining four slides, one table and one chart. See `migration/powerpoint-metadata-repair.json`. This extends the earlier static evidence; chart editing/save/reopen and application installation remain unverified.
 
 The dark-surface regression fix is recorded in `migration/dark-surface-regression.json`. The prior `pilot/zig-dark` output remains intact; `pilot/zig-surface-fix` contains a separate corrected run with its previous canonical palette as the comparison. Canonical palette changes apply only on new image generation; importing an existing palette preserves its colors while applying the revised background mapping. Existing output collections require explicit regeneration. Coverage scores may worsen when redundant near-black shades are removed; they are not an aesthetic ranking.

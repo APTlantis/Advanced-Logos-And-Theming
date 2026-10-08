@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-08",
+  "suite": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "tests": 20,
+    "result": "passed",
+    "environment": "outside Windows sandbox; temporary path resolve blocked inside sandbox"
+  },
+  "pilot": {
+    "command": "apt-theme import pilot/zig-surface-fix/palette.toml --output pilot/editor-targets --name Aptlantis Zig Dark --targets alacritty,notepad_plus_plus,sublime_text --strict --json",
+    "exit_code": 0,
+    "canonical_hex_and_ids_preserved": true,
+    "targets": {
+      "alacritty": {
+        "budget": 20,
+        "named_count": 20,
+        "contrast_failures": 0,
+        "native_acceptance": "pending"
+      },
+      "notepad_plus_plus": {
+        "budget": 32,
+        "named_count": 30,
+        "contrast_failures": 0,
+        "native_acceptance": "pending"
+      },
+      "sublime_text": {
+        "budget": 40,
+        "named_count": 30,
+        "contrast_failures": 0,
+        "native_acceptance": "pending"
+      }
+    },
+    "warnings": [
+      "Image palette lacks conventional magenta; closest image hue reused."
+    ]
+  },
+  "files": {
+    "candidates.json": "4b5438ae2086cca043191d81236b0691193cdaedb088e5ebe7ff51d33733f321",
+    "palette.css": "7eb74382cb882876073a6711416ffd421bc4e17b11ae0b898d4925cf72008fad",
+    "palette.png": "0569d04e368a7fe567797605d136b680805de81946ce454b0fa7d6d4a4cbc9a8",
+    "palette.toml": "d7a16a60aa09ab6f2e7451036418e448485c9150e6f23571f4b47884daab6996",
+    "palette.txt": "89ae3ea502f4138cd82f831ba47e422353256b3eca02bba7a16463ae4378747f",
+    "provenance.json": "e815050ede7685a697f3ce7163aac470b4be2fdd0028ac726518d0e1562fa0b4",
+    "review.html": "f8a18d823805bb9060a4f9f24bf48fc5ef35fc04c12342482badc49d70857960",
+    "run.json": "077b28acd17e7d0ec1dc7a05ac936848364b8df8a8d6aafa5fcdc5fadb42174a",
+    "selection.json": "7dd394cf5d966d73ce2de9f793529b0c627e8474e834479fc344f7de0791da14",
+    "semantics.json": "543c79e382c69e21960a6c84636ae6213ff6a2fb5f42fabd6cf294dc8220ddce",
+    "alacritty/aptlantis-zig-dark.toml": "a9ec0ea7d38c86e93b5dfe8b600fd3a18788cdab7d92660630dbe5a25655d426",
+    "alacritty/tokens.json": "4f411b4b84cde343a169a764a93d8bc40274f9a42b979436f06b7881a5240c8c",
+    "alacritty/validation.json": "74070169e2e4a835da1e814b6d2582d207ad0efd1ac36c0bb74976ad95d926a2",
+    "notepad_plus_plus/aptlantis-zig-dark.xml": "4181bf96ae926a47ac09e23644075cb05f79edb256122265fce040ec12ec1354",
+    "notepad_plus_plus/tokens.json": "b34c61529a47d8ff2249d8c25c6f012866eaff7aa7ccaa2ba2a2fb639c49c6fa",
+    "notepad_plus_plus/validation.json": "2a65e6792dac9a6abcd7a0f4a398ce368ff2885dcbe092143f75975e75b7ccee",
+    "source/palette.toml": "122294e843d7b108534da692eca44f533d50b78dbc587d374e9b563ef2ac8124",
+    "sublime_text/aptlantis-zig-dark.sublime-color-scheme": "a1b2c165f0a25dacb15ef16c5a70633b69b6ad8cffd33a012740183686d27397",
+    "sublime_text/tokens.json": "7c24f0019e13fce1c2d476c7a773e1b17262f86c65a62c5465615d1b05b892dd",
+    "sublime_text/validation.json": "2a65e6792dac9a6abcd7a0f4a398ce368ff2885dcbe092143f75975e75b7ccee"
+  },
+  "limits": [
+    "No native loading/rendering, installation, activation or theme publication.",
+    "Offline report is a preview.",
+    "Notepad++ lexer coverage is Python/C++/JSON; selection foreground requires operator application setting."
+  ],
+  "discovery": "No parent registration or D:/INDEX.md change required: project ownership and location unchanged."
+}

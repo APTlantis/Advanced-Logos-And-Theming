@@ -62,7 +62,7 @@ def review(directory, name, colors, candidates, roles, notices, results, diagnos
         t = result["tokens"]
         pieces += [f'<h2>{html.escape(result["target"])}</h2><p>{result["named_count"]} named tokens; {result["unique_count"]} unique colors; budget {result["budget"]}; {result["contrast_failures"]} contrast failures.</p>']
         style = f'background:{t["background"]["hex"]};color:{t["foreground"]["hex"]};padding:24px;border-radius:8px'
-        if result["target"] == "windows_terminal":
+        if result["target"] in ("windows_terminal", "alacritty"):
             from .targets import ANSI
             sample = "<code>PS C:\\Aptlantis&gt; apt-theme generate logo.tif</code><br>"
             for role in ANSI:
@@ -77,7 +77,7 @@ def review(directory, name, colors, candidates, roles, notices, results, diagnos
                 sample += f'<span style="color:{t[key]["hex"]}">{role}: const gold = "Aptlantis"; // 32 colors</span>\n'
             sample += "</pre>"
             sample += f'<span style="background:{t["selection"]["hex"]};color:{t["selection_text"]["hex"]}">Selected document text</span>'
-            if "native_slots" in result:
+            if result["target"] == "powerpoint" and "native_slots" in result:
                 sample += table([{"Office slot": s, "token": token, "hex": t[token]["hex"]} for s, token in result["native_slots"].items()])
                 sample += f'<p><a href="powerpoint/{html.escape(result["sample_deck"]["file"], quote=True)}">Open the editable four-slide sample deck</a>. Chart values are illustrative. Native PowerPoint acceptance remains pending.</p>'
         pieces += [f'<div style="{style}">{sample}</div>', tiles(t),

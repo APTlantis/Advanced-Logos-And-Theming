@@ -7,7 +7,8 @@ from pathlib import Path
 
 from .colors import contrast, derive, readable
 
-DEFAULTS = {"windows_terminal": 20, "siyuan": 64, "typora": 40, "powerpoint": 24}
+DEFAULTS = {"windows_terminal": 20, "siyuan": 64, "typora": 40, "powerpoint": 24,
+            "alacritty": 20, "notepad_plus_plus": 32, "sublime_text": 40}
 ANSI = ("black", "red", "green", "yellow", "blue", "magenta", "cyan", "white")
 SYNTAX = ("keyword", "string", "number", "function", "type", "operator", "constant", "comment")
 
@@ -24,7 +25,7 @@ def adapt(colors, roles, target, budget):
         c = dict(source) if lightness is None and chroma == 1 else derive(source, lightness, chroma)
         if minimum:
             check_bg = tokens.get(bg, background)
-            if target != "windows_terminal" and bg == "background":
+            if target not in ("windows_terminal", "alacritty") and bg == "background":
                 surfaces = [tokens[k] for k in ("background", "panel", "elevated") if k in tokens]
                 check_bg = max(surfaces or [background], key=lambda item: item["oklch"][0])
             c = readable(c, check_bg, minimum)
@@ -39,7 +40,7 @@ def adapt(colors, roles, target, budget):
                            "required": minimum, "pass": ratio + 1e-9 >= minimum})
     add("background", "background", "app background")
     add("foreground", "foreground", "body text", minimum=4.5)
-    if target == "windows_terminal":
+    if target in ("windows_terminal", "alacritty"):
         add("cursor", "cursor", "cursor", minimum=3)
         add("selection", "selection", "selection background", lightness=.30, chroma=.55)
         checks.append({"foreground": "foreground", "background": "selection",
@@ -66,6 +67,14 @@ def adapt(colors, roles, target, budget):
         for role in SYNTAX:
             add(role, role, "code text", minimum=4.5)
         mandatory = len(tokens)
+        if target in ("notepad_plus_plus", "sublime_text"):
+            # Native editor properties consume these optional semantic variants.
+            for key, role in (("invalid", "error"), ("diff_added", "success"),
+                              ("diff_deleted", "error"), ("diff_changed", "warning"),
+                              ("tag", "keyword"), ("attribute", "type"),
+                              ("escape", "constant"), ("label", "function")):
+                if len(tokens) < budget:
+                    add(key, role, key.replace("_", " ") + " text", minimum=4.5)
         if target in ("siyuan", "typora"):
             # These state tokens are consumed by selectors, not budget filler.
             for state in ("hover", "pressed", "subdued"):
@@ -183,6 +192,21 @@ def export(result, directory, name):
                   "cursorColor": h("cursor"), "selectionBackground": h("selection")}
         scheme.update({key: h(key) for role in ANSI for key in (role, "bright" + role.title())})
         (directory / "windows-terminal.json").write_text(json.dumps(scheme, indent=2) + "\n", encoding="utf-8")
+    elif target == "alacritty":
+        groups = {"primary": {"background": "background", "foreground": "foreground"},
+                  "cursor": {"text": "background", "cursor": "cursor"},
+                  "selection": {"text": "foreground", "background": "selection"},
+                  "normal": {role: role for role in ANSI},
+                  "bright": {role: "bright" + role.title() for role in ANSI}}
+        content = "# Image-derived dark colors; import from your Alacritty config.\n"
+        for group, mapping in groups.items():
+            content += f"\n[colors.{group}]\n"
+            content += "".join(f'{key} = "{h(token)}"\n' for key, token in mapping.items())
+        (directory / (slug(name) + ".toml")).write_text(content, encoding="utf-8")
+        result["native_slots"] = groups
+    elif target in ("notepad_plus_plus", "sublime_text"):
+        from .native_editors import export_editor
+        export_editor(result, directory, name)
     elif target == "powerpoint":
         ns = "http://schemas.openxmlformats.org/drawingml/2006/main"
         ET.register_namespace("a", ns)

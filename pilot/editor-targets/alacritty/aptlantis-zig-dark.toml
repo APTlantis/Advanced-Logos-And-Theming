@@ -1,0 +1,33 @@
+# Image-derived dark colors; import from your Alacritty config.
+
+[colors.primary]
+background = "#0A1924"
+foreground = "#FCFDF7"
+
+[colors.cursor]
+text = "#0A1924"
+cursor = "#446887"
+
+[colors.selection]
+text = "#FCFDF7"
+background = "#3E2900"
+
+[colors.normal]
+black = "#808080"
+red = "#A98C76"
+green = "#C0C8A9"
+yellow = "#FDEFB4"
+blue = "#6186A6"
+magenta = "#6186A6"
+cyan = "#73DDEA"
+white = "#FCFDF7"
+
+[colors.bright]
+black = "#989898"
+red = "#C2A58E"
+green = "#DAE2C2"
+yellow = "#FFFCEF"
+blue = "#799EC0"
+magenta = "#799EC0"
+cyan = "#A1F4FF"
+white = "#FBFCF6"
