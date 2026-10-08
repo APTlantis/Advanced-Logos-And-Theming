@@ -1,0 +1,32 @@
+{
+  "canonical": {
+    "weighted_mean_oklab_distance": 0.022386966195126326,
+    "max_sample_oklab_distance": 0.10269333887644508,
+    "minimum_palette_spacing": 0.03919461205882244,
+    "coverage": "normalized visible pixel sample",
+    "limitation": "Coverage and spacing do not establish aesthetic quality"
+  },
+  "selection_policy": {
+    "near_black_definition": "All 8-bit sRGB channels <= 12",
+    "near_black_candidates": 18,
+    "near_black_canonical": 1,
+    "coalesced_candidates": 17,
+    "policy": "One observed near-black anchor when at least 32 representatives remain; preserve sparse inputs"
+  },
+  "previous": {
+    "weighted_mean_oklab_distance": 0.020904322504826246,
+    "max_sample_oklab_distance": 0.10370174034740423,
+    "minimum_palette_spacing": 0.03919461205882244,
+    "coverage": "normalized visible pixel sample",
+    "limitation": "Coverage and spacing do not establish aesthetic quality"
+  },
+  "comparison_sha256": "dfbf30564a3efbf268b4e1687b2da1ad71a83935eba184ffa754c65d717ce656",
+  "background_selection": {
+    "source": "color_04",
+    "hex": "#0A1924",
+    "reason": "Image-derived dark chromatic surface",
+    "mode": "identity",
+    "target_oklch_lightness": 0.2,
+    "darkest_hex": "#000000"
+  }
+}

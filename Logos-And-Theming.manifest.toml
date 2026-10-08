@@ -41,6 +41,8 @@ root = "D:\\CTS\\Logos-And-Theming"
 project_proposal = "Project-Proposal.md"
 project_readme = "Project-README.md"
 readme = "README.md"
+overview_deck = "docs/presentations/Logos-And-Theming-Overview.pptx"
+documentation_suite_plan = "docs/documentation-suite/PLAN.md"
 
 [relationships]
 parent = "D:/CTS"

@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-08",
+  "root_cause": "Core timestamp normalization changed the dcterms namespace prefix to ns2 but left xsi:type=dcterms:W3CDTF with no dcterms declaration. XML parsing and slide schema validation did not resolve QName-valued metadata attributes.",
+  "fix": "Preserve declared dcterms prefix and explicitly validate timestamp QName resolution before packaging.",
+  "repaired_packages": [
+    {
+      "path": "output\\blackgold\\powerpoint\\aptlantis-black-gold-sample.pptx",
+      "backup": "migration\\powerpoint-metadata-backups\\output\\blackgold\\powerpoint\\aptlantis-black-gold-sample.pptx",
+      "before_sha256": "2f75be8ca768a1f2f389bb7113721d2840d5f21273ef65c3ded580b7645ab32e",
+      "after_sha256": "e1d849a6bcf493a8ff3842ff385b25476aeb3e1c65930e1a1b4c836ba5e15a74",
+      "changed_parts": [
+        "docProps/core.xml"
+      ]
+    },
+    {
+      "path": "output\\clogure\\powerpoint\\aptlantis-clogure-sample.pptx",
+      "backup": "migration\\powerpoint-metadata-backups\\output\\clogure\\powerpoint\\aptlantis-clogure-sample.pptx",
+      "before_sha256": "97aab03361ce3854a84ebe2a9406c3dd519d69ddd1d38b4e54a3d9c0315ff73a",
+      "after_sha256": "a01015de442645b081e9f4465a3d431df752b9c6bdedb40c252ae8e41d9f5809",
+      "changed_parts": [
+        "docProps/core.xml"
+      ]
+    },
+    {
+      "path": "output\\r\\powerpoint\\aptlantis-r-sample.pptx",
+      "backup": "migration\\powerpoint-metadata-backups\\output\\r\\powerpoint\\aptlantis-r-sample.pptx",
+      "before_sha256": "949722a0d4df46ebc6a8a8ce3c915d13eef837c2c745c59b4cadb602e3388f24",
+      "after_sha256": "c57f8573d018aee9bc74fbc23d772eb33772317f4748ce6b7ae1533acafec7fc",
+      "changed_parts": [
+        "docProps/core.xml"
+      ]
+    },
+    {
+      "path": "output\\scratch\\powerpoint\\aptlantis-scratch-sample.pptx",
+      "backup": "migration\\powerpoint-metadata-backups\\output\\scratch\\powerpoint\\aptlantis-scratch-sample.pptx",
+      "before_sha256": "a13157ce5b29e7f60de553c1decad98c81a08c7e7d93e80d38385917080a5aea",
+      "after_sha256": "2539372ecbdad88421639f3cf930ed3833e1654e443ab51112678963fdc4bec9",
+      "changed_parts": [
+        "docProps/core.xml"
+      ]
+    },
+    {
+      "path": "output\\sgml\\powerpoint\\aptlantis-sgml-sample.pptx",
+      "backup": "migration\\powerpoint-metadata-backups\\output\\sgml\\powerpoint\\aptlantis-sgml-sample.pptx",
+      "before_sha256": "9afe7ecbf7cb7411d91b8f6f7ccbc21913d6c764814500b01dd6e93300d01a6c",
+      "after_sha256": "90f897f659a31964bf08cd76f1105982e0e3162d3bdb41062984b56b813c88e6",
+      "changed_parts": [
+        "docProps/core.xml"
+      ]
+    },
+    {
+      "path": "pilot\\zig-surface-fix\\powerpoint\\aptlantis-zig-dark-sample.pptx",
+      "backup": "migration\\powerpoint-metadata-backups\\pilot\\zig-surface-fix\\powerpoint\\aptlantis-zig-dark-sample.pptx",
+      "before_sha256": "d611cfbc546500e42f6aa8cfaf6e326aab638cc4fde3b6d2ba3cd9207ce522b7",
+      "after_sha256": "33da38081e25f3d433649b3a994079d9ad79364765a8fd2ed3514bfc61eb1939",
+      "changed_parts": [
+        "docProps/core.xml"
+      ]
+    }
+  ],
+  "native_powerpoint_control": {
+    "original": "output/clogure/powerpoint/aptlantis-clogure-sample.pptx before correction",
+    "open_and_repair": false,
+    "result": "failed with HRESULT 0x80070570, file or directory corrupted and unreadable"
+  },
+  "native_powerpoint_corrected": [
+    {
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\powerpoint\\aptlantis-black-gold-sample.pptx",
+      "name": "aptlantis-black-gold-sample.pptx",
+      "slides": 4,
+      "charts": 1,
+      "tables": 1,
+      "open_and_repair": false,
+      "result": "opened and exported"
+    },
+    {
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\clogure\\powerpoint\\aptlantis-clogure-sample.pptx",
+      "name": "aptlantis-clogure-sample.pptx",
+      "slides": 4,
+      "charts": 1,
+      "tables": 1,
+      "open_and_repair": false,
+      "result": "opened and exported"
+    },
+    {
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\r\\powerpoint\\aptlantis-r-sample.pptx",
+      "name": "aptlantis-r-sample.pptx",
+      "slides": 4,
+      "charts": 1,
+      "tables": 1,
+      "open_and_repair": false,
+      "result": "opened and exported"
+    },
+    {
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\scratch\\powerpoint\\aptlantis-scratch-sample.pptx",
+      "name": "aptlantis-scratch-sample.pptx",
+      "slides": 4,
+      "charts": 1,
+      "tables": 1,
+      "open_and_repair": false,
+      "result": "opened and exported"
+    },
+    {
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\sgml\\powerpoint\\aptlantis-sgml-sample.pptx",
+      "name": "aptlantis-sgml-sample.pptx",
+      "slides": 4,
+      "charts": 1,
+      "tables": 1,
+      "open_and_repair": false,
+      "result": "opened and exported"
+    },
+    {
+      "path": "D:\\CTS\\Logos-And-Theming\\pilot\\zig-surface-fix\\powerpoint\\aptlantis-zig-dark-sample.pptx",
+      "name": "aptlantis-zig-dark-sample.pptx",
+      "slides": 4,
+      "charts": 1,
+      "tables": 1,
+      "open_and_repair": false,
+      "result": "opened and exported"
+    }
+  ],
+  "fresh_exporter_native_check": {
+    "sha256": "a01015de442645b081e9f4465a3d431df752b9c6bdedb40c252ae8e41d9f5809",
+    "open_and_repair": false,
+    "result": "opened and rendered",
+    "slides": 4,
+    "tables": 1,
+    "charts": 1
+  },
+  "regressions": {
+    "existing_suite": 19,
+    "new_metadata_copy_preservation_test": 1,
+    "result": "20 tests passed",
+    "deterministic_generation": "passed"
+  },
+  "visual_review": {
+    "source": "native PowerPoint PNG exports",
+    "deck": "output/clogure/powerpoint/aptlantis-clogure-sample.pptx",
+    "inspected_slides": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "result": "no removed content or layout regressions observed"
+  },
+  "office_sdk_schema_check": "corrected Clogure passed Microsoft365 OpenXmlValidator; original malformed core metadata was not caught by that check",
+  "limits": [
+    "Chart data editing and save/reopen were not exercised",
+    "Historical pilot/zig-dark remains unchanged; its deck predates this fix",
+    "Copies outside the project have not been modified; repair utility or regeneration is required"
+  ],
+  "recovery": "Original hashes and paths above identify recoverable backups. Corrections touched docProps/core.xml only.",
+  "navigation": "Project identity, portfolio registration and paths unchanged; direct project records updated."
+}

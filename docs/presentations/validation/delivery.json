@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-08",
+  "deck": "D:\\CTS\\Logos-And-Theming\\docs\\presentations\\Logos-And-Theming-Overview.pptx",
+  "sha256": "6fa870fa12c9d008f5395a3b2359a1d80ceb1ff955df1e8003db4bac31d94043",
+  "slide_count": 24,
+  "native_table_count": 12,
+  "notes_count": 24,
+  "source_count": 41,
+  "theme_reference": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\powerpoint\\aptlantis-black-gold-sample.pptx",
+  "theme_reference_sha256": "e1d849a6bcf493a8ff3842ff385b25476aeb3e1c65930e1a1b4c836ba5e15a74",
+  "theme_slots_match": true,
+  "canonical_32_values_match": true,
+  "source_hashes_match": true,
+  "package_layout_and_font_checks": "passed; no findings or warnings",
+  "native_powerpoint": {
+    "method": "Presentations.Open2007 read-only, WithWindow=false, OpenAndRepair=false; export PNG 1280x720",
+    "result": "opened and exported all 24 slides without repair",
+    "executed_separately": true,
+    "renders": [
+      {
+        "slide": 1,
+        "sha256": "83a9714ee39fc1471ba4b31d3618683603aefd288dbd576a7f3f32f65c939b36"
+      },
+      {
+        "slide": 2,
+        "sha256": "df22a9517f75ab5cc8b027e9d66282a051a2d2ca1b79d3229063702d9a071508"
+      },
+      {
+        "slide": 3,
+        "sha256": "6ac277c2624a430f783edb504097eea9e0cebbb6d3e9f9806d91bce404a7614d"
+      },
+      {
+        "slide": 4,
+        "sha256": "9cbd2338c79a61d55bf096857415624a4b25efa1d2dc7b6aaf181ee92d125bd6"
+      },
+      {
+        "slide": 5,
+        "sha256": "dcfb340e92641a1c652c7318e9290b1ba49cc788c8dc8ccada759330794b84ce"
+      },
+      {
+        "slide": 6,
+        "sha256": "9c3e8939c2c3204e2ae72b204f8cb9b028e96b1b7eb009773440e2bbbbde725d"
+      },
+      {
+        "slide": 7,
+        "sha256": "aab57a986102acf169dda735180bbb672b529ac52fddef2c6b7ca8ad187edb9b"
+      },
+      {
+        "slide": 8,
+        "sha256": "880837881d00a997beb4329e7d452b025616ac5c42db19d4ded5dc2760ac175d"
+      },
+      {
+        "slide": 9,
+        "sha256": "a9bb52370a5dc53b4948dc84630a7fcbaed10b60d0ebe722556c9214b8afc33e"
+      },
+      {
+        "slide": 10,
+        "sha256": "7d3d947e89a74946e1871d461ea04c95aba797d72cf4b8fa2b747927d7751b0e"
+      },
+      {
+        "slide": 11,
+        "sha256": "db1628ba8de1ac592395e5d6641cdb0273e2ef35a0fdcc3db7b9969367046776"
+      },
+      {
+        "slide": 12,
+        "sha256": "bedf7f2d2f1c1469064f9bacbe05f319282928c08bc0d72faea027a0034189fb"
+      },
+      {
+        "slide": 13,
+        "sha256": "b5abdd36eba3f05f5bb439539de0982cc391e2a09795b99c0f95de6b18411b2f"
+      },
+      {
+        "slide": 14,
+        "sha256": "571ec636097e28df82873fe41b8c608a10711c21cc5c0339a77bccfa629e4517"
+      },
+      {
+        "slide": 15,
+        "sha256": "54c051a042633e121bce608cfa3f964acf025a648d83ac55a5e5c5fecffb5b44"
+      },
+      {
+        "slide": 16,
+        "sha256": "e86dd6b6d1286d1cb609676a8498b7100e922817c1869654a71d89810ad6677d"
+      },
+      {
+        "slide": 17,
+        "sha256": "9eeb2254aeb1f7dcc6a3065b9ce4e091499721b274a8154e95a738a54797ae36"
+      },
+      {
+        "slide": 18,
+        "sha256": "83448b7162238ef0e2213a9a428b35dfe7dfc18be23162d04d116832fc6f9f32"
+      },
+      {
+        "slide": 19,
+        "sha256": "757088bbfca0826bba4f70e386ddc841e2e1e2eca178ffcccb6b81e97985485b"
+      },
+      {
+        "slide": 20,
+        "sha256": "389613521d11414a667871f2326f351a30e5894ee09f9af1829e7e1ca42fe835"
+      },
+      {
+        "slide": 21,
+        "sha256": "e69003db515bfdd1b64fd30b63ef4ed4dfd895be19b8211710625aa417ab1972"
+      },
+      {
+        "slide": 22,
+        "sha256": "4507369229771fbc68a042eb32aea81886e729b72dbc710de0fb8b216bba36f9"
+      },
+      {
+        "slide": 23,
+        "sha256": "c4533b692ddf54b29337c5c78a927940f7534ff3b139d024e98b2f514ec307df"
+      },
+      {
+        "slide": 24,
+        "sha256": "1de834651ff888ee855fb701046c2a112d0fdf5edd33a6ab4489622b345b61dc"
+      }
+    ]
+  },
+  "visual_review": {
+    "method": "Full-size native PNG inspection of all 24 final slides",
+    "result": "passed",
+    "slides_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  "plan": {
+    "path": "D:\\CTS\\Logos-And-Theming\\docs\\documentation-suite\\PLAN.md",
+    "sha256": "ff1908232c97df7252585ae3073e6ef0688a9db2ec55bb3585798d2ff5801aa0",
+    "volumes": 10
+  },
+  "limits": [
+    "No engine changes or new pipeline test run in this documentation task",
+    "No theme installation or publication",
+    "Future volumes are planned, not authored",
+    "Manual presentation editing/save-reopen is not claimed"
+  ]
+}

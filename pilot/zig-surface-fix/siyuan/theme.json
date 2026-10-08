@@ -1,0 +1,22 @@
+{
+  "name": "aptlantis-zig-dark",
+  "displayName": {
+    "default": "Aptlantis Zig Dark"
+  },
+  "version": "0.1.0",
+  "minAppVersion": "3.7.0",
+  "description": {
+    "default": "Image-derived dark theme"
+  },
+  "readme": {
+    "default": "README.md"
+  },
+  "modes": [
+    "dark"
+  ],
+  "frontends": [
+    "all"
+  ],
+  "icon": "icon.png",
+  "preview": "preview.png"
+}

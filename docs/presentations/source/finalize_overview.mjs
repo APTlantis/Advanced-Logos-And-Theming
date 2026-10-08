@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+const runtime='C:/Users/Administrator/.cache/codex-runtimes/codex-primary-runtime/dependencies';
+process.env.RUNTIME_NODE_MODULES=runtime+'/node/node_modules';
+const skill='C:/Users/Administrator/.codex/plugins/cache/openai-primary-runtime/presentations/26.1007.11041/skills/presentations';
+const {finalizePresentation}=await import(pathToFileURL(skill+'/container_tools/artifact_tool_utils.mjs').href);
+const d=JSON.parse(await fs.readFile('docs/presentations/source/overview-content.json','utf8'));
+const owners=JSON.parse(await fs.readFile('.build/overview/table-owners.json','utf8'));
+await finalizePresentation({workspaceDir:path.resolve('.'),candidatePath:path.resolve('.build/overview/draft.pptx'),finalPath:path.resolve('docs/presentations/Logos-And-Theming-Overview.pptx'),pythonExecutable:runtime+'/python/python.exe',integrityValidatorPath:skill+'/container_tools/inspect_presentation_package_integrity.py',layoutValidatorPath:skill+'/container_tools/inspect_presentation_layout_geometry.py',layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit',...owners.flatMap(v=>['--require-native-table-slide',String(v)])],explicitTotalSlideCount:24,requiredNativeTableOwnerSlides:owners,requiredNativeChartOwnerSlides:[],fontPolicy:{basis:'reference',families:['Arial'],referencePath:d.reference,referenceSha256:d.reference_sha256},verifyArtifactToolImport:true,receiptPath:path.resolve('.build/overview/finalization.json')});

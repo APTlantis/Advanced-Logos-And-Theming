@@ -1,0 +1,332 @@
+{
+  "date": "2026-10-08",
+  "root_causes": [
+    "Canonical selection reserved the absolute darkest anchor and admitted multiple near-black shades",
+    "Semantic mapping unconditionally assigned the darkest color to every application background"
+  ],
+  "fix": [
+    "Coalesce encoded near-black candidates when at least 32 observed representatives remain",
+    "Choose image-derived dark surfaces independently from ANSI black; support explicit policy and source overrides"
+  ],
+  "previous_zig_background": "#000000",
+  "corrected_zig_background": "#0A1924",
+  "zig_selection": {
+    "canonical": {
+      "weighted_mean_oklab_distance": 0.022386966195126326,
+      "max_sample_oklab_distance": 0.10269333887644508,
+      "minimum_palette_spacing": 0.03919461205882244,
+      "coverage": "normalized visible pixel sample",
+      "limitation": "Coverage and spacing do not establish aesthetic quality"
+    },
+    "selection_policy": {
+      "near_black_definition": "All 8-bit sRGB channels <= 12",
+      "near_black_candidates": 18,
+      "near_black_canonical": 1,
+      "coalesced_candidates": 17,
+      "policy": "One observed near-black anchor when at least 32 representatives remain; preserve sparse inputs"
+    },
+    "previous": {
+      "weighted_mean_oklab_distance": 0.020904322504826246,
+      "max_sample_oklab_distance": 0.10370174034740423,
+      "minimum_palette_spacing": 0.03919461205882244,
+      "coverage": "normalized visible pixel sample",
+      "limitation": "Coverage and spacing do not establish aesthetic quality"
+    },
+    "comparison_sha256": "dfbf30564a3efbf268b4e1687b2da1ad71a83935eba184ffa754c65d717ce656",
+    "background_selection": {
+      "source": "color_04",
+      "hex": "#0A1924",
+      "reason": "Image-derived dark chromatic surface",
+      "mode": "identity",
+      "target_oklch_lightness": 0.2,
+      "darkest_hex": "#000000"
+    }
+  },
+  "additional_image_fixtures": [
+    {
+      "input": "assets\\png\\apt-qbasic-logo.png",
+      "source_sha256": "ef8ee9a74d0379bf783cae64753c24ef751080e3ca6243cebcd8ab3ba55056d6",
+      "background": "#03023E",
+      "first_three": [
+        "#000003",
+        "#020010",
+        "#04011E"
+      ],
+      "canonical_count": 32,
+      "terminal_contrast_failures": 0,
+      "selection_policy": {
+        "near_black_definition": "All 8-bit sRGB channels <= 12",
+        "near_black_candidates": 17,
+        "near_black_canonical": 1,
+        "coalesced_candidates": 16,
+        "policy": "One observed near-black anchor when at least 32 representatives remain; preserve sparse inputs"
+      }
+    },
+    {
+      "input": "assets\\png\\apt-assembly-logo.png",
+      "source_sha256": "7b1fbdaa01832e1d738213a3f5fa00f204a17d580d5c92d312edbbba306f0f81",
+      "background": "#231A11",
+      "first_three": [
+        "#000000",
+        "#0D0904",
+        "#131414"
+      ],
+      "canonical_count": 32,
+      "terminal_contrast_failures": 0,
+      "selection_policy": {
+        "near_black_definition": "All 8-bit sRGB channels <= 12",
+        "near_black_candidates": 28,
+        "near_black_canonical": 1,
+        "coalesced_candidates": 27,
+        "policy": "One observed near-black anchor when at least 32 representatives remain; preserve sparse inputs"
+      }
+    },
+    {
+      "input": "assets\\png\\apt-scratch-logo.png",
+      "source_sha256": "2a72af8a0c4444f71b1efccd8c0dde76319d86c957f124f422da7c4e3b800574",
+      "background": "#011338",
+      "first_three": [
+        "#000009",
+        "#000413",
+        "#020F26"
+      ],
+      "canonical_count": 32,
+      "terminal_contrast_failures": 0,
+      "selection_policy": {
+        "near_black_definition": "All 8-bit sRGB channels <= 12",
+        "near_black_candidates": 6,
+        "near_black_canonical": 1,
+        "coalesced_candidates": 5,
+        "policy": "One observed near-black anchor when at least 32 representatives remain; preserve sparse inputs"
+      }
+    }
+  ],
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "count": 18,
+    "result": "passed"
+  },
+  "command_contract_lint": "passed",
+  "presentation_validation": {
+    "schemaVersion": "presentation-finalization.v1",
+    "finalSha256": "d611cfbc546500e42f6aa8cfaf6e326aab638cc4fde3b6d2ba3cd9207ce522b7",
+    "byteCount": 28877,
+    "packageIntegrity": {
+      "chart_count": 1,
+      "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+      "finding_count": 0,
+      "findings": [],
+      "notes_parts_skipped": 4,
+      "relationship_part_count": 19,
+      "slide_count": 4,
+      "status": "pass",
+      "exitCode": 0,
+      "findingCount": 0,
+      "warnings": []
+    },
+    "presentationLayout": {
+      "finding_count": 0,
+      "findings": [],
+      "font_policy": {
+        "checked_text_script_count": 54,
+        "native_font_rendering_verified": false,
+        "observed_font_families": [
+          "Arial"
+        ],
+        "observed_font_use_counts": {
+          "Arial": 54
+        },
+        "passed": true,
+        "performed": true
+      },
+      "slide_count": 4,
+      "slide_size_in": [
+        13.3333,
+        7.5
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "exitCode": 0,
+      "findingCount": 0,
+      "fontPolicy": {
+        "checked_text_script_count": 54,
+        "native_font_rendering_verified": false,
+        "observed_font_families": [
+          "Arial"
+        ],
+        "observed_font_use_counts": {
+          "Arial": 54
+        },
+        "passed": true,
+        "performed": true
+      }
+    },
+    "fontSelection": {
+      "basis": "design",
+      "approvedFamilies": [
+        "Arial"
+      ],
+      "scriptFonts": {},
+      "referenceSha256": null,
+      "referenceFontsVerifiedInEncodedText": false,
+      "checked_text_script_count": 54,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Arial"
+      ],
+      "observed_font_use_counts": {
+        "Arial": 54
+      },
+      "passed": true,
+      "performed": true
+    },
+    "firstPartyImport": {
+      "performed": true,
+      "passed": true,
+      "slideCount": 4,
+      "sha256": "d611cfbc546500e42f6aa8cfaf6e326aab638cc4fde3b6d2ba3cd9207ce522b7",
+      "runtimeNodeModules": "C:/Users/Administrator/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
+      "nodeExecutable": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+    },
+    "nativeTableArithmetic": {
+      "performed": true,
+      "checked_column_count": 0,
+      "checks": [],
+      "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+      "eligible_table_count": 0,
+      "finding_count": 0,
+      "findings": [],
+      "native_table_count": 1,
+      "passed": true,
+      "schema_version": "presentation-native-table-arithmetic.v1",
+      "skipped_tables": [
+        {
+          "reason": "no_numeric_amounts",
+          "slide": 3,
+          "table": 1
+        }
+      ],
+      "slide_count": 4,
+      "warning_count": 0,
+      "warnings": []
+    },
+    "nativeChartTitles": {
+      "performed": true,
+      "checks": [
+        {
+          "chart": 1,
+          "slide": 4,
+          "status": "absent"
+        }
+      ],
+      "finding_count": 0,
+      "findings": [],
+      "native_chart_count": 1,
+      "native_powerpoint_verified": false,
+      "passed": true,
+      "presentation_sha256": "d611cfbc546500e42f6aa8cfaf6e326aab638cc4fde3b6d2ba3cd9207ce522b7",
+      "schema_version": "presentation-native-chart-titles.v1",
+      "slide_count": 4,
+      "source_text_emitted": false,
+      "unresolved_linked_title_count": 0
+    },
+    "sourceDerivedPolicyFlags": [
+      "--expected-slide-size-emu",
+      "12192000,6858000",
+      "--validate-heading-fit",
+      "--require-native-table-slide",
+      "3",
+      "--cover-role",
+      "none",
+      "--expected-slide-count",
+      "4",
+      "--approved-font-family",
+      "Arial"
+    ],
+    "nativeChartValidation": {
+      "detectedOwnerSlides": [
+        4
+      ],
+      "detectedChartCount": 1,
+      "targetApplication": "powerpoint",
+      "sourceChartOwnersExplicitlyDeclared": true,
+      "validatorRan": true,
+      "passed": true
+    },
+    "nativeQuantitativeCharts": {
+      "report": {
+        "claim_boundary": "OOXML/workbook structural validation only; source provenance and native PowerPoint opening remain separate checks.",
+        "expected_quantitative_chart_slides": [
+          4
+        ],
+        "failed_slide_count": 0,
+        "failed_slides": [],
+        "formal_human_reviewed": false,
+        "native_application_open_verified": false,
+        "package_sha256": "d611cfbc546500e42f6aa8cfaf6e326aab638cc4fde3b6d2ba3cd9207ce522b7",
+        "passed": true,
+        "required_embedded_workbook_slides": [
+          4
+        ],
+        "results": [
+          {
+            "approved_source_figure_exception": false,
+            "charts": [
+              {
+                "cache_reference_ranges_verified": true,
+                "editability_evidence": "embedded_workbook",
+                "embedded_workbook_count": 1,
+                "embedded_workbook_sheet_count": 1,
+                "literal_numeric_point_count": 0,
+                "native_chart_types": [
+                  "barChart"
+                ],
+                "numeric_cache_point_count": 12,
+                "series_formula_count": 12,
+                "workbook_numeric_cell_count": 12
+              }
+            ],
+            "failure_codes": [],
+            "native_chart_count": 1,
+            "raster_picture_count": 0,
+            "required_native_chart_count": 1,
+            "slide_number": 4,
+            "status": "passed"
+          }
+        ],
+        "schema_version": "owner-private.quantitative-chart-native-gate.v1",
+        "slide_count": 4,
+        "source_attachments_accessed": false,
+        "target_application": "powerpoint",
+        "validated_slide_count": 1
+      },
+      "exitCode": 0,
+      "validatedSlideCount": 1,
+      "requiredOwnerSlides": [
+        4
+      ],
+      "approvedSourceFigureExceptionSlides": [],
+      "targetApplication": "powerpoint",
+      "requiredEmbeddedWorkbookChartOwnerSlides": [
+        4
+      ]
+    }
+  },
+  "visual_review": {
+    "renderer": "Artifact Tool",
+    "slides_inspected": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "native_powerpoint_acceptance": "pending"
+  },
+  "preservation": {
+    "previous_outputs": "pilot/zig-dark unchanged",
+    "new_output": "pilot/zig-surface-fix",
+    "input_assets_and_archives": "unchanged"
+  },
+  "user_reported_repeated_trio": "Exact affected files not yet supplied; no fixed palette hex values exist in extraction or launcher. Wrong deck paths were explicitly withdrawn and are excluded from evidence.",
+  "navigation": "No identity, path or portfolio registration change; direct docs and manifest updated."
+}

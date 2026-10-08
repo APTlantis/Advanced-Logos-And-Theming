@@ -1,0 +1,241 @@
+{
+  "date": "2026-10-08",
+  "scope": "PowerPoint sample-deck extension",
+  "deck": "pilot\\zig-dark\\powerpoint\\aptlantis-zig-dark-sample.pptx",
+  "sha256": "39da6c1e6998b5846de00e39801b0ccf52257db4b722b47a72f751fab7c42ebc",
+  "slides": 4,
+  "artifact_tool_version": "2.8.89",
+  "focused_tests": {
+    "existing_pipeline_and_converter_suite": 15,
+    "new_runtime_failure_preservation_test": 1,
+    "result": "passed"
+  },
+  "deterministic_regeneration": "passed in pipeline import roundtrip test, including all deck bytes",
+  "canonical_palette": "unchanged by target adaptation; compared in test",
+  "exact_delivered_package_validation": {
+    "schemaVersion": "presentation-finalization.v1",
+    "finalSha256": "39da6c1e6998b5846de00e39801b0ccf52257db4b722b47a72f751fab7c42ebc",
+    "byteCount": 28866,
+    "packageIntegrity": {
+      "chart_count": 1,
+      "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+      "finding_count": 0,
+      "findings": [],
+      "notes_parts_skipped": 4,
+      "relationship_part_count": 19,
+      "slide_count": 4,
+      "status": "pass",
+      "exitCode": 0,
+      "findingCount": 0,
+      "warnings": []
+    },
+    "presentationLayout": {
+      "finding_count": 0,
+      "findings": [],
+      "font_policy": {
+        "checked_text_script_count": 54,
+        "native_font_rendering_verified": false,
+        "observed_font_families": [
+          "Arial"
+        ],
+        "observed_font_use_counts": {
+          "Arial": 54
+        },
+        "passed": true,
+        "performed": true
+      },
+      "slide_count": 4,
+      "slide_size_in": [
+        13.3333,
+        7.5
+      ],
+      "warning_count": 0,
+      "warnings": [],
+      "exitCode": 0,
+      "findingCount": 0,
+      "fontPolicy": {
+        "checked_text_script_count": 54,
+        "native_font_rendering_verified": false,
+        "observed_font_families": [
+          "Arial"
+        ],
+        "observed_font_use_counts": {
+          "Arial": 54
+        },
+        "passed": true,
+        "performed": true
+      }
+    },
+    "fontSelection": {
+      "basis": "design",
+      "approvedFamilies": [
+        "Arial"
+      ],
+      "scriptFonts": {},
+      "referenceSha256": null,
+      "referenceFontsVerifiedInEncodedText": false,
+      "checked_text_script_count": 54,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Arial"
+      ],
+      "observed_font_use_counts": {
+        "Arial": 54
+      },
+      "passed": true,
+      "performed": true
+    },
+    "firstPartyImport": {
+      "performed": true,
+      "passed": true,
+      "slideCount": 4,
+      "sha256": "39da6c1e6998b5846de00e39801b0ccf52257db4b722b47a72f751fab7c42ebc",
+      "runtimeNodeModules": "C:/Users/Administrator/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
+      "nodeExecutable": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+    },
+    "nativeTableArithmetic": {
+      "performed": true,
+      "checked_column_count": 0,
+      "checks": [],
+      "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+      "eligible_table_count": 0,
+      "finding_count": 0,
+      "findings": [],
+      "native_table_count": 1,
+      "passed": true,
+      "schema_version": "presentation-native-table-arithmetic.v1",
+      "skipped_tables": [
+        {
+          "reason": "no_numeric_amounts",
+          "slide": 3,
+          "table": 1
+        }
+      ],
+      "slide_count": 4,
+      "warning_count": 0,
+      "warnings": []
+    },
+    "nativeChartTitles": {
+      "performed": true,
+      "checks": [
+        {
+          "chart": 1,
+          "slide": 4,
+          "status": "absent"
+        }
+      ],
+      "finding_count": 0,
+      "findings": [],
+      "native_chart_count": 1,
+      "native_powerpoint_verified": false,
+      "passed": true,
+      "presentation_sha256": "39da6c1e6998b5846de00e39801b0ccf52257db4b722b47a72f751fab7c42ebc",
+      "schema_version": "presentation-native-chart-titles.v1",
+      "slide_count": 4,
+      "source_text_emitted": false,
+      "unresolved_linked_title_count": 0
+    },
+    "sourceDerivedPolicyFlags": [
+      "--expected-slide-size-emu",
+      "12192000,6858000",
+      "--validate-heading-fit",
+      "--require-native-table-slide",
+      "3",
+      "--cover-role",
+      "none",
+      "--expected-slide-count",
+      "4",
+      "--approved-font-family",
+      "Arial"
+    ],
+    "nativeChartValidation": {
+      "detectedOwnerSlides": [
+        4
+      ],
+      "detectedChartCount": 1,
+      "targetApplication": "powerpoint",
+      "sourceChartOwnersExplicitlyDeclared": true,
+      "validatorRan": true,
+      "passed": true
+    },
+    "nativeQuantitativeCharts": {
+      "report": {
+        "claim_boundary": "OOXML/workbook structural validation only; source provenance and native PowerPoint opening remain separate checks.",
+        "expected_quantitative_chart_slides": [
+          4
+        ],
+        "failed_slide_count": 0,
+        "failed_slides": [],
+        "formal_human_reviewed": false,
+        "native_application_open_verified": false,
+        "package_sha256": "39da6c1e6998b5846de00e39801b0ccf52257db4b722b47a72f751fab7c42ebc",
+        "passed": true,
+        "required_embedded_workbook_slides": [
+          4
+        ],
+        "results": [
+          {
+            "approved_source_figure_exception": false,
+            "charts": [
+              {
+                "cache_reference_ranges_verified": true,
+                "editability_evidence": "embedded_workbook",
+                "embedded_workbook_count": 1,
+                "embedded_workbook_sheet_count": 1,
+                "literal_numeric_point_count": 0,
+                "native_chart_types": [
+                  "barChart"
+                ],
+                "numeric_cache_point_count": 12,
+                "series_formula_count": 12,
+                "workbook_numeric_cell_count": 12
+              }
+            ],
+            "failure_codes": [],
+            "native_chart_count": 1,
+            "raster_picture_count": 0,
+            "required_native_chart_count": 1,
+            "slide_number": 4,
+            "status": "passed"
+          }
+        ],
+        "schema_version": "owner-private.quantitative-chart-native-gate.v1",
+        "slide_count": 4,
+        "source_attachments_accessed": false,
+        "target_application": "powerpoint",
+        "validated_slide_count": 1
+      },
+      "exitCode": 0,
+      "validatedSlideCount": 1,
+      "requiredOwnerSlides": [
+        4
+      ],
+      "approvedSourceFigureExceptionSlides": [],
+      "targetApplication": "powerpoint",
+      "requiredEmbeddedWorkbookChartOwnerSlides": [
+        4
+      ]
+    }
+  },
+  "visual_review": {
+    "renderer": "Artifact Tool PPTX import",
+    "inspected_slides": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "repaired": "followed-link text and swatch native scheme bindings",
+    "result": "all slides inspected, no remaining clipping or missing content observed"
+  },
+  "native_powerpoint_import_and_edit": "pending",
+  "installation_or_activation": "not performed",
+  "historical_migration_evidence": "unchanged",
+  "navigation_records": "Direct project records updated. Parent/index registration and source paths remain accurate; no extended navigation updates needed.",
+  "package_build": {
+    "command": ".venv/Scripts/python.exe -m pip wheel . --no-deps --wheel-dir .build/wheels",
+    "result": "passed",
+    "javascript_builder_in_wheel": true
+  },
+  "command_contract_lint": "passed"
+}

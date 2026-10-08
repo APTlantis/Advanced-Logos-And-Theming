@@ -1,0 +1,1428 @@
+{
+  "date": "2026-10-08",
+  "reference": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\powerpoint\\aptlantis-black-gold-sample.pptx",
+  "reference_sha256": "e1d849a6bcf493a8ff3842ff385b25476aeb3e1c65930e1a1b4c836ba5e15a74",
+  "colors": {
+    "dk1": "#0A1924",
+    "lt1": "#FCFDF7",
+    "dk2": "#18222A",
+    "lt2": "#C38651",
+    "accent1": "#F8C265",
+    "accent2": "#6F95B6",
+    "accent3": "#89B2A7",
+    "accent4": "#6F95B6",
+    "accent5": "#FDEFB4",
+    "accent6": "#EDAF57",
+    "hlink": "#F8C265",
+    "folHlink": "#6F95B6"
+  },
+  "palette": {
+    "color_01": {
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "oklch": {
+        "l": 0.0,
+        "c": 0.0,
+        "h": 0.0
+      },
+      "weight": 11643.0
+    },
+    "color_02": {
+      "hex": "#01060E",
+      "rgb": [
+        1,
+        6,
+        14
+      ],
+      "oklch": {
+        "l": 0.1186255651,
+        "c": 0.0247554557,
+        "h": 247.3063634912
+      },
+      "weight": 1308.0
+    },
+    "color_03": {
+      "hex": "#051019",
+      "rgb": [
+        5,
+        16,
+        25
+      ],
+      "oklch": {
+        "l": 0.1670642039,
+        "c": 0.025698032,
+        "h": 242.7439507572
+      },
+      "weight": 1805.0
+    },
+    "color_04": {
+      "hex": "#0A1924",
+      "rgb": [
+        10,
+        25,
+        36
+      ],
+      "oklch": {
+        "l": 0.2059983088,
+        "c": 0.0301957247,
+        "h": 242.0200946213
+      },
+      "weight": 910.0
+    },
+    "color_05": {
+      "hex": "#21211C",
+      "rgb": [
+        33,
+        33,
+        28
+      ],
+      "oklch": {
+        "l": 0.2459204586,
+        "c": 0.0092116206,
+        "h": 107.0582344496
+      },
+      "weight": 337.0
+    },
+    "color_06": {
+      "hex": "#022742",
+      "rgb": [
+        2,
+        39,
+        66
+      ],
+      "oklch": {
+        "l": 0.2639141396,
+        "c": 0.0645887736,
+        "h": 245.5737219403
+      },
+      "weight": 214.0
+    },
+    "color_07": {
+      "hex": "#2F2921",
+      "rgb": [
+        47,
+        41,
+        33
+      ],
+      "oklch": {
+        "l": 0.2848369678,
+        "c": 0.0166343472,
+        "h": 74.9538928458
+      },
+      "weight": 308.0
+    },
+    "color_08": {
+      "hex": "#413422",
+      "rgb": [
+        65,
+        52,
+        34
+      ],
+      "oklch": {
+        "l": 0.3341651853,
+        "c": 0.0346446783,
+        "h": 75.1651328473
+      },
+      "weight": 161.0
+    },
+    "color_09": {
+      "hex": "#0B3F57",
+      "rgb": [
+        11,
+        63,
+        87
+      ],
+      "oklch": {
+        "l": 0.3475729681,
+        "c": 0.0663388245,
+        "h": 234.127565631
+      },
+      "weight": 169.0
+    },
+    "color_10": {
+      "hex": "#664024",
+      "rgb": [
+        102,
+        64,
+        36
+      ],
+      "oklch": {
+        "l": 0.409514694,
+        "c": 0.0673582094,
+        "h": 55.9124528722
+      },
+      "weight": 194.0
+    },
+    "color_11": {
+      "hex": "#18556A",
+      "rgb": [
+        24,
+        85,
+        106
+      ],
+      "oklch": {
+        "l": 0.42124033,
+        "c": 0.0693714805,
+        "h": 225.3799763575
+      },
+      "weight": 148.0
+    },
+    "color_12": {
+      "hex": "#5B5752",
+      "rgb": [
+        91,
+        87,
+        82
+      ],
+      "oklch": {
+        "l": 0.4589207836,
+        "c": 0.0095222989,
+        "h": 73.6460844032
+      },
+      "weight": 58.0
+    },
+    "color_13": {
+      "hex": "#845328",
+      "rgb": [
+        132,
+        83,
+        40
+      ],
+      "oklch": {
+        "l": 0.4886916776,
+        "c": 0.0873687006,
+        "h": 59.6893079018
+      },
+      "weight": 128.0
+    },
+    "color_14": {
+      "hex": "#35737D",
+      "rgb": [
+        53,
+        115,
+        125
+      ],
+      "oklch": {
+        "l": 0.5188288051,
+        "c": 0.0653466191,
+        "h": 209.3467673493
+      },
+      "weight": 172.0
+    },
+    "color_15": {
+      "hex": "#0279A3",
+      "rgb": [
+        2,
+        121,
+        163
+      ],
+      "oklch": {
+        "l": 0.5409012006,
+        "c": 0.1094188016,
+        "h": 231.6615944966
+      },
+      "weight": 161.0
+    },
+    "color_16": {
+      "hex": "#817763",
+      "rgb": [
+        129,
+        119,
+        99
+      ],
+      "oklch": {
+        "l": 0.5726585322,
+        "c": 0.0319736341,
+        "h": 84.5416871963
+      },
+      "weight": 70.0
+    },
+    "color_17": {
+      "hex": "#A66B35",
+      "rgb": [
+        166,
+        107,
+        53
+      ],
+      "oklch": {
+        "l": 0.5804929713,
+        "c": 0.1025715442,
+        "h": 60.8902890635
+      },
+      "weight": 191.0
+    },
+    "color_18": {
+      "hex": "#4A9FAE",
+      "rgb": [
+        74,
+        159,
+        174
+      ],
+      "oklch": {
+        "l": 0.6560063818,
+        "c": 0.0844248885,
+        "h": 210.684527893
+      },
+      "weight": 55.0
+    },
+    "color_19": {
+      "hex": "#A98C76",
+      "rgb": [
+        169,
+        140,
+        118
+      ],
+      "oklch": {
+        "l": 0.6609573438,
+        "c": 0.047262192,
+        "h": 59.0112695313
+      },
+      "weight": 157.0
+    },
+    "color_20": {
+      "hex": "#C7833D",
+      "rgb": [
+        199,
+        131,
+        61
+      ],
+      "oklch": {
+        "l": 0.6670414415,
+        "c": 0.1194840475,
+        "h": 63.7939271511
+      },
+      "weight": 318.0
+    },
+    "color_21": {
+      "hex": "#89B2A7",
+      "rgb": [
+        137,
+        178,
+        167
+      ],
+      "oklch": {
+        "l": 0.730531744,
+        "c": 0.0469383818,
+        "h": 176.6752908476
+      },
+      "weight": 39.0
+    },
+    "color_22": {
+      "hex": "#DC9848",
+      "rgb": [
+        220,
+        152,
+        72
+      ],
+      "oklch": {
+        "l": 0.731845832,
+        "c": 0.1255846751,
+        "h": 67.8599445891
+      },
+      "weight": 363.0
+    },
+    "color_23": {
+      "hex": "#24BDD8",
+      "rgb": [
+        36,
+        189,
+        216
+      ],
+      "oklch": {
+        "l": 0.7360396433,
+        "c": 0.1228801493,
+        "h": 213.4831532277
+      },
+      "weight": 113.0
+    },
+    "color_24": {
+      "hex": "#D6AE7E",
+      "rgb": [
+        214,
+        174,
+        126
+      ],
+      "oklch": {
+        "l": 0.7754424931,
+        "c": 0.0787479316,
+        "h": 71.3405611285
+      },
+      "weight": 129.0
+    },
+    "color_25": {
+      "hex": "#EDAF57",
+      "rgb": [
+        237,
+        175,
+        87
+      ],
+      "oklch": {
+        "l": 0.795348575,
+        "c": 0.1270989868,
+        "h": 73.674188827
+      },
+      "weight": 276.0
+    },
+    "color_26": {
+      "hex": "#C0C8A9",
+      "rgb": [
+        192,
+        200,
+        169
+      ],
+      "oklch": {
+        "l": 0.8182518054,
+        "c": 0.0430987513,
+        "h": 119.11703904
+      },
+      "weight": 106.0
+    },
+    "color_27": {
+      "hex": "#73DDEA",
+      "rgb": [
+        115,
+        221,
+        234
+      ],
+      "oklch": {
+        "l": 0.8390292941,
+        "c": 0.0996120113,
+        "h": 205.9565457138
+      },
+      "weight": 73.0
+    },
+    "color_28": {
+      "hex": "#F8C265",
+      "rgb": [
+        248,
+        194,
+        101
+      ],
+      "oklch": {
+        "l": 0.8444439584,
+        "c": 0.1265714013,
+        "h": 79.2328307444
+      },
+      "weight": 431.0
+    },
+    "color_29": {
+      "hex": "#FBD484",
+      "rgb": [
+        251,
+        212,
+        132
+      ],
+      "oklch": {
+        "l": 0.8862139517,
+        "c": 0.1079589641,
+        "h": 84.3132297447
+      },
+      "weight": 245.0
+    },
+    "color_30": {
+      "hex": "#AAF1F3",
+      "rgb": [
+        170,
+        241,
+        243
+      ],
+      "oklch": {
+        "l": 0.9121359085,
+        "c": 0.0703459206,
+        "h": 198.2053412058
+      },
+      "weight": 78.0
+    },
+    "color_31": {
+      "hex": "#FDEFB4",
+      "rgb": [
+        253,
+        239,
+        180
+      ],
+      "oklch": {
+        "l": 0.9492751098,
+        "c": 0.0767461921,
+        "h": 96.3397532287
+      },
+      "weight": 175.0
+    },
+    "color_32": {
+      "hex": "#FCFDF7",
+      "rgb": [
+        252,
+        253,
+        247
+      ],
+      "oklch": {
+        "l": 0.9916420783,
+        "c": 0.0079469311,
+        "h": 114.2150551425
+      },
+      "weight": 382.0
+    }
+  },
+  "slides": [
+    {
+      "title": "Logos and Theming",
+      "lead": "From an image\u2019s identity to useful application themes",
+      "groups": [
+        [
+          "A detailed project overview",
+          "Architecture, color decisions, application contracts and recoverable consolidation."
+        ],
+        [
+          "Black-Gold edition \u00b7 8 October 2026",
+          "Built with the pipeline\u2019s own PowerPoint theme."
+        ]
+      ],
+      "table": null,
+      "notes": "This overview describes the implemented local pilot, not an installation or publication. The supplied Black-Gold sample determines all twelve Office theme colors, Arial typography and the 16:9 canvas. The source artwork shown here is the preserved PNG for the Black-Gold run, not a newly generated visual. The separate document-suite plan specifies future deep dives; those volumes are not presented as already written.",
+      "sources": [
+        "README.md",
+        "output/blackgold/powerpoint/aptlantis-black-gold-sample.pptx",
+        "output/blackgold/source/apt-zig-dark-logo.png"
+      ],
+      "kind": "cover"
+    },
+    {
+      "title": "One pipeline, three kinds of decisions",
+      "lead": "A color can be faithful to an image and still be wrong for a role.",
+      "groups": [
+        [
+          "Extraction",
+          "Which observed colors represent the image?"
+        ],
+        [
+          "Meaning",
+          "Which colors can serve as surfaces, text, accents and status signals?"
+        ],
+        [
+          "Application behavior",
+          "Which combinations remain useful in each target\u2019s native constraints?"
+        ]
+      ],
+      "table": null,
+      "notes": "The architecture separates extraction from semantics and target adaptation. This avoids conflating an image-derived candidate with a warning color or assuming the darkest sample must become the background. A terminal, document editor and presentation can share provenance while requiring different text and state combinations. The canonical palette stays unchanged when application tokens are derived.",
+      "sources": [
+        "Project-Proposal.md",
+        "apt_theme/extraction.py",
+        "apt_theme/semantics.py",
+        "apt_theme/targets.py"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Consolidation preserves the history",
+      "lead": "The new projects organize work that grew in several places.",
+      "groups": [],
+      "table": [
+        [
+          "Former location",
+          "Disposition"
+        ],
+        [
+          "Lang-Theme-Generator",
+          "Engine and legacy generation history"
+        ],
+        [
+          "Aptlantis Logos",
+          "Artwork, catalogs and converters"
+        ],
+        [
+          ".cts_holding/palette-transformer",
+          "Transformation tools and differing versions"
+        ],
+        [
+          "Documents working collection",
+          "Historical outputs, source assets and configuration"
+        ]
+      ],
+      "notes": "The former D-drive locations and the Documents working folder were inventoried and archived. Hash-verified migration records preserve differing versions rather than silently choosing one. The current consolidated implementation is not an assertion that every historical exporter was ported: legacy tools and outputs remain historical material. Archive, inventory, acceptance and retirement records provide the recovery trail. Existing public asset copies and deployment state were kept separate.",
+      "sources": [
+        "migration/README.md",
+        "migration/acceptance.json",
+        "Project-README.md"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Ownership is part of the design",
+      "lead": "A shared workflow does not require one project to own everything.",
+      "groups": [],
+      "table": [
+        [
+          "Owner",
+          "Responsibility"
+        ],
+        [
+          "Logos-And-Theming",
+          "Theme engine, artwork/catalogs, ICO/SVG converters, atlas"
+        ],
+        [
+          "SESM-Metadata-Embedder",
+          "SVG metadata, configuration, schema checks, embedding tests"
+        ],
+        [
+          "City Hall",
+          "Canonical standards and schemas"
+        ],
+        [
+          "Public asset copies",
+          "Existing publication and deployment state"
+        ]
+      ],
+      "notes": "The metadata sibling receives explicit asset-root and configuration paths. Asset IDs, filenames and registry relationships belong to the preserved collection. Canonical standards remain under City Hall; a project guide or handbook snapshot does not replace those standards. Ordinary generation does not run converters, embed metadata, install themes or publish assets.",
+      "sources": [
+        "AGENTS.md",
+        "Logos-And-Theming.manifest.toml",
+        "../SESM-Metadata-Embedder/README.md"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "The six-stage flow",
+      "lead": "Every boundary produces something inspectable.",
+      "groups": [],
+      "table": [
+        [
+          "Stage",
+          "Decision / output"
+        ],
+        [
+          "1 \u00b7 Image",
+          "Preserved bytes, hash, normalized pixels"
+        ],
+        [
+          "2 \u00b7 Candidates",
+          "Up to 192 observed representatives and population weights"
+        ],
+        [
+          "3 \u00b7 Canonical 32",
+          "Stable IDs, four palette formats, selection diagnostics"
+        ],
+        [
+          "4 \u00b7 Semantic roles",
+          "Assignments, hue suitability and collision findings"
+        ],
+        [
+          "5 \u00b7 Target adaptation",
+          "Derived tokens, aliases, origins and omissions"
+        ],
+        [
+          "6 \u00b7 Themes + review",
+          "Native files, validation and self-contained HTML"
+        ]
+      ],
+      "notes": "The original image and its hash are retained independently from its normalized decoding. Candidate and selection diagnostics make the extraction reviewable. Semantic assignments are stored separately, and target tokens retain the origin of transformations. Processing completion and aesthetic approval are different conclusions: review findings can remain in completed output.",
+      "sources": [
+        "README.md",
+        "docs/COMMAND-CONTRACT.md",
+        "apt_theme/cli.py"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Use a specialist tool at each stage",
+      "lead": "The pipeline combines strengths instead of asking one tool to infer everything.",
+      "groups": [],
+      "table": [
+        [
+          "Tool",
+          "Job"
+        ],
+        [
+          "ImageMagick",
+          "Decoding, orientation, ICC-aware sRGB normalization"
+        ],
+        [
+          "NumPy + scikit-learn",
+          "Sampling and population-weighted OKLab clustering"
+        ],
+        [
+          "ColorAide",
+          "Color conversion, contrast and sRGB gamut handling"
+        ],
+        [
+          "Python + PowerShell",
+          "Pipeline contracts, configuration and local orchestration"
+        ],
+        [
+          "Artifact Tool / Open XML",
+          "Editable PowerPoint content and package checks"
+        ]
+      ],
+      "notes": "ImageMagick handles image interpretation rather than semantic role assignment. KMeans uses sample weights and fixed seeds; cluster representatives are observed colors nearest centers, not exported centroids. ColorAide handles perceptual conversions and derivation. The PowerPoint target also requires the documented local Node/Artifact Tool runtime; the other targets do not. Dependency availability is part of setup, not a reason to choose a weaker algorithm silently.",
+      "sources": [
+        "apt_theme/extraction.py",
+        "apt_theme/colors.py",
+        "docs/POWERPOINT.md",
+        "pyproject.toml"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Normalize pixels; preserve the original",
+      "lead": "Normalization creates a working representation without replacing the source.",
+      "groups": [
+        [
+          "Interpret the image",
+          "Apply orientation and ICC-aware sRGB conversion through ImageMagick."
+        ],
+        [
+          "Respect transparency",
+          "Exclude fully transparent pixels; weight partial opacity by alpha."
+        ],
+        [
+          "Bound the computation",
+          "Default sampling limit: 65,536 pixels. Fixed seed and stable ordering."
+        ]
+      ],
+      "table": null,
+      "notes": "The current implementation uses a bounded working sample after normalization; preserve the original high-bit-depth bytes for provenance and future comparisons. Transparent RGB values must not pollute the palette. Sampling introduces a deliberate computational bound: this is a representative estimate of the image, not an exhaustive proof that every pixel has been assigned ideally. Malformed input and an insufficient supply of distinct exportable colors fail clearly.",
+      "sources": [
+        "apt_theme/extraction.py",
+        "profiles.toml",
+        "tests/test_pipeline.py"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Candidates are observed colors",
+      "lead": "A cluster center guides selection; it does not become an invented export color.",
+      "groups": [
+        [
+          "Perceptual coordinates",
+          "Convert sampled sRGB colors to OKLab for clustering."
+        ],
+        [
+          "Population matters",
+          "Weight clusters by image population and partial opacity."
+        ],
+        [
+          "Representative selection",
+          "Choose an observed color nearest each cluster center, then order stably."
+        ]
+      ],
+      "table": null,
+      "notes": "The candidate stage requests up to 192 representatives. It reduces a large image to a bounded set while retaining population information. Near-black export noise is coalesced during canonical selection when enough meaningful observed alternatives remain. Fixed seeds and stable ordering support deterministic regeneration; they do not mean a color ID is immutable across different images or future selection algorithms.",
+      "sources": [
+        "apt_theme/extraction.py",
+        "output/blackgold/candidates.json",
+        "output/blackgold/selection.json"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "The Black-Gold canonical 32",
+      "lead": "Perceptual clustering, light/dark anchors and diversity; IDs carry no meanings.",
+      "groups": [],
+      "table": null,
+      "notes": "This editable native table contains the exact canonical hex values from the preserved Black-Gold run. Colors range from dark anchors through muted browns, golds and cool accents to a light foreground. Pure black remains an image color; its presence does not make it the background role. Target exports must not rewrite these values. Role assignments and all derived colors are separate artifacts. The selector clusters the candidate pool into thirty perceptual groups, protects the lightest and darkest anchors, skips representatives closer than0.03 OKLab to the selected set and fills remaining positions with population-aware farthest candidates. Stable lightness/hex ordering assigns color IDs. This replaces fixed semantic category quotas.",
+      "sources": [
+        "output/blackgold/palette.toml",
+        "output/blackgold/selection.json"
+      ],
+      "kind": "palette"
+    },
+    {
+      "title": "Semantic mapping makes intent explicit",
+      "lead": "Assignments can be reviewed and overridden independently of extraction.",
+      "groups": [],
+      "table": [
+        [
+          "Role",
+          "Source ID",
+          "Canonical color"
+        ],
+        [
+          "background",
+          "color_04",
+          "#0A1924"
+        ],
+        [
+          "foreground",
+          "color_32",
+          "#FCFDF7"
+        ],
+        [
+          "primary",
+          "color_28",
+          "#F8C265"
+        ],
+        [
+          "secondary",
+          "color_06",
+          "#022742"
+        ],
+        [
+          "warning",
+          "color_29",
+          "#FBD484"
+        ],
+        [
+          "cyan",
+          "color_27",
+          "#73DDEA"
+        ]
+      ],
+      "notes": "Surfaces and text are selected by lightness and readability. Identity accents use prominence; status and ANSI roles use hue suitability rather than an accent\u2019s position in a list. TOML semantic overrides resolve reviewed choices. The Black-Gold warning is warm #FBD484, not cyan. A legitimate warning color still needs contrast on its actual exported background and should not be the only way a warning is communicated.",
+      "sources": [
+        "apt_theme/semantics.py",
+        "output/blackgold/semantics.json",
+        "profiles.toml"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Image identity can conflict with conventions",
+      "lead": "Do not create an unrelated hue just to fill a familiar label.",
+      "groups": [
+        [
+          "A warm warning is available",
+          "Black-Gold maps warning to color_29 \u00b7 #FBD484."
+        ],
+        [
+          "Magenta is unavailable",
+          "The nearest image hue is used and the mismatch is reported."
+        ],
+        [
+          "Aliases are information",
+          "Different named roles may share a color; collisions must stay visible."
+        ]
+      ],
+      "table": null,
+      "notes": "The actual semantics.json contains an unavailable_conventional_hue finding for magenta, using color_06 with a hue distance of roughly 79.4 degrees. Other runs can have different missing hues and collisions. No universal completeness claim is made for all images. Missing conventional hues are review findings, not permission to introduce new hue families. Applications may require a textual label, symbol or other additional distinction.",
+      "sources": [
+        "output/blackgold/semantics.json",
+        "apt_theme/semantics.py"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Derivation changes use, not origin",
+      "lead": "Canonical colors remain untouched when applications need readable variations.",
+      "groups": [
+        [
+          "Start from a source ID",
+          "Record the role, source color and requested perceptual values."
+        ],
+        [
+          "Adjust for an actual need",
+          "Change lightness or reduce chroma for text, surfaces and states."
+        ],
+        [
+          "Keep hue intent",
+          "Fit sRGB by reducing chroma at fixed lightness and hue; record the result."
+        ]
+      ],
+      "table": null,
+      "notes": "Target origins record source IDs, purpose, requested OKLCH, whether the result was derived and whether gamut mapping was needed. Hue preservation describes the requested derivation in perceptual space; conversion to finite sRGB values can introduce quantization differences, especially in low-chroma colors. The pipeline should be judged on actual exported combinations as well as transformations. Token budgets do not require arbitrary shades.",
+      "sources": [
+        "apt_theme/colors.py",
+        "apt_theme/targets.py",
+        "output/blackgold/powerpoint/tokens.json"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "The background regression taught a boundary",
+      "lead": "The darkest extracted color is not automatically the best dark surface.",
+      "groups": [
+        [
+          "What looked wrong",
+          "Repeated near-black anchors pulled themes toward flat black backgrounds."
+        ],
+        [
+          "What changed",
+          "Coalesce the noise floor; map an identity surface near the configured lightness."
+        ],
+        [
+          "The Black-Gold result",
+          "Background color_04 \u00b7 #0A1924. Pure black stays in the canonical palette."
+        ]
+      ],
+      "table": null,
+      "notes": "Current defaults use semantic background_mode=identity with target lightness 0.20; darkest remains an explicit alternative, and overrides take precedence. The Black-Gold selection reports18 near-black candidates,1 canonical floor representative and17 coalesced. The quality lesson is not that black is always wrong: extraction, identity and surface assignment must be independently reviewable. Weighted coverage and minimum spacing provide diagnostics, not a mathematical proof of aesthetic quality.",
+      "sources": [
+        "docs/COMMAND-CONTRACT.md",
+        "migration/dark-surface-regression.json",
+        "output/blackgold/selection.json"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Four targets, four native contracts",
+      "lead": "The adapter serves real application settings rather than a generic color count.",
+      "groups": [],
+      "table": [
+        [
+          "Target",
+          "Budget",
+          "Native output"
+        ],
+        [
+          "Windows Terminal",
+          "20",
+          "Scheme JSON: 16 ANSI + 4 application roles"
+        ],
+        [
+          "SiYuan",
+          "64",
+          "Dark CSS, metadata, README, previews, ZIP"
+        ],
+        [
+          "Typora",
+          "40",
+          "CSS for document, code, sidebar and states"
+        ],
+        [
+          "PowerPoint",
+          "24",
+          "12-slot color XML + editable sample deck"
+        ]
+      ],
+      "notes": "Budgets are working guides for distinct named tokens, not counts of UI settings. A single token can serve many settings. PowerPoint has12 native Office color slots despite the adapter\u2019s larger working token vocabulary. Additional targets such as IDEs, web frameworks and desktop applications remain deferred until native output and acceptance contracts are established.",
+      "sources": [
+        "profiles.toml",
+        "docs/COMMAND-CONTRACT.md",
+        "apt_theme/targets.py"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Names and unique colors are different counts",
+      "lead": "Black-Gold uses only the variations its current adapters need.",
+      "groups": [],
+      "table": [
+        [
+          "Target",
+          "Budget",
+          "Named",
+          "Unique"
+        ],
+        [
+          "Windows Terminal",
+          "20",
+          "20",
+          "17"
+        ],
+        [
+          "SiYuan",
+          "64",
+          "62",
+          "40"
+        ],
+        [
+          "Typora",
+          "40",
+          "40",
+          "36"
+        ],
+        [
+          "PowerPoint",
+          "24",
+          "22",
+          "18"
+        ]
+      ],
+      "notes": "These values are a dated observation of the existing Black-Gold token files, not promises for every image. Windows Terminal20/17,SiYuan 62/40,Typora 40/36,PowerPoint 22/18. All four current Black-Gold validation files report no recorded contrast failures, which is narrower than universal readability or native application approval. Aliases and reuse can be intentional; extra colors should be generated only for actual needs.",
+      "sources": [
+        "output/blackgold/windows_terminal/tokens.json",
+        "output/blackgold/siyuan/tokens.json",
+        "output/blackgold/typora/tokens.json",
+        "output/blackgold/powerpoint/tokens.json"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Terminal reduction protects identity",
+      "lead": "A small vocabulary must support both meaning and readable text.",
+      "groups": [
+        [
+          "Protect required roles",
+          "Background, foreground, cursor, selection and the 16 ANSI slots."
+        ],
+        [
+          "Carry the image into text",
+          "Retain visible gold and cool cyan/blue relationships through adaptation."
+        ],
+        [
+          "Expose compromise",
+          "Report missing conventional hues, reused colors and actual contrast pairs."
+        ]
+      ],
+      "table": null,
+      "notes": "Terminal output has fewer component and typography options than a full editor. The adapter cannot rely on arbitrary syntax shades if the ANSI contract offers only16 slots. Bright and ordinary ANSI variants need to be tested against the real background; selection foreground also needs checking against selection fill. Preserving a source hue is necessary but insufficient for a visually coherent terminal theme. Live terminal import and visual testing remain a separate acceptance step.",
+      "sources": [
+        "apt_theme/targets.py",
+        "output/blackgold/windows_terminal/windows-terminal.json",
+        "docs/VALIDATION.md"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Editors need content and state coverage",
+      "lead": "SiYuan and Typora require more than a page background and link color.",
+      "groups": [],
+      "table": [
+        [
+          "Area",
+          "What must hold together"
+        ],
+        [
+          "Document",
+          "Body text, headings, links, quotes, tables"
+        ],
+        [
+          "Code",
+          "Inline code, blocks and syntax roles"
+        ],
+        [
+          "Navigation",
+          "Sidebar, muted text and active items"
+        ],
+        [
+          "Interaction",
+          "Selection, focus, hover and common states"
+        ],
+        [
+          "Delivery",
+          "Target CSS scopes; SiYuan package assets and metadata"
+        ]
+      ],
+      "notes": "The initial exports follow the target contracts documented in the project. Structural validation checks CSS references and package contents; the HTML review approximates representative combinations. Neither proves every selector behaves correctly in a particular installed application version. Native acceptance needs versioned import and visual checks for document, navigation, code and state combinations, including keyboard focus.",
+      "sources": [
+        "apt_theme/targets.py",
+        "docs/VALIDATION.md",
+        "output/blackgold/siyuan/theme.css",
+        "output/blackgold/typora/aptlantis-black-gold.css"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "PowerPoint: color theme and editable proof",
+      "lead": "Twelve native slots become a reusable visual vocabulary.",
+      "groups": [
+        [
+          "The pipeline sample",
+          "Four editable slides: title, content, Office slots and a native chart."
+        ],
+        [
+          "This overview",
+          "The same Black-Gold slots, Arial and canvas applied to project content."
+        ],
+        [
+          "Compatibility lesson",
+          "XML can parse while QName-valued metadata still breaks PowerPoint."
+        ]
+      ],
+      "table": null,
+      "notes": "The previous package defect renamed the dcterms namespace prefix while leaving xsi:type=dcterms:W3CDTF undeclared. Correcting only core properties preserved the actual slide/theme/workbook bytes. The recorded repair checks opened six corrected workspace samples and a fresh deck with OpenAndRepair disabled. Native opening/export is evidence of compatibility; it does not prove that chart data editing and save-reopen have been manually accepted. This overview has native editable tables and explanatory text; it is a separate deliverable from the generated four-slide sample.",
+      "sources": [
+        "docs/POWERPOINT.md",
+        "migration/powerpoint-metadata-repair.json",
+        "apt_theme/powerpoint.py"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "The run leaves a reviewable trail",
+      "lead": "A complete output directory explains where its colors came from.",
+      "groups": [],
+      "table": [
+        [
+          "Artifact",
+          "Purpose"
+        ],
+        [
+          "source/ + provenance.json",
+          "Original image bytes, hash and decoding provenance"
+        ],
+        [
+          "Candidates / selection",
+          "Representatives and selection diagnostics"
+        ],
+        [
+          "palette.toml / txt / css / png",
+          "Exactly 32 canonical colors in reusable forms"
+        ],
+        [
+          "semantics.json / tokens.json",
+          "Roles, derivations, aliases and findings"
+        ],
+        [
+          "validation.json / review.html",
+          "Checks and a self-contained visual review"
+        ]
+      ],
+      "notes": "The report shows candidates, canonical selection, semantic roles, target samples, derivation chains, omissions, contrast and duplicates. A previous palette can be supplied for comparison without claiming its selection is wrong. Palette IDs are references within a run. Store complete runs as revisions when retaining history: overwrite replaces the preceding completed generated run after successful staging.",
+      "sources": [
+        "docs/COMMAND-CONTRACT.md",
+        "apt_theme/report.py",
+        "output/blackgold/provenance.json"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "The command contract keeps runs bounded",
+      "lead": "Generate and import are local, reviewable operations.",
+      "groups": [
+        [
+          "Generate",
+          "apt-theme generate IMAGE --output DIRECTORY"
+        ],
+        [
+          "Import and configure",
+          "Import exactly 32 colors; choose targets, TOML settings and semantic overrides."
+        ],
+        [
+          "Complete with findings",
+          "0: completed \u00b7 1: processing failure \u00b7 2: strict contrast failure / invalid syntax"
+        ]
+      ],
+      "table": null,
+      "notes": "Default targets are Windows Terminal,SiYuan,Typora,PowerPoint. Import preserves supplied colors and records historical role assignments while resolving current semantics. --compare supplies an old palette, --overwrite explicitly replaces a recognized generated output, --strict returns2for contrast failure after completed artifacts are written, and argparse also uses2for invalid syntax. Staging prevents publication of partial output on processing failure and restores the prior output if replacement fails. Generation never installs, opens or activates themes.",
+      "sources": [
+        "docs/COMMAND-CONTRACT.md",
+        "Invoke-AptTheme.ps1",
+        "apt_theme/cli.py"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Related utilities stay independently callable",
+      "lead": "Theme generation, conversion and metadata embedding have different jobs.",
+      "groups": [],
+      "table": [
+        [
+          "Utility",
+          "Preserved behavior"
+        ],
+        [
+          "ICO converter",
+          "ImageMagick multi-frame icon conversion"
+        ],
+        [
+          "SVG converter",
+          "Embedded raster by default; explicit VTracer tracing"
+        ],
+        [
+          "Atlas",
+          "Artwork/catalog browsing and palette utility"
+        ],
+        [
+          "SESM embedder",
+          "Preview by default; explicit write / replace and schema checks"
+        ]
+      ],
+      "notes": "Explicit VTracer requests must not silently fall back to embedded raster when tracing fails. SVG metadata operations preserve content outside the metadata block and embedded raster bytes. SESM requires an explicit asset root and uses configuration and canonical schema validation in its sibling project. These tools are not run automatically by ordinary theme generation. Preserve filenames, registry relationships and existing public copies.",
+      "sources": [
+        "README.md",
+        "../SESM-Metadata-Embedder/README.md",
+        "migration/acceptance.json"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "Recovery is a deliverable",
+      "lead": "Consolidation was gated on recoverability, not just copying files.",
+      "groups": [
+        [
+          "Inventory and archive",
+          "Hash source, assets, historical outputs, configuration and Git history."
+        ],
+        [
+          "Verify destinations",
+          "Check migrated tools, artwork bytes and restored archive content."
+        ],
+        [
+          "Retire only after gates",
+          "Update references; check resolved paths and reject changed source inventories."
+        ]
+      ],
+      "table": null,
+      "notes": "Migration records are dated evidence. They preserve differing script versions and recovery paths. The retirement process checks that source files have not changed after inventory and resolves deletion targets. The existing documentation handbook uses a historical snapshot; refresh is separate work and must preserve the boundary between a reference publication and current project authority. Public deployment state is outside consolidation.",
+      "sources": [
+        "migration/README.md",
+        "migration/acceptance.json",
+        "Project-README.md"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "What the evidence establishes",
+      "lead": "Structural success, native compatibility and aesthetic quality are separate gates.",
+      "groups": [],
+      "table": [
+        [
+          "Evidence",
+          "Limit"
+        ],
+        [
+          "20 focused tests after repair",
+          "Dated engineering evidence, not a new run today"
+        ],
+        [
+          "Black-Gold contrast checks",
+          "Only the combinations implemented in validation"
+        ],
+        [
+          "PowerPoint no-repair opening",
+          "Opening/export differs from manual edit acceptance"
+        ],
+        [
+          "Coverage and visual report",
+          "Diagnostics do not prove aesthetic quality"
+        ],
+        [
+          "Other native / future targets",
+          "Live acceptance remains separately recorded"
+        ]
+      ],
+      "notes": "This deck cites the recorded repair evidence and existing output validation, not newly rerun pipeline tests. The documentation task does not alter engine behavior. Native rendering and package validation of this overview will be recorded in its delivery evidence. Perceptual coverage is helpful for comparing selections, but cannot establish whether a background or semantic role feels right. Additional accessibility methods and broader application version testing need explicit future work.",
+      "sources": [
+        "migration/powerpoint-metadata-repair.json",
+        "docs/VALIDATION.md",
+        "output/blackgold/run.json"
+      ],
+      "kind": "standard"
+    },
+    {
+      "title": "A document suite, written in useful order",
+      "lead": "Keep this deck as the entry point; put depth in focused, source-backed volumes.",
+      "groups": [
+        [
+          "First \u00b7 operate and explain",
+          "Runbook, artifact reference and the two regression case studies."
+        ],
+        [
+          "Next \u00b7 design and extend",
+          "Extraction methods, semantic mapping, adapter contracts and native acceptance."
+        ],
+        [
+          "Then \u00b7 preserve and integrate",
+          "Asset lineage, SESM companion, recovery and the living handbook."
+        ]
+      ],
+      "table": null,
+      "notes": "The companion PLAN.md specifies audience, scope, chapter outlines, primary sources, ownership, dependencies and completion criteria for ten planned volumes. It also identifies the existing Writerside handbook and its2026-10-05 snapshot as reusable reference material rather than current engine authority. The plan is not a commitment to publish or install anything. Future authoring should use dated source capture, reviewed examples and explicit proof limits. This24-slide overview is the presentation entry point.",
+      "sources": [
+        "docs/documentation-suite/PLAN.md",
+        "D:/.library/Writerside-Projects/Aptlantis-Logos-and-Theming/README.md"
+      ],
+      "kind": "standard"
+    }
+  ],
+  "sources": [
+    {
+      "source": "../SESM-Metadata-Embedder/README.md",
+      "path": "D:\\CTS\\SESM-Metadata-Embedder\\README.md",
+      "sha256": "df23a7392ceb9b1eca852fcbbbe3d962c28ed8e0ad58c96882a0f6559a7a9362"
+    },
+    {
+      "source": "AGENTS.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\AGENTS.md",
+      "sha256": "33cee531481fd4ad5c582956232207be5de0121557242d923f4b94f3e9e709e2"
+    },
+    {
+      "source": "D:/.library/Writerside-Projects/Aptlantis-Logos-and-Theming/README.md",
+      "path": "D:\\.library\\Writerside-Projects\\Aptlantis-Logos-and-Theming\\README.md",
+      "sha256": "8aee302a5d9fbb38a9e293bc5bd0dba9d6174d2b6654b274b79d2084f3720ab9"
+    },
+    {
+      "source": "Invoke-AptTheme.ps1",
+      "path": "D:\\CTS\\Logos-And-Theming\\Invoke-AptTheme.ps1",
+      "sha256": "99f8776e7ddfff413bb771e14f98d08da397440547e3e26896be19e1fe464e83"
+    },
+    {
+      "source": "Logos-And-Theming.manifest.toml",
+      "path": "D:\\CTS\\Logos-And-Theming\\Logos-And-Theming.manifest.toml",
+      "sha256": "e2b60321ec6ccfc58fd08a8418c47356695da76ee6bb38aadddeb1e6dc63e7aa"
+    },
+    {
+      "source": "Project-Proposal.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\Project-Proposal.md",
+      "sha256": "63c577d485f761ddaaa7e0aa65a2617e7377e8e6dd44b965c6e51ad7a8beba19"
+    },
+    {
+      "source": "Project-README.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\Project-README.md",
+      "sha256": "3c47f77fdfa0801be0cc4d3837d9d6a6d38c5f1010db0df4067eb2a364244752"
+    },
+    {
+      "source": "README.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\README.md",
+      "sha256": "126e9ea0c0c7db8306796d37ad09452a7c217095cf34803d9b8da994b841c690"
+    },
+    {
+      "source": "apt_theme/cli.py",
+      "path": "D:\\CTS\\Logos-And-Theming\\apt_theme\\cli.py",
+      "sha256": "73e6d4c0d8063d7107144ae87ac64f5c1c8832d95da28ffa4bca6ca47028bd38"
+    },
+    {
+      "source": "apt_theme/colors.py",
+      "path": "D:\\CTS\\Logos-And-Theming\\apt_theme\\colors.py",
+      "sha256": "be1efceddd2dcc06ec5676000630d035016307a2e57a098cfaee520a63cffbcb"
+    },
+    {
+      "source": "apt_theme/extraction.py",
+      "path": "D:\\CTS\\Logos-And-Theming\\apt_theme\\extraction.py",
+      "sha256": "47e707dc20b42e1e44f70472737f9a9c6cca5a3d370ba4db658be96e51d072e9"
+    },
+    {
+      "source": "apt_theme/powerpoint.py",
+      "path": "D:\\CTS\\Logos-And-Theming\\apt_theme\\powerpoint.py",
+      "sha256": "e5eac5ed419cbddc7c20d1c3ea313bd1e45f178bcfe61b0a121da39494ad6300"
+    },
+    {
+      "source": "apt_theme/report.py",
+      "path": "D:\\CTS\\Logos-And-Theming\\apt_theme\\report.py",
+      "sha256": "a83e5ab4bc842cb1b71850cb92123b1d173531b4dc1137b0a43420cf4819718d"
+    },
+    {
+      "source": "apt_theme/semantics.py",
+      "path": "D:\\CTS\\Logos-And-Theming\\apt_theme\\semantics.py",
+      "sha256": "87ccb3c57241930a5cabaa4110a9fba3e5044b2a90b6113649266a6991d6c165"
+    },
+    {
+      "source": "apt_theme/targets.py",
+      "path": "D:\\CTS\\Logos-And-Theming\\apt_theme\\targets.py",
+      "sha256": "f4fe7d7998fe1b318b8ca36fae419165271c6d1581007458b433e40140023fee"
+    },
+    {
+      "source": "docs/COMMAND-CONTRACT.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\docs\\COMMAND-CONTRACT.md",
+      "sha256": "943c531870f9784d3e9b0537d0aa02c20f5077b5e9975fce608e1c0d87f42dc3"
+    },
+    {
+      "source": "docs/POWERPOINT.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\docs\\POWERPOINT.md",
+      "sha256": "2ee3c5cd34175829b166c07abc5385bedab7622e4745ed9e3065e6369aa844f2"
+    },
+    {
+      "source": "docs/VALIDATION.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\docs\\VALIDATION.md",
+      "sha256": "56ef24d7373c564f03dfce1537dd875794e491c812f45656e93b0c2827ae7230"
+    },
+    {
+      "source": "docs/documentation-suite/PLAN.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\docs\\documentation-suite\\PLAN.md",
+      "sha256": "ff1908232c97df7252585ae3073e6ef0688a9db2ec55bb3585798d2ff5801aa0"
+    },
+    {
+      "source": "migration/README.md",
+      "path": "D:\\CTS\\Logos-And-Theming\\migration\\README.md",
+      "sha256": "6848533802288b130af38dd2efabf27ed5ae5fb1c7c480cc4623f30170b23524"
+    },
+    {
+      "source": "migration/acceptance.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\migration\\acceptance.json",
+      "sha256": "db645b0a858d2af0057bcab688cff5a22378ef0478a7f926bff646611725a3ae"
+    },
+    {
+      "source": "migration/dark-surface-regression.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\migration\\dark-surface-regression.json",
+      "sha256": "37a6500cb6a45084bdf0136ef41adcd19a054cf322a1a486eb253074bb906af9"
+    },
+    {
+      "source": "migration/powerpoint-metadata-repair.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\migration\\powerpoint-metadata-repair.json",
+      "sha256": "0d8d1163c2ce78e98d4688a44d034654080a7beb585c7aebe2aebd1d19311f4c"
+    },
+    {
+      "source": "output/blackgold/candidates.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\candidates.json",
+      "sha256": "0a577f36cd153ae174a28b4eb694145815a4b9615fa6cb79be8815606fc89ca1"
+    },
+    {
+      "source": "output/blackgold/palette.toml",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\palette.toml",
+      "sha256": "469aee68f10fd2b7a71f996646aa7295358f43ed34f02d5db32f75c213a97e41"
+    },
+    {
+      "source": "output/blackgold/powerpoint/aptlantis-black-gold-sample.pptx",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\powerpoint\\aptlantis-black-gold-sample.pptx",
+      "sha256": "e1d849a6bcf493a8ff3842ff385b25476aeb3e1c65930e1a1b4c836ba5e15a74"
+    },
+    {
+      "source": "output/blackgold/powerpoint/tokens.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\powerpoint\\tokens.json",
+      "sha256": "0cc951ccb2fb25bf6ba8c208792cac938b9abde473e9499122d228d6a82dce39"
+    },
+    {
+      "source": "output/blackgold/provenance.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\provenance.json",
+      "sha256": "137073708b399c2d2246dde1170dd854ce366fb62dd775bc80b1f8c5fe6f3299"
+    },
+    {
+      "source": "output/blackgold/run.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\run.json",
+      "sha256": "f044fe4c684c54aacf1c758e0efedf174604c1d696107fbcdeaf5d42b97247c4"
+    },
+    {
+      "source": "output/blackgold/selection.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\selection.json",
+      "sha256": "89199990fc40823aa252648d67e6cf7b2027c89774c8c167d8bf75563444e7df"
+    },
+    {
+      "source": "output/blackgold/semantics.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\semantics.json",
+      "sha256": "543c79e382c69e21960a6c84636ae6213ff6a2fb5f42fabd6cf294dc8220ddce"
+    },
+    {
+      "source": "output/blackgold/siyuan/theme.css",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\siyuan\\theme.css",
+      "sha256": "64258c81c6a80822025ae9a03e9e431ba6f875e8dd9192970620f0690f7e2875"
+    },
+    {
+      "source": "output/blackgold/siyuan/tokens.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\siyuan\\tokens.json",
+      "sha256": "2383511e788c604b7e34d069beda79978df66b08f598f526d0db9c1baa8b77ab"
+    },
+    {
+      "source": "output/blackgold/source/apt-zig-dark-logo.png",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\source\\apt-zig-dark-logo.png",
+      "sha256": "4fa6ac889d5ecf7b4fa35bda3276cd2e7bb5a3817c4e859c4727f61d3c45978c"
+    },
+    {
+      "source": "output/blackgold/typora/aptlantis-black-gold.css",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\typora\\aptlantis-black-gold.css",
+      "sha256": "246e817da512b3868ddb0dcaed306a140e447c85142663482e4ee9ef7f91316c"
+    },
+    {
+      "source": "output/blackgold/typora/tokens.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\typora\\tokens.json",
+      "sha256": "abfafbd26775d313c98ba59c41a8ea2033e566ac86aa1e2a2dfe368798e20894"
+    },
+    {
+      "source": "output/blackgold/windows_terminal/tokens.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\windows_terminal\\tokens.json",
+      "sha256": "35f1daa4f39be3bba089cf0e98375f6fb9ecb16a202f1242eb5a8f8fa1b9d32c"
+    },
+    {
+      "source": "output/blackgold/windows_terminal/windows-terminal.json",
+      "path": "D:\\CTS\\Logos-And-Theming\\output\\blackgold\\windows_terminal\\windows-terminal.json",
+      "sha256": "59ea2179eb4e5b298b3cef13057f2a20b3f272d51fde5067cd8937422bdac2b9"
+    },
+    {
+      "source": "profiles.toml",
+      "path": "D:\\CTS\\Logos-And-Theming\\profiles.toml",
+      "sha256": "741fa47e06b3d891791bb0cb6055afe1fc6a40121f805af71861530edc385187"
+    },
+    {
+      "source": "pyproject.toml",
+      "path": "D:\\CTS\\Logos-And-Theming\\pyproject.toml",
+      "sha256": "526c4ab617e0738044062259e068d5392c4f68327f9031546819355d90115e17"
+    },
+    {
+      "source": "tests/test_pipeline.py",
+      "path": "D:\\CTS\\Logos-And-Theming\\tests\\test_pipeline.py",
+      "sha256": "2d9b6009d52f77677bda3eac6d7cd1e7b38b0867ba866ceaeafb14170c48cbdd"
+    }
+  ]
+}

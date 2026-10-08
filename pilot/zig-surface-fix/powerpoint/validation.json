@@ -1,0 +1,286 @@
+{
+  "checks": [
+    {
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 17.438266492565976,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "muted",
+      "background": "background",
+      "ratio": 5.817380092900234,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "primary",
+      "background": "background",
+      "ratio": 10.952950657282726,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "secondary",
+      "background": "background",
+      "ratio": 5.6480993144692615,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "selection_text",
+      "background": "selection",
+      "ratio": 13.490103819190047,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "border",
+      "background": "background",
+      "ratio": 4.05637479011095,
+      "required": 3,
+      "pass": true
+    },
+    {
+      "foreground": "warning",
+      "background": "background",
+      "ratio": 12.614569765518294,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "error",
+      "background": "background",
+      "ratio": 5.690336890303353,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "success",
+      "background": "background",
+      "ratio": 10.256184943361463,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "info",
+      "background": "background",
+      "ratio": 5.681614024990482,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "keyword",
+      "background": "background",
+      "ratio": 7.635032448075269,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "string",
+      "background": "background",
+      "ratio": 5.6480993144692615,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "number",
+      "background": "background",
+      "ratio": 15.442440176079101,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "function",
+      "background": "background",
+      "ratio": 5.812434156222172,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "type",
+      "background": "background",
+      "ratio": 9.232756731035034,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "operator",
+      "background": "background",
+      "ratio": 5.681614024990482,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "constant",
+      "background": "background",
+      "ratio": 11.26117139594116,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "comment",
+      "background": "background",
+      "ratio": 5.817380092900234,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "foreground",
+      "background": "panel",
+      "ratio": 15.78100156068778,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "muted",
+      "background": "panel",
+      "ratio": 5.26451894540717,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "primary",
+      "background": "panel",
+      "ratio": 9.912024884491883,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "keyword",
+      "background": "panel",
+      "ratio": 6.909428699827619,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "string",
+      "background": "panel",
+      "ratio": 5.111325952872479,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "number",
+      "background": "panel",
+      "ratio": 13.974850804317123,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "function",
+      "background": "panel",
+      "ratio": 5.260043051288403,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "type",
+      "background": "panel",
+      "ratio": 8.355311489477929,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "operator",
+      "background": "panel",
+      "ratio": 5.14165555583312,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "constant",
+      "background": "panel",
+      "ratio": 10.190953524553592,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "comment",
+      "background": "panel",
+      "ratio": 5.26451894540717,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "foreground",
+      "background": "elevated",
+      "ratio": 13.92475190001591,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "muted",
+      "background": "elevated",
+      "ratio": 4.6452767846081695,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "primary",
+      "background": "elevated",
+      "ratio": 8.7461170834152,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "keyword",
+      "background": "elevated",
+      "ratio": 6.096703054362787,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "string",
+      "background": "elevated",
+      "ratio": 4.510103208605203,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "number",
+      "background": "elevated",
+      "ratio": 12.3310506967197,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "function",
+      "background": "elevated",
+      "ratio": 4.641327370187616,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "type",
+      "background": "elevated",
+      "ratio": 7.372513024025192,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "operator",
+      "background": "elevated",
+      "ratio": 4.536865274043749,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "constant",
+      "background": "elevated",
+      "ratio": 8.992236576891688,
+      "required": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "comment",
+      "background": "elevated",
+      "ratio": 4.6452767846081695,
+      "required": 4.5,
+      "pass": true
+    }
+  ],
+  "contrast_failures": 0,
+  "native_visual_acceptance": "pending"
+}

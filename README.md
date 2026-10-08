@@ -2,6 +2,8 @@
 
 An image-to-theme pipeline and related logo utilities. Canonical palettes contain 32 observed colors. Semantic meaning and application adaptation are separate stages. Only dark themes are generated.
 
+Project overview: [24-slide Black-Gold presentation](docs/presentations/Logos-And-Theming-Overview.pptx), with explanatory speaker notes. Further reading is planned in the [documentation suite plan](docs/documentation-suite/PLAN.md). Deck provenance and validation are in [presentations/README.md](docs/presentations/README.md).
+
 ## One command
 
 Python 3.12+ and ImageMagick 7 are required for the locked environment (verified with Python 3.13). Run `Setup.ps1` once to create a local environment and install the engine. Activate `.venv\Scripts\Activate.ps1`, then:
