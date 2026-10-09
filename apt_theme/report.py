@@ -61,6 +61,8 @@ def review(directory, name, colors, candidates, roles, notices, results, diagnos
     for result in results:
         t = result["tokens"]
         pieces += [f'<h2>{html.escape(result["target"])}</h2><p>{result["named_count"]} named tokens; {result["unique_count"]} unique colors; budget {result["budget"]}; {result["contrast_failures"]} contrast failures.</p>']
+        if "examples" in result:
+            pieces.append('<p><a href="' + result['target'] + '/examples.html">Open visual examples</a></p>')
         style = f'background:{t["background"]["hex"]};color:{t["foreground"]["hex"]};padding:24px;border-radius:8px'
         if result["target"] in ("windows_terminal", "alacritty"):
             from .targets import ANSI

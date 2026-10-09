@@ -1,0 +1,16 @@
+{
+  "matplotlib_version": "3.11.2",
+  "backend": "Agg",
+  "style": "aptlantis-black-gold-visuals.mplstyle",
+  "parser_diagnostics": "",
+  "style_color_assertions": "passed",
+  "outputs": [
+    "matplotlib-bars.png",
+    "matplotlib-bars.svg",
+    "matplotlib-lines.png",
+    "matplotlib-lines.svg",
+    "matplotlib-heatmap.png",
+    "matplotlib-heatmap.svg"
+  ],
+  "scope": "Local style loading and static Agg render; no interactive GUI or external application import."
+}

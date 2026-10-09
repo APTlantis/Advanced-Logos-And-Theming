@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Change over time / lines</title>
+  <desc id="desc">Illustrative units • labeled series and distinct line patterns</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#0A1924" />
+  <text x="36" y="52" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="26">Change over time / lines</text>
+  <text x="36" y="84" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Illustrative units • labeled series and distinct line patterns</text>
+  <rect x="95" y="115" width="810" height="310" fill="#18222A" />
+  <line x1="95" y1="420.0" x2="905" y2="420.0" stroke="#A66B35" stroke-width="1" />
+  <text x="60" y="425.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15">0</text>
+  <line x1="95" y1="350.0" x2="905" y2="350.0" stroke="#A66B35" stroke-width="1" />
+  <text x="60" y="355.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15">20</text>
+  <line x1="95" y1="280.0" x2="905" y2="280.0" stroke="#A66B35" stroke-width="1" />
+  <text x="60" y="285.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15">40</text>
+  <line x1="95" y1="210.0" x2="905" y2="210.0" stroke="#A66B35" stroke-width="1" />
+  <text x="60" y="215.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15">60</text>
+  <line x1="95" y1="140.0" x2="905" y2="140.0" stroke="#A66B35" stroke-width="1" />
+  <text x="60" y="145.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15">80</text>
+  <polyline points="145,357.0 360,301.0 575,329.0 790,238.0" fill="none" stroke="#F8C265" stroke-width="4" stroke-dasharray="none" />
+  <rect x="141" y="353.0" width="8" height="8" fill="#F8C265" />
+  <rect x="356" y="297.0" width="8" height="8" fill="#F8C265" />
+  <rect x="571" y="325.0" width="8" height="8" fill="#F8C265" />
+  <rect x="786" y="234.0" width="8" height="8" fill="#F8C265" />
+  <text x="805" y="226.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="16">Series 1</text>
+  <polyline points="145,287.0 360,322.0 575,252.0 790,273.0" fill="none" stroke="#4A6E8D" stroke-width="4" stroke-dasharray="12 8" />
+  <rect x="141" y="283.0" width="8" height="8" fill="#4A6E8D" />
+  <rect x="356" y="318.0" width="8" height="8" fill="#4A6E8D" />
+  <rect x="571" y="248.0" width="8" height="8" fill="#4A6E8D" />
+  <rect x="786" y="269.0" width="8" height="8" fill="#4A6E8D" />
+  <text x="805" y="261.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="16">Series 2</text>
+  <text x="145" y="455" fill="#C38651" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Period 1</text>
+  <text x="360" y="455" fill="#C38651" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Period 2</text>
+  <text x="575" y="455" fill="#C38651" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Period 3</text>
+  <text x="790" y="455" fill="#C38651" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Period 4</text>
+</svg>

@@ -1,0 +1,62 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Syntax example</title><style>:root {
+  --apt-background: #0A1924;
+  --apt-foreground: #FCFDF7;
+  --apt-panel: #18222A;
+  --apt-elevated: #212C34;
+  --apt-muted: #C38651;
+  --apt-primary: #F8C265;
+  --apt-secondary: #6F95B6;
+  --apt-selection: #3E2900;
+  --apt-selection-text: #FCFDF7;
+  --apt-border: #A66B35;
+  --apt-warning: #FBD484;
+  --apt-error: #A98C76;
+  --apt-success: #C0C8A9;
+  --apt-info: #3B9BC6;
+  --apt-keyword: #89B2A7;
+  --apt-string: #6F95B6;
+  --apt-number: #FDEFB4;
+  --apt-function: #BD885D;
+  --apt-type: #EDAF57;
+  --apt-operator: #3B9BC6;
+  --apt-constant: #73DDEA;
+  --apt-comment: #C38651;
+  --apt-invalid: #A98C76;
+  --apt-diff-added: #C0C8A9;
+  --apt-diff-deleted: #A98C76;
+  --apt-diff-changed: #FBD484;
+  --apt-tag: #89B2A7;
+  --apt-attribute: #EDAF57;
+  --apt-escape: #73DDEA;
+  --apt-label: #BD885D;
+}
+
+pre[class*='language-'], code[class*='language-'] {
+ color:var(--apt-foreground); background:var(--apt-panel);
+ font-family:Consolas, monospace; text-shadow:none; line-height:1.65;
+ white-space:pre; tab-size:4;
+}
+pre[class*='language-'] { padding:24px; overflow:auto; }
+pre[class*='language-'] ::selection, code[class*='language-']::selection {
+ background:var(--apt-selection); color:var(--apt-selection-text);
+}
+.token.bold, .token.important { font-weight:bold; }
+.token.italic { font-style:italic; }
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color:var(--apt-comment); }
+.token.punctuation, .token.operator { color:var(--apt-operator); }
+.token.property, .token.tag, .token.boolean, .token.constant, .token.symbol { color:var(--apt-constant); }
+.token.number { color:var(--apt-number); }
+.token.selector, .token.attr-name, .token.builtin, .token.class-name { color:var(--apt-type); }
+.token.string, .token.char, .token.attr-value { color:var(--apt-string); }
+.token.keyword, .token.atrule { color:var(--apt-keyword); }
+.token.function { color:var(--apt-function); }
+.token.regex, .token.important { color:var(--apt-primary); }
+.token.inserted { color:var(--apt-diff-added); }
+.token.deleted { color:var(--apt-diff-deleted); }
+body{background:var(--apt-background);color:var(--apt-foreground);font:18px Arial;padding:32px}</style><h1>Syntax highlighting</h1><p>Prism CSS contract. Authored tokens; no grammar engine is bundled.</p><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Authored JavaScript token fixture; illustrative</span>
+<span class="token keyword">class</span> <span class="token class-name">Palette</span><span class="token punctuation"> {</span>
+  <span class="token function">count</span><span class="token punctuation">() {</span>
+    <span class="token keyword">const</span> <span class="token property">name</span><span class="token operator"> = </span><span class="token string">&quot;Aptlantis&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">32</span><span class="token operator"> + </span><span class="token constant">OFFSET</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></html>

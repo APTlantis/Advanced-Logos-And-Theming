@@ -8,7 +8,8 @@ from pathlib import Path
 from .colors import contrast, derive, readable
 
 DEFAULTS = {"windows_terminal": 20, "siyuan": 64, "typora": 40, "powerpoint": 24,
-            "alacritty": 20, "notepad_plus_plus": 32, "sublime_text": 40}
+            "alacritty": 20, "notepad_plus_plus": 32, "sublime_text": 40,
+            "svg": 40, "syntax_highlighting": 32, "data_visualization": 48}
 ANSI = ("black", "red", "green", "yellow", "blue", "magenta", "cyan", "white")
 SYNTAX = ("keyword", "string", "number", "function", "type", "operator", "constant", "comment")
 
@@ -67,7 +68,15 @@ def adapt(colors, roles, target, budget):
         for role in SYNTAX:
             add(role, role, "code text", minimum=4.5)
         mandatory = len(tokens)
-        if target in ("notepad_plus_plus", "sublime_text"):
+        if target in ("svg", "data_visualization"):
+            for i, role in enumerate(("primary", "secondary", "keyword", "string", "number", "type"), 1):
+                add(f"series_{i}", role, "diagram/chart mark", minimum=3, bg="panel")
+            if target == "data_visualization":
+                for i in range(9):
+                    add(f"sequential_{i}", "primary", "ordered single-hue scale stop",
+                        lightness=.35 + i * .065, chroma=.7)
+            mandatory = len(tokens)
+        if target in ("notepad_plus_plus", "sublime_text", "syntax_highlighting"):
             # Native editor properties consume these optional semantic variants.
             for key, role in (("invalid", "error"), ("diff_added", "success"),
                               ("diff_deleted", "error"), ("diff_changed", "warning"),
@@ -207,6 +216,9 @@ def export(result, directory, name):
     elif target in ("notepad_plus_plus", "sublime_text"):
         from .native_editors import export_editor
         export_editor(result, directory, name)
+    elif target in ("svg", "syntax_highlighting", "data_visualization"):
+        from .visual_targets import export_visual
+        export_visual(result, directory, name)
     elif target == "powerpoint":
         ns = "http://schemas.openxmlformats.org/drawingml/2006/main"
         ET.register_namespace("a", ns)

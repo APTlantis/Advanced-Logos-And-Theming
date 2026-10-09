@@ -1,5 +1,7 @@
 # Validation and evidence limits
 
+The SVG/Prism/Matplotlib extension is covered by the same 20 focused pipeline/converter tests, expanded for ten default targets, SVG paint provenance, scale ordering, required budgets and deterministic regeneration. All passed outside the sandbox after temporary-directory restrictions blocked the first run. `migration/visual-target-acceptance.json` records the separate Black-Gold pilot, browser checks and Matplotlib Agg rendering. [Visual contracts](VISUAL-TARGETS.md) state the limits; application editor import and Prism grammar integration remain pending.
+
 Date: 2026-10-08, America/New_York.
 
 Alacritty, Notepad++ and Sublime Text exporters are covered by the 20-test focused pipeline/converter suite, including native TOML/XML/JSON parsing, canonical immutability and deterministic default regeneration with all seven targets. Tests passed outside the Windows sandbox after sandbox filesystem restrictions blocked temporary path resolution. See `migration/editor-target-acceptance.json` and [editor contracts](EDITOR-TARGETS.md). Native loading, installation and rendering of these three targets remain pending; existing pilot and historical acceptance records remain unchanged.

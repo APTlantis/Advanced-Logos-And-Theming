@@ -1,0 +1,442 @@
+{
+  "renderer": "Chromium headless",
+  "checks": [
+    {
+      "target": "svg",
+      "example": "technical-flow.svg",
+      "preview": "technical-flow.png",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "01 / Technical flow",
+          "inside": true
+        },
+        {
+          "text": "Orthogonal connectors and outlined nodes • conceptual pipeline",
+          "inside": true
+        },
+        {
+          "text": "01",
+          "inside": true
+        },
+        {
+          "text": "Artwork",
+          "inside": true
+        },
+        {
+          "text": "→",
+          "inside": true
+        },
+        {
+          "text": "02",
+          "inside": true
+        },
+        {
+          "text": "Canonical 32",
+          "inside": true
+        },
+        {
+          "text": "→",
+          "inside": true
+        },
+        {
+          "text": "03",
+          "inside": true
+        },
+        {
+          "text": "Semantics",
+          "inside": true
+        },
+        {
+          "text": "→",
+          "inside": true
+        },
+        {
+          "text": "04",
+          "inside": true
+        },
+        {
+          "text": "Native export",
+          "inside": true
+        },
+        {
+          "text": "Source bytes → observed colors → role references → derived target tokens",
+          "inside": true
+        }
+      ],
+      "keyword_color": "rgb(0, 0, 0)"
+    },
+    {
+      "target": "svg",
+      "example": "editorial-infographic.svg",
+      "preview": "editorial-infographic.png",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "02 / Editorial infographic",
+          "inside": true
+        },
+        {
+          "text": "Typographic hierarchy and a large numeral • palette architecture",
+          "inside": true
+        },
+        {
+          "text": "32",
+          "inside": true
+        },
+        {
+          "text": "observed colors",
+          "inside": true
+        },
+        {
+          "text": "Preserve",
+          "inside": true
+        },
+        {
+          "text": "Original bytes and canonical RGB",
+          "inside": true
+        },
+        {
+          "text": "Interpret",
+          "inside": true
+        },
+        {
+          "text": "Roles reference canonical IDs",
+          "inside": true
+        },
+        {
+          "text": "Adapt",
+          "inside": true
+        },
+        {
+          "text": "Lightness and chroma vary; source hue stays",
+          "inside": true
+        }
+      ],
+      "keyword_color": "rgb(0, 0, 0)"
+    },
+    {
+      "target": "svg",
+      "example": "orbit-map.svg",
+      "preview": "orbit-map.png",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "03 / Orbit map",
+          "inside": true
+        },
+        {
+          "text": "Radial composition and numbered satellites • conceptual target families",
+          "inside": true
+        },
+        {
+          "text": "01",
+          "inside": true
+        },
+        {
+          "text": "Documents",
+          "inside": true
+        },
+        {
+          "text": "02",
+          "inside": true
+        },
+        {
+          "text": "Editors",
+          "inside": true
+        },
+        {
+          "text": "03",
+          "inside": true
+        },
+        {
+          "text": "Diagrams",
+          "inside": true
+        },
+        {
+          "text": "04",
+          "inside": true
+        },
+        {
+          "text": "Charts",
+          "inside": true
+        },
+        {
+          "text": "Canonical",
+          "inside": true
+        },
+        {
+          "text": "32 colors",
+          "inside": true
+        }
+      ],
+      "keyword_color": "rgb(0, 0, 0)"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-example.html",
+      "preview": "syntax-example.png",
+      "title": "Syntax example",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "keyword_color": "rgb(137, 178, 167)"
+    },
+    {
+      "target": "data_visualization",
+      "example": "bars.svg",
+      "preview": "bars.png",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "Category comparison / bars",
+          "inside": true
+        },
+        {
+          "text": "Illustrative units • zero baseline • direct value labels",
+          "inside": true
+        },
+        {
+          "text": "0",
+          "inside": true
+        },
+        {
+          "text": "20",
+          "inside": true
+        },
+        {
+          "text": "40",
+          "inside": true
+        },
+        {
+          "text": "60",
+          "inside": true
+        },
+        {
+          "text": "80",
+          "inside": true
+        },
+        {
+          "text": "28",
+          "inside": true
+        },
+        {
+          "text": "A",
+          "inside": true
+        },
+        {
+          "text": "44",
+          "inside": true
+        },
+        {
+          "text": "B",
+          "inside": true
+        },
+        {
+          "text": "36",
+          "inside": true
+        },
+        {
+          "text": "C",
+          "inside": true
+        },
+        {
+          "text": "62",
+          "inside": true
+        },
+        {
+          "text": "D",
+          "inside": true
+        }
+      ],
+      "keyword_color": "rgb(0, 0, 0)"
+    },
+    {
+      "target": "data_visualization",
+      "example": "lines.svg",
+      "preview": "lines.png",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "Change over time / lines",
+          "inside": true
+        },
+        {
+          "text": "Illustrative units • labeled series and distinct line patterns",
+          "inside": true
+        },
+        {
+          "text": "0",
+          "inside": true
+        },
+        {
+          "text": "20",
+          "inside": true
+        },
+        {
+          "text": "40",
+          "inside": true
+        },
+        {
+          "text": "60",
+          "inside": true
+        },
+        {
+          "text": "80",
+          "inside": true
+        },
+        {
+          "text": "Series 1",
+          "inside": true
+        },
+        {
+          "text": "Series 2",
+          "inside": true
+        },
+        {
+          "text": "Period 1",
+          "inside": true
+        },
+        {
+          "text": "Period 2",
+          "inside": true
+        },
+        {
+          "text": "Period 3",
+          "inside": true
+        },
+        {
+          "text": "Period 4",
+          "inside": true
+        }
+      ],
+      "keyword_color": "rgb(0, 0, 0)"
+    },
+    {
+      "target": "data_visualization",
+      "example": "heatmap.svg",
+      "preview": "heatmap.png",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "Ordered intensity / heatmap",
+          "inside": true
+        },
+        {
+          "text": "Illustrative level 0–8 • single hue • values shown below cells",
+          "inside": true
+        },
+        {
+          "text": "Row 1",
+          "inside": true
+        },
+        {
+          "text": "0",
+          "inside": true
+        },
+        {
+          "text": "1",
+          "inside": true
+        },
+        {
+          "text": "4",
+          "inside": true
+        },
+        {
+          "text": "6",
+          "inside": true
+        },
+        {
+          "text": "Row 2",
+          "inside": true
+        },
+        {
+          "text": "2",
+          "inside": true
+        },
+        {
+          "text": "5",
+          "inside": true
+        },
+        {
+          "text": "7",
+          "inside": true
+        },
+        {
+          "text": "8",
+          "inside": true
+        },
+        {
+          "text": "Row 3",
+          "inside": true
+        },
+        {
+          "text": "1",
+          "inside": true
+        },
+        {
+          "text": "3",
+          "inside": true
+        },
+        {
+          "text": "6",
+          "inside": true
+        },
+        {
+          "text": "4",
+          "inside": true
+        },
+        {
+          "text": "0",
+          "inside": true
+        },
+        {
+          "text": "1",
+          "inside": true
+        },
+        {
+          "text": "2",
+          "inside": true
+        },
+        {
+          "text": "3",
+          "inside": true
+        },
+        {
+          "text": "4",
+          "inside": true
+        },
+        {
+          "text": "5",
+          "inside": true
+        },
+        {
+          "text": "6",
+          "inside": true
+        },
+        {
+          "text": "7",
+          "inside": true
+        },
+        {
+          "text": "8",
+          "inside": true
+        }
+      ],
+      "keyword_color": "rgb(0, 0, 0)"
+    }
+  ],
+  "native_editor_acceptance": "pending"
+}

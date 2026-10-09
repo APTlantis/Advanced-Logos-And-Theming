@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">03 / Orbit map</title>
+  <desc id="desc">Radial composition and numbered satellites • conceptual target families</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#0A1924" />
+  <text x="36" y="52" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="26">03 / Orbit map</text>
+  <text x="36" y="84" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Radial composition and numbered satellites • conceptual target families</text>
+  <line x1="480" y1="280" x2="220" y2="160" stroke="#F8C265" stroke-width="3" />
+  <circle cx="220" cy="160" r="64" fill="#18222A" stroke="#F8C265" stroke-width="3" />
+  <text x="220" y="155" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">01</text>
+  <text x="220" y="184" fill="#C38651" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Documents</text>
+  <line x1="480" y1="280" x2="735" y2="160" stroke="#4A6E8D" stroke-width="3" />
+  <circle cx="735" cy="160" r="64" fill="#18222A" stroke="#4A6E8D" stroke-width="3" />
+  <text x="735" y="155" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">02</text>
+  <text x="735" y="184" fill="#C38651" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Editors</text>
+  <line x1="480" y1="280" x2="220" y2="370" stroke="#89B2A7" stroke-width="3" />
+  <circle cx="220" cy="370" r="64" fill="#18222A" stroke="#89B2A7" stroke-width="3" />
+  <text x="220" y="365" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">03</text>
+  <text x="220" y="394" fill="#C38651" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Diagrams</text>
+  <line x1="480" y1="280" x2="735" y2="370" stroke="#4A6E8D" stroke-width="3" />
+  <circle cx="735" cy="370" r="64" fill="#18222A" stroke="#4A6E8D" stroke-width="3" />
+  <text x="735" y="365" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">04</text>
+  <text x="735" y="394" fill="#C38651" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Charts</text>
+  <circle cx="480" cy="280" r="90" fill="#18222A" stroke="#F8C265" stroke-width="3" />
+  <text x="480" y="275" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">Canonical</text>
+  <text x="480" y="309" fill="#F8C265" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">32 colors</text>
+</svg>

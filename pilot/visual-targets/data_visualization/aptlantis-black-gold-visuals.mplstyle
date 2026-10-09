@@ -1,0 +1,19 @@
+# Image-derived dark style. Illustrative samples do not prove Matplotlib rendering.
+figure.facecolor: 0A1924
+savefig.facecolor: 0A1924
+axes.facecolor: 18222A
+axes.edgecolor: A66B35
+axes.labelcolor: FCFDF7
+text.color: FCFDF7
+xtick.color: C38651
+ytick.color: C38651
+grid.color: A66B35
+legend.facecolor: 18222A
+legend.edgecolor: A66B35
+axes.prop_cycle: cycler('color', ['F8C265', '4A6E8D', '89B2A7', '4A6E8D', 'FDEFB4', 'EDAF57']) + cycler('linestyle', ['-', '--', ':', '-.', '-', '--'])
+axes.grid: True
+grid.alpha: 1.0
+grid.linewidth: 0.6
+lines.linewidth: 2.5
+font.size: 11
+savefig.transparent: False

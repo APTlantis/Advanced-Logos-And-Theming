@@ -1,0 +1,23 @@
+{
+  "schema": "aptlantis.theme-run.v1",
+  "name": "Aptlantis Black-Gold Visuals",
+  "variant": "dark",
+  "source_sha256": "d7a16a60aa09ab6f2e7451036418e448485c9150e6f23571f4b47884daab6996",
+  "targets": [
+    "svg",
+    "syntax_highlighting",
+    "data_visualization"
+  ],
+  "contrast_failures": 0,
+  "semantic_findings": [
+    {
+      "role": "magenta",
+      "kind": "unavailable_conventional_hue",
+      "source": "color_06",
+      "hue_distance": 79.4262780597272,
+      "message": "Closest image hue used; no new hue introduced"
+    }
+  ],
+  "native_application_acceptance": "pending",
+  "installation": "not performed"
+}

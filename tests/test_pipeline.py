@@ -173,6 +173,28 @@ class PipelineTests(unittest.TestCase):
                     with zipfile.ZipFile(io.BytesIO(deck.read("ppt/embeddings/sample-data.xlsx"))) as book:
                         sheet = ET.fromstring(book.read("xl/worksheets/sheet1.xml"))
                         self.assertEqual(len(sheet.findall(".//{*}row")), 3)
+            elif target in ("svg", "syntax_highlighting", "data_visualization"):
+                self.assertEqual(len(result["examples"]), 1 if target == "syntax_highlighting" else 3)
+                for file in destination.glob("*.svg"):
+                    root = ET.parse(file).getroot()
+                    self.assertEqual(root.tag, "{http://www.w3.org/2000/svg}svg")
+                    self.assertIsNotNone(root.find("{*}title"))
+                    paints = {node.get(key) for node in root.iter() for key in ("fill", "stroke")
+                              if node.get(key, "").startswith("#")}
+                    self.assertLessEqual(paints, {c["hex"] for c in result["tokens"].values()})
+                if target == "syntax_highlighting":
+                    css = (destination / "prism.css").read_text()
+                    self.assertIn(".token.class-name", css)
+                    self.assertIn(".token.boolean", css)
+                    self.assertIn("var(--apt-diff-added)", css)
+                    self.assertIn('class="token keyword"', (destination / "syntax-example.html").read_text())
+                if target == "data_visualization":
+                    scale = json.loads((destination / "scales.json").read_text())["sequential"]
+                    self.assertEqual(len(scale), 9)
+                    lightness = [result["tokens"][f"sequential_{i}"]["oklch"][0] for i in range(9)]
+                    self.assertEqual(lightness, sorted(lightness))
+                    self.assertTrue(all(result["tokens"][f"sequential_{i}"]["origin"]["source"] == roles["primary"] for i in range(9)))
+                    self.assertIn("axes.prop_cycle: cycler(", next(destination.glob("*.mplstyle")).read_text())
             else:
                 css = next(destination.glob("*.css")).read_text()
                 declared = set(re.findall(r"(--[\w-]+)\s*:", css))
@@ -184,6 +206,10 @@ class PipelineTests(unittest.TestCase):
                         self.assertEqual(set(bundle.namelist()), {"theme.css", "theme.json", "README.md", "icon.png", "preview.png"})
                     self.assertEqual(json.loads((destination / "theme.json").read_text())["modes"], ["dark"])
         self.assertEqual(self.colors, before)
+        for target, minimum in (("svg", 28), ("data_visualization", 37), ("syntax_highlighting", 22)):
+            with self.assertRaisesRegex(ValueError, "mandatory"):
+                adapt(self.colors, roles, target, minimum - 1)
+            self.assertEqual(adapt(self.colors, roles, target, minimum)["named_count"], minimum)
         with self.assertRaises(ValueError):
             adapt(self.colors, roles, "windows_terminal", 19)
 

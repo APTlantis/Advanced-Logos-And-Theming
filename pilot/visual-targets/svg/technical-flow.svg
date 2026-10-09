@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">01 / Technical flow</title>
+  <desc id="desc">Orthogonal connectors and outlined nodes • conceptual pipeline</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#0A1924" />
+  <text x="36" y="52" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="26">01 / Technical flow</text>
+  <text x="36" y="84" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Orthogonal connectors and outlined nodes • conceptual pipeline</text>
+  <rect x="40" y="195" width="190" height="120" fill="#18222A" rx="6" stroke="#F8C265" stroke-width="3" />
+  <text x="54" y="231" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">01</text>
+  <text x="54" y="270" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">Artwork</text>
+  <line x1="234" y1="255" x2="262" y2="255" stroke="#A66B35" stroke-width="3" />
+  <text x="240" y="246" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="20">→</text>
+  <rect x="270" y="195" width="190" height="120" fill="#18222A" rx="6" stroke="#4A6E8D" stroke-width="3" />
+  <text x="284" y="231" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">02</text>
+  <text x="284" y="270" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">Canonical 32</text>
+  <line x1="464" y1="255" x2="492" y2="255" stroke="#A66B35" stroke-width="3" />
+  <text x="470" y="246" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="20">→</text>
+  <rect x="500" y="195" width="190" height="120" fill="#18222A" rx="6" stroke="#89B2A7" stroke-width="3" />
+  <text x="514" y="231" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">03</text>
+  <text x="514" y="270" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">Semantics</text>
+  <line x1="694" y1="255" x2="722" y2="255" stroke="#A66B35" stroke-width="3" />
+  <text x="700" y="246" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="20">→</text>
+  <rect x="730" y="195" width="190" height="120" fill="#18222A" rx="6" stroke="#4A6E8D" stroke-width="3" />
+  <text x="744" y="231" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">04</text>
+  <text x="744" y="270" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">Native export</text>
+  <text x="40" y="410" fill="#C38651" font-family="Arial, sans-serif" font-size="17">Source bytes → observed colors → role references → derived target tokens</text>
+</svg>

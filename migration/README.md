@@ -1,5 +1,7 @@
 # Migration and recovery
 
+The visual-target extension uses a separate `pilot/visual-targets` palette-import run and `visual-target-acceptance.json`. Its palette preserves the previous editor pilot RGB values and IDs. Earlier outputs, archives and evidence remain unchanged. Recover/reproduce by importing `pilot/editor-targets/palette.toml` into a fresh directory with `--targets svg,syntax_highlighting,data_visualization`. Browser PNGs and Matplotlib PNG/SVG renders are separate validation artifacts, not canonical palette sources. There is no identity, ownership or discovery-root change, so parent/index records need no update.
+
 The consolidation replaces Aptlantis Logos, Lang-Theme-Generator, the held palette-transformer, and the Advanced-Logos-And-Theming Documents workspace. Artwork and converters belong to Logos-And-Theming; SESM embedding is a sibling project.
 
 `archives/*.zip` preserve every file from each old location, including Git history and working files. Each adjacent JSON records original absolute root, every relative path, file size and SHA-256, archive SHA-256, and full restoration verification. `inventory.json` compares duplicate scripts and records migration status. Runtime environment files in archives are historical bytes and should be recreated rather than reused after relocation.

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">02 / Editorial infographic</title>
+  <desc id="desc">Typographic hierarchy and a large numeral • palette architecture</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#0A1924" />
+  <text x="36" y="52" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="26">02 / Editorial infographic</text>
+  <text x="36" y="84" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Typographic hierarchy and a large numeral • palette architecture</text>
+  <text x="48" y="260" fill="#F8C265" font-family="Arial, sans-serif" font-size="132">32</text>
+  <text x="48" y="305" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24">observed colors</text>
+  <line x1="345" y1="140" x2="900" y2="140" stroke="#F8C265" stroke-width="3" />
+  <text x="355" y="175" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24">Preserve</text>
+  <text x="355" y="206" fill="#C38651" font-family="Arial, sans-serif" font-size="17">Original bytes and canonical RGB</text>
+  <line x1="345" y1="250" x2="900" y2="250" stroke="#4A6E8D" stroke-width="3" />
+  <text x="355" y="285" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24">Interpret</text>
+  <text x="355" y="316" fill="#C38651" font-family="Arial, sans-serif" font-size="17">Roles reference canonical IDs</text>
+  <line x1="345" y1="360" x2="900" y2="360" stroke="#89B2A7" stroke-width="3" />
+  <text x="355" y="395" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="24">Adapt</text>
+  <text x="355" y="426" fill="#C38651" font-family="Arial, sans-serif" font-size="17">Lightness and chroma vary; source hue stays</text>
+</svg>
