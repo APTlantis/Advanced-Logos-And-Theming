@@ -1,0 +1,330 @@
+{
+  "date": "2026-10-09",
+  "plan": {
+    "date": "2026-10-09",
+    "host": "themes.aptlantis.net",
+    "origin": "http://localhost:8100",
+    "root": "D:\\CTS\\Logos-And-Theming\\output",
+    "container_root": "/srv/aptlantis-themes",
+    "folders": [
+      "ada",
+      "assembly",
+      "Batman",
+      "blackgold",
+      "clogure",
+      "holyc",
+      "Julia",
+      "php",
+      "PowerShell",
+      "Promis",
+      "qbasic",
+      "r",
+      "scratch",
+      "sgml",
+      "tex",
+      "WarmAndCool"
+    ],
+    "original_sha256": {
+      "Caddyfile": "09dcb84306bd1642cf5ca029aeafc9067e47bacb84270ad5209f81150d6e20be",
+      "docker-compose.yml": "0b8310bead82fcf3f9015bb4e050827ca9b6940884a86dd4a2fd865423e23a18",
+      "README.md": "44c6d92bcde395284e94fdd83a3d4f056189b742c57efc4a37177b3a54bdc5ee",
+      "webserver.manifest.toml": "4bd78d1061914c1c01296f93ae054a8ea7906a84b88b94fecbd2d4f0374ae916"
+    },
+    "a_readme_original_sha256": "946142d37d55a1074324521044e0e66469904100cb28103543e495f108d198cd"
+  },
+  "local_checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "c83f353b5e80cff2447738ba8b2def80b1e07922c798a5028dd1ad7b89a4b66c"
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "sha256": "c83f353b5e80cff2447738ba8b2def80b1e07922c798a5028dd1ad7b89a4b66c"
+    },
+    {
+      "path": "/ada/review.html",
+      "status": 200,
+      "sha256": "71a2c577572452fb0d4b43d272d6b91e2de6e4ebd10e0c4608dd370cd72a1b2d"
+    },
+    {
+      "path": "/ada/palette.png",
+      "status": 200,
+      "sha256": "3b0f3118f03c017d57525696939df2f11459660f731a7d296eda1407e324a0c2"
+    },
+    {
+      "path": "/assembly/review.html",
+      "status": 200,
+      "sha256": "2187c179459527d1dae9d5f2c64ce7afe48f1a4f3fa1938ddb839f2ab18e1f2f"
+    },
+    {
+      "path": "/assembly/palette.png",
+      "status": 200,
+      "sha256": "20ed7253a4bed7554a07f2fa0cd7c94b0c609629fffe7cc10582f4aab52cbee9"
+    },
+    {
+      "path": "/Batman/review.html",
+      "status": 200,
+      "sha256": "d8537befc6e4df775853b935091be35452738aad0efa93554dfaf446527dfb1c"
+    },
+    {
+      "path": "/Batman/palette.png",
+      "status": 200,
+      "sha256": "bbb056800639230bd6c7a781bf4ed236b8ff6598209dd6057864bcab375b89ae"
+    },
+    {
+      "path": "/blackgold/review.html",
+      "status": 200,
+      "sha256": "ee1fe880cf613513d68918e4c77b9c1d945a2c3345aa8fd0abd758d5711be336"
+    },
+    {
+      "path": "/blackgold/palette.png",
+      "status": 200,
+      "sha256": "669bc105ffadca0baca90a79acb15a1190969feb310c6a14c7283bf98437fa1a"
+    },
+    {
+      "path": "/clogure/review.html",
+      "status": 200,
+      "sha256": "a10aa21a134a993301bf2a0d6ed50e4fb83482209a92b0f63df229f3a7e3f6af"
+    },
+    {
+      "path": "/clogure/palette.png",
+      "status": 200,
+      "sha256": "d1bff701e2008591def77cefa201fd12afa259982e4befb2b336476d4b7b9a9e"
+    },
+    {
+      "path": "/holyc/review.html",
+      "status": 200,
+      "sha256": "199dea80adcd8c733210f11f4f4185295f15a87545b6795e7c122b05570b7358"
+    },
+    {
+      "path": "/holyc/palette.png",
+      "status": 200,
+      "sha256": "ff639d60fee555bb44830e127da057dfcce2b701716c8148d9971c7ca4216ae5"
+    },
+    {
+      "path": "/Julia/review.html",
+      "status": 200,
+      "sha256": "935e6f1267643af258e54cf0d297e985c95f588d6ad853823510149d254890de"
+    },
+    {
+      "path": "/Julia/palette.png",
+      "status": 200,
+      "sha256": "6b74cdb4a900f369855cd216c7d5b226282ea767e955c7ec9fe2b71ee064b705"
+    },
+    {
+      "path": "/php/review.html",
+      "status": 200,
+      "sha256": "cb2acfe0435b031fda64dc6516f682e682a19bb695dab159f6dc9e9c0d01b59a"
+    },
+    {
+      "path": "/php/palette.png",
+      "status": 200,
+      "sha256": "8434c1ded62ea19ff97ccb4fc79f4f306790884b1c078569ffa3ce3b81813756"
+    },
+    {
+      "path": "/PowerShell/review.html",
+      "status": 200,
+      "sha256": "bd2c0c529607ed3e34e4bc3084669bbadf953144e3f957f18a2a10df15a83e1f"
+    },
+    {
+      "path": "/PowerShell/palette.png",
+      "status": 200,
+      "sha256": "212553aca3021b94b7e5df21d2b48be13048a771023460a86438b7ce1f843355"
+    },
+    {
+      "path": "/Promis/review.html",
+      "status": 200,
+      "sha256": "1c67b023e82a670dd93b05f0be981d368b8f27eb0de3613e1dbe0ae56b60807c"
+    },
+    {
+      "path": "/Promis/palette.png",
+      "status": 200,
+      "sha256": "5ba95213bb5dc7182db9b599d9ef75362177d41ecbaf2f4ff7422d8f38dfb2c6"
+    },
+    {
+      "path": "/qbasic/review.html",
+      "status": 200,
+      "sha256": "182e1f11a36f2bcf673787be5f5197c526dba2f1fe37af65bf08481cc1d292b6"
+    },
+    {
+      "path": "/qbasic/palette.png",
+      "status": 200,
+      "sha256": "15ca276cb695954199f7b9ad6480f7cf116fca8c980047289c496583208c9a76"
+    },
+    {
+      "path": "/r/review.html",
+      "status": 200,
+      "sha256": "f09038a6a70392bf37dff320c9e97d62b1cf6d3ba49e3be704242e49a7586880"
+    },
+    {
+      "path": "/r/palette.png",
+      "status": 200,
+      "sha256": "387d99003a0edd2ce2677c6ee9dfa3285d6786edfa6a7382edc8319827d2a296"
+    },
+    {
+      "path": "/scratch/review.html",
+      "status": 200,
+      "sha256": "e8f71d656d46d09ff3a50903fa61f91d388e54bfe0dae5e86a13289c62404405"
+    },
+    {
+      "path": "/scratch/palette.png",
+      "status": 200,
+      "sha256": "65c960807e9e306b5c199890a9c0019f37c0da214fb9e88a97171e153c1fc710"
+    },
+    {
+      "path": "/sgml/review.html",
+      "status": 200,
+      "sha256": "3136504067f0cb5c37ca9abf3575e7cc50c0210d73a04cdd7a14d6cfbe1f6134"
+    },
+    {
+      "path": "/sgml/palette.png",
+      "status": 200,
+      "sha256": "b6cc9d4e6fdc42dbcf27edbaf9db606a625ed88371e1e866ddbb6ef69ab57c1d"
+    },
+    {
+      "path": "/tex/review.html",
+      "status": 200,
+      "sha256": "48b38f23ed68d08c931b4ef9ee620330b59af290031c3c3f7f7c024384888334"
+    },
+    {
+      "path": "/tex/palette.png",
+      "status": 200,
+      "sha256": "12f507d88dba19d6b2cf37dd6ff8ee8526620765dee9216291c9fe48c8bfb037"
+    },
+    {
+      "path": "/WarmAndCool/review.html",
+      "status": 200,
+      "sha256": "8f3aac3085c94c231e6b488a497bb4e522804186663bc1b0b5d0c7439f6fda5a"
+    },
+    {
+      "path": "/WarmAndCool/palette.png",
+      "status": 200,
+      "sha256": "ca79254dd85406c7f451558449512c1b847303506c464016132af16c7b7f4172"
+    },
+    {
+      "path": "/clogure/powerpoint/aptlantis-clogure-sample.pptx",
+      "status": 200,
+      "sha256": "f08d32921186a537adccf60330674c9b9573b40ac0bec6d75655fe41e3b4b338"
+    },
+    {
+      "path": "/missing.html",
+      "status": 404
+    },
+    {
+      "path": "/ada/missing.css",
+      "status": 404
+    },
+    {
+      "path": "/git-recovery/before-lfs-2026-10-08.bundle",
+      "status": 404
+    },
+    {
+      "path": "/theme-hosting-staging/plan.json",
+      "status": 404
+    },
+    {
+      "path": "/template-wheel-check/aptlantis_theme_pipeline-0.1.0-py3-none-any.whl",
+      "status": 404
+    },
+    {
+      "path": "/.git/config",
+      "status": 404
+    },
+    {
+      "path": "/ada/",
+      "status": 404
+    },
+    {
+      "path": "/clogure-template-review/review.html",
+      "status": 404
+    }
+  ],
+  "original_site_unchanged": true,
+  "public": {
+    "url": "https://themes.aptlantis.net/",
+    "checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "expected": 200,
+        "cache_control": "no-store, max-age=0",
+        "matches_source": false,
+        "matches_after_known_cloudflare_transformations": true,
+        "transformations": "Cloudflare analytics injection; Rocket Loader script attributes/loader on index; newline/blank-line normalization."
+      },
+      {
+        "path": "/clogure/review.html",
+        "status": 200,
+        "expected": 200,
+        "cache_control": "no-store, max-age=0",
+        "matches_source": false,
+        "matches_after_known_cloudflare_transformations": true,
+        "transformations": "Cloudflare analytics injection; Rocket Loader script attributes/loader on index; newline/blank-line normalization."
+      },
+      {
+        "path": "/clogure/palette.png",
+        "status": 200,
+        "expected": 200,
+        "cache_control": "no-store, max-age=0",
+        "matches_source": true
+      },
+      {
+        "path": "/clogure/powerpoint/aptlantis-clogure-sample.pptx",
+        "status": 200,
+        "expected": 200,
+        "cache_control": "no-store, max-age=0",
+        "matches_source": true
+      },
+      {
+        "path": "/git-recovery/before-lfs-2026-10-08.bundle",
+        "status": 404,
+        "expected": 404,
+        "cache_control": "no-store, max-age=0"
+      },
+      {
+        "path": "/theme-hosting-staging/plan.json",
+        "status": 404,
+        "expected": 404,
+        "cache_control": "no-store, max-age=0"
+      }
+    ],
+    "passed": true
+  },
+  "docker_mount": {
+    "source": "D:\\CTS\\Logos-And-Theming\\output",
+    "destination": "/srv/aptlantis-themes",
+    "read_only": true
+  },
+  "caddy_validation": "passed before application and against mounted config",
+  "runtime_change": "Only Caddy recreated, --no-deps --pull never; existing named volumes and other services preserved",
+  "recovery": "migration/theme-hosting-backups/2026-10-09",
+  "limits": [
+    "Direct live output mount; file updates in approved folders are publicly visible.",
+    "All 16 local reviews/images checked; public root, representative review/image/download and blocked paths checked; browser filtering and review navigation checked.",
+    "Cloudflare dashboard route operated by user; local historical ingress file unchanged."
+  ],
+  "public_initial": {
+    "status": 530,
+    "cloudflare_error": 1033,
+    "existing_site_same_error": true,
+    "cloudflared_service": "Stopped Automatic"
+  },
+  "tunnel_action": "Started the existing Cloudflared Windows service; no credentials or tunnel route configuration changed.",
+  "existing_site_public_status_after_tunnel_start": 200,
+  "browser": {
+    "url": "https://themes.aptlantis.net/",
+    "hub": "16 theme links and visible search control",
+    "filter": "clogure returned 1 of 16 themes",
+    "navigation": "Clogure review opened; browser Back returned to full collection",
+    "screenshot": "output/theme-hosting-staging/public-hub.png",
+    "screenshot_sha256": "da0905bc68ac7ae6ed17d5d030edc601289987aa68f4c3075b4612511e10b3fb"
+  },
+  "server_files": {
+    "Caddyfile": "f402207f6a92908a72581222dec55b5bcbc186ac4ee2b7be0aa26537ff2112b6",
+    "docker-compose.yml": "4428fd30f2d41ad47870a1b44c808ab79b76bf0bb985438193cf845ea5b88c1d",
+    "README.md": "27fd9769a186c4b0f4aac68093d16ada02c72601a5130126345e74c410cb2c5b",
+    "webserver.manifest.toml": "e9080fe23c42b1233c8741ad2d67232a3b7e35f6589311331d1abb70a984938c"
+  }
+}

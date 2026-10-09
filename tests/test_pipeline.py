@@ -158,21 +158,29 @@ class PipelineTests(unittest.TestCase):
                 with zipfile.ZipFile(next(destination.glob("*.pptx"))) as deck:
                     validate_core_properties(deck.read("docProps/core.xml"))
                     slides = [n for n in deck.namelist() if re.fullmatch(r"ppt/slides/slide\d+.xml", n)]
-                    self.assertEqual(len(slides), 4)
+                    self.assertEqual(len(slides), 23)
                     theme = ET.fromstring(deck.read("ppt/theme/theme1.xml")).find("a:themeElements/a:clrScheme", ns)
                     self.assertEqual({s.tag: s[0].attrib for s in theme}, {s.tag: s[0].attrib for s in root})
-                    # Followed-link colors must remain native theme bindings,
-                    # including the swatch, rather than disappear into black.
-                    for n in ("ppt/slides/slide2.xml", "ppt/slides/slide3.xml"):
-                        self.assertTrue(any(c.get("val") == "folHlink" for c in ET.fromstring(deck.read(n)).findall(".//a:schemeClr", ns)))
-                    self.assertTrue(any(ET.fromstring(deck.read(n)).find(".//a:tbl", ns) is not None for n in slides))
-                    chart = ET.fromstring(deck.read(next(n for n in deck.namelist() if n.endswith("/chart1.xml"))))
-                    self.assertEqual(len(chart.findall(".//c:ser", ns)), 6)
-                    self.assertEqual({c.get("val") for c in chart.findall(".//c:ser//a:schemeClr", ns)}, {f"accent{i}" for i in range(1, 7)})
-                    self.assertIsNotNone(chart.find("c:externalData", ns))
-                    with zipfile.ZipFile(io.BytesIO(deck.read("ppt/embeddings/sample-data.xlsx"))) as book:
-                        sheet = ET.fromstring(book.read("xl/worksheets/sheet1.xml"))
-                        self.assertEqual(len(sheet.findall(".//{*}row")), 3)
+                    from apt_theme.powerpoint import TEMPLATE, TEMPLATE_SHA256, PRESENTATION_TYPE, TEMPLATE_TYPE
+                    self.assertEqual(hashlib.sha256(TEMPLATE.read_bytes()).hexdigest(), TEMPLATE_SHA256)
+                    with zipfile.ZipFile(TEMPLATE) as original:
+                        self.assertEqual(set(deck.namelist()), set(original.namelist()))
+                        # All slide content, relationships and embedded chart
+                        # workbooks survive exactly; no reconstruction of objects.
+                        for n in original.namelist():
+                            if n in slides or n.endswith('.rels') or n.startswith('ppt/embeddings/'):
+                                self.assertEqual(deck.read(n), original.read(n), n)
+                        for n in ('ppt/charts/chart1.xml', 'ppt/charts/chart2.xml', 'ppt/charts/chart3.xml', 'ppt/charts/chart4.xml'):
+                            expected = original.read(n).replace(b'<a:srgbClr val="000000"/>', b'<a:schemeClr val="dk1"/>').replace(b'<a:srgbClr val="F9F9F9"/>', b'<a:schemeClr val="lt1"/>')
+                            self.assertEqual(deck.read(n), expected)
+                        self.assertTrue(any(ET.fromstring(deck.read(n)).find(".//a:tbl", ns) is not None for n in slides))
+                    with zipfile.ZipFile(next(destination.glob('*.potx'))) as template:
+                        for n in deck.namelist():
+                            expected = deck.read(n)
+                            if n == '[Content_Types].xml':
+                                expected = expected.replace(PRESENTATION_TYPE, TEMPLATE_TYPE)
+                            self.assertEqual(template.read(n), expected, n)
+                    self.assertEqual(result['sample_deck']['layouts'], 14)
             elif target in ("svg", "syntax_highlighting", "data_visualization"):
                 self.assertEqual(len(result["examples"]), 1 if target == "syntax_highlighting" else 3)
                 for file in destination.glob("*.svg"):
@@ -241,16 +249,27 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue((output / "windows_terminal" / "windows-terminal.json").exists())
         self.assertGreater(json.loads((output / "run.json").read_text())["contrast_failures"], 0)
 
-    def test_powerpoint_runtime_failure_preserves_previous_output(self):
+    def test_powerpoint_template_failure_preserves_previous_output(self):
         output = self.root / "previous"
         output.mkdir()
         (output / "run.json").write_text('{"preserved": true}')
         (output / "operator-note.txt").write_text("Previous generated output")
         before = hashes(output)
-        with patch("apt_theme.powerpoint.runtime", side_effect=ValueError("PowerPoint runtime unavailable")):
+        with patch("apt_theme.powerpoint.template_parts", side_effect=ValueError("PowerPoint template unavailable")):
             self.assertEqual(main(["import", str(self.fixture_palette()), "--output", str(output),
                                    "--targets", "powerpoint", "--overwrite"]), 1)
         self.assertEqual(hashes(output), before)
+
+    def test_powerpoint_reference_hash_guard(self):
+        from apt_theme.powerpoint import template_parts
+        damaged = self.root / 'template.pptx'
+        damaged.write_bytes(b'Unexpected replacement')
+        with patch('apt_theme.powerpoint.TEMPLATE', damaged):
+            with self.assertRaisesRegex(ValueError, 'hash mismatch'):
+                template_parts()
+        with patch('apt_theme.powerpoint.TEMPLATE', self.root / 'missing.pptx'):
+            with self.assertRaisesRegex(ValueError, 'missing'):
+                template_parts()
 
     def test_powerpoint_timestamp_type_namespace_is_preserved(self):
         # Reproduces the undeclared QName produced by the original serializer.

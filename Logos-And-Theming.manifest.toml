@@ -3,7 +3,7 @@ schema = "APTlantis Entity Manifest"
 schema_version = "2.4"
 manifest_type = "project"
 canonical_name = "Logos-And-Theming.manifest.toml"
-last_updated = "2026-10-08"
+last_updated = "2026-10-09"
 maintainer = "Herb"
 
 [entity]
@@ -12,7 +12,7 @@ title = "Logos-And-Theming"
 kind = "project-group"
 class = "project-group"
 status = "active"
-description = "Image-derived dark theme pipeline, editable PowerPoint samples and related logo utilities"
+description = "Image-derived dark theme pipeline, reusable PowerPoint templates and related logo utilities"
 
 [project]
 type = "command-tool"
@@ -30,7 +30,7 @@ inherits_from = "D:/CTS/CTS.manifest.toml"
 [lifecycle]
 state = "active"
 created = "2026-10-08"
-last_updated = "2026-10-08"
+last_updated = "2026-10-09"
 last_reviewed = "2026-10-08"
 maintainer = "Herb"
 
@@ -43,6 +43,7 @@ project_readme = "Project-README.md"
 readme = "README.md"
 overview_deck = "docs/presentations/Logos-And-Theming-Overview.pptx"
 documentation_suite_plan = "docs/documentation-suite/PLAN.md"
+hosting_guide = "docs/HOSTING.md"
 
 [relationships]
 parent = "D:/CTS"
@@ -55,12 +56,14 @@ artifact_verified = true
 release_verified = false
 installation_verified = false
 evidence = "migration/acceptance.json"
+powerpoint_template_evidence = "migration/powerpoint-template-acceptance.json"
 powerpoint_sample_evidence = "migration/powerpoint-sample-acceptance.json"
 dark_surface_evidence = "migration/dark-surface-regression.json"
 powerpoint_metadata_evidence = "migration/powerpoint-metadata-repair.json"
 editor_target_evidence = "migration/editor-target-acceptance.json"
 visual_target_evidence = "migration/visual-target-acceptance.json"
 git_publication_evidence = "migration/git-publication.json"
+theme_hosting_evidence = "migration/theme-hosting-acceptance.json"
 
 [agent]
 read_first = ["AGENTS.md", "Logos-And-Theming.manifest.toml", "Project-Proposal.md", "Project-README.md"]

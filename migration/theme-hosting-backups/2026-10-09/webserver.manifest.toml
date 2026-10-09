@@ -1,0 +1,34 @@
+[manifest]
+schema = "APTlantis Entity Manifest"
+schema_version = "2.4"
+manifest_type = "service"
+canonical_name = "webserver.manifest.toml"
+last_updated = "2026-09-03"
+maintainer = "Herb"
+
+[entity]
+id = "webserver"
+title = "Aptlantis Local Webserver"
+kind = "service"
+class = "infrastructure"
+status = "active"
+description = "Local Caddy, Ergo, and TheLounge infrastructure for Aptlantis web services."
+
+[service]
+root = "D:\\.dpw\\webserver"
+compose_file = "docker-compose.yml"
+caddyfile = "Caddyfile"
+tunnel_config = "cloudflared-ingress.yml"
+
+[relationships]
+parent = "D:\\.dpw"
+consumers = ["A:\\aptlantis.net"]
+
+[state]
+irc_data = "Preserved in irc/ and Docker named volumes webserver_caddy_data, webserver_caddy_config, and webserver_thelounge_data."
+public_irc = false
+
+[deployment]
+city_hall_local_target = "http://localhost:8100/city-hall"
+city_hall_tunnel_hostname = "aptlantis.net"
+publication_note = "Tunnel configuration and local route verification do not prove DNS, public exposure, or publication approval."

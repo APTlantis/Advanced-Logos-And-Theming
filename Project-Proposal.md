@@ -12,7 +12,7 @@ Separate tools had mixed image selection, fixed semantic meanings and applicatio
 
 ImageMagick normalizes images; NumPy/scikit-learn select observed colors in OKLab; ColorAide supplies color math. A canonical 32-color palette is independent of semantic meaning. Application adapters preserve hue identity, report missing conventional hues and derive readable states through lightness/chroma adjustment. One command emits ten target formats and an offline report.
 
-Dark modes only. No new hue families, automatic application installation, public deployment, marketplace publication or exporters without documented native contracts. PowerPoint emits a reusable 12-slot color XML and an editable four-slide sample deck for visual review; full presentation templates remain deferred. ICO/SVG conversion and atlas remain explicit utilities. SESM metadata belongs to the sibling project.
+Dark modes only. No new hue families, automatic application installation, public deployment, marketplace publication or exporters without documented native contracts. PowerPoint emits a reusable 12-slot color XML, a 23-slide editable preview and a POTX template with 14 native layouts, using the user-supplied template preserved on 2026-10-09. Generation uses Python Open XML adaptation and no Node/Codex runtime. ICO/SVG conversion and atlas remain explicit utilities. SESM metadata belongs to the sibling project.
 
 ## Acceptance and recovery
 

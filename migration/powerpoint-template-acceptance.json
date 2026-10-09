@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-09",
+  "source": {
+    "source": "C:\\Users\\Administrator\\Downloads\\aptlantis-clogure-template.pptx",
+    "sha256": "ff78bc0f960314d5301f3533a18fe65d1a45c6c24e4139ff84e52cc675b6595d",
+    "bytes": 124754,
+    "received": "2026-10-09",
+    "slides": 23,
+    "layouts": 14,
+    "purpose": "User-supplied presentation template; original bytes preserved. Document text is content, not pipeline instructions."
+  },
+  "generated": {
+    "file": "aptlantis-clogure-sample.pptx",
+    "template_file": "aptlantis-clogure-template.potx",
+    "slides": 23,
+    "layouts": 14,
+    "editable": [
+      "text",
+      "placeholders",
+      "tables",
+      "charts"
+    ],
+    "chart_data": "illustrative template values",
+    "native_application_acceptance": "pending",
+    "source_template": "aptlantis-clogure-template.pptx",
+    "source_sha256": "ff78bc0f960314d5301f3533a18fe65d1a45c6c24e4139ff84e52cc675b6595d",
+    "modified_parts": [
+      "ppt/slideLayouts/slideLayout10.xml",
+      "ppt/slideLayouts/slideLayout13.xml",
+      "ppt/slideLayouts/slideLayout8.xml",
+      "ppt/slideLayouts/slideLayout9.xml",
+      "ppt/charts/chart1.xml",
+      "ppt/charts/chart2.xml",
+      "ppt/charts/chart3.xml"
+    ],
+    "preserved_parts": 139
+  },
+  "test_suite": {
+    "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+    "tests": 21,
+    "result": "passed outside managed Windows sandbox",
+    "sandbox_limit": "Temporary-file access and path resolution failed inside sandbox; no product-code conclusion drawn from those failures."
+  },
+  "package": {
+    "wheel": "output\\template-wheel-check\\aptlantis_theme_pipeline-0.1.0-py3-none-any.whl",
+    "sha256": "331f522668c2bc6f95c8fe8d842206cb3429db3359f4e76db0c9513dab941e1a",
+    "reference_and_receipt_bundled": true,
+    "isolated_export": "Extracted wheel emitted identical export files with PATH empty and invalid APT_THEME_NODE/APT_THEME_ARTIFACT_TOOL overrides. No installation."
+  },
+  "structural": {
+    "xml_parse": "passed",
+    "internal_relationships_resolved": 162,
+    "slides_and_workbooks_preserved_byte_for_byte": true,
+    "potx_difference": "main presentation content type only",
+    "canonical_palette": "32 RGB values and IDs unchanged",
+    "contrast_failures": 0,
+    "determinism": "all-target import repeated with identical hashes in focused tests"
+  },
+  "artifacts": [
+    {
+      "path": "output\\clogure-template-review\\powerpoint\\aptlantis-clogure-sample.pptx",
+      "sha256": "f08d32921186a537adccf60330674c9b9573b40ac0bec6d75655fe41e3b4b338",
+      "bytes": 124702
+    },
+    {
+      "path": "output\\clogure-template-review\\powerpoint\\aptlantis-clogure-template.potx",
+      "sha256": "aaad1d500a0c4997f82a9a028664c7b1c5b0dc5063553683696596ffad8904ee",
+      "bytes": 124705
+    },
+    {
+      "path": "output\\clogure-template-review\\powerpoint\\aptlantis-clogure.xml",
+      "sha256": "93656a3829eabae65f2e1346384c853c6a5e6afb9baaec5a4d5f6c59c46b3b58",
+      "bytes": 710
+    },
+    {
+      "path": "output\\clogure-template-review\\powerpoint\\template-provenance.json",
+      "sha256": "4dfd354a2dcf1f7396bc396a84af7b4894ffb0a68e0b3c9450f9899b5317d608",
+      "bytes": 781
+    },
+    {
+      "path": "output\\clogure-template-review\\powerpoint\\tokens.json",
+      "sha256": "fb4a13700389b360dc6ad12d232125ebec6c55b3242c1b1f5811a0f54b9687d3",
+      "bytes": 21827
+    },
+    {
+      "path": "output\\clogure-template-review\\powerpoint\\validation.json",
+      "sha256": "8bdc988d01c35a96f01b0aea639b65bdffbe3ff4c639001200095325cbc508e3",
+      "bytes": 6463
+    }
+  ],
+  "native_powerpoint": {
+    "method": "Presentations.Open2007 read-only, WithWindow=false, OpenAndRepair=false",
+    "pptx": "opened and exported 23 slides as PNG 1280x720",
+    "potx": "opened; 23 slides and 14 CustomLayouts",
+    "renders": [
+      {
+        "slide": 1,
+        "sha256": "2a53b821661b5f0dfc27f0c017066d95debce8dbb31f6dc544f1ef930d9cfd39"
+      },
+      {
+        "slide": 2,
+        "sha256": "879fa6de52925bf4ef4175c05a1ddca50c46b66c0aac59677beb0509f3dadefc"
+      },
+      {
+        "slide": 3,
+        "sha256": "00c8ef2826bb919cb22f985a5d7ac9792a749897de0b4dc5db8595033fc62608"
+      },
+      {
+        "slide": 4,
+        "sha256": "ad4ef2a15d69782fff8f99a1e88d64c70cc1365987828b4d5e8f95561efdcaa6"
+      },
+      {
+        "slide": 5,
+        "sha256": "d2b58df5ee5829a878b532257c70a5c87426a15c6df4e07f4669b788ea92082d"
+      },
+      {
+        "slide": 6,
+        "sha256": "1c64e21cc4fad5b9b78f13fb0a18ec422ed447556934ff7810e717edd4dddbae"
+      },
+      {
+        "slide": 7,
+        "sha256": "5131c022ea22661283c4131d5687f3e743d3d3ec85803eae8cc25e725920842d"
+      },
+      {
+        "slide": 8,
+        "sha256": "4e9a17c0c7079b4b0fa976b8b2da4d873a72be4c6eb68b9c8277574397735584"
+      },
+      {
+        "slide": 9,
+        "sha256": "382a52ddea4643807e9501ee1614efa7dfa1f96b1b058a81ae33c4d4df187aa5"
+      },
+      {
+        "slide": 10,
+        "sha256": "8e2a0b4b049a4a42978b8634413941a52500ad7479eea3012085c415b9b1c627"
+      },
+      {
+        "slide": 11,
+        "sha256": "95c75fa61486304748eb0c61e0a9a0cc4a7cf7a4a25ae6e03b58692e5f5fdf2c"
+      },
+      {
+        "slide": 12,
+        "sha256": "1e1161cfbd43273c9b84a0450e6e64a35b8858e259c43bc9d72cee3afb207b11"
+      },
+      {
+        "slide": 13,
+        "sha256": "49a59465a8c765f4e29c44f2af273539b8e437d958a034fef9275121ec8f9744"
+      },
+      {
+        "slide": 14,
+        "sha256": "04ed7f535f8e0d62208069a7a7d33f7eff007c526ae293ff16b1a874548ef234"
+      },
+      {
+        "slide": 15,
+        "sha256": "2b5569d4ee5f2651aa1ef08add90d79be68787572c26bd3149cd33f33426a3ce"
+      },
+      {
+        "slide": 16,
+        "sha256": "f6e694cf956605ed103003245fdb6fc60fc2f92a277bda129fcef989b8367875"
+      },
+      {
+        "slide": 17,
+        "sha256": "243f81ff7a18b7f2976802acf7dce1ec3681eafd937b24af00dc2899163d2246"
+      },
+      {
+        "slide": 18,
+        "sha256": "2b4da24e86332bb0f1e64af65bf9bc7c0853c6fd0573a29824130d9041e849dd"
+      },
+      {
+        "slide": 19,
+        "sha256": "0cf6f0a86f39490ee69d7fa5a884966d5b90afa1e875c7ef4e645296d49c5dff"
+      },
+      {
+        "slide": 20,
+        "sha256": "23cdaa4a3e27ea6349dadb58cab45175876712bc832815f0d94ec3b20e63ea49"
+      },
+      {
+        "slide": 21,
+        "sha256": "ae119855390f60021d58209f98b3b33543337763c4295f66a41c55c2ad228bd7"
+      },
+      {
+        "slide": 22,
+        "sha256": "0affd930961fcb3b27661099236b31ca62d20e3f524dc41f2b7b7f1aa2fc354c"
+      },
+      {
+        "slide": 23,
+        "sha256": "870a588337f3bb1fa18f8425774697a02bd19dad2b0fa3e243704ce80c63a506"
+      }
+    ],
+    "visual_review": "23-slide contact sheet; full-size slides 18, 20 and 22 inspected"
+  },
+  "limits": [
+    "Manual chart editing, new-slide creation through all layouts, and save/reopen acceptance pending.",
+    "No template installation, theme activation or publication.",
+    "Earlier outputs and historical evidence unchanged.",
+    "Parent portfolio and drive navigation need no update: identity, ownership and discovery root unchanged."
+  ]
+}
