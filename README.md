@@ -1,65 +1,123 @@
 # Logos-And-Theming
 
-An image-to-theme pipeline and related logo utilities. Canonical palettes contain 32 observed colors. Semantic meaning and application adaptation are separate stages. Only dark themes are generated.
+A local image-to-theme pipeline and related logo utilities. The engine creates a canonical palette of **32 observed colors**, maps those colors to semantic roles, then derives **dark-only** application tokens. Canonical colors, role assignments and target adaptations are separate artifacts; adaptation introduces no new hue families.
 
-Project overview: [24-slide Black-Gold presentation](docs/presentations/Logos-And-Theming-Overview.pptx), with explanatory speaker notes. Further reading is planned in the [documentation suite plan](docs/documentation-suite/PLAN.md). Deck provenance and validation are in [presentations/README.md](docs/presentations/README.md).
+The current local pilot supports ten targets, editable PowerPoint samples, SVG diagram examples, syntax-highlighting previews, data-visualization styles, ICO/SVG conversion and a palette atlas. Generation does not install, activate or publish themes. SESM metadata editing is independently owned by [SESM-Metadata-Embedder](../SESM-Metadata-Embedder/README.md).
 
-## One command
+## Start here
 
-Python 3.12+ and ImageMagick 7 are required for the locked environment (verified with Python 3.13). Run `Setup.ps1` once to create a local environment and install the engine. Activate `.venv\Scripts\Activate.ps1`, then:
+- [Offline visual gallery](pilot/visual-targets/visual-examples.html): three diagram styles, a syntax example, bar/line/heatmap examples and separate Matplotlib renders.
+- [24-slide Black-Gold overview](docs/presentations/Logos-And-Theming-Overview.pptx): editable project presentation with speaker notes; a dated overview that predates the later target additions. [Provenance and validation](docs/presentations/README.md).
+- [Command contract](docs/COMMAND-CONTRACT.md): configuration, output behavior, streams and exit codes.
+- [Validation and evidence limits](docs/VALIDATION.md): what has been checked and what remains pending.
 
-```powershell
-apt-theme generate assets\sources\apt-zig-dark-16bit-logo.tif --output output\zig-dark --name 'Aptlantis Zig Dark'
-```
+## Setup and first run
 
-Without activation:
-
-```powershell
-.\Invoke-AptTheme.ps1 generate assets\sources\apt-zig-dark-16bit-logo.tif --output output\zig-dark
-```
-
-Default exports: Windows Terminal scheme JSON, SiYuan dark theme ZIP, Typora CSS, PowerPoint theme-color XML plus an editable four-slide sample deck, Alacritty TOML, Notepad++ XML, Sublime Text color-scheme JSON, SVG diagram examples, Prism CSS and Matplotlib styles/scales. New editor contracts, setup and acceptance limits are in [EDITOR-TARGETS.md](docs/EDITOR-TARGETS.md). Open `review.html` in a browser; it is self-contained and works offline. The preserved historical four-target example is [pilot/zig-dark/review.html](pilot/zig-dark/review.html).
-
-Use `--targets windows_terminal,typora` for selected exports, `--config profiles.toml` for budgets/semantic overrides, `--compare PATH` to compare an existing 32-color palette, and `--strict` to fail on declared contrast failures. `--overwrite` replaces only a generated run or an empty output directory. Outputs never install or activate application themes.
+The package declares Python 3.12+; the locked environment was verified with Python 3.13. Image generation requires ImageMagick 7 (`magick` on PATH). From the project root, create the project-local Python environment:
 
 ```powershell
-apt-theme import assets\references\Aptlantis-Black-Gold\palette.toml --output output\imported-zig
+.\Setup.ps1
 ```
 
-Imports preserve RGB values and original IDs; legacy role mappings remain in provenance while the new mapper assigns roles separately. Hex is authoritative when multiple representations are present. New canonical TOML contains colors without roles; `semantics.json` contains role references. Each target's `tokens.json` contains canonical sources, derivations, aliases, omissions and checks.
+Setup installs the locked Python dependencies and the engine into `.venv`. It does not install ImageMagick or application themes.
 
-## Color choices
+**The default target set includes PowerPoint**, whose sample-deck builder also requires an existing Node.js / `@oai/artifact-tool` runtime. The pipeline detects the Codex bundled runtime on this machine. On another machine, supply `APT_THEME_NODE` and `APT_THEME_ARTIFACT_TOOL` as described in [PowerPoint runtime setup](docs/POWERPOINT.md). Python setup does not download this private dependency. If it is unavailable, select targets that omit `powerpoint`.
 
-ImageMagick applies orientation and embedded ICC conversion to sRGB. The original input is copied and hashed. The export working space is 8-bit sRGB; the original 16-bit TIFF is retained. Sampling uses at most 65,536 visible pixels with a fixed seed, ignores fully transparent pixels, and weights partial opacity. Animated inputs use their first frame. Unprofiled CMYK is rejected; unprofiled RGB is treated as sRGB.
-
-Population-weighted OKLab clustering creates up to 192 observed candidates. Canonical selection combines perceptual medoids, dark/light anchors, duplicate suppression and population-aware diversity. When at least 32 representatives remain, candidate colors whose 8-bit sRGB channels are all at most 12 are coalesced into one observed dark anchor with their combined population. This prevents tiny near-black channel changes from consuming several canonical slots. Sparse inputs retain their distinct colors. Near-duplicate medoids are replaced rather than occupying category quotas. Reports measure coverage over the actual sample, not every pixel and not human aesthetic quality.
-
-Semantic assignment chooses hue suitability instead of positional accent IDs. Background selection is independent of the darkest/ANSI black anchor: by default it prefers an observed chromatic surface in OKLCH lightness .12–.32, near .20, with population and excessive saturation considered. Neutral dark surfaces serve grayscale palettes; no dark-range candidate produces a reported darkest-color fallback. Configure `[semantics] background_mode = "darkest"` to request the previous pipeline behavior, adjust `background_lightness` within .12–.32, or use an explicit `[overrides] background` ID. The choice and reason appear in `selection.json` and the report. Existing imported colors remain unchanged. Unavailable conventional status/ANSI hues and collisions are reported. Application adaptation adjusts lightness and chroma while preserving source hue. Gamut mapping reduces chroma at fixed lightness/hue. Final RGB quantization can slightly shift measured hue; requested OKLCH remains recorded. A narrow image palette can produce ANSI aliases; no unrelated hue is added.
-
-Budgets are named token limits, not unique-color promises: Terminal 20, SiYuan 64, Typora 40, PowerPoint 24, Alacritty 20, Notepad++ 32, Sublime Text 40, SVG 40, syntax highlighting 32, data visualization 48. Planning ranges are Alacritty 16–24, Notepad++ 24–40 and Sublime Text 32–56; required tokens set the actual minimum. Editor defaults currently emit 30 tokens, with reuse and no budget filler. Mandatory tokens cannot be dropped to satisfy an impossible budget. Tokens are reused across properties; aliases and counts below budget are intentional and visible. Checks use WCAG 2 contrast ratios: 4.5:1 text, 3:1 declared control boundaries/cursor. APCA and color-vision simulations are not implemented. Contrast evidence covers declared pairings, not every application's runtime state.
-
-## Use the exports
-
-SVG diagrams, general syntax highlighting and data visualization are also default targets, with budgets 40, 32 and 48. The canonical palette remains 32 colors. These emit three differently styled SVG examples, Prism CSS with an offline code example, and a Matplotlib style/ordered scale with bar, line and heatmap examples. Setup, minima, planning ranges and acceptance limits: [VISUAL-TARGETS.md](docs/VISUAL-TARGETS.md). Review the separate [Black-Gold visual pilot](pilot/visual-targets/review.html).
-
-- **Windows Terminal:** add the exported JSON object to `schemes` in settings, then choose its name. `black` is adjusted for readable text on a dark background. Missing magenta may alias an available image hue.
-- **SiYuan:** extract `package.zip` into a theme folder beneath your workspace's `conf/appearance/themes`, then choose it in Appearance. Metadata targets SiYuan 3.7.0+ and dark mode only. Review native rendering before daily use.
-- **Typora:** place the exported CSS in the folder opened by Preferences → Appearance → Open Theme Folder, restart Typora, then select the theme. The export styles content and common editor surfaces; platform-specific native controls may retain application styling.
-- **PowerPoint:** open the generated `*-sample.pptx` to review typography, the 12 native color slots and an editable chart with illustrative data. The deck embeds the same scheme as the XML. To reuse the colors separately, copy the XML into `%APPDATA%\Microsoft\Templates\Document Themes\Theme Colors`, then select its named color scheme under Design → Variants → Colors. The XML supplies colors only; the sample deck uses Arial and simple 16:9 layouts. See [PowerPoint setup and acceptance](docs/POWERPOINT.md).
-
-## Related utilities
+Generate all ten targets from the preserved local TIFF:
 
 ```powershell
-python scripts\Convert-to-ICO.py --input image.png --output icon.ico
-python scripts\Convert-to-SVG.py --input image.png --output wrapped.svg
-python scripts\Convert-to-SVG.py --input image.png --output traced.svg --mode trace --vtracer C:\path\vtracer.exe
-python scripts\generate_atlas.py
+.\Invoke-AptTheme.ps1 generate pilot\zig-dark\source\apt-zig-dark-16bit-logo.tif --output output\zig-dark-new --name 'Aptlantis Zig Dark'
 ```
 
-Converters retain their existing options and collision checks; SVG defaults to embedded raster artwork. Tracing requires VTracer and never silently falls back. Atlas output belongs to `assets/palette-atlas.html`. Related conversion commands are independent of theme generation. SESM metadata embedding belongs to the sibling [SESM-Metadata-Embedder](../SESM-Metadata-Embedder/README.md).
+For a run without the PowerPoint runtime, or with your own image:
 
-## Verification and migration
+```powershell
+.\Invoke-AptTheme.ps1 generate 'C:\path\logo.png' --output output\visuals-new --targets svg,syntax_highlighting,data_visualization --strict
+```
 
-Run `.venv\Scripts\python.exe -m unittest discover -s tests -v`. Migrated transformer tests remain under `legacy-tools/palette-transformer/tests`. Legacy exporters and older scripts are preserved for reference, not advertised as new pipeline targets.
+Import an existing 32-color palette without changing its RGB values or IDs:
 
-See [validation](docs/VALIDATION.md), [command contract](docs/COMMAND-CONTRACT.md), and [migration/recovery](migration/README.md). Native application import and visual acceptance are separate from parsing, contrast, packaging and browser-report checks.
+```powershell
+.\Invoke-AptTheme.ps1 import assets\references\Aptlantis-Black-Gold\palette.toml --output output\imported-new --targets windows_terminal,typora
+```
+
+After activating `.venv\Scripts\Activate.ps1`, the same commands are available through `apt-theme`. The launcher works without activation.
+
+`assets/` and `output/` are ignored by Git: the asset-based import example refers to a preserved local file, not a file guaranteed by a fresh clone. The TIFF example uses the preserved pilot source. Use your own image/palette or restore the required assets through the documented [recovery process](migration/README.md). Git LFS is required to hydrate the large tracked recovery archive; its pointer is not the archive itself.
+
+## Implemented targets
+
+All ten target IDs below are generated by default. Budgets cap **named tokens**, not unique colors or canonical palette entries. Reuse, aliases and counts below budget are intentional; impossible budgets are rejected instead of dropping mandatory tokens.
+
+| Target ID | Default budget | Generated output |
+| --- | ---: | --- |
+| `windows_terminal` | 20 | Scheme JSON with background, foreground, cursor, selection and 16 ANSI entries |
+| `siyuan` | 64 | Dark theme CSS, metadata, icon, preview and theme ZIP |
+| `typora` | 40 | Markdown/editor CSS |
+| `powerpoint` | 24 | Twelve-slot Office color XML and an editable four-slide sample deck |
+| `alacritty` | 20 | TOML color configuration |
+| `notepad_plus_plus` | 32 | XML editor globals and Python/C++/JSON lexer styles |
+| `sublime_text` | 40 | Sublime Text 4 color-scheme JSON |
+| `svg` | 40 | Technical-flow, editorial-infographic and orbit-map SVG examples |
+| `syntax_highlighting` | 32 | Prism token CSS and an offline authored code example |
+| `data_visualization` | 48 | Matplotlib style, sequential-scale JSON, illustrative data and authored bar/line/heatmap SVG examples |
+
+Windows Terminal schemes are added to the application's settings; SiYuan ZIPs and Typora CSS are placed in their respective theme folders by the operator. These actions are separate from generation. The PowerPoint XML supplies colors, while its deck provides editable examples rather than a full slide-master template.
+
+Operator setup and application limits are documented in [editor targets](docs/EDITOR-TARGETS.md), [PowerPoint](docs/POWERPOINT.md) and [visual targets](docs/VISUAL-TARGETS.md). SVG output uses editable presentation attributes; syntax highlighting uses Prism classes rather than a universal IDE format. Matplotlib is optional: generating its style does not require it. The optional renderer loads that style and produces separate PNG/SVG charts; the default authored SVG examples are not Matplotlib renders.
+
+## What a run contains
+
+Each run preserves the original input under `source/` and records its SHA-256 in `provenance.json`. The main artifacts are:
+
+| Artifact | Purpose |
+| --- | --- |
+| `palette.toml`, `palette.txt`, `palette.css`, `palette.png` | Canonical 32 colors and swatches |
+| `candidates.json`, `selection.json` | Observed candidates, selection diagnostics and background choice |
+| `semantics.json` | Role references and findings, including unavailable conventional hues |
+| `<target>/tokens.json`, `<target>/validation.json` | Derived tokens, canonical origins, aliases, omissions and declared contrast checks |
+| `review.html` | Offline palette/token report with links to target examples |
+| `run.json` | Run summary, target list, findings and acceptance status |
+
+Import retains legacy role mappings in provenance while assigning current roles separately. Hex is authoritative when an imported palette includes multiple color representations.
+
+Use `--config profiles.toml` for extraction settings, semantic choices and target budgets; omitted profiles use engine defaults. Use `--compare PATH` to compare a previous 32-color palette, and `--json` for a structured stdout summary. `--strict` returns exit 2 when declared contrast checks fail, after writing the completed results for review. Processing failures return exit 1; see the [command contract](docs/COMMAND-CONTRACT.md).
+
+Choose a fresh output directory for each revision. Existing directories require `--overwrite`; nonempty directories without a pipeline `run.json` are refused. Builds are staged before replacement, and failed replacement restores the previous run. Successful overwrite replaces that run, so keep dated directories when prior results must remain recoverable.
+
+## Color selection and readability
+
+ImageMagick applies orientation and embedded ICC conversion to sRGB. The export working space is 8-bit sRGB; original bytes, including 16-bit inputs, are retained. Sampling uses at most 65,536 visible pixels with a fixed seed, ignores fully transparent pixels and weights partial opacity. Animated inputs use the first frame. Unprofiled CMYK is rejected; unprofiled RGB is treated as sRGB.
+
+Population-weighted OKLab clustering supplies up to 192 observed candidates. Selection combines perceptual medoids, dark/light anchors and population-aware diversity. Near-black representatives with all sRGB channels at most 12 are coalesced into one observed anchor when enough alternatives remain. Inputs with insufficient distinct colors fail rather than receiving invented canonical colors. Coverage diagnostics describe the sample, not every image pixel or human aesthetic quality.
+
+Semantic mapping uses hue suitability rather than positional accent IDs. The default background favors an observed chromatic dark surface near OKLCH lightness .20 within .12–.32; grayscale palettes use neutral surfaces, and missing dark candidates produce a reported fallback. `[semantics] background_mode = "darkest"` opts into the darkest-color policy; explicit `[overrides]` take precedence. Target adaptation adjusts lightness/chroma while preserving source hue, with gamut mapping and requested OKLCH recorded. RGB quantization can slightly shift the measured hue.
+
+Declared checks use WCAG 2 ratios: 4.5:1 for text and 3:1 for specified boundaries, cursors and chart marks. They do not cover every runtime state. Narrow palettes can alias status or series colors, so charts also need labels and patterns. Sequential intensity stops do not guarantee adjacent-color contrast. APCA, color-vision simulations and perceptual category-separation guarantees are not implemented.
+
+## Logo utilities
+
+These commands are independent of theme generation:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\Convert-to-ICO.py --input image.png --output icon.ico
+.\.venv\Scripts\python.exe scripts\Convert-to-SVG.py --input image.png --output wrapped.svg
+.\.venv\Scripts\python.exe scripts\Convert-to-SVG.py --input image.png --output traced.svg --mode trace --vtracer 'C:\path\vtracer.exe'
+.\.venv\Scripts\python.exe scripts\generate_atlas.py
+```
+
+Converters support collision checks; SVG defaults to an embedded raster, not a vector trace. Trace mode requires VTracer and never silently falls back. The atlas reads `assets/logos.json` and available catalog files, then writes `assets/palette-atlas.html`. It requires the local asset collection.
+
+## Validation, layout and recovery
+
+Run the focused pipeline/converter suite:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+The latest recorded suite passed 20 tests, including ten-target exports, canonical preservation, deterministic regeneration, budgets, contrast and converter safeguards. Seven visual examples passed browser checks; the Matplotlib 3.11.2 Agg renderer loaded the style and produced three chart examples. Evidence is in [visual-target acceptance](migration/visual-target-acceptance.json). PowerPoint opening/rendering without repair is recorded separately in [metadata-repair evidence](migration/powerpoint-metadata-repair.json); edit/save/reopen acceptance remains unverified. Native import/rendering for the new editor targets and SVG editors, and Prism grammar integration, remain pending. These checks do not establish release readiness or theme installation/publication.
+
+`apt_theme/` contains the engine and exporters; `scripts/` contains asset utilities; `tests/` contains focused regression tests; `tools/` contains migration, verification, metadata repair and optional visual-render helpers. `pilot/` preserves dated runs. `legacy-tools/` preserves earlier implementations, including transformer tests, rather than advertising them as current targets. `migration/` holds inventories, evidence and verified recovery archives.
+
+The [documentation suite](docs/documentation-suite/PLAN.md) is a plan, not a completed handbook. Historical pilot outputs and the existing Writerside snapshot remain dated evidence. [Migration and recovery](migration/README.md) explains archive hashes, restoration, Git LFS and the preserved pre-conversion Git bundle. Project identity, ownership and governance are recorded in [the manifest](Logos-And-Theming.manifest.toml), [Project-README](Project-README.md) and [proposal](Project-Proposal.md).
