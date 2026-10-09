@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bash syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-sql.html">Previous</a><a href="syntax-powershell.html">Next</a></nav><h1>Bash / syntax review</h1><p>Functions, arrays, quoting, parameter expansion, conditionals and pipelines.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.sh" href="data:text/plain;base64,IyEvdXNyL2Jpbi9lbnYgYmFzaAojIFJlYWQtb25seSBpbGx1c3RyYXRpdmUgc291cmNlIGxpc3Rpbmc7IGRpc3BsYXllZCwgbm90IHJ1bi4Kc2V0IC1ldW8gcGlwZWZhaWwKCnJlYWRvbmx5IEVYUEVDVEVEX0NPVU5UPTMyCmxhYmVscz0oIk9ic2VydmVkIGNvbG9ycyIgIlNlbWFudGljIHJvbGVzIiAiVGFyZ2V0IHRva2VucyIpCnNvdXJjZV9kaXI9IiR7MTotLi9zb3VyY2V9IgoKZGVzY3JpYmVfZmlsZSgpIHsKICAgIGxvY2FsIGZpbGU9IiQxIgogICAgbG9jYWwgbmFtZT0iJHtmaWxlIyMqL30iCiAgICBwcmludGYgJ1NvdXJjZTogJXNcbicgIiRuYW1lIgogICAgaWYgW1sgLWYgIiRmaWxlIiBdXTsgdGhlbgogICAgICAgIHdjIC1jIDwgIiRmaWxlIgogICAgZWxzZQogICAgICAgIHByaW50ZiAnTWlzc2luZyBzb3VyY2VcbicgPiYyCiAgICAgICAgcmV0dXJuIDEKICAgIGZpCn0KCmZvciBsYWJlbCBpbiAiJHtsYWJlbHNbQF19IjsgZG8KICAgIHByaW50ZiAnJXMgLyBleHBlY3RlZCAlZCBjb2xvcnNcbicgIiRsYWJlbCIgIiRFWFBFQ1RFRF9DT1VOVCIKZG9uZQoKaWYgW1sgLWQgIiRzb3VyY2VfZGlyIiBdXTsgdGhlbgogICAgZmluZCAiJHNvdXJjZV9kaXIiIC1tYXhkZXB0aCAxIC10eXBlIGYgLXByaW50IHwKICAgICAgICB3aGlsZSBJRlM9IHJlYWQgLXIgZmlsZTsgZG8KICAgICAgICAgICAgZGVzY3JpYmVfZmlsZSAiJGZpbGUiCiAgICAgICAgZG9uZQplbHNlCiAgICBwcmludGYgJ05vIHNvdXJjZSBkaXJlY3Rvcnk6ICVzXG4nICIkc291cmNlX2RpciIgPiYyCmZpCg==">Download source</a><pre tabindex="0" aria-label="Bash source" class="language-bash"><code data-source="sources/palette.sh" class="language-bash">#!/usr/bin/env bash
+# Read-only illustrative source listing; displayed, not run.
+set -euo pipefail
+
+readonly EXPECTED_COUNT=32
+labels=(&quot;Observed colors&quot; &quot;Semantic roles&quot; &quot;Target tokens&quot;)
+source_dir=&quot;${1:-./source}&quot;
+
+describe_file() {
+    local file=&quot;$1&quot;
+    local name=&quot;${file##*/}&quot;
+    printf &#x27;Source: %s\n&#x27; &quot;$name&quot;
+    if [[ -f &quot;$file&quot; ]]; then
+        wc -c &lt; &quot;$file&quot;
+    else
+        printf &#x27;Missing source\n&#x27; &gt;&amp;2
+        return 1
+    fi
+}
+
+for label in &quot;${labels[@]}&quot;; do
+    printf &#x27;%s / expected %d colors\n&#x27; &quot;$label&quot; &quot;$EXPECTED_COUNT&quot;
+done
+
+if [[ -d &quot;$source_dir&quot; ]]; then
+    find &quot;$source_dir&quot; -maxdepth 1 -type f -print |
+        while IFS= read -r file; do
+            describe_file &quot;$file&quot;
+        done
+else
+    printf &#x27;No source directory: %s\n&#x27; &quot;$source_dir&quot; &gt;&amp;2
+fi
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

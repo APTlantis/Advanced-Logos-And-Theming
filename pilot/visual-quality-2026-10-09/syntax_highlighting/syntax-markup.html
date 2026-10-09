@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-cpp.html">Previous</a><a href="syntax-css.html">Next</a></nav><h1>HTML / syntax review</h1><p>Semantic markup, attributes, embedded CSS and embedded JavaScript displayed as source.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.html" href="data:text/plain;base64,PCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgPG1ldGEgY2hhcnNldD0idXRmLTgiPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSI+CiAgPHRpdGxlPklsbHVzdHJhdGl2ZSBwYWxldHRlIHJldmlldzwvdGl0bGU+CiAgPHN0eWxlPgogICAgLyogRW1iZWRkZWQgbGFuZ3VhZ2VzIGV4ZXJjaXNlIFByaXNtJ3MgbWFya3VwIGdyYW1tYXIuICovCiAgICAuc3dhdGNoZXMgeyBkaXNwbGF5OiBmbGV4OyBnYXA6IDFyZW07IH0KICAgIC5zd2F0Y2hlcyBsaSB7IGJvcmRlcjogMXB4IHNvbGlkIGN1cnJlbnRDb2xvcjsgcGFkZGluZzogMXJlbTsgfQogIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CiAgPGhlYWRlcj4KICAgIDxoMT5QYWxldHRlIHJldmlldzwvaDE+CiAgICA8cD5JbGx1c3RyYXRpdmUgZW50cmllcyAmYW1wOyBzb3VyY2UgbGFiZWxzLjwvcD4KICA8L2hlYWRlcj4KICA8bWFpbj4KICAgIDx1bCBjbGFzcz0ic3dhdGNoZXMiIGFyaWEtbGFiZWw9Ik9ic2VydmVkIGNvbG9ycyI+CiAgICAgIDxsaSBkYXRhLWNvbG9yLWlkPSJjb2xvcl8wMSI+RGFyayBzdXJmYWNlPC9saT4KICAgICAgPGxpIGRhdGEtY29sb3ItaWQ9ImNvbG9yXzAyIj5QcmltYXJ5IGFjY2VudDwvbGk+CiAgICA8L3VsPgogICAgPG91dHB1dCBpZD0iY291bnQiPlR3byBpbGx1c3RyYXRpdmUgZW50cmllczwvb3V0cHV0PgogIDwvbWFpbj4KICA8c2NyaXB0PgogICAgLy8gVGhpcyBzY3JpcHQgaXMgc291cmNlIHRleHQgaW4gdGhlIHJldmlldywgbmV2ZXIgZXhlY3V0YWJsZSBtYXJrdXAuCiAgICBjb25zdCBlbnRyaWVzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiW2RhdGEtY29sb3ItaWRdIik7CiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCIjY291bnQiKS50ZXh0Q29udGVudCA9IGAke2VudHJpZXMubGVuZ3RofSBlbnRyaWVzYDsKICAgIHdpbmRvdy5zYW1wbGVFeGVjdXRlZCA9IHRydWU7CiAgPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPgo=">Download source</a><pre tabindex="0" aria-label="HTML source" class="language-markup"><code data-source="sources/palette.html" class="language-markup">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;Illustrative palette review&lt;/title&gt;
+  &lt;style&gt;
+    /* Embedded languages exercise Prism&#x27;s markup grammar. */
+    .swatches { display: flex; gap: 1rem; }
+    .swatches li { border: 1px solid currentColor; padding: 1rem; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Palette review&lt;/h1&gt;
+    &lt;p&gt;Illustrative entries &amp;amp; source labels.&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;ul class=&quot;swatches&quot; aria-label=&quot;Observed colors&quot;&gt;
+      &lt;li data-color-id=&quot;color_01&quot;&gt;Dark surface&lt;/li&gt;
+      &lt;li data-color-id=&quot;color_02&quot;&gt;Primary accent&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;output id=&quot;count&quot;&gt;Two illustrative entries&lt;/output&gt;
+  &lt;/main&gt;
+  &lt;script&gt;
+    // This script is source text in the review, never executable markup.
+    const entries = document.querySelectorAll(&quot;[data-color-id]&quot;);
+    document.querySelector(&quot;#count&quot;).textContent = `${entries.length} entries`;
+    window.sampleExecuted = true;
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JavaScript syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-toml.html">Previous</a><a href="syntax-typescript.html">Next</a></nav><h1>JavaScript / syntax review</h1><p>Classes, private fields, array transforms, template interpolation and regular expressions.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.js" href="data:text/plain;base64,Ly8gSWxsdXN0cmF0aXZlIGRhdGE6IHRoZXNlIGV4YW1wbGVzIGFyZSBkaXNwbGF5ZWQsIG5ldmVyIGV4ZWN1dGVkLgpjb25zdCBIRVhfQ09MT1IgPSAvXiNbMC05YS1mXXs2fSQvaTsKY29uc3QgREVGQVVMVF9MSU1JVCA9IDMyOwoKY2xhc3MgUGFsZXR0ZSB7CiAgI2NvbG9yczsKCiAgY29uc3RydWN0b3IobmFtZSwgY29sb3JzID0gW10pIHsKICAgIHRoaXMubmFtZSA9IG5hbWU7CiAgICB0aGlzLiNjb2xvcnMgPSBjb2xvcnMuZmlsdGVyKGNvbG9yID0+IEhFWF9DT0xPUi50ZXN0KGNvbG9yLmhleCkpOwogIH0KCiAgZ2V0IGNvdW50KCkgewogICAgcmV0dXJuIHRoaXMuI2NvbG9ycy5sZW5ndGg7CiAgfQoKICBkZXNjcmliZShsaW1pdCA9IERFRkFVTFRfTElNSVQpIHsKICAgIGNvbnN0IGVudHJpZXMgPSB0aGlzLiNjb2xvcnMuc2xpY2UoMCwgbGltaXQpOwogICAgcmV0dXJuIGVudHJpZXMubWFwKCh7IGlkLCBoZXggfSwgaW5kZXgpID0+ICh7CiAgICAgIGxhYmVsOiBgJHtpbmRleCArIDF9OiAke2lkfWAsCiAgICAgIHZhbHVlOiBoZXgudG9VcHBlckNhc2UoKSwKICAgICAgc2VsZWN0ZWQ6IGluZGV4ID09PSAwLAogICAgfSkpOwogIH0KfQoKY29uc3QgcGFsZXR0ZSA9IG5ldyBQYWxldHRlKCJJbGx1c3RyYXRpdmUgcGFsZXR0ZSIsIFsKICB7IGlkOiAiY29sb3JfMDEiLCBoZXg6ICIjMzAyODIwIiB9LAogIHsgaWQ6ICJjb2xvcl8wMiIsIGhleDogIiNDOEE4NjgiIH0sCl0pOwoKY29uc29sZS5sb2coYCR7cGFsZXR0ZS5uYW1lfTogJHtwYWxldHRlLmNvdW50fSBjb2xvcnNgKTsKY29uc29sZS50YWJsZShwYWxldHRlLmRlc2NyaWJlKCkpOwo=">Download source</a><pre tabindex="0" aria-label="JavaScript source" class="language-javascript"><code data-source="sources/palette.js" class="language-javascript">// Illustrative data: these examples are displayed, never executed.
+const HEX_COLOR = /^#[0-9a-f]{6}$/i;
+const DEFAULT_LIMIT = 32;
+
+class Palette {
+  #colors;
+
+  constructor(name, colors = []) {
+    this.name = name;
+    this.#colors = colors.filter(color =&gt; HEX_COLOR.test(color.hex));
+  }
+
+  get count() {
+    return this.#colors.length;
+  }
+
+  describe(limit = DEFAULT_LIMIT) {
+    const entries = this.#colors.slice(0, limit);
+    return entries.map(({ id, hex }, index) =&gt; ({
+      label: `${index + 1}: ${id}`,
+      value: hex.toUpperCase(),
+      selected: index === 0,
+    }));
+  }
+}
+
+const palette = new Palette(&quot;Illustrative palette&quot;, [
+  { id: &quot;color_01&quot;, hex: &quot;#302820&quot; },
+  { id: &quot;color_02&quot;, hex: &quot;#C8A868&quot; },
+]);
+
+console.log(`${palette.name}: ${palette.count} colors`);
+console.table(palette.describe());
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

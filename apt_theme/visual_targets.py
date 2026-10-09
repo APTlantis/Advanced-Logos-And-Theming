@@ -93,106 +93,8 @@ def diagrams(tokens, directory):
     return examples + ["orbit-map.svg"]
 
 
-def syntax(tokens, directory):
-    from .targets import css_tokens
-    css = css_tokens(tokens) + """
-pre[class*='language-'], code[class*='language-'] {
- color:var(--apt-foreground); background:var(--apt-panel);
- font-family:Consolas, monospace; text-shadow:none; line-height:1.65;
- white-space:pre; tab-size:4;
-}
-pre[class*='language-'] { padding:24px; overflow:auto; }
-pre[class*='language-'] ::selection, code[class*='language-']::selection {
- background:var(--apt-selection); color:var(--apt-selection-text);
-}
-.token.bold, .token.important { font-weight:bold; }
-.token.italic { font-style:italic; }
-"""
-    for classes, key in PRISM.items():
-        fallback = {"diff_added": "success", "diff_deleted": "error"}
-        token = key if key in tokens else fallback[key]
-        selectors = ", ".join(".token." + cls for cls in classes.split())
-        css += f"{selectors} {{ color:var(--apt-{token.replace('_', '-')}); }}\n"
-    (directory / "prism.css").write_text(css, encoding="utf-8")
-    # Authored tokens deliberately avoid claiming a language grammar was executed.
-    code = [('comment', '// Authored JavaScript token fixture; illustrative'), ('', '\n'),
-            ('keyword', 'class'), ('', ' '), ('class-name', 'Palette'), ('punctuation', ' {'), ('', '\n  '),
-            ('function', 'count'), ('punctuation', '() {'), ('', '\n    '), ('keyword', 'const'), ('', ' '),
-            ('property', 'name'), ('operator', ' = '), ('string', '"Aptlantis"'), ('punctuation', ';'),
-            ('', '\n    '), ('keyword', 'return'), ('', ' '), ('number', '32'), ('operator', ' + '),
-            ('constant', 'OFFSET'), ('punctuation', ';'), ('', '\n  '), ('punctuation', '}'),
-            ('', '\n'), ('punctuation', '}')]
-    markup = ''.join(f'<span class="token {cls}">{html.escape(value)}</span>' if cls else html.escape(value)
-                     for cls, value in code)
-    page = ('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            '<title>Syntax example</title><style>' + css +
-            'body{background:var(--apt-background);color:var(--apt-foreground);font:18px Arial;padding:32px}'
-            '</style><h1>Syntax highlighting</h1><p>Prism CSS contract. Authored tokens; no grammar engine is bundled.</p>'
-            '<pre class="language-javascript"><code class="language-javascript">' + markup + '</code></pre></html>')
-    (directory / "syntax-example.html").write_text(page, encoding="utf-8")
-    return ["syntax-example.html"]
-
-
-def charts(tokens, directory, name):
-    from .targets import slug
-    slots = {"figure.facecolor": "background", "savefig.facecolor": "background",
-             "axes.facecolor": "panel", "axes.edgecolor": "border", "axes.labelcolor": "foreground",
-             "text.color": "foreground", "xtick.color": "muted", "ytick.color": "muted",
-             "grid.color": "border", "legend.facecolor": "panel", "legend.edgecolor": "border"}
-    # Matplotlibrc treats # as a comment; bare six-digit hex is its color syntax.
-    style = "# Image-derived dark style. Illustrative samples do not prove Matplotlib rendering.\n"
-    style += ''.join(f'{slot}: {tokens[token]["hex"][1:]}\n' for slot, token in slots.items())
-    colors = [tokens[f"series_{i}"]["hex"][1:] for i in range(1, 7)]
-    style += "axes.prop_cycle: cycler('color', " + repr(colors) + ") + cycler('linestyle', ['-', '--', ':', '-.', '-', '--'])\n"
-    style += "axes.grid: True\ngrid.alpha: 1.0\ngrid.linewidth: 0.6\nlines.linewidth: 2.5\nfont.size: 11\nsavefig.transparent: False\n"
-    (directory / (slug(name) + ".mplstyle")).write_text(style, encoding="utf-8")
-    scale = [tokens[f"sequential_{i}"]["hex"] for i in range(9)]
-    (directory / "scales.json").write_text(json.dumps({"sequential": scale,
-        "acceptance_limits": "Single source hue, ordered lightness; no perceptual-uniformity or CVD claim."}, indent=2)+"\n", encoding="utf-8")
-    data = {"categories": ["A", "B", "C", "D"], "bars": [28, 44, 36, 62],
-            "lines": [[18, 34, 26, 52], [38, 28, 48, 42]],
-            "heatmap": [[0, 1, 4, 6], [2, 5, 7, 8], [1, 3, 6, 4]], "illustrative": True}
-    (directory / "example-data.json").write_text(json.dumps(data, indent=2)+"\n", encoding="utf-8")
-    b = Board(tokens, "Category comparison / bars", "Illustrative units • zero baseline • direct value labels")
-    b.rect(95, 115, 810, 310)
-    for value in (0, 20, 40, 60, 80):
-        y = 420 - value * 3.5
-        b.line(95, y, 905, y, **{"stroke-width": "1"})
-        b.text(60, y+5, value, "muted", 15)
-    for i, value in enumerate(data["bars"]):
-        x = 150 + i * 190
-        b.rect(x, 420-value*3.5, 100, value*3.5, f"series_{i+1}")
-        b.text(x+50, 405-value*3.5, value, "foreground", 18, **{"text-anchor": "middle"})
-        b.text(x+50, 455, data["categories"][i], "foreground", 18, **{"text-anchor": "middle"})
-    b.save(directory / "bars.svg")
-    b = Board(tokens, "Change over time / lines", "Illustrative units • labeled series and distinct line patterns")
-    b.rect(95, 115, 810, 310)
-    for value in (0, 20, 40, 60, 80):
-        y = 420-value*3.5
-        b.line(95, y, 905, y, **{"stroke-width": "1"})
-        b.text(60, y+5, value, "muted", 15)
-    for i, values in enumerate(data["lines"], 1):
-        points = [(145+j*215, 420-v*3.5) for j, v in enumerate(values)]
-        ET.SubElement(b.root, "polyline", points=' '.join(f'{x},{y}' for x,y in points), fill="none",
-                      stroke=b.color(f"series_{i}"), **{"stroke-width": "4", "stroke-dasharray": "none" if i == 1 else "12 8"})
-        for (x,y), v in zip(points, values):
-            b.rect(x-4, y-4, 8, 8, f"series_{i}")
-        b.text(805, points[-1][1]-12, f"Series {i}", "foreground", 16)
-    for i in range(4):
-        b.text(145+i*215, 455, f"Period {i+1}", "muted", 16, **{"text-anchor": "middle"})
-    b.save(directory / "lines.svg")
-    b = Board(tokens, "Ordered intensity / heatmap", "Illustrative level 0–8 • single hue • values shown below cells")
-    for r, row in enumerate(data["heatmap"]):
-        b.text(40, 162+r*90, f"Row {r+1}", "muted", 16)
-        for c, value in enumerate(row):
-            x, y = 150+c*180, 115+r*90
-            b.rect(x, y, 140, 50, f"sequential_{value}")
-            b.text(x+70, y+73, value, "foreground", 17, **{"text-anchor": "middle"})
-    for i in range(9):
-        b.rect(150+i*70, 425, 70, 28, f"sequential_{i}")
-        b.text(185+i*70, 480, i, "muted", 16, **{"text-anchor": "middle"})
-    b.save(directory / "heatmap.svg")
-    return ["bars.svg", "lines.svg", "heatmap.svg"]
+from .syntax_examples import syntax
+from .chart_examples import charts
 
 
 def export_visual(result, directory, name):
@@ -202,12 +104,17 @@ def export_visual(result, directory, name):
         result["acceptance_limits"] = "Standalone SVG presentation attributes; SVG editor import/font substitution pending."
     elif target == "syntax_highlighting":
         result["examples"] = syntax(tokens, directory)
-        result["acceptance_limits"] = "Prism CSS classes; authored visual fixture only. Grammar execution and host integration pending."
+        result["acceptance_limits"] = "Bundled Prism 1.30.0 core and twelve language grammars; offline browser highlighting. Host integration and native editor behavior require separate review."
     else:
         result["examples"] = charts(tokens, directory, name)
-        result["acceptance_limits"] = "Matplotlib mplstyle plus explicit JSON scale; SVG examples are authored independently. Matplotlib loading/rendering pending; no CVD or category-separation guarantee."
+        result["acceptance_limits"] = "Matplotlib mplstyle plus explicit JSON scale; SVG examples are authored independently. Optional Matplotlib renderer requires separate verification; no CVD or category-separation guarantee."
+    if target == 'syntax_highlighting':
+        return
     links = ''.join(f'<li><a href="{file}">{file}</a></li>' for file in result["examples"])
     (directory / "examples.html").write_text(
         '<!doctype html><html lang="en"><meta charset="utf-8"><title>Visual examples</title>'
-        '<h1>'+html.escape(name)+' / '+target+'</h1><p>'+html.escape(result["acceptance_limits"])+
-        '</p><ul>'+links+'</ul></html>', encoding="utf-8")
+        '<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="examples.css"><main><h1>'+html.escape(name)+' / '+target+'</h1><p>'+html.escape(result["acceptance_limits"])+
+        '</p><ul>'+links+'</ul>' + ('<p><a href="heatmap-values.html">Heatmap value table</a></p><div class="scroll"><object data="bars.svg" type="image/svg+xml" aria-label="Bar chart"></object><object data="lines.svg" type="image/svg+xml" aria-label="Line chart"></object><object data="heatmap.svg" type="image/svg+xml" aria-label="Heatmap"></object></div>' if target == 'data_visualization' else '') + '</main></html>', encoding="utf-8")
+
+    from .targets import css_tokens
+    (directory / 'examples.css').write_text(css_tokens(tokens) + "body{background:var(--apt-background);color:var(--apt-foreground);font:17px/1.6 Arial;margin:0}main{max-width:1100px;margin:auto;padding:24px}a{color:var(--apt-primary)}a:focus-visible{outline:3px solid var(--apt-primary)}.scroll{overflow:auto}object{display:block;width:100%;min-width:700px;aspect-ratio:960/540;margin:24px 0}table{border-collapse:collapse}th,td{border:1px solid var(--apt-border);padding:8px;text-align:right}th{background:var(--apt-panel)}", encoding='utf-8')

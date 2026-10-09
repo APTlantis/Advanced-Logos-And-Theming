@@ -1,0 +1,31 @@
+# Illustrative metadata, not an engine profile.
+title = "Palette review"
+illustrative = true
+canonical_count = 32
+review_date = 2026-10-09
+
+[source]
+file = "artwork.png"
+preserved = true
+dimensions = [960, 540]
+description = """
+Original artwork is preserved.
+Semantic mappings are separate artifacts.
+"""
+
+[review]
+status = "pending"
+limits = { native_import = false, browser_preview = true }
+tags = ["local", "dark", "illustrative"]
+
+[[colors]]
+id = "color_01"
+hex = "#302820"
+weight = 0.6
+observed = true
+
+[[colors]]
+id = "color_02"
+hex = "#C8A868"
+weight = 0.4
+observed = true

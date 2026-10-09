@@ -1,0 +1,1201 @@
+{
+  "renderer": "Chromium headless",
+  "browser_version": "154.0.8037.98",
+  "node_version": "v24.19.0",
+  "checks": [
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-javascript.html",
+      "title": "JavaScript syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "javascript",
+        "registered": true,
+        "tokens": 183,
+        "source_file": "sources/palette.js",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "class-name",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          },
+          {
+            "class": "property",
+            "role": "constant",
+            "color": "rgb(115, 221, 234)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "35a0741e603ed9a4c6cdfbcb488a269a81e42f9900792c7ed484e9428d5b937b",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-typescript.html",
+      "title": "TypeScript syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "typescript",
+        "registered": true,
+        "tokens": 181,
+        "source_file": "sources/palette.ts",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "class-name",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "8cd0e0e98c42da9ad728c8c2524d39970dddf35cd150e2469209202a1f008c8c",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-python.html",
+      "title": "Python syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "python",
+        "registered": true,
+        "tokens": 155,
+        "source_file": "sources/palette.py",
+        "colors": [
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "class-name",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "8c45d8a9f187f6e03a58f029c30171ce41c703214c02064707456197a21a7fe8",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-csharp.html",
+      "title": "C# syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "csharp",
+        "registered": true,
+        "tokens": 169,
+        "source_file": "sources/Palette.cs",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "class-name",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "2b306080bfc6fa1945dbcef3ecb54905fa9053cc48271bd766d6b4b1ba415b7e",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-cpp.html",
+      "title": "C++ syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "cpp",
+        "registered": true,
+        "tokens": 164,
+        "source_file": "sources/palette.cpp",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "class-name",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "9ed5b20faf976a2b02cdec61bb07031448112e2b15a73e9a2306c72c94ae0f44",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-markup.html",
+      "title": "HTML syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "markup",
+        "registered": true,
+        "tokens": 223,
+        "source_file": "sources/palette.html",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "property",
+            "role": "constant",
+            "color": "rgb(115, 221, 234)"
+          },
+          {
+            "class": "selector",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "edef4fd752a326e8370741e8eed25e4567b7c1d2db73d67a67c84a24b08fedc1",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-css.html",
+      "title": "CSS syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "css",
+        "registered": true,
+        "tokens": 90,
+        "source_file": "sources/palette.css",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "property",
+            "role": "constant",
+            "color": "rgb(115, 221, 234)"
+          },
+          {
+            "class": "selector",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "4f07e1c74c15f7849a5ccf7efef68bdce961ef2a0242914d42b825025c028177",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-json.html",
+      "title": "JSON syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "json",
+        "registered": true,
+        "tokens": 101,
+        "source_file": "sources/palette.json",
+        "colors": [
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "property",
+            "role": "constant",
+            "color": "rgb(115, 221, 234)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "244148da15ebff9ad9ad67826b1f7052951f0dde701571caa2217c131d36d1ba",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-sql.html",
+      "title": "SQL syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "sql",
+        "registered": true,
+        "tokens": 82,
+        "source_file": "sources/palette.sql",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "d31c26ae67c52703abad97ff91cde4aa95d46988dbb23d93fef4268c2c64197f",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-bash.html",
+      "title": "Bash syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "bash",
+        "registered": true,
+        "tokens": 119,
+        "source_file": "sources/palette.sh",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "class-name",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "ace102faafc40cd876ee2047d2e5da594b9cd6635f1dbed3ebc5454ad776485d",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-powershell.html",
+      "title": "PowerShell syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "powershell",
+        "registered": true,
+        "tokens": 82,
+        "source_file": "sources/palette.ps1",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "keyword",
+            "role": "keyword",
+            "color": "rgb(137, 178, 167)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "function",
+            "role": "function",
+            "color": "rgb(189, 136, 93)"
+          },
+          {
+            "class": "operator",
+            "role": "operator",
+            "color": "rgb(59, 155, 198)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "9a7e92bb7bc42345df3198bf6a34afd1fe246661ec7b6e5d051763a3dcf786ce",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "syntax_highlighting",
+      "example": "syntax-toml.html",
+      "title": "TOML syntax review",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [],
+      "grammar": {
+        "language": "toml",
+        "registered": true,
+        "tokens": 92,
+        "source_file": "sources/palette.toml",
+        "colors": [
+          {
+            "class": "comment",
+            "role": "comment",
+            "color": "rgb(195, 134, 81)"
+          },
+          {
+            "class": "string",
+            "role": "string",
+            "color": "rgb(111, 149, 182)"
+          },
+          {
+            "class": "number",
+            "role": "number",
+            "color": "rgb(253, 239, 180)"
+          },
+          {
+            "class": "class-name",
+            "role": "type",
+            "color": "rgb(237, 175, 87)"
+          },
+          {
+            "class": "property",
+            "role": "constant",
+            "color": "rgb(115, 221, 234)"
+          }
+        ],
+        "sample_executed": false,
+        "scripts": [
+          "vendor/prism/prism-core.js",
+          "vendor/prism/prism-markup.js",
+          "vendor/prism/prism-css.js",
+          "vendor/prism/prism-clike.js",
+          "vendor/prism/prism-javascript.js",
+          "vendor/prism/prism-typescript.js",
+          "vendor/prism/prism-python.js",
+          "vendor/prism/prism-csharp.js",
+          "vendor/prism/prism-c.js",
+          "vendor/prism/prism-cpp.js",
+          "vendor/prism/prism-json.js",
+          "vendor/prism/prism-sql.js",
+          "vendor/prism/prism-bash.js",
+          "vendor/prism/prism-powershell.js",
+          "vendor/prism/prism-toml.js"
+        ]
+      },
+      "source_sha256": "8c436dbe97dc85e250d2e9d0758a4dc8613b475dc23d7fd446718221213a9de5",
+      "download_and_navigation": "passed",
+      "narrow_layout": "passed"
+    },
+    {
+      "target": "data_visualization",
+      "example": "bars.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "Category comparison / 12 bars",
+          "inside": true
+        },
+        {
+          "text": "Illustrative data • zero baseline • values and patterns supplement color",
+          "inside": true
+        },
+        {
+          "text": "0",
+          "inside": true
+        },
+        {
+          "text": "20",
+          "inside": true
+        },
+        {
+          "text": "40",
+          "inside": true
+        },
+        {
+          "text": "60",
+          "inside": true
+        },
+        {
+          "text": "80",
+          "inside": true
+        },
+        {
+          "text": "Illustrative units",
+          "inside": true
+        },
+        {
+          "text": "28",
+          "inside": true
+        },
+        {
+          "text": "Intake",
+          "inside": true
+        },
+        {
+          "text": "44",
+          "inside": true
+        },
+        {
+          "text": "Parse",
+          "inside": true
+        },
+        {
+          "text": "36",
+          "inside": true
+        },
+        {
+          "text": "Sample",
+          "inside": true
+        },
+        {
+          "text": "62",
+          "inside": true
+        },
+        {
+          "text": "Cluster",
+          "inside": true
+        },
+        {
+          "text": "53",
+          "inside": true
+        },
+        {
+          "text": "Select",
+          "inside": true
+        },
+        {
+          "text": "71",
+          "inside": true
+        },
+        {
+          "text": "Map",
+          "inside": true
+        },
+        {
+          "text": "46",
+          "inside": true
+        },
+        {
+          "text": "Adapt",
+          "inside": true
+        },
+        {
+          "text": "58",
+          "inside": true
+        },
+        {
+          "text": "Export",
+          "inside": true
+        },
+        {
+          "text": "39",
+          "inside": true
+        },
+        {
+          "text": "Check",
+          "inside": true
+        },
+        {
+          "text": "67",
+          "inside": true
+        },
+        {
+          "text": "Render",
+          "inside": true
+        },
+        {
+          "text": "51",
+          "inside": true
+        },
+        {
+          "text": "Review",
+          "inside": true
+        },
+        {
+          "text": "75",
+          "inside": true
+        },
+        {
+          "text": "Archive",
+          "inside": true
+        }
+      ],
+      "preview": "bars.png"
+    },
+    {
+      "target": "data_visualization",
+      "example": "lines.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "Change over time / 6 series",
+          "inside": true
+        },
+        {
+          "text": "Illustrative data • 24 weekly observations per series • distinct markers and patterns",
+          "inside": true
+        },
+        {
+          "text": "0",
+          "inside": true
+        },
+        {
+          "text": "20",
+          "inside": true
+        },
+        {
+          "text": "40",
+          "inside": true
+        },
+        {
+          "text": "60",
+          "inside": true
+        },
+        {
+          "text": "80",
+          "inside": true
+        },
+        {
+          "text": "Illustrative units",
+          "inside": true
+        },
+        {
+          "text": "Intake",
+          "inside": true
+        },
+        {
+          "text": "Extraction",
+          "inside": true
+        },
+        {
+          "text": "Mapping",
+          "inside": true
+        },
+        {
+          "text": "Export",
+          "inside": true
+        },
+        {
+          "text": "Validation",
+          "inside": true
+        },
+        {
+          "text": "Review",
+          "inside": true
+        },
+        {
+          "text": "Week 1",
+          "inside": true
+        },
+        {
+          "text": "Week 4",
+          "inside": true
+        },
+        {
+          "text": "Week 8",
+          "inside": true
+        },
+        {
+          "text": "Week 12",
+          "inside": true
+        },
+        {
+          "text": "Week 16",
+          "inside": true
+        },
+        {
+          "text": "Week 20",
+          "inside": true
+        },
+        {
+          "text": "Week 24",
+          "inside": true
+        }
+      ],
+      "preview": "lines.png"
+    },
+    {
+      "target": "data_visualization",
+      "example": "heatmap.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "Ordered intensity / 8 × 12 heatmap",
+          "inside": true
+        },
+        {
+          "text": "Illustrative monthly levels • single hue • exact values in the accompanying table",
+          "inside": true
+        },
+        {
+          "text": "North",
+          "inside": true
+        },
+        {
+          "text": "South",
+          "inside": true
+        },
+        {
+          "text": "East",
+          "inside": true
+        },
+        {
+          "text": "West",
+          "inside": true
+        },
+        {
+          "text": "Central",
+          "inside": true
+        },
+        {
+          "text": "Coastal",
+          "inside": true
+        },
+        {
+          "text": "Urban",
+          "inside": true
+        },
+        {
+          "text": "Rural",
+          "inside": true
+        },
+        {
+          "text": "Jan",
+          "inside": true
+        },
+        {
+          "text": "Feb",
+          "inside": true
+        },
+        {
+          "text": "Mar",
+          "inside": true
+        },
+        {
+          "text": "Apr",
+          "inside": true
+        },
+        {
+          "text": "May",
+          "inside": true
+        },
+        {
+          "text": "Jun",
+          "inside": true
+        },
+        {
+          "text": "Jul",
+          "inside": true
+        },
+        {
+          "text": "Aug",
+          "inside": true
+        },
+        {
+          "text": "Sep",
+          "inside": true
+        },
+        {
+          "text": "Oct",
+          "inside": true
+        },
+        {
+          "text": "Nov",
+          "inside": true
+        },
+        {
+          "text": "Dec",
+          "inside": true
+        },
+        {
+          "text": "0",
+          "inside": true
+        },
+        {
+          "text": "1",
+          "inside": true
+        },
+        {
+          "text": "2",
+          "inside": true
+        },
+        {
+          "text": "3",
+          "inside": true
+        },
+        {
+          "text": "4",
+          "inside": true
+        },
+        {
+          "text": "5",
+          "inside": true
+        },
+        {
+          "text": "6",
+          "inside": true
+        },
+        {
+          "text": "7",
+          "inside": true
+        },
+        {
+          "text": "8",
+          "inside": true
+        },
+        {
+          "text": "Illustrative level",
+          "inside": true
+        },
+        {
+          "text": "0 = lowest intensity; 8 = highest intensity. Values: heatmap-values.html",
+          "inside": true
+        }
+      ],
+      "preview": "heatmap.png"
+    }
+  ],
+  "blocked_network_requests": [],
+  "errors": [],
+  "native_editor_acceptance": "pending",
+  "heatmap_table": "96 matching values",
+  "review_gallery": "Links, images and narrow layout passed",
+  "no_javascript_fallback": "Readable escaped source"
+}

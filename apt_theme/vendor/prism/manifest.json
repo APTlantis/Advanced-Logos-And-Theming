@@ -1,0 +1,123 @@
+{
+  "name": "Prism",
+  "version": "1.30.0",
+  "license": "MIT",
+  "languages": [
+    "markup",
+    "css",
+    "javascript",
+    "typescript",
+    "python",
+    "csharp",
+    "cpp",
+    "json",
+    "sql",
+    "bash",
+    "powershell",
+    "toml"
+  ],
+  "load_order": [
+    "prism-core.js",
+    "prism-markup.js",
+    "prism-css.js",
+    "prism-clike.js",
+    "prism-javascript.js",
+    "prism-typescript.js",
+    "prism-python.js",
+    "prism-csharp.js",
+    "prism-c.js",
+    "prism-cpp.js",
+    "prism-json.js",
+    "prism-sql.js",
+    "prism-bash.js",
+    "prism-powershell.js",
+    "prism-toml.js"
+  ],
+  "files": [
+    {
+      "file": "LICENSE",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/LICENSE",
+      "sha256": "2b947f0901a7ffcf08a89957da9783c0e9c6e72cb6ce8e959f501ab5409e4d2b"
+    },
+    {
+      "file": "components.json",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components.json",
+      "sha256": "fdbfb02831a85a2f233cb8b2254fe8dd283fa780533820ed8ccc888c09982554"
+    },
+    {
+      "file": "prism-core.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-core.js",
+      "sha256": "6fe39cc3a95b3da596218fbca3acf03f1208bc936f9fb84d08a2b4a61e2b9af7"
+    },
+    {
+      "file": "prism-markup.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-markup.js",
+      "sha256": "981ea1865e1dbe304b661196fac6a6103b4ab19080c58c5b5d8ef2767e905df4"
+    },
+    {
+      "file": "prism-css.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-css.js",
+      "sha256": "f802a0b3827470dadbbf2841cabd6832fc2d28124ded564d9a590285c627d65d"
+    },
+    {
+      "file": "prism-clike.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-clike.js",
+      "sha256": "6a7e077bbcb4a2259bc3152e55681f804ec8a3c2b969f234bb220df0f2d79654"
+    },
+    {
+      "file": "prism-javascript.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-javascript.js",
+      "sha256": "7be3e7caf699bfddcd6d94d01e9df233257477f7f521e6c6765f03bd936a2d3e"
+    },
+    {
+      "file": "prism-typescript.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-typescript.js",
+      "sha256": "9a5181760da3863cb8d414bc756f48853320df224c16bf9f5af2541131bc9412"
+    },
+    {
+      "file": "prism-python.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-python.js",
+      "sha256": "fd84d8bedf516b82f1b212fc059d280f8f2ca7230bef6408bea6b5ce4e8e68f4"
+    },
+    {
+      "file": "prism-csharp.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-csharp.js",
+      "sha256": "c37f21bfb5e3599db2e4adcc87062a955f01b086f40841ab42f913320ad90702"
+    },
+    {
+      "file": "prism-c.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-c.js",
+      "sha256": "326fe0f50c2f00c5c9cf741b693654e215017b5d16a86c1c7938455cc64b340b"
+    },
+    {
+      "file": "prism-cpp.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-cpp.js",
+      "sha256": "1f165e550a5545f8e6a32f82e5492273304b78b3495a5666101649d3585d6a0a"
+    },
+    {
+      "file": "prism-json.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-json.js",
+      "sha256": "835c44857c3f295f2c5bd70316006e455779da76287b0e14d93bbc995f658e4b"
+    },
+    {
+      "file": "prism-sql.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-sql.js",
+      "sha256": "c208fdd212ff69c123c252290d5c325375bfefb0f6c26523b463909606cf3567"
+    },
+    {
+      "file": "prism-bash.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-bash.js",
+      "sha256": "6c67db1a4c86269dc754b588d0ad3a0cdb295044fd466ea6f66bbf01dec306bd"
+    },
+    {
+      "file": "prism-powershell.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-powershell.js",
+      "sha256": "dd20d617bd4a01c5a51f0956714f8e5311920dcfcff05e4205c991374316fc30"
+    },
+    {
+      "file": "prism-toml.js",
+      "url": "https://raw.githubusercontent.com/PrismJS/prism/v1.30.0/components/prism-toml.js",
+      "sha256": "f61c3b348ad4a00b335540c0f83803416d802f1bf83fade8cfa8061407e3baf8"
+    }
+  ]
+}

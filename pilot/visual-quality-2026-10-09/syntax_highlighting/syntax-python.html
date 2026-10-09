@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-typescript.html">Previous</a><a href="syntax-csharp.html">Next</a></nav><h1>Python / syntax review</h1><p>Dataclasses, type annotations, comprehensions, exceptions and formatted strings.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.py" href="data:text/plain;base64,IiIiSWxsdXN0cmF0aXZlIHBhbGV0dGUgcmV2aWV3IHdpdGggaW1tdXRhYmxlIGVudHJpZXMuIiIiCmZyb20gZGF0YWNsYXNzZXMgaW1wb3J0IGRhdGFjbGFzcwppbXBvcnQgcmUKCkhFWF9DT0xPUiA9IHJlLmNvbXBpbGUociJeI1swLTlhLWZBLUZdezZ9JCIpCgoKQGRhdGFjbGFzcyhmcm96ZW49VHJ1ZSkKY2xhc3MgQ29sb3I6CiAgICBpZGVudGlmaWVyOiBzdHIKICAgIGhleDogc3RyCiAgICB3ZWlnaHQ6IGZsb2F0ID0gMC4wCgogICAgZGVmIGxhYmVsKHNlbGYpIC0+IHN0cjoKICAgICAgICByZXR1cm4gZiJ7c2VsZi5pZGVudGlmaWVyfToge3NlbGYuaGV4LnVwcGVyKCl9IgoKCmRlZiBzdW1tYXJpemUoY29sb3JzOiBsaXN0W0NvbG9yXSkgLT4gZGljdFtzdHIsIG9iamVjdF06CiAgICBpZiBhbnkobm90IEhFWF9DT0xPUi5mdWxsbWF0Y2goY29sb3IuaGV4KSBmb3IgY29sb3IgaW4gY29sb3JzKToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJFeHBlY3RlZCBzaXgtZGlnaXQgUkdCIGNvbG9ycyIpCiAgICBzZWxlY3RlZCA9IFtjb2xvci5sYWJlbCgpIGZvciBjb2xvciBpbiBjb2xvcnMgaWYgY29sb3Iud2VpZ2h0ID4gMF0KICAgIHJldHVybiB7ImNvdW50IjogbGVuKHNlbGVjdGVkKSwgImxhYmVscyI6IHNlbGVjdGVkLCAiaWxsdXN0cmF0aXZlIjogVHJ1ZX0KCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgcGFsZXR0ZSA9IFsKICAgICAgICBDb2xvcigiY29sb3JfMDEiLCAiIzMwMjgyMCIsIDAuNiksCiAgICAgICAgQ29sb3IoImNvbG9yXzAyIiwgIiNDOEE4NjgiLCAwLjQpLAogICAgXQogICAgdHJ5OgogICAgICAgIHByaW50KHN1bW1hcml6ZShwYWxldHRlKSkKICAgIGV4Y2VwdCBWYWx1ZUVycm9yIGFzIGVycm9yOgogICAgICAgIHByaW50KGYiUmV2aWV3IGZhaWxlZDoge2Vycm9yfSIpCg==">Download source</a><pre tabindex="0" aria-label="Python source" class="language-python"><code data-source="sources/palette.py" class="language-python">&quot;&quot;&quot;Illustrative palette review with immutable entries.&quot;&quot;&quot;
+from dataclasses import dataclass
+import re
+
+HEX_COLOR = re.compile(r&quot;^#[0-9a-fA-F]{6}$&quot;)
+
+
+@dataclass(frozen=True)
+class Color:
+    identifier: str
+    hex: str
+    weight: float = 0.0
+
+    def label(self) -&gt; str:
+        return f&quot;{self.identifier}: {self.hex.upper()}&quot;
+
+
+def summarize(colors: list[Color]) -&gt; dict[str, object]:
+    if any(not HEX_COLOR.fullmatch(color.hex) for color in colors):
+        raise ValueError(&quot;Expected six-digit RGB colors&quot;)
+    selected = [color.label() for color in colors if color.weight &gt; 0]
+    return {&quot;count&quot;: len(selected), &quot;labels&quot;: selected, &quot;illustrative&quot;: True}
+
+
+if __name__ == &quot;__main__&quot;:
+    palette = [
+        Color(&quot;color_01&quot;, &quot;#302820&quot;, 0.6),
+        Color(&quot;color_02&quot;, &quot;#C8A868&quot;, 0.4),
+    ]
+    try:
+        print(summarize(palette))
+    except ValueError as error:
+        print(f&quot;Review failed: {error}&quot;)
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

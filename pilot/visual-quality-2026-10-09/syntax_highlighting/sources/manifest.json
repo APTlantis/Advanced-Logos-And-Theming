@@ -1,0 +1,14 @@
+[
+  {"language":"javascript","title":"JavaScript","file":"palette.js","description":"Classes, private fields, array transforms, template interpolation and regular expressions."},
+  {"language":"typescript","title":"TypeScript","file":"palette.ts","description":"Typed records, generics, interfaces, union types and optional values."},
+  {"language":"python","title":"Python","file":"palette.py","description":"Dataclasses, type annotations, comprehensions, exceptions and formatted strings."},
+  {"language":"csharp","title":"C#","file":"Palette.cs","description":"Records, LINQ, nullable values, interpolation and pattern matching."},
+  {"language":"cpp","title":"C++","file":"palette.cpp","description":"Headers, structs, templates, lambdas, containers and stream output."},
+  {"language":"markup","title":"HTML","file":"palette.html","description":"Semantic markup, attributes, embedded CSS and embedded JavaScript displayed as source."},
+  {"language":"css","title":"CSS","file":"palette.css","description":"Custom properties, selectors, pseudo classes, functions and responsive rules."},
+  {"language":"json","title":"JSON","file":"palette.json","description":"Nested objects, arrays, strings, booleans, null and numeric values."},
+  {"language":"sql","title":"SQL","file":"palette.sql","description":"A common-table expression, aggregation, joins, CASE expressions and ordering."},
+  {"language":"bash","title":"Bash","file":"palette.sh","description":"Functions, arrays, quoting, parameter expansion, conditionals and pipelines."},
+  {"language":"powershell","title":"PowerShell","file":"palette.ps1","description":"Parameters, typed values, hashtables, pipelines and error handling."},
+  {"language":"toml","title":"TOML","file":"palette.toml","description":"Tables, arrays of tables, inline tables, dates and multiline strings."}
+]

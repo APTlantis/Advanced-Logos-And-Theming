@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Category comparison / 12 bars</title>
+  <desc id="desc">Illustrative data • zero baseline • values and patterns supplement color</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#0A1924" />
+  <text x="36" y="52" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="26">Category comparison / 12 bars</text>
+  <text x="36" y="84" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Illustrative data • zero baseline • values and patterns supplement color</text>
+  <rect x="85" y="115" width="825" height="305" fill="#18222A" />
+  <line x1="85" y1="420.0" x2="910" y2="420.0" stroke="#A66B35" stroke-width="1" />
+  <text x="65" y="425.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15" text-anchor="end">0</text>
+  <line x1="85" y1="350.0" x2="910" y2="350.0" stroke="#A66B35" stroke-width="1" />
+  <text x="65" y="355.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15" text-anchor="end">20</text>
+  <line x1="85" y1="280.0" x2="910" y2="280.0" stroke="#A66B35" stroke-width="1" />
+  <text x="65" y="285.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15" text-anchor="end">40</text>
+  <line x1="85" y1="210.0" x2="910" y2="210.0" stroke="#A66B35" stroke-width="1" />
+  <text x="65" y="215.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15" text-anchor="end">60</text>
+  <line x1="85" y1="140.0" x2="910" y2="140.0" stroke="#A66B35" stroke-width="1" />
+  <text x="65" y="145.0" fill="#C38651" font-family="Arial, sans-serif" font-size="15" text-anchor="end">80</text>
+  <text x="85" y="508" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Illustrative units</text>
+  <defs>
+    <pattern id="hatch-0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M0 10L10 0" fill="none" stroke="#18222A" stroke-width="1.5" />
+    </pattern>
+    <pattern id="hatch-1" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M0 0L10 10" fill="none" stroke="#18222A" stroke-width="1.5" />
+    </pattern>
+    <pattern id="hatch-2" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M5 0V10" fill="none" stroke="#18222A" stroke-width="1.5" />
+    </pattern>
+    <pattern id="hatch-3" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M0 5H10" fill="none" stroke="#18222A" stroke-width="1.5" />
+    </pattern>
+    <pattern id="hatch-4" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M5 0V10M0 5H10" fill="none" stroke="#18222A" stroke-width="1.5" />
+    </pattern>
+    <pattern id="hatch-5" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M0 0L10 10M0 10L10 0" fill="none" stroke="#18222A" stroke-width="1.5" />
+    </pattern>
+  </defs>
+  <rect x="97.375" y="322.0" width="44" height="98.0" fill="#F8C265" data-value="28" />
+  <rect x="97.375" y="322.0" width="44" height="98.0" fill="url(#hatch-0)" />
+  <text x="119.375" y="312.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">28</text>
+  <text x="119.375" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Intake</text>
+  <rect x="166.125" y="266.0" width="44" height="154.0" fill="#4A6E8D" data-value="44" />
+  <rect x="166.125" y="266.0" width="44" height="154.0" fill="url(#hatch-1)" />
+  <text x="188.125" y="256.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">44</text>
+  <text x="188.125" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Parse</text>
+  <rect x="234.875" y="294.0" width="44" height="126.0" fill="#89B2A7" data-value="36" />
+  <rect x="234.875" y="294.0" width="44" height="126.0" fill="url(#hatch-2)" />
+  <text x="256.875" y="284.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">36</text>
+  <text x="256.875" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Sample</text>
+  <rect x="303.625" y="203.0" width="44" height="217.0" fill="#4A6E8D" data-value="62" />
+  <rect x="303.625" y="203.0" width="44" height="217.0" fill="url(#hatch-3)" />
+  <text x="325.625" y="193.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">62</text>
+  <text x="325.625" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Cluster</text>
+  <rect x="372.375" y="234.5" width="44" height="185.5" fill="#FDEFB4" data-value="53" />
+  <rect x="372.375" y="234.5" width="44" height="185.5" fill="url(#hatch-4)" />
+  <text x="394.375" y="224.5" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">53</text>
+  <text x="394.375" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Select</text>
+  <rect x="441.125" y="171.5" width="44" height="248.5" fill="#EDAF57" data-value="71" />
+  <rect x="441.125" y="171.5" width="44" height="248.5" fill="url(#hatch-5)" />
+  <text x="463.125" y="161.5" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">71</text>
+  <text x="463.125" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Map</text>
+  <rect x="509.875" y="259.0" width="44" height="161.0" fill="#F8C265" data-value="46" />
+  <rect x="509.875" y="259.0" width="44" height="161.0" fill="url(#hatch-0)" />
+  <text x="531.875" y="249.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">46</text>
+  <text x="531.875" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Adapt</text>
+  <rect x="578.625" y="217.0" width="44" height="203.0" fill="#4A6E8D" data-value="58" />
+  <rect x="578.625" y="217.0" width="44" height="203.0" fill="url(#hatch-1)" />
+  <text x="600.625" y="207.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">58</text>
+  <text x="600.625" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Export</text>
+  <rect x="647.375" y="283.5" width="44" height="136.5" fill="#89B2A7" data-value="39" />
+  <rect x="647.375" y="283.5" width="44" height="136.5" fill="url(#hatch-2)" />
+  <text x="669.375" y="273.5" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">39</text>
+  <text x="669.375" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Check</text>
+  <rect x="716.125" y="185.5" width="44" height="234.5" fill="#4A6E8D" data-value="67" />
+  <rect x="716.125" y="185.5" width="44" height="234.5" fill="url(#hatch-3)" />
+  <text x="738.125" y="175.5" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">67</text>
+  <text x="738.125" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Render</text>
+  <rect x="784.875" y="241.5" width="44" height="178.5" fill="#FDEFB4" data-value="51" />
+  <rect x="784.875" y="241.5" width="44" height="178.5" fill="url(#hatch-4)" />
+  <text x="806.875" y="231.5" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">51</text>
+  <text x="806.875" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Review</text>
+  <rect x="853.625" y="157.5" width="44" height="262.5" fill="#EDAF57" data-value="75" />
+  <rect x="853.625" y="157.5" width="44" height="262.5" fill="url(#hatch-5)" />
+  <text x="875.625" y="147.5" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">75</text>
+  <text x="875.625" y="449" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Archive</text>
+</svg>

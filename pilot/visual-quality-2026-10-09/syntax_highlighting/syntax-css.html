@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSS syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-markup.html">Previous</a><a href="syntax-json.html">Next</a></nav><h1>CSS / syntax review</h1><p>Custom properties, selectors, pseudo classes, functions and responsive rules.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.css" href="data:text/plain;base64,LyogSWxsdXN0cmF0aXZlIGxheW91dDsgY29sb3JzIGRvIG5vdCBjb25maWd1cmUgdGhlIGdlbmVyYXRlZCB0aGVtZS4gKi8KOnJvb3QgewogIC0tc2FtcGxlLWdhcDogMXJlbTsKICAtLXNhbXBsZS1yYWRpdXM6IDAuNXJlbTsKfQoKLnBhbGV0dGUtcmV2aWV3IHsKICBkaXNwbGF5OiBncmlkOwogIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KGF1dG8tZml0LCBtaW5tYXgoMTJyZW0sIDFmcikpOwogIGdhcDogdmFyKC0tc2FtcGxlLWdhcCk7CiAgcGFkZGluZzogY2xhbXAoMXJlbSwgM3Z3LCAycmVtKTsKfQoKLnBhbGV0dGUtcmV2aWV3ID4gYXJ0aWNsZSB7CiAgYm9yZGVyOiAxcHggc29saWQgY3VycmVudENvbG9yOwogIGJvcmRlci1yYWRpdXM6IHZhcigtLXNhbXBsZS1yYWRpdXMpOwp9CgoucGFsZXR0ZS1yZXZpZXcgYTpob3ZlciwKLnBhbGV0dGUtcmV2aWV3IGE6Zm9jdXMtdmlzaWJsZSB7CiAgdGV4dC1kZWNvcmF0aW9uLXRoaWNrbmVzczogMnB4OwogIG91dGxpbmUtb2Zmc2V0OiA0cHg7Cn0KCkBtZWRpYSAobWF4LXdpZHRoOiA0MHJlbSkgewogIC5wYWxldHRlLXJldmlldyB7IGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyOyB9Cn0KCkBtZWRpYSAocHJlZmVycy1yZWR1Y2VkLW1vdGlvbjogcmVkdWNlKSB7CiAgKiB7IHNjcm9sbC1iZWhhdmlvcjogYXV0bzsgfQp9Cg==">Download source</a><pre tabindex="0" aria-label="CSS source" class="language-css"><code data-source="sources/palette.css" class="language-css">/* Illustrative layout; colors do not configure the generated theme. */
+:root {
+  --sample-gap: 1rem;
+  --sample-radius: 0.5rem;
+}
+
+.palette-review {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--sample-gap);
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.palette-review &gt; article {
+  border: 1px solid currentColor;
+  border-radius: var(--sample-radius);
+}
+
+.palette-review a:hover,
+.palette-review a:focus-visible {
+  text-decoration-thickness: 2px;
+  outline-offset: 4px;
+}
+
+@media (max-width: 40rem) {
+  .palette-review { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto; }
+}
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

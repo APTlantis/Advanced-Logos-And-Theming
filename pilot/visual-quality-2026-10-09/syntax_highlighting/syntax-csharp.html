@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C# syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-python.html">Previous</a><a href="syntax-cpp.html">Next</a></nav><h1>C# / syntax review</h1><p>Records, LINQ, nullable values, interpolation and pattern matching.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="Palette.cs" href="data:text/plain;base64,dXNpbmcgU3lzdGVtOwp1c2luZyBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYzsKdXNpbmcgU3lzdGVtLkxpbnE7CgovLyBJbGx1c3RyYXRpdmUgcmVjb3JkcyBmb3IgYSBsb2NhbCByZXZpZXcuCnB1YmxpYyBzZWFsZWQgcmVjb3JkIENvbG9yRW50cnkoc3RyaW5nIElkLCBzdHJpbmcgSGV4LCBkb3VibGUgV2VpZ2h0KTsKCnB1YmxpYyBzdGF0aWMgY2xhc3MgUGFsZXR0ZVJldmlldwp7CiAgICBwcml2YXRlIGNvbnN0IGludCBDYW5vbmljYWxDb3VudCA9IDMyOwoKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIERlc2NyaWJlKENvbG9yRW50cnk/IGVudHJ5KSA9PiBlbnRyeSBzd2l0Y2gKICAgIHsKICAgICAgICBudWxsID0+ICJObyBlbnRyeSBzZWxlY3RlZCIsCiAgICAgICAgeyBXZWlnaHQ6IDw9IDAgfSA9PiAiRW50cnkgaGFzIG5vIG9ic2VydmVkIHdlaWdodCIsCiAgICAgICAgXyA9PiAkIntlbnRyeS5JZH06IHtlbnRyeS5IZXguVG9VcHBlckludmFyaWFudCgpfSIKICAgIH07CgogICAgcHVibGljIHN0YXRpYyB2b2lkIE1haW4oKQogICAgewogICAgICAgIElSZWFkT25seUxpc3Q8Q29sb3JFbnRyeT4gY29sb3JzID0gbmV3W10KICAgICAgICB7CiAgICAgICAgICAgIG5ldyBDb2xvckVudHJ5KCJjb2xvcl8wMSIsICIjMzAyODIwIiwgMC42KSwKICAgICAgICAgICAgbmV3IENvbG9yRW50cnkoImNvbG9yXzAyIiwgIiNDOEE4NjgiLCAwLjQpCiAgICAgICAgfTsKCiAgICAgICAgdmFyIGxhYmVscyA9IGNvbG9ycy5XaGVyZShjb2xvciA9PiBjb2xvci5XZWlnaHQgPiAwKQogICAgICAgICAgICAgICAgICAgICAgICAgICAuU2VsZWN0KGNvbG9yID0+IERlc2NyaWJlKGNvbG9yKSk7CiAgICAgICAgQ29uc29sZS5Xcml0ZUxpbmUoJCJJbGx1c3RyYXRpdmUgZW50cmllczsgZXhwZWN0ZWQge0Nhbm9uaWNhbENvdW50fSIpOwogICAgICAgIGZvcmVhY2ggKHZhciBsYWJlbCBpbiBsYWJlbHMpCiAgICAgICAgewogICAgICAgICAgICBDb25zb2xlLldyaXRlTGluZShsYWJlbCk7CiAgICAgICAgfQogICAgfQp9Cg==">Download source</a><pre tabindex="0" aria-label="C# source" class="language-csharp"><code data-source="sources/Palette.cs" class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Linq;
+
+// Illustrative records for a local review.
+public sealed record ColorEntry(string Id, string Hex, double Weight);
+
+public static class PaletteReview
+{
+    private const int CanonicalCount = 32;
+
+    public static string Describe(ColorEntry? entry) =&gt; entry switch
+    {
+        null =&gt; &quot;No entry selected&quot;,
+        { Weight: &lt;= 0 } =&gt; &quot;Entry has no observed weight&quot;,
+        _ =&gt; $&quot;{entry.Id}: {entry.Hex.ToUpperInvariant()}&quot;
+    };
+
+    public static void Main()
+    {
+        IReadOnlyList&lt;ColorEntry&gt; colors = new[]
+        {
+            new ColorEntry(&quot;color_01&quot;, &quot;#302820&quot;, 0.6),
+            new ColorEntry(&quot;color_02&quot;, &quot;#C8A868&quot;, 0.4)
+        };
+
+        var labels = colors.Where(color =&gt; color.Weight &gt; 0)
+                           .Select(color =&gt; Describe(color));
+        Console.WriteLine($&quot;Illustrative entries; expected {CanonicalCount}&quot;);
+        foreach (var label in labels)
+        {
+            Console.WriteLine(label);
+        }
+    }
+}
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

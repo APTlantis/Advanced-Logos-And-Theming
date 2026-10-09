@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Illustrative palette review</title>
+  <style>
+    /* Embedded languages exercise Prism's markup grammar. */
+    .swatches { display: flex; gap: 1rem; }
+    .swatches li { border: 1px solid currentColor; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Palette review</h1>
+    <p>Illustrative entries &amp; source labels.</p>
+  </header>
+  <main>
+    <ul class="swatches" aria-label="Observed colors">
+      <li data-color-id="color_01">Dark surface</li>
+      <li data-color-id="color_02">Primary accent</li>
+    </ul>
+    <output id="count">Two illustrative entries</output>
+  </main>
+  <script>
+    // This script is source text in the review, never executable markup.
+    const entries = document.querySelectorAll("[data-color-id]");
+    document.querySelector("#count").textContent = `${entries.length} entries`;
+    window.sampleExecuted = true;
+  </script>
+</body>
+</html>

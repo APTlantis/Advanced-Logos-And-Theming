@@ -1,6 +1,6 @@
 # Logos-And-Theming
 
-The SVG, general syntax-highlighting and data-visualization extension is implemented with three diagram styles, an offline Prism token fixture, and bar/line/heatmap examples. Contracts and acceptance limits: [docs/VISUAL-TARGETS.md](docs/VISUAL-TARGETS.md). Local evidence: `migration/visual-target-acceptance.json`; earlier pilot and recovery evidence remain preserved.
+The 2026-10-09 syntax/chart quality pass bundles Prism 1.30.0 and twelve real language examples, expands charts to 12 bars, six 24-point lines and an 8×12 heatmap, and shares values between authored SVG and Matplotlib. All 26 focused tests, offline Chromium checks, Agg renders and isolated wheel generation passed. Contracts and limits: [docs/VISUAL-TARGETS.md](docs/VISUAL-TARGETS.md). Current evidence: `migration/visual-quality-acceptance-2026-10-09.json`. Earlier visual-target pilots and recovery evidence remain preserved; hosted themes were not regenerated.
 
 CTS project group for image-derived dark themes and related logo tooling. The package and utilities share this directory; SESM embedding remains a separate sibling project.
 

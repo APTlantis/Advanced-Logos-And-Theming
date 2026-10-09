@@ -182,7 +182,7 @@ class PipelineTests(unittest.TestCase):
                             self.assertEqual(template.read(n), expected, n)
                     self.assertEqual(result['sample_deck']['layouts'], 14)
             elif target in ("svg", "syntax_highlighting", "data_visualization"):
-                self.assertEqual(len(result["examples"]), 1 if target == "syntax_highlighting" else 3)
+                self.assertEqual(len(result["examples"]), 12 if target == "syntax_highlighting" else 3)
                 for file in destination.glob("*.svg"):
                     root = ET.parse(file).getroot()
                     self.assertEqual(root.tag, "{http://www.w3.org/2000/svg}svg")
@@ -195,7 +195,8 @@ class PipelineTests(unittest.TestCase):
                     self.assertIn(".token.class-name", css)
                     self.assertIn(".token.boolean", css)
                     self.assertIn("var(--apt-diff-added)", css)
-                    self.assertIn('class="token keyword"', (destination / "syntax-example.html").read_text())
+                    self.assertIn('vendor/prism/prism-core.js', (destination / "syntax-example.html").read_text())
+                    self.assertNotIn('<span class="token', (destination / "syntax-example.html").read_text())
                 if target == "data_visualization":
                     scale = json.loads((destination / "scales.json").read_text())["sequential"]
                     self.assertEqual(len(scale), 9)

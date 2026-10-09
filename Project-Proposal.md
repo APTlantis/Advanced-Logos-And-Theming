@@ -1,5 +1,7 @@
 # Logos-And-Theming proposal
 
+The 2026-10-09 quality pass strengthens the existing syntax and chart targets: bundled offline Prism 1.30.0 for twelve languages and deterministic 12-bar, 6×24-line and 8×12-heatmap examples shared with the optional Matplotlib renderer. Canonical 32-color identity and target budgets are unchanged. Fresh local evidence is in `migration/visual-quality-acceptance-2026-10-09.json`; no hosted outputs or installation state were changed.
+
 The 2026-10-08 visual-target extension adds SVG presentation-attribute examples, Prism CSS and a Matplotlib style with explicit sequential scales. There are now ten default targets. Examples are illustrative; static, browser and Matplotlib Agg evidence are separate from native editor integration. See docs/VISUAL-TARGETS.md and migration/visual-target-acceptance.json.
 
 Owner: Herb. Date: 2026-10-08. State: implemented local pilot.

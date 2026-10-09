@@ -1,5 +1,15 @@
 # Validation and evidence limits
 
+## Syntax and chart quality pass — 2026-10-09
+
+`migration/visual-quality-acceptance-2026-10-09.json` records the fresh Black-Gold local pilot. All **26** focused pipeline/converter tests passed outside the Windows sandbox after its temporary-file restrictions prevented execution. New coverage checks Prism resource hashes and dependency order, substantial source examples, escaping, CSS variable declarations, deterministic chart dimensions and plotted SVG values. Existing tests retain canonical immutability, budgets, contrast, overwrite guards and converter preservation.
+
+Chromium checked twelve real Prism grammars and three authored charts with HTTP/HTTPS blocked. Evidence covers computed token colors, exact source downloads, preserved code text, no executable sample scripts, keyboard navigation, narrow layouts, all 96 heatmap table values and a readable JavaScript-disabled fallback. Matplotlib 3.11.2/Agg rendered three PNG/SVG pairs, asserted values against the fixture, loaded the style without diagnostics and checked text/legend/colorbar bounds. Screenshots were visually reviewed; the line legend was moved outside the plot.
+
+The built wheel contains all 31 vendor/source resources with matching bytes. `tools/verify_visual_package.py` verifies the wheel, isolated installation and strict generation from that installed package. The runtime needs no Node or network; Matplotlib remains optional. Fresh pilot paths and repeatable commands: `docs/VISUAL-TARGETS.md` and the acceptance record. Earlier evidence below remains historical. No native theme installation, editor acceptance or hosted-output regeneration is claimed by this pass. Parent and root navigation need no update because identity, ownership and discovery roots are unchanged.
+
+## Earlier evidence
+
 The SVG/Prism/Matplotlib extension is covered by the same 20 focused pipeline/converter tests, expanded for ten default targets, SVG paint provenance, scale ordering, required budgets and deterministic regeneration. All passed outside the sandbox after temporary-directory restrictions blocked the first run. `migration/visual-target-acceptance.json` records the separate Black-Gold pilot, browser checks and Matplotlib Agg rendering. [Visual contracts](VISUAL-TARGETS.md) state the limits; application editor import and Prism grammar integration remain pending.
 
 Date: 2026-10-08, America/New_York.

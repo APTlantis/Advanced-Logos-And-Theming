@@ -1,0 +1,22 @@
+{
+  "schema": "aptlantis.theme-run.v1",
+  "name": "Aptlantis Black Gold Quality",
+  "variant": "dark",
+  "source_sha256": "87e269ec8046bf4606361868563d4072deaece6b72d0677212bea351c1ddf326",
+  "targets": [
+    "syntax_highlighting",
+    "data_visualization"
+  ],
+  "contrast_failures": 0,
+  "semantic_findings": [
+    {
+      "role": "magenta",
+      "kind": "unavailable_conventional_hue",
+      "source": "color_06",
+      "hue_distance": 79.4262780597272,
+      "message": "Closest image hue used; no new hue introduced"
+    }
+  ],
+  "native_application_acceptance": "pending",
+  "installation": "not performed"
+}

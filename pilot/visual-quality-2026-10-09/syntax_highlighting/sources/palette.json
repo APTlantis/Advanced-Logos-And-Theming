@@ -1,0 +1,30 @@
+{
+  "name": "Illustrative palette",
+  "canonical_count": 32,
+  "reviewed": false,
+  "previous_review": null,
+  "description": "Example data, not engine configuration",
+  "source": {
+    "file": "artwork.png",
+    "preserved": true,
+    "dimensions": [960, 540]
+  },
+  "colors": [
+    {
+      "id": "color_01",
+      "hex": "#302820",
+      "weight": 0.6,
+      "tags": ["observed", "dark"]
+    },
+    {
+      "id": "color_02",
+      "hex": "#C8A868",
+      "weight": 0.4,
+      "tags": ["observed", "accent"]
+    }
+  ],
+  "checks": {
+    "installation": "pending",
+    "illustrative": true
+  }
+}

@@ -1,0 +1,31 @@
+/* Illustrative layout; colors do not configure the generated theme. */
+:root {
+  --sample-gap: 1rem;
+  --sample-radius: 0.5rem;
+}
+
+.palette-review {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--sample-gap);
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.palette-review > article {
+  border: 1px solid currentColor;
+  border-radius: var(--sample-radius);
+}
+
+.palette-review a:hover,
+.palette-review a:focus-visible {
+  text-decoration-thickness: 2px;
+  outline-offset: 4px;
+}
+
+@media (max-width: 40rem) {
+  .palette-review { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto; }
+}

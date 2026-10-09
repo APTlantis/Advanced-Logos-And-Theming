@@ -16,4 +16,4 @@ apt-theme = "apt_theme.cli:main"
 include = ["apt_theme*"]
 
 [tool.setuptools.package-data]
-apt_theme = ["*.mjs", "templates/*.pptx", "templates/*.json"]
+apt_theme = ["*.mjs", "templates/*.pptx", "templates/*.json", "vendor/prism/*", "examples/syntax/*"]

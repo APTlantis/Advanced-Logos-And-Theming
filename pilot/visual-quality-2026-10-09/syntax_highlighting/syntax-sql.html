@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SQL syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-json.html">Previous</a><a href="syntax-bash.html">Next</a></nav><h1>SQL / syntax review</h1><p>A common-table expression, aggregation, joins, CASE expressions and ordering.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.sql" href="data:text/plain;base64,LS0gSWxsdXN0cmF0aXZlIGFuYWx5c2lzOyB0YWJsZSBuYW1lcyBhcmUgZXhhbXBsZSBjb250cmFjdHMuCldJVEggb2JzZXJ2ZWQgQVMgKAogICAgU0VMRUNUCiAgICAgICAgcGFsZXR0ZV9pZCwKICAgICAgICBjb2xvcl9pZCwKICAgICAgICBTVU0ocGl4ZWxfY291bnQpIEFTIHBvcHVsYXRpb24KICAgIEZST00gY29sb3Jfb2JzZXJ2YXRpb25zCiAgICBXSEVSRSBhbHBoYSA+IDAKICAgICAgQU5EIG9ic2VydmVkX2F0ID49IERBVEUgJzIwMjYtMDEtMDEnCiAgICBHUk9VUCBCWSBwYWxldHRlX2lkLCBjb2xvcl9pZAopLCByYW5rZWQgQVMgKAogICAgU0VMRUNUCiAgICAgICAgcGFsZXR0ZV9pZCwKICAgICAgICBjb2xvcl9pZCwKICAgICAgICBwb3B1bGF0aW9uLAogICAgICAgIFJPV19OVU1CRVIoKSBPVkVSICgKICAgICAgICAgICAgUEFSVElUSU9OIEJZIHBhbGV0dGVfaWQKICAgICAgICAgICAgT1JERVIgQlkgcG9wdWxhdGlvbiBERVNDLCBjb2xvcl9pZAogICAgICAgICkgQVMgY29sb3JfcmFuawogICAgRlJPTSBvYnNlcnZlZAopClNFTEVDVAogICAgcC5uYW1lLAogICAgci5jb2xvcl9pZCwKICAgIHIucG9wdWxhdGlvbiwKICAgIENBU0UgV0hFTiByLmNvbG9yX3JhbmsgPD0gMzIgVEhFTiAnY2FuZGlkYXRlJyBFTFNFICdyZXNlcnZlJyBFTkQgQVMgc3RhdHVzCkZST00gcmFua2VkIEFTIHIKSU5ORVIgSk9JTiBwYWxldHRlcyBBUyBwIE9OIHAuaWQgPSByLnBhbGV0dGVfaWQKV0hFUkUgcC5pbGx1c3RyYXRpdmUgPSBUUlVFCk9SREVSIEJZIHAubmFtZSwgci5jb2xvcl9yYW5rOwo=">Download source</a><pre tabindex="0" aria-label="SQL source" class="language-sql"><code data-source="sources/palette.sql" class="language-sql">-- Illustrative analysis; table names are example contracts.
+WITH observed AS (
+    SELECT
+        palette_id,
+        color_id,
+        SUM(pixel_count) AS population
+    FROM color_observations
+    WHERE alpha &gt; 0
+      AND observed_at &gt;= DATE &#x27;2026-01-01&#x27;
+    GROUP BY palette_id, color_id
+), ranked AS (
+    SELECT
+        palette_id,
+        color_id,
+        population,
+        ROW_NUMBER() OVER (
+            PARTITION BY palette_id
+            ORDER BY population DESC, color_id
+        ) AS color_rank
+    FROM observed
+)
+SELECT
+    p.name,
+    r.color_id,
+    r.population,
+    CASE WHEN r.color_rank &lt;= 32 THEN &#x27;candidate&#x27; ELSE &#x27;reserve&#x27; END AS status
+FROM ranked AS r
+INNER JOIN palettes AS p ON p.id = r.palette_id
+WHERE p.illustrative = TRUE
+ORDER BY p.name, r.color_rank;
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

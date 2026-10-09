@@ -62,6 +62,7 @@ dark_surface_evidence = "migration/dark-surface-regression.json"
 powerpoint_metadata_evidence = "migration/powerpoint-metadata-repair.json"
 editor_target_evidence = "migration/editor-target-acceptance.json"
 visual_target_evidence = "migration/visual-target-acceptance.json"
+visual_quality_evidence = "migration/visual-quality-acceptance-2026-10-09.json"
 git_publication_evidence = "migration/git-publication.json"
 theme_hosting_evidence = "migration/theme-hosting-acceptance.json"
 

@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PowerShell syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-bash.html">Previous</a><a href="syntax-toml.html">Next</a></nav><h1>PowerShell / syntax review</h1><p>Parameters, typed values, hashtables, pipelines and error handling.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.ps1" href="data:text/plain;base64,IyBJbGx1c3RyYXRpdmUsIHJlYWQtb25seSBpbnZlbnRvcnk7IGRpc3BsYXllZCByYXRoZXIgdGhhbiBleGVjdXRlZC4KW0NtZGxldEJpbmRpbmcoKV0KcGFyYW0oCiAgICBbUGFyYW1ldGVyKCldCiAgICBbc3RyaW5nXSAkU291cmNlUGF0aCA9ICcuXHNvdXJjZScsCiAgICBbVmFsaWRhdGVSYW5nZSgxLCAzMildCiAgICBbaW50XSAkTGltaXQgPSAzMgopCgokRXJyb3JBY3Rpb25QcmVmZXJlbmNlID0gJ1N0b3AnCiRsYWJlbHMgPSBAKCdPYnNlcnZlZCBjb2xvcnMnLCAnU2VtYW50aWMgcm9sZXMnLCAnVGFyZ2V0IHRva2VucycpCgpmdW5jdGlvbiBHZXQtU291cmNlU3VtbWFyeSB7CiAgICBwYXJhbShbU3lzdGVtLklPLkZpbGVJbmZvXSAkRmlsZSkKICAgIFtwc2N1c3RvbW9iamVjdF1AewogICAgICAgIE5hbWUgPSAkRmlsZS5OYW1lCiAgICAgICAgQnl0ZXMgPSAkRmlsZS5MZW5ndGgKICAgICAgICBJbGx1c3RyYXRpdmUgPSAkdHJ1ZQogICAgfQp9Cgp0cnkgewogICAgZm9yZWFjaCAoJGxhYmVsIGluICRsYWJlbHMpIHsKICAgICAgICBXcml0ZS1WZXJib3NlICJSZXZpZXcgc2VjdGlvbjogJGxhYmVsIgogICAgfQogICAgR2V0LUNoaWxkSXRlbSAtTGl0ZXJhbFBhdGggJFNvdXJjZVBhdGggLUZpbGUgfAogICAgICAgIFNlbGVjdC1PYmplY3QgLUZpcnN0ICRMaW1pdCB8CiAgICAgICAgRm9yRWFjaC1PYmplY3QgeyBHZXQtU291cmNlU3VtbWFyeSAtRmlsZSAkXyB9IHwKICAgICAgICBGb3JtYXQtVGFibGUgLUF1dG9TaXplCn0KY2F0Y2ggewogICAgV3JpdGUtRXJyb3IgIkludmVudG9yeSBmYWlsZWQ6ICQoJF8uRXhjZXB0aW9uLk1lc3NhZ2UpIgp9Cg==">Download source</a><pre tabindex="0" aria-label="PowerShell source" class="language-powershell"><code data-source="sources/palette.ps1" class="language-powershell"># Illustrative, read-only inventory; displayed rather than executed.
+[CmdletBinding()]
+param(
+    [Parameter()]
+    [string] $SourcePath = &#x27;.\source&#x27;,
+    [ValidateRange(1, 32)]
+    [int] $Limit = 32
+)
+
+$ErrorActionPreference = &#x27;Stop&#x27;
+$labels = @(&#x27;Observed colors&#x27;, &#x27;Semantic roles&#x27;, &#x27;Target tokens&#x27;)
+
+function Get-SourceSummary {
+    param([System.IO.FileInfo] $File)
+    [pscustomobject]@{
+        Name = $File.Name
+        Bytes = $File.Length
+        Illustrative = $true
+    }
+}
+
+try {
+    foreach ($label in $labels) {
+        Write-Verbose &quot;Review section: $label&quot;
+    }
+    Get-ChildItem -LiteralPath $SourcePath -File |
+        Select-Object -First $Limit |
+        ForEach-Object { Get-SourceSummary -File $_ } |
+        Format-Table -AutoSize
+}
+catch {
+    Write-Error &quot;Inventory failed: $($_.Exception.Message)&quot;
+}
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

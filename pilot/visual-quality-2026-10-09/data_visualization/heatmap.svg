@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Ordered intensity / 8 × 12 heatmap</title>
+  <desc id="desc">Illustrative monthly levels • single hue • exact values in the accompanying table</desc>
+  <rect x="0" y="0" width="960" height="540" fill="#0A1924" />
+  <text x="36" y="52" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="26">Ordered intensity / 8 × 12 heatmap</text>
+  <text x="36" y="84" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Illustrative monthly levels • single hue • exact values in the accompanying table</text>
+  <text x="112" y="144.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="end">North</text>
+  <rect x="130.0" y="123.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>North, Jan: 0</title>
+  </rect>
+  <rect x="195.0" y="123.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>North, Feb: 2</title>
+  </rect>
+  <rect x="260.0" y="123.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>North, Mar: 4</title>
+  </rect>
+  <rect x="325.0" y="123.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>North, Apr: 7</title>
+  </rect>
+  <rect x="390.0" y="123.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>North, May: 0</title>
+  </rect>
+  <rect x="455.0" y="123.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>North, Jun: 2</title>
+  </rect>
+  <rect x="520.0" y="123.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>North, Jul: 5</title>
+  </rect>
+  <rect x="585.0" y="123.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>North, Aug: 7</title>
+  </rect>
+  <rect x="650.0" y="123.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>North, Sep: 0</title>
+  </rect>
+  <rect x="715.0" y="123.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>North, Oct: 3</title>
+  </rect>
+  <rect x="780.0" y="123.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>North, Nov: 5</title>
+  </rect>
+  <rect x="845.0" y="123.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>North, Dec: 7</title>
+  </rect>
+  <text x="112" y="176.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="end">South</text>
+  <rect x="130.0" y="155.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>South, Jan: 3</title>
+  </rect>
+  <rect x="195.0" y="155.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>South, Feb: 5</title>
+  </rect>
+  <rect x="260.0" y="155.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>South, Mar: 7</title>
+  </rect>
+  <rect x="325.0" y="155.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>South, Apr: 1</title>
+  </rect>
+  <rect x="390.0" y="155.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>South, May: 3</title>
+  </rect>
+  <rect x="455.0" y="155.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>South, Jun: 5</title>
+  </rect>
+  <rect x="520.0" y="155.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>South, Jul: 8</title>
+  </rect>
+  <rect x="585.0" y="155.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>South, Aug: 1</title>
+  </rect>
+  <rect x="650.0" y="155.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>South, Sep: 3</title>
+  </rect>
+  <rect x="715.0" y="155.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>South, Oct: 6</title>
+  </rect>
+  <rect x="780.0" y="155.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>South, Nov: 8</title>
+  </rect>
+  <rect x="845.0" y="155.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>South, Dec: 1</title>
+  </rect>
+  <text x="112" y="208.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="end">East</text>
+  <rect x="130.0" y="187.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>East, Jan: 6</title>
+  </rect>
+  <rect x="195.0" y="187.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>East, Feb: 8</title>
+  </rect>
+  <rect x="260.0" y="187.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>East, Mar: 1</title>
+  </rect>
+  <rect x="325.0" y="187.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>East, Apr: 4</title>
+  </rect>
+  <rect x="390.0" y="187.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>East, May: 6</title>
+  </rect>
+  <rect x="455.0" y="187.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>East, Jun: 8</title>
+  </rect>
+  <rect x="520.0" y="187.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>East, Jul: 2</title>
+  </rect>
+  <rect x="585.0" y="187.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>East, Aug: 4</title>
+  </rect>
+  <rect x="650.0" y="187.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>East, Sep: 6</title>
+  </rect>
+  <rect x="715.0" y="187.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>East, Oct: 0</title>
+  </rect>
+  <rect x="780.0" y="187.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>East, Nov: 2</title>
+  </rect>
+  <rect x="845.0" y="187.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>East, Dec: 4</title>
+  </rect>
+  <text x="112" y="240.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="end">West</text>
+  <rect x="130.0" y="219.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>West, Jan: 0</title>
+  </rect>
+  <rect x="195.0" y="219.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>West, Feb: 2</title>
+  </rect>
+  <rect x="260.0" y="219.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>West, Mar: 4</title>
+  </rect>
+  <rect x="325.0" y="219.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>West, Apr: 7</title>
+  </rect>
+  <rect x="390.0" y="219.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>West, May: 0</title>
+  </rect>
+  <rect x="455.0" y="219.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>West, Jun: 2</title>
+  </rect>
+  <rect x="520.0" y="219.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>West, Jul: 5</title>
+  </rect>
+  <rect x="585.0" y="219.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>West, Aug: 7</title>
+  </rect>
+  <rect x="650.0" y="219.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>West, Sep: 0</title>
+  </rect>
+  <rect x="715.0" y="219.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>West, Oct: 3</title>
+  </rect>
+  <rect x="780.0" y="219.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>West, Nov: 5</title>
+  </rect>
+  <rect x="845.0" y="219.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>West, Dec: 7</title>
+  </rect>
+  <text x="112" y="272.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="end">Central</text>
+  <rect x="130.0" y="251.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>Central, Jan: 3</title>
+  </rect>
+  <rect x="195.0" y="251.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>Central, Feb: 5</title>
+  </rect>
+  <rect x="260.0" y="251.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>Central, Mar: 7</title>
+  </rect>
+  <rect x="325.0" y="251.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>Central, Apr: 1</title>
+  </rect>
+  <rect x="390.0" y="251.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>Central, May: 3</title>
+  </rect>
+  <rect x="455.0" y="251.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>Central, Jun: 5</title>
+  </rect>
+  <rect x="520.0" y="251.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>Central, Jul: 8</title>
+  </rect>
+  <rect x="585.0" y="251.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>Central, Aug: 1</title>
+  </rect>
+  <rect x="650.0" y="251.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>Central, Sep: 3</title>
+  </rect>
+  <rect x="715.0" y="251.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>Central, Oct: 6</title>
+  </rect>
+  <rect x="780.0" y="251.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>Central, Nov: 8</title>
+  </rect>
+  <rect x="845.0" y="251.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>Central, Dec: 1</title>
+  </rect>
+  <text x="112" y="304.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="end">Coastal</text>
+  <rect x="130.0" y="283.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>Coastal, Jan: 6</title>
+  </rect>
+  <rect x="195.0" y="283.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>Coastal, Feb: 8</title>
+  </rect>
+  <rect x="260.0" y="283.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>Coastal, Mar: 1</title>
+  </rect>
+  <rect x="325.0" y="283.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>Coastal, Apr: 4</title>
+  </rect>
+  <rect x="390.0" y="283.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>Coastal, May: 6</title>
+  </rect>
+  <rect x="455.0" y="283.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>Coastal, Jun: 8</title>
+  </rect>
+  <rect x="520.0" y="283.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>Coastal, Jul: 2</title>
+  </rect>
+  <rect x="585.0" y="283.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>Coastal, Aug: 4</title>
+  </rect>
+  <rect x="650.0" y="283.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>Coastal, Sep: 6</title>
+  </rect>
+  <rect x="715.0" y="283.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>Coastal, Oct: 0</title>
+  </rect>
+  <rect x="780.0" y="283.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>Coastal, Nov: 2</title>
+  </rect>
+  <rect x="845.0" y="283.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>Coastal, Dec: 4</title>
+  </rect>
+  <text x="112" y="336.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="end">Urban</text>
+  <rect x="130.0" y="315.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>Urban, Jan: 0</title>
+  </rect>
+  <rect x="195.0" y="315.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>Urban, Feb: 2</title>
+  </rect>
+  <rect x="260.0" y="315.0" width="62.0" height="29.0" fill="#A07D41" data-value="4">
+    <title>Urban, Mar: 4</title>
+  </rect>
+  <rect x="325.0" y="315.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>Urban, Apr: 7</title>
+  </rect>
+  <rect x="390.0" y="315.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>Urban, May: 0</title>
+  </rect>
+  <rect x="455.0" y="315.0" width="62.0" height="29.0" fill="#785718" data-value="2">
+    <title>Urban, Jun: 2</title>
+  </rect>
+  <rect x="520.0" y="315.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>Urban, Jul: 5</title>
+  </rect>
+  <rect x="585.0" y="315.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>Urban, Aug: 7</title>
+  </rect>
+  <rect x="650.0" y="315.0" width="62.0" height="29.0" fill="#4E3500" data-value="0">
+    <title>Urban, Sep: 0</title>
+  </rect>
+  <rect x="715.0" y="315.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>Urban, Oct: 3</title>
+  </rect>
+  <rect x="780.0" y="315.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>Urban, Nov: 5</title>
+  </rect>
+  <rect x="845.0" y="315.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>Urban, Dec: 7</title>
+  </rect>
+  <text x="112" y="368.0" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="end">Rural</text>
+  <rect x="130.0" y="347.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>Rural, Jan: 3</title>
+  </rect>
+  <rect x="195.0" y="347.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>Rural, Feb: 5</title>
+  </rect>
+  <rect x="260.0" y="347.0" width="62.0" height="29.0" fill="#DEB97D" data-value="7">
+    <title>Rural, Mar: 7</title>
+  </rect>
+  <rect x="325.0" y="347.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>Rural, Apr: 1</title>
+  </rect>
+  <rect x="390.0" y="347.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>Rural, May: 3</title>
+  </rect>
+  <rect x="455.0" y="347.0" width="62.0" height="29.0" fill="#B49055" data-value="5">
+    <title>Rural, Jun: 5</title>
+  </rect>
+  <rect x="520.0" y="347.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>Rural, Jul: 8</title>
+  </rect>
+  <rect x="585.0" y="347.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>Rural, Aug: 1</title>
+  </rect>
+  <rect x="650.0" y="347.0" width="62.0" height="29.0" fill="#8C6A2D" data-value="3">
+    <title>Rural, Sep: 3</title>
+  </rect>
+  <rect x="715.0" y="347.0" width="62.0" height="29.0" fill="#C9A569" data-value="6">
+    <title>Rural, Oct: 6</title>
+  </rect>
+  <rect x="780.0" y="347.0" width="62.0" height="29.0" fill="#F4CE91" data-value="8">
+    <title>Rural, Nov: 8</title>
+  </rect>
+  <rect x="845.0" y="347.0" width="62.0" height="29.0" fill="#644500" data-value="1">
+    <title>Rural, Dec: 1</title>
+  </rect>
+  <text x="162.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Jan</text>
+  <text x="227.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Feb</text>
+  <text x="292.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Mar</text>
+  <text x="357.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Apr</text>
+  <text x="422.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">May</text>
+  <text x="487.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Jun</text>
+  <text x="552.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Jul</text>
+  <text x="617.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Aug</text>
+  <text x="682.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Sep</text>
+  <text x="747.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Oct</text>
+  <text x="812.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Nov</text>
+  <text x="877.5" y="403" fill="#C38651" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Dec</text>
+  <rect x="130" y="440" width="60" height="22" fill="#4E3500" />
+  <text x="160" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">0</text>
+  <rect x="190" y="440" width="60" height="22" fill="#644500" />
+  <text x="220" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">1</text>
+  <rect x="250" y="440" width="60" height="22" fill="#785718" />
+  <text x="280" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">2</text>
+  <rect x="310" y="440" width="60" height="22" fill="#8C6A2D" />
+  <text x="340" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">3</text>
+  <rect x="370" y="440" width="60" height="22" fill="#A07D41" />
+  <text x="400" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">4</text>
+  <rect x="430" y="440" width="60" height="22" fill="#B49055" />
+  <text x="460" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">5</text>
+  <rect x="490" y="440" width="60" height="22" fill="#C9A569" />
+  <text x="520" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">6</text>
+  <rect x="550" y="440" width="60" height="22" fill="#DEB97D" />
+  <text x="580" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">7</text>
+  <rect x="610" y="440" width="60" height="22" fill="#F4CE91" />
+  <text x="640" y="488" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">8</text>
+  <text x="700" y="456" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="16">Illustrative level</text>
+  <text x="130" y="520" fill="#C38651" font-family="Arial, sans-serif" font-size="14">0 = lowest intensity; 8 = highest intensity. Values: heatmap-values.html</text>
+</svg>

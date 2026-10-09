@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TOML syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-powershell.html">Previous</a><a href="syntax-javascript.html">Next</a></nav><h1>TOML / syntax review</h1><p>Tables, arrays of tables, inline tables, dates and multiline strings.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.toml" href="data:text/plain;base64,IyBJbGx1c3RyYXRpdmUgbWV0YWRhdGEsIG5vdCBhbiBlbmdpbmUgcHJvZmlsZS4KdGl0bGUgPSAiUGFsZXR0ZSByZXZpZXciCmlsbHVzdHJhdGl2ZSA9IHRydWUKY2Fub25pY2FsX2NvdW50ID0gMzIKcmV2aWV3X2RhdGUgPSAyMDI2LTEwLTA5Cgpbc291cmNlXQpmaWxlID0gImFydHdvcmsucG5nIgpwcmVzZXJ2ZWQgPSB0cnVlCmRpbWVuc2lvbnMgPSBbOTYwLCA1NDBdCmRlc2NyaXB0aW9uID0gIiIiCk9yaWdpbmFsIGFydHdvcmsgaXMgcHJlc2VydmVkLgpTZW1hbnRpYyBtYXBwaW5ncyBhcmUgc2VwYXJhdGUgYXJ0aWZhY3RzLgoiIiIKCltyZXZpZXddCnN0YXR1cyA9ICJwZW5kaW5nIgpsaW1pdHMgPSB7IG5hdGl2ZV9pbXBvcnQgPSBmYWxzZSwgYnJvd3Nlcl9wcmV2aWV3ID0gdHJ1ZSB9CnRhZ3MgPSBbImxvY2FsIiwgImRhcmsiLCAiaWxsdXN0cmF0aXZlIl0KCltbY29sb3JzXV0KaWQgPSAiY29sb3JfMDEiCmhleCA9ICIjMzAyODIwIgp3ZWlnaHQgPSAwLjYKb2JzZXJ2ZWQgPSB0cnVlCgpbW2NvbG9yc11dCmlkID0gImNvbG9yXzAyIgpoZXggPSAiI0M4QTg2OCIKd2VpZ2h0ID0gMC40Cm9ic2VydmVkID0gdHJ1ZQo=">Download source</a><pre tabindex="0" aria-label="TOML source" class="language-toml"><code data-source="sources/palette.toml" class="language-toml"># Illustrative metadata, not an engine profile.
+title = &quot;Palette review&quot;
+illustrative = true
+canonical_count = 32
+review_date = 2026-10-09
+
+[source]
+file = &quot;artwork.png&quot;
+preserved = true
+dimensions = [960, 540]
+description = &quot;&quot;&quot;
+Original artwork is preserved.
+Semantic mappings are separate artifacts.
+&quot;&quot;&quot;
+
+[review]
+status = &quot;pending&quot;
+limits = { native_import = false, browser_preview = true }
+tags = [&quot;local&quot;, &quot;dark&quot;, &quot;illustrative&quot;]
+
+[[colors]]
+id = &quot;color_01&quot;
+hex = &quot;#302820&quot;
+weight = 0.6
+observed = true
+
+[[colors]]
+id = &quot;color_02&quot;
+hex = &quot;#C8A868&quot;
+weight = 0.4
+observed = true
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

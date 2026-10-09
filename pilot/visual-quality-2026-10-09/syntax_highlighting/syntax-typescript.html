@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TypeScript syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-javascript.html">Previous</a><a href="syntax-python.html">Next</a></nav><h1>TypeScript / syntax review</h1><p>Typed records, generics, interfaces, union types and optional values.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.ts" href="data:text/plain;base64,Ly8gVHlwZXMgZGVzY3JpYmUgaWxsdXN0cmF0aXZlIHJldmlldyBkYXRhLCBub3QgZW5naW5lIGNvbmZpZ3VyYXRpb24uCnR5cGUgQ29sb3JJZCA9IGBjb2xvcl8ke3N0cmluZ31gOwp0eXBlIFJldmlld1N0YXRlID0gInBlbmRpbmciIHwgInJldmlld2VkIjsKCmludGVyZmFjZSBDb2xvckVudHJ5IHsKICByZWFkb25seSBpZDogQ29sb3JJZDsKICBoZXg6IHN0cmluZzsKICB3ZWlnaHQ/OiBudW1iZXI7Cn0KCmludGVyZmFjZSBSZXZpZXc8VD4gewogIHZhbHVlOiBUOwogIHN0YXRlOiBSZXZpZXdTdGF0ZTsKfQoKZnVuY3Rpb24gcmV2aWV3PFQ+KHZhbHVlOiBUKTogUmV2aWV3PFQ+IHsKICByZXR1cm4geyB2YWx1ZSwgc3RhdGU6ICJwZW5kaW5nIiB9Owp9CgpmdW5jdGlvbiBzdW1tYXJpemUoZW50cmllczogcmVhZG9ubHkgQ29sb3JFbnRyeVtdKTogc3RyaW5nW10gewogIHJldHVybiBlbnRyaWVzCiAgICAuZmlsdGVyKGVudHJ5ID0+IChlbnRyeS53ZWlnaHQgPz8gMCkgPiAwKQogICAgLm1hcCgoeyBpZCwgaGV4IH0pID0+IGAke2lkfTogJHtoZXgudG9VcHBlckNhc2UoKX1gKTsKfQoKY29uc3QgZW50cmllczogQ29sb3JFbnRyeVtdID0gWwogIHsgaWQ6ICJjb2xvcl8wMSIsIGhleDogIiMzMDI4MjAiLCB3ZWlnaHQ6IDAuNiB9LAogIHsgaWQ6ICJjb2xvcl8wMiIsIGhleDogIiNDOEE4NjgiLCB3ZWlnaHQ6IDAuNCB9LApdOwoKY29uc3QgcmVzdWx0ID0gcmV2aWV3KHN1bW1hcml6ZShlbnRyaWVzKSk7CmlmIChyZXN1bHQuc3RhdGUgPT09ICJwZW5kaW5nIikgewogIGNvbnNvbGUubG9nKHJlc3VsdC52YWx1ZS5qb2luKCJcbiIpKTsKfQo=">Download source</a><pre tabindex="0" aria-label="TypeScript source" class="language-typescript"><code data-source="sources/palette.ts" class="language-typescript">// Types describe illustrative review data, not engine configuration.
+type ColorId = `color_${string}`;
+type ReviewState = &quot;pending&quot; | &quot;reviewed&quot;;
+
+interface ColorEntry {
+  readonly id: ColorId;
+  hex: string;
+  weight?: number;
+}
+
+interface Review&lt;T&gt; {
+  value: T;
+  state: ReviewState;
+}
+
+function review&lt;T&gt;(value: T): Review&lt;T&gt; {
+  return { value, state: &quot;pending&quot; };
+}
+
+function summarize(entries: readonly ColorEntry[]): string[] {
+  return entries
+    .filter(entry =&gt; (entry.weight ?? 0) &gt; 0)
+    .map(({ id, hex }) =&gt; `${id}: ${hex.toUpperCase()}`);
+}
+
+const entries: ColorEntry[] = [
+  { id: &quot;color_01&quot;, hex: &quot;#302820&quot;, weight: 0.6 },
+  { id: &quot;color_02&quot;, hex: &quot;#C8A868&quot;, weight: 0.4 },
+];
+
+const result = review(summarize(entries));
+if (result.state === &quot;pending&quot;) {
+  console.log(result.value.join(&quot;\n&quot;));
+}
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>

@@ -1,0 +1,33 @@
+{
+  "matplotlib_version": "3.11.2",
+  "backend": "Agg",
+  "style": "aptlantis-black-gold-quality.mplstyle",
+  "parser_diagnostics": "",
+  "style_color_assertions": "passed",
+  "outputs": [
+    "matplotlib-bars.png",
+    "matplotlib-bars.svg",
+    "matplotlib-lines.png",
+    "matplotlib-lines.svg",
+    "matplotlib-heatmap.png",
+    "matplotlib-heatmap.svg"
+  ],
+  "data_sha256": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+  "data_assertions": {
+    "bars": 12,
+    "lines": [
+      24,
+      24,
+      24,
+      24,
+      24,
+      24
+    ],
+    "heatmap": [
+      8,
+      12
+    ]
+  },
+  "text_bounds": "passed",
+  "scope": "Local style loading and static Agg render; no interactive GUI or external application import."
+}

@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C++ syntax review</title><link rel="stylesheet" href="prism.css"><link rel="stylesheet" href="examples.css"></head><body><main><nav aria-label="Example navigation"><a href="examples.html">All languages</a><a href="syntax-csharp.html">Previous</a><a href="syntax-markup.html">Next</a></nav><h1>C++ / syntax review</h1><p>Headers, structs, templates, lambdas, containers and stream output.</p><p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p><a download="palette.cpp" href="data:text/plain;base64,I2luY2x1ZGUgPGFsZ29yaXRobT4KI2luY2x1ZGUgPGlvc3RyZWFtPgojaW5jbHVkZSA8aXRlcmF0b3I+CiNpbmNsdWRlIDxzdHJpbmc+CiNpbmNsdWRlIDx2ZWN0b3I+CgovLyBJbGx1c3RyYXRpdmUgcmVjb3Jkczsgbm8gcGFsZXR0ZSBleHRyYWN0aW9uIGlzIHBlcmZvcm1lZC4Kc3RydWN0IENvbG9yIHsKICAgIHN0ZDo6c3RyaW5nIGlkOwogICAgc3RkOjpzdHJpbmcgaGV4OwogICAgZG91YmxlIHdlaWdodCA9IDAuMDsKfTsKCnRlbXBsYXRlIDx0eXBlbmFtZSBQcmVkaWNhdGU+CnN0ZDo6dmVjdG9yPENvbG9yPiBzZWxlY3QoY29uc3Qgc3RkOjp2ZWN0b3I8Q29sb3I+JiBjb2xvcnMsIFByZWRpY2F0ZSBwcmVkaWNhdGUpIHsKICAgIHN0ZDo6dmVjdG9yPENvbG9yPiByZXN1bHQ7CiAgICBzdGQ6OmNvcHlfaWYoY29sb3JzLmJlZ2luKCksIGNvbG9ycy5lbmQoKSwgc3RkOjpiYWNrX2luc2VydGVyKHJlc3VsdCksIHByZWRpY2F0ZSk7CiAgICByZXR1cm4gcmVzdWx0Owp9CgppbnQgbWFpbigpIHsKICAgIGNvbnN0ZXhwciB1bnNpZ25lZCBjYW5vbmljYWxfY291bnQgPSAzMjsKICAgIGNvbnN0IHN0ZDo6dmVjdG9yPENvbG9yPiBwYWxldHRlID0gewogICAgICAgIHsiY29sb3JfMDEiLCAiIzMwMjgyMCIsIDAuNn0sCiAgICAgICAgeyJjb2xvcl8wMiIsICIjQzhBODY4IiwgMC40fSwKICAgIH07CiAgICBjb25zdCBhdXRvIHNlbGVjdGVkID0gc2VsZWN0KHBhbGV0dGUsIFtdKGNvbnN0IENvbG9yJiBjb2xvcikgewogICAgICAgIHJldHVybiBjb2xvci53ZWlnaHQgPiAwLjA7CiAgICB9KTsKCiAgICBzdGQ6OmNvdXQgPDwgIklsbHVzdHJhdGl2ZSBlbnRyaWVzOyBleHBlY3RlZCAiIDw8IGNhbm9uaWNhbF9jb3VudCA8PCAnXG4nOwogICAgZm9yIChjb25zdCBhdXRvJiBjb2xvciA6IHNlbGVjdGVkKSB7CiAgICAgICAgc3RkOjpjb3V0IDw8IGNvbG9yLmlkIDw8ICI6ICIgPDwgY29sb3IuaGV4IDw8ICdcbic7CiAgICB9CiAgICByZXR1cm4gMDsKfQo=">Download source</a><pre tabindex="0" aria-label="C++ source" class="language-cpp"><code data-source="sources/palette.cpp" class="language-cpp">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+// Illustrative records; no palette extraction is performed.
+struct Color {
+    std::string id;
+    std::string hex;
+    double weight = 0.0;
+};
+
+template &lt;typename Predicate&gt;
+std::vector&lt;Color&gt; select(const std::vector&lt;Color&gt;&amp; colors, Predicate predicate) {
+    std::vector&lt;Color&gt; result;
+    std::copy_if(colors.begin(), colors.end(), std::back_inserter(result), predicate);
+    return result;
+}
+
+int main() {
+    constexpr unsigned canonical_count = 32;
+    const std::vector&lt;Color&gt; palette = {
+        {&quot;color_01&quot;, &quot;#302820&quot;, 0.6},
+        {&quot;color_02&quot;, &quot;#C8A868&quot;, 0.4},
+    };
+    const auto selected = select(palette, [](const Color&amp; color) {
+        return color.weight &gt; 0.0;
+    });
+
+    std::cout &lt;&lt; &quot;Illustrative entries; expected &quot; &lt;&lt; canonical_count &lt;&lt; &#x27;\n&#x27;;
+    for (const auto&amp; color : selected) {
+        std::cout &lt;&lt; color.id &lt;&lt; &quot;: &quot; &lt;&lt; color.hex &lt;&lt; &#x27;\n&#x27;;
+    }
+    return 0;
+}
+</code></pre></main><script defer src="vendor/prism/prism-core.js"></script><script defer src="vendor/prism/prism-markup.js"></script><script defer src="vendor/prism/prism-css.js"></script><script defer src="vendor/prism/prism-clike.js"></script><script defer src="vendor/prism/prism-javascript.js"></script><script defer src="vendor/prism/prism-typescript.js"></script><script defer src="vendor/prism/prism-python.js"></script><script defer src="vendor/prism/prism-csharp.js"></script><script defer src="vendor/prism/prism-c.js"></script><script defer src="vendor/prism/prism-cpp.js"></script><script defer src="vendor/prism/prism-json.js"></script><script defer src="vendor/prism/prism-sql.js"></script><script defer src="vendor/prism/prism-bash.js"></script><script defer src="vendor/prism/prism-powershell.js"></script><script defer src="vendor/prism/prism-toml.js"></script></body></html>
