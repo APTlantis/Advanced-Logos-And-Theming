@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-09",
+  "timezone": "America/New_York",
+  "scope": "Current output and test references; documentation/navigation edits only. Earlier pending SVG implementation changes preserved.",
+  "python_version": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "checks": {
+    "local_links_and_same_document_anchors": {
+      "count": 135,
+      "result": "passed; local targets and Markdown fragment anchors verified in final documents"
+    },
+    "target_rows": {
+      "count": 10,
+      "budget_and_default_named_count": "matched current adapt() output"
+    },
+    "test_inventory": {
+      "test_pipeline.py": 16,
+      "test_logo_tools.py": 5,
+      "test_visual_quality.py": 5,
+      "test_svg_quality.py": 3,
+      "total": 29,
+      "all_methods_documented": true
+    },
+    "manifest_documentation_paths": "parsed and resolved"
+  },
+  "commands": [
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "29 tests passed in 11.371s outside managed Windows sandbox"
+    },
+    {
+      "command": ".\\.venv\\Scripts\\python.exe D:\\.city_hall\\CTS\\tools\\cts_lint_contract.py docs/COMMAND-CONTRACT.md",
+      "exit_code": 0,
+      "result": "CTS contract lint passed"
+    },
+    {
+      "command": "git -c safe.directory=D:/CTS/Logos-And-Theming diff --check",
+      "exit_code": 0,
+      "result": "passed; existing working-copy line-ending notices only"
+    }
+  ],
+  "findings": [
+    "Corrected stale four-slide/Node PowerPoint description in current command contract to Python 23-slide PPTX/14-layout POTX output.",
+    "Explicitly distinguished all current test methods, real ImageMagick conversion and stubbed VTracer, browser/Agg/package checks, recorded PowerPoint native opening and pending manual/native scenarios.",
+    "Proposed tests remain proposals, not implemented/pass claims."
+  ],
+  "documents_sha256": {
+    "docs/OUTPUT-REFERENCE.md": "c5aa5aaeed7414771f69a601c3cbae4b38176d386507f56620f96ba74b4d4acd",
+    "docs/TESTING-REFERENCE.md": "d4e70f36802592d11a00bfe492a74299de6ac39d149ad73b83769d2e56064bbd",
+    "docs/COMMAND-CONTRACT.md": "924330b077fd99d258372d71a61c1292d1f73724f1ff740a3d140852f7228161",
+    "docs/VALIDATION.md": "4a93258990b64ff6b67f4fa1d5bd5f10739c7bc91516581bc14a6385180f5883",
+    "docs/documentation-suite/PLAN.md": "cc14f1c682156ebdfc0f905bbf85eb3039d666ab09e6be5055303b9488780171",
+    "README.md": "7032ad64c983da93dcbeea632122fb93b7963cd02569480a9891cf5639f9bbf5",
+    "Project-README.md": "9383e0be11b291d8d085ba891884e524132513fd7f4cc188538e48578ee3e39b",
+    "Project-Proposal.md": "fa2057cb25069edf0f3dc1f1374703edb6dd8f55dc6754d45187715887164c51",
+    "Logos-And-Theming.manifest.toml": "58628a74402f8b0204c959c067f2434e7c2ebe7b009c8811b04a05d820782fa8"
+  },
+  "reviewed_source_sha256": {
+    "apt_theme/chart_examples.py": "ad119b3185dea03f964db3928a098a04ed853fb69df67004b4234844fdc8b15f",
+    "apt_theme/cli.py": "73e6d4c0d8063d7107144ae87ac64f5c1c8832d95da28ffa4bca6ca47028bd38",
+    "apt_theme/colors.py": "be1efceddd2dcc06ec5676000630d035016307a2e57a098cfaee520a63cffbcb",
+    "apt_theme/extraction.py": "47e707dc20b42e1e44f70472737f9a9c6cca5a3d370ba4db658be96e51d072e9",
+    "apt_theme/native_editors.py": "461847c7d4b0271a9ba6f78f816b60c4e0b8004293c72040455fdb4f4f1ded14",
+    "apt_theme/powerpoint.py": "3eb6710971d28b036789386c333eb778af7206d133a9d20ae18c4e7ef8152124",
+    "apt_theme/report.py": "147994f69278ec3ce04ece74b1703357cfce141519fc0cd173e380e357218343",
+    "apt_theme/semantics.py": "87ccb3c57241930a5cabaa4110a9fba3e5044b2a90b6113649266a6991d6c165",
+    "apt_theme/svg_examples.py": "30932ec4f027015a23a27c14f2bb5adc2115831cfeb328d9dfbea71d7751637e",
+    "apt_theme/syntax_examples.py": "22b2b785245e214c508bbdfcb00a03e6f8ecce49906d2eccaba7246369420188",
+    "apt_theme/targets.py": "2b7ca61cb72658e6be30ab3faecbe50ef17aefbc23830635ae56cc2af68b1786",
+    "apt_theme/visual_targets.py": "43491d6b78816b9579b14ae23397e72f0e9363a266700e044931aed0662d71d7",
+    "apt_theme/__init__.py": "462aadf7e7060ff56a9e72a1771cfb1af0eb22c62b2a295a6e507653c24dd777",
+    "apt_theme/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "tests/test_logo_tools.py": "2614d52e22da360173021c444e74318358b21205cb1b1e34cf4b190dc37020ef",
+    "tests/test_pipeline.py": "d34a3f1083ac90ee3640c81311f46f3e0465393061963418f32495ec2beed541",
+    "tests/test_svg_quality.py": "ef1d8ab5b27dc0dcb987b580946cce6ad1332f22365023ed086e7c254bd3879a",
+    "tests/test_visual_quality.py": "e8e902575d86e3dd4dcd43946586256149714d2eaf46dcb8de6807a880e47b34",
+    "tools/governance.py": "f4bc1370a12f26180e38f86db3d3496d982f95ee11324b7b55f5853c1db69d6e",
+    "tools/migrate.py": "6f27dbbd19fed4990d1b59edf05549320a006418c284e9ed91f1c588d3937ecc",
+    "tools/render_matplotlib_examples.py": "32338c7dd75cb07ecdb0db1f54e9d5f0a80170aa91c32295e211b725ab7442a1",
+    "tools/render_visual_previews.cjs": "8d3e3cd55e8e4d50b39fb5f74cd7066a49cc9f3cd2a7bba890c47e915faf257d",
+    "tools/repair_powerpoint_metadata.py": "007b1cf72bf07637665a5c660937844a40716ff414fb44de17cac1bc92dcb742",
+    "tools/vendor_prism.py": "5f94899dd0038484a66fb11fa82454d97d23d75290d39eb3fd4dbeb7043b3679",
+    "tools/verify.py": "182baaa2e0fa1bfa20204598050c3c9f5d2c3ccca409e200079d593afbc71ac6",
+    "tools/verify_visual_package.py": "e18e2fce589e63c98884a5f441985ade3f558fca839b37961c293316f1f286ac",
+    "pyproject.toml": "1a15cd48a7d15cf6a24160f0ff56dcc33876bf02ea0ccf3943b0ab5e1de6ae4c",
+    "profiles.toml": "af4c47281d9876f10f856313fa332cb1e06d42109a2b0d899d6fef9a8a29845e",
+    "Setup.ps1": "e9ac3fbaf8d41968b614f438db0c3292e5e29cf24a942eb42f6349ba84c9006b",
+    "Invoke-AptTheme.ps1": "99f8776e7ddfff413bb771e14f98d08da397440547e3e26896be19e1fe464e83",
+    "scripts/Convert-to-ICO.py": "fba30338ab782f6b06f8810e126072317d781b4e52678d6f05930b0bf3020731",
+    "scripts/Convert-to-SVG.py": "14dce3cbe8221b3c95fe14193dab507eed93371fa01686b1edc3cc9f98c576d5",
+    "scripts/generate_atlas.py": "9c3dd5d101cc535046e24abfd1af4c7028c607edc196440c8369bf32a9042ece"
+  },
+  "limits": [
+    "No new browser/Agg/native application/delivery verification in this documentation pass.",
+    "No theme installation, activation, publication or hosted regeneration.",
+    "Historical evidence and pilots preserved; parent/root records unchanged because ownership, identity and roots unchanged."
+  ]
+}

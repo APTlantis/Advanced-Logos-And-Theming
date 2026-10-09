@@ -1,0 +1,21 @@
+{
+  "schema": "aptlantis.theme-run.v1",
+  "name": "Black-Gold SVG neutral gallery",
+  "variant": "dark",
+  "source_sha256": "f27d2748eb2c35bec2818fd18ca0218a41a51e0ae44045466aee46c5ce4ffe92",
+  "targets": [
+    "svg"
+  ],
+  "contrast_failures": 0,
+  "semantic_findings": [
+    {
+      "role": "magenta",
+      "kind": "unavailable_conventional_hue",
+      "source": "color_06",
+      "hue_distance": 79.4262780597272,
+      "message": "Closest image hue used; no new hue introduced"
+    }
+  ],
+  "native_application_acceptance": "pending",
+  "installation": "not performed"
+}

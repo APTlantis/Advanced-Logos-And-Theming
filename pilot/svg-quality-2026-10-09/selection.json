@@ -1,0 +1,12 @@
+{
+  "kind": "import",
+  "canonical_colors_preserved": true,
+  "background_selection": {
+    "source": "color_04",
+    "hex": "#0A1924",
+    "reason": "Image-derived dark chromatic surface",
+    "mode": "identity",
+    "target_oklch_lightness": 0.2,
+    "darkest_hex": "#000000"
+  }
+}

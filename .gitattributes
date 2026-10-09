@@ -2,3 +2,4 @@ migration/archives/aptlantis-logos.zip filter=lfs diff=lfs merge=lfs -text
 apt_theme/vendor/prism/** -text
 apt_theme/examples/syntax/** -text
 pilot/visual-quality-2026-10-09/** -text
+pilot/svg-quality-2026-10-09/** -text

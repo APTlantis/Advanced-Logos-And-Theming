@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">02 / Editorial infographic</title>
+  <desc id="desc">Large typography, section hierarchy, reusable marks and layered composition</desc>
+  <rect x="0" y="0" width="1200" height="800" fill="#0A1924" />
+  <text x="36" y="52" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="26">02 / Editorial infographic</text>
+  <text x="36" y="84" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Large typography, section hierarchy, reusable marks and layered composition</text>
+  <defs>
+    <symbol id="icon-source" viewBox="0 0 30 30">
+      <path d="M5 3H15L21 9V25H5ZM15 3V9H21M9 14H17M9 19H17" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-palette" viewBox="0 0 30 30">
+      <path d="M15 3C7 3 3 8 3 15S9 27 16 27C22 27 20 22 18 21C16 20 19 17 23 17C29 17 27 3 15 3ZM9 10H10M16 8H17M22 11H23M8 17H9" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 30 30">
+      <path d="M10 7L3 15L10 23M20 7L27 15L20 23M18 4L12 26" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-layers" viewBox="0 0 30 30">
+      <path d="M15 3L28 10L15 17L2 10ZM3 16L15 23L27 16M3 22L15 29L27 22" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-terminal" viewBox="0 0 30 30">
+      <path d="M3 5H27V25H3ZM7 10L12 15L7 20M16 20H23" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-document" viewBox="0 0 30 30">
+      <path d="M7 3H23V27H7ZM11 9H19M11 14H19M11 19H17" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 30 30">
+      <path d="M15 2L26 6V16C26 23 15 28 15 28S4 23 4 16V6ZM9 14L13 18L21 10" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-archive" viewBox="0 0 30 30">
+      <path d="M3 4H27V10H3ZM6 10V27H24V10M11 15H19M15 15V20" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 30 30">
+      <path d="M21 13A8 8 0 1 1 5 13A8 8 0 1 1 21 13M19 19L28 28" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 30 30">
+      <path d="M15 2C4 2 3 13 8 19L15 28L22 19C27 13 26 2 15 2ZM19 11A4 4 0 1 1 11 11A4 4 0 1 1 19 11" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-network" viewBox="0 0 30 30">
+      <path d="M12 3H18V9H12ZM2 21H8V27H2ZM22 21H28V27H22ZM5 21V15H25V21M15 9V15" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon-image" viewBox="0 0 30 30">
+      <path d="M3 4H27V26H3ZM3 22L11 13L17 20L22 15L27 22M22 9H23" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9Z" fill="#A66B35" />
+    </marker>
+  </defs>
+  <g id="hero" aria-label="Canonical identity hero">
+    <rect x="36" y="120" width="350" height="586" fill="#18222A" rx="16" />
+    <text x="65" y="145" fill="#C38651" font-family="Arial, sans-serif" font-size="15">THE PALETTE</text>
+    <text x="60" y="318" fill="#F8C265" font-family="Arial, sans-serif" font-size="170">32</text>
+    <text x="65" y="391" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="28">observed colors</text>
+    <rect x="65" y="424" width="27" height="24" fill="#F8C265" rx="4" />
+    <rect x="101" y="424" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="137" y="424" width="27" height="24" fill="#89B2A7" rx="4" />
+    <rect x="173" y="424" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="209" y="424" width="27" height="24" fill="#FDEFB4" rx="4" />
+    <rect x="245" y="424" width="27" height="24" fill="#EDAF57" rx="4" />
+    <rect x="281" y="424" width="27" height="24" fill="#F8C265" rx="4" />
+    <rect x="317" y="424" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="65" y="456" width="27" height="24" fill="#89B2A7" rx="4" />
+    <rect x="101" y="456" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="137" y="456" width="27" height="24" fill="#FDEFB4" rx="4" />
+    <rect x="173" y="456" width="27" height="24" fill="#EDAF57" rx="4" />
+    <rect x="209" y="456" width="27" height="24" fill="#F8C265" rx="4" />
+    <rect x="245" y="456" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="281" y="456" width="27" height="24" fill="#89B2A7" rx="4" />
+    <rect x="317" y="456" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="65" y="488" width="27" height="24" fill="#FDEFB4" rx="4" />
+    <rect x="101" y="488" width="27" height="24" fill="#EDAF57" rx="4" />
+    <rect x="137" y="488" width="27" height="24" fill="#F8C265" rx="4" />
+    <rect x="173" y="488" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="209" y="488" width="27" height="24" fill="#89B2A7" rx="4" />
+    <rect x="245" y="488" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="281" y="488" width="27" height="24" fill="#FDEFB4" rx="4" />
+    <rect x="317" y="488" width="27" height="24" fill="#EDAF57" rx="4" />
+    <rect x="65" y="520" width="27" height="24" fill="#F8C265" rx="4" />
+    <rect x="101" y="520" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="137" y="520" width="27" height="24" fill="#89B2A7" rx="4" />
+    <rect x="173" y="520" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <rect x="209" y="520" width="27" height="24" fill="#FDEFB4" rx="4" />
+    <rect x="245" y="520" width="27" height="24" fill="#EDAF57" rx="4" />
+    <rect x="281" y="520" width="27" height="24" fill="#F8C265" rx="4" />
+    <rect x="317" y="520" width="27" height="24" fill="#4A6E8D" rx="4" />
+    <text x="65" y="579" fill="#C38651" font-family="Arial, sans-serif" font-size="14">32 cells / conceptual palette</text>
+    <text x="65" y="623" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="19">Identity before adaptation</text>
+    <text x="65" y="652" fill="#C38651" font-family="Arial, sans-serif" font-size="14">Actual RGB values: palette.toml</text>
+    <text x="65" y="675" fill="#C38651" font-family="Arial, sans-serif" font-size="13">Tiles repeat the six mark tokens</text>
+  </g>
+  <g id="editorial-sections" aria-label="Three editorial sections">
+    <rect x="410" y="120" width="754" height="146" fill="#18222A" rx="12" />
+    <text x="438" y="173" fill="#F8C265" font-family="Arial, sans-serif" font-size="38">01</text>
+    <use href="#icon-source" x="1110" y="142" width="30" height="30" stroke="#F8C265" fill="none" />
+    <text x="525" y="164" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="27">Preserve</text>
+    <text x="525" y="199" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">Original artwork and provenance</text>
+    <text x="525" y="234" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Byte-preserved sources; dated evidence.</text>
+    <line x1="438" y1="252" x2="1136" y2="252" stroke="#F8C265" stroke-width="2" />
+    <rect x="410" y="286" width="754" height="146" fill="#18222A" rx="12" />
+    <text x="438" y="339" fill="#4A6E8D" font-family="Arial, sans-serif" font-size="38">02</text>
+    <use href="#icon-layers" x="1110" y="308" width="30" height="30" stroke="#4A6E8D" fill="none" />
+    <text x="525" y="330" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="27">Interpret</text>
+    <text x="525" y="365" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">Meaning references the palette</text>
+    <text x="525" y="400" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Semantic assignments remain separate.</text>
+    <line x1="438" y1="418" x2="1136" y2="418" stroke="#4A6E8D" stroke-width="2" />
+    <rect x="410" y="452" width="754" height="146" fill="#18222A" rx="12" />
+    <text x="438" y="505" fill="#89B2A7" font-family="Arial, sans-serif" font-size="38">03</text>
+    <use href="#icon-code" x="1110" y="474" width="30" height="30" stroke="#89B2A7" fill="none" />
+    <text x="525" y="496" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="27">Adapt</text>
+    <text x="525" y="531" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="18">Readable dark application surfaces</text>
+    <text x="525" y="566" fill="#C38651" font-family="Arial, sans-serif" font-size="15">Lightness and chroma may vary; hue stays.</text>
+    <line x1="438" y1="584" x2="1136" y2="584" stroke="#89B2A7" stroke-width="2" />
+  </g>
+  <g id="editorial-notes" aria-label="Supporting editorial callouts">
+    <rect x="410" y="638" width="238" height="68" fill="#212C34" rx="9" />
+    <text x="426" y="679" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="29">10</text>
+    <text x="475" y="678" fill="#C38651" font-family="Arial, sans-serif" font-size="13">existing target formats</text>
+    <rect x="668" y="638" width="238" height="68" fill="#212C34" rx="9" />
+    <text x="684" y="679" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="29">3</text>
+    <text x="733" y="678" fill="#C38651" font-family="Arial, sans-serif" font-size="13">separate artifact layers</text>
+    <rect x="926" y="638" width="238" height="68" fill="#212C34" rx="9" />
+    <text x="942" y="679" fill="#FCFDF7" font-family="Arial, sans-serif" font-size="29">0</text>
+    <text x="991" y="678" fill="#C38651" font-family="Arial, sans-serif" font-size="13">automatic installations</text>
+  </g>
+  <line x1="36" y1="746" x2="1164" y2="746" stroke="#A66B35" stroke-width="1" />
+  <text x="36" y="775" fill="#C38651" font-family="Arial, sans-serif" font-size="14">EDITORIAL / Explainers, posters and presentation figures</text>
+  <text x="1164" y="775" fill="#C38651" font-family="Arial, sans-serif" font-size="12" text-anchor="end">ILLUSTRATIVE / EDITABLE VECTOR</text>
+</svg>

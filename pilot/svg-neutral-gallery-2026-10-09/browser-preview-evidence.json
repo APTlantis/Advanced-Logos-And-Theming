@@ -1,0 +1,1494 @@
+{
+  "renderer": "Chromium headless",
+  "browser_version": "154.0.8037.98",
+  "node_version": "v24.19.0",
+  "checks": [
+    {
+      "target": "svg",
+      "example": "technical-flow.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "01 / Technical workflow",
+          "x": 36,
+          "y": 28,
+          "width": 267.091796875,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Swimlanes, decisions, revision loops and preservation boundaries",
+          "x": 36,
+          "y": 70,
+          "width": 438.2392578125,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "SOURCE",
+          "x": 54,
+          "y": 136,
+          "width": 59.90625,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "Original bytes retained",
+          "x": 54,
+          "y": 165,
+          "width": 120.390625,
+          "height": 14,
+          "inside": true
+        },
+        {
+          "text": "ENGINE",
+          "x": 54,
+          "y": 301,
+          "width": 53.6875,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "Canonical identity stays",
+          "x": 54,
+          "y": 330,
+          "width": 126.078125,
+          "height": 14,
+          "inside": true
+        },
+        {
+          "text": "separate",
+          "x": 54,
+          "y": 350,
+          "width": 47.025390625,
+          "height": 14,
+          "inside": true
+        },
+        {
+          "text": "REVIEW",
+          "x": 54,
+          "y": 466,
+          "width": 56.013671875,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "Local artifacts before",
+          "x": 54,
+          "y": 495,
+          "width": 111.71875,
+          "height": 14,
+          "inside": true
+        },
+        {
+          "text": "application acceptance",
+          "x": 54,
+          "y": 515,
+          "width": 122.412109375,
+          "height": 14,
+          "inside": true
+        },
+        {
+          "text": "Revise semantic mapping; retain canonical colors",
+          "x": 385,
+          "y": 634,
+          "width": 307.375,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "Artwork",
+          "x": 317,
+          "y": 164,
+          "width": 63.0048828125,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "TIFF / PNG / SVG source",
+          "x": 276,
+          "y": 204,
+          "width": 147.375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Normalize",
+          "x": 573,
+          "y": 164,
+          "width": 81.03125,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Orientation and color profile",
+          "x": 531,
+          "y": 204,
+          "width": 159.703125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Provenance",
+          "x": 828,
+          "y": 164,
+          "width": 96.078125,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Source hash and preserved bytes",
+          "x": 786,
+          "y": 204,
+          "width": 194.89697265625,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Canonical 32",
+          "x": 318,
+          "y": 329,
+          "width": 105.078125,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Observed RGB values and IDs",
+          "x": 276,
+          "y": 369,
+          "width": 178.2470703125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Semantic roles",
+          "x": 573,
+          "y": 329,
+          "width": 119.0625,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Source references and findings",
+          "x": 531,
+          "y": 369,
+          "width": 180.443359375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Target tokens",
+          "x": 828,
+          "y": 329,
+          "width": 108.0625,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Dark adaptation; source hue",
+          "x": 786,
+          "y": 369,
+          "width": 163.328125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Native export",
+          "x": 318,
+          "y": 494,
+          "width": 107.0478515625,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Target contract and artifacts",
+          "x": 276,
+          "y": 534,
+          "width": 160.91162109375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Local checks",
+          "x": 573,
+          "y": 494,
+          "width": 104.0625,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Parsing, contrast and previews",
+          "x": 531,
+          "y": 534,
+          "width": 178.25341796875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Operator review",
+          "x": 828,
+          "y": 494,
+          "width": 129.048828125,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Application import is separate",
+          "x": 785,
+          "y": 534,
+          "width": 171.53125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Ready?",
+          "x": 897.59375,
+          "y": 670,
+          "width": 44.8125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Record findings",
+          "x": 1008,
+          "y": 655,
+          "width": 104.7236328125,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "No auto activation",
+          "x": 1008,
+          "y": 682,
+          "width": 104.078125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "All stages keep dated recovery evidence",
+          "x": 53,
+          "y": 687,
+          "width": 288.3828125,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "TECHNICAL / Architecture, runbooks and process documentation",
+          "x": 36,
+          "y": 762,
+          "width": 405.892578125,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "ILLUSTRATIVE / EDITABLE VECTOR",
+          "x": 960.609375,
+          "y": 764,
+          "width": 203.71875,
+          "height": 14,
+          "inside": true
+        }
+      ],
+      "text_overlap": "none",
+      "preview": "technical-flow.png"
+    },
+    {
+      "target": "svg",
+      "example": "editorial-infographic.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "02 / Editorial infographic",
+          "x": 36,
+          "y": 28,
+          "width": 279.94140625,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Large typography, section hierarchy, reusable marks and layered composition",
+          "x": 36,
+          "y": 70,
+          "width": 513.890625,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "THE PALETTE",
+          "x": 65,
+          "y": 131,
+          "width": 99.75,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "32",
+          "x": 60,
+          "y": 164,
+          "width": 189.09375,
+          "height": 190,
+          "inside": true
+        },
+        {
+          "text": "observed colors",
+          "x": 65,
+          "y": 366,
+          "width": 197.65625,
+          "height": 31,
+          "inside": true
+        },
+        {
+          "text": "32 cells / conceptual palette",
+          "x": 65,
+          "y": 566,
+          "width": 172.9921875,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "Identity before adaptation",
+          "x": 65,
+          "y": 606,
+          "width": 214.4375,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "Actual RGB values: palette.toml",
+          "x": 64,
+          "y": 639,
+          "width": 198.65625,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "Tiles repeat the six mark tokens",
+          "x": 65,
+          "y": 663,
+          "width": 183.53466796875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "01",
+          "x": 438,
+          "y": 139,
+          "width": 42.28125,
+          "height": 42,
+          "inside": true
+        },
+        {
+          "text": "Preserve",
+          "x": 525,
+          "y": 140,
+          "width": 108.046875,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Original artwork and provenance",
+          "x": 525,
+          "y": 183,
+          "width": 260.140625,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Byte-preserved sources; dated evidence.",
+          "x": 525,
+          "y": 220,
+          "width": 272.65625,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "02",
+          "x": 438,
+          "y": 305,
+          "width": 42.28125,
+          "height": 42,
+          "inside": true
+        },
+        {
+          "text": "Interpret",
+          "x": 525,
+          "y": 306,
+          "width": 101.0498046875,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Meaning references the palette",
+          "x": 525,
+          "y": 349,
+          "width": 248.171875,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Semantic assignments remain separate.",
+          "x": 525,
+          "y": 386,
+          "width": 267.640625,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "03",
+          "x": 438,
+          "y": 471,
+          "width": 42.28125,
+          "height": 42,
+          "inside": true
+        },
+        {
+          "text": "Adapt",
+          "x": 524,
+          "y": 472,
+          "width": 72.05712890625,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Readable dark application surfaces",
+          "x": 525,
+          "y": 515,
+          "width": 281.171875,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Lightness and chroma may vary; hue stays.",
+          "x": 525,
+          "y": 552,
+          "width": 289.3125,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "10",
+          "x": 426,
+          "y": 653,
+          "width": 32.265625,
+          "height": 32,
+          "inside": true
+        },
+        {
+          "text": "existing target formats",
+          "x": 475,
+          "y": 666,
+          "width": 128.38623046875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "3",
+          "x": 684,
+          "y": 653,
+          "width": 16.140625,
+          "height": 32,
+          "inside": true
+        },
+        {
+          "text": "separate artifact layers",
+          "x": 733,
+          "y": 666,
+          "width": 132.00439453125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "0",
+          "x": 942,
+          "y": 653,
+          "width": 16.140625,
+          "height": 32,
+          "inside": true
+        },
+        {
+          "text": "automatic installations",
+          "x": 991,
+          "y": 666,
+          "width": 128.39892578125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "EDITORIAL / Explainers, posters and presentation figures",
+          "x": 36,
+          "y": 762,
+          "width": 357.96875,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "ILLUSTRATIVE / EDITABLE VECTOR",
+          "x": 960.609375,
+          "y": 764,
+          "width": 203.71875,
+          "height": 14,
+          "inside": true
+        }
+      ],
+      "text_overlap": "none",
+      "preview": "editorial-infographic.png"
+    },
+    {
+      "target": "svg",
+      "example": "orbit-map.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "03 / Relationship map",
+          "x": 36,
+          "y": 28,
+          "width": 251.484375,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Concentric guides, six linked families, secondary nodes and a readable legend",
+          "x": 36,
+          "y": 70,
+          "width": 521.15625,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "Documents",
+          "x": 557.0078125,
+          "y": 189,
+          "width": 86.4794921875,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "01",
+          "x": 592.765625,
+          "y": 215,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Editors",
+          "x": 826.41845703125,
+          "y": 288,
+          "width": 53.4091796875,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "02",
+          "x": 845.64501953125,
+          "y": 314,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Terminals",
+          "x": 816.50439453125,
+          "y": 486,
+          "width": 73.23974609375,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "03",
+          "x": 845.64501953125,
+          "y": 512,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Diagrams",
+          "x": 563.625,
+          "y": 585,
+          "width": 73.23974609375,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "04",
+          "x": 592.765625,
+          "y": 611,
+          "width": 15.22998046875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Charts",
+          "x": 322.0815124511719,
+          "y": 486,
+          "width": 50.5703125,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "05",
+          "x": 339.8861999511719,
+          "y": 512,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Presentations",
+          "x": 295.1440124511719,
+          "y": 288,
+          "width": 104.45068359375,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "06",
+          "x": 339.8861999511719,
+          "y": 314,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "CANONICAL",
+          "x": 550.40625,
+          "y": 316,
+          "width": 99.7314453125,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "32",
+          "x": 567.7421875,
+          "y": 360,
+          "width": 64.515625,
+          "height": 65,
+          "inside": true
+        },
+        {
+          "text": "one source identity",
+          "x": 541.234375,
+          "y": 432,
+          "width": 117.53125,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "Documents / Typography / tables",
+          "x": 55,
+          "y": 675,
+          "width": 190.3076171875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Editors / Syntax / selections",
+          "x": 435,
+          "y": 675,
+          "width": 160.181640625,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Terminals / ANSI / cursor",
+          "x": 815,
+          "y": 675,
+          "width": 143.708984375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Diagrams / Nodes / connectors",
+          "x": 55,
+          "y": 703,
+          "width": 178.96435546875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Charts / Series / scales",
+          "x": 435,
+          "y": 703,
+          "width": 134.15625,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Presentations / Native Office slots",
+          "x": 815,
+          "y": 703,
+          "width": 195.34765625,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "RELATIONSHIPS / System maps, taxonomies and dependency overviews",
+          "x": 36,
+          "y": 762,
+          "width": 460.390625,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "ILLUSTRATIVE / EDITABLE VECTOR",
+          "x": 960.609375,
+          "y": 764,
+          "width": 203.71875,
+          "height": 14,
+          "inside": true
+        }
+      ],
+      "text_overlap": "none",
+      "preview": "orbit-map.png"
+    },
+    {
+      "target": "svg",
+      "example": "icon-sheet.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "04 / Reusable icon sheet",
+          "x": 36,
+          "y": 28,
+          "width": 286.966796875,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Twelve local symbols • consistent strokes • three sizes • multiple surface treatments",
+          "x": 36,
+          "y": 70,
+          "width": 554.796875,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "Source",
+          "x": 132,
+          "y": 149,
+          "width": 60.6337890625,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-source",
+          "x": 132,
+          "y": 183,
+          "width": 115.609375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "01",
+          "x": 58,
+          "y": 232,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Palette",
+          "x": 418,
+          "y": 149,
+          "width": 59.58544921875,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-palette",
+          "x": 418,
+          "y": 183,
+          "width": 115.625,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "02",
+          "x": 344,
+          "y": 232,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Code",
+          "x": 704,
+          "y": 149,
+          "width": 45.85498046875,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-code",
+          "x": 704,
+          "y": 183,
+          "width": 104.78125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "03",
+          "x": 630,
+          "y": 232,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Layers",
+          "x": 990,
+          "y": 149,
+          "width": 57.52783203125,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-layers",
+          "x": 990,
+          "y": 183,
+          "width": 111.75537109375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "04",
+          "x": 916,
+          "y": 232,
+          "width": 15.22998046875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Terminal",
+          "x": 132,
+          "y": 312,
+          "width": 71.8125,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-terminal",
+          "x": 132,
+          "y": 346,
+          "width": 122.92626953125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "05",
+          "x": 58,
+          "y": 395,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Document",
+          "x": 418,
+          "y": 312,
+          "width": 87.31591796875,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-document",
+          "x": 418,
+          "y": 346,
+          "width": 134.05712890625,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "06",
+          "x": 344,
+          "y": 395,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Check",
+          "x": 704,
+          "y": 312,
+          "width": 54.35498046875,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-check",
+          "x": 704,
+          "y": 346,
+          "width": 111.0380859375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "07",
+          "x": 630,
+          "y": 395,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Archive",
+          "x": 989,
+          "y": 312,
+          "width": 64.7880859375,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-archive",
+          "x": 990,
+          "y": 346,
+          "width": 118.5,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "08",
+          "x": 916,
+          "y": 395,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Search",
+          "x": 132,
+          "y": 475,
+          "width": 60.203125,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-search",
+          "x": 132,
+          "y": 509,
+          "width": 115.609375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "09",
+          "x": 58,
+          "y": 558,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Pin",
+          "x": 418,
+          "y": 475,
+          "width": 27.46875,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-pin",
+          "x": 418,
+          "y": 509,
+          "width": 93.9375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "10",
+          "x": 344,
+          "y": 558,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Network",
+          "x": 704,
+          "y": 475,
+          "width": 70.18212890625,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-network",
+          "x": 704,
+          "y": 509,
+          "width": 122.59716796875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "11",
+          "x": 630,
+          "y": 558,
+          "width": 13.5,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Image",
+          "x": 990,
+          "y": 475,
+          "width": 53.23974609375,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "symbol: icon-image",
+          "x": 990,
+          "y": 509,
+          "width": 112,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "12",
+          "x": 916,
+          "y": 558,
+          "width": 14.46875,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Outlined tile",
+          "x": 112,
+          "y": 665,
+          "width": 100.767578125,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "Raised surface",
+          "x": 492,
+          "y": 665,
+          "width": 127.16162109375,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "Open canvas",
+          "x": 872,
+          "y": 665,
+          "width": 112.458984375,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "ICONS / UI assets, manuals, badges and diagram annotations",
+          "x": 36,
+          "y": 762,
+          "width": 386.765625,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "ILLUSTRATIVE / EDITABLE VECTOR",
+          "x": 960.609375,
+          "y": 764,
+          "width": 203.71875,
+          "height": 14,
+          "inside": true
+        }
+      ],
+      "text_overlap": "none",
+      "preview": "icon-sheet.png"
+    },
+    {
+      "target": "svg",
+      "example": "wayfinding-map.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "05 / Wayfinding map",
+          "x": 36,
+          "y": 28,
+          "width": 236.046875,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Illustrative campus • paths, blocks, route markers, landmarks and a map key",
+          "x": 36,
+          "y": 70,
+          "width": 506.7939453125,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "Library",
+          "x": 105,
+          "y": 206,
+          "width": 52.462890625,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Studio",
+          "x": 390,
+          "y": 206,
+          "width": 48.748046875,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Archive",
+          "x": 669,
+          "y": 206,
+          "width": 58.2314453125,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Workshop",
+          "x": 104,
+          "y": 400,
+          "width": 77.21875,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Gallery",
+          "x": 390,
+          "y": 400,
+          "width": 54.34716796875,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Review",
+          "x": 670,
+          "y": 400,
+          "width": 56.462890625,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Intake",
+          "x": 105,
+          "y": 606,
+          "width": 46.85546875,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Commons",
+          "x": 670,
+          "y": 606,
+          "width": 77.962890625,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Garden",
+          "x": 406,
+          "y": 591,
+          "width": 53.46875,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "1",
+          "x": 316.3828125,
+          "y": 643,
+          "width": 7.234375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "2",
+          "x": 316.3828125,
+          "y": 473,
+          "width": 7.234375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "3",
+          "x": 316.3828125,
+          "y": 273,
+          "width": 7.234375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "4",
+          "x": 596.3828125,
+          "y": 273,
+          "width": 8,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "5",
+          "x": 726.3828125,
+          "y": 273,
+          "width": 7.234375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "START",
+          "x": 74,
+          "y": 680,
+          "width": 38.896484375,
+          "height": 14,
+          "inside": true
+        },
+        {
+          "text": "MAP KEY",
+          "x": 904,
+          "y": 149,
+          "width": 80.693359375,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Archive route",
+          "x": 965,
+          "y": 199,
+          "width": 95.3671875,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "Studio route",
+          "x": 966,
+          "y": 243,
+          "width": 86.3828125,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "Entry point",
+          "x": 966,
+          "y": 296,
+          "width": 77.0390625,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "Route step",
+          "x": 966,
+          "y": 343,
+          "width": 77.484375,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "N",
+          "x": 1014.7734375,
+          "y": 414,
+          "width": 14.453125,
+          "height": 22,
+          "inside": true
+        },
+        {
+          "text": "Conceptual layout",
+          "x": 904,
+          "y": 565,
+          "width": 145.095703125,
+          "height": 20,
+          "inside": true
+        },
+        {
+          "text": "Positions are illustrative.",
+          "x": 904,
+          "y": 597,
+          "width": 150.953125,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "No distances or live routing.",
+          "x": 904,
+          "y": 624,
+          "width": 172.765625,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "NOT TO SCALE",
+          "x": 904,
+          "y": 669,
+          "width": 87.375,
+          "height": 14,
+          "inside": true
+        },
+        {
+          "text": "WAYFINDING / Campus guides, floor plans and schematic maps",
+          "x": 35,
+          "y": 762,
+          "width": 402.484375,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "ILLUSTRATIVE / EDITABLE VECTOR",
+          "x": 960.609375,
+          "y": 764,
+          "width": 203.71875,
+          "height": 14,
+          "inside": true
+        }
+      ],
+      "text_overlap": "none",
+      "preview": "wayfinding-map.png"
+    },
+    {
+      "target": "svg",
+      "example": "product-illustration.svg",
+      "title": "",
+      "horizontal_overflow": false,
+      "external_media": false,
+      "svg_text": [
+        {
+          "text": "06 / Product illustration",
+          "x": 36,
+          "y": 28,
+          "width": 264.46875,
+          "height": 30,
+          "inside": true
+        },
+        {
+          "text": "Layered vector scene • clipping • tonal glow • repeated symbols • editorial callouts",
+          "x": 36,
+          "y": 70,
+          "width": 542.6240234375,
+          "height": 17,
+          "inside": true
+        },
+        {
+          "text": "Palette workspace",
+          "x": 346,
+          "y": 236,
+          "width": 139.45068359375,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Source",
+          "x": 337,
+          "y": 294,
+          "width": 41.203125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Roles",
+          "x": 337,
+          "y": 350,
+          "width": 33.736328125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Tokens",
+          "x": 337,
+          "y": 406,
+          "width": 41.68994140625,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Review",
+          "x": 337,
+          "y": 462,
+          "width": 43.236328125,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Adapted swatches",
+          "x": 432,
+          "y": 285,
+          "width": 156.765625,
+          "height": 21,
+          "inside": true
+        },
+        {
+          "text": "Conceptual screen / illustrative tiles",
+          "x": 433,
+          "y": 473,
+          "width": 204.259765625,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Review artifacts",
+          "x": 473,
+          "y": 513,
+          "width": 92.2490234375,
+          "height": 15,
+          "inside": true
+        },
+        {
+          "text": "Artwork",
+          "x": 117.1875,
+          "y": 310,
+          "width": 59.11572265625,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Export",
+          "x": 1024.4296875,
+          "y": 318,
+          "width": 49.4091796875,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Recovery",
+          "x": 130.09375,
+          "y": 549,
+          "width": 72.3017578125,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "Review",
+          "x": 1019.125,
+          "y": 559,
+          "width": 56.462890625,
+          "height": 19,
+          "inside": true
+        },
+        {
+          "text": "ILLUSTRATION / Product explainers, landing visuals and feature artwork",
+          "x": 36,
+          "y": 762,
+          "width": 452.0556640625,
+          "height": 16,
+          "inside": true
+        },
+        {
+          "text": "ILLUSTRATIVE / EDITABLE VECTOR",
+          "x": 960.609375,
+          "y": 764,
+          "width": 203.71875,
+          "height": 14,
+          "inside": true
+        }
+      ],
+      "text_overlap": "none",
+      "preview": "product-illustration.png"
+    }
+  ],
+  "blocked_network_requests": [],
+  "errors": [],
+  "native_editor_acceptance": "pending",
+  "svg_downloads": "Six byte-identical offline downloads",
+  "svg_embedded_previews": "All gallery SVG paths resolved; previews reviewed visually"
+}

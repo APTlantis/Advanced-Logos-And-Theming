@@ -1,0 +1,6 @@
+
+*{box-sizing:border-box}body{background:#181a1d;color:#eceef0;margin:0;font:17px/1.6 Arial,sans-serif}
+main{max-width:1280px;padding:clamp(16px,3vw,36px);margin:auto}a{color:#dce1e6;text-decoration:underline;text-underline-offset:3px}h1,h2{line-height:1.25}
+article{margin:32px 0;padding:20px;border:1px solid #60656d;border-radius:12px;background:#22252a}
+.canvas{overflow:auto;margin-top:18px}img{display:block;width:100%;min-width:800px;aspect-ratio:3/2}
+a:focus-visible,.canvas:focus-visible{outline:3px solid #eceef0;outline-offset:4px}

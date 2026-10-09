@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-09",
+  "timezone": "America/New_York",
+  "scope": "Detail and breadth improvements to the existing SVG target; fresh local pilot only",
+  "pilot": "pilot/svg-quality-2026-10-09",
+  "source": "pilot/visual-quality-2026-10-09/palette.toml",
+  "source_sha256": "f27d2748eb2c35bec2818fd18ca0218a41a51e0ae44045466aee46c5ce4ffe92",
+  "source_bytes_preserved": true,
+  "canonical_rgb_and_ids_preserved": true,
+  "canonical_count": 32,
+  "target": {
+    "target": "svg",
+    "budget": 40,
+    "named_count": 28,
+    "unique_count": 19,
+    "contrast_failures": 0,
+    "examples": [
+      "technical-flow.svg",
+      "editorial-infographic.svg",
+      "orbit-map.svg",
+      "icon-sheet.svg",
+      "wayfinding-map.svg",
+      "product-illustration.svg"
+    ],
+    "acceptance_limits": "Standalone SVG presentation attributes; SVG editor import/font substitution pending."
+  },
+  "canvas": [
+    1200,
+    800
+  ],
+  "chart_canvas_unchanged": [
+    960,
+    540
+  ],
+  "capabilities": [
+    "named editable groups",
+    "twelve local icon symbols",
+    "arrow markers",
+    "curved connectors",
+    "swimlanes and revision loop",
+    "patterned map texture",
+    "clip path",
+    "same-token opacity gradient"
+  ],
+  "focused_suite": {
+    "tests": 29,
+    "result": "passed",
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "execution": "Outside Windows sandbox because of its known temporary-file restrictions"
+  },
+  "browser_evidence": "pilot/svg-quality-2026-10-09/browser-preview-evidence.json",
+  "browser_checks": [
+    "six rendered SVGs",
+    "text bounds",
+    "no overlapping text boxes",
+    "zero HTTP/HTTPS requests",
+    "zero browser errors",
+    "six gallery images loaded",
+    "six exact offline downloads",
+    "390-pixel gallery layout"
+  ],
+  "visually_reviewed_pngs": [
+    "svg/technical-flow.png",
+    "svg/editorial-infographic.png",
+    "svg/orbit-map.png",
+    "svg/icon-sheet.png",
+    "svg/wayfinding-map.png",
+    "svg/product-illustration.png",
+    "svg/examples.png",
+    "svg/examples-narrow.png"
+  ],
+  "wheel_evidence": "pilot/svg-quality-2026-10-09/wheel-verification.json",
+  "isolated_wheel_svg_generation": "passed",
+  "previous_quality_pilot_hashes_verified": 114,
+  "commands": [
+    ".venv/Scripts/python.exe -m apt_theme.cli import pilot/visual-quality-2026-10-09/palette.toml --output pilot/svg-quality-2026-10-09 --name \"Aptlantis Black Gold SVG Quality\" --targets svg --strict",
+    "node tools/render_visual_previews.cjs pilot/svg-quality-2026-10-09 PLAYWRIGHT_MODULE CHROMIUM_EXECUTABLE",
+    ".venv/Scripts/python.exe -m pip wheel . --no-deps --no-build-isolation --wheel-dir output/svg-quality-wheel-2026-10-09",
+    ".venv/Scripts/python.exe -m pip install --no-deps --target output/svg-quality-wheel-2026-10-09/installed-final output/svg-quality-wheel-2026-10-09/aptlantis_theme_pipeline-0.1.0-py3-none-any.whl",
+    ".venv/Scripts/python.exe tools/verify_visual_package.py output/svg-quality-wheel-2026-10-09/aptlantis_theme_pipeline-0.1.0-py3-none-any.whl output/svg-quality-wheel-2026-10-09/installed-final pilot/visual-quality-2026-10-09/palette.toml output/svg-quality-wheel-2026-10-09/generated-final svg"
+  ],
+  "runtime_paths": {
+    "node": "C:/Users/Administrator/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe",
+    "playwright": "C:/Users/Administrator/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
+    "chromium": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+  },
+  "content_limits": "Illustrative conceptual tiles repeat mark tokens; wayfinding is fictional and not to scale; scene is not an interactive UI.",
+  "native_editor_import_font_substitution_printing_pdf_export": "not tested",
+  "acceptance_limits": "Browser and XML checks do not establish importer preservation of symbols, patterns, clips or gradients; decorative opacity/textures add no contrast guarantees.",
+  "installation_activation_publication": "not performed",
+  "hosted_outputs_regenerated": false,
+  "recovery": "Original bytes, previous pilots, historical evidence and recovery archives preserved; old three SVG filenames retained in new generation.",
+  "extended_records": "No parent/root update required: identity, ownership and discovery roots unchanged.",
+  "artifact_sha256": {
+    "pilot/svg-quality-2026-10-09/browser-preview-evidence.json": "3b48ef0f8eddd43cd12226ca4c6dc6104f25c793ffb89c0ab39729e16daf00f5",
+    "pilot/svg-quality-2026-10-09/candidates.json": "4b5438ae2086cca043191d81236b0691193cdaedb088e5ebe7ff51d33733f321",
+    "pilot/svg-quality-2026-10-09/palette.css": "7eb74382cb882876073a6711416ffd421bc4e17b11ae0b898d4925cf72008fad",
+    "pilot/svg-quality-2026-10-09/palette.png": "ddd9e7cf9dff16b75645d7341a237eef8b8f6898ca2d0736cc81e701244246df",
+    "pilot/svg-quality-2026-10-09/palette.toml": "511366a5db72e5a407e6d5ed50287234c6563e99444d00f89c5ca77b2db7c587",
+    "pilot/svg-quality-2026-10-09/palette.txt": "89ae3ea502f4138cd82f831ba47e422353256b3eca02bba7a16463ae4378747f",
+    "pilot/svg-quality-2026-10-09/provenance.json": "8b9dacfb51d95696cbb8d7d1e711e7086612b0cdf96d5c7e98e6f01f0ef5650b",
+    "pilot/svg-quality-2026-10-09/README.md": "fa2416378765b1fe07fa18ddbb8b5ba6217c87cb27cd75d193193057d6c8be94",
+    "pilot/svg-quality-2026-10-09/review.html": "ad8675c51ab343c6d1af675728c87c41b62e25dc0cf7157329e5d340fb419ad1",
+    "pilot/svg-quality-2026-10-09/run.json": "a41ea6d0a6bc781093202150c8f1ee6fe59e955a610da2464fc2844445cd57e7",
+    "pilot/svg-quality-2026-10-09/selection.json": "7dd394cf5d966d73ce2de9f793529b0c627e8474e834479fc344f7de0791da14",
+    "pilot/svg-quality-2026-10-09/semantics.json": "543c79e382c69e21960a6c84636ae6213ff6a2fb5f42fabd6cf294dc8220ddce",
+    "pilot/svg-quality-2026-10-09/source/palette.toml": "f27d2748eb2c35bec2818fd18ca0218a41a51e0ae44045466aee46c5ce4ffe92",
+    "pilot/svg-quality-2026-10-09/svg/editorial-infographic.png": "f5b223a76d3c0357850353f4a94d651bf4c20151e24d3fc0273b06a04b6625f6",
+    "pilot/svg-quality-2026-10-09/svg/editorial-infographic.svg": "c6396c98e8d4265489bd5ce62b37577931e3fa2d69b3b494edb1910ea4a2f27c",
+    "pilot/svg-quality-2026-10-09/svg/examples-narrow.png": "15ec82a7043a112d3b7c9af8b44b84099de498b9b639c7e67c3e2f1e652769b9",
+    "pilot/svg-quality-2026-10-09/svg/examples.css": "bd2489054a99fcf6f9a4134beb7cf368bd2ab235d59cf17a518d481a86c8413e",
+    "pilot/svg-quality-2026-10-09/svg/examples.html": "85f2cc33df6c0952321019d3854d135e9cfd82071d91e70db25a92407800bde8",
+    "pilot/svg-quality-2026-10-09/svg/examples.png": "52c268a5d57551b5f2df5a67f4b2958c77bd3831fa25fcdcabf8325989b07c7d",
+    "pilot/svg-quality-2026-10-09/svg/icon-sheet.png": "74a3f9c4fc8d357ec85d1b2d43134ce857c6938ad50c1821256db2cb2d40ab4e",
+    "pilot/svg-quality-2026-10-09/svg/icon-sheet.svg": "b6998dc53cb660c80fe4c9f638cb925954e1c47c9952035f15a279549094c68a",
+    "pilot/svg-quality-2026-10-09/svg/orbit-map.png": "c579cb5f0e1669e5037994b07e8a998ed4d687b97661b584b84e5b534f6b54c1",
+    "pilot/svg-quality-2026-10-09/svg/orbit-map.svg": "9112deb50223a156c1a0fbc2153f23c1baf307ec7ffcc3ac5b4e2c93287aeec7",
+    "pilot/svg-quality-2026-10-09/svg/product-illustration.png": "45850112493041bebc97f72ac2b0960f9bc0d141141e511a1f2068c98edae63b",
+    "pilot/svg-quality-2026-10-09/svg/product-illustration.svg": "eb65a88d970df4f072d0ae77125a05343eb88895e052ec4c4b336c7f0fc2f392",
+    "pilot/svg-quality-2026-10-09/svg/technical-flow.png": "2f3961c55eadeef810ebdf8d7da1ea8465e173c689908787592aef33e7133b1a",
+    "pilot/svg-quality-2026-10-09/svg/technical-flow.svg": "e9e6dc74e1493216f7f628c771562e40d3b68c4f80d9a16f9c68a5dff16cc9db",
+    "pilot/svg-quality-2026-10-09/svg/tokens.json": "183fd610ad6ed8e396bd57cb65d5a4a50b0c34c6fcb68f7c476af86de5b7fd4c",
+    "pilot/svg-quality-2026-10-09/svg/validation.json": "d111f3052beff1c3dff852c15730af6b2a63bc5268438e26922a34bee2435c49",
+    "pilot/svg-quality-2026-10-09/svg/wayfinding-map.png": "549f519df9221c6e87d8f5cfaf1eb2498bc5f7b8ae7548a272e68aa8bf2597b6",
+    "pilot/svg-quality-2026-10-09/svg/wayfinding-map.svg": "4af52fb53b61803786f323ad2225ad63c4cd4768aacc87764f65c7dc29d8bb91",
+    "pilot/svg-quality-2026-10-09/wheel-verification.json": "a352c817cf1b5edddf8912f8ec3db7f5488f54233146a446a31387f50f969ecc"
+  },
+  "implementation_sha256": {
+    "apt_theme/svg_examples.py": "30932ec4f027015a23a27c14f2bb5adc2115831cfeb328d9dfbea71d7751637e",
+    "apt_theme/visual_targets.py": "43491d6b78816b9579b14ae23397e72f0e9363a266700e044931aed0662d71d7",
+    "tools/render_visual_previews.cjs": "8d3e3cd55e8e4d50b39fb5f74cd7066a49cc9f3cd2a7bba890c47e915faf257d",
+    "tools/verify_visual_package.py": "e18e2fce589e63c98884a5f441985ade3f558fca839b37961c293316f1f286ac",
+    "tests/test_svg_quality.py": "ef1d8ab5b27dc0dcb987b580946cce6ad1332f22365023ed086e7c254bd3879a",
+    ".gitattributes": "81f28b266621a18a2dbdc333f353504626e5a6f29fa9163fe0d3ed1d93888d35"
+  }
+}

@@ -1,5 +1,7 @@
 # SVG, syntax highlighting and data visualization
 
+SVG gallery environment: the page, cards, text, links and focus outlines use fixed neutral colors independent of every theme. Palette-derived backgrounds remain inside the SVG compositions. Surrounding pages may use any background. Fresh preview: [neutral SVG gallery](../pilot/svg-neutral-gallery-2026-10-09/svg/examples.html). Earlier galleries remain historical previews.
+
 Contract review: 2026-10-09, America/New_York. The three visual targets derive dark outputs from the unchanged canonical 32 colors. The syntax/chart quality pass adds actual offline Prism grammars and richer shared chart fixtures. Fresh local evidence: `migration/visual-quality-acceptance-2026-10-09.json`. Earlier pilots remain dated evidence. No theme is installed, activated or published by this pass.
 
 | Target ID | Recommended budget | Planning range | Required tokens | Default emitted |
@@ -18,9 +20,24 @@ Use `generate` with an image for a newly extracted palette. Import preserves exi
 
 ## SVG diagrams and infographics
 
-Three standalone 960×540 SVG files implement different compositions: `technical-flow.svg` uses orthogonal connectors and outlined nodes; `editorial-infographic.svg` uses a large numeral and typographic sections; `orbit-map.svg` uses a radial map. Geometry/text remain editable XML. RGB `fill`/`stroke` presentation attributes follow the [W3C SVG styling contract](https://www.w3.org/TR/SVG11/styling.html). There are no scripts, linked assets or required external fonts. Each file has an accessible title and description.
+Six standalone **1200×800** SVG compositions now exercise uses beyond charts. The earlier three filenames are retained:
 
-These are reusable examples rather than an editor-specific theme. Colors are recorded in `tokens.json`; edit attributes or import into an SVG editor. Browser rendering is checked separately. Illustrator, Inkscape, Office import, font substitution, printing and PDF conversion remain unverified. Diagram numbers use readable text tokens; decorative marks use 3:1 contrast against the panel.
+| File | Use and detail |
+| --- | --- |
+| `technical-flow.svg` | Architecture/runbooks: three swimlanes, nine nodes, arrowheads, a review decision and revision loop |
+| `editorial-infographic.svg` | Posters/explainers: large typography, conceptual palette tiles, three sections and supporting callouts |
+| `orbit-map.svg` | Relationships/taxonomies: six target families, curved connectors, concentric guides, satellite marks and legend |
+| `icon-sheet.svg` | UI/document assets: twelve reusable local symbols, 16/24/32-pixel demonstrations and three surface treatments |
+| `wayfinding-map.svg` | Schematic campus/floor-plan guides: eight landmarks, two patterned routes, numbered steps, textured grid and orientation |
+| `product-illustration.svg` | Feature artwork: layered device scene, clipped application surface, floating artifacts and same-token tonal glow |
+
+Geometry and text remain editable XML in named groups. RGB presentation attributes, gradient stops and pattern paints use the existing exported tokens; budgets and canonical 32 colors are unchanged. Conceptual swatch tiles repeat the six mark tokens and do not represent actual canonical RGB values. The wayfinding layout is fictional and not to scale. The product scene is an illustration, not a functioning UI.
+
+Files follow the [W3C SVG styling contract](https://www.w3.org/TR/SVG11/styling.html). Local `<symbol>`/`<use>` references, paths, markers, patterns, clips and a single-color opacity gradient require no scripts, raster images, remote resources or external fonts. Icons use inherited presentation strokes; symbol IDs are documented in the sheet. Each SVG has an accessible root title/description. The themed `examples.html` gallery embeds all six compositions, offers byte-preserving offline downloads and contains horizontal scrolling on narrow screens. The chart SVG canvas stays 960×540.
+
+These are reusable examples rather than an editor-specific theme. Colors are recorded in `tokens.json`; edit attributes or import into an SVG editor. Browser rendering is checked separately. Illustrator, Inkscape, Office import, font substitution, printing and PDF conversion remain unverified; preservation of symbols, clips, patterns and gradients varies by importer. Body text uses readable text tokens; large decorative numerals/marks use the existing series tokens. Subtle guide lines, textures and gradient opacity are decorative and do not add contrast guarantees.
+
+Fresh local SVG pilot: [gallery](../pilot/svg-quality-2026-10-09/svg/examples.html), [palette/token review](../pilot/svg-quality-2026-10-09/review.html), and `migration/svg-quality-acceptance-2026-10-09.json`. XML/local-reference/paint-provenance tests and offline Chromium previews are separate from native editor import. Earlier pilots and hosted outputs remain unchanged.
 
 ## General syntax highlighting: Prism CSS
 

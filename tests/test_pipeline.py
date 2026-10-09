@@ -182,7 +182,7 @@ class PipelineTests(unittest.TestCase):
                             self.assertEqual(template.read(n), expected, n)
                     self.assertEqual(result['sample_deck']['layouts'], 14)
             elif target in ("svg", "syntax_highlighting", "data_visualization"):
-                self.assertEqual(len(result["examples"]), 12 if target == "syntax_highlighting" else 3)
+                self.assertEqual(len(result["examples"]), {"syntax_highlighting":12,"svg":6,"data_visualization":3}[target])
                 for file in destination.glob("*.svg"):
                     root = ET.parse(file).getroot()
                     self.assertEqual(root.tag, "{http://www.w3.org/2000/svg}svg")

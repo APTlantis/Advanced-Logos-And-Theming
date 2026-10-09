@@ -1,6 +1,13 @@
 # Logos-And-Theming documentation suite plan
 
-**Planning date:** 8 October 2026. **Status:** proposed authoring sequence; the volumes below are planned, not completed. **Owner:** Logos-And-Theming, with an independently owned SESM companion. **Presentation entry point:** [24-slide Black-Gold overview](../presentations/Logos-And-Theming-Overview.pptx).
+**Planning date:** 8 October 2026. **Status updated:** 9 October 2026; two comprehensive references are authored, while the remaining volumes below retain their proposed scope. **Owner:** Logos-And-Theming, with an independently owned SESM companion. **Presentation entry point:** [24-slide Black-Gold overview](../presentations/Logos-And-Theming-Overview.pptx).
+
+## Authored references — 2026-10-09
+
+- [Output apps/types and exporter internals](../OUTPUT-REFERENCE.md): shared stages, every target's exact files/mappings/limits, independent utilities, dependencies, packaging and recovery. This supplies current reference material for planned chapters 05 and 09; it does not claim every proposed developer/runbook volume is complete.
+- [Testing and future coverage](../TESTING-REFERENCE.md): all 29 current methods with rationale/limits, runtime and native gates, commands, historical evidence boundaries and prioritized proposed tests. This supports chapter 06, but writing acceptance procedures does not establish native acceptance.
+
+These documents are source-checked current project references. The overview deck and Writerside snapshot retain their dates; they have not been regenerated or published.
 
 The suite should explain both how to use the pipeline and why its decisions are separated. The overview deck introduces the whole project; focused volumes carry the algorithms, application contracts, operational details and recovery evidence that would overwhelm a presentation. The deck’s speaker notes add explanatory depth and dated source references without crowding its slides.
 

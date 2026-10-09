@@ -30,6 +30,8 @@ const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).d
         if (example.endsWith('.svg')) {
           const svg=fs.readFileSync(file,'utf8').replace(/<\?xml[^>]*\?>/, '');
           await page.setContent('<!doctype html><html><meta charset="utf-8"><body style="margin:0">'+svg+'</body></html>');
+          const canvas=await page.locator('svg').evaluate(n=>({width:n.viewBox.baseVal.width,height:n.viewBox.baseVal.height}));
+          await page.setViewportSize({width:Math.max(1100,canvas.width),height:Math.max(750,canvas.height)});
         } else await page.goto(pathToFileURL(file).href);
         await page.evaluate(() => document.fonts.ready);
         const check = await page.evaluate(() => ({
@@ -38,10 +40,21 @@ const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).d
           external_media:[...document.querySelectorAll('[src]')].some(n=>/^https?:/.test(n.getAttribute('src'))),
           svg_text:[...document.querySelectorAll('svg text')].map(n=>{
             const b=n.getBBox(), view=n.ownerSVGElement.viewBox.baseVal;
-            return {text:n.textContent, inside:b.x>=0 && b.y>=0 && b.x+b.width<=view.width && b.y+b.height<=view.height};
+            return {text:n.textContent, x:b.x, y:b.y, width:b.width, height:b.height,
+              inside:b.x>=0 && b.y>=0 && b.x+b.width<=view.width && b.y+b.height<=view.height};
           }),
         }));
         assert(!check.horizontal_overflow && !check.external_media && check.svg_text.every(t=>t.inside), example+' bounds/media');
+        if (target==='svg') {
+          const overlaps=[];
+          for (let i=0;i<check.svg_text.length;i++) for (let j=i+1;j<check.svg_text.length;j++) {
+            const a=check.svg_text[i],b=check.svg_text[j];
+            if (Math.min(a.x+a.width,b.x+b.width)-Math.max(a.x,b.x)>.5 &&
+                Math.min(a.y+a.height,b.y+b.height)-Math.max(a.y,b.y)>.5) overlaps.push([a.text,b.text]);
+          }
+          assert.deepEqual(overlaps,[],example+' overlapping labels');
+          check.text_overlap='none';
+        }
         if (target==='syntax_highlighting') {
           await page.waitForFunction(() => document.querySelector('code .token'));
           const grammar = await page.evaluate(() => {
@@ -89,13 +102,28 @@ const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).d
           check.narrow_layout='passed';
         } else {
           const png=example.replace('.svg','.png');
-          await page.screenshot({path:path.join(directory,png),clip:{x:0,y:0,width:960,height:540}});
+          const canvas=await page.locator('svg').evaluate(n=>({width:n.viewBox.baseVal.width,height:n.viewBox.baseVal.height}));
+          await page.screenshot({path:path.join(directory,png),clip:{x:0,y:0,width:canvas.width,height:canvas.height}});
           check.preview=png;
         }
         evidence.checks.push({target,example,...check});
       }
       await page.setViewportSize({width:1100,height:750});
       await page.goto(pathToFileURL(path.join(directory,'examples.html')).href);
+      if (target==='svg') {
+        assert.equal(await page.locator('article').count(),tokens.examples.length);
+        const embeds=await page.locator('img').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('src')));
+        assert.deepEqual(embeds,tokens.examples);
+        for (const asset of embeds) assert(fs.existsSync(path.join(directory,asset)));
+        await page.waitForFunction(()=>[...document.images].every(n=>n.complete && n.naturalWidth>0));
+        for (let i=0;i<tokens.examples.length;i++) {
+          const [download]=await Promise.all([page.waitForEvent('download'),page.locator('a[download]').nth(i).click()]);
+          assert.equal(hash(await download.path()),hash(path.join(directory,tokens.examples[i])));
+        }
+        await page.evaluate(()=>window.scrollTo(0,0));
+        evidence.svg_downloads='Six byte-identical offline downloads';
+        evidence.svg_embedded_previews='All gallery SVG paths resolved; previews reviewed visually';
+      }
       await page.screenshot({path:path.join(directory,'examples.png'),fullPage:true});
       await page.setViewportSize({width:390,height:844});
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),target+' index narrow overflow');

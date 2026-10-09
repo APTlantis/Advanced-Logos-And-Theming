@@ -1,5 +1,9 @@
 # Logos-And-Theming proposal
 
+The 2026-10-09 documentation extension inventories every current target, generated artifact and construction path in [the output reference](docs/OUTPUT-REFERENCE.md), and explains the 29-method suite, runtime/native gates and prioritized future tests in [the testing reference](docs/TESTING-REFERENCE.md). It changes documentation and navigation only; historical evidence, product contracts and hosted outputs remain preserved.
+
+The SVG quality extension broadens the existing target's examples to six detailed 1200×800 editable vector compositions: workflow, editorial infographic, relationship map, icon sheet, wayfinding map and product illustration. It retains existing filenames and color budgets, using local symbols, paths, patterns, clipping and a same-token tonal gradient. Native editor import remains a separate gate; current evidence: `migration/svg-quality-acceptance-2026-10-09.json`.
+
 The 2026-10-09 quality pass strengthens the existing syntax and chart targets: bundled offline Prism 1.30.0 for twelve languages and deterministic 12-bar, 6×24-line and 8×12-heatmap examples shared with the optional Matplotlib renderer. Canonical 32-color identity and target budgets are unchanged. Fresh local evidence is in `migration/visual-quality-acceptance-2026-10-09.json`; no hosted outputs or installation state were changed.
 
 The 2026-10-08 visual-target extension adds SVG presentation-attribute examples, Prism CSS and a Matplotlib style with explicit sequential scales. There are now ten default targets. Examples are illustrative; static, browser and Matplotlib Agg evidence are separate from native editor integration. See docs/VISUAL-TARGETS.md and migration/visual-target-acceptance.json.

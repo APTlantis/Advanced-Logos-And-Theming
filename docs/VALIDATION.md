@@ -1,5 +1,15 @@
 # Validation and evidence limits
 
+The [testing reference](TESTING-REFERENCE.md) explains all 29 current methods, additional browser/Agg/packaging/native gates, their purpose and limits, safe command recipes and prioritized proposed coverage. The [output reference](OUTPUT-REFERENCE.md) defines the artifacts those checks inspect. Documentation recipes are not new test-run evidence; dated results below retain their original scope.
+
+The separate [documentation reference check, 2026-10-09](../migration/documentation-reference-check-2026-10-09.json) records source/document hashes, 135 resolved local links/anchors, all ten target budget/count rows, the exact 29-method inventory, a fresh passing focused suite and command-contract lint. This is documentation/static verification; browser, Agg, native opening and hosted delivery were not rerun for this documentation change.
+
+## SVG quality extension — 2026-10-09
+
+The fresh `pilot/svg-quality-2026-10-09` run contains six 1200×800 compositions with unchanged canonical RGB/IDs, source bytes and zero declared contrast failures. All **29 focused tests** passed, including SVG contract tests for local references, unique IDs, accessible title/description, no active/external/raster content, token-only paint/gradient stops, minimum budgets, deterministic output and unchanged chart canvas dimensions. Offline Chromium checks text bounds and overlapping label boxes, all six loaded gallery images, exact downloads and 390-pixel layout. All six PNG previews were visually reviewed. Isolated installed-wheel SVG generation was verified separately. Measured commands, results and hashes: `migration/svg-quality-acceptance-2026-10-09.json`.
+
+Illustrator, Inkscape, Office import, font substitution, printing/PDF export and importer treatment of symbols/patterns/clips/gradients remain unverified. Text/mark token checks do not establish contrast for decorative textures or opacity effects. Previous pilots and hosted outputs are preserved. Parent/root discovery records need no update because ownership, identity and roots are unchanged.
+
 ## Syntax and chart quality pass — 2026-10-09
 
 `migration/visual-quality-acceptance-2026-10-09.json` records the fresh Black-Gold local pilot. All **26** focused pipeline/converter tests passed outside the Windows sandbox after its temporary-file restrictions prevented execution. New coverage checks Prism resource hashes and dependency order, substantial source examples, escaping, CSS variable declarations, deterministic chart dimensions and plotted SVG values. Existing tests retain canonical immutability, budgets, contrast, overwrite guards and converter preservation.
