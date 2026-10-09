@@ -116,7 +116,28 @@ class PipelineTests(unittest.TestCase):
             self.assertLessEqual(result["named_count"], budget)
             self.assertEqual(result["contrast_failures"], 0)
             destination = self.root / target
-            export(result, destination, "Test Dark")
+            export(result, destination, "Test Dark", self.colors, "a" * 64)
+            stem = "apt-test-dark-" + target.replace("_", "-")
+            self.assertEqual(result["palette_artifacts"], {
+                "palette": stem + "-palette.toml", "swatch": stem + "-swatch.png"})
+            palette = tomllib.loads((destination / (stem + "-palette.toml")).read_text())
+            self.assertEqual(palette["theme"]["source_sha256"], "a" * 64)
+            self.assertEqual(palette["transformation"]["actual_count"], len(result["tokens"]))
+            self.assertEqual(palette["transformation"]["unique_hex_count"], result["unique_count"])
+            self.assertEqual(palette["source_palette"]["canonical"], self.colors)
+            flattened = {k: v for group in palette["palette"].values() for k, v in group.items()}
+            self.assertEqual(set(flattened), set(result["tokens"]))
+            for key, token in result["tokens"].items():
+                self.assertEqual(flattened[key]["hex"], token["hex"])
+                self.assertEqual(flattened[key]["rgb"], token["rgb"])
+                self.assertEqual(flattened[key]["origin"], token["origin"])
+                group = "derived" if token["origin"]["derived"] else "canonical"
+                self.assertIn(key, palette["palette"][group])
+            from PIL import Image
+            with Image.open(destination / (stem + "-swatch.png")) as swatch:
+                self.assertEqual(swatch.size, (1200, 70 + ((len(result["tokens"]) + 3) // 4) * 100))
+                for i, token in enumerate(result["tokens"].values()):
+                    self.assertEqual(swatch.getpixel(((i % 4) * 300 + 20, 90 + (i // 4) * 100)), tuple(token["rgb"]))
             if target == "windows_terminal":
                 scheme = json.loads((destination / "windows-terminal.json").read_text())
                 self.assertEqual(len(scheme), 21)
@@ -124,7 +145,7 @@ class PipelineTests(unittest.TestCase):
                 self.assertLess(hue_distance(result["tokens"]["yellow"]["oklch"][2], 85), 45)
                 self.assertLess(hue_distance(result["tokens"]["cyan"]["oklch"][2], 205), 45)
             elif target == "alacritty":
-                native = tomllib.loads(next(destination.glob("*.toml")).read_text())['colors']
+                native = tomllib.loads((destination / "test-dark.toml").read_text())['colors']
                 self.assertEqual(set(native), {"primary", "cursor", "selection", "normal", "bright"})
                 self.assertEqual(len(native["normal"]), 8)
                 self.assertEqual(len(native["bright"]), 8)
@@ -227,6 +248,33 @@ class PipelineTests(unittest.TestCase):
         path = self.root / "palette.toml"
         path.write_text(palette_toml(self.colors, "Test Dark", "a" * 64), encoding="utf-8-sig")
         return path
+
+    def test_generated_target_palette_names_and_review_links(self):
+        from PIL import Image
+        from apt_theme.target_palette import artifact_stem
+        self.assertEqual(artifact_stem("Aptlantis-Clogure", "notepad_plus_plus"), "apt-clogure-notepad-plus-plus")
+        self.assertEqual(artifact_stem("apt-Scratch", "windows_terminal"), "apt-scratch-windows-terminal")
+        self.assertEqual(artifact_stem("../Scratch / Dark", "svg"), "apt-scratch-dark-svg")
+        image = Image.new("RGB", (32, 1))
+        for i, color in enumerate(self.colors.values()):
+            image.putpixel((i, 0), tuple(color["rgb"]))
+        source = self.root / "source.png"
+        image.save(source)
+        before = source.read_bytes()
+        output = self.root / "generated"
+        self.assertEqual(main(["generate", str(source), "--output", str(output),
+                               "--name", "Aptlantis-Scratch", "--targets", "windows_terminal,notepad_plus_plus"]), 0)
+        for target in ("windows_terminal", "notepad_plus_plus"):
+            stem = artifact_stem("Aptlantis-Scratch", target)
+            for suffix in ("palette.toml", "swatch.png"):
+                relative = f"{target}/{stem}-{suffix}"
+                self.assertTrue((output / relative).is_file())
+                self.assertIn(relative, (output / "review.html").read_text())
+            palette = tomllib.loads((output / target / (stem + "-palette.toml")).read_text())
+            self.assertEqual(palette["theme"]["source_sha256"], hashlib.sha256(before).hexdigest())
+        self.assertEqual(source.read_bytes(), before)
+        self.assertEqual((output / "source/source.png").read_bytes(), before)
+        self.assertEqual(len(load_palette(output / "palette.toml")[0]), 32)
 
     def test_import_roundtrip_determinism_and_overwrite(self):
         path = self.fixture_palette()

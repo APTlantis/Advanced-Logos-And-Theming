@@ -1,5 +1,7 @@
 # Logos-And-Theming
 
+The 2026-10-09 per-target palette extension emits `apt-<language>-<output-type>-palette.toml` and `apt-<language>-<output-type>-swatch.png` for every selected output in both image generation and import. The TOML records actual tokens, origins, validation and the independent canonical 32; the PNG follows the supplied transformer swatch layout. Offline review links expose both. Evidence: `migration/target-palette-acceptance-2026-10-09.json`; contract: [output reference](docs/OUTPUT-REFERENCE.md). Existing/public output runs remain preserved.
+
 Comprehensive current references: [output apps/types, files and generation internals](docs/OUTPUT-REFERENCE.md) and [test inventory, rationale, execution, limits and proposed coverage](docs/TESTING-REFERENCE.md). These source-checked 2026-10-09 documents extend the concise target contracts and dated validation records; they do not refresh hosted themes or the older Writerside snapshot.
 
 The SVG quality extension adds six detailed 1200×800 editable compositions spanning workflows, editorial graphics, relationship maps, icons, wayfinding and product illustration. The existing three SVG filenames remain; canonical colors and budgets are unchanged. Fresh local gallery: `pilot/svg-quality-2026-10-09/svg/examples.html`; evidence: `migration/svg-quality-acceptance-2026-10-09.json`. Browser checks do not establish native editor import, and no hosted outputs were regenerated.

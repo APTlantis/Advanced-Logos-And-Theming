@@ -83,10 +83,13 @@ Each run preserves the original input under `source/` and records its SHA-256 in
 | `candidates.json`, `selection.json` | Observed candidates, selection diagnostics and background choice |
 | `semantics.json` | Role references and findings, including unavailable conventional hues |
 | `<target>/tokens.json`, `<target>/validation.json` | Derived tokens, canonical origins, aliases, omissions and declared contrast checks |
+| `<target>/apt-<language>-<output-type>-palette.toml`, `<target>/apt-<language>-<output-type>-swatch.png` | Target token palette with source provenance and labeled four-column swatch |
 | `review.html` | Offline palette/token report with links to target examples |
 | `run.json` | Run summary, target list, findings and acceptance status |
 
 Import retains legacy role mappings in provenance while assigning current roles separately. Hex is authoritative when an imported palette includes multiple color representations.
+
+Each selected target emits its own named palette and swatch during both `generate` and `import`. For `--name 'Aptlantis-Scratch'`, Windows Terminal emits `windows_terminal/apt-scratch-windows-terminal-palette.toml` and `windows_terminal/apt-scratch-windows-terminal-swatch.png`. The language portion comes from `--name` (or the input filename stem); leading `Aptlantis-`/`apt-` is normalized to `apt-`, and output types use target IDs with hyphens. These files describe actual named target tokens, including aliases and derived colors; the complete unchanged canonical 32 remain separately recorded under `source_palette.canonical` and in the run-root palette. The review page links both files. Existing dated/hosted runs are not automatically refreshed.
 
 Use `--config profiles.toml` for extraction settings, semantic choices and target budgets; omitted profiles use engine defaults. Use `--compare PATH` to compare a previous 32-color palette, and `--json` for a structured stdout summary. `--strict` returns exit 2 when declared contrast checks fail, after writing the completed results for review. Processing failures return exit 1; see the [command contract](docs/COMMAND-CONTRACT.md).
 

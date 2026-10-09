@@ -2,6 +2,8 @@
 
 Version: 0.1.0. Input: one image (`generate`) or 32-color TOML (`import`). Output: explicitly named directory.
 
+Every selected target also emits `apt-<language>-<output-type>-palette.toml` and `apt-<language>-<output-type>-swatch.png` beside its native outputs. Names use the theme/input stem with the Aptlantis/apt prefix normalized, and the current target ID with hyphens. Both commands emit actual target token values, provenance and canonical/derived labels; the full canonical 32 remain independent. See [OUTPUT-REFERENCE.md](OUTPUT-REFERENCE.md) for the schema and examples. The review page links both files; existing runs require an explicit new generation to gain them.
+
 ## Invocation
 
 `apt-theme {generate|import} INPUT --output DIRECTORY [--name NAME] [--targets windows_terminal,siyuan,typora,powerpoint,alacritty,notepad_plus_plus,sublime_text,svg,syntax_highlighting,data_visualization] [--config TOML] [--compare TOML] [--overwrite] [--strict] [--json]`

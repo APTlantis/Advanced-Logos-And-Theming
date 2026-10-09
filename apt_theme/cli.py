@@ -79,7 +79,7 @@ def build(args):
         write_json(stage / "semantics.json", {"roles": roles, "findings": notices})
         write_json(stage / "provenance.json", provenance)
         for result in results:
-            export(result, stage / result["target"], name)
+            export(result, stage / result["target"], name, colors, provenance["sha256"])
         review(stage, name, colors, candidates, roles, notices, results, diagnostics,
                source_dir / source.name if args.command == "generate" else None, comparison)
         failures = sum(r["contrast_failures"] for r in results)

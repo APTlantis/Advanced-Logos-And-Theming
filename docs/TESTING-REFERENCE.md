@@ -32,7 +32,7 @@ Every run should preserve input SHA-256, target subset, config/settings, command
 
 ## Current automated suite
 
-There are **29 unittest methods**: 16 pipeline, five converter, five syntax/chart quality and three SVG quality tests. The inventory below names methods exactly as implemented. Each method may contain many assertions; 29 does not mean 29 isolated risks or 29 native workflows.
+There are **30 unittest methods**: 17 pipeline, five converter, five syntax/chart quality and three SVG quality tests. The inventory below names methods exactly as implemented. Each method may contain many assertions; 30 does not mean 30 isolated risks or 30 native workflows. The per-target palette extension passed all 30 on 2026-10-09; see [its evidence](../migration/target-palette-acceptance-2026-10-09.json). Earlier records of 29 tests remain dated evidence.
 
 Run from the repository root with the project environment and ImageMagick available:
 
@@ -55,6 +55,8 @@ Managed Windows sandbox path-resolution/temp-file errors have prevented previous
 
 Source: [`tests/test_pipeline.py`](../tests/test_pipeline.py), `PipelineTests`. Most tests share a synthetic exactly-32 gold/cyan palette; it makes missing conventional hues and hue-aware mappings observable without depending on a large artwork file.
 
+The all-target export test also parses every new target TOML, compares exact token RGB/hex/origins and complete canonical source entries, verifies canonical/derived grouping and counts, and samples every PNG color cell. Import determinism hashes now cover these files too.
+
 | Method | Assertions and reason | Practical limit |
 |---|---|---|
 | `test_math_and_vector_conversion` | NumPy RGB→OKLab agrees with ColorAide on primaries, white and a dark sample to 1e-7; catches matrix/transfer errors | Small fixed sample, no exhaustive color-space/property test |
@@ -64,6 +66,7 @@ Source: [`tests/test_pipeline.py`](../tests/test_pipeline.py), `PipelineTests`. 
 | `test_surface_identity_is_separate_from_black_anchor` | Identity surface differs from absolute black; black ANSI anchor remains; darkest/override/grayscale/bright fallback and invalid mode checked | Does not prove the chosen surface is aesthetically best |
 | `test_gamut_and_hue_derivation` | Saturated-red lightness derivation gamut-maps, records original requested hue and measured hue stays within 1.5° | One difficult source, not exhaustive quantization/hue behavior |
 | `test_native_exports_and_canonical_immutability` | All ten defaults export within budget, with zero declared failures on fixture and unchanged canonical dictionary; format-specific checks below | Static/native-file inspection, no native app opening |
+| `test_generated_target_palette_names_and_review_links` | Image generation emits named palette/swatch artifacts and review links for selected targets; prefix/path normalization, source hashes, original bytes and canonical 32 checked | Local files only, no application import |
 | `test_import_roundtrip_determinism_and_overwrite` | Import retains ID→hex values, existing destination refused without flag, explicit replacement produces identical full file hashes, review contains no HTTPS link | Repeated import in one environment; no fault injection during final rename |
 | `test_strict_mode_still_writes_failed_results` | Bright background override triggers exit 2 and leaves complete native files/run with failures | Checks intended contrast-failure path, not every error path |
 | `test_powerpoint_template_failure_preserves_previous_output` | Mocked template failure during overwrite leaves prior run/operator note byte-identical | Failure before final replacement, not every filesystem interruption |

@@ -66,6 +66,7 @@ editor_target_evidence = "migration/editor-target-acceptance.json"
 visual_target_evidence = "migration/visual-target-acceptance.json"
 visual_quality_evidence = "migration/visual-quality-acceptance-2026-10-09.json"
 svg_quality_evidence = "migration/svg-quality-acceptance-2026-10-09.json"
+target_palette_evidence = "migration/target-palette-acceptance-2026-10-09.json"
 git_publication_evidence = "migration/git-publication.json"
 theme_hosting_evidence = "migration/theme-hosting-acceptance.json"
 

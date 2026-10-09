@@ -1,5 +1,7 @@
 # Logos-And-Theming proposal
 
+The 2026-10-09 per-target palette extension restores palette-transformer review artifacts alongside all ten current output types, using the requested `apt-<language>-<output-type>-palette.toml` and `apt-<language>-<output-type>-swatch.png` naming. Actual adapted tokens and their origins remain separate from unchanged canonical source colors. Both pipeline entry points and offline review links are covered; evidence is in `migration/target-palette-acceptance-2026-10-09.json`. No exporter identities, native acceptance claims or public copies change.
+
 The 2026-10-09 documentation extension inventories every current target, generated artifact and construction path in [the output reference](docs/OUTPUT-REFERENCE.md), and explains the 29-method suite, runtime/native gates and prioritized future tests in [the testing reference](docs/TESTING-REFERENCE.md). It changes documentation and navigation only; historical evidence, product contracts and hosted outputs remain preserved.
 
 The SVG quality extension broadens the existing target's examples to six detailed 1200×800 editable vector compositions: workflow, editorial infographic, relationship map, icon sheet, wayfinding map and product illustration. It retains existing filenames and color budgets, using local symbols, paths, patterns, clipping and a same-token tonal gradient. Native editor import remains a separate gate; current evidence: `migration/svg-quality-acceptance-2026-10-09.json`.

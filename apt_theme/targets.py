@@ -191,7 +191,7 @@ input, textarea, button { background:var(--apt-panel); color:var(--apt-foregroun
     return css
 
 
-def export(result, directory, name):
+def export(result, directory, name, canonical, source_hash):
     directory = Path(directory)
     directory.mkdir(parents=True)
     tokens, target = result["tokens"], result["target"]
@@ -255,6 +255,8 @@ def export(result, directory, name):
                     info = zipfile.ZipInfo(file, (2026, 1, 1, 0, 0, 0))
                     info.compress_type = zipfile.ZIP_DEFLATED
                     archive.writestr(info, (directory / file).read_bytes())
+    from .target_palette import export_palette
+    export_palette(result, directory, name, canonical, source_hash)
     (directory / "tokens.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     (directory / "validation.json").write_text(json.dumps({"checks": result["checks"],
         "contrast_failures": result["contrast_failures"], "native_visual_acceptance": "pending"}, indent=2) + "\n", encoding="utf-8")
