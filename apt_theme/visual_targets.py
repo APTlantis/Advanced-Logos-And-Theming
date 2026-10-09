@@ -55,6 +55,11 @@ from .syntax_examples import syntax
 from .chart_examples import charts
 
 
+def chart_gallery_css():
+    """Fixed viewing chrome, independent of the exported chart palette."""
+    return """*{box-sizing:border-box}body{background:#181a1d;color:#eceef0;font:17px/1.6 Arial,sans-serif;margin:0}main{max-width:1100px;margin:auto;padding:24px}a{color:#dce1e6;text-decoration:underline;text-underline-offset:3px}a:focus-visible{outline:3px solid #eceef0;outline-offset:4px}.scroll{overflow:auto}object{display:block;width:100%;min-width:700px;aspect-ratio:960/540;margin:24px 0}table{border-collapse:collapse}th,td{border:1px solid #60656d;padding:8px;text-align:right}th{background:#22252a}"""
+
+
 def export_visual(result, directory, name):
     tokens, target = result["tokens"], result["target"]
     if target == "svg":
@@ -72,7 +77,6 @@ def export_visual(result, directory, name):
     (directory / "examples.html").write_text(
         '<!doctype html><html lang="en"><meta charset="utf-8"><title>Visual examples</title>'
         '<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="examples.css"><main><h1>'+html.escape(name)+' / '+target+'</h1><p>'+html.escape(result["acceptance_limits"])+
-        '</p><ul>'+links+'</ul>' + ('<p><a href="heatmap-values.html">Heatmap value table</a></p><div class="scroll"><object data="bars.svg" type="image/svg+xml" aria-label="Bar chart"></object><object data="lines.svg" type="image/svg+xml" aria-label="Line chart"></object><object data="heatmap.svg" type="image/svg+xml" aria-label="Heatmap"></object></div>' if target == 'data_visualization' else '') + '</main></html>', encoding="utf-8")
+        '</p><p>The gallery and value table use a fixed neutral charcoal viewing environment. Chart artwork, including its own background, retains exported theme colors.</p><ul>'+links+'</ul>' + ('<p><a href="heatmap-values.html">Heatmap value table</a></p><div class="scroll"><object data="bars.svg" type="image/svg+xml" aria-label="Bar chart"></object><object data="lines.svg" type="image/svg+xml" aria-label="Line chart"></object><object data="heatmap.svg" type="image/svg+xml" aria-label="Heatmap"></object></div>' if target == 'data_visualization' else '') + '</main></html>', encoding="utf-8")
 
-    from .targets import css_tokens
-    (directory / 'examples.css').write_text(css_tokens(tokens) + "body{background:var(--apt-background);color:var(--apt-foreground);font:17px/1.6 Arial;margin:0}main{max-width:1100px;margin:auto;padding:24px}a{color:var(--apt-primary)}a:focus-visible{outline:3px solid var(--apt-primary)}.scroll{overflow:auto}object{display:block;width:100%;min-width:700px;aspect-ratio:960/540;margin:24px 0}table{border-collapse:collapse}th,td{border:1px solid var(--apt-border);padding:8px;text-align:right}th{background:var(--apt-panel)}", encoding='utf-8')
+    (directory / 'examples.css').write_text(chart_gallery_css(), encoding='utf-8')

@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-09",
+  "configuration": "A:/webserver/Caddyfile",
+  "rollback": "migration/Caddyfile-before-curated-index-2026-10-09.txt",
+  "validation": "passed",
+  "reload": "passed",
+  "folders": [
+    "ada",
+    "blackgold",
+    "dnf-Clojure",
+    "dnf-Julia",
+    "dnf-QBasic",
+    "dnf-R",
+    "dnf-Scratch",
+    "dnf-Zig"
+  ],
+  "page_checks": [
+    {
+      "route": "/ada/review.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/ada/svg/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/ada/data_visualization/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/blackgold/review.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/blackgold/svg/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/blackgold/data_visualization/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Clojure/review.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Clojure/svg/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Clojure/data_visualization/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Julia/review.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Julia/svg/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Julia/data_visualization/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-QBasic/review.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-QBasic/svg/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-QBasic/data_visualization/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-R/review.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-R/svg/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-R/data_visualization/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Scratch/review.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Scratch/svg/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Scratch/data_visualization/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Zig/review.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Zig/svg/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    },
+    {
+      "route": "/dnf-Zig/data_visualization/examples.html",
+      "local_status": 200,
+      "public_status": 200
+    }
+  ],
+  "denied_checks": [
+    {
+      "route": "/git-recovery/",
+      "status": 404
+    },
+    {
+      "route": "/dnf-Assembly/review.html",
+      "status": 404
+    },
+    {
+      "route": "/assembly/review.html",
+      "status": 404
+    },
+    {
+      "route": "/test-temp/",
+      "status": 404
+    },
+    {
+      "route": "/dnf-Zig/missing-file.html",
+      "status": 404
+    }
+  ],
+  "main_site_local_status": 200,
+  "hub_public_status": 200,
+  "other_configuration_unchanged": true,
+  "limits": "HTTP delivery checks only; native application rendering not tested"
+}

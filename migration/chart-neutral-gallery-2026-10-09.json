@@ -1,0 +1,695 @@
+{
+  "date": "2026-10-09",
+  "scope": "Gallery CSS only; chart artwork and theme tokens unchanged",
+  "galleries": [
+    {
+      "gallery": "ada/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\ada\\examples.css",
+      "original_css_sha256": "324a65d020af21869ac2432851432b4f0cebe3af51879affc1b33acc15cab0a3",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-ada-data-visualization-palette.toml": "87d0070aea75009b79c553c2096b5d705c5d4ec4b78b103c9cf22313086c5512",
+        "apt-ada-data-visualization-swatch.png": "ca704f25948fa9b78e4be137aac60ee73540ca3744581c11412eb2a87f97cc17",
+        "aptlantis-ada.mplstyle": "f1882185ecc1d685fecb168b37f0ddbd437f2315a7266bcf2838c1962bcabe3f",
+        "bars.svg": "dd8f414963a4ae3ee9d4213f48b5b130f099770e319206f2895dd13bba6efe88",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "a6da76a933b0d484d927372831b10f03a640bafec5c64d330da33cdb236dc655",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "fc884c168dfe8fbf799cd40bf249d23b6f8f751d1eb04d25f4d5f31579cf7ad4",
+        "lines.svg": "fe99293be69bbb1d372e0be2376346631c2da9bfb07ab9c1c11bb66c69ed93fd",
+        "scales.json": "9a3c207e5b7ad057e56f0835bee0746046e74b8ca5b27b527d810cd5dc2c2a2c",
+        "tokens.json": "80038b4397e07dba269f6eb00ceaec5f4cbe3d397dc31a3decabc18a614f4f2b",
+        "validation.json": "abffa5a68a28bdf0784c907a74b27dd556ce2e8a0dc83f70ce9b61b7f8550b40"
+      }
+    },
+    {
+      "gallery": "dnf-Assembly/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-Assembly\\examples.css",
+      "original_css_sha256": "b8d4f807255aa3dfa2cf2e9c2b0a7313563d551341e3060942d6de1ccc0b3694",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-assembly-data-visualization-palette.toml": "302ac1180d572148507fc1d08e92b6e4fb18c45f0b8e3a54f8eff6a29e6558a3",
+        "apt-assembly-data-visualization-swatch.png": "b135a8e9d063a77aeb1f5c99bc8b35c39cb576f50821492fd903ebaa0b299fd6",
+        "aptlantis-assembly.mplstyle": "9f89601d0ed433da43fce1abf3de0d1d614e24f66a1a8589d001092820a09efa",
+        "bars.svg": "fbe36e1713f0cbe68a26603fb84504b840f42b6929b0350c80fd240bf1078a9f",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "58d5d9f56eeee6e84fbe3a7c904ffb6fd6064eaa8d1b449e8581705efdb8bf72",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "f0f2f58a6333b920e5e654ba065dc31ada772c0ea068007151c5567722ecaddd",
+        "lines.svg": "3cf2e9fd5521963987bf827588121e169c23891e534c3ac50b3d584647370c5c",
+        "scales.json": "9ef2c656762210e791d3ff81cce06d55281e68c7996ca3c6797b76ecfc9ae223",
+        "tokens.json": "220d9b6969cfac70d3e6c24607cef03c5732dc431cf95012984309b3718e8bf2",
+        "validation.json": "2ea17de9e1a2868ec293666612b01c95276095f95c1698d4a91cdc1e7ee16bac"
+      }
+    },
+    {
+      "gallery": "dnf-Blackgold/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-Blackgold\\examples.css",
+      "original_css_sha256": "4c341b897f65e99ddcb18e666bff7595ff760398b36ed2236bdf20675d3db905",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-black-gold-data-visualization-palette.toml": "a4a17e8d4afb557795cb624f89ea9a973035a5554a40d3cee07c865841487d51",
+        "apt-black-gold-data-visualization-swatch.png": "6fbe9779e97206f87ef5714681c0891917e0056eeb8ec4e158b7ccce2e5edea9",
+        "aptlantis-black-gold.mplstyle": "a8360cd35a8d7f56f0798ce4846092bbb08de5e8b92d31ff26109e1b30dfc38f",
+        "bars.svg": "0bffa957d5d3587dd816b5dfc7733cd8501b3162e0dbedb49fc736375346cef7",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "d81d03693727559db7e6ff6348be589de88a3e71f3f5bd63597633fb5306f2ec",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "f766d091686254aa6c8013c2f1232fb2310bf5d90557c5fe9cd482764ef4ea96",
+        "lines.svg": "fc26996cbc9d9c1a41986ba50d3b0ab84b81fdce900057a0d9f9b5dcd79844e7",
+        "scales.json": "19dc46202b84931eaa44337b31904d06df6dab2de36676e19fe02cbf0f5eb8e4",
+        "tokens.json": "c849b869ec383fdcf473f21bc38aabac0e825c02c9f7a505b428afe03698448f",
+        "validation.json": "d111f3052beff1c3dff852c15730af6b2a63bc5268438e26922a34bee2435c49"
+      }
+    },
+    {
+      "gallery": "dnf-Clojure/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-Clojure\\examples.css",
+      "original_css_sha256": "ea2fd2faeda27b598737ebb40be1ee5e5d43a2fbe7ecd57e37deeb51d476096a",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-clogure-data-visualization-palette.toml": "4631faf52d7a5addf44026001aebf6c881b38f3cb32687a90d3d5f0e3cf7cf4e",
+        "apt-clogure-data-visualization-swatch.png": "8b62cff982f69ecc8f436fb6599094c7ce3fb0b710c9ccd62f801c808bf3fbab",
+        "aptlantis-clogure.mplstyle": "4837d43f955163d056cfb7505ded74d921024958c573b3c36e4cb219bd6f9b00",
+        "bars.svg": "1ad4a1e98f8d228c2ae8bba417ce204d0fcb4cb5e852ea0a900a50436a4581ee",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "2f0a00d1fee95b796bce3793d2b42de4dafc20bb10292825e91a6f03123bc01b",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "ccfd19c229f154ad2a4668ccdfc41d82bca663f54eb1cfef946cc1c837f51edd",
+        "lines.svg": "8343d9a526242a81aea438259f2a9ebbdcc7145f5f4149ada9af2edb0caf0b65",
+        "scales.json": "320b76d922b1e3e635a16416b19d056ff6e0b262168fa7a78f7d87fbb8a22dfb",
+        "tokens.json": "dfe3395e571cb4be682d7eb17e405707508cf1a8cc6c9df09248ae262ef0cdd2",
+        "validation.json": "51b0c6bfb7a29d19e655acb008b354a77afb2caebafff89952e901222f8af48e"
+      }
+    },
+    {
+      "gallery": "dnf-D/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-D\\examples.css",
+      "original_css_sha256": "9911a7d195dc1e5c9632b5f90ec329ed9f94ef4bb92b8d455dd1e5ae1b3fcd9d",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-d-data-visualization-palette.toml": "a9a969cdee3a4c3e67d0ab79b1061547ded70cd5aa939729245566e51cce68a6",
+        "apt-d-data-visualization-swatch.png": "d3e5034097302ecf692162d8baa3a7cfa778482574aae5c72baa058d3b680e94",
+        "aptlantis-d.mplstyle": "accef8e0862d8b4393758b07838406b347cb3746bf60b018dcbbc2cd68c71fdf",
+        "bars.svg": "c8225dcb032d88d93504d0bd1843cc526975c6491f6eb91e5afa3ea795b21955",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "df96375e82a7d36ee1d1ec480d4ff847d86f7addab231d3684fc7ac58fb8a34e",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "59f45a63ce72f3d72ef10e0cd11670233def794737c1fcab0888b54b7ce62bf0",
+        "lines.svg": "a728193186af24b6a0607c067907542546c4a8d92e1ab6732d88923e2e42a268",
+        "scales.json": "aed94f1f0b463d61a860ac16b8bfe53141004d5063a043a1a41b9a83af73a696",
+        "tokens.json": "f8bbc33a1461c8c2314bff4709a2c5dc2164c0405445c40df96b3d5ce496b93a",
+        "validation.json": "d6aee5327dfec320f503cd56d9bed4dd4239d89bb2a1be7a654a401eb526505c"
+      }
+    },
+    {
+      "gallery": "dnf-Factor/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-Factor\\examples.css",
+      "original_css_sha256": "45c510c67b39eb5d954040cf8e3151f73bd799c4f26c296d3a86a321bf37afa0",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-factor-data-visualization-palette.toml": "e7935fa4165b8824d770ae4dfb81faa61eff5a29b456f8a912ac7d7ca962e331",
+        "apt-factor-data-visualization-swatch.png": "20402281f33418e2db280933be1aff66ebf7e06c630798a731d04b9d1282d825",
+        "aptlantis-factor.mplstyle": "d6ba33e0341acfe2ad38cfaefb1d62a72621ca93ab2b5fa0064e3c6680043d77",
+        "bars.svg": "b0665cea13df4d02d943e4cabec70943319da91b41851b045da4338463aa0874",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "90e84118ec9edcb8383c056e81081ac60f838d7fe1d4d437681499784a840904",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "88eef040029fafd1aca3ae987a6a0c85ac8cbf92b13e1d4fbad8954bf64bb3e6",
+        "lines.svg": "ef97402861da9f20a18f8da6d1178cd99e16b4e61baebf533e3b2cbeb82cea0e",
+        "scales.json": "f4c04937e1dad5f09e6374c7e0a71f4196cffa885e660599f76d77c4f4cf25bc",
+        "tokens.json": "5a7f1dd3a6b6aa5f85e58d3b95827374bc2e17307585c9d0eaa79251e61362b9",
+        "validation.json": "9fdf3eabe8c68e7f5736fdc4c68abf694c59093ecf8b6d1d129b7177875c6e62"
+      }
+    },
+    {
+      "gallery": "dnf-Julia/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-Julia\\examples.css",
+      "original_css_sha256": "e651a41b440eb8027b3bc0fe851aaf99df3c3c782218d8e66140945c6bd763e5",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-julia-data-visualization-palette.toml": "0b09ad533c040ed780791f54bda358f778b49688dc63623c8ecc118fa1ce1ce4",
+        "apt-julia-data-visualization-swatch.png": "795db3f77f0121ed9c4de35012c6c8594e81d373329e5bb4555748ea39a576df",
+        "aptlantis-julia.mplstyle": "983c142b3eb0fbf74a0c9dd21cefa0123f94fb085b4e1156fe496cfdd86f73e0",
+        "bars.svg": "daf4d244177c103eae9b5e80faee657790c15a72c124e726fcbf995dc850ac7a",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "5728de9be852e3f422dc0ee0ffb8d2433a689079b0d1bf15cb453585fd331162",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "11da3f3ed76d8f80fe34d0b34fe96e7df55ae3f9939ec033a450d9cc184fe26b",
+        "lines.svg": "b973f5913755875cfd35ac35362681715d96a2c7e8f93529e72c967546ea3e86",
+        "scales.json": "497639a8522a6675b3375a4ef6e8f6ddab94fca305fb25c9c7603bdfc49c8834",
+        "tokens.json": "f08ff6f95db47a99910319ff1c1c1cb4326ded1b333096d402c622e1b56ed26e",
+        "validation.json": "6f9271bc75b70a8edc79c23a09c2da663a244feba0cc98acffdf5c8da7f3a8e1"
+      }
+    },
+    {
+      "gallery": "dnf-QBasic/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-QBasic\\examples.css",
+      "original_css_sha256": "a2868b1b23d764d16db1656698464dd0ed4da0ecb9867a1c6fba79b9e372fdc5",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-qbasic-data-visualization-palette.toml": "54d70ca8d3b81fdd8e7e4adbe179b80e43929dd734d0410f8fc4d9a0abbb21de",
+        "apt-qbasic-data-visualization-swatch.png": "29e32b2be081f37aa01860b94951aa6a961abf9e1e14ff168ab25f4beb5a59a1",
+        "aptlantis-qbasic.mplstyle": "0622510096bfef7df927bac56829babc91e1553b17d10f210af8f4bf8b42b5dd",
+        "bars.svg": "fcffa45a0e65f34411faf1a4396b2368ea50795283b5732bf455e9abcfcad4a4",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "8c8cc7186bb344a568b04ba03d8ab7aaacd6eb52624b511b9973bff3e2324c59",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "fdabfd801dbbb4ebfb8e7e74ae7cfc5e989626768553458ed1da5d66c5114685",
+        "lines.svg": "fd6102ff96aa275dfdc02d4d1d5a945880b5460d5519e74ff14aa887c22cdd0e",
+        "scales.json": "ce9b8fe5feb8bee4bb674284031d5be7026d7d9d52e2bc7ac206b0eaf82cd3b5",
+        "tokens.json": "d2566f17150340f79d75669c57565c5bb536a5fc21c27d7ffad071d3720b562f",
+        "validation.json": "b41d91d48b0c9d92fd7f89e0626872c7548c81c5518ab87dc8553e97eb194c3e"
+      }
+    },
+    {
+      "gallery": "dnf-R/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-R\\examples.css",
+      "original_css_sha256": "bf31511bd0f31f44c192808dade63bac46c519fcd491904add84229e9a9274f1",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-r-data-visualization-palette.toml": "8f6ed396a5b78a94e01ebb07107205c8c72f0ffe49b185e4f928068f45ce618f",
+        "apt-r-data-visualization-swatch.png": "13d17071e96b19c2b9556b3fc12d3439ab54c6473a887fbbb8cf4538e3c8a934",
+        "aptlantis-r.mplstyle": "49aaafaef3b19f569b6272321ed79cdb92a8dbf67168694d342d8b2a6e1253ad",
+        "bars.svg": "98fbac67b55b9eee7f0664b2011c74048760164eb48b17a04f09f31efa82f699",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "3670c437e4e0263a9d109cd8059b90003b16378c1b4915d003d1c78a3edb61cf",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "20332a7ec2f15fde759213b47aef91320077f93f59d7a9c1a8b5c9d96d9c1bfe",
+        "lines.svg": "501f94571b5ce146de7d057465022faa37954f76574a8c9e70f693cb040669ac",
+        "scales.json": "e444e3fd320ef9e346b50a5ab216a32507fd3cc80b505858487c64492d7adf2c",
+        "tokens.json": "0834a5081b52c32b34a77d280c2354c42785b1a21a9dbe377e949c40f80bf582",
+        "validation.json": "a0912c1388f2b0addc095ec895573c0a5bfe62a81cf98bf1abc22ed54bf816fd"
+      }
+    },
+    {
+      "gallery": "dnf-Racket/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-Racket\\examples.css",
+      "original_css_sha256": "34780bde4cd5e4d09385925ab322530cc23655ab9f9af81e96486050c350bdfb",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-racket-data-visualization-palette.toml": "83af08ab02db0de6818e680e8cb616d59b01ad28ef04f2978e89d43eb9b39357",
+        "apt-racket-data-visualization-swatch.png": "4785dcef178cd6881dd56d89a96c3519d5b54e61de22ae89983fd97b5c6e4d8c",
+        "aptlantis-racket.mplstyle": "5365922652df0a8acd1d36b289f5428168da812a97a8f98c566f6ee308a16a33",
+        "bars.svg": "1c98d662ca8a03c3faab941b8e6d8ada110763afa2917a483652edd5ae5c39f8",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "6664ea27dbd9a276370452ffc270fa2b524aa18356dfe56b1b34b201ac28d1e0",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "a9cd410a467e920bec33c60ed8305b0c315403135835e3772f4d1f82d1b0cd67",
+        "lines.svg": "1c1dc93b80c44346ac55816b41a90d98e6239fe25f63e3241520c22311cfaa56",
+        "scales.json": "3f6f9624c411b9ae88dcd7207c78be239d4207f358cebf28b8665161db272f39",
+        "tokens.json": "487f5dd228dac09027d21d63502bc7a7df4ace37cce6e42af7279e76900a3903",
+        "validation.json": "f88cb849ed3f98ac7f37c2443e65c6e9be373ded280fe2c0d3b9eb6afe267853"
+      }
+    },
+    {
+      "gallery": "dnf-Scratch/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-Scratch\\examples.css",
+      "original_css_sha256": "8245160781d503d646ccc32969847e381c936246af1af74263dec986af2e83a3",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-scratch-data-visualization-palette.toml": "aeec96d46190f845b6b208fa2ce099a7c7087d48fe0a77a8c9ff778df145096a",
+        "apt-scratch-data-visualization-swatch.png": "c758cf78f9455c0e1210501fefcb87203b7f1d8572efdae10312793f24e915a7",
+        "aptlantis-scratch.mplstyle": "b9dfb4cc2a788670bb8c2c84618f480dd227d665478858327c3fafd3997fc883",
+        "bars.svg": "3d0f64cf5aee13bd61b126402223fd627ad1036d8da843823434b31bcff749c9",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "f6144d0db440058f8036af07064b7d3572c66547ce53ffa7414a222d81abce48",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "a93093fd1d9c338b09543ea8a18aa0fe98d6fd8f6950a211b15dd042c8c480fd",
+        "lines.svg": "4a735d5a86b57820cfbcfb116f6f66525e4fa7cf09be57c12214e62c5b6929e4",
+        "scales.json": "64dba3c23471013254bef58a19213c22df4d7706c21830555d61db73dd0787b6",
+        "tokens.json": "9d7e3f96a7534f88f9a7f7af431800e3ee2dc3164c93e1628b6f16c9c64e8cbd",
+        "validation.json": "e239a5f934cad3287d545132fbf56a7cc8d5efde0897f5217604055c11b8fbf2"
+      }
+    },
+    {
+      "gallery": "dnf-Zig/data_visualization/examples.html",
+      "backup": "migration\\chart-gallery-backups\\2026-10-09\\dnf-Zig\\examples.css",
+      "original_css_sha256": "c685cd08c0e473a2169ae94ea280501b3f1daa03a1e776265bc6e6956a115305",
+      "css_sha256": "9166815e1e290c1e6f0f8071ccd0e7d31ea5c02aceba9b9497a873a1eee503d4",
+      "unchanged_assets": {
+        "apt-zig-data-visualization-palette.toml": "b219737ecc1f76a30676e73cdd8748c5dcfd36be81716ffa7a25ef407d55b297",
+        "apt-zig-data-visualization-swatch.png": "77b8b9a7d338d8cede51cf47e9ad638502778152571c7a41d48fc376f695063a",
+        "aptlantis-zig.mplstyle": "119bd599838b0ca60a0ef4d3d5f1d5c1fe079f59381b5fb09431fc0304462a45",
+        "bars.svg": "387c0b6e479baec59cc53c972de1de767e32e241f918c89959c99ccd544acd6e",
+        "example-data.json": "65f6464dd840ccaac40c72e3403956bf652b59e8b10f9c1ccc71152e6089cf66",
+        "examples.html": "82a088e6a190a249af9de658655cbd8c6405798f2efb8a480333ead82acc7daf",
+        "heatmap-values.html": "4c361e64230388161847058effcbd7e93000cb3e64ef5f883212c2e92673b06b",
+        "heatmap.svg": "86de98d804f951dafbd3605323697fd4c47cd180efae2d7da6fc92d7300cd2a8",
+        "lines.svg": "2936974cfbb3312333d34aa9d5b382e342a7041e560c61bec7a2d514e1d1b3e0",
+        "scales.json": "8121ff605212fbc16d787eca193ae48cc754ccc278afc6e05bc27814f04bb4dd",
+        "tokens.json": "e6525fbef8b418a946f583bf20b20ad0601c5c79ed684d085b1ed2decea11d5b",
+        "validation.json": "f8251ce2f114c0f23bc760347914e802b66b35a7dc991af7e4ade2dde9a65117"
+      }
+    }
+  ],
+  "native_application_acceptance": "not evaluated",
+  "recovery": "Restore each backup examples.css to its recorded gallery directory.",
+  "browser": {
+    "version": "154.0.8037.98",
+    "checks": [
+      {
+        "gallery": "ada/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "ada/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "ada/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "ada/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Assembly/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Assembly/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Assembly/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Assembly/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Blackgold/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Blackgold/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Blackgold/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Blackgold/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Clojure/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Clojure/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Clojure/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Clojure/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-D/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-D/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-D/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-D/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Factor/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Factor/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Factor/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Factor/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Julia/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Julia/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Julia/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Julia/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-QBasic/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-QBasic/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-QBasic/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-QBasic/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-R/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-R/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-R/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-R/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Racket/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Racket/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Racket/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Racket/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Scratch/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Scratch/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Scratch/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Scratch/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Zig/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Zig/data_visualization/examples.html",
+        "file": "examples.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 3
+      },
+      {
+        "gallery": "dnf-Zig/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 1200,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      },
+      {
+        "gallery": "dnf-Zig/data_visualization/examples.html",
+        "file": "heatmap-values.html",
+        "width": 390,
+        "background": "rgb(24, 26, 29)",
+        "foreground": "rgb(236, 238, 240)",
+        "overflow": false,
+        "loadedCharts": 0
+      }
+    ]
+  },
+  "focused_tests": {
+    "count": 30,
+    "result": "passed outside Windows sandbox"
+  },
+  "public_delivery": {
+    "scope": "One public stylesheet checked; all twelve galleries checked locally",
+    "url": "https://themes.aptlantis.net/dnf-Clojure/data_visualization/examples.css",
+    "result": "HTTP success; response matches fixed neutral CSS"
+  },
+  "navigation": "Project identity, scope and discovery paths unchanged; parent manifests and D drive index need no update."
+}

@@ -1,0 +1,40 @@
+:root {
+  --apt-background: #01024B;
+  --apt-foreground: #FEFEFE;
+  --apt-panel: #081846;
+  --apt-elevated: #112351;
+  --apt-muted: #8C8C8F;
+  --apt-primary: #5689FF;
+  --apt-secondary: #FFC84F;
+  --apt-selection: #092470;
+  --apt-selection-text: #FEFEFE;
+  --apt-border: #77777A;
+  --apt-warning: #FFC84F;
+  --apt-error: #FF4E4D;
+  --apt-success: #FFC84F;
+  --apt-info: #30BAF8;
+  --apt-keyword: #30BAF8;
+  --apt-string: #7E8FB0;
+  --apt-number: #FE1ADE;
+  --apt-function: #FFC84F;
+  --apt-type: #568AFF;
+  --apt-operator: #FF4E4D;
+  --apt-constant: #C1E4FC;
+  --apt-comment: #8C8C8F;
+  --apt-series-1: #1F58F7;
+  --apt-series-2: #FFC84F;
+  --apt-series-3: #30BAF8;
+  --apt-series-4: #596888;
+  --apt-series-5: #FA10DB;
+  --apt-series-6: #1955FF;
+  --apt-sequential-0: #082B91;
+  --apt-sequential-1: #1940A7;
+  --apt-sequential-2: #2A54BC;
+  --apt-sequential-3: #3B68D2;
+  --apt-sequential-4: #4D7DE8;
+  --apt-sequential-5: #6091FF;
+  --apt-sequential-6: #80A9FF;
+  --apt-sequential-7: #A0BFFF;
+  --apt-sequential-8: #BFD5FF;
+}
+body{background:var(--apt-background);color:var(--apt-foreground);font:17px/1.6 Arial;margin:0}main{max-width:1100px;margin:auto;padding:24px}a{color:var(--apt-primary)}a:focus-visible{outline:3px solid var(--apt-primary)}.scroll{overflow:auto}object{display:block;width:100%;min-width:700px;aspect-ratio:960/540;margin:24px 0}table{border-collapse:collapse}th,td{border:1px solid var(--apt-border);padding:8px;text-align:right}th{background:var(--apt-panel)}

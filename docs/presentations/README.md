@@ -2,7 +2,7 @@
 
 [Logos-And-Theming-Overview.pptx](Logos-And-Theming-Overview.pptx) is the detailed 24-slide overview created on 8 October 2026. [The documentation suite plan](../documentation-suite/PLAN.md) specifies ten further volumes, with audiences, chapter outlines, sources, ownership, dependencies and acceptance criteria.
 
-The presentation uses the exact twelve Office color slots from `output/blackgold/powerpoint/aptlantis-black-gold-sample.pptx`, its Arial typography and its 16:9 canvas. Its title artwork is the preserved `output/blackgold/source/apt-zig-dark-logo.png`. It does not regenerate the image or palette. The original sample, canonical values, application exports and historical migration records are unchanged.
+The presentation uses the exact twelve Office color slots from `../../output/dnf-Blackgold`, its Arial typography and its 16:9 canvas. Its title artwork is the preserved `../../output/dnf-Blackgold`. It does not regenerate the image or palette. The original sample, canonical values, application exports and historical migration records are unchanged.
 
 The narrative covers ownership and consolidation, the six pipeline stages, specialist tools, extraction and transparency, observed representatives, canonical selection, semantics, derivation, dark surfaces, the four target contracts, provenance, CLI operation, converters, SESM, recovery and evidence limits. Twelve native tables and explanatory text are editable. Every slide has substantive speaker notes and hashed source references.
 

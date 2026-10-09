@@ -15,7 +15,7 @@ The suite should explain both how to use the pipeline and why its decisions are 
 
 - Describe the implemented local pilot before proposing extensions. Label a feature **implemented**, **recorded evidence**, **native acceptance pending**, or **proposed**. Do not present installation, publication or future targets as completed.
 - Preserve the distinction between original image bytes, observed candidates, immutable canonical colors, semantic roles and derived application tokens. Use one traced color example across these layers.
-- Use the supplied 16-bit Zig TIFF and historical Black-Gold palette for extraction comparisons. Use the current `output/blackgold` run for this deck’s exact theme and token-count examples. These are different fixtures; do not silently substitute the PNG run for the TIFF comparison.
+- Use the supplied 16-bit Zig TIFF and historical Black-Gold palette for extraction comparisons. Use the current `../../output/dnf-Blackgold` run for this deck’s exact theme and token-count examples. These are different fixtures; do not silently substitute the PNG run for the TIFF comparison.
 - Keep actual source paths, hashes, configuration, version and command with each case study. Capture a dated documentation snapshot; code, schemas and current project contracts remain authoritative.
 - Show readable output and failures. Coverage and spacing are diagnostics, not aesthetic scores. A native import check is different from a visual review, edit/save/reopen, installation or publication.
 - Use concise main chapters, substantial worked examples and reference appendices. Include offline figures and linked evidence. Do not repeat configuration tables in several volumes: cross-link one artifact/command reference.

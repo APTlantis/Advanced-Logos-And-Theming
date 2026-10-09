@@ -32,7 +32,7 @@ for(const [i,c] of data.slides.entries()){
   text(s,c.lead,64,315,615,116,34,'lt1');
   text(s,c.groups[0][0],64,467,610,45,26,'accent1',true);
   text(s,c.groups[0][1],64,515,610,87,26,'lt1');
-  const bytes=await fs.readFile('output/blackgold/source/apt-zig-dark-logo.png');
+  const bytes=await fs.readFile('output/dnf-Blackgold/source/apt-zig-dark-logo.png');
   s.images.add({blob:new Uint8Array(bytes),contentType:'image/png',alt:'Preserved Aptlantis Zig artwork used for the Black-Gold run',fit:'contain',position:{left:731,top:118,width:485,height:485}});
   text(s,c.groups[1][0],64,645,1000,32,20,'accent2');
  }else{

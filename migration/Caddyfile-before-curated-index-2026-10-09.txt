@@ -1,0 +1,100 @@
+# Image-derived theme review hub. Cloudflare retains the public Host header.
+http://themes.aptlantis.net:8100 {
+	root * /srv/aptlantis-themes
+	encode gzip zstd
+	header Cache-Control "no-store, max-age=0"
+	header Cloudflare-CDN-Cache-Control "no-store"
+	# Only the index and the theme folders it links are public.
+	@publishedThemes path / /index.html /ada/* /assembly/* /Batman/* /blackgold/* /clogure/* /holyc/* /Julia/* /php/* /PowerShell/* /Promis/* /qbasic/* /r/* /scratch/* /sgml/* /tex/* /WarmAndCool/*
+	handle @publishedThemes {
+		file_server
+	}
+	handle {
+		respond "Not Found" 404
+	}
+}
+
+## Aptlantis Caddyfile
+
+# aptlantis.net
+:8100 {
+	root * /srv/aptlantis.net
+	encode gzip zstd
+
+	@home path /
+	@homeMarkdown {
+		path /
+		header Accept *text/markdown*
+	}
+	@markdownRoute {
+		header Accept *text/markdown*
+		path /concepts /standards /resources /reference
+	}
+	@markdownFiles path *.md
+	@llms path /llms.txt
+	@apiCatalog path /.well-known/api-catalog
+	@oauthAuthServer path /.well-known/oauth-authorization-server
+	@oauthProtectedResource path /.well-known/oauth-protected-resource
+	@agentSkillsIndex path /.well-known/agent-skills/index.json
+	@legacy path /project/* /structra-lab /language-atlas /coding-against-the-grain /coding-weird-stuff /data/projects/legacy-portfolio.json
+	@removedData path /data/projects/portfolio.json /data/projects/cityhall-frameworks.json
+	@htmlPage path / /city-hall /city-hall/* /walkthrough /walkthrough/* /standards /svg-lab /about /contact /project/* /structra-lab /language-atlas /coding-against-the-grain /coding-weird-stuff
+	@builtAssets path /assets/*
+
+	header @home Link "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </data/manifest.json>; rel=\"describedby\"; type=\"application/json\", </llms.txt>; rel=\"describedby\"; type=\"text/plain\", </sitemap.xml>; rel=\"describedby\"; type=\"application/xml\", </auth.md>; rel=\"service-doc\"; type=\"text/markdown\", </index.md>; rel=\"service-doc\"; type=\"text/markdown\", </.well-known/agent-skills/index.json>; rel=\"service-desc\"; type=\"application/json\", </.well-known/oauth-protected-resource>; rel=\"service-desc\"; type=\"application/json\""
+	header @home +Vary Accept
+	header @markdownFiles Content-Type "text/markdown; charset=utf-8"
+	header @llms Content-Type "text/plain; charset=utf-8"
+	header @apiCatalog Content-Type "application/linkset+json; charset=utf-8"
+	header @oauthAuthServer Content-Type "application/json; charset=utf-8"
+	header @oauthProtectedResource Content-Type "application/json; charset=utf-8"
+	header @agentSkillsIndex Content-Type "application/json; charset=utf-8"
+	header @legacy X-Robots-Tag "noindex, follow"
+	# HTML changes without changing its URL. Do not retain an old document that
+	# points at hashed JavaScript files removed by the next build.
+	header @htmlPage Cache-Control "no-store, max-age=0"
+	header @htmlPage Cloudflare-CDN-Cache-Control "no-store"
+	header @builtAssets Cache-Control "public, max-age=31536000, immutable"
+	redir /project/cityhall /city-hall 308
+
+	handle_path /crates.io/* {
+		root * /srv/rust-lang/crates/crates.io
+		file_server browse
+	}
+
+	handle_path /crates.io-index/* {
+		root * /srv/rust-lang/crates/crates.io-index
+		file_server browse
+	}
+
+	handle_path /rustup/* {
+		root * /srv/rust-lang/rustup
+		file_server browse
+	}
+
+	handle @removedData {
+		respond "Gone" 410
+	}
+
+	handle @homeMarkdown {
+		rewrite * /index.md
+		header Content-Type "text/markdown; charset=utf-8"
+		file_server
+	}
+
+	handle @markdownRoute {
+		rewrite * {path}.md
+		header Content-Type "text/markdown; charset=utf-8"
+		file_server
+	}
+
+	# Missing hashed bundles must be 404s, never the SPA HTML fallback.
+	handle @builtAssets {
+		file_server
+	}
+
+	handle {
+		try_files {path}/index.html {path} /index.html
+		file_server
+	}
+}

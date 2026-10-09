@@ -2,6 +2,8 @@
 
 SVG gallery environment: the page, cards, text, links and focus outlines use fixed neutral colors independent of every theme. Palette-derived backgrounds remain inside the SVG compositions. Surrounding pages may use any background. Fresh preview: [neutral SVG gallery](../pilot/svg-neutral-gallery-2026-10-09/svg/examples.html). Earlier galleries remain historical previews.
 
+Structured-data galleries and heatmap value tables also use fixed neutral charcoal (`#181a1d`) with neutral text, links and borders. Chart SVG canvases, Matplotlib styles, tokens and canonical colors retain the exported theme. Future runs generate this viewing environment; the twelve galleries linked from the current output index received a CSS-only refresh with originals preserved under `migration/chart-gallery-backups/2026-10-09`. Evidence and rollback paths: `migration/chart-neutral-gallery-2026-10-09.json`. Fresh preview: [neutral chart gallery](../pilot/chart-neutral-gallery-2026-10-09/data_visualization/examples.html).
+
 Contract review: 2026-10-09, America/New_York. The three visual targets derive dark outputs from the unchanged canonical 32 colors. The syntax/chart quality pass adds actual offline Prism grammars and richer shared chart fixtures. Fresh local evidence: `migration/visual-quality-acceptance-2026-10-09.json`. Earlier pilots remain dated evidence. No theme is installed, activated or published by this pass.
 
 | Target ID | Recommended budget | Planning range | Required tokens | Default emitted |

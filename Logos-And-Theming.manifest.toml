@@ -69,6 +69,7 @@ svg_quality_evidence = "migration/svg-quality-acceptance-2026-10-09.json"
 target_palette_evidence = "migration/target-palette-acceptance-2026-10-09.json"
 git_publication_evidence = "migration/git-publication.json"
 theme_hosting_evidence = "migration/theme-hosting-acceptance.json"
+curated_theme_hosting_evidence = "migration/curated-theme-hosting-2026-10-09.json"
 
 [agent]
 read_first = ["AGENTS.md", "Logos-And-Theming.manifest.toml", "Project-Proposal.md", "Project-README.md"]

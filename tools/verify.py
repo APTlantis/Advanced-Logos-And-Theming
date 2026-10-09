@@ -46,7 +46,7 @@ def main():
     for svg in safe_files:
         records.append(command([sys.executable, r"D:\.city_hall\SESM\Validate-SESM-Safe.py", svg, "--safe-profile", "--json"]))
     # Generate the exact delivered pilot through the PowerShell launcher.
-    args = ["generate", str(assets / "sources/apt-aptlantis-blackgold-16bit-logo.tif"), "--output", str(ROOT / "pilot/aptlantis-blackgold"),
+    args = ["generate", str(assets / "sources/apt-aptlantis-dnf-Blackgold-16bit-logo.tif"), "--output", str(ROOT / "pilot/aptlantis-dnf-Blackgold"),
             "--name", "Aptlantis Zig Dark", "--compare", str(assets / "references/Aptlantis-Black-Gold/palette.toml"), "--overwrite", "--strict", "--json"]
     pilot = command(["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ROOT / "Invoke-AptTheme.ps1", *args])
     records.append(pilot)
@@ -55,19 +55,19 @@ def main():
     envelope = json.loads(pilot["stdout"])
     schema = json.loads(Path(r"D:\.city_hall\CTS\CommandOutput.schema.json").read_text(encoding="utf-8"))
     Draft202012Validator(schema).validate(envelope)
-    baseline = hashes(ROOT / "pilot/aptlantis-blackgold")
+    baseline = hashes(ROOT / "pilot/aptlantis-dnf-Blackgold")
     duplicate = command([ROOT / ".venv/Scripts/apt-theme.exe", *args])
     records.append(duplicate)
-    second = hashes(ROOT / "pilot/aptlantis-blackgold")
+    second = hashes(ROOT / "pilot/aptlantis-dnf-Blackgold")
     deterministic = baseline == second
     changed_files = [key for key in set(baseline) | set(second) if baseline.get(key) != second.get(key)]
-    colors, _ = load_palette(ROOT / "pilot/aptlantis-blackgold/palette.toml")
-    semantics = json.loads((ROOT / "pilot/aptlantis-blackgold/semantics.json").read_text())
+    colors, _ = load_palette(ROOT / "pilot/aptlantis-dnf-Blackgold/palette.toml")
+    semantics = json.loads((ROOT / "pilot/aptlantis-dnf-Blackgold/semantics.json").read_text())
     warning = colors[semantics["roles"]["warning"]]
     warm_warning = hue_distance(warning["oklch"][2], 85) < 45
     native_checks = {}
     for target in ("windows_terminal", "siyuan", "typora", "powerpoint"):
-        result = json.loads((ROOT / "pilot/aptlantis-blackgold" / target / "tokens.json").read_text())
+        result = json.loads((ROOT / "pilot/aptlantis-dnf-Blackgold" / target / "tokens.json").read_text())
         # Recalculate ratios from final exported RGB, independently of the saved ratio field.
         recalculated = [contrast(result["tokens"][pair["foreground"]], result["tokens"][pair["background"]]) >= pair["required"] for pair in result["checks"]]
         native_checks[target] = {"named": result["named_count"], "unique": result["unique_count"],

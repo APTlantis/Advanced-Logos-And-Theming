@@ -33,7 +33,7 @@ with zipfile.ZipFile(DECK) as current, zipfile.ZipFile(DATA["reference"]) as ref
 for source in DATA["sources"]:
     assert digest(Path(source["path"])) == source["sha256"], source["path"]
 assert digest(Path(DATA["reference"])) == DATA["reference_sha256"]
-palette = tomllib.loads((ROOT / "output/blackgold/palette.toml").read_text())["palette"]["canonical"]
+palette = tomllib.loads((ROOT / "output/dnf-Blackgold/palette.toml").read_text())["palette"]["canonical"]
 assert palette == DATA["palette"] and len(palette) == len({v["hex"] for v in palette.values()}) == 32
 receipt = json.loads((ROOT / ".build/overview/finalization.json").read_text())
 assert receipt["finalSha256"] == digest(DECK)

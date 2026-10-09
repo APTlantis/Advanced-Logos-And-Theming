@@ -3,7 +3,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('palette_transformer',ROOT/'palette_transformer.py'); m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
 class TransformerTests(unittest.TestCase):
-    def setUp(self): self.data,self.colors,self.digest,self.notices=m.load(ROOT/'examples/apt-aptlantis-blackgold-palette.toml')
+    def setUp(self): self.data,self.colors,self.digest,self.notices=m.load(ROOT/'examples/apt-aptlantis-dnf-Blackgold-palette.toml')
     def test_rgb_roundtrip_and_contrast(self):
         for rgb in ([255,0,0],[0,255,0],[0,0,255],[3,11,20],[255,255,255],[0,0,0],[128,64,32]):
             actual,_=m.lch_to_rgb(m.rgb_to_lch(rgb)); self.assertEqual(actual,list(rgb))
@@ -33,7 +33,7 @@ class TransformerTests(unittest.TestCase):
     def test_deterministic_and_roundtrip_outputs(self):
         with tempfile.TemporaryDirectory() as d:
             a=Path(d)/'a'; b=Path(d)/'b'
-            for p in (a,b): m.run(ROOT/'examples/apt-aptlantis-blackgold-palette.toml',p,'website')
+            for p in (a,b): m.run(ROOT/'examples/apt-aptlantis-dnf-Blackgold-palette.toml',p,'website')
             for name in ('palette.toml','manifest.json','validation.json','swatch.png'): self.assertEqual((a/name).read_bytes(),(b/name).read_bytes())
             decoded=tomllib.loads((a/'palette.toml').read_text()); self.assertEqual(decoded['transformation']['actual_count'],112)
             _,c,_,_=m.load(a/'palette.toml'); self.assertEqual(len(c),112)

@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-09",
+  "feature": "Named target palette TOML and transformer-style swatch PNG for every selected target",
+  "tests": {
+    "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+    "methods": 30,
+    "elapsed_seconds": 11.437,
+    "result": "passed",
+    "initial_sandbox_result": "Python path warning and WinError 5 on temporary directories prevented test execution; authorized rerun outside sandbox passed"
+  },
+  "pilot": {
+    "directory": "pilot/target-palettes-2026-10-09/clogure",
+    "input": "User-supplied Downloads/palette-transformer/clogure/notepad/palette.toml",
+    "name": "Aptlantis-Clogure",
+    "source_sha256": "c396ddc88bd72c7a27d0b0c67909942d62ca1e4d730535dd291c391fe93324f7",
+    "targets": [
+      "windows_terminal",
+      "siyuan",
+      "typora",
+      "powerpoint",
+      "alacritty",
+      "notepad_plus_plus",
+      "sublime_text",
+      "svg",
+      "syntax_highlighting",
+      "data_visualization"
+    ],
+    "contrast_failures": 0,
+    "artifact_count": 20,
+    "terminal_swatch_visual_review": "Four-column layout, labels, source IDs and canonical/derived status readable"
+  },
+  "artifacts": [
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/windows_terminal/apt-clogure-windows-terminal-palette.toml",
+      "sha256": "8be32a6538f2ce3d72b6d95d507e56672b24c029d2ddbf3d515a3cbb607b47ca"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/windows_terminal/apt-clogure-windows-terminal-swatch.png",
+      "sha256": "3bcb5486b2a0d54e648c9f93bed67095598e6268853a2673b557e5f739f7f573"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/siyuan/apt-clogure-siyuan-palette.toml",
+      "sha256": "201d4605e2e56c6524e98e9de72196bbbf2c63df2467f198d24eba2051b92c61"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/siyuan/apt-clogure-siyuan-swatch.png",
+      "sha256": "e1aaceb7584b9d0afbdaf494edd3d428f4e7dd9bba22e2b8c5e83144ae12448d"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/typora/apt-clogure-typora-palette.toml",
+      "sha256": "24e829739ecdd5569d27463d513d4c2521444f7f3f5245ecc9c868f1aac0fc58"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/typora/apt-clogure-typora-swatch.png",
+      "sha256": "951cc48eb37de1cb86a97ce7739e33067a687539597d58c26a6dbb95c0fb1c8d"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/powerpoint/apt-clogure-powerpoint-palette.toml",
+      "sha256": "13371f7c57a9ae549bad151dae73e7526ea4d9da7d75476bfaf8c7efb90fa6b2"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/powerpoint/apt-clogure-powerpoint-swatch.png",
+      "sha256": "d3c75c5a34acb2367b1fa6464189447a41b551fd50f901275241db0929b25f7c"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/alacritty/apt-clogure-alacritty-palette.toml",
+      "sha256": "5051fc325712bf362b0a379d32455c05886635f96c1619ac06379d4fa616bcb9"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/alacritty/apt-clogure-alacritty-swatch.png",
+      "sha256": "0c6c0786ee7ea314c96b403397203cbfaa051c72e211ec50057739eaa82f580b"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/notepad_plus_plus/apt-clogure-notepad-plus-plus-palette.toml",
+      "sha256": "660d3841cc75fac2b92a4db332fafe17f10afc8eec650d38caeb55dbb000ef87"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/notepad_plus_plus/apt-clogure-notepad-plus-plus-swatch.png",
+      "sha256": "c198fc4e1cc967fbf930cc05ecaccd54b690ad25d5dc968acd82fd6a69556041"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/sublime_text/apt-clogure-sublime-text-palette.toml",
+      "sha256": "b814cd39271386720c7305170f67ca93c7c1265c84511dd732d50f872cdeecf4"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/sublime_text/apt-clogure-sublime-text-swatch.png",
+      "sha256": "a2099a60cb4bffb2a159827af70e0f484be49a1df00980b30da0b486e892d713"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/svg/apt-clogure-svg-palette.toml",
+      "sha256": "d5c1428d9bff35c8aa27a3a164d173c92be4011727553f3c33feadb540f7f0a6"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/svg/apt-clogure-svg-swatch.png",
+      "sha256": "b28dbddd264aa726731875de0523485407b5358d036f663690eb5c2519a76dfe"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/syntax_highlighting/apt-clogure-syntax-highlighting-palette.toml",
+      "sha256": "2e4420db308781e451505ae47e098d8b3666041ffee94ab08e6b8a92d4b0fa94"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/syntax_highlighting/apt-clogure-syntax-highlighting-swatch.png",
+      "sha256": "833f022861803287c305a9dc5cdd2b5b1022eb71ea3cc6a621fdae5fd8b1b916"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/data_visualization/apt-clogure-data-visualization-palette.toml",
+      "sha256": "bd8e39117c5413004893bf5414e745ba77eaa9bb738421da9a48e8637bad620f"
+    },
+    {
+      "file": "pilot/target-palettes-2026-10-09/clogure/data_visualization/apt-clogure-data-visualization-swatch.png",
+      "sha256": "92a33fdc686a767796031d519da71305b7e7ff5fd612505c737ad37c2510b380"
+    }
+  ],
+  "limits": [
+    "Local parsing, exact token/canonical comparisons, sampled PNG cells and deterministic import hashes; native import/rendering remains separate",
+    "No install, activation, publication or hosted-output regeneration",
+    "Earlier outputs, supplied input bytes and recovery archives preserved"
+  ],
+  "navigation": "Project identity, ownership, discovery roots and portfolio registration unchanged; no parent/index edits needed"
+}

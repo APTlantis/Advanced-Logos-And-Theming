@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-09",
+  "file": "output/index.html",
+  "retained_theme_count": 8,
+  "local_page_links": 24,
+  "local_palette_images": 8,
+  "verification": "HTML parsed; no nested anchors; three correct gallery/review destinations per card; all links and images exist",
+  "themes": [
+    [
+      "ada/review.html",
+      "ada/svg/examples.html",
+      "ada/data_visualization/examples.html"
+    ],
+    [
+      "blackgold/review.html",
+      "blackgold/svg/examples.html",
+      "blackgold/data_visualization/examples.html"
+    ],
+    [
+      "dnf-Clojure/review.html",
+      "dnf-Clojure/svg/examples.html",
+      "dnf-Clojure/data_visualization/examples.html"
+    ],
+    [
+      "dnf-Julia/review.html",
+      "dnf-Julia/svg/examples.html",
+      "dnf-Julia/data_visualization/examples.html"
+    ],
+    [
+      "dnf-QBasic/review.html",
+      "dnf-QBasic/svg/examples.html",
+      "dnf-QBasic/data_visualization/examples.html"
+    ],
+    [
+      "dnf-R/review.html",
+      "dnf-R/svg/examples.html",
+      "dnf-R/data_visualization/examples.html"
+    ],
+    [
+      "dnf-Scratch/review.html",
+      "dnf-Scratch/svg/examples.html",
+      "dnf-Scratch/data_visualization/examples.html"
+    ],
+    [
+      "dnf-Zig/review.html",
+      "dnf-Zig/svg/examples.html",
+      "dnf-Zig/data_visualization/examples.html"
+    ]
+  ],
+  "public_delivery": "Not verified; current A:/webserver/Caddyfile allowlist excludes all six dnf-* folders",
+  "scope": "Only curated index and direct documentation updated; theme outputs, removed entries and server configuration preserved"
+}
