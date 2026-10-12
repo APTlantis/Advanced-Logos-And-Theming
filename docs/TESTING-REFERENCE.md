@@ -1,6 +1,15 @@
 # Testing, validation and future coverage
 
-Source review: **2026-10-09**, engine **0.1.0**. This reference explains the checks that exist, why they matter, how to run them safely, what evidence they produce and what useful coverage remains to add. It is a strategy/reference, not a claim that every proposed check has passed. [VALIDATION.md](VALIDATION.md) indexes dated results; [OUTPUT-REFERENCE.md](OUTPUT-REFERENCE.md) explains the artifacts being tested.
+## Typora extension — 2026-10-11
+
+The current focused suite contains 35 methods, including three in `tests/test_typora.py` for deterministic exports and token/canonical preservation, scoped native layout safeguards, and packaged paired stress specimens. The earlier 32-method inventory below describes the pre-extension suite.
+
+Run `tools/check_typora_previews.cjs RUN PLAYWRIGHT_MODULE [CHROMIUM_EXECUTABLE]` using local Node/Playwright. It writes browser evidence and screenshots inside that run. Checks at 1440/900/390 pixels cover table styling, preserved alignment, 100 rows/12 columns, clipping, page overflow, local images, text contrast and no external requests/errors. The HTML uses authored syntax spans, not live CodeMirror.
+
+Evidence: `migration/typora-markdown-acceptance-2026-10-11.json`; native checklist: [TYPORA-REVIEW.md](TYPORA-REVIEW.md). Isolated wheel generation passed. Original output hashes, canonical values and SiYuan CSS match baselines. Imported underived tokens gain only `legacy_family=canonical` metadata; colors and origins are unchanged.
+
+
+Source review: **2026-10-10**, engine **0.1.0**. This reference explains the checks that exist, why they matter, how to run them safely, what evidence they produce and what useful coverage remains to add. It is a strategy/reference, not a claim that every proposed check has passed. [VALIDATION.md](VALIDATION.md) indexes dated results; [OUTPUT-REFERENCE.md](OUTPUT-REFERENCE.md) explains the artifacts being tested.
 
 ## Contents
 
@@ -32,7 +41,9 @@ Every run should preserve input SHA-256, target subset, config/settings, command
 
 ## Current automated suite
 
-There are **30 unittest methods**: 17 pipeline, five converter, five syntax/chart quality and three SVG quality tests. The inventory below names methods exactly as implemented. Each method may contain many assertions; 30 does not mean 30 isolated risks or 30 native workflows. The per-target palette extension passed all 30 on 2026-10-09; see [its evidence](../migration/target-palette-acceptance-2026-10-09.json). Earlier records of 29 tests remain dated evidence.
+There are **32 unittest methods**: 17 pipeline, five converter, five syntax/chart quality, three SVG quality and two website tests. Each method may contain many assertions; 32 does not mean 32 isolated risks or native workflows. Earlier 30/29-test records remain dated evidence. Current website evidence: [acceptance record](../migration/website-target-acceptance-2026-10-09.json).
+
+Website coverage in `tests/test_website.py`: `test_website_provenance_budget_and_real_contrast_pairs` checks canonical preservation, mandatory budgets, source hue provenance and independently measured contrast ratios; `test_website_export_scoping_local_assets_and_safe_name` checks scoped selectors, real token consumers, local resources and escaped names. The existing image-generation test now also exercises `website`; default import/export tests cover all eleven targets. `tools/check_website_previews.cjs` checks three palettes at 1440/390 pixels, actual visible text contrast, focus, hover/pressed states, dialog/Escape, disclosures and non-submitting forms with HTTP requests blocked. Production host CSS and screen-reader acceptance remain separate.
 
 Run from the repository root with the project environment and ImageMagick available:
 
@@ -65,7 +76,7 @@ The all-target export test also parses every new target TOML, compares exact tok
 | `test_near_black_noise_does_not_consume_visible_color_slots` | Redundant ≤12-channel black candidates collapse to one, weights preserved, selection observed/deterministic; sparse grayscale retained | Synthetic candidates rather than diverse photographed noise |
 | `test_surface_identity_is_separate_from_black_anchor` | Identity surface differs from absolute black; black ANSI anchor remains; darkest/override/grayscale/bright fallback and invalid mode checked | Does not prove the chosen surface is aesthetically best |
 | `test_gamut_and_hue_derivation` | Saturated-red lightness derivation gamut-maps, records original requested hue and measured hue stays within 1.5° | One difficult source, not exhaustive quantization/hue behavior |
-| `test_native_exports_and_canonical_immutability` | All ten defaults export within budget, with zero declared failures on fixture and unchanged canonical dictionary; format-specific checks below | Static/native-file inspection, no native app opening |
+| `test_native_exports_and_canonical_immutability` | All eleven defaults export within budget, with zero declared failures on fixture and unchanged canonical dictionary; format-specific checks below | Static/native-file inspection, no native app opening |
 | `test_generated_target_palette_names_and_review_links` | Image generation emits named palette/swatch artifacts and review links for selected targets; prefix/path normalization, source hashes, original bytes and canonical 32 checked | Local files only, no application import |
 | `test_import_roundtrip_determinism_and_overwrite` | Import retains ID→hex values, existing destination refused without flag, explicit replacement produces identical full file hashes, review contains no HTTPS link | Repeated import in one environment; no fault injection during final rename |
 | `test_strict_mode_still_writes_failed_results` | Bright background override triggers exit 2 and leaves complete native files/run with failures | Checks intended contrast-failure path, not every error path |
@@ -90,7 +101,7 @@ The all-target method is an integration contract check, with these additional as
 | SVG/syntax/charts | Expected example counts; SVG namespace/title/token-only fill/stroke; Prism classes/local scripts/no authored token spans; nine ordered single-source scale stops and style cycle |
 | Budget floors | 28 SVG, 37 chart and 22 syntax minimums accepted; one below rejected; terminal budget 19 rejected |
 
-The suite verifies exported declared failures on the fixture but largely uses the production contrast function. A genuinely independent reference calculation and broader palette corpus would strengthen confidence. Balanced CSS braces do not constitute a full CSS parser or host selector validation.
+The suite verifies exported declared failures on the fixture but largely uses the production contrast function. Website tests include an independent contrast calculation. Extending that independent reference and the palette corpus across other targets would strengthen confidence. Balanced CSS braces do not constitute a full CSS parser or host selector validation.
 
 ### Converter tests: real ImageMagick, stubbed tracing
 
@@ -104,7 +115,7 @@ Source: [`tests/test_logo_tools.py`](../tests/test_logo_tools.py), `LogoToolTest
 | `test_batch_output_and_collision_guards` | Unsafe nested batch destination rejected in dry-run; spaced external destination works; same-stem competing inputs rejected | Representative placement/name guards, not all Windows path aliases |
 | `test_trace_output_contract_with_stub` | Stubbed version/output contract produces SVG path output through trace mode | A stub tests orchestration, not tracing fidelity or binary CLI compatibility |
 
-There is no dedicated automated atlas test in the 29-method suite. Historical broad verification executes atlas generation, which proves the script completed against those assets, not link safety, accessibility, catalog escaping or rendering correctness.
+There is no dedicated automated atlas test in the current suite. Historical broad verification executes atlas generation, which proves the script completed against those assets, not link safety, accessibility, catalog escaping or rendering correctness.
 
 ### Syntax/chart resource and output tests
 
@@ -254,7 +265,7 @@ After code changes, project instructions require focused pipeline and converter 
 
 ## Proposed tests and priorities
 
-Everything in this section is **proposed**, not counted in the 29-method suite. Priorities favor failures that could destroy work or produce misleading acceptance over tests that mirror implementation details.
+Everything in this section is **proposed**, not counted in the 32-method suite. Priorities favor failures that could destroy work or produce misleading acceptance over tests that mirror implementation details.
 
 ### Priority 1: preservation and native correctness
 

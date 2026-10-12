@@ -12,6 +12,8 @@ budget = 20
 budget = 32
 [profiles.sublime_text]
 budget = 40
+[profiles.website]
+budget = 112
 
 [extraction]
 candidates = 192

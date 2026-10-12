@@ -2,7 +2,7 @@
 
 SVG gallery environment: the page, cards, text, links and focus outlines use fixed neutral colors independent of every theme. Palette-derived backgrounds remain inside the SVG compositions. Surrounding pages may use any background. Fresh preview: [neutral SVG gallery](../pilot/svg-neutral-gallery-2026-10-09/svg/examples.html). Earlier galleries remain historical previews.
 
-Source review: **2026-10-09**. Engine/package version: **0.1.0**. This reference describes the current implementation, including the later syntax, chart and SVG improvements. It inventories generated files, explains their construction, and identifies application acceptance limits. Dated acceptance records remain evidence for their particular artifacts; they do not automatically cover newly generated files.
+Source review: **2026-10-10**. Engine/package version: **0.1.0**. This reference describes the current implementation, including the later syntax, chart and SVG improvements. It inventories generated files, explains their construction, and identifies application acceptance limits. Dated acceptance records remain evidence for their particular artifacts; they do not automatically cover newly generated files.
 
 Read alongside [commands](COMMAND-CONTRACT.md), [testing](TESTING-REFERENCE.md), [editor contracts](EDITOR-TARGETS.md), [PowerPoint](POWERPOINT.md), [visual contracts](VISUAL-TARGETS.md) and [hosting operations](HOSTING.md). The implementation links below are relative to this repository so they remain usable offline.
 
@@ -18,7 +18,9 @@ Read alongside [commands](COMMAND-CONTRACT.md), [testing](TESTING-REFERENCE.md),
 
 ## Scope and target inventory
 
-`apt-theme generate` starts from an image; `apt-theme import` starts from a 32-entry palette. Both run the same semantic mapping, adaptation, export and reporting stages. All ten IDs in [`DEFAULTS`](../apt_theme/targets.py) are selected by default. `--targets` accepts a comma-separated, unique subset of those exact IDs. Unsupported or duplicate IDs fail before export.
+The [website target reference](WEBSITE-TARGET.md) specifies native browser CSS, exact artifacts, 89 required tokens, integration markup and suitability limits. Its implementation is `apt_theme/website.py`; generation emits per-target palettes through the common exporter. The preserved legacy palette transformer is independently runnable and is not called by the current engine.
+
+`apt-theme generate` starts from an image; `apt-theme import` starts from a 32-entry palette. Both run the same semantic mapping, adaptation, export and reporting stages. All eleven IDs in [`DEFAULTS`](../apt_theme/targets.py) are selected by default. `--targets` accepts a comma-separated, unique subset of those exact IDs. Unsupported or duplicate IDs fail before export.
 
 Here `<slug>` means the supplied name, lowercased, with runs of non-ASCII-alphanumeric characters replaced by hyphens and leading/trailing hyphens removed. An empty result becomes `aptlantis-theme`. Without `--name`, the input filename stem supplies the name. Each target has its own directory under the chosen run directory.
 
@@ -34,6 +36,7 @@ Here `<slug>` means the supplied name, lowercased, with runs of non-ASCII-alphan
 | Editable vector examples | `svg` | 40 | 28 | Six SVG compositions and gallery |
 | Offline Prism syntax examples | `syntax_highlighting` | 32 | 30 | CSS, twelve pages, sources and runtime |
 | Data visualization / Matplotlib | `data_visualization` | 48 | 37 | Style, scales, fixture, three authored SVG charts |
+| Full website / scoped browser CSS | `website` | 112 | 89 | `theme.css`, landing/component specimens and neutral review index |
 
 Budgets cap **named tokens**, not unique RGB colors, application fields, file counts or canonical palette size. Aliases are expected; an image with narrow hues cannot supply conventional red/green/blue distinctions without breaking the image-color rule. Exporters do not pad unused budget with arbitrary tokens. The first four application targets are not the only targets selected by default.
 
@@ -161,11 +164,15 @@ The generated README describes manual placement in the workspace theme folder. G
 
 ### Typora
 
-Source: [`editor_css`](../apt_theme/targets.py). Files: `<slug>.css` and audit JSON.
+Source: [`theme_css` and `export_examples`](../apt_theme/typora.py), dispatched by [`editor_css`](../apt_theme/targets.py). Files: `<slug>.css`, paired specimens and audit JSON.
 
-Typora variables map background/text/sidebar/control foreground. Selectors cover body/#write, sidebar, fences/CodeMirror, modal/dropdown surfaces, Markdown headings/links, blockquotes, selection, borders and inputs. `#write` uses a 900px maximum width and padded readable text. CodeMirror classes map keyword→keyword, string→string, number→number, comment→comment, def→function, operator→operator, variable-2→type and atom→constant. Shared `.hljs-*` and status/state selectors are also emitted.
+Typora exports `<slug>.css`, `examples.md`, `examples.html` and a local `example-image.png`, in addition to its token palette, swatch and validation records. `apt_theme/typora.py` owns application selectors and paired specimens; the browser page loads the actual exported CSS and is explicitly a simulation.
 
-There is no Typora package ZIP, typography asset bundle or separate native preview file. The shared review is a simulation. The CSS does not claim exhaustive application chrome, all Markdown constructs, print/export styling or host-version acceptance. Manual theme loading and document/code/selection/sidebar review remain separate.
+Document rules are scoped under `#write`. Tables retain native layout and Markdown alignment, with collapsed borders, padded cells, elevated headers, alternating background/panel rows and wrapping long content. All six headings, nested/task lists, quotes, inline/fenced code, links, emphasis, highlights, footnotes, TOC and images receive screen styling. Existing CodeMirror syntax mappings and the 40-token budget are retained. No new colors or hue families are introduced. SiYuan CSS remains independently unchanged.
+
+Specimens include a 100-row table, a 12-column table, left/center/right alignment and long URLs. No scroll wrappers, sticky headers or forced table display modes are added. Very dense tables may wrap heavily at narrow widths; native editing and layout must be reviewed separately. Print/PDF styling, exhaustive application chrome, math and diagram rendering are outside this pass. Official selector guidance: [Typora custom themes](https://theme.typora.io/doc/Write-Custom-Theme/).
+
+Fresh local evidence: `migration/typora-markdown-acceptance-2026-10-11.json`. Browser simulation and static checks do not establish native Typora acceptance.
 
 ### PowerPoint and Office colors
 

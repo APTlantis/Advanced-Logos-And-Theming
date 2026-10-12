@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-11",
+  "pilot": "pilot/typora-markdown-2026-10-11",
+  "tests": {
+    "methods": 35,
+    "passed": true
+  },
+  "existing_blackgold_hashes_unchanged": true,
+  "siyuan_css_unchanged": true,
+  "canonical_palette_unchanged": true,
+  "typora_token_colors_and_origins_identical": true,
+  "token_metadata_difference": "Imported underived tokens gain legacy_family=canonical; no color or origin changes.",
+  "named_tokens": 40,
+  "contrast_failures": 0,
+  "wheel": {
+    "sha256": "c2332f94182f8c4570f1ee7cf0feb54d008cc3b0ddd9d24307cbcf40066261e2",
+    "isolated_generation_passed": true
+  },
+  "browser": {
+    "browser": "149.0.7827.55",
+    "checks": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "layout": "table",
+        "collapse": "collapse",
+        "border": "1px",
+        "padding": 8.8,
+        "align": [
+          "left",
+          "center",
+          "right"
+        ],
+        "row_colors": [
+          "rgb(10, 25, 36)",
+          "rgb(24, 34, 42)"
+        ],
+        "header": "rgb(33, 44, 52)",
+        "tall_rows": 100,
+        "wide_columns": 12,
+        "clipped_cells": 0,
+        "image_loaded": true,
+        "contrast_failures": []
+      },
+      {
+        "width": 900,
+        "overflow": false,
+        "layout": "table",
+        "collapse": "collapse",
+        "border": "1px",
+        "padding": 8.8,
+        "align": [
+          "left",
+          "center",
+          "right"
+        ],
+        "row_colors": [
+          "rgb(10, 25, 36)",
+          "rgb(24, 34, 42)"
+        ],
+        "header": "rgb(33, 44, 52)",
+        "tall_rows": 100,
+        "wide_columns": 12,
+        "clipped_cells": 0,
+        "image_loaded": true,
+        "contrast_failures": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "layout": "table",
+        "collapse": "collapse",
+        "border": "1px",
+        "padding": 5.6,
+        "align": [
+          "left",
+          "center",
+          "right"
+        ],
+        "row_colors": [
+          "rgb(10, 25, 36)",
+          "rgb(24, 34, 42)"
+        ],
+        "header": "rgb(33, 44, 52)",
+        "tall_rows": 100,
+        "wide_columns": 12,
+        "clipped_cells": 0,
+        "image_loaded": true,
+        "contrast_failures": []
+      }
+    ],
+    "external_requests": [],
+    "errors": [],
+    "native_typora_acceptance": "pending",
+    "passed": true
+  },
+  "import_provenance": {
+    "sha256": "469aee68f10fd2b7a71f996646aa7295358f43ed34f02d5db32f75c213a97e41",
+    "kind": "imported_palette",
+    "legacy_roles": {}
+  },
+  "native_typora_acceptance": "pending",
+  "print_pdf_acceptance": "deferred",
+  "installation": "not performed",
+  "publication": "not performed"
+}

@@ -1,6 +1,6 @@
 # Logos-And-Theming instructions
 
-Inherit D:/AGENTS.md and D:/CTS/AGENTS.md. Read Logos-And-Theming.manifest.toml, Project-Proposal.md, Project-README.md and README.md.
+Inherit D:/AGENTS.md and D:/CTS/AGENTS.md. Read PROJECT-READMAP.toml, Logos-And-Theming.manifest.toml, Project-Proposal.md, Project-README.md and README.md. Evaluator orientation: docs/EVALUATOR-START.md. Keep the read map current when declared paths or priorities change.
 
 - This project group owns the image-to-theme engine, artwork/catalogs, ICO/SVG conversion and atlas utility. SESM metadata tooling is independently governed in ../SESM-Metadata-Embedder.
 - Preserve the canonical 32 colors. Semantic mappings and derived target tokens are separate artifacts. Generate dark themes only and introduce no new hue families.

@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-11 — Typora Markdown refinement
+
+- Separated Typora CSS from SiYuan, adding striped tables and common Markdown structure styling without changing token colors or budgets.
+- Added paired offline Markdown/browser specimens with tall/wide tables, packaged in the Python exporter.
+- All 35 focused tests, three browser viewport checks and isolated wheel generation passed. Original Black-Gold output hashes and SiYuan CSS remain unchanged. Native Typora acceptance is pending; print/PDF is deferred.
+
+## 2026-10-10 — Evaluator preparation
+
+- Added the WGS/PPS `PROJECT-READMAP.toml`, with four mandatory records and source/test/evidence priorities within a 25-file budget; wired discovery through the manifest, agent instructions and overview.
+- Reconciled current documentation to eleven targets and 32 test methods while preserving dated acceptance records, the overview deck and Writerside snapshot. Added `docs/EVALUATOR-START.md` and fresh preflight evidence.
+- Existing 2026-10-09 extensions include bundled PowerPoint templates, offline Prism/chart/SVG examples, per-target palettes/swatches and scoped website CSS. Their individual contracts and dated evidence are indexed in the current README and validation guide.
+- This preparation changes documentation only; it does not install, activate, regenerate hosted outputs, commit, publish or mark a release ready.
+
 ## 2026-10-08 — Terminal and editor exporters
 
 - Added Alacritty TOML, Notepad++ XML (globals and Python/C++/JSON lexers) and Sublime Text 4 color-scheme JSON to default generation.

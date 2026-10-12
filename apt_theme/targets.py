@@ -9,7 +9,7 @@ from .colors import contrast, derive, readable
 
 DEFAULTS = {"windows_terminal": 20, "siyuan": 64, "typora": 40, "powerpoint": 24,
             "alacritty": 20, "notepad_plus_plus": 32, "sublime_text": 40,
-            "svg": 40, "syntax_highlighting": 32, "data_visualization": 48}
+            "svg": 40, "syntax_highlighting": 32, "data_visualization": 48, "website": 112}
 ANSI = ("black", "red", "green", "yellow", "blue", "magenta", "cyan", "white")
 SYNTAX = ("keyword", "string", "number", "function", "type", "operator", "constant", "comment")
 
@@ -68,6 +68,10 @@ def adapt(colors, roles, target, budget):
         for role in SYNTAX:
             add(role, role, "code text", minimum=4.5)
         mandatory = len(tokens)
+        if target == "website":
+            from .website import extend
+            extend(tokens, checks, add)
+            mandatory = len(tokens)
         if target in ("svg", "data_visualization"):
             for i, role in enumerate(("primary", "secondary", "keyword", "string", "number", "type"), 1):
                 add(f"series_{i}", role, "diagram/chart mark", minimum=3, bg="panel")
@@ -123,6 +127,9 @@ def css_tokens(tokens):
 
 
 def editor_css(tokens, siyuan=False):
+    if not siyuan:
+        from .typora import theme_css
+        return css_tokens(tokens) + theme_css(tokens)
     css = css_tokens(tokens)
     if siyuan:
         css += """html[data-theme-mode='dark'] {
@@ -141,22 +148,6 @@ body, .protyle-wysiwyg { background: var(--apt-background); color: var(--apt-for
 .b3-dialog__container { background: var(--apt-elevated); color: var(--apt-foreground); }
 """
         css += ".protyle-wysiwyg [data-type='NodeCodeBlock'] { background:var(--apt-panel); color:var(--apt-foreground); }\n"
-    else:
-        css += """:root { --bg-color:var(--apt-background); --text-color:var(--apt-foreground);
- --side-bar-bg-color:var(--apt-panel); --control-text-color:var(--apt-foreground); }
-html, body, #write { background:var(--apt-background); color:var(--apt-foreground); }
-#write { max-width: 900px; margin: auto; padding: 2rem; line-height: 1.65; }
-#typora-sidebar, .md-fences, .CodeMirror { background:var(--apt-panel); color:var(--apt-foreground); }
-.modal-content, .dropdown-menu { background:var(--apt-elevated); color:var(--apt-foreground); }
-.cm-s-inner .cm-keyword { color:var(--apt-keyword); }
-.cm-s-inner .cm-string { color:var(--apt-string); }
-.cm-s-inner .cm-number { color:var(--apt-number); }
-.cm-s-inner .cm-comment { color:var(--apt-comment); }
-.cm-s-inner .cm-def { color:var(--apt-function); }
-.cm-s-inner .cm-operator { color:var(--apt-operator); }
-.cm-s-inner .cm-variable-2 { color:var(--apt-type); }
-.cm-s-inner .cm-atom { color:var(--apt-constant); }
-"""
     css += """a, h1, h2, h3 { color:var(--apt-primary); }
 ::selection { background:var(--apt-selection); color:var(--apt-selection-text); }
 blockquote { border-left:3px solid var(--apt-primary); color:var(--apt-muted); }
@@ -196,7 +187,10 @@ def export(result, directory, name, canonical, source_hash):
     directory.mkdir(parents=True)
     tokens, target = result["tokens"], result["target"]
     h = lambda key: tokens[key]["hex"]
-    if target == "windows_terminal":
+    if target == "website":
+        from .website import export_website
+        export_website(result, directory, name)
+    elif target == "windows_terminal":
         scheme = {"name": name, "background": h("background"), "foreground": h("foreground"),
                   "cursorColor": h("cursor"), "selectionBackground": h("selection")}
         scheme.update({key: h(key) for role in ANSI for key in (role, "bright" + role.title())})
@@ -238,6 +232,9 @@ def export(result, directory, name, canonical, source_hash):
         css = editor_css(tokens, target == "siyuan")
         filename = "theme.css" if target == "siyuan" else slug(name) + ".css"
         (directory / filename).write_text(css, encoding="utf-8")
+        if target == "typora":
+            from .typora import export_examples
+            export_examples(result, directory, name, filename)
         if target == "siyuan":
             from .report import swatch
             swatch(tokens, directory / "preview.png", name)

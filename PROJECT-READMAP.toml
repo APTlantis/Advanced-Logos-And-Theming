@@ -1,0 +1,230 @@
+schema = "cityhall.project-readmap"
+version = "1.0"
+
+[project]
+name = "Logos-And-Theming"
+generated_by = "Source-checked evaluator preparation 2026-10-10; Typora discovery extension 2026-10-11"
+
+[budget]
+analyzer_file_budget = 25
+reserved_mandatory = 4
+remaining_exploratory = 21
+
+[[mandatory]]
+path = "Logos-And-Theming.manifest.toml"
+rank = 1
+reason = "Canonical project identity, ownership, stage and evidence pointers"
+
+[[mandatory]]
+path = "Project-Proposal.md"
+rank = 2
+reason = "PPS intent, design boundaries and acceptance scope"
+
+[[mandatory]]
+path = "Project-README.md"
+rank = 3
+reason = "Current project overview and operator context"
+
+[[mandatory]]
+path = "AGENTS.md"
+rank = 4
+reason = "Inherited and project-local instructions"
+
+[[priority]]
+path = "PROJECT-READMAP.toml"
+rank = 5
+reason = "Discovery contract and bounded selection scope"
+
+[[priority]]
+path = "README.md"
+rank = 6
+reason = "Setup, eleven targets, operator commands and recovery"
+
+[[priority]]
+path = "docs/EVALUATOR-START.md"
+rank = 7
+reason = "Current evaluation context, proof limits and navigation"
+
+[[priority]]
+path = "docs/OUTPUT-REFERENCE.md"
+rank = 8
+reason = "Architecture, algorithms, exact native artifacts and acceptance limits"
+
+[[priority]]
+path = "docs/TESTING-REFERENCE.md"
+rank = 9
+reason = "32-method inventory, rationale and proposed coverage"
+
+[[priority]]
+path = "docs/VALIDATION.md"
+rank = 10
+reason = "Dated evidence index and remaining native gates"
+
+[[priority]]
+path = "docs/COMMAND-CONTRACT.md"
+rank = 11
+reason = "Streams, output transactions, configuration and exit codes"
+
+[[priority]]
+path = "pyproject.toml"
+rank = 12
+reason = "Package version, runtime dependencies and bundled resources"
+
+[[priority]]
+path = "profiles.toml"
+rank = 13
+reason = "Extraction, semantics and eleven target budgets"
+
+[[priority]]
+path = "apt_theme/cli.py"
+rank = 14
+reason = "Generate/import orchestration, safeguards and CLI implementation"
+
+[[priority]]
+path = "apt_theme/targets.py"
+rank = 15
+reason = "Default targets, adaptation and native exporter dispatch"
+
+[[priority]]
+path = "apt_theme/website.py"
+rank = 16
+reason = "Latest scoped browser target and specimen implementation"
+
+[[priority]]
+path = "tests/test_pipeline.py"
+rank = 17
+reason = "Canonical preservation, formats, determinism and output safety"
+
+[[priority]]
+path = "tests/test_website.py"
+rank = 18
+reason = "Website scoping, provenance and independent contrast checks"
+
+[[priority]]
+path = "tests/test_logo_tools.py"
+rank = 19
+reason = "ICO/SVG converter preservation and tracing safeguards"
+
+[[evidence]]
+path = "migration/evaluator-preflight-2026-10-10.json"
+reason = "Fresh documentation, read-map collector, schema, contract and focused-suite checks; no evaluator verdict"
+
+[[evidence]]
+path = "migration/website-target-acceptance-2026-10-09.json"
+reason = "Latest eleventh-target local imports and browser evidence"
+
+[[evidence]]
+path = "migration/target-palette-acceptance-2026-10-09.json"
+reason = "Per-target palettes and swatches; historical ten-target pass"
+
+[[evidence]]
+path = "migration/svg-quality-acceptance-2026-10-09.json"
+reason = "Six-composition SVG static, browser and package evidence"
+
+[[evidence]]
+path = "migration/visual-quality-acceptance-2026-10-09.json"
+reason = "Offline Prism and shared chart/Agg quality evidence"
+
+[[evidence]]
+path = "migration/powerpoint-template-acceptance.json"
+reason = "Bundled editable template, package and native opening evidence"
+
+[[secondary]]
+path = "docs/"
+reason = "Supporting target contracts, hosting, presentations and proposed documentation volumes"
+
+[[secondary]]
+path = "apt_theme/"
+reason = "Color math, extraction, semantics, exporter helpers and bundled resources"
+
+[[secondary]]
+path = "tests/"
+reason = "Remaining syntax/chart and SVG regression tests"
+
+[[secondary]]
+path = "scripts/"
+reason = "Independent logo converter and atlas utilities"
+
+[[secondary]]
+path = "migration/"
+reason = "Historical acceptance, archive manifests and recovery guide"
+
+[[exclude]]
+path = ".git/"
+reason = "Git internals"
+
+[[exclude]]
+path = ".venv/"
+reason = "Installed dependencies"
+
+[[exclude]]
+path = ".idea/"
+reason = "IDE workspace state"
+
+[[exclude]]
+path = ".build/"
+reason = "Generated package verification trees"
+
+[[exclude]]
+path = "build/"
+reason = "Generated build tree"
+
+[[exclude]]
+path = "aptlantis_theme_pipeline.egg-info/"
+reason = "Generated package metadata"
+
+[[exclude]]
+path = "apt_theme/__pycache__/"
+reason = "Python caches"
+
+[[exclude]]
+path = "tests/__pycache__/"
+reason = "Python caches"
+
+[[exclude]]
+path = "apt_theme/vendor/"
+reason = "Vendored Prism bytes; inspect manifest if specifically needed"
+
+[[exclude]]
+path = "assets/"
+reason = "Large local ignored artwork/catalog collection"
+
+[[exclude]]
+path = "output/"
+reason = "Ignored dated generated/hosted theme collection; no regeneration in evaluation"
+
+[[exclude]]
+path = "pilot/"
+reason = "Dated generated specimens; read their declared acceptance records first"
+
+[[exclude]]
+path = "migration/archives/"
+reason = "Large recovery archives; verification manifests remain available"
+
+[[exclude]]
+path = "legacy-tools/"
+reason = "Preserved historical implementations"
+
+[[exclude]]
+path = "Theming Index/"
+reason = "Historical theme index"
+
+[[exclude]]
+path = "docs/presentations/"
+reason = "Dated overview deck and build resources; current source contracts take precedence"
+
+[[secondary]]
+path = "apt_theme/typora.py"
+reason = "Typora native styling and paired packaged specimens"
+
+[[secondary]]
+path = "tests/test_typora.py"
+reason = "Typora deterministic exports, palette preservation and layout safeguards"
+
+[[secondary]]
+path = "docs/TYPORA-REVIEW.md"
+reason = "Native review steps and screen acceptance limits"
+
+[[secondary]]
+path = "migration/typora-markdown-acceptance-2026-10-11.json"
+reason = "Focused tests, browser, wheel and preservation evidence; native Typora pending"

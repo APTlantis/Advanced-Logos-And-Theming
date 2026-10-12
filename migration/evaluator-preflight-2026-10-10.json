@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-10",
+  "project": "Logos-And-Theming",
+  "scope": "Documentation/read-map preparation; existing product changes preserved; no full evaluator run",
+  "initial_worktree_status": " M Logos-And-Theming.manifest.toml\n M Project-Proposal.md\n M Project-README.md\n M README.md\n M apt_theme/targets.py\n M docs/COMMAND-CONTRACT.md\n M docs/OUTPUT-REFERENCE.md\n M docs/TESTING-REFERENCE.md\n M docs/VALIDATION.md\n M docs/VISUAL-TARGETS.md\n M migration/README.md\n M profiles.toml\n M tests/test_pipeline.py\n?? apt_theme/website.py\n?? docs/WEBSITE-TARGET.md\n?? migration/website-target-acceptance-2026-10-09.initial.json\n?? migration/website-target-acceptance-2026-10-09.json\n?? tests/test_website.py\n?? tools/check_website_previews.cjs\n?? tools/review_website_palettes.py",
+  "changes": [
+    {
+      "path": "PROJECT-READMAP.toml",
+      "added": true,
+      "before_sha256": null,
+      "after_sha256": "448aaa72ce1fe9a384cdbf5316ce262a6c54ba0e72b693007c88de8ce0228b09"
+    },
+    {
+      "path": "docs/EVALUATOR-START.md",
+      "added": true,
+      "before_sha256": null,
+      "after_sha256": "297a69f42c990e271214d21fb35d03c8dc24b49ca7dabb5a91bac6986d542e5c"
+    },
+    {
+      "path": "AGENTS.md",
+      "added": false,
+      "before_sha256": "33cee531481fd4ad5c582956232207be5de0121557242d923f4b94f3e9e709e2",
+      "after_sha256": "b3bd50a0f924c994c762759f453e1e641bfe725d2dd373ed9798741f23d7ccf9"
+    },
+    {
+      "path": "Logos-And-Theming.manifest.toml",
+      "added": false,
+      "before_sha256": "28b6165ff51cbec22bf5e18c20eba04b0274ae703b2b8673b1d79a17c6704abb",
+      "after_sha256": "31b1212c203345045211bdd217bb7758070be740bab6cd4abde3c4f8aa8530f9"
+    },
+    {
+      "path": "Project-README.md",
+      "added": false,
+      "before_sha256": "559695844d9a56596c45b731ddf321aabcb6958b66b7c2fc4c4b416ded263ec6",
+      "after_sha256": "beda2464c0011325c734707f68cb1429fad904d496befcb42b88e4deef834383"
+    },
+    {
+      "path": "README.md",
+      "added": false,
+      "before_sha256": "50fee7f7fe60317ad28da03ce0533e9b92345b2fc8ad5a428a21cbe77c71f3b5",
+      "after_sha256": "1907f72df177d439a9aab79293ddc27358cb0cfd910e6e8f6e3527216ee8bedc"
+    },
+    {
+      "path": "Project-Proposal.md",
+      "added": false,
+      "before_sha256": "69b94205d5f9b6437d605d587de23deef07412c5ba3c3f6c14aa27412d218693",
+      "after_sha256": "ebe65b97ea3c067bae2aa57a9de9cecd3a758f710b9fe432316166a079276329"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "added": false,
+      "before_sha256": "1d14fad3d3e6b8fe9b12deadf8265ca7563544654d090a710339f8dbf3edba2b",
+      "after_sha256": "3088aa3ca72dff9c2bbdd53643e398a6f620c9b9aaf893d11b9c3ddc1e7f4ded"
+    },
+    {
+      "path": "docs/documentation-suite/PLAN.md",
+      "added": false,
+      "before_sha256": "cc0e5be09579c018fd32c8ae06bf421fdd478ce0dc0c362800ff0923723d2a90",
+      "after_sha256": "82a968830342d7882d6b152a07d2a6d297b1250ebfbf11de6262ddc5dc2f0ff9"
+    },
+    {
+      "path": "docs/TESTING-REFERENCE.md",
+      "added": false,
+      "before_sha256": "797b2eeabc76a33cab7fbdd3ef25c5ae548872db6bb7b33286b1f87485f737fb",
+      "after_sha256": "a1eecad35acb3d8e74ab7f75aa254d8b282bb53476b3b39ef819a9e4e0932372"
+    },
+    {
+      "path": "docs/OUTPUT-REFERENCE.md",
+      "added": false,
+      "before_sha256": "409b164058e6996a817456dfe9215a51bb50514c98ca7738f6b44e0b083e79ee",
+      "after_sha256": "895dd8afcdf6d9cdb1c94bb7dd06dbd8aa2b7f3fb428ed992b4586fff91ba21f"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "added": false,
+      "before_sha256": "05185e9ff3e8734057aec59e5aaf38d05411856a8d9c6c2322e2160e97304499",
+      "after_sha256": "667466d1500f0501b336b3a42008f428caf9acd2c0fdf6ca26c6841a64b8fb74"
+    },
+    {
+      "path": "migration/README.md",
+      "added": false,
+      "before_sha256": "75bf05e7f144edce7594648951d1b8510bf79089590089fb2b5918a53209c7ec",
+      "after_sha256": "d05484130af998dd16490f61a4c6b988d7715859fb9ee1beee3cddae571f63e0"
+    }
+  ],
+  "checks": {
+    "readmap": {
+      "schema": "cityhall.project-readmap",
+      "version": "1.0",
+      "mandatory": 4,
+      "priority": 15,
+      "selected_evidence": 6,
+      "budget": 25,
+      "missing_paths": []
+    },
+    "manifest_schema": "passed",
+    "default_targets_and_readme_budgets": {
+      "windows_terminal": 20,
+      "siyuan": 64,
+      "typora": 40,
+      "powerpoint": 24,
+      "alacritty": 20,
+      "notepad_plus_plus": 32,
+      "sublime_text": 40,
+      "svg": 40,
+      "syntax_highlighting": 32,
+      "data_visualization": 48,
+      "website": 112
+    },
+    "test_inventory": [
+      {
+        "path": "tests/test_logo_tools.py",
+        "methods": [
+          "test_ico_frames_and_collision",
+          "test_svg_embed_preserves_bytes_and_dimensions",
+          "test_svg_normalize_and_trace_dependency",
+          "test_batch_output_and_collision_guards",
+          "test_trace_output_contract_with_stub"
+        ],
+        "count": 5
+      },
+      {
+        "path": "tests/test_pipeline.py",
+        "methods": [
+          "test_math_and_vector_conversion",
+          "test_selection_observed_exact32_and_determinism",
+          "test_semantics_hue_suitability_overrides_and_findings",
+          "test_near_black_noise_does_not_consume_visible_color_slots",
+          "test_surface_identity_is_separate_from_black_anchor",
+          "test_gamut_and_hue_derivation",
+          "test_native_exports_and_canonical_immutability",
+          "test_generated_target_palette_names_and_review_links",
+          "test_import_roundtrip_determinism_and_overwrite",
+          "test_strict_mode_still_writes_failed_results",
+          "test_powerpoint_template_failure_preserves_previous_output",
+          "test_powerpoint_reference_hash_guard",
+          "test_powerpoint_timestamp_type_namespace_is_preserved",
+          "test_powerpoint_metadata_repair_preserves_other_package_bytes",
+          "test_transparency_monochrome_and_insufficient_colors",
+          "test_invalid_input_config_and_nonpipeline_overwrite",
+          "test_json_envelope_and_bom_configuration"
+        ],
+        "count": 17
+      },
+      {
+        "path": "tests/test_svg_quality.py",
+        "methods": [
+          "test_local_references_and_editable_vector_contract",
+          "test_paints_remain_exported_tokens_at_minimum_budget",
+          "test_determinism_and_unchanged_chart_canvas"
+        ],
+        "count": 3
+      },
+      {
+        "path": "tests/test_visual_quality.py",
+        "methods": [
+          "test_pinned_vendor_dependencies_and_integrity",
+          "test_source_languages_and_substantial_examples",
+          "test_shared_chart_values_and_svg_marks",
+          "test_source_is_escaped_and_generated_assets_match",
+          "test_generated_css_references_are_declared"
+        ],
+        "count": 5
+      },
+      {
+        "path": "tests/test_website.py",
+        "methods": [
+          "test_website_provenance_budget_and_real_contrast_pairs",
+          "test_website_export_scoping_local_assets_and_safe_name"
+        ],
+        "count": 2
+      }
+    ],
+    "local_markdown_links": {
+      "documents": 17,
+      "checked": 171,
+      "missing": [],
+      "scope": "Linked local files only; remote URLs and fragment validity not checked"
+    },
+    "pps_validator_applicability": {
+      "status": "not-applicable-to-entity-manifest",
+      "reason": "PPS validator expects proposal-specific TOML sections. The existing entity manifest is validated against WGS EntityManifest-v2.4; the project proposal is Markdown. This exploratory invocation is not a project readiness verdict."
+    },
+    "commands": [
+      {
+        "command": [
+          "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+          "D:\\.city_hall\\CTS\\tools\\cts_lint_contract.py",
+          "docs/COMMAND-CONTRACT.md",
+          "--json"
+        ],
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"ok\",\n  \"tool\": \"cts-lint-contract\",\n  \"version\": \"0.1.0\",\n  \"data\": {\n    \"findings_count\": 0\n  },\n  \"warnings\": [],\n  \"errors\": []\n}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "D:\\CTS\\Logos-And-Theming\\.venv\\Scripts\\python.exe",
+          "D:\\.city_hall\\PPS\\tools\\pps_validate.py",
+          "Logos-And-Theming.manifest.toml",
+          "--json"
+        ],
+        "exit_code": 4,
+        "stdout": "{\n  \"status\": \"error\",\n  \"tool\": \"pps-validate\",\n  \"version\": \"0.1.1\",\n  \"data\": {\n    \"findings_count\": 10\n  },\n  \"errors\": [\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: proposal.id\",\n      \"path\": \"Logos-And-Theming.manifest.toml:proposal.id\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: proposal.status\",\n      \"path\": \"Logos-And-Theming.manifest.toml:proposal.status\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: proposal.created\",\n      \"path\": \"Logos-And-Theming.manifest.toml:proposal.created\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: proposal.responsibility_posture\",\n      \"path\": \"Logos-And-Theming.manifest.toml:proposal.responsibility_posture\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: project.name\",\n      \"path\": \"Logos-And-Theming.manifest.toml:project.name\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: project.mission\",\n      \"path\": \"Logos-And-Theming.manifest.toml:project.mission\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: criteria.success\",\n      \"path\": \"Logos-And-Theming.manifest.toml:criteria.success\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: criteria.failure\",\n      \"path\": \"Logos-And-Theming.manifest.toml:criteria.failure\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: constraints.technical\",\n      \"path\": \"Logos-And-Theming.manifest.toml:constraints.technical\"\n    },\n    {\n      \"code\": \"missing-field\",\n      \"message\": \"Missing required field: constraints.scope\",\n      \"path\": \"Logos-And-Theming.manifest.toml:constraints.scope\"\n    }\n  ],\n  \"warnings\": []\n}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "-c",
+          "safe.directory=D:/CTS/Logos-And-Theming",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CHANGELOG.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'Logos-And-Theming.manifest.toml', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'Project-Proposal.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'Project-README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'apt_theme/targets.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/OUTPUT-REFERENCE.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/TESTING-REFERENCE.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/VALIDATION.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/documentation-suite/PLAN.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'migration/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'profiles.toml', LF will be replaced by CRLF the next time Git touches it\n"
+      }
+    ],
+    "focused_suite": {
+      "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+      "working_directory": "D:\\CTS\\Logos-And-Theming",
+      "exit_code": 0,
+      "output": "Ran 32 tests in 28.332s\n\nOK\n",
+      "output_scope": "Summary excerpt from the completed tool session; expected error-path diagnostics appeared during passing safeguard tests",
+      "tool_session_id": 71392,
+      "browser_native_hosting_checks_rerun": false
+    },
+    "actual_evaluator_collector": {
+      "selected_count": 25,
+      "files": [
+        "Logos-And-Theming.manifest.toml",
+        "Project-Proposal.md",
+        "Project-README.md",
+        "AGENTS.md",
+        "PROJECT-READMAP.toml",
+        "README.md",
+        "docs/EVALUATOR-START.md",
+        "docs/OUTPUT-REFERENCE.md",
+        "docs/TESTING-REFERENCE.md",
+        "docs/VALIDATION.md",
+        "docs/COMMAND-CONTRACT.md",
+        "pyproject.toml",
+        "profiles.toml",
+        "apt_theme/cli.py",
+        "apt_theme/targets.py",
+        "apt_theme/website.py",
+        "tests/test_pipeline.py",
+        "tests/test_website.py",
+        "tests/test_logo_tools.py",
+        "migration/evaluator-preflight-2026-10-10.json",
+        "migration/website-target-acceptance-2026-10-09.json",
+        "migration/target-palette-acceptance-2026-10-09.json",
+        "migration/svg-quality-acceptance-2026-10-09.json",
+        "migration/visual-quality-acceptance-2026-10-09.json",
+        "migration/powerpoint-template-acceptance.json"
+      ],
+      "notes": [
+        "PROJECT-READMAP.toml governed passive inventory selection; mandatory entries were considered before declared priority, evidence, and secondary paths.",
+        "File inventory was capped at 25 files.",
+        "Common generated/tooling directories were omitted from passive inventory: .git, .hg, .idea, .svn, .venv, .vs, __pycache__, bin, build, dist, node_modules, obj, target."
+      ],
+      "scope": "Real collector only; analyzers and evaluator verdict not run"
+    }
+  },
+  "not_rerun": [
+    "offline browser",
+    "Matplotlib Agg",
+    "wheel packaging",
+    "native application opening/editing",
+    "public hosting delivery"
+  ],
+  "limits": [
+    "No evaluator verdict or release/installation readiness claim",
+    "Historical acceptance records and snapshots retain original scope",
+    "Remote links and Markdown fragment validity not checked"
+  ],
+  "extended_records": "D:/INDEX.md, D:/Development.manifest.toml and D:/CTS/CTS.manifest.toml already register this root; identity/ownership/stage/parent unchanged",
+  "recovery": "D:\\CTS\\Logos-And-Theming\\output\\evaluator-preflight-recovery-2026-10-10",
+  "document_sha256": {
+    "AGENTS.md": "b3bd50a0f924c994c762759f453e1e641bfe725d2dd373ed9798741f23d7ccf9",
+    "CHANGELOG.md": "667466d1500f0501b336b3a42008f428caf9acd2c0fdf6ca26c6841a64b8fb74",
+    "docs/COMMAND-CONTRACT.md": "e3456b1d48236d6d823e107c039b0d9de438b71d66f6b5ec7736b4213089614f",
+    "docs/documentation-suite/PLAN.md": "82a968830342d7882d6b152a07d2a6d297b1250ebfbf11de6262ddc5dc2f0ff9",
+    "docs/EDITOR-TARGETS.md": "707bdcd733ecaa715b118ea825ab6320e64a18ec6c37b6f25f7e1fa16938b3f6",
+    "docs/EVALUATOR-START.md": "297a69f42c990e271214d21fb35d03c8dc24b49ca7dabb5a91bac6986d542e5c",
+    "docs/HOSTING.md": "19831880f43819224870410b1c67fd6304658e07d89cc5c039c66c82d32104eb",
+    "docs/OUTPUT-REFERENCE.md": "895dd8afcdf6d9cdb1c94bb7dd06dbd8aa2b7f3fb428ed992b4586fff91ba21f",
+    "docs/POWERPOINT.md": "4b9230b50ce9d89c2d77a42cfb272cf5838394e8561f68d2acc56ee080a15545",
+    "docs/TESTING-REFERENCE.md": "a1eecad35acb3d8e74ab7f75aa254d8b282bb53476b3b39ef819a9e4e0932372",
+    "docs/VALIDATION.md": "3088aa3ca72dff9c2bbdd53643e398a6f620c9b9aaf893d11b9c3ddc1e7f4ded",
+    "docs/VISUAL-TARGETS.md": "1c1746b69b6e75dfdff674b6aa1268267116ba9f7fa85516f0d9f912c94a5a75",
+    "docs/WEBSITE-TARGET.md": "a63c635ad009d37992759802546f2dedb2b3fc19cfd1e3d1a3723c3ce429de76",
+    "migration/README.md": "d05484130af998dd16490f61a4c6b988d7715859fb9ee1beee3cddae571f63e0",
+    "Project-Proposal.md": "ebe65b97ea3c067bae2aa57a9de9cecd3a758f710b9fe432316166a079276329",
+    "Project-README.md": "beda2464c0011325c734707f68cb1429fad904d496befcb42b88e4deef834383",
+    "README.md": "1907f72df177d439a9aab79293ddc27358cb0cfd910e6e8f6e3527216ee8bedc",
+    "PROJECT-READMAP.toml": "448aaa72ce1fe9a384cdbf5316ce262a6c54ba0e72b693007c88de8ce0228b09",
+    "Logos-And-Theming.manifest.toml": "31b1212c203345045211bdd217bb7758070be740bab6cd4abde3c4f8aa8530f9"
+  },
+  "source_sha256": {
+    "apt_theme/chart_examples.py": "ad119b3185dea03f964db3928a098a04ed853fb69df67004b4234844fdc8b15f",
+    "apt_theme/cli.py": "44cd930bf751f009581bc3de8ea437db462f2773557445d554b6e966f97c420b",
+    "apt_theme/colors.py": "be1efceddd2dcc06ec5676000630d035016307a2e57a098cfaee520a63cffbcb",
+    "apt_theme/extraction.py": "47e707dc20b42e1e44f70472737f9a9c6cca5a3d370ba4db658be96e51d072e9",
+    "apt_theme/native_editors.py": "461847c7d4b0271a9ba6f78f816b60c4e0b8004293c72040455fdb4f4f1ded14",
+    "apt_theme/powerpoint.py": "3eb6710971d28b036789386c333eb778af7206d133a9d20ae18c4e7ef8152124",
+    "apt_theme/report.py": "3bb5a3ae9fba3dc764aa4829931c0567f7914c1ebd0981aa9ab071aeacd3af77",
+    "apt_theme/semantics.py": "87ccb3c57241930a5cabaa4110a9fba3e5044b2a90b6113649266a6991d6c165",
+    "apt_theme/svg_examples.py": "a7f15aa210de264a170f27d38a6ead0e13761380f69a5d29637e424ca7c958da",
+    "apt_theme/syntax_examples.py": "22b2b785245e214c508bbdfcb00a03e6f8ecce49906d2eccaba7246369420188",
+    "apt_theme/targets.py": "e6386a50b081691c32b7f1b8141173ca1749bcf55c35707a0a26e4a0a3ddd49b",
+    "apt_theme/target_palette.py": "63f9c3f707c9a3dd3777cae559e235f9e86bd5cfe1c459efcfd1a4537248fcde",
+    "apt_theme/visual_targets.py": "bcd8c1a8826ecf06bd8db3f0f6256f145b5b926b800e2993b3a155d4e0e9bd1d",
+    "apt_theme/website.py": "10ad2ec162a5945ac3aedf92c0a4bf6fd563260fb584406a23a13516981745e8",
+    "apt_theme/__init__.py": "462aadf7e7060ff56a9e72a1771cfb1af0eb22c62b2a295a6e507653c24dd777",
+    "apt_theme/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "tests/test_logo_tools.py": "2614d52e22da360173021c444e74318358b21205cb1b1e34cf4b190dc37020ef",
+    "tests/test_pipeline.py": "ea75d3a5f00cbdd09ebd082ca106825fb6cb36b060407a73e811370d335f5fb8",
+    "tests/test_svg_quality.py": "ef1d8ab5b27dc0dcb987b580946cce6ad1332f22365023ed086e7c254bd3879a",
+    "tests/test_visual_quality.py": "e8e902575d86e3dd4dcd43946586256149714d2eaf46dcb8de6807a880e47b34",
+    "tests/test_website.py": "df1d69516540a45c59c658695d96bbd532003123d40cca637689cd812f01207d",
+    "profiles.toml": "52ccf3a9c1151b62fb7457ccdf6f025527b0c8552e16363fdfceacbb670df213",
+    "pyproject.toml": "1a15cd48a7d15cf6a24160f0ff56dcc33876bf02ea0ccf3943b0ab5e1de6ae4c"
+  },
+  "final_review": "Corrected final proposed-test count and documentation-suite status date; source hashes unchanged after verification."
+}

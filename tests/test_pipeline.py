@@ -263,8 +263,8 @@ class PipelineTests(unittest.TestCase):
         before = source.read_bytes()
         output = self.root / "generated"
         self.assertEqual(main(["generate", str(source), "--output", str(output),
-                               "--name", "Aptlantis-Scratch", "--targets", "windows_terminal,notepad_plus_plus"]), 0)
-        for target in ("windows_terminal", "notepad_plus_plus"):
+                               "--name", "Aptlantis-Scratch", "--targets", "windows_terminal,notepad_plus_plus,website"]), 0)
+        for target in ("windows_terminal", "notepad_plus_plus", "website"):
             stem = artifact_stem("Aptlantis-Scratch", target)
             for suffix in ("palette.toml", "swatch.png"):
                 relative = f"{target}/{stem}-{suffix}"

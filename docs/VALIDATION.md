@@ -1,6 +1,15 @@
 # Validation and evidence limits
 
-The [testing reference](TESTING-REFERENCE.md) explains all 29 current methods, additional browser/Agg/packaging/native gates, their purpose and limits, safe command recipes and prioritized proposed coverage. The [output reference](OUTPUT-REFERENCE.md) defines the artifacts those checks inspect. Documentation recipes are not new test-run evidence; dated results below retain their original scope.
+## 2026-10-11 — Typora Markdown
+
+[Acceptance evidence](../migration/typora-markdown-acceptance-2026-10-11.json): 35 focused tests, Chromium at three widths and isolated wheel generation passed. Original Black-Gold output hashes, canonical palette and SiYuan CSS are unchanged. Typora colors/origins match; import-only legacy-family metadata is recorded separately. Native Typora acceptance is pending; print/PDF is deferred. No installation, activation or publication occurred.
+
+
+Evaluator preparation, **2026-10-10**: [read map](../PROJECT-READMAP.toml), [starting context](EVALUATOR-START.md) and [fresh preflight evidence](../migration/evaluator-preflight-2026-10-10.json). Current source contains eleven defaults and 32 test methods. The preflight checks documentation, actual evaluator collector selection, manifest schema, CLI contract and focused tests. It does not rerun browser/Agg/native application/hosting checks or supply an evaluator verdict. Historical counts below retain their dated scope.
+
+Website target, 2026-10-09: fresh D, CoffeeScript and Assembly imports retain canonical 32 RGB/IDs and all existing output bytes, emit 89 named tokens within the 112 budget, and pass declared contrast checks. Chromium checks desktop/mobile pages, actual visible text contrast and specimen interactions; visual suitability is pending operator review. Evidence: `migration/website-target-acceptance-2026-10-09.json`; contract: [WEBSITE-TARGET.md](WEBSITE-TARGET.md). No public theme assets or production integration changed.
+
+The [testing reference](TESTING-REFERENCE.md) explains all 32 current methods, additional browser/Agg/packaging/native gates, their purpose and limits, safe command recipes and prioritized proposed coverage. The [output reference](OUTPUT-REFERENCE.md) defines the artifacts those checks inspect. Documentation recipes are not new test-run evidence; dated results below retain their original scope.
 
 The separate [documentation reference check, 2026-10-09](../migration/documentation-reference-check-2026-10-09.json) records source/document hashes, 135 resolved local links/anchors, all ten target budget/count rows, the exact 29-method inventory, a fresh passing focused suite and command-contract lint. This is documentation/static verification; browser, Agg, native opening and hosted delivery were not rerun for this documentation change.
 
