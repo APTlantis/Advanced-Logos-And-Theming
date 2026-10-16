@@ -9,7 +9,7 @@ from .colors import contrast, derive, readable
 
 DEFAULTS = {"windows_terminal": 20, "siyuan": 64, "typora": 40, "powerpoint": 24,
             "alacritty": 20, "notepad_plus_plus": 32, "sublime_text": 40,
-            "svg": 40, "syntax_highlighting": 32, "data_visualization": 48, "website": 112}
+            "svg": 40, "syntax_highlighting": 32, "data_visualization": 48, "website": 112, "kmindz": 40, "markdown": 40, "codemirror5": 40, "codemirror6": 40}
 ANSI = ("black", "red", "green", "yellow", "blue", "magenta", "cyan", "white")
 SYNTAX = ("keyword", "string", "number", "function", "type", "operator", "constant", "comment")
 
@@ -68,6 +68,14 @@ def adapt(colors, roles, target, budget):
         for role in SYNTAX:
             add(role, role, "code text", minimum=4.5)
         mandatory = len(tokens)
+        if target in ("markdown", "codemirror5", "codemirror6"):
+            from .browser_themes import extend
+            extend(tokens, checks, add)
+            mandatory = len(tokens)
+        if target == "kmindz":
+            from .kmindz import extend
+            extend(tokens, checks, add)
+            mandatory = len(tokens)
         if target == "website":
             from .website import extend
             extend(tokens, checks, add)
@@ -187,7 +195,13 @@ def export(result, directory, name, canonical, source_hash):
     directory.mkdir(parents=True)
     tokens, target = result["tokens"], result["target"]
     h = lambda key: tokens[key]["hex"]
-    if target == "website":
+    if target == "kmindz":
+        from .kmindz import export_kmindz
+        export_kmindz(result, directory, name)
+    elif target in ("markdown", "codemirror5", "codemirror6"):
+        from .browser_themes import export_browser_theme
+        export_browser_theme(result, directory, name)
+    elif target == "website":
         from .website import export_website
         export_website(result, directory, name)
     elif target == "windows_terminal":
@@ -257,3 +271,5 @@ def export(result, directory, name, canonical, source_hash):
     (directory / "tokens.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     (directory / "validation.json").write_text(json.dumps({"checks": result["checks"],
         "contrast_failures": result["contrast_failures"], "native_visual_acceptance": "pending"}, indent=2) + "\n", encoding="utf-8")
+    from .output_names import named_exports
+    named_exports(result, directory, name)

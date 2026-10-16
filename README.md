@@ -1,17 +1,25 @@
+Atlas collection refresh (2026-10-16): all 19 `apt-*`/`dnf-*` runs, 608 canonical colors and 171 copied offline examples, including GFM and CodeMirror 5/6. [Collection and usage](docs/CHROMATIC-ATLAS.md).
+
+Chromatic Atlas pilot (2026-10-16): read-only palette matrix, OKLab color-space projections and provenance inspector over current pipeline snapshots. [Contract and local usage](docs/CHROMATIC-ATLAS.md).
+
+Markdown/editor extension (2026-10-16): fifteen defaults, including `markdown`, `codemirror5` and `codemirror6`, with real offline previews, scoped/native contracts and separate downstream acceptance. [Contract](docs/MARKDOWN-EDITORS.md).
+
 # Logos-And-Theming
 
-Typora refinement (2026-10-11): [fresh Black-Gold browser specimen](pilot/typora-markdown-2026-10-11/typora/examples.html), [Markdown stress document](pilot/typora-markdown-2026-10-11/typora/examples.md), and [native review steps](docs/TYPORA-REVIEW.md). Tables and common Markdown structures are styled using unchanged token colors; the current suite has 35 methods. Native Typora acceptance remains pending.
+New runs provide collectable `apt-<theme>-<target>[-<role>].<extension>` files, including `apt-ada-kmindz.json` and `apt-swift-markdown.css`. Native/legacy entry points remain available. See [output naming and central-folder collection](docs/OUTPUT-NAMING.md).
+
+Typora refinement (2026-10-11): [fresh Black-Gold browser specimen](pilot/typora-markdown-2026-10-11/typora/examples.html), [Markdown stress document](pilot/typora-markdown-2026-10-11/typora/examples.md), and [native review steps](docs/TYPORA-REVIEW.md). Tables and common Markdown structures are styled using unchanged token colors; the then-current suite had 35 methods. Native Typora acceptance remains pending.
 
 
 A local image-to-theme pipeline and related logo utilities. The engine creates a canonical palette of **32 observed colors**, maps those colors to semantic roles, then derives **dark-only** application tokens. Canonical colors, role assignments and target adaptations are separate artifacts; adaptation introduces no new hue families.
 
-The current local pilot supports eleven targets, including scoped website CSS and interactive specimens, editable PowerPoint samples, SVG diagram examples, syntax-highlighting previews, data-visualization styles, ICO/SVG conversion and a palette atlas. Generation does not install, activate or publish themes. SESM metadata editing is independently owned by [SESM-Metadata-Embedder](../SESM-Metadata-Embedder/README.md).
+The current local pilot supports fifteen targets, including scoped website CSS and interactive specimens, editable PowerPoint samples, SVG diagram examples, syntax-highlighting previews, data-visualization styles, ICO/SVG conversion and a palette atlas. Generation does not install, activate or publish themes. SESM metadata editing is independently owned by [SESM-Metadata-Embedder](../SESM-Metadata-Embedder/README.md).
 
 ## Start here
 
 - [Evaluator read map](PROJECT-READMAP.toml) and [starting context](docs/EVALUATOR-START.md): mandatory-first, 25-file discovery with current source, tests and evidence.
 
-- [Comprehensive output reference](docs/OUTPUT-REFERENCE.md): all eleven targets, exact artifacts, mappings, generation algorithms, dependencies and acceptance boundaries, plus converter/atlas utilities.
+- [Comprehensive output reference](docs/OUTPUT-REFERENCE.md): all fifteen targets, exact artifacts, mappings, generation algorithms, dependencies and acceptance boundaries, plus converter/atlas utilities.
 - [Testing reference and future coverage](docs/TESTING-REFERENCE.md): the test inventory, purpose and limits, browser/Agg/package/native checks, repeatable recipes and prioritized proposed tests.
 - [Website palette comparison](pilot/website-review-2026-10-09-v2/index.html): D, CoffeeScript and Assembly landing pages, components and findings. [Website contract and palette extension](docs/WEBSITE-TARGET.md).
 - [Published theme review hub](https://themes.aptlantis.net/): served directly from the read-only output mount; [hosting, updates and rollback](docs/HOSTING.md).
@@ -37,7 +45,7 @@ Setup installs the locked Python dependencies and the engine into `.venv`. It do
 
 **The default target set includes PowerPoint.** The pipeline bundles your 23-slide template and adapts its native Office color slots using Python's standard library. It emits a full editable `.pptx` preview and reusable `.potx` template with 14 layouts. Node.js and the Codex/Artifact Tool runtime are no longer required for generation. See [PowerPoint template setup](docs/POWERPOINT.md).
 
-Generate all eleven targets from the preserved local TIFF:
+Generate all fifteen targets from the preserved local TIFF:
 
 ```powershell
 .\Invoke-AptTheme.ps1 generate pilot\zig-dark\source\apt-zig-dark-16bit-logo.tif --output output\zig-dark-new --name 'Aptlantis Zig Dark'
@@ -61,7 +69,7 @@ After activating `.venv\Scripts\Activate.ps1`, the same commands are available t
 
 ## Implemented targets
 
-All eleven target IDs below are generated by default. Budgets cap **named tokens**, not unique colors or canonical palette entries. Reuse, aliases and counts below budget are intentional; impossible budgets are rejected instead of dropping mandatory tokens.
+All fifteen target IDs below are generated by default. Budgets cap **named tokens**, not unique colors or canonical palette entries. Reuse, aliases and counts below budget are intentional; impossible budgets are rejected instead of dropping mandatory tokens.
 
 | Target ID | Default budget | Generated output |
 | --- | ---: | --- |
@@ -76,8 +84,14 @@ All eleven target IDs below are generated by default. Budgets cap **named tokens
 | `syntax_highlighting` | 32 | Prism token CSS, bundled Prism 1.30.0 grammars, twelve offline language pages and source downloads |
 | `data_visualization` | 48 | Matplotlib style, sequential-scale JSON, shared illustrative data, 12-bar/6×24-line/8×12-heatmap SVG examples and value table |
 | `website` | 112 | Scoped dark browser CSS, landing/component pages, neutral review index; 89 required named tokens |
+| `kmindz` | 40 | Dark `KMINDS.json` package using the supplied schema, hierarchy preview, palette and swatch; 32 named tokens |
+| `markdown` | 40 | Scoped document CSS, conditional extras, sanitized GFM/Prism preview and Markdown source |
+| `codemirror5` | 40 | Named native CSS theme and three working offline editors |
+| `codemirror6` | 40 | Native ES-module theme/highlight extensions and three working offline editors |
 
 Windows Terminal schemes are added to the application's settings; SiYuan ZIPs and Typora CSS are placed in their respective theme folders by the operator. These actions are separate from generation. The PowerPoint XML supplies colors; the PPTX and POTX preserve the supplied template’s native masters, layouts, placeholders, tables and charts.
+
+Kmindz generation: `./Invoke-AptTheme.ps1 import assets/references/Aptlantis-Black-Gold/palette.toml --output pilot/kmindz-new --targets kmindz --strict`. See [Kmindz contract and review limits](docs/KMINDZ-TARGET.md).
 
 Operator setup and application limits are documented in [editor targets](docs/EDITOR-TARGETS.md), [PowerPoint](docs/POWERPOINT.md) and [visual targets](docs/VISUAL-TARGETS.md). SVG output uses editable presentation attributes; syntax highlighting uses Prism classes rather than a universal IDE format. Matplotlib is optional: generating its style does not require it. The optional renderer loads that style and produces separate PNG/SVG charts; the default authored SVG examples are not Matplotlib renders.
 
@@ -134,7 +148,7 @@ Run the focused pipeline/converter suite:
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-The current suite contains **35 methods** across pipeline, converter, syntax/chart, SVG and website tests. [The 2026-10-10 preflight record](migration/evaluator-preflight-2026-10-10.json) records fresh checks for this documentation preparation; browser, Agg, native applications and hosting were not rerun.
+The current suite contains **40 methods** across pipeline, converter, syntax/chart, SVG and website tests. [The 2026-10-10 preflight record](migration/evaluator-preflight-2026-10-10.json) records fresh checks for this documentation preparation; browser, Agg, native applications and hosting were not rerun.
 
 The dated SVG extension passed **29 focused tests** plus offline browser bounds, overlapping-label, gallery and download checks for six compositions. Its evidence is in [SVG quality acceptance](migration/svg-quality-acceptance-2026-10-09.json). The earlier syntax/chart quality suite passed **26 tests**, including ten-target exports, canonical preservation, deterministic regeneration, budgets, contrast, vendor integrity, chart values and converter safeguards. Twelve real Prism examples and three authored charts passed offline Chromium checks; Matplotlib 3.11.2/Agg rendered three PNG/SVG pairs with matching data. Wheel resources and isolated installed-wheel generation also passed. Earlier evidence: [syntax/chart quality acceptance](migration/visual-quality-acceptance-2026-10-09.json) and [visual-target acceptance](migration/visual-target-acceptance.json). PowerPoint opening/rendering evidence remains separate in [metadata-repair evidence](migration/powerpoint-metadata-repair.json). Native editor/SVG import, Prism host integration and interactive Matplotlib GUI behavior require separate acceptance. These quality passes did not install, activate, publish or regenerate hosted themes.
 

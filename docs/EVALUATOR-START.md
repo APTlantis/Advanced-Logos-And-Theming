@@ -1,12 +1,18 @@
+Current Atlas scope: all 19 apt/dnf runs, with offline example links. [Collection contract](CHROMATIC-ATLAS.md) and [acceptance](../migration/chromatic-atlas-collection-acceptance-2026-10-16.json). Earlier 13-theme records are historical.
+
+Atlas extension (2026-10-16): [contract](CHROMATIC-ATLAS.md), [local evidence](../migration/chromatic-atlas-acceptance-2026-10-16.json); separate read-only collection output, fifteen theme targets unchanged. Read-map mandatory/priority selection now occupies 23 of 25 files.
+
+Current extension: **2026-10-16**. [Markdown/editor contract](MARKDOWN-EDITORS.md), [evidence](../migration/browser-themes-acceptance-2026-10-16.json). Browser and installed-wheel checks are distinct from downstream acceptance. The original evaluator preflight below remains dated.
+
 # Evaluator starting context
 
 Source checked: **2026-10-10**. Canonical project name: **Logos-And-Theming**. Package version: **0.1.0**. Stage: **local-pilot**. Governed by CTS with WGS/PPS; SESM metadata embedding belongs to the independent sibling project.
 
 Begin with [PROJECT-READMAP.toml](../PROJECT-READMAP.toml). It follows the current canonical WGS/PPS form and supplies four mandatory records, fifteen priority records and six selected evidence files within the advisory 25-file budget. Mandatory records come first. Priority includes actual implementation, configuration and tests so documentation does not consume the entire inventory. Remaining source, test, utility, documentation and recovery roots are secondary. Exclusions avoid generated runs, dependency trees, archives and historical implementations; they are reading exclusions, not an assertion that those records are unnecessary for a deeper audit.
 
-The current implementation generates **eleven default targets**: Windows Terminal, SiYuan, Typora, PowerPoint, Alacritty, Notepad++, Sublime Text, SVG, Prism syntax highlighting, Matplotlib data visualization and scoped website CSS. Image generation selects 32 observed canonical colors; import preserves existing canonical RGB values and IDs. Semantic assignment and hue-preserving dark target adaptation remain separate. Every selected target emits its own named palette and swatch. ICO/SVG conversion and the atlas are independent utilities.
+The current implementation generates **fifteen default targets**: Windows Terminal, SiYuan, Typora, PowerPoint, Alacritty, Notepad++, Sublime Text, SVG, Prism syntax highlighting, Matplotlib data visualization scoped website CSS, Kmindz, portable Markdown and CodeMirror 5/6. Image generation selects 32 observed canonical colors; import preserves existing canonical RGB values and IDs. Semantic assignment and hue-preserving dark target adaptation remain separate. Every selected target emits its own named palette and swatch. ICO/SVG conversion and the atlas are independent utilities.
 
-[OUTPUT-REFERENCE.md](OUTPUT-REFERENCE.md) covers the architecture and native output contracts; [COMMAND-CONTRACT.md](COMMAND-CONTRACT.md) covers CLI behavior; [TESTING-REFERENCE.md](TESTING-REFERENCE.md) inventories **35 test methods** (17 pipeline, five converter, five syntax/chart, three SVG, two website and three Typora). [VALIDATION.md](VALIDATION.md) separates current checks from dated artifact evidence. Earlier seven/ten-target and 20/26/29/30-test records remain historical evidence, rather than the current inventory.
+[OUTPUT-REFERENCE.md](OUTPUT-REFERENCE.md) covers the architecture and native output contracts; [COMMAND-CONTRACT.md](COMMAND-CONTRACT.md) covers CLI behavior; [TESTING-REFERENCE.md](TESTING-REFERENCE.md) inventories **53 test methods** (17 pipeline, five converter, five syntax/chart, three SVG, two website and three Typora). [VALIDATION.md](VALIDATION.md) separates current checks from dated artifact evidence. Earlier seven/ten-target and 20/26/29/30-test records remain historical evidence, rather than the current inventory.
 
 The website target and related records were already uncommitted when this documentation preparation began. Evaluate the current working tree; a previous commit or a fresh remote clone may have a different target inventory. The preflight evidence records initial worktree status and source/document hashes. This preparation does not commit or publish those changes.
 
@@ -17,3 +23,5 @@ Use [the fresh preflight record](../migration/evaluator-preflight-2026-10-10.jso
 No project identity, ownership, lifecycle stage, parent registration or root relocation changed. The D-drive index and parent manifests already point to this project root; they need no update for this local read-map addition.
 
 Typora refinement (2026-10-11): `apt_theme/typora.py`, `tests/test_typora.py` and `docs/TYPORA-REVIEW.md` supply additional implementation and native review pointers. Evidence: `migration/typora-markdown-acceptance-2026-10-11.json`. Prior preflight records remain dated.
+Output naming (2026-10-16): [contract](OUTPUT-NAMING.md), shared `apt_theme/output_names.py` and `tests/test_output_names.py` add collectable files alongside native entry points. Existing Atlas snapshots and generated runs remain dated; they are not refreshed by this change.
+

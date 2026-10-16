@@ -1,3 +1,11 @@
+Atlas collection update (2026-10-16): the current snapshot has 19 runs and 608 canonical colors. The inspector links 171 offline examples, copied with dependencies and `examples-manifest.json` hashes. [Exact collection and contracts](CHROMATIC-ATLAS.md).
+
+Chromatic Atlas (2026-10-16) adds collection-level `index.html`, `styles.css`, `app.js`, `atlas.json`, `atlas-data.js`, `README.md` and an ownership marker through a separate `atlas` command. [Data, interaction and snapshot contract](CHROMATIC-ATLAS.md). The theme-target count stays fifteen.
+
+# Markdown and editor outputs — 2026-10-16
+
+The current set has fifteen defaults. `markdown`, `codemirror5` and `codemirror6` each use 39 named colors within a 40-color budget and emit palette/swatch artifacts. [Exact files, native interfaces, rendering and acceptance limits](MARKDOWN-EDITORS.md). Earlier dated tables retain their original inventory.
+
 # Pipeline outputs and exporter reference
 
 SVG gallery environment: the page, cards, text, links and focus outlines use fixed neutral colors independent of every theme. Palette-derived backgrounds remain inside the SVG compositions. Surrounding pages may use any background. Fresh preview: [neutral SVG gallery](../pilot/svg-neutral-gallery-2026-10-09/svg/examples.html). Earlier galleries remain historical previews.
@@ -20,7 +28,7 @@ Read alongside [commands](COMMAND-CONTRACT.md), [testing](TESTING-REFERENCE.md),
 
 The [website target reference](WEBSITE-TARGET.md) specifies native browser CSS, exact artifacts, 89 required tokens, integration markup and suitability limits. Its implementation is `apt_theme/website.py`; generation emits per-target palettes through the common exporter. The preserved legacy palette transformer is independently runnable and is not called by the current engine.
 
-`apt-theme generate` starts from an image; `apt-theme import` starts from a 32-entry palette. Both run the same semantic mapping, adaptation, export and reporting stages. All eleven IDs in [`DEFAULTS`](../apt_theme/targets.py) are selected by default. `--targets` accepts a comma-separated, unique subset of those exact IDs. Unsupported or duplicate IDs fail before export.
+`apt-theme generate` starts from an image; `apt-theme import` starts from a 32-entry palette. Both run the same semantic mapping, adaptation, export and reporting stages. All twelve IDs in [`DEFAULTS`](../apt_theme/targets.py) are selected by default. `--targets` accepts a comma-separated, unique subset of those exact IDs. Unsupported or duplicate IDs fail before export.
 
 Here `<slug>` means the supplied name, lowercased, with runs of non-ASCII-alphanumeric characters replaced by hyphens and leading/trailing hyphens removed. An empty result becomes `aptlantis-theme`. Without `--name`, the input filename stem supplies the name. Each target has its own directory under the chosen run directory.
 
@@ -37,6 +45,7 @@ Here `<slug>` means the supplied name, lowercased, with runs of non-ASCII-alphan
 | Offline Prism syntax examples | `syntax_highlighting` | 32 | 30 | CSS, twelve pages, sources and runtime |
 | Data visualization / Matplotlib | `data_visualization` | 48 | 37 | Style, scales, fixture, three authored SVG charts |
 | Full website / scoped browser CSS | `website` | 112 | 89 | `theme.css`, landing/component specimens and neutral review index |
+| Kmindz mind-map package | `kmindz` | 40 | 32 | `KMINDS.json`, authored dark preview, palette/swatch and audit JSON |
 
 Budgets cap **named tokens**, not unique RGB colors, application fields, file counts or canonical palette size. Aliases are expected; an image with narrow hues cannot supply conventional red/green/blue distinctions without breaking the image-color rule. Exporters do not pad unused budget with arbitrary tokens. The first four application targets are not the only targets selected by default.
 
@@ -299,3 +308,11 @@ To maintain an exporter, update its real native fields, token consumption/fallba
 Preserve source bytes, canonical 32 colors, provenance, dated pilots and recovery archives. Do not mutate historical receipts to make them describe the current generator. For reference/runtime corruption, restore packaged resources by recorded hashes and generate a fresh run. For bad semantic mapping, use an explicit override or revised mapping into another directory, then review warnings/aliases/contrast and test the affected host scenarios. For failed replacement, retain the previous run and investigate the recorded error. A successful overwrite is not a revision archive.
 
 Current contract authority is the source and active project/governance records. This document is a dated explanatory reference. The older Writerside handbook and overview deck remain dated snapshots; refreshing or publishing them is separate work. Parent registration is unchanged because project ownership, identity and discovery roots have not changed.
+
+## Kmindz package
+
+The twelfth target is `kmindz`, implemented in [`kmindz.py`](../apt_theme/kmindz.py). The supplied `kmind.theme-package` v1 structure is bundled as a reference template; exported identity and every color come from the current run. Only the dark variant is emitted. See [native structure, mappings, provenance and acceptance limits](KMINDZ-TARGET.md).
+# Collectable filenames (2026-10-16)
+
+New generation/import runs also expose every authored top-level target file through the `apt-<theme>-<target>[-<role>]` convention. The native filenames in the reference below remain available for compatibility. [Output naming](OUTPUT-NAMING.md) defines main files, supporting roles, hash manifests and dependency limits.
+

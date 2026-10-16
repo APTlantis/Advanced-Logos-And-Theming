@@ -27,3 +27,13 @@ background_lightness = 0.20
 # Set background_mode = "darkest" to explicitly request the old pipeline policy.
 
 # Optional: [overrides] warning = "color_07"
+
+[profiles.kmindz]
+budget = 40
+
+[profiles.markdown]
+budget = 40
+[profiles.codemirror5]
+budget = 40
+[profiles.codemirror6]
+budget = 40

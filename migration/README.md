@@ -1,3 +1,15 @@
+## Complete Atlas collection - 2026-10-16
+
+[Current acceptance](chromatic-atlas-collection-acceptance-2026-10-16.json) supersedes the initial 13-theme record for the current Atlas link. It covers all 19 supplied apt/dnf runs, 608 canonical colors, 171 copied offline examples and 53 passing tests. The original pilot is preserved at `pilot/chromatic-atlas-initial-2026-10-16`; source outputs are unchanged. The copied example manifest records every file hash. [Contract](../docs/CHROMATIC-ATLAS.md).
+
+## Chromatic Atlas local pilot - 2026-10-16
+
+[Acceptance](chromatic-atlas-acceptance-2026-10-16.json) records the 51-method suite, actual source/wheel browser checks, 234 source receipts and canonical preservation. Rebuild a separate snapshot with `apt-theme atlas output --output pilot/chromatic-atlas-new`; open its index.html directly. [Contract and limits](../docs/CHROMATIC-ATLAS.md). Existing palette runs, legacy atlas and hosted files are not replaced.
+
+## Markdown and CodeMirror extension - 2026-10-16
+
+[Acceptance](browser-themes-acceptance-2026-10-16.json) links the 44-test suite, source and installed-wheel browser evidence, wheel hash and preservation of 7,076 existing files. New pilots are under `pilot/markdown-editors-2026-10-16`; those ignored local outputs can be regenerated from preserved palettes with `--targets markdown,codemirror5,codemirror6`. Native contracts and rebuild/review instructions: [Markdown/editor reference](../docs/MARKDOWN-EDITORS.md). No original outputs, archives, public copies or downstream installations were changed.
+
 # Migration and recovery
 
 Evaluator documentation preparation, 2026-10-10: `evaluator-preflight-2026-10-10.json` records current source/document hashes, initial worktree status and bounded checks. Prior content of each edited documentation file is retained in `output/evaluator-preflight-recovery-2026-10-10/`, with before/after hashes in that record. The directory is local and Git-ignored. Restore only the named documentation files after reviewing subsequent edits; leave product source, existing runs and historical acceptance records intact. Newly added files are identified separately. Archives and original recovery evidence were not rewritten.
@@ -27,3 +39,5 @@ The operator approved Git LFS history conversion on 2026-10-08. `migration/archi
 Original local Git history is preserved in the verified, complete `output/git-recovery/before-lfs-2026-10-08.bundle` (intentionally outside tracked source). Use `git clone --branch Cobra PATH/TO/BUNDLE NEW-DIRECTORY` to recover the pre-conversion branch without overwriting this checkout. Keep this local bundle with your recovery backups; published commit IDs differ from the original history. Existing migration recovery archives and acceptance evidence remain unchanged.
 
 The 2026-10-09 PowerPoint template replacement preserves the supplied 23-slide/14-layout reference under `apt_theme/templates`, emits PPTX and POTX, and removes the generation dependency on Node/Codex. Current contract: `docs/POWERPOINT.md`; measured evidence: `migration/powerpoint-template-acceptance.json`. Earlier four-slide checks and hashes remain dated historical evidence. Restore the template by its recorded SHA-256; regenerate into a fresh run. Parent registration and root navigation need no change because identity, ownership and discovery paths are unchanged.
+Output naming (2026-10-16): [local acceptance](output-naming-acceptance-2026-10-16.json) and [naming contract](../docs/OUTPUT-NAMING.md). This additive exporter change leaves historical outputs and recovery archives untouched. Reverting the naming extension stops additional named copies; no historical migration is required. Native package entry points remain available.
+

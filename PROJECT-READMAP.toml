@@ -38,7 +38,7 @@ reason = "Discovery contract and bounded selection scope"
 [[priority]]
 path = "README.md"
 rank = 6
-reason = "Setup, eleven targets, operator commands and recovery"
+reason = "Setup, fifteen targets, operator commands and recovery"
 
 [[priority]]
 path = "docs/EVALUATOR-START.md"
@@ -73,7 +73,7 @@ reason = "Package version, runtime dependencies and bundled resources"
 [[priority]]
 path = "profiles.toml"
 rank = 13
-reason = "Extraction, semantics and eleven target budgets"
+reason = "Extraction, semantics and fifteen target budgets"
 
 [[priority]]
 path = "apt_theme/cli.py"
@@ -228,3 +228,79 @@ reason = "Native review steps and screen acceptance limits"
 [[secondary]]
 path = "migration/typora-markdown-acceptance-2026-10-11.json"
 reason = "Focused tests, browser, wheel and preservation evidence; native Typora pending"
+
+[[secondary]]
+path = "apt_theme/kmindz.py"
+reason = "Supplied Kmindz package contract, dark-only mapping and encoded preview"
+
+[[secondary]]
+path = "tests/test_kmindz.py"
+reason = "Native shape, palette preservation, determinism and actual selected-state contrast"
+
+[[secondary]]
+path = "docs/KMINDZ-TARGET.md"
+reason = "Kmindz output contract and native import/rendering limits"
+
+[[priority]]
+path = "apt_theme/browser_themes.py"
+rank = 20
+reason = "Portable Markdown and CodeMirror 5/6 native exporters and offline previews"
+
+[[priority]]
+path = "tests/test_browser_themes.py"
+rank = 21
+reason = "Determinism, canonical preservation, contracts, scope and vendor integrity"
+
+[[secondary]]
+path = "docs/MARKDOWN-EDITORS.md"
+reason = "Rendering, sanitizer, integration and acceptance contracts"
+
+[[secondary]]
+path = "tools/browser-themes/"
+reason = "Pinned offline asset package lock and reproducible build script; skip node_modules"
+
+[[evidence]]
+path = "migration/browser-themes-acceptance-2026-10-16.json"
+reason = "Fresh browser, installed-wheel and preservation evidence; no downstream acceptance"
+
+[[exclude]]
+path = "tools/browser-themes/node_modules/"
+reason = "Development-time installed dependencies; inspect the package lock instead"
+
+[[priority]]
+path = "apt_theme/atlas.py"
+rank = 22
+reason = "Read-only collection snapshot, normalized color/provenance contract and atlas CLI"
+
+[[priority]]
+path = "tests/test_atlas.py"
+rank = 23
+reason = "Canonical preservation, deterministic snapshots, provenance and output safeguards"
+
+[[secondary]]
+path = "apt_theme/atlas_assets/"
+reason = "Packaged offline matrix, color-space projections and provenance inspector"
+
+[[secondary]]
+path = "docs/CHROMATIC-ATLAS.md"
+reason = "Collection command, interaction and evidence contracts"
+
+[[evidence]]
+path = "migration/chromatic-atlas-acceptance-2026-10-16.json"
+reason = "Local pilot source, browser, package and preservation evidence"
+
+[[evidence]]
+path = "migration/chromatic-atlas-collection-acceptance-2026-10-16.json"
+reason = "Current 19-run collection, copied offline examples, source/wheel browser checks and preservation"
+[[secondary]]
+path = "docs/OUTPUT-NAMING.md"
+reason = "Named export convention, compatibility, manifests and central-folder collection"
+
+[[secondary]]
+path = "apt_theme/output_names.py"
+reason = "Shared collectable filenames and byte-identical export receipts"
+
+[[secondary]]
+path = "tests/test_output_names.py"
+reason = "Cross-theme flat collection, native archive preservation and collision rejection"
+

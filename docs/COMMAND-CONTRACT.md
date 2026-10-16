@@ -1,3 +1,7 @@
+Atlas command (2026-10-16): `apt-theme atlas COLLECTION --output DIRECTORY [--include PATTERN ...] [--overwrite] [--json]` builds a read-only offline collection snapshot. Default inclusion is immediate `apt-*` and `dnf-*` children. JSON uses the existing CTS envelope, progress remains on stderr, errors return 1 and a completed snapshot returns 0. Warnings identify missing optional records. [Contract](CHROMATIC-ATLAS.md). Existing generate/import behavior and fifteen default targets remain unchanged.
+
+Current targets (2026-10-16): fifteen defaults. Added `markdown,codemirror5,codemirror6`, each independently selectable using `--targets`; existing target identifiers, streams, exit codes and overwrite safeguards are unchanged. See [native/browser contracts](MARKDOWN-EDITORS.md).
+
 # apt-theme command contract
 
 Version: 0.1.0. Input: one image (`generate`) or 32-color TOML (`import`). Output: explicitly named directory.

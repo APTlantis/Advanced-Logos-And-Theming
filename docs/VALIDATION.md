@@ -1,3 +1,19 @@
+## Complete Atlas collection - 2026-10-16
+
+[Current acceptance](../migration/chromatic-atlas-collection-acceptance-2026-10-16.json): 19 runs, 608 canonical colors, 10,583 exported tokens, 342 data source receipts and 171 copied offline examples. Copied examples preserve 5,548 local dependency files. The original 13-theme pilot and its dated evidence are preserved separately. No source outputs are regenerated.
+
+## Chromatic Atlas local pilot - 2026-10-16
+
+[Acceptance evidence](../migration/chromatic-atlas-acceptance-2026-10-16.json) records source receipts, the 51-method suite, actual browser interactions and installed-wheel offline generation. The local snapshot has 13 palettes, 416 canonical colors and 7,241 exported tokens. No source palettes, existing outputs or public assets were regenerated. This is a read-only local exploration pilot, with no native application acceptance or publication claim.
+
+## Markdown and CodeMirror extension — 2026-10-16
+
+[Acceptance record](../migration/browser-themes-acceptance-2026-10-16.json) records the current 44-method suite, eight browser scenarios across Black-Gold/Ada, the installed-wheel offline generation check and preservation results. Both pilots have zero declared contrast failures. [Contract](MARKDOWN-EDITORS.md). Browser checks cover actual parsing and interactive editor instances, not downstream application acceptance. Existing public outputs remain unchanged; no installation, activation or publication occurred.
+
+## Kmindz extension — 2026-10-14
+
+The 40-method suite passed; the BlackGold pilot preserved canonical IDs/colors and recorded zero declared contrast failures. Wheel build, bundled-template byte checks, and isolated wheel resource loading passed. Original source hashes match their before-run receipt; existing hosted runs were not regenerated. See [acceptance evidence](../migration/kmindz-acceptance-2026-10-14.json) and [target contract](KMINDZ-TARGET.md). Native import/rendering, dark-only import acceptance, timestamp handling, installation, and publication remain pending or not performed.
+
 # Validation and evidence limits
 
 ## 2026-10-11 — Typora Markdown
@@ -50,3 +66,7 @@ The separate SESM suite covers preview, config precedence, schema errors, preser
 The later PowerPoint sample-deck extension is recorded separately in `migration/powerpoint-sample-acceptance.json`. Tests compare embedded theme values against the standalone XML, check four slides, native table and chart objects, workbook cells, scheme references and deterministic deck bytes. The skill's package/layout/chart-workbook/font validators and Artifact Tool import/render review are separate from opening and editing the deck in native PowerPoint, which remains pending. Historical migration evidence is preserved.
 
 The 2026-10-09 PowerPoint template replacement preserves the supplied 23-slide/14-layout reference under `apt_theme/templates`, emits PPTX and POTX, and removes the generation dependency on Node/Codex. Current contract: `docs/POWERPOINT.md`; measured evidence: `migration/powerpoint-template-acceptance.json`. Earlier four-slide checks and hashes remain dated historical evidence. Restore the template by its recorded SHA-256; regenerate into a fresh run. Parent registration and root navigation need no change because identity, ownership and discovery paths are unchanged.
+## Output naming - 2026-10-16
+
+[Acceptance record](../migration/output-naming-acceptance-2026-10-16.json): 55 tests passed, including two-theme/fifteen-target flat-name uniqueness, byte/hash equality, collision rejection and native SiYuan ZIP entry preservation. [Fresh Ada sample](../pilot/output-naming-2026-10-16/ada/review.html) generated all fifteen targets with zero declared contrast failures. Initial sandbox runs were blocked by Windows path-resolution permissions; the passing suite ran outside the sandbox using workspace temporary files. Native applications and browser rendering were not rerun. Existing generated/public runs and recovery archives were not modified.
+

@@ -64,6 +64,12 @@ def review(directory, name, colors, candidates, roles, notices, results, diagnos
         for label, filename in result.get("palette_artifacts", {}).items():
             path = html.escape(result["target"] + "/" + filename, quote=True)
             pieces.append(f'<p><a href="{path}" download>Download target {label}</a></p>')
+        named = result.get("named_exports", {})
+        if named:
+            links = "".join('<li><a download href="' + html.escape(result["target"] + "/" + item["file"], quote=True) + '">' + html.escape(item["file"]) + '</a></li>' for item in named["files"])
+            pieces.append('<details><summary>Named files for collection</summary><ul>' + links + '</ul></details>')
+        if result["target"] == "kmindz":
+            pieces.append('<p><a href="kmindz/KMINDS.json" download>Download Kmindz package</a> · <a href="kmindz/preview.svg">Authored dark hierarchy preview</a></p>')
         if "examples" in result:
             pieces.append('<p><a href="' + result['target'] + '/examples.html">Open visual examples</a></p>')
         style = f'background:{t["background"]["hex"]};color:{t["foreground"]["hex"]};padding:24px;border-radius:8px'
@@ -91,6 +97,18 @@ def review(directory, name, colors, candidates, roles, notices, results, diagnos
                    table([{**c, "ratio": round(c["ratio"], 3)} for c in result["checks"]]),
                    "<pre>" + html.escape(json.dumps({"origins": {k: c["origin"] for k, c in t.items()},
                         "aliases": result["aliases"], "omitted_canonical": result["omitted_canonical"]}, indent=2)) + "</pre></details>"]
+    browser_targets = [r for r in results if r["target"] in ("markdown", "codemirror5", "codemirror6")]
+    if browser_targets:
+        from .browser_themes import page
+        sections = []
+        for result in browser_targets:
+            target = result["target"]
+            files = sorted(p.name for p in (directory / target).iterdir() if p.is_file())
+            links = "".join('<li><a href="' + html.escape(target + '/' + filename, quote=True) + '">' + html.escape(filename) + '</a></li>' for filename in files)
+            sections.append('<section><h2>' + target + '</h2><ul>' + links + '</ul><a href="' + target + '/vendor/browser-themes/manifest.json">Pinned runtime hashes and licenses</a></section>')
+        body = '<h1>' + html.escape(name) + ' / Markdown and editor review</h1><p>Serve this run through a loopback HTTP server for ES-module previews. All runtime assets are local. Downstream application acceptance remains pending.</p><a href="review.html">Full theme report</a>' + ''.join(sections)
+        (directory / "markdown-editors.html").write_text(page(name + " Markdown and editor review", body), encoding="utf-8")
+        pieces.insert(1, '<p><a href="markdown-editors.html">Markdown and editor review</a></p>')
     document = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
 <title>Theme review</title><style>
 body{background:#101820;color:#e8edf3;font:16px/1.5 system-ui;margin:0 auto;padding:32px;max-width:1200px}

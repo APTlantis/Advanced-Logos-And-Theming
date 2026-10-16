@@ -3,7 +3,7 @@ schema = "APTlantis Entity Manifest"
 schema_version = "2.4"
 manifest_type = "project"
 canonical_name = "Logos-And-Theming.manifest.toml"
-last_updated = "2026-10-11"
+last_updated = "2026-10-16"
 maintainer = "Herb"
 
 [entity]
@@ -30,7 +30,7 @@ inherits_from = "D:/CTS/CTS.manifest.toml"
 [lifecycle]
 state = "active"
 created = "2026-10-08"
-last_updated = "2026-10-11"
+last_updated = "2026-10-16"
 last_reviewed = "2026-10-10"
 maintainer = "Herb"
 
@@ -38,6 +38,9 @@ maintainer = "Herb"
 root = "D:\\CTS\\Logos-And-Theming"
 
 [documentation]
+output_naming_reference = "docs/OUTPUT-NAMING.md"
+chromatic_atlas_reference = "docs/CHROMATIC-ATLAS.md"
+markdown_editors_reference = "docs/MARKDOWN-EDITORS.md"
 project_readmap = "PROJECT-READMAP.toml"
 evaluator_start = "docs/EVALUATOR-START.md"
 project_proposal = "Project-Proposal.md"
@@ -47,6 +50,7 @@ overview_deck = "docs/presentations/Logos-And-Theming-Overview.pptx"
 documentation_suite_plan = "docs/documentation-suite/PLAN.md"
 hosting_guide = "docs/HOSTING.md"
 typora_review = "docs/TYPORA-REVIEW.md"
+kmindz_reference = "docs/KMINDZ-TARGET.md"
 output_reference = "docs/OUTPUT-REFERENCE.md"
 testing_reference = "docs/TESTING-REFERENCE.md"
 
@@ -56,6 +60,10 @@ related_projects = ["SESM-Metadata-Embedder"]
 child_projects = []
 
 [verification]
+output_naming_evidence = "migration/output-naming-acceptance-2026-10-16.json"
+chromatic_atlas_evidence = "migration/chromatic-atlas-collection-acceptance-2026-10-16.json"
+browser_themes_evidence = "migration/browser-themes-acceptance-2026-10-16.json"
+kmindz_evidence = "migration/kmindz-acceptance-2026-10-14.json"
 typora_markdown_evidence = "migration/typora-markdown-acceptance-2026-10-11.json"
 evaluator_preflight_evidence = "migration/evaluator-preflight-2026-10-10.json"
 tests_verified = true

@@ -84,6 +84,7 @@ def build(args):
                source_dir / source.name if args.command == "generate" else None, comparison)
         failures = sum(r["contrast_failures"] for r in results)
         run = {"schema": "aptlantis.theme-run.v1", "name": name, "variant": "dark", "source_sha256": provenance["sha256"],
+               "named_export_manifests": {r["target"]: r["target"] + "/" + r["named_exports"]["manifest"] for r in results},
                "targets": targets, "contrast_failures": failures, "semantic_findings": notices,
                "native_application_acceptance": "pending", "installation": "not performed"}
         write_json(stage / "run.json", run)
@@ -116,8 +117,12 @@ def main(argv=None):
         p.add_argument("--overwrite", action="store_true")
         p.add_argument("--strict", action="store_true")
         p.add_argument("--json", action="store_true", help="machine-readable result on stdout")
+    from . import atlas
+    atlas.configure(commands.add_parser("atlas", help="read-only palette collection explorer"))
     args = parser.parse_args(argv)
     try:
+        if args.command == "atlas":
+            return atlas.run(args)
         print("Generating image-derived dark themes...", file=sys.stderr)
         result = build(args)
         failed = args.strict and result["contrast_failures"]

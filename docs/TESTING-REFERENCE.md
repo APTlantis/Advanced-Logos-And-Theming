@@ -1,3 +1,21 @@
+## Complete Atlas collection - 2026-10-16
+
+Current suite: 53 methods. Two added tests cover separate apt/dnf identities, bounded default selection, portable example copies and source hashes. The browser checker verifies all 19 exact run names and opens copied GFM/CodeMirror 5/6 examples with network requests restricted to loopback. [Current evidence](../migration/chromatic-atlas-collection-acceptance-2026-10-16.json). Earlier 51-method / 13-theme records remain historical.
+
+# Chromatic Atlas checks - 2026-10-16
+
+The suite now contains 51 methods, including seven in `tests/test_atlas.py`. `tools/check_atlas.cjs RUN PLAYWRIGHT_MODULE CHROMIUM_EXECUTABLE` verifies real atlas interactions, projections, clipboard/collection export, responsive layouts and direct file opening. [Contract and limitations](CHROMATIC-ATLAS.md); [evidence](../migration/chromatic-atlas-acceptance-2026-10-16.json). Earlier dated inventories remain historical.
+
+# Markdown and CodeMirror checks — 2026-10-16
+
+The current suite contains 44 methods. Four methods in `tests/test_browser_themes.py` cover deterministic exports and palette/budget preservation, scoped native interfaces and conditional coverage, explicit target selection and artifact navigation, and vendor integrity with failure on tampering. Existing integration tests exercise all fifteen defaults. The 40-method Kmindz and older inventories below are historical.
+
+`tools/check_browser_themes.cjs` checks two palettes, real GFM parsing/sanitization/Prism, 1440/390-pixel Markdown layouts and computed text contrast, plus both editor versions with typing, selection, search, completion, brackets and isolation. The wheel check blocks network and child processes during generation from installed resources. [Contract and recipes](MARKDOWN-EDITORS.md); [dated evidence](../migration/browser-themes-acceptance-2026-10-16.json). Downstream/native integration acceptance remains pending.
+
+# Current Kmindz extension — 2026-10-14
+
+The focused suite now has 40 methods. Five new Kmindz methods validate supplied package structure and dynamic identity, token-only colors and encoded preview, determinism/canonical preservation/budget guard, actual node text in normal/selected states, and native files plus common palette artifacts. The existing native-output integration test now recognizes the JSON contract. Run `.venv/Scripts/python.exe -m unittest discover -s tests -v`. Native Kmindz import/rendering remains pending; dated inventories below retain their original scope.
+
 # Testing, validation and future coverage
 
 ## Typora extension — 2026-10-11
@@ -334,3 +352,5 @@ For each fresh verification, record:
 Keep new evidence beside a new dated pilot or in a new dated migration receipt; do not rewrite historical acceptance. If a renderer modifies the current run, take its final hash inventory after rendering, and keep generator-only and renderer-added artifacts identifiable. Record deterministic generator hashes separately from screenshot/render bytes that can vary with renderer metadata/fonts.
 
 This documentation does not perform native installation, theme activation, hosted regeneration, publication, archive retirement or a Writerside refresh. Parent discovery records remain unchanged because ownership, identity and roots are unchanged. Update this reference when methods/tools/contracts change, and keep [VALIDATION.md](VALIDATION.md) as the concise result/evidence entry point.
+Output naming extension (2026-10-16): the current suite has 55 methods. `tests/test_output_names.py` adds cross-theme/target filename uniqueness, byte/hash equality, SiYuan archive member preservation and pre-copy collision rejection. [Recorded run](../migration/output-naming-acceptance-2026-10-16.json). Earlier inventories below are dated.
+

@@ -1,3 +1,23 @@
+## 2026-10-16 - Collectable output names
+
+All fifteen targets now emit `apt-<theme>-<target>[-<role>]` copies of authored top-level artifacts, with SHA-256 manifests indexed by the run and linked from review pages. Existing/native entry points, archive member names and previous outputs are preserved. See docs/OUTPUT-NAMING.md.
+
+## 2026-10-16 - Complete Atlas theme collection
+
+Expanded default collection discovery to apt-* and dnf-* (19 runs), retained physical names as distinct identities, and added an Examples inspector tab with 171 copied offline previews and hashed dependencies. Preserved the initial pilot and source outputs.
+
+## 2026-10-16 - Chromatic Atlas local pilot
+
+Added a separate `atlas` collection command, deterministic hashed snapshots, palette matrix, two color-space projections, provenance inspector and temporary collection copy/export. All browser assets are packaged locally. Existing legacy atlas, canonical palettes, theme targets and public output remain separate.
+
+## 2026-10-16 — Markdown and CodeMirror targets
+
+Added three default targets: scoped portable Markdown, native CodeMirror 5 CSS and native CodeMirror 6 ES modules. Includes pinned licensed offline runtimes, real sanitized GFM/Prism and editor previews, conditional extras coverage, palette provenance and local browser/package evidence. Existing Typora, SiYuan and Prism outputs remain intact. Downstream integration, installation and publication remain separate.
+
+## 2026-10-14 — Kmindz output
+
+Added the `kmindz` default target and dark `KMINDS.json` package export using the operator-supplied v1 structure. Includes palette provenance, hierarchy preview, 32 required named tokens within a 40-token budget, and focused contract/contrast/determinism tests. Native import/rendering remains pending; existing generated/public themes are preserved.
+
 # Changelog
 
 ## 2026-10-11 — Typora Markdown refinement

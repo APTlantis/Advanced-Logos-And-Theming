@@ -8,3 +8,7 @@ Inherit D:/AGENTS.md and D:/CTS/AGENTS.md. Read PROJECT-READMAP.toml, Logos-And-
 - Run focused pipeline and converter tests after changes. Record native application import/rendering separately from static checks and report previews.
 - Do not install, activate, publish themes or change public asset copies without user authorization.
 - New exporters require an actual native output contract and documented application acceptance limits.
+
+Markdown/CodeMirror contracts: docs/MARKDOWN-EDITORS.md. Preserve scoped `.markdown-body`, native CM5 CSS and CM6 ES-module interfaces. Rebuild pinned offline assets only through tools/browser-themes; Python generation requires no Node/network. Keep optional HTML contracts distinct from parser support.
+
+Chromatic Atlas: docs/CHROMATIC-ATLAS.md. The `atlas` subcommand snapshots explicitly selected runs without regenerating themes. Preserve canonical identity, label projection limits and distinguish recorded token lineage from native property usage. Keep browser selections read-only and separate.

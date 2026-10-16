@@ -225,6 +225,17 @@ class PipelineTests(unittest.TestCase):
                     self.assertEqual(lightness, sorted(lightness))
                     self.assertTrue(all(result["tokens"][f"sequential_{i}"]["origin"]["source"] == roles["primary"] for i in range(9)))
                     self.assertIn("axes.prop_cycle: cycler(", next(destination.glob("*.mplstyle")).read_text())
+            elif target in ("markdown", "codemirror5", "codemirror6"):
+                self.assertTrue((destination / "examples.html").is_file())
+                self.assertTrue((destination / "dependencies.json").is_file())
+                if target == "codemirror6":
+                    self.assertIn("export const extension=", (destination / "theme.mjs").read_text())
+            elif target == "kmindz":
+                native = json.loads((destination / "KMINDS.json").read_text())
+                self.assertEqual(native["kind"], "kmind.theme-package")
+                self.assertEqual(set(native["theme"]["variants"]), {"dark"})
+                self.assertEqual(native["theme"]["variants"]["dark"]["tokens"]["paint"]["bg"], result["tokens"]["background"]["hex"])
+                self.assertTrue((destination / "preview.svg").is_file())
             else:
                 css = next(destination.glob("*.css")).read_text()
                 declared = set(re.findall(r"(--[\w-]+)\s*:", css))

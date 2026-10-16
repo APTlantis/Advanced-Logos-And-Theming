@@ -1,0 +1,367 @@
+source,target
+1document1.txt2document2.txt3new_name.md,../privacy-policy.html
+1document1.txt2document2.txt3new_name.md,../terms-conditions.html
+1document1.txt2document2.txt3new_name.md,../contact.html
+1file1.txt2file2.txt3old_name.md,../privacy-policy.html
+1file1.txt2file2.txt3old_name.md,../terms-conditions.html
+1file1.txt2file2.txt3old_name.md,../contact.html
+aapt dump xmltree [app.apk] AndroidManifest.md,../privacy-policy.html
+aapt dump xmltree [app.apk] AndroidManifest.md,../terms-conditions.html
+aapt dump xmltree [app.apk] AndroidManifest.md,../contact.html
+arecord -d 5 test-mic.wav && aplay test-mic.wav && rm test-mic.md,../privacy-policy.html
+arecord -d 5 test-mic.wav && aplay test-mic.wav && rm test-mic.md,../terms-conditions.html
+arecord -d 5 test-mic.wav && aplay test-mic.wav && rm test-mic.md,../contact.html
+arrow-tools.md,../privacy-policy.html
+arrow-tools.md,../terms-conditions.html
+arrow-tools.md,../contact.html
+augtool.md,../privacy-policy.html
+augtool.md,../terms-conditions.html
+augtool.md,../contact.html
+aws-shell.md,../privacy-policy.html
+aws-shell.md,../terms-conditions.html
+aws-shell.md,../contact.html
+bore local [local_port] --to bore.md,../privacy-policy.html
+bore local [local_port] --to bore.md,../terms-conditions.html
+bore local [local_port] --to bore.md,../contact.html
+cardiag clean clip.md,../privacy-policy.html
+cardiag clean clip.md,../terms-conditions.html
+cardiag clean clip.md,../contact.html
+cardiag diagnose clip.md,../privacy-policy.html
+cardiag diagnose clip.md,../terms-conditions.html
+cardiag diagnose clip.md,../contact.html
+cardiag triage clip.md,../privacy-policy.html
+cardiag triage clip.md,../terms-conditions.html
+cardiag triage clip.md,../contact.html
+cargo-license.md,../privacy-policy.html
+cargo-license.md,../terms-conditions.html
+cargo-license.md,../contact.html
+cliclick.md,../privacy-policy.html
+cliclick.md,../terms-conditions.html
+cliclick.md,../contact.html
+cloud-hypervisor.md,../privacy-policy.html
+cloud-hypervisor.md,../terms-conditions.html
+cloud-hypervisor.md,../contact.html
+cProfile-2.md,../privacy-policy.html
+cProfile-2.md,../terms-conditions.html
+cProfile-2.md,../contact.html
+cut -f 2-5 data.md,../privacy-policy.html
+cut -f 2-5 data.md,../terms-conditions.html
+cut -f 2-5 data.md,../contact.html
+dep status -dot _ dot -Tpng -o deps.md,../privacy-policy.html
+dep status -dot _ dot -Tpng -o deps.md,../terms-conditions.html
+dep status -dot _ dot -Tpng -o deps.md,../contact.html
+dfu-util.md,../privacy-policy.html
+dfu-util.md,../terms-conditions.html
+dfu-util.md,../contact.html
+docbook.md,../privacy-policy.html
+docbook.md,../terms-conditions.html
+docbook.md,../contact.html
+dot graph.dot _ edgepaint _ dot -Tpng -o out.md,../privacy-policy.html
+dot graph.dot _ edgepaint _ dot -Tpng -o out.md,../terms-conditions.html
+dot graph.dot _ edgepaint _ dot -Tpng -o out.md,../contact.html
+file1.txtfile2.txtanother1.jpganother2.jpganother3.md,../privacy-policy.html
+file1.txtfile2.txtanother1.jpganother2.jpganother3.md,../terms-conditions.html
+file1.txtfile2.txtanother1.jpganother2.jpganother3.md,../contact.html
+firecracker.md,../privacy-policy.html
+firecracker.md,../terms-conditions.html
+firecracker.md,../contact.html
+gcc -g -o program program.md,../privacy-policy.html
+gcc -g -o program program.md,../terms-conditions.html
+gcc -g -o program program.md,../contact.html
+ge.md,../privacy-policy.html
+ge.md,../terms-conditions.html
+ge.md,../contact.html
+gr.md,../privacy-policy.html
+gr.md,../terms-conditions.html
+gr.md,../contact.html
+gs -dQUIET -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=merged.pdf file1.pdf file2.md,../privacy-policy.html
+gs -dQUIET -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=merged.pdf file1.pdf file2.md,../terms-conditions.html
+gs -dQUIET -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=merged.pdf file1.pdf file2.md,../contact.html
+gs -dQUIET -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=output.pdf input.md,../privacy-policy.html
+gs -dQUIET -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=output.pdf input.md,../terms-conditions.html
+gs -dQUIET -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=output.pdf input.md,../contact.html
+gs -dQUIET -dBATCH file.md,../privacy-policy.html
+gs -dQUIET -dBATCH file.md,../terms-conditions.html
+gs -dQUIET -dBATCH file.md,../contact.html
+handlr get .md,../privacy-policy.html
+handlr get .md,../terms-conditions.html
+handlr get .md,../contact.html
+hc.md,../privacy-policy.html
+hc.md,../terms-conditions.html
+hc.md,../contact.html
+hclfmt.md,../privacy-policy.html
+hclfmt.md,../terms-conditions.html
+hclfmt.md,../contact.html
+http_load -parallel 5 -fetches 1000 urls.md,../privacy-policy.html
+http_load -parallel 5 -fetches 1000 urls.md,../terms-conditions.html
+http_load -parallel 5 -fetches 1000 urls.md,../contact.html
+http_load -parallel 5 -seconds 60 urls.md,../privacy-policy.html
+http_load -parallel 5 -seconds 60 urls.md,../terms-conditions.html
+http_load -parallel 5 -seconds 60 urls.md,../contact.html
+http_load -rate 20 -fetches 1000 urls.md,../privacy-policy.html
+http_load -rate 20 -fetches 1000 urls.md,../terms-conditions.html
+http_load -rate 20 -fetches 1000 urls.md,../contact.html
+http_load -rate 20 -seconds 60 urls.md,../privacy-policy.html
+http_load -rate 20 -seconds 60 urls.md,../terms-conditions.html
+http_load -rate 20 -seconds 60 urls.md,../contact.html
+hwinfo --all --log hardware.md,../privacy-policy.html
+hwinfo --all --log hardware.md,../terms-conditions.html
+hwinfo --all --log hardware.md,../contact.html
+iam-policy-json-to-terraform.md,../privacy-policy.html
+iam-policy-json-to-terraform.md,../terms-conditions.html
+iam-policy-json-to-terraform.md,../contact.html
+import -crop [640x480+100+100] screenshot.md,../privacy-policy.html
+import -crop [640x480+100+100] screenshot.md,../terms-conditions.html
+import -crop [640x480+100+100] screenshot.md,../contact.html
+import -pause [5] screenshot.md,../privacy-policy.html
+import -pause [5] screenshot.md,../terms-conditions.html
+import -pause [5] screenshot.md,../contact.html
+import -window [window_id] screenshot.md,../privacy-policy.html
+import -window [window_id] screenshot.md,../terms-conditions.html
+import -window [window_id] screenshot.md,../contact.html
+import -window root screenshot.md,../privacy-policy.html
+import -window root screenshot.md,../terms-conditions.html
+import -window root screenshot.md,../contact.html
+import screenshot.md,../privacy-policy.html
+import screenshot.md,../terms-conditions.html
+import screenshot.md,../contact.html
+import.im6 -pause [3] screenshot.md,../privacy-policy.html
+import.im6 -pause [3] screenshot.md,../terms-conditions.html
+import.im6 -pause [3] screenshot.md,../contact.html
+import.im6 -window root screen.md,../privacy-policy.html
+import.im6 -window root screen.md,../terms-conditions.html
+import.im6 -window root screen.md,../contact.html
+import.im6 screenshot.md,../privacy-policy.html
+import.im6 screenshot.md,../terms-conditions.html
+import.im6 screenshot.md,../contact.html
+import.im6 window.md,../privacy-policy.html
+import.im6 window.md,../terms-conditions.html
+import.im6 window.md,../contact.html
+ios-deploy.md,../privacy-policy.html
+ios-deploy.md,../terms-conditions.html
+ios-deploy.md,../contact.html
+jhead -dsft image.md,../privacy-policy.html
+jhead -dsft image.md,../terms-conditions.html
+jhead -dsft image.md,../contact.html
+jhead -dt image.md,../privacy-policy.html
+jhead -dt image.md,../terms-conditions.html
+jhead -dt image.md,../contact.html
+jhead -ft image.md,../privacy-policy.html
+jhead -ft image.md,../terms-conditions.html
+jhead -ft image.md,../contact.html
+jhead -purejpg image.md,../privacy-policy.html
+jhead -purejpg image.md,../terms-conditions.html
+jhead -purejpg image.md,../contact.html
+jhead image.md,../privacy-policy.html
+jhead image.md,../terms-conditions.html
+jhead image.md,../contact.html
+jinja2.md,../privacy-policy.html
+jinja2.md,../terms-conditions.html
+jinja2.md,../contact.html
+kafka-console-consumer.md,../privacy-policy.html
+kafka-console-consumer.md,../terms-conditions.html
+kafka-console-consumer.md,../contact.html
+kafka-console-producer.md,../privacy-policy.html
+kafka-console-producer.md,../terms-conditions.html
+kafka-console-producer.md,../contact.html
+kpsewhich.md,../privacy-policy.html
+kpsewhich.md,../terms-conditions.html
+kpsewhich.md,../contact.html
+localstack.md,../privacy-policy.html
+localstack.md,../terms-conditions.html
+localstack.md,../contact.html
+magic-wormhole.md,../privacy-policy.html
+magic-wormhole.md,../terms-conditions.html
+magic-wormhole.md,../contact.html
+matplotlib.md,../privacy-policy.html
+matplotlib.md,../terms-conditions.html
+matplotlib.md,../contact.html
+memoize.md,../privacy-policy.html
+memoize.md,../terms-conditions.html
+memoize.md,../contact.html
+mlx.md,../privacy-policy.html
+mlx.md,../terms-conditions.html
+mlx.md,../contact.html
+mtp-detect.md,../privacy-policy.html
+mtp-detect.md,../terms-conditions.html
+mtp-detect.md,../contact.html
+NetworkManager-3.md,../privacy-policy.html
+NetworkManager-3.md,../terms-conditions.html
+NetworkManager-3.md,../contact.html
+NetworkManager-4.md,../privacy-policy.html
+NetworkManager-4.md,../terms-conditions.html
+NetworkManager-4.md,../contact.html
+oil.md,../privacy-policy.html
+oil.md,../terms-conditions.html
+oil.md,../contact.html
+p.md,../privacy-policy.html
+p.md,../terms-conditions.html
+p.md,../contact.html
+pdfattach -replace input.pdf file_to_attach output.md,../privacy-policy.html
+pdfattach -replace input.pdf file_to_attach output.md,../terms-conditions.html
+pdfattach -replace input.pdf file_to_attach output.md,../contact.html
+pdfattach input.pdf file_to_attach output.md,../privacy-policy.html
+pdfattach input.pdf file_to_attach output.md,../terms-conditions.html
+pdfattach input.pdf file_to_attach output.md,../contact.html
+pdfdetach -list -enc UTF-8 input.md,../privacy-policy.html
+pdfdetach -list -enc UTF-8 input.md,../terms-conditions.html
+pdfdetach -list -enc UTF-8 input.md,../contact.html
+pdfdetach -list input.md,../privacy-policy.html
+pdfdetach -list input.md,../terms-conditions.html
+pdfdetach -list input.md,../contact.html
+pdfdetach -save 1 -o output.txt input.md,../privacy-policy.html
+pdfdetach -save 1 -o output.txt input.md,../terms-conditions.html
+pdfdetach -save 1 -o output.txt input.md,../contact.html
+pdfdetach -save 1 -upw password input.md,../privacy-policy.html
+pdfdetach -save 1 -upw password input.md,../terms-conditions.html
+pdfdetach -save 1 -upw password input.md,../contact.html
+pdfdetach -save 1 input.md,../privacy-policy.html
+pdfdetach -save 1 input.md,../terms-conditions.html
+pdfdetach -save 1 input.md,../contact.html
+pdfdetach -saveall input.md,../privacy-policy.html
+pdfdetach -saveall input.md,../terms-conditions.html
+pdfdetach -saveall input.md,../contact.html
+pdfdetach -savefile filename input.md,../privacy-policy.html
+pdfdetach -savefile filename input.md,../terms-conditions.html
+pdfdetach -savefile filename input.md,../contact.html
+pdft.md,../privacy-policy.html
+pdft.md,../terms-conditions.html
+pdft.md,../contact.html
+peaclock.md,../privacy-policy.html
+peaclock.md,../terms-conditions.html
+peaclock.md,../contact.html
+pip download -r requirements.md,../privacy-policy.html
+pip download -r requirements.md,../terms-conditions.html
+pip download -r requirements.md,../contact.html
+pip install -r requirements.md,../privacy-policy.html
+pip install -r requirements.md,../terms-conditions.html
+pip install -r requirements.md,../contact.html
+pip wheel -r requirements.md,../privacy-policy.html
+pip wheel -r requirements.md,../terms-conditions.html
+pip wheel -r requirements.md,../contact.html
+PKGBUILD-2.md,../privacy-policy.html
+PKGBUILD-2.md,../terms-conditions.html
+PKGBUILD-2.md,../contact.html
+pmset.md,../privacy-policy.html
+pmset.md,../terms-conditions.html
+pmset.md,../contact.html
+pod.md,../privacy-policy.html
+pod.md,../terms-conditions.html
+pod.md,../contact.html
+poetry export --with dev -f requirements.md,../privacy-policy.html
+poetry export --with dev -f requirements.md,../terms-conditions.html
+poetry export --with dev -f requirements.md,../contact.html
+poetry export --without-hashes -o requirements.md,../privacy-policy.html
+poetry export --without-hashes -o requirements.md,../terms-conditions.html
+poetry export --without-hashes -o requirements.md,../contact.html
+poetry export -f requirements.md,../privacy-policy.html
+poetry export -f requirements.md,../terms-conditions.html
+poetry export -f requirements.md,../contact.html
+poetry export -f requirements.txt -o requirements.md,../privacy-policy.html
+poetry export -f requirements.txt -o requirements.md,../terms-conditions.html
+poetry export -f requirements.txt -o requirements.md,../contact.html
+policy_sentry.md,../privacy-policy.html
+policy_sentry.md,../terms-conditions.html
+policy_sentry.md,../contact.html
+pp.md,../privacy-policy.html
+pp.md,../terms-conditions.html
+pp.md,../contact.html
+pridecat --bi file.md,../privacy-policy.html
+pridecat --bi file.md,../terms-conditions.html
+pridecat --bi file.md,../contact.html
+pridecat --lesbian file.md,../privacy-policy.html
+pridecat --lesbian file.md,../terms-conditions.html
+pridecat --lesbian file.md,../contact.html
+pridecat --trans file.md,../privacy-policy.html
+pridecat --trans file.md,../terms-conditions.html
+pridecat --trans file.md,../contact.html
+pridecat -b file.md,../privacy-policy.html
+pridecat -b file.md,../terms-conditions.html
+pridecat -b file.md,../contact.html
+pridecat file.md,../privacy-policy.html
+pridecat file.md,../terms-conditions.html
+pridecat file.md,../contact.html
+readable.md,../privacy-policy.html
+readable.md,../terms-conditions.html
+readable.md,../contact.html
+rpicam-still -t 600000 --timelapse 10000 -o image%04d.md,../privacy-policy.html
+rpicam-still -t 600000 --timelapse 10000 -o image%04d.md,../terms-conditions.html
+rpicam-still -t 600000 --timelapse 10000 -o image%04d.md,../contact.html
+rst.md,../privacy-policy.html
+rst.md,../terms-conditions.html
+rst.md,../contact.html
+rush.md,../privacy-policy.html
+rush.md,../terms-conditions.html
+rush.md,../contact.html
+scrot capture.md,../privacy-policy.html
+scrot capture.md,../terms-conditions.html
+scrot capture.md,../contact.html
+selecta.md,../privacy-policy.html
+selecta.md,../terms-conditions.html
+selecta.md,../contact.html
+setfont [font].md,../privacy-policy.html
+setfont [font].md,../terms-conditions.html
+setfont [font].md,../contact.html
+shunit2.md,../privacy-policy.html
+shunit2.md,../terms-conditions.html
+shunit2.md,../contact.html
+socket.md,../privacy-policy.html
+socket.md,../terms-conditions.html
+socket.md,../contact.html
+somafm.md,../privacy-policy.html
+somafm.md,../terms-conditions.html
+somafm.md,../contact.html
+sort file.txt _ sponge file.md,../privacy-policy.html
+sort file.txt _ sponge file.md,../terms-conditions.html
+sort file.txt _ sponge file.md,../contact.html
+spotify.md,../privacy-policy.html
+spotify.md,../terms-conditions.html
+spotify.md,../contact.html
+sudo autorecon -t targets.md,../privacy-policy.html
+sudo autorecon -t targets.md,../terms-conditions.html
+sudo autorecon -t targets.md,../contact.html
+telnet mapscii.md,../privacy-policy.html
+telnet mapscii.md,../terms-conditions.html
+telnet mapscii.md,../contact.html
+theHarvester-2.md,../privacy-policy.html
+theHarvester-2.md,../terms-conditions.html
+theHarvester-2.md,../contact.html
+timer.md,../privacy-policy.html
+timer.md,../terms-conditions.html
+timer.md,../contact.html
+tshark -T fields -e http.request.method -e ip.md,../privacy-policy.html
+tshark -T fields -e http.request.method -e ip.md,../terms-conditions.html
+tshark -T fields -e http.request.method -e ip.md,../contact.html
+uv pip compile [requirements.in] -o requirements.md,../privacy-policy.html
+uv pip compile [requirements.in] -o requirements.md,../terms-conditions.html
+uv pip compile [requirements.in] -o requirements.md,../contact.html
+uv pip install -r requirements.md,../privacy-policy.html
+uv pip install -r requirements.md,../terms-conditions.html
+uv pip install -r requirements.md,../contact.html
+uv pip sync requirements.md,../privacy-policy.html
+uv pip sync requirements.md,../terms-conditions.html
+uv pip sync requirements.md,../contact.html
+wasm-ld.md,../privacy-policy.html
+wasm-ld.md,../terms-conditions.html
+wasm-ld.md,../contact.html
+wireguard.md,../privacy-policy.html
+wireguard.md,../terms-conditions.html
+wireguard.md,../contact.html
+xclip -selection clipboard input.md,../privacy-policy.html
+xclip -selection clipboard input.md,../terms-conditions.html
+xclip -selection clipboard input.md,../contact.html
+Xnest-2.md,../privacy-policy.html
+Xnest-2.md,../terms-conditions.html
+Xnest-2.md,../contact.html
+Xorg-2.md,../privacy-policy.html
+Xorg-2.md,../terms-conditions.html
+Xorg-2.md,../contact.html
+Xvfb-2.md,../privacy-policy.html
+Xvfb-2.md,../terms-conditions.html
+Xvfb-2.md,../contact.html
+Xwayland-2.md,../privacy-policy.html
+Xwayland-2.md,../terms-conditions.html
+Xwayland-2.md,../contact.html
+z3.md,../privacy-policy.html
+z3.md,../terms-conditions.html
+z3.md,../contact.html
