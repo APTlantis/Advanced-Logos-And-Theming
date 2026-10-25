@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 
 
 def export_editor(result, directory, name):
+    from .output_names import artifact_names
+    artifact = artifact_names(result)
     from .targets import slug
     tokens = result["tokens"]
     fallback = {"invalid": "error", "diff_added": "success", "diff_deleted": "error",
@@ -30,7 +32,7 @@ def export_editor(result, directory, name):
                   "markup.deleted": "diff_deleted", "markup.changed": "diff_changed"}
         scheme = {"name": name, "globals": {key: h(token) for key, token in globals_map.items()},
                   "rules": [{"scope": scope, "foreground": h(token)} for scope, token in scopes.items()]}
-        (directory / (slug(name) + ".sublime-color-scheme")).write_text(
+        (directory / artifact(slug(name) + ".sublime-color-scheme")).write_text(
             json.dumps(scheme, indent=2) + "\n", encoding="utf-8")
     else:
         root = ET.Element("NotepadPlus")
@@ -93,7 +95,7 @@ def export_editor(result, directory, name):
                 attrs["bgColor"] = h(bg)[1:]
             ET.SubElement(globals_node, "WidgetStyle", attrs)
         ET.indent(root)
-        ET.ElementTree(root).write(directory / (slug(name) + ".xml"), encoding="utf-8", xml_declaration=True)
+        ET.ElementTree(root).write(directory / artifact(slug(name) + ".xml"), encoding="utf-8", xml_declaration=True)
     result["acceptance_limits"] = (
         "Sublime Text 4 editor color scheme; syntax scopes depend on installed syntax definitions; UI theme unchanged."
         if result["target"] == "sublime_text" else

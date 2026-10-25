@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const artifactFile=require('./artifact_paths.cjs');
 const assert = require('node:assert/strict');
 const {pathToFileURL, fileURLToPath} = require('node:url');
 const [runPath, playwrightPath, executablePath] = process.argv.slice(2);
@@ -22,8 +23,8 @@ const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).d
   try {
     for (const target of ['svg','syntax_highlighting','data_visualization']) {
       const directory = path.join(root,target);
-      if (!fs.existsSync(path.join(directory,'tokens.json'))) continue;
-      const tokens = JSON.parse(fs.readFileSync(path.join(directory,'tokens.json'),'utf8'));
+      if (!fs.existsSync(path.join(directory,artifactFile(root,target,'tokens.json')))) continue;
+      const tokens = JSON.parse(fs.readFileSync(path.join(directory,artifactFile(root,target,'tokens.json')),'utf8'));
       for (const example of tokens.examples) {
         await page.setViewportSize({width:1100,height:750});
         const file = path.join(directory,example);
@@ -86,7 +87,7 @@ const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).d
           await page.keyboard.press('Tab');
           assert.equal(await page.evaluate(()=>document.activeElement.textContent),'All languages');
           await page.keyboard.press('Enter');
-          await page.waitForURL('**/examples.html');
+          await page.waitForURL('**/'+artifactFile(root,target,'examples.html'));
           assert.equal(await page.locator('.cards a').count(),12);
           await page.goto(pathToFileURL(file).href);
           await page.waitForFunction(() => document.querySelector('code .token'));
@@ -109,7 +110,7 @@ const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).d
         evidence.checks.push({target,example,...check});
       }
       await page.setViewportSize({width:1100,height:750});
-      await page.goto(pathToFileURL(path.join(directory,'examples.html')).href);
+      await page.goto(pathToFileURL(path.join(directory,artifactFile(root,target,'examples.html'))).href);
       if (target==='svg') {
         assert.equal(await page.locator('article').count(),tokens.examples.length);
         const embeds=await page.locator('img').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('src')));
@@ -129,8 +130,8 @@ const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).d
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),target+' index narrow overflow');
       await page.screenshot({path:path.join(directory,'examples-narrow.png'),fullPage:true});
       if (target==='data_visualization') {
-        await page.goto(pathToFileURL(path.join(directory,'heatmap-values.html')).href);
-        const data=JSON.parse(fs.readFileSync(path.join(directory,'example-data.json'),'utf8'));
+        await page.goto(pathToFileURL(path.join(directory,artifactFile(root,target,'heatmap-values.html'))).href);
+        const data=JSON.parse(fs.readFileSync(path.join(directory,artifactFile(root,target,'example-data.json')),'utf8'));
         const values=await page.locator('tbody td').allTextContents();
         assert.deepEqual(values.map(Number),data.heatmap.flat());
         evidence.heatmap_table='96 matching values';

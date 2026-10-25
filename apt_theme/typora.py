@@ -12,6 +12,12 @@ def theme_css(tokens):
  --side-bar-bg-color:var(--apt-panel); --control-text-color:var(--apt-foreground);
  --md-char-color:var(--apt-muted); --meta-content-color:var(--apt-muted);
  --monospace: Consolas, 'Liberation Mono', monospace;
+ --mermaid-theme: dark;
+ --sequence-theme: simple;
+ --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+ --mermaid-sequence-numbers: off;
+ --mermaid-flowchart-curve: linear;
+ --mermaid--gantt-left-padding: 75;
 }
 html, body { background:var(--apt-background); color:var(--apt-foreground); }
 #write { box-sizing:border-box; max-width:900px; margin:auto; padding:2rem;
@@ -70,7 +76,7 @@ html, body { background:var(--apt-background); color:var(--apt-foreground); }
     return css
 
 
-def specimens(name):
+def specimens(name, artifact=lambda value: value):
     md, body = [], []
     def add(markdown, markup):
         md.append(markdown)
@@ -111,21 +117,44 @@ def specimens(name):
     add('> A quotation with a [link](#tables).\n>\n> > A nested quotation.', '<blockquote><p>A quotation with a <a href="#tables">link</a>.</p><blockquote><p>A nested quotation.</p></blockquote></blockquote>')
     add('---', '<hr>')
     add('```python\n# Example only\ndef answer():\n    return "gold", 32\n```', '<pre class="md-fences cm-s-inner"><code><span class="cm-comment"># Example only</span>\n<span class="cm-keyword">def</span> <span class="cm-def">answer</span>():\n    <span class="cm-keyword">return</span> <span class="cm-string">"gold"</span>, <span class="cm-number">32</span></code></pre>')
-    add('![Local palette swatch](example-image.png)', '<p><img src="example-image.png" alt="Local palette swatch"></p>')
+    add('## Diagrams', '<h2 id="diagrams">Diagrams</h2>')
+    note = ('Native Typora review required: enable Diagrams in Preferences > Markdown. '
+            'The browser simulation displays source only; it does not render diagrams.')
+    add(note, f'<p>{html.escape(note)}</p>')
+    diagrams = (
+        ('Sequence: simple style', 'sequence',
+         'Alice->Bob: Review theme\nBob-->Alice: Ready'),
+        ('Mermaid flowchart: dark theme and linear curves', 'mermaid',
+         'graph LR\n    A[Canonical palette] --> B[Typora theme]\n    B --> C{Review}\n    C -->|Pass| D[Ready]'),
+        ('Mermaid sequence: per-diagram numbering override', 'mermaid',
+         '%%{init: {"sequence": {"showSequenceNumbers": true}}}%%\n'
+         'sequenceDiagram\n    Alice->>Bob: Review theme\n    Bob-->>Alice: Ready'),
+        ('Mermaid Gantt: default left padding', 'mermaid',
+         'gantt\n    title Theme review\n    dateFormat YYYY-MM-DD\n'
+         '    section Validation\n    Static checks :a1, 2026-10-25, 1d\n'
+         '    Native review :a2, after a1, 1d'),
+    )
+    for label, language, source in diagrams:
+        add(f'### {label}\n\n```{language}\n{source}\n```',
+            f'<h3>{html.escape(label)}</h3><pre class="diagram-source"><code>'
+            f'{html.escape(source)}</code></pre>')
+    add(f"![Local palette swatch]({artifact('example-image.png')})", f'<p><img src="{artifact('example-image.png')}" alt="Local palette swatch"></p>')
     add('[^1]: Footnote text with a [return link](#structures).', '<div class="md-def-footnote" id="footnote-1"><p>1: Footnote text with a <a href="#structures">return link</a>.</p></div>')
     return '\n\n'.join(md) + '\n', '\n'.join(body)
 
 
 def export_examples(result, directory, name, css_filename):
+    from .output_names import artifact_names
+    artifact = artifact_names(result)
     from .report import swatch
-    markdown, markup = specimens(name)
-    (directory / 'examples.md').write_text(markdown, encoding='utf-8')
+    markdown, markup = specimens(name, artifact)
+    (directory / artifact('examples.md')).write_text(markdown, encoding='utf-8')
     document = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
                 '<meta name="viewport" content="width=device-width,initial-scale=1">'
                 f'<title>{html.escape(name)} — Typora browser simulation</title>'
                 f'<link rel="stylesheet" href="{html.escape(css_filename, quote=True)}">'
                 '</head><body><main id="write">' + markup + '</main></body></html>')
-    (directory / 'examples.html').write_text(document, encoding='utf-8')
+    (directory / artifact('examples.html')).write_text(document, encoding='utf-8')
     swatch({k: result['tokens'][k] for k in ('background', 'panel', 'elevated', 'primary')},
-           directory / 'example-image.png', 'Local theme surfaces and accent')
-    result['examples'] = ['examples.html', 'examples.md']
+           directory / artifact('example-image.png'), 'Local theme surfaces and accent')
+    result['examples'] = [artifact('examples.html'), artifact('examples.md')]

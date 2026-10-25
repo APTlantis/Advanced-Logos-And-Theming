@@ -1,3 +1,5 @@
+New support files follow [version-aware naming](OUTPUT-NAMING.md). `KMINDS.json` remains the fixed native package name and has no duplicate prefixed alias.
+
 # Kmindz target
 
 Added 2026-10-14. Target ID: `kmindz`; default budget: 40 named tokens; mandatory count: 32. Both `generate` and `import` can select it, and it joins all default targets. No existing/native/public output is overwritten or activated by adding this target.

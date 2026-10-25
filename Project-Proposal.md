@@ -1,3 +1,5 @@
+Version-aware naming refinement (2026-10-18): supersede hard-coded V1 compatibility copies for future runs with one authoritative versioned artifact inventory across fifteen targets. Require explicit identity when inference is unavailable and reject conflicts. Preserve source/canonical colors, native requirements and historical/public artifacts. [Contract](docs/OUTPUT-NAMING.md).
+
 Atlas collection refresh (2026-10-16): all 19 `apt-*`/`dnf-*` runs, 608 canonical colors and 171 copied offline examples, including GFM and CodeMirror 5/6. [Collection and usage](docs/CHROMATIC-ATLAS.md).
 
 Chromatic Atlas pilot (2026-10-16): read-only palette matrix, OKLab color-space projections and provenance inspector over current pipeline snapshots. [Contract and local usage](docs/CHROMATIC-ATLAS.md).

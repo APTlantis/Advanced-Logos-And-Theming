@@ -1,6 +1,14 @@
+Version-aware naming implementation and local validation: [acceptance record](../migration/version-naming-acceptance-2026-10-18.json). This changes future generation/import only; dated runs, public copies and native acceptance remain separate.
+
 ## Complete Atlas collection - 2026-10-16
 
 [Current acceptance](../migration/chromatic-atlas-collection-acceptance-2026-10-16.json): 19 runs, 608 canonical colors, 10,583 exported tokens, 342 data source receipts and 171 copied offline examples. Copied examples preserve 5,548 local dependency files. The original 13-theme pilot and its dated evidence are preserved separately. No source outputs are regenerated.
+
+## Typora diagram defaults — 2026-10-25
+
+[Acceptance record](../migration/typora-diagrams-acceptance-2026-10-25.json) records 25 passing focused tests (3 Typora, 17 pipeline, 5 converter), a fresh Typora-only Black-Gold import with 40 tokens and zero declared contrast failures, verified v2 artifact hashes and unchanged canonical IDs/colors and adapted tokens. All 379 files in the source Black-Gold output and historical Typora pilot match their before-run hashes. [Test log](../migration/typora-diagrams-tests-2026-10-25.txt).
+
+The existing Chromium checker passed at 1440/900/390 pixels, covering table alignment/layout, clipping, overflow, images, text contrast and absence of external requests/errors. Diagram fixtures display source in the browser simulation; native diagram rendering and export behavior remain pending. Initial Windows sandbox file-access and browser-launch failures were resolved using workspace temporary files and unsandboxed verification. No installation, activation or publication occurred. Discovery paths/priorities, project identity and parent/root registrations are unchanged; the read map and parent records need no update. [Contract and native checklist](TYPORA-REVIEW.md).
 
 ## Chromatic Atlas local pilot - 2026-10-16
 

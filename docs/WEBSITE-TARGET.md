@@ -1,3 +1,5 @@
+New freely named CSS, HTML specimens, README and metadata follow [version-aware naming](OUTPUT-NAMING.md). `.apt-site`, component classes and `--apt-*` variables remain stable integration namespaces.
+
 # Full website theme
 
 Target ID: `website`. Browser output contract: standard [CSS custom properties](https://www.w3.org/TR/css-variables-1/), scoped to `.apt-site`, and opt-in `.apt-*` component selectors. This is a reusable dark browser theme, not a framework adapter or a production website. Reference DOM and interactions are in the exported HTML specimens.

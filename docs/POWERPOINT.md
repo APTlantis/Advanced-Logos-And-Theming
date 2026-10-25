@@ -1,3 +1,5 @@
+New XML/PPTX/POTX and provenance files follow [version-aware naming](OUTPUT-NAMING.md). Office package member names and template-preservation requirements remain unchanged.
+
 # PowerPoint colors and reusable template
 
 Selecting `powerpoint` during generation or palette import emits:

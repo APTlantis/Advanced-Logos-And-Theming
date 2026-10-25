@@ -3,7 +3,7 @@ version = "1.0"
 
 [project]
 name = "Logos-And-Theming"
-generated_by = "Source-checked evaluator preparation 2026-10-10; Typora discovery extension 2026-10-11"
+generated_by = "Source-checked evaluator preparation 2026-10-10; Typora discovery extension 2026-10-11; dated operator presentation discovery 2026-10-17; version-aware naming discovery 2026-10-18"
 
 [budget]
 analyzer_file_budget = 25
@@ -211,7 +211,7 @@ reason = "Historical theme index"
 
 [[exclude]]
 path = "docs/presentations/"
-reason = "Dated overview deck and build resources; current source contracts take precedence"
+reason = "Dated overview and operator decks, source snapshots and build resources; explicit presentation review starts at docs/presentations/operators-2026-10-17/README.md and validation/delivery.json; current source contracts take precedence"
 
 [[secondary]]
 path = "apt_theme/typora.py"
@@ -294,13 +294,21 @@ path = "migration/chromatic-atlas-collection-acceptance-2026-10-16.json"
 reason = "Current 19-run collection, copied offline examples, source/wheel browser checks and preservation"
 [[secondary]]
 path = "docs/OUTPUT-NAMING.md"
-reason = "Named export convention, compatibility, manifests and central-folder collection"
+reason = "Version-aware authoritative filenames, native exceptions and v2 manifest contract"
 
 [[secondary]]
 path = "apt_theme/output_names.py"
-reason = "Shared collectable filenames and byte-identical export receipts"
+reason = "Authoritative artifact inventory, collision detection and final-byte hash receipts"
 
 [[secondary]]
 path = "tests/test_output_names.py"
-reason = "Cross-theme flat collection, native archive preservation and collision rejection"
+reason = "Five-version fifteen-target naming, local references, identities and native exceptions"
 
+
+[[secondary]]
+path = "apt_theme/identity.py"
+reason = "Shared artwork version mapping, bounded source inference and conflict rejection"
+
+[[evidence]]
+path = "migration/version-naming-acceptance-2026-10-18.json"
+reason = "Fresh version-aware naming tests, local browser evidence and source preservation limits"

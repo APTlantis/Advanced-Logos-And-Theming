@@ -61,22 +61,24 @@ def chart_gallery_css():
 
 
 def export_visual(result, directory, name):
+    from .output_names import artifact_names
+    artifact = artifact_names(result)
     tokens, target = result["tokens"], result["target"]
     if target == "svg":
-        result["examples"] = diagrams(tokens, directory)
+        result["examples"] = diagrams(tokens, directory, artifact)
         result["acceptance_limits"] = "Standalone SVG presentation attributes; SVG editor import/font substitution pending."
     elif target == "syntax_highlighting":
-        result["examples"] = syntax(tokens, directory)
+        result["examples"] = syntax(tokens, directory, artifact)
         result["acceptance_limits"] = "Bundled Prism 1.30.0 core and twelve language grammars; offline browser highlighting. Host integration and native editor behavior require separate review."
     else:
-        result["examples"] = charts(tokens, directory, name)
+        result["examples"] = charts(tokens, directory, name, artifact)
         result["acceptance_limits"] = "Matplotlib mplstyle plus explicit JSON scale; SVG examples are authored independently. Optional Matplotlib renderer requires separate verification; no CVD or category-separation guarantee."
     if target in ('syntax_highlighting', 'svg'):
         return
     links = ''.join(f'<li><a href="{file}">{file}</a></li>' for file in result["examples"])
-    (directory / "examples.html").write_text(
+    (directory / artifact('examples.html')).write_text(
         '<!doctype html><html lang="en"><meta charset="utf-8"><title>Visual examples</title>'
-        '<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="examples.css"><main><h1>'+html.escape(name)+' / '+target+'</h1><p>'+html.escape(result["acceptance_limits"])+
-        '</p><p>The gallery and value table use a fixed neutral charcoal viewing environment. Chart artwork, including its own background, retains exported theme colors.</p><ul>'+links+'</ul>' + ('<p><a href="heatmap-values.html">Heatmap value table</a></p><div class="scroll"><object data="bars.svg" type="image/svg+xml" aria-label="Bar chart"></object><object data="lines.svg" type="image/svg+xml" aria-label="Line chart"></object><object data="heatmap.svg" type="image/svg+xml" aria-label="Heatmap"></object></div>' if target == 'data_visualization' else '') + '</main></html>', encoding="utf-8")
+        f'<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="{artifact('examples.css')}"><main><h1>'+html.escape(name)+' / '+target+'</h1><p>'+html.escape(result["acceptance_limits"])+
+        '</p><p>The gallery and value table use a fixed neutral charcoal viewing environment. Chart artwork, including its own background, retains exported theme colors.</p><ul>'+links+'</ul>' + (f'<p><a href="{artifact('heatmap-values.html')}">Heatmap value table</a></p><div class="scroll"><object data="{artifact('bars.svg')}" type="image/svg+xml" aria-label="Bar chart"></object><object data="{artifact('lines.svg')}" type="image/svg+xml" aria-label="Line chart"></object><object data="{artifact('heatmap.svg')}" type="image/svg+xml" aria-label="Heatmap"></object></div>' if target == 'data_visualization' else '') + '</main></html>', encoding="utf-8")
 
-    (directory / 'examples.css').write_text(chart_gallery_css(), encoding='utf-8')
+    (directory / artifact('examples.css')).write_text(chart_gallery_css(), encoding='utf-8')

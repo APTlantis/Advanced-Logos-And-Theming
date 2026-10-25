@@ -4,6 +4,8 @@
 
 ## Authored references — 2026-10-09
 
+Operator presentation addition — 2026-10-17: [five focused decks](../presentations/operators-2026-10-17/README.md) now provide dated slide treatments of pipeline/palette design, Chromatic Atlas, Markdown/CodeMirror, logo conversion and safe operation. These 80 slides support operator orientation; they do not mark the proposed written volumes below complete. Native rendering/PDF and focused-suite evidence is attached to that collection; manual edit/save/reopen remains unperformed.
+
 - [Output apps/types and exporter internals](../OUTPUT-REFERENCE.md): shared stages, every target's exact files/mappings/limits, independent utilities, dependencies, packaging and recovery. This supplies current reference material for planned chapters 05 and 09; it does not claim every proposed developer/runbook volume is complete.
 - [Testing and future coverage](../TESTING-REFERENCE.md): all 32 current methods with rationale/limits, runtime and native gates, commands, historical evidence boundaries and prioritized proposed tests. This supports chapter 06, but writing acceptance procedures does not establish native acceptance.
 

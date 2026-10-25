@@ -76,6 +76,8 @@ def sample_deck(result, directory, name, stem):
     compatibility prefixes that generic XML serializers can silently discard.
     The fixed input hash makes the deliberately narrow substitutions auditable.
     """
+    from .output_names import artifact_names
+    artifact = artifact_names(result)
     parts = template_parts()
     slots = {slot: result['tokens'][token]['hex'][1:]
              for slot, token in result['native_slots'].items()}
@@ -106,7 +108,7 @@ def sample_deck(result, directory, name, stem):
     validate_core_properties(parts['docProps/core.xml'])
     slides = sum(bool(re.fullmatch(r'ppt/slides/slide\d+\.xml', n)) for n in parts)
     layouts = sum(bool(re.fullmatch(r'ppt/slideLayouts/slideLayout\d+\.xml', n)) for n in parts)
-    deck_file, template_file = stem + '-sample.pptx', stem + '-template.potx'
+    deck_file, template_file = artifact(stem + '-sample.pptx'), artifact(stem + '-template.potx')
     write_package(directory / deck_file, parts)
     template = dict(parts)
     if template['[Content_Types].xml'].count(PRESENTATION_TYPE) != 1:
@@ -122,5 +124,5 @@ def sample_deck(result, directory, name, stem):
         'modified_parts': changed,
         'preserved_parts': len(parts) - len(changed),
     }
-    (directory / 'template-provenance.json').write_text(
+    (directory / artifact('template-provenance.json')).write_text(
         json.dumps(result['sample_deck'], indent=2) + '\n', encoding='utf-8')

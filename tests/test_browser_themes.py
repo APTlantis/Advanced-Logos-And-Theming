@@ -27,9 +27,9 @@ class BrowserThemeTests(unittest.TestCase):
                     self.assertEqual(result['named_count'],39)
                     tokens=copy.deepcopy(result['tokens'])
                     dest=Path(temp)/run/target
-                    export(result,dest,'Test Dark',self.colors,'a'*64)
+                    export(result,dest,'Test Dark',self.colors,'a'*64, theme_version=1)
                     self.assertEqual(tokens,result['tokens'])
-                    self.assertTrue((dest/'examples.html').exists())
+                    self.assertTrue((dest / result["artifact_paths"]["examples.html"]).exists())
                     self.assertTrue((dest/result['palette_artifacts']['palette']).exists())
                     hashes.append({p.relative_to(dest).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in dest.rglob('*') if p.is_file()})
                 self.assertEqual(*hashes)
@@ -45,27 +45,27 @@ class BrowserThemeTests(unittest.TestCase):
             for target in TARGETS:
                 result=adapt(self.colors,self.roles,target,40)
                 dest=Path(temp)/target
-                export(result,dest,'Test Dark',self.colors,'a'*64)
+                export(result,dest,'Test Dark',self.colors,'a'*64, theme_version=1)
                 if target=='markdown':
-                    css=(dest/'tokens.css').read_text()+(dest/'markdown.css').read_text()+(dest/'syntax-prism.css').read_text()
+                    css=(dest / result["artifact_paths"]["tokens.css"]).read_text()+(dest / result["artifact_paths"]["markdown.css"]).read_text()+(dest / result["artifact_paths"]["syntax-prism.css"]).read_text()
                     self.assertNotIn(':root',css)
                     self.assertNotIn('#write',css)
                     self.assertIn('.markdown-body .token.keyword',css)
                     self.assertNotIn('text-align:',css)
-                    coverage=json.loads((dest/'coverage.json').read_text())
+                    coverage=json.loads((dest / result["artifact_paths"]["coverage.json"]).read_text())
                     self.assertIn('footnotes',coverage['conditional'])
                     self.assertIn('Mermaid',coverage['deferred'])
-                    preview=(dest/'examples.html').read_text()
+                    preview=(dest / result["artifact_paths"]["examples.html"]).read_text()
                     self.assertIn('DOMPurify.sanitize',preview)
                     self.assertIn('marked.parse',preview)
                     self.assertNotIn('<script>window.unsafeMarkdownExecuted',preview)
                 elif target=='codemirror5':
-                    css=(dest/'apt-test-dark.css').read_text()
+                    css=(dest / result["artifact_paths"]["theme.css"]).read_text()
                     self.assertIn('.cm-s-apt-test-dark .cm-keyword',css)
                     self.assertNotIn(':root',css)
                     self.assertIn('.cm-s-apt-test-dark .CodeMirror-hints',css)
                 else:
-                    module=(dest/'theme.mjs').read_text()
+                    module=(dest / result["artifact_paths"]["theme.mjs"]).read_text()
                     for text in ('export const theme=', 'export const highlightStyle=', 'export const extension=', 'dark:true','syntaxHighlighting(highlightStyle)'):
                         self.assertIn(text,module)
                     self.assertNotIn('document.',module)
@@ -78,14 +78,14 @@ class BrowserThemeTests(unittest.TestCase):
             source=root/'palette.toml'
             source.write_text(palette_toml(self.colors,'Test Dark','a'*64),encoding='utf-8')
             output=root/'run'
-            self.assertEqual(main(['import',str(source),'--output',str(output),'--targets',','.join(TARGETS)]),0)
+            self.assertEqual(main(['import', '--theme-version', '1',str(source),'--output',str(output),'--targets',','.join(TARGETS)]),0)
             summary=json.loads((output/'run.json').read_text())
             self.assertEqual(summary['targets'],list(TARGETS))
             review=(output/'markdown-editors.html').read_text()
-            for artifact in ('markdown/tokens.css','markdown/coverage.json','codemirror5/apt-palette.css','codemirror6/theme.mjs'):
+            for artifact in ('markdown/apt-test-dark-markdown-tokens.css','markdown/apt-test-dark-markdown-coverage.json','codemirror5/apt-test-dark-codemirror5.css','codemirror6/apt-test-dark-codemirror6.mjs'):
                 self.assertIn(artifact,review)
             self.assertIn('markdown-editors.html',(output/'review.html').read_text())
-            self.assertEqual(main(['import',str(source),'--output',str(output),'--targets','markdown']),1)
+            self.assertEqual(main(['import', '--theme-version', '1',str(source),'--output',str(output),'--targets','markdown']),1)
 
     def test_vendor_integrity_and_fail_closed(self):
         manifest=verify_vendor()

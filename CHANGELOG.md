@@ -1,3 +1,14 @@
+## 2026-10-25 — Typora diagram defaults
+
+- Future Typora exports set a shared dark Mermaid baseline, simple sequence style, documented font stack, numbering off, linear curves and Gantt left padding 75.
+- Added four native diagram fixtures with escaped source previews, customization guidance and a native acceptance checklist. Existing outputs, canonical colors, token budgets and alignment are preserved.
+
+## 2026-10-18
+
+- Resolve artwork versions 1–5 as apt/dnf/rpm/yum/eopkg with `--theme-version` and consistent source inference.
+- Replace duplicate named copies with authoritative target artifacts, indexed v2 manifests and shared filename references.
+- Read new and historical Atlas runs and discover all five version families. Preserve native contracts, canonical colors, source bytes and existing/public outputs.
+
 ## 2026-10-16 - Collectable output names
 
 All fifteen targets now emit `apt-<theme>-<target>[-<role>]` copies of authored top-level artifacts, with SHA-256 manifests indexed by the run and linked from review pages. Existing/native entry points, archive member names and previous outputs are preserved. See docs/OUTPUT-NAMING.md.

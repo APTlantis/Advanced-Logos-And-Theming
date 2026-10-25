@@ -11,6 +11,7 @@ from .extraction import digest, extract, load_palette, metrics, palette_toml, se
 from .report import review, swatch
 from .semantics import assign, background_choice
 from .targets import DEFAULTS, adapt, export
+from .identity import resolve_identity
 
 
 def write_json(path, value):
@@ -36,14 +37,16 @@ def build(args):
     targets = args.targets.split(",")
     if len(set(targets)) != len(targets) or any(t not in DEFAULTS for t in targets):
         raise ValueError("Targets must be unique names from " + ", ".join(DEFAULTS))
-    name = args.name or source.stem
+    imported = load_palette(source) if args.command == "import" else None
+    name = args.name or (imported[1].get("theme", {}).get("name") if imported else None) or source.stem
+    identity = resolve_identity(name, args.theme_version, source, imported[1] if imported else None)
     comparison, old = None, {}
     if args.command == "generate":
         candidates, provenance, coords, weights = extract(source, config.get("extraction", {}))
         colors = select(candidates, int(config.get("extraction", {}).get("seed", 32)))
         diagnostics = {"canonical": metrics(coords, weights, colors), "selection_policy": selection_diagnostics(candidates, colors)}
     else:
-        colors, old = load_palette(source)
+        colors, old = imported
         provenance = {"sha256": digest(source), "kind": "imported_palette", "legacy_roles": old.get("roles", {})}
         candidates = list(colors.values())
         diagnostics = {"kind": "import", "canonical_colors_preserved": True}
@@ -70,7 +73,7 @@ def build(args):
         shutil.copy2(source, source_dir / source.name)
         if digest(source_dir / source.name) != provenance["sha256"]:
             raise ValueError("Source changed before preservation")
-        (stage / "palette.toml").write_text(palette_toml(colors, name, provenance["sha256"]), encoding="utf-8")
+        (stage / "palette.toml").write_text(palette_toml(colors, name, provenance["sha256"], identity.record()), encoding="utf-8")
         (stage / "palette.txt").write_text("\n".join(f'{key}\t{c["hex"]}' for key, c in colors.items()) + "\n", encoding="utf-8")
         (stage / "palette.css").write_text(":root {\n" + "\n".join(f'  --apt-{key.replace("_", "-")}: {c["hex"]};' for key, c in colors.items()) + "\n}\n", encoding="utf-8")
         swatch(colors, stage / "palette.png", name + " canonical 32")
@@ -79,12 +82,13 @@ def build(args):
         write_json(stage / "semantics.json", {"roles": roles, "findings": notices})
         write_json(stage / "provenance.json", provenance)
         for result in results:
-            export(result, stage / result["target"], name, colors, provenance["sha256"])
+            export(result, stage / result["target"], name, colors, provenance["sha256"], identity=identity)
         review(stage, name, colors, candidates, roles, notices, results, diagnostics,
                source_dir / source.name if args.command == "generate" else None, comparison)
         failures = sum(r["contrast_failures"] for r in results)
         run = {"schema": "aptlantis.theme-run.v1", "name": name, "variant": "dark", "source_sha256": provenance["sha256"],
-               "named_export_manifests": {r["target"]: r["target"] + "/" + r["named_exports"]["manifest"] for r in results},
+               "theme_identity": identity.record(),
+               "artifact_manifests": {r["target"]: r["target"] + "/" + r["artifact_manifest"]["manifest"] for r in results},
                "targets": targets, "contrast_failures": failures, "semantic_findings": notices,
                "native_application_acceptance": "pending", "installation": "not performed"}
         write_json(stage / "run.json", run)
@@ -111,6 +115,7 @@ def main(argv=None):
         p.add_argument("input", type=Path)
         p.add_argument("--output", type=Path, required=True)
         p.add_argument("--name")
+        p.add_argument("--theme-version", type=int, choices=range(1, 6), help="artwork generation: 1=apt, 2=dnf, 3=rpm, 4=yum, 5=eopkg")
         p.add_argument("--targets", default=",".join(DEFAULTS))
         p.add_argument("--config", type=Path)
         p.add_argument("--compare", type=Path)

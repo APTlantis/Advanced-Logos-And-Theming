@@ -39,8 +39,8 @@ class WebsiteTests(unittest.TestCase):
         result = adapt(colors, assign(colors)[0], 'website', 112)
         with tempfile.TemporaryDirectory() as temp:
             directory = Path(temp) / 'website'
-            export(result, directory, '<script>bad()</script>', colors, '0' * 64)
-            css = (directory / 'theme.css').read_text()
+            export(result, directory, '<script>bad()</script>', colors, '0' * 64, theme_version=1)
+            css = (directory / result["artifact_paths"]["theme.css"]).read_text()
             declared = set(re.findall(r'(--[\w-]+)\s*:', css))
             used = set(re.findall(r'var\((--[\w-]+)\)', css))
             self.assertFalse(used - declared)
@@ -54,4 +54,4 @@ class WebsiteTests(unittest.TestCase):
                 self.assertNotIn('<script>bad()', page)
                 self.assertNotIn('https://', page)
                 self.assertIn('class="apt-site"', page)
-            self.assertIn('showModal()', (directory / 'components.html').read_text())
+            self.assertIn('showModal()', (directory / result["artifact_paths"]["components.html"]).read_text())

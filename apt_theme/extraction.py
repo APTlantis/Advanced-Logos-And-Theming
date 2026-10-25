@@ -185,9 +185,12 @@ def load_palette(path):
     return colors, data
 
 
-def palette_toml(colors, name, source_hash):
+def palette_toml(colors, name, source_hash, theme_identity=None):
     lines = ["[theme]", f"name = {json.dumps(name)}", 'variant = "dark"',
              f"source_sha256 = {json.dumps(source_hash)}", "final_colors = 32", "", "[palette.canonical]"]
+    if theme_identity is not None:
+        from .target_palette import toml_document
+        lines = lines[:-1] + toml_document(theme_identity, ("theme", "theme_identity")).splitlines() + ["[palette.canonical]"]
     for key, c in colors.items():
         l, ch, h = c["oklch"]
         lines.append(f'{key} = {{ hex = "{c["hex"]}", rgb = {c["rgb"]}, oklch = {{ l = {l:.10f}, c = {ch:.10f}, h = {h:.10f} }}, weight = {c.get("weight", 1):.8f} }}')

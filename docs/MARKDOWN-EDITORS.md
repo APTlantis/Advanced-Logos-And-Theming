@@ -1,3 +1,5 @@
+Current filenames follow [version-aware naming](OUTPUT-NAMING.md). Freely named CSS, modules, specimens, README and metadata use `<prefix>-<theme>-<target>[-<role>]`; the logical names below identify their roles. CM5 theme identifiers are `<prefix>-<theme>`; CM6 named exports and `.markdown-body` remain stable. The browser checker discovers generated run manifests and also accepts legacy previews.
+
 # Markdown and CodeMirror output contracts
 
 Added 2026-10-16. These three independently selectable default targets extend the pipeline from twelve to fifteen. Each has a 40-color budget and currently consumes 39 meaningful named color tokens; typography/spacing are CSS values, not additional palette colors. All preserve the canonical 32 source colors and use existing hue-preserving dark adaptation. GFM defines syntax, not an official theme schema.
@@ -5,10 +7,10 @@ Added 2026-10-16. These three independently selectable default targets extend th
 | Target | Native integration | Additional files |
 | --- | --- | --- |
 | `markdown` | Load `tokens.css`, `markdown.css`, optional `markdown-extras.css` and `syntax-prism.css`; wrap documents in `.markdown-body` | `examples.md`, `examples.html`, `example-image.svg`, `coverage.json` |
-| `codemirror5` | Load `apt-<theme-slug>.css` and CodeMirror core CSS; configure `theme: "apt-<theme-slug>"` | `examples.html`; actual CodeMirror 5.65.16 preview |
+| `codemirror5` | Load `<prefix>-<theme>-codemirror5.css` and CodeMirror core CSS; configure `theme: "<prefix>-<theme>"` | `examples.html`; actual CodeMirror 5.65.16 preview |
 | `codemirror6` | Import `{theme, highlightStyle, extension}` from `theme.mjs`; add `extension` to EditorState | `examples.html`; actual CodeMirror 6 preview |
 
-Each target also supplies README.md, dependencies.json, tokens.json, validation.json, a provenance-bearing `apt-<theme>-<target>-palette.toml` and labeled `-swatch.png`. Version 6 peer contracts are @codemirror/view 6.x, @codemirror/language 6.x and @lezer/highlight 1.x; exact preview package versions, integrity and licenses live in `vendor/browser-themes/manifest.json`. The ES module uses the host's shared CodeMirror dependency instances. It does not bundle a competing runtime into the distributable theme module.
+Each target also supplies README.md, dependencies.json, tokens.json, validation.json, a provenance-bearing `<prefix>-<theme>-<target>-palette.toml` and labeled `-swatch.png`. Version 6 peer contracts are @codemirror/view 6.x, @codemirror/language 6.x and @lezer/highlight 1.x; exact preview package versions, integrity and licenses live in `vendor/browser-themes/manifest.json`. The ES module uses the host's shared CodeMirror dependency instances. It does not bundle a competing runtime into the distributable theme module.
 
 ## Markdown rendering and optional structures
 
@@ -26,7 +28,7 @@ The preview authors alert and footnote structures separately and labels them as 
 
 ## CodeMirror behavior
 
-Both versions map the existing syntax roles into native token systems and theme the editor, gutters, cursor, selection, active line, search results, matching brackets, panels and completion tooltips. Version 5 CSS stays under `.cm-s-apt-<slug>`. Keep its completion popup inside the themed wrapper with `hintOptions: {container: editor.getWrapperElement()}`. Version 6 exports `EditorView.theme(..., {dark:true})`, `HighlightStyle.define(...)`, and their combined syntax-highlighting extension. Both previews provide Markdown, JavaScript and Python editing plus an unrelated editor as an isolation control. Text is local and sample code is never executed.
+Both versions map the existing syntax roles into native token systems and theme the editor, gutters, cursor, selection, active line, search results, matching brackets, panels and completion tooltips. Version 5 CSS stays under `.cm-s-<prefix>-<theme>`. Keep its completion popup inside the themed wrapper with `hintOptions: {container: editor.getWrapperElement()}`. Version 6 exports `EditorView.theme(..., {dark:true})`, `HighlightStyle.define(...)`, and their combined syntax-highlighting extension. Both previews provide Markdown, JavaScript and Python editing plus an unrelated editor as an isolation control. Text is local and sample code is never executed.
 
 ## Generate and review locally
 

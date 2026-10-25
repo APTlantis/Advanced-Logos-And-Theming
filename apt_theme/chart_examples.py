@@ -40,7 +40,7 @@ def marker(board, x, y, index, color):
         ET.SubElement(board.root, "polygon", points=' '.join(f'{x+dx},{y+dy}' for dx, dy in offsets), **attrs)
 
 
-def charts(tokens, directory, name):
+def charts(tokens, directory, name, artifact=lambda value: value):
     from .targets import slug
     from .visual_targets import Board
     slots = {"figure.facecolor": "background", "savefig.facecolor": "background",
@@ -52,12 +52,12 @@ def charts(tokens, directory, name):
     colors = [tokens[f"series_{i}"]["hex"][1:] for i in range(1, 7)]
     style += "axes.prop_cycle: cycler('color', " + repr(colors) + ") + cycler('linestyle', ['-', '--', ':', '-.', '-', '--'])\n"
     style += "axes.grid: True\ngrid.alpha: 1.0\ngrid.linewidth: 0.6\nlines.linewidth: 2.5\nfont.size: 11\nsavefig.transparent: False\n"
-    (directory / (slug(name) + ".mplstyle")).write_text(style, encoding="utf-8")
+    (directory / artifact(slug(name) + ".mplstyle")).write_text(style, encoding="utf-8")
     scale = [tokens[f"sequential_{i}"]["hex"] for i in range(9)]
-    (directory / "scales.json").write_text(json.dumps({"sequential": scale,
+    (directory / artifact('scales.json')).write_text(json.dumps({"sequential": scale,
         "acceptance_limits": "Single source hue, ordered lightness; no perceptual-uniformity or CVD claim."}, indent=2)+"\n", encoding="utf-8")
     data = example_data()
-    (directory / "example-data.json").write_text(json.dumps(data, indent=2)+"\n", encoding="utf-8")
+    (directory / artifact('example-data.json')).write_text(json.dumps(data, indent=2)+"\n", encoding="utf-8")
 
     def axes(board):
         board.rect(85, 115, 825, 305)
@@ -81,7 +81,7 @@ def charts(tokens, directory, name):
         ET.SubElement(b.root, "rect", x=str(x-22), y=str(420-value*3.5), width="44", height=str(value*3.5), fill=f"url(#hatch-{i%6})")
         b.text(x, 410 - value * 3.5, value, "foreground", 15, **{"text-anchor": "middle"})
         b.text(x, 449, data["categories"][i], "foreground", 12, **{"text-anchor": "middle"})
-    b.save(directory / "bars.svg")
+    b.save(directory / artifact('bars.svg'))
 
     b = Board(tokens, "Change over time / 6 series", "Illustrative data • 24 weekly observations per series • distinct markers and patterns")
     axes(b)
@@ -97,7 +97,7 @@ def charts(tokens, directory, name):
         b.text(lx+28, 485, data["series_labels"][i], "foreground", 12)
     for j in (0, 3, 7, 11, 15, 19, 23):
         b.text(95+j*805/23, 449, data["periods"][j], "muted", 13, **{"text-anchor":"middle"})
-    b.save(directory / "lines.svg")
+    b.save(directory / artifact('lines.svg'))
 
     b = Board(tokens, "Ordered intensity / 8 × 12 heatmap", "Illustrative monthly levels • single hue • exact values in the accompanying table")
     width, height = 780 / len(data["heatmap_columns"]), 256 / len(data["heatmap_rows"])
@@ -112,14 +112,14 @@ def charts(tokens, directory, name):
         b.rect(130+i*60, 440, 60, 22, f"sequential_{i}")
         b.text(160+i*60, 488, i, "foreground", 14, **{"text-anchor":"middle"})
     b.text(700, 456, "Illustrative level", "foreground", 16)
-    b.text(130, 520, "0 = lowest intensity; 8 = highest intensity. Values: heatmap-values.html", "muted", 14)
-    b.save(directory / "heatmap.svg")
+    b.text(130, 520, "0 = lowest intensity; 8 = highest intensity. See the accompanying value table.", "muted", 14)
+    b.save(directory / artifact('heatmap.svg'))
     header = ''.join(f'<th scope="col">{label}</th>' for label in data["heatmap_columns"])
     rows = ''.join('<tr><th scope="row">'+label+'</th>'+''.join(f'<td>{v}</td>' for v in row)+'</tr>'
                    for label, row in zip(data["heatmap_rows"], data["heatmap"]))
-    (directory / "heatmap-values.html").write_text('<!doctype html><html lang="en"><meta charset="utf-8">'
+    (directory / artifact('heatmap-values.html')).write_text('<!doctype html><html lang="en"><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1"><title>Heatmap values</title>'
-        '<link rel="stylesheet" href="examples.css"><main><a href="examples.html">All charts</a><h1>Heatmap values</h1>'
+        f'<link rel="stylesheet" href="{artifact('examples.css')}"><main><a href="{artifact('examples.html')}">All charts</a><h1>Heatmap values</h1>'
         '<p>Illustrative monthly levels, 0–8.</p><div class="scroll"><table><caption>Values used by both renderers</caption>'
         '<thead><tr><th scope="col">Region</th>'+header+'</tr></thead><tbody>'+rows+'</tbody></table></div></main></html>', encoding="utf-8")
-    return ["bars.svg", "lines.svg", "heatmap.svg"]
+    return [artifact('bars.svg'), artifact('lines.svg'), artifact('heatmap.svg')]

@@ -66,10 +66,10 @@ class KmindzTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             dest=Path(temp)/'kmindz'
             before=copy.deepcopy(self.colors)
-            export(self.result,dest,'Test',self.colors,'a'*64)
-            p=json.loads((dest/'KMINDS.json').read_text())
+            export(self.result,dest,'Test',self.colors,'a'*64, theme_version=1)
+            p=json.loads((dest / self.result["artifact_paths"]["KMINDS.json"]).read_text())
             self.assertEqual(p['theme']['variants']['dark']['tokens']['paint']['bg'],self.result['tokens']['background']['hex'])
             for f in ['preview.svg','format-provenance.json','tokens.json','validation.json','apt-test-kmindz-palette.toml','apt-test-kmindz-swatch.png']:
-                self.assertTrue((dest/f).is_file(),f)
+                self.assertTrue((dest/self.result["artifact_paths"].get(f,f)).is_file(),f)
             self.assertEqual(self.colors,before)
-            self.assertEqual(json.loads((dest/'validation.json').read_text())['native_visual_acceptance'],'pending')
+            self.assertEqual(json.loads((dest / self.result["artifact_paths"]["validation.json"]).read_text())['native_visual_acceptance'],'pending')

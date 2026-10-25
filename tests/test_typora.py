@@ -21,16 +21,25 @@ class TyporaTests(unittest.TestCase):
                 result = adapt(colors, roles, 'typora', 40)
                 original_tokens = copy.deepcopy(result['tokens'])
                 directory = Path(temp) / name
-                export(result, directory, 'Test Dark', colors, 'a' * 64)
+                export(result, directory, 'Test Dark', colors, 'a' * 64, theme_version=1)
                 self.assertEqual(result['tokens'], original_tokens)
                 self.assertEqual(result['named_count'], 40)
                 self.assertEqual(result['contrast_failures'], 0)
-                self.assertEqual(result['examples'], ['examples.html', 'examples.md'])
-                document = (directory / 'examples.html').read_text(encoding='utf-8')
-                self.assertIn('href="test-dark.css"', document)
+                self.assertEqual(result['examples'], ['apt-test-dark-typora-examples.html', 'apt-test-dark-typora-examples.md'])
+                document = (directory / result["artifact_paths"]["examples.html"]).read_text(encoding='utf-8')
+                self.assertIn('href="apt-test-dark-typora.css"', document)
                 self.assertIn('id="write"', document)
                 self.assertIn('browser simulation', document)
-                self.assertTrue((directory / 'example-image.png').exists())
+                css = (directory / result['artifact_paths']['test-dark.css']).read_text(encoding='utf-8')
+                for declaration in (
+                    '--mermaid-theme: dark;', '--sequence-theme: simple;',
+                    '--mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;',
+                    '--mermaid-sequence-numbers: off;', '--mermaid-flowchart-curve: linear;',
+                    '--mermaid--gantt-left-padding: 75;',
+                ):
+                    self.assertIn(declaration, css)
+                self.assertNotIn('text-align:', css)
+                self.assertTrue((directory / result["artifact_paths"]["example-image.png"]).exists())
                 outputs.append({p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in directory.iterdir()})
             self.assertEqual(*outputs)
         self.assertEqual(colors, before)
@@ -57,3 +66,11 @@ class TyporaTests(unittest.TestCase):
         for text in ('[TOC]', '[^1]', '- [x]', '######', '```python', 'example-image.png'):
             self.assertIn(text, markdown)
         self.assertEqual(markup.count('<table '), 4)
+        self.assertIn('```sequence\nAlice->Bob:', markdown)
+        self.assertEqual(markdown.count('```mermaid\n'), 3)
+        self.assertIn('"showSequenceNumbers": true', markdown)
+        self.assertIn('gantt\n', markdown)
+        self.assertIn('Native Typora review required', markup)
+        self.assertEqual(markup.count('class="diagram-source"'), 4)
+        self.assertIn('Alice-&gt;&gt;Bob:', markup)
+        self.assertNotIn('<script', markup)

@@ -1,3 +1,5 @@
+Version-aware naming (2026-10-18): `apt`/`dnf`/`rpm`/`yum`/`eopkg` identify theme versions 1–5. New runs emit one authoritative freely named target file and indexed manifests, with documented native exceptions. [Contract](docs/OUTPUT-NAMING.md); [local evidence](migration/version-naming-acceptance-2026-10-18.json). Existing runs and public copies are preserved.
+
 Atlas collection refresh (2026-10-16): all 19 `apt-*`/`dnf-*` runs, 608 canonical colors and 171 copied offline examples, including GFM and CodeMirror 5/6. [Collection and usage](docs/CHROMATIC-ATLAS.md).
 
 Chromatic Atlas pilot (2026-10-16): read-only palette matrix, OKLab color-space projections and provenance inspector over current pipeline snapshots. [Contract and local usage](docs/CHROMATIC-ATLAS.md).
@@ -7,6 +9,8 @@ Markdown/editor extension (2026-10-16): fifteen defaults, including `markdown`, 
 Kmindz extension (2026-10-14): twelfth default target, dark `KMINDS.json` output from the supplied v1 template, with canonical preservation and separate native acceptance. [Contract](docs/KMINDZ-TARGET.md).
 
 # Logos-And-Theming
+
+Operator presentations (2026-10-17): [five themed decks](docs/presentations/operators-2026-10-17/README.md), 16 slides each, cover palette design, Chromatic Atlas, Markdown/CodeMirror, converters and safe operation. Native PowerPoint opening/rendering, PDF companions, offline source snapshots and 22 focused tests are recorded in the collection. Local template-preserving authoring was selected after the SlideForge wallet gate; no top-up, activation or publication occurred. These decks are dated documentation, with manual edit/save/reopen acceptance still unperformed.
 
 Output naming (2026-10-16): all fifteen exporters provide named copies and SHA-256 file manifests for central collection; native package filenames and existing runs remain preserved. [Naming contract](docs/OUTPUT-NAMING.md).
 

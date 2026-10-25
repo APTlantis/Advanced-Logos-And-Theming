@@ -5,6 +5,7 @@ const assert = require('node:assert/strict');
 const {pathToFileURL} = require('node:url');
 const [run, playwright, executablePath] = process.argv.slice(2);
 const {chromium} = require(playwright);
+const artifactFile=require('./artifact_paths.cjs');
 (async () => {
  const directory = path.resolve(run, 'typora');
  const browser = await chromium.launch({headless:true, ...(executablePath ? {executablePath} : {})});
@@ -16,7 +17,7 @@ const {chromium} = require(playwright);
   await page.route(/^https?:/, r => {record.external_requests.push(r.request().url());return r.abort();});
   for (const width of [1440,900,390]) {
    await page.setViewportSize({width,height:1000});
-   await page.goto(pathToFileURL(path.join(directory,'examples.html')).href);
+   await page.goto(pathToFileURL(path.join(directory,artifactFile(path.resolve(run),'typora','examples.html'))).href);
    const check = await page.evaluate(() => {
     const table=document.querySelector('#alignment'), cells=[...table.querySelectorAll('tbody tr:first-child td')];
     const style=getComputedStyle(cells[0]);

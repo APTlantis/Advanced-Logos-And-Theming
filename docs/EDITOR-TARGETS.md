@@ -1,3 +1,5 @@
+New freely named editor payloads and specimens follow [version-aware naming](OUTPUT-NAMING.md); discover exact files through the run artifact manifests. Existing native format contracts remain applicable.
+
 # Alacritty, Notepad++ and Sublime Text exports
 
 Contract review: 2026-10-08. These are dark exports derived from the unchanged canonical 32 colors. Budgets limit named tokens; reuse and counts below the budget are intentional.

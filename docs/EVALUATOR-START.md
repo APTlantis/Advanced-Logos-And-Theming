@@ -1,3 +1,5 @@
+Version-aware naming (2026-10-18): [contract](OUTPUT-NAMING.md), shared identity resolver and authoritative artifact inventories replace compatibility copies in future runs. [Fresh evidence](../migration/version-naming-acceptance-2026-10-18.json). Earlier evaluator/native/hosting records remain dated.
+
 Current Atlas scope: all 19 apt/dnf runs, with offline example links. [Collection contract](CHROMATIC-ATLAS.md) and [acceptance](../migration/chromatic-atlas-collection-acceptance-2026-10-16.json). Earlier 13-theme records are historical.
 
 Atlas extension (2026-10-16): [contract](CHROMATIC-ATLAS.md), [local evidence](../migration/chromatic-atlas-acceptance-2026-10-16.json); separate read-only collection output, fifteen theme targets unchanged. Read-map mandatory/priority selection now occupies 23 of 25 files.
@@ -5,6 +7,8 @@ Atlas extension (2026-10-16): [contract](CHROMATIC-ATLAS.md), [local evidence](.
 Current extension: **2026-10-16**. [Markdown/editor contract](MARKDOWN-EDITORS.md), [evidence](../migration/browser-themes-acceptance-2026-10-16.json). Browser and installed-wheel checks are distinct from downstream acceptance. The original evaluator preflight below remains dated.
 
 # Evaluator starting context
+
+Documentation addition (2026-10-17): [five operator presentations](presentations/operators-2026-10-17/README.md) are dated, source-backed orientation material. [The collection receipt](presentations/operators-2026-10-17/validation/delivery.json) separates exact template preservation, native opening/rendering, PDF inspection and 22 focused pipeline/converter tests from unperformed manual edit/save/reopen checks. This documentation work does not promote engine/native application acceptance, install themes or change public copies. Read the collection only when presentation review is relevant; current code/contracts remain authoritative.
 
 Source checked: **2026-10-10**. Canonical project name: **Logos-And-Theming**. Package version: **0.1.0**. Stage: **local-pilot**. Governed by CTS with WGS/PPS; SESM metadata embedding belongs to the independent sibling project.
 

@@ -1,3 +1,5 @@
+Version-aware naming tests cover all five generations and fifteen targets, artifact inventories/hashes/references, identity inference/conflicts, native exceptions and mixed Atlas formats. Existing exporter tests now use the generated inventory; exact filename assertions live in `tests/test_output_names.py`. See [fresh evidence](../migration/version-naming-acceptance-2026-10-18.json) for the current suite result.
+
 ## Complete Atlas collection - 2026-10-16
 
 Current suite: 53 methods. Two added tests cover separate apt/dnf identities, bounded default selection, portable example copies and source hashes. The browser checker verifies all 19 exact run names and opens copied GFM/CodeMirror 5/6 examples with network requests restricted to loopback. [Current evidence](../migration/chromatic-atlas-collection-acceptance-2026-10-16.json). Earlier 51-method / 13-theme records remain historical.

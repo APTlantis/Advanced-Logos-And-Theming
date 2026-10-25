@@ -116,7 +116,7 @@ class PipelineTests(unittest.TestCase):
             self.assertLessEqual(result["named_count"], budget)
             self.assertEqual(result["contrast_failures"], 0)
             destination = self.root / target
-            export(result, destination, "Test Dark", self.colors, "a" * 64)
+            export(result, destination, "Test Dark", self.colors, "a" * 64, theme_version=1)
             stem = "apt-test-dark-" + target.replace("_", "-")
             self.assertEqual(result["palette_artifacts"], {
                 "palette": stem + "-palette.toml", "swatch": stem + "-swatch.png"})
@@ -139,13 +139,13 @@ class PipelineTests(unittest.TestCase):
                 for i, token in enumerate(result["tokens"].values()):
                     self.assertEqual(swatch.getpixel(((i % 4) * 300 + 20, 90 + (i // 4) * 100)), tuple(token["rgb"]))
             if target == "windows_terminal":
-                scheme = json.loads((destination / "windows-terminal.json").read_text())
+                scheme = json.loads((destination / result["artifact_paths"]["windows-terminal.json"]).read_text())
                 self.assertEqual(len(scheme), 21)
                 self.assertTrue(all(re.fullmatch(r"#[0-9A-F]{6}", v) for k, v in scheme.items() if k != "name"))
                 self.assertLess(hue_distance(result["tokens"]["yellow"]["oklch"][2], 85), 45)
                 self.assertLess(hue_distance(result["tokens"]["cyan"]["oklch"][2], 205), 45)
             elif target == "alacritty":
-                native = tomllib.loads((destination / "test-dark.toml").read_text())['colors']
+                native = tomllib.loads((destination / result["artifact_paths"]["test-dark.toml"]).read_text())['colors']
                 self.assertEqual(set(native), {"primary", "cursor", "selection", "normal", "bright"})
                 self.assertEqual(len(native["normal"]), 8)
                 self.assertEqual(len(native["bright"]), 8)
@@ -212,30 +212,30 @@ class PipelineTests(unittest.TestCase):
                               if node.get(key, "").startswith("#")}
                     self.assertLessEqual(paints, {c["hex"] for c in result["tokens"].values()})
                 if target == "syntax_highlighting":
-                    css = (destination / "prism.css").read_text()
+                    css = (destination / result["artifact_paths"]["prism.css"]).read_text()
                     self.assertIn(".token.class-name", css)
                     self.assertIn(".token.boolean", css)
                     self.assertIn("var(--apt-diff-added)", css)
-                    self.assertIn('vendor/prism/prism-core.js', (destination / "syntax-example.html").read_text())
-                    self.assertNotIn('<span class="token', (destination / "syntax-example.html").read_text())
+                    self.assertIn('vendor/prism/prism-core.js', (destination / result["artifact_paths"]["syntax-javascript.html"]).read_text())
+                    self.assertNotIn('<span class="token', (destination / result["artifact_paths"]["syntax-javascript.html"]).read_text())
                 if target == "data_visualization":
-                    scale = json.loads((destination / "scales.json").read_text())["sequential"]
+                    scale = json.loads((destination / result["artifact_paths"]["scales.json"]).read_text())["sequential"]
                     self.assertEqual(len(scale), 9)
                     lightness = [result["tokens"][f"sequential_{i}"]["oklch"][0] for i in range(9)]
                     self.assertEqual(lightness, sorted(lightness))
                     self.assertTrue(all(result["tokens"][f"sequential_{i}"]["origin"]["source"] == roles["primary"] for i in range(9)))
                     self.assertIn("axes.prop_cycle: cycler(", next(destination.glob("*.mplstyle")).read_text())
             elif target in ("markdown", "codemirror5", "codemirror6"):
-                self.assertTrue((destination / "examples.html").is_file())
-                self.assertTrue((destination / "dependencies.json").is_file())
+                self.assertTrue((destination / result["artifact_paths"]["examples.html"]).is_file())
+                self.assertTrue((destination / result["artifact_paths"]["dependencies.json"]).is_file())
                 if target == "codemirror6":
-                    self.assertIn("export const extension=", (destination / "theme.mjs").read_text())
+                    self.assertIn("export const extension=", (destination / result["artifact_paths"]["theme.mjs"]).read_text())
             elif target == "kmindz":
-                native = json.loads((destination / "KMINDS.json").read_text())
+                native = json.loads((destination / result["artifact_paths"]["KMINDS.json"]).read_text())
                 self.assertEqual(native["kind"], "kmind.theme-package")
                 self.assertEqual(set(native["theme"]["variants"]), {"dark"})
                 self.assertEqual(native["theme"]["variants"]["dark"]["tokens"]["paint"]["bg"], result["tokens"]["background"]["hex"])
-                self.assertTrue((destination / "preview.svg").is_file())
+                self.assertTrue((destination / result["artifact_paths"]["preview.svg"]).is_file())
             else:
                 css = next(destination.glob("*.css")).read_text()
                 declared = set(re.findall(r"(--[\w-]+)\s*:", css))
@@ -243,9 +243,9 @@ class PipelineTests(unittest.TestCase):
                 self.assertFalse(refs - declared)
                 self.assertEqual(css.count("{"), css.count("}"))
                 if target == "siyuan":
-                    with zipfile.ZipFile(destination / "package.zip") as bundle:
+                    with zipfile.ZipFile(destination / result["artifact_paths"]["package.zip"]) as bundle:
                         self.assertEqual(set(bundle.namelist()), {"theme.css", "theme.json", "README.md", "icon.png", "preview.png"})
-                    self.assertEqual(json.loads((destination / "theme.json").read_text())["modes"], ["dark"])
+                    self.assertEqual(json.loads((destination / result["artifact_paths"]["theme.json"]).read_text())["modes"], ["dark"])
         self.assertEqual(self.colors, before)
         for target, minimum in (("svg", 28), ("data_visualization", 37), ("syntax_highlighting", 22)):
             with self.assertRaisesRegex(ValueError, "mandatory"):
@@ -263,9 +263,9 @@ class PipelineTests(unittest.TestCase):
     def test_generated_target_palette_names_and_review_links(self):
         from PIL import Image
         from apt_theme.target_palette import artifact_stem
-        self.assertEqual(artifact_stem("Aptlantis-Clogure", "notepad_plus_plus"), "apt-clogure-notepad-plus-plus")
+        self.assertEqual(artifact_stem("Aptlantis-Clogure", "notepad_plus_plus", 1), "apt-clogure-notepad-plus-plus")
         self.assertEqual(artifact_stem("apt-Scratch", "windows_terminal"), "apt-scratch-windows-terminal")
-        self.assertEqual(artifact_stem("../Scratch / Dark", "svg"), "apt-scratch-dark-svg")
+        self.assertEqual(artifact_stem("../Scratch / Dark", "svg", 1), "apt-scratch-dark-svg")
         image = Image.new("RGB", (32, 1))
         for i, color in enumerate(self.colors.values()):
             image.putpixel((i, 0), tuple(color["rgb"]))
@@ -273,10 +273,10 @@ class PipelineTests(unittest.TestCase):
         image.save(source)
         before = source.read_bytes()
         output = self.root / "generated"
-        self.assertEqual(main(["generate", str(source), "--output", str(output),
+        self.assertEqual(main(["generate", "--theme-version", "1", str(source), "--output", str(output),
                                "--name", "Aptlantis-Scratch", "--targets", "windows_terminal,notepad_plus_plus,website"]), 0)
         for target in ("windows_terminal", "notepad_plus_plus", "website"):
-            stem = artifact_stem("Aptlantis-Scratch", target)
+            stem = artifact_stem("Aptlantis-Scratch", target, 1)
             for suffix in ("palette.toml", "swatch.png"):
                 relative = f"{target}/{stem}-{suffix}"
                 self.assertTrue((output / relative).is_file())
@@ -290,7 +290,7 @@ class PipelineTests(unittest.TestCase):
     def test_import_roundtrip_determinism_and_overwrite(self):
         path = self.fixture_palette()
         output = self.root / "output"
-        args = ["import", str(path), "--output", str(output)]
+        args = ["import", "--theme-version", "1", str(path), "--output", str(output)]
         self.assertEqual(main(args), 0)
         loaded, _ = load_palette(output / "palette.toml")
         self.assertEqual({k: c["hex"] for k, c in loaded.items()}, {k: c["hex"] for k, c in self.colors.items()})
@@ -305,8 +305,8 @@ class PipelineTests(unittest.TestCase):
         config = self.root / "bad-background.toml"
         config.write_text('[overrides]\nbackground = "color_32"\n')
         output = self.root / "strict"
-        self.assertEqual(main(["import", str(path), "--config", str(config), "--output", str(output), "--strict"]), 2)
-        self.assertTrue((output / "windows_terminal" / "windows-terminal.json").exists())
+        self.assertEqual(main(["import", "--theme-version", "1", str(path), "--config", str(config), "--output", str(output), "--strict"]), 2)
+        self.assertTrue((output / "windows_terminal" / "apt-test-dark-windows-terminal.json").exists())
         self.assertGreater(json.loads((output / "run.json").read_text())["contrast_failures"], 0)
 
     def test_powerpoint_template_failure_preserves_previous_output(self):
@@ -316,7 +316,7 @@ class PipelineTests(unittest.TestCase):
         (output / "operator-note.txt").write_text("Previous generated output")
         before = hashes(output)
         with patch("apt_theme.powerpoint.template_parts", side_effect=ValueError("PowerPoint template unavailable")):
-            self.assertEqual(main(["import", str(self.fixture_palette()), "--output", str(output),
+            self.assertEqual(main(["import", "--theme-version", "1", str(self.fixture_palette()), "--output", str(output),
                                    "--targets", "powerpoint", "--overwrite"]), 1)
         self.assertEqual(hashes(output), before)
 
@@ -385,15 +385,15 @@ class PipelineTests(unittest.TestCase):
     def test_invalid_input_config_and_nonpipeline_overwrite(self):
         path = self.root / "bad.toml"
         path.write_text("invalid syntax")
-        self.assertEqual(main(["import", str(path), "--output", str(self.root / "bad")]), 1)
+        self.assertEqual(main(["import", "--theme-version", "1", str(path), "--output", str(self.root / "bad")]), 1)
         valid = self.fixture_palette()
         config = self.root / "config.toml"
         config.write_text("[unknown]\nvalue = 1\n")
-        self.assertEqual(main(["import", str(valid), "--config", str(config), "--output", str(self.root / "bad")]), 1)
+        self.assertEqual(main(["import", "--theme-version", "1", str(valid), "--config", str(config), "--output", str(self.root / "bad")]), 1)
         protected = self.root / "protected"
         protected.mkdir()
         (protected / "important.txt").write_text("keep")
-        self.assertEqual(main(["import", str(valid), "--output", str(protected), "--overwrite"]), 1)
+        self.assertEqual(main(["import", "--theme-version", "1", str(valid), "--output", str(protected), "--overwrite"]), 1)
         self.assertTrue((protected / "important.txt").exists())
 
     def test_json_envelope_and_bom_configuration(self):
@@ -402,7 +402,7 @@ class PipelineTests(unittest.TestCase):
         config.write_text('[profiles.windows_terminal]\nbudget = 20\n', encoding="utf-8-sig")
         stdout = io.StringIO()
         with redirect_stdout(stdout):
-            code = main(["import", str(palette), "--config", str(config), "--targets", "windows_terminal", "--output", str(self.root / "json"), "--json"])
+            code = main(["import", "--theme-version", "1", str(palette), "--config", str(config), "--targets", "windows_terminal", "--output", str(self.root / "json"), "--json"])
         self.assertEqual(code, 0)
         envelope = json.loads(stdout.getvalue())
         self.assertEqual(envelope["tool"], "apt-theme")

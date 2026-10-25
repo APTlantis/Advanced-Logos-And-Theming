@@ -1,3 +1,5 @@
+Target filenames now follow the [version-aware naming contract](OUTPUT-NAMING.md). Use `run.json.artifact_manifests` to discover actual paths; the generic target paths below describe logical/native roles and dated contracts. New freely named payloads, metadata and specimens have a single versioned filename. Required native package members remain fixed.
+
 Atlas collection update (2026-10-16): the current snapshot has 19 runs and 608 canonical colors. The inspector links 171 offline examples, copied with dependencies and `examples-manifest.json` hashes. [Exact collection and contracts](CHROMATIC-ATLAS.md).
 
 Chromatic Atlas (2026-10-16) adds collection-level `index.html`, `styles.css`, `app.js`, `atlas.json`, `atlas-data.js`, `README.md` and an ownership marker through a separate `atlas` command. [Data, interaction and snapshot contract](CHROMATIC-ATLAS.md). The theme-target count stays fifteen.
@@ -28,7 +30,7 @@ Read alongside [commands](COMMAND-CONTRACT.md), [testing](TESTING-REFERENCE.md),
 
 The [website target reference](WEBSITE-TARGET.md) specifies native browser CSS, exact artifacts, 89 required tokens, integration markup and suitability limits. Its implementation is `apt_theme/website.py`; generation emits per-target palettes through the common exporter. The preserved legacy palette transformer is independently runnable and is not called by the current engine.
 
-`apt-theme generate` starts from an image; `apt-theme import` starts from a 32-entry palette. Both run the same semantic mapping, adaptation, export and reporting stages. All twelve IDs in [`DEFAULTS`](../apt_theme/targets.py) are selected by default. `--targets` accepts a comma-separated, unique subset of those exact IDs. Unsupported or duplicate IDs fail before export.
+`apt-theme generate` starts from an image; `apt-theme import` starts from a 32-entry palette. Both run the same semantic mapping, adaptation, export and reporting stages. All fifteen IDs in [`DEFAULTS`](../apt_theme/targets.py) are selected by default. `--targets` accepts a comma-separated, unique subset of those exact IDs. Unsupported or duplicate IDs fail before export.
 
 Here `<slug>` means the supplied name, lowercased, with runs of non-ASCII-alphanumeric characters replaced by hyphens and leading/trailing hyphens removed. An empty result becomes `aptlantis-theme`. Without `--name`, the input filename stem supplies the name. Each target has its own directory under the chosen run directory.
 
@@ -140,8 +142,8 @@ Every target also writes:
 |---|---|
 | `tokens.json` | target, budget, named_count, unique_count, tokens, checks, omitted_canonical, aliases, contrast_failures, plus exporter-specific metadata |
 | `validation.json` | checks, contrast_failures, native_visual_acceptance=`pending` |
-| `apt-<language>-<output-type>-palette.toml` | dark theme, original-input SHA-256, transformation counts/order/aliases/omissions, grouped actual tokens, role references, complete source palette and declared checks |
-| `apt-<language>-<output-type>-swatch.png` | 1,200-pixel-wide, four-column token preview; token name, exact hex, canonical/derived label and source ID |
+| `<prefix>-<theme>-<target>-palette.toml` | dark theme, original-input SHA-256, transformation counts/order/aliases/omissions, grouped actual tokens, role references, complete source palette and declared checks |
+| `<prefix>-<theme>-<target>-swatch.png` | 1,200-pixel-wide, four-column token preview; token name, exact hex, canonical/derived label and source ID |
 
 Source: [`target_palette.py`](../apt_theme/target_palette.py). Both generation and import emit these artifacts for every selected target. `tokens.json.palette_artifacts` and `review.html` expose their filenames. The language portion uses the supplied theme name or input stem, lowercased and slugged, with one leading `Aptlantis-` or `apt-` removed; output type is the current target ID slugged with hyphens. Example: `Aptlantis-Clogure` + `notepad_plus_plus` produces `apt-clogure-notepad-plus-plus-palette.toml` and `apt-clogure-notepad-plus-plus-swatch.png` in `notepad_plus_plus/`.
 
@@ -251,7 +253,7 @@ The gallery uses local image previews and exact-byte SVG downloads embedded as d
 
 Sources: [`syntax_examples.py`](../apt_theme/syntax_examples.py), [`PRISM` mapping](../apt_theme/visual_targets.py), [vendor manifest](../apt_theme/vendor/prism/manifest.json), [source manifest](../apt_theme/examples/syntax/manifest.json).
 
-Files: `prism.css`, `examples.css`, `examples.html`, twelve `syntax-<grammar>.html` pages, `syntax-example.html`, `sources/*`, `vendor/prism/*`, audit JSON. HTML uses grammar ID `markup`; C# uses `csharp`; C++ uses `cpp`. The other pages are javascript, typescript, python, css, json, sql, bash, powershell and toml. The compatibility `syntax-example.html` is byte-identical to the JavaScript page.
+Files: `prism.css`, `examples.css`, `examples.html`, twelve `syntax-<grammar>.html` pages, `syntax-example.html`, `sources/*`, `vendor/prism/*`, audit JSON. HTML uses grammar ID `markup`; C# uses `csharp`; C++ uses `cpp`. The other pages are javascript, typescript, python, css, json, sql, bash, powershell and toml. Historical runs retain the compatibility `syntax-example.html`; new pipeline runs emit only the versioned JavaScript specimen.
 
 Prism 1.30.0 core and required grammars are bundled with upstream license, tagged provenance, components metadata and SHA-256 manifest. `clike` and `c` supply required dependencies alongside the twelve example grammars. Generation checks vendor hashes, copies vendor/source files unchanged, escapes source into `<pre><code>`, and loads deferred local scripts in dependency order. The twelve source files each contain 25–50 lines plus language-specific explanations. Code is displayed, never evaluated by the generator or page. Download data URIs preserve original bytes, while browser text comparisons account for normal newline normalization.
 
@@ -314,5 +316,5 @@ Current contract authority is the source and active project/governance records. 
 The twelfth target is `kmindz`, implemented in [`kmindz.py`](../apt_theme/kmindz.py). The supplied `kmind.theme-package` v1 structure is bundled as a reference template; exported identity and every color come from the current run. Only the dark variant is emitted. See [native structure, mappings, provenance and acceptance limits](KMINDZ-TARGET.md).
 # Collectable filenames (2026-10-16)
 
-New generation/import runs also expose every authored top-level target file through the `apt-<theme>-<target>[-<role>]` convention. The native filenames in the reference below remain available for compatibility. [Output naming](OUTPUT-NAMING.md) defines main files, supporting roles, hash manifests and dependency limits.
+New generation/import runs emit freely named top-level target files through the `<prefix>-<theme>-<target>[-<role>]` convention, without compatibility copies. Generic names in this reference identify logical roles; only documented native package requirements retain fixed filenames. [Output naming](OUTPUT-NAMING.md) defines main files, supporting roles, hash manifests and dependency limits.
 

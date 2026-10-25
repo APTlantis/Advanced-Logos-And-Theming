@@ -1,3 +1,5 @@
+New freely named SVG/Prism/chart payloads, specimens and metadata follow [version-aware naming](OUTPUT-NAMING.md). The redundant JavaScript `syntax-example.html` alias is omitted in new pipeline runs; use the manifest-listed `syntax-javascript` specimen.
+
 # SVG, syntax highlighting and data visualization
 
 SVG gallery environment: the page, cards, text, links and focus outlines use fixed neutral colors independent of every theme. Palette-derived backgrounds remain inside the SVG compositions. Surrounding pages may use any background. Fresh preview: [neutral SVG gallery](../pilot/svg-neutral-gallery-2026-10-09/svg/examples.html). Earlier galleries remain historical previews.

@@ -1,3 +1,5 @@
+Default discovery now includes all five version families: `apt-*`, `dnf-*`, `rpm-*`, `yum-*`, `eopkg-*`. New runs resolve tokens/previews through versioned artifact manifests; legacy generic filenames remain readable. Explicit selection, source preservation and physical run identities remain unchanged. See [naming contract](OUTPUT-NAMING.md).
+
 # Chromatic Atlas local pilot
 
 Source reviewed 2026-10-16. A standalone read-only view of existing Logos-And-Theming runs, separate from the legacy `scripts/generate_atlas.py` asset gallery. This pilot adds a collection-level `atlas` command; it does not add a theme target, regenerate themes, edit canonical palettes or publish assets.
@@ -8,7 +10,7 @@ Source reviewed 2026-10-16. A standalone read-only view of existing Logos-And-Th
 .venv/Scripts/python.exe -m apt_theme.cli atlas output --output pilot/chromatic-atlas-new
 ```
 
-By default immediate `apt-*` and `dnf-*` child runs are included. Both families retain their physical directory names in the workspace. Use `--include apt-BlackGold apt-Ada` for an explicit smaller collection. Each selected run must have a dark pipeline `run.json` and a 32-entry canonical `palette.toml`. Missing semantic assignments or declared target JSON files produce visible snapshot findings; malformed identities, RGB disagreements and unresolved origins reject the snapshot. Unknown target usage is not invented.
+By default immediate `apt-*`, `dnf-*`, `rpm-*`, `yum-*` and `eopkg-*` child runs are included. Both families retain their physical directory names in the workspace. Use `--include apt-BlackGold apt-Ada` for an explicit smaller collection. Each selected run must have a dark pipeline `run.json` and a 32-entry canonical `palette.toml`. Missing semantic assignments or declared target JSON files produce visible snapshot findings; malformed identities, RGB disagreements and unresolved origins reject the snapshot. Unknown target usage is not invented.
 
 Open the generated `index.html` directly. All CSS, JavaScript and the normalized dataset are packaged locally; there are no external fonts, libraries, APIs or CDN requests. `atlas-data.js` contains the same data as `atlas.json` to support direct file opening. Alternatively, serve only the generated directory on loopback:
 

@@ -3,7 +3,7 @@ schema = "APTlantis Entity Manifest"
 schema_version = "2.4"
 manifest_type = "project"
 canonical_name = "Logos-And-Theming.manifest.toml"
-last_updated = "2026-10-16"
+last_updated = "2026-10-18"
 maintainer = "Herb"
 
 [entity]
@@ -47,6 +47,8 @@ project_proposal = "Project-Proposal.md"
 project_readme = "Project-README.md"
 readme = "README.md"
 overview_deck = "docs/presentations/Logos-And-Theming-Overview.pptx"
+operator_presentations = "docs/presentations/operators-2026-10-17/README.md"
+operator_presentations_index = "docs/presentations/operators-2026-10-17/index.html"
 documentation_suite_plan = "docs/documentation-suite/PLAN.md"
 hosting_guide = "docs/HOSTING.md"
 typora_review = "docs/TYPORA-REVIEW.md"
@@ -60,7 +62,8 @@ related_projects = ["SESM-Metadata-Embedder"]
 child_projects = []
 
 [verification]
-output_naming_evidence = "migration/output-naming-acceptance-2026-10-16.json"
+operator_presentations_evidence = "docs/presentations/operators-2026-10-17/validation/delivery.json"
+output_naming_evidence = "migration/version-naming-acceptance-2026-10-18.json"
 chromatic_atlas_evidence = "migration/chromatic-atlas-collection-acceptance-2026-10-16.json"
 browser_themes_evidence = "migration/browser-themes-acceptance-2026-10-16.json"
 kmindz_evidence = "migration/kmindz-acceptance-2026-10-14.json"

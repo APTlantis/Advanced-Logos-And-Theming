@@ -75,7 +75,7 @@ class Canvas:
         self.text(1164, 775, "ILLUSTRATIVE / EDITABLE VECTOR", "muted", 12, **{"text-anchor":"end"})
 
 
-def technical(tokens, directory):
+def technical(tokens, directory, artifact=lambda value: value):
     b = Canvas(tokens, "01 / Technical workflow", "Swimlanes, decisions, revision loops and preservation boundaries")
     lanes = [(120, "SOURCE", "Original bytes retained"), (285, "ENGINE", "Canonical identity stays separate"),
              (450, "REVIEW", "Local artifacts before application acceptance")]
@@ -111,10 +111,10 @@ def technical(tokens, directory):
         b.text(1008, 694, "No auto activation", "muted", 13)
         b.text(54, 701, "All stages keep dated recovery evidence", "foreground", 16)
     b.footer("TECHNICAL / Architecture, runbooks and process documentation")
-    b.save(directory / "technical-flow.svg")
+    b.save(directory / artifact('technical-flow.svg'))
 
 
-def editorial(tokens, directory):
+def editorial(tokens, directory, artifact=lambda value: value):
     b = Canvas(tokens, "02 / Editorial infographic", "Large typography, section hierarchy, reusable marks and layered composition")
     with b.layer("hero", "Canonical identity hero"):
         b.rect(36, 120, 350, 586, rx=16)
@@ -148,10 +148,10 @@ def editorial(tokens, directory):
             b.text(x+16, 679, title, "foreground", 29)
             b.text(x+65, 678, detail, "muted", 13)
     b.footer("EDITORIAL / Explainers, posters and presentation figures")
-    b.save(directory / "editorial-infographic.svg")
+    b.save(directory / artifact('editorial-infographic.svg'))
 
 
-def orbit(tokens, directory):
+def orbit(tokens, directory, artifact=lambda value: value):
     b = Canvas(tokens, "03 / Relationship map", "Concentric guides, six linked families, secondary nodes and a readable legend")
     cx, cy = 600, 386
     labels = [("Documents", "document", "Typography / tables"), ("Editors", "code", "Syntax / selections"),
@@ -189,10 +189,10 @@ def orbit(tokens, directory):
             b.rect(x,y-11,10,10,f"series_{i+1}",rx=2)
             b.text(x+19,y,title+" / "+detail,"foreground",13)
     b.footer("RELATIONSHIPS / System maps, taxonomies and dependency overviews")
-    b.save(directory / "orbit-map.svg")
+    b.save(directory / artifact('orbit-map.svg'))
 
 
-def icons(tokens, directory):
+def icons(tokens, directory, artifact=lambda value: value):
     b = Canvas(tokens, "04 / Reusable icon sheet", "Twelve local symbols • consistent strokes • three sizes • multiple surface treatments")
     with b.layer("icon-catalog", "Twelve labeled reusable icons"):
         for i, name in enumerate(ICONS):
@@ -211,10 +211,10 @@ def icons(tokens, directory):
             b.icon("check",x+20,658,34,"foreground")
             b.text(x+76,682,label,"foreground",19)
     b.footer("ICONS / UI assets, manuals, badges and diagram annotations")
-    b.save(directory / "icon-sheet.svg")
+    b.save(directory / artifact('icon-sheet.svg'))
 
 
-def wayfinding(tokens, directory):
+def wayfinding(tokens, directory, artifact=lambda value: value):
     b = Canvas(tokens, "05 / Wayfinding map", "Illustrative campus • paths, blocks, route markers, landmarks and a map key")
     with b.layer("map-base", "Campus blocks and pedestrian paths"):
         b.rect(36,120,820,586,rx=14)
@@ -262,10 +262,10 @@ def wayfinding(tokens, directory):
         b.text(904,637,"No distances or live routing.","muted",14)
         b.text(904,680,"NOT TO SCALE","muted",12)
     b.footer("WAYFINDING / Campus guides, floor plans and schematic maps")
-    b.save(directory / "wayfinding-map.svg")
+    b.save(directory / artifact('wayfinding-map.svg'))
 
 
-def illustration(tokens, directory):
+def illustration(tokens, directory, artifact=lambda value: value):
     b = Canvas(tokens, "06 / Product illustration", "Layered vector scene • clipping • tonal glow • repeated symbols • editorial callouts")
     gradient=ET.SubElement(b.defs,"radialGradient",id="tonal-glow",cx="50%",cy="50%",r="50%")
     for offset,opacity in [("0%",".18"),("100%","0")]:
@@ -320,7 +320,7 @@ def illustration(tokens, directory):
         b.path("M212 290H248","border",**{"stroke-dasharray":"4 5"})
         b.path("M946 292H984","border",**{"stroke-dasharray":"4 5"})
     b.footer("ILLUSTRATION / Product explainers, landing visuals and feature artwork")
-    b.save(directory / "product-illustration.svg")
+    b.save(directory / artifact('product-illustration.svg'))
 
 
 CATALOG = [
@@ -333,10 +333,11 @@ CATALOG = [
 ]
 
 
-def diagrams(tokens, directory):
+def diagrams(tokens, directory, artifact=lambda value: value):
     cards=[]
     for filename,title,description,draw in CATALOG:
-        draw(tokens,directory)
+        filename = artifact(filename)
+        draw(tokens,directory,artifact)
         download=base64.b64encode((directory / filename).read_bytes()).decode("ascii")
         cards.append(f'<article><h2><a href="{filename}">{html.escape(title)}</a></h2><p>{html.escape(description)}</p>'
                      f'<a download="{filename}" href="data:image/svg+xml;base64,{download}">Download editable SVG</a>'
@@ -349,11 +350,11 @@ article{margin:32px 0;padding:20px;border:1px solid #60656d;border-radius:12px;b
 .canvas{overflow:auto;margin-top:18px}img{display:block;width:100%;min-width:800px;aspect-ratio:3/2}
 a:focus-visible,.canvas:focus-visible{outline:3px solid #eceef0;outline-offset:4px}
 """
-    (directory / "examples.css").write_text(css,encoding="utf-8")
-    (directory / "examples.html").write_text('<!doctype html><html lang="en"><meta charset="utf-8">'
+    (directory / artifact('examples.css')).write_text(css,encoding="utf-8")
+    (directory / artifact('examples.html')).write_text('<!doctype html><html lang="en"><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1"><title>SVG composition gallery</title>'
-        '<link rel="stylesheet" href="examples.css"><main><h1>SVG composition gallery</h1>'
+        f'<link rel="stylesheet" href="{artifact('examples.css')}"><main><h1>SVG composition gallery</h1>'
         '<p>Six uses for editable vector artwork: workflows, editorial figures, relationship maps, icons, wayfinding and product illustration.</p>'
         '<p>The gallery uses a fixed neutral charcoal viewing environment. Only the SVG artwork, including its own background, uses exported theme colors; an embedding page can use any background.</p><p>Illustrative content. Native editor import requires separate review.</p>'+
         ''.join(cards)+'</main></html>',encoding="utf-8")
-    return [entry[0] for entry in CATALOG]
+    return [artifact(entry[0]) for entry in CATALOG]

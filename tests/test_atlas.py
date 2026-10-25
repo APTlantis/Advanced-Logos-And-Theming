@@ -15,6 +15,33 @@ from apt_theme.extraction import palette_toml
 
 
 class AtlasTests(unittest.TestCase):
+    def test_mixed_legacy_and_versioned_manifests(self):
+        from apt_theme.extraction import palette_toml
+        for version, prefix in ((3, 'rpm'), (4, 'yum'), (5, 'eopkg')):
+            source = self.root/(prefix+'-Three.toml')
+            source.write_text(palette_toml(self.colors, prefix+'-Three', 'a'*64), encoding='utf-8')
+            run = self.collection/(prefix+'-Three')
+            with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                self.assertEqual(main(['import', str(source), '--output', str(run), '--targets', 'markdown']), 0)
+            metadata = json.loads((run/'run.json').read_text(encoding='utf-8'))
+            self.assertEqual(metadata['theme_identity']['version'], version)
+        before = self.hashes(self.collection)
+        data = snapshot(self.collection)
+        self.assertEqual(len(data['themes']), 5)
+        for theme in data['themes']:
+            if theme['family'] in ('rpm', 'yum', 'eopkg'):
+                self.assertEqual(theme['targets'][0]['example'], 'examples/'+theme['run']+'/markdown/'+theme['family']+'-three-markdown-examples.html')
+        build(self.collection, self.root/'mixed-atlas')
+        self.assertEqual(before, self.hashes(self.collection))
+        run = self.collection/'rpm-Three'
+        metadata = json.loads((run/'run.json').read_text(encoding='utf-8'))
+        manifest_path = run/metadata['artifact_manifests']['markdown']
+        manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+        manifest['files'][0]['file'] = '../escape.json'
+        manifest_path.write_text(json.dumps(manifest), encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'Unsafe artifact'):
+            snapshot(self.collection)
+
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)

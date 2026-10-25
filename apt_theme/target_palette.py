@@ -5,17 +5,10 @@ import math
 from PIL import Image, ImageDraw, ImageFont
 
 
-def artifact_stem(name, target):
-    from .targets import slug
-    language = slug(name)
-    for prefix in ("aptlantis-", "apt-"):
-        if language.startswith(prefix):
-            language = language[len(prefix):]
-            break
-    return f"apt-{language or 'theme'}-{slug(target)}"
+from .output_names import artifact_stem
 
 
-def toml_document(data):
+def toml_document(data, root=()):
     """Serialize our tables, lists and scalar metadata without losing precision."""
     lines = []
     def value(item):
@@ -40,14 +33,15 @@ def toml_document(data):
         for key, item in items.items():
             if isinstance(item, dict):
                 table(item, [*path, key])
-    table(data, [])
+    table(data, list(root))
     return "\n".join(lines)
 
 
 def export_palette(result, directory, name, canonical, source_hash):
     tokens = result["tokens"]
-    stem = artifact_stem(name, result["target"])
-    files = {"palette": stem + "-palette.toml", "swatch": stem + "-swatch.png"}
+    from .output_names import artifact_names
+    artifact = artifact_names(result)
+    files = {"palette": artifact("palette.toml"), "swatch": artifact("swatch.png")}
     groups = {"canonical": {}, "derived": {}}
     for key, color in tokens.items():
         l, c, h = color["oklch"]
@@ -55,7 +49,7 @@ def export_palette(result, directory, name, canonical, source_hash):
             "hex": color["hex"], "rgb": color["rgb"], "oklch": {"l": l, "c": c, "h": h},
             "origin": color["origin"]}
     document = {
-        "theme": {"name": name, "variant": "dark", "source_sha256": source_hash,
+        "theme": {"name": name, "theme_identity": result["theme_identity"], "variant": "dark", "source_sha256": source_hash,
                   "final_colors": result["named_count"]},
         "transformation": {"schema": "aptlantis.target-palette.v1", "profile": result["target"],
                            "requested_count": result["budget"], "actual_count": result["named_count"],

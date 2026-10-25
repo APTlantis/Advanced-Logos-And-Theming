@@ -1,4 +1,8 @@
-# Black-Gold project overview
+# Presentations
+
+[Five themed operator presentations — 17 October 2026](operators-2026-10-17/README.md) provide 80 editable slides across pipeline/palette design (Ada), Chromatic Atlas (Julia), Markdown/CodeMirror (Scratch), logo conversion (Crystal), and validation/safe operation (Swift). [Browse the offline collection](operators-2026-10-17/index.html) for PowerPoint/PDF files, slide previews, notes and hashed source snapshots. Native opening/rendering and 22 focused tests passed; manual edit/save/reopen remains unperformed. Local authoring was explicitly selected after SlideForge rejected template import without a paid wallet top-up. These are dated documentation artifacts; current implementation contracts remain authoritative.
+
+## Black-Gold project overview
 
 [Logos-And-Theming-Overview.pptx](Logos-And-Theming-Overview.pptx) is the detailed 24-slide overview created on 8 October 2026. [The documentation suite plan](../documentation-suite/PLAN.md) specifies ten further volumes, with audiences, chapter outlines, sources, ownership, dependencies and acceptance criteria.
 

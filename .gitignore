@@ -3349,3 +3349,21 @@ dist/
 /Theming Index/projectdb.pgml
 /.idea/
 /pilot/
+/migration/
+/evidence/
+/apt_theme/
+
+# Reviewable source/evidence for version-aware naming; other ignored content stays ignored.
+!/apt_theme/
+/apt_theme/*
+!/apt_theme/identity.py
+!/apt_theme/output_names.py
+!/apt_theme/atlas.py
+!/apt_theme/browser_themes.py
+!/apt_theme/kmindz.py
+!/migration/
+/migration/*
+!/migration/version-naming-acceptance-2026-10-18.json
+/docs/
+/migration/
+/docs/

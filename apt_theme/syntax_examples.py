@@ -20,15 +20,15 @@ def verify_vendor(directory=VENDOR):
     return manifest
 
 
-def page(title, body, scripts=""):
+def page(title, body, scripts="", artifact=lambda value: value):
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
-            '<title>' + html.escape(title) + '</title><link rel="stylesheet" href="prism.css">'
-            '<link rel="stylesheet" href="examples.css"></head><body><main>' + body +
+            '<title>' + html.escape(title) + f'</title><link rel="stylesheet" href="{artifact('prism.css')}">'
+            f'<link rel="stylesheet" href="{artifact('examples.css')}"></head><body><main>' + body +
             '</main>' + scripts + '</body></html>')
 
 
-def syntax(tokens, directory):
+def syntax(tokens, directory, artifact=lambda value: value):
     from .targets import css_tokens
     from .visual_targets import PRISM
     manifest = verify_vendor()
@@ -55,8 +55,8 @@ pre[class*='language-'] ::selection, code[class*='language-']::selection {
         token = key if key in tokens else fallback[key]
         selectors = ", ".join(".token." + cls for cls in classes.split())
         css += f"{selectors} {{ color:var(--apt-{token.replace('_', '-')}); }}\n"
-    (directory / "prism.css").write_text(css, encoding="utf-8")
-    (directory / "examples.css").write_text("""
+    (directory / artifact('prism.css')).write_text(css, encoding="utf-8")
+    (directory / artifact('examples.css')).write_text("""
 *{box-sizing:border-box} body{margin:0;background:var(--apt-background);color:var(--apt-foreground);font:17px/1.6 Arial,sans-serif}
 main{max-width:1100px;margin:auto;padding:clamp(16px,4vw,40px);min-width:0}
 h1{line-height:1.2} a{color:var(--apt-primary)} a:focus-visible,pre:focus-visible{outline:3px solid var(--apt-primary);outline-offset:4px}
@@ -71,27 +71,27 @@ nav{display:flex;gap:12px;flex-wrap:wrap} pre{max-width:100%;border:1px solid va
     cards = []
     for index, example in enumerate(examples):
         language = example["language"]
-        filename = f"syntax-{language}.html"
+        filename = artifact(f"syntax-{language}.html")
         previous = examples[(index - 1) % len(examples)]["language"]
         following = examples[(index + 1) % len(examples)]["language"]
         source = (SOURCES / example["file"]).read_text(encoding="utf-8")
         download = base64.b64encode((SOURCES / example["file"]).read_bytes()).decode("ascii")
-        body = ('<nav aria-label="Example navigation"><a href="examples.html">All languages</a>'
-                f'<a href="syntax-{previous}.html">Previous</a><a href="syntax-{following}.html">Next</a></nav>'
+        body = (f'<nav aria-label="Example navigation"><a href="{artifact('examples.html')}">All languages</a>'
+                f'<a href="{artifact(f'syntax-{previous}.html')}">Previous</a><a href="{artifact(f'syntax-{following}.html')}">Next</a></nav>'
                 f'<h1>{html.escape(example["title"])} / syntax review</h1>'
                 f'<p>{html.escape(example["description"])}</p>'
                 '<p class="note">Prism 1.30.0 highlights this source locally. Example code is never executed.</p>'
                 f'<a download="{example["file"]}" href="data:text/plain;base64,{download}">Download source</a>'
                 f'<pre tabindex="0" aria-label="{example["title"]} source" class="language-{language}">'
                 f'<code data-source="sources/{example["file"]}" class="language-{language}">{html.escape(source)}</code></pre>')
-        rendered = page(example["title"] + " syntax review", body, scripts)
+        rendered = page(example["title"] + " syntax review", body, scripts, artifact)
         (directory / filename).write_text(rendered, encoding="utf-8")
-        if language == "javascript":
-            (directory / "syntax-example.html").write_text(rendered, encoding="utf-8")
+        if language == "javascript" and not hasattr(artifact, "identity"):
+            (directory / artifact('syntax-example.html')).write_text(rendered, encoding="utf-8")
         pages.append(filename)
         cards.append(f'<li><a href="{filename}">{example["title"]}</a><p>{example["description"]}</p></li>')
-    (directory / "examples.html").write_text(page("Syntax examples", '<h1>Syntax highlighting</h1>'
+    (directory / artifact('examples.html')).write_text(page("Syntax examples", '<h1>Syntax highlighting</h1>'
         '<p>Twelve language examples with bundled offline Prism grammars and downloadable source.</p>'
         '<p class="note">Illustrative code; host integration and native editor behavior require separate review.</p>'
-        '<ul class="cards">' + ''.join(cards) + '</ul>'), encoding="utf-8")
+        '<ul class="cards">' + ''.join(cards) + '</ul>', artifact=artifact), encoding="utf-8")
     return pages

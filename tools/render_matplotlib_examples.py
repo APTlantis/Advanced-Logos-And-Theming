@@ -10,6 +10,9 @@ import sys
 import hashlib
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from apt_theme.output_names import artifact_file
+
 
 def render(run, dependencies=None):
     if dependencies:
@@ -20,8 +23,8 @@ def render(run, dependencies=None):
     from matplotlib.colors import ListedColormap, to_hex
     run = run.resolve()
     directory = run / "data_visualization"
-    result = json.loads((directory / "tokens.json").read_text())
-    data = json.loads((directory / "example-data.json").read_text())
+    result = json.loads(artifact_file(run, "data_visualization", "tokens.json").read_text())
+    data = json.loads(artifact_file(run, "data_visualization", "example-data.json").read_text())
     # Older preserved runs have the same value keys without label metadata.
     point_count = max(len(values) for values in data["lines"])
     data.setdefault("hatches", ["/", "\\", "|", "-", "+", "x"])
@@ -31,7 +34,7 @@ def render(run, dependencies=None):
     data.setdefault("series_labels", [f"Series {i}" for i in range(1, len(data["lines"]) + 1)])
     data.setdefault("heatmap_columns", data["categories"][:len(data["heatmap"][0])])
     data.setdefault("heatmap_rows", [f"Row {i}" for i in range(1, len(data["heatmap"]) + 1)])
-    scales = json.loads((directory / "scales.json").read_text())
+    scales = json.loads(artifact_file(run, "data_visualization", "scales.json").read_text())
     style = next(directory.glob("*.mplstyle"))
     messages = io.StringIO()
     handler = logging.StreamHandler(messages)
@@ -104,7 +107,7 @@ def render(run, dependencies=None):
         logging.getLogger("matplotlib").removeHandler(handler)
     evidence = {"matplotlib_version": mpl.__version__, "backend": "Agg", "style": style.name,
                 "parser_diagnostics": messages.getvalue(), "style_color_assertions": "passed", "outputs": outputs,
-                "data_sha256": hashlib.sha256((directory / "example-data.json").read_bytes()).hexdigest(),
+                "data_sha256": hashlib.sha256(artifact_file(run, "data_visualization", "example-data.json").read_bytes()).hexdigest(),
                 "data_assertions": counts, "text_bounds": "passed",
                 "scope": "Local style loading and static Agg render; no interactive GUI or external application import."}
     (run / "matplotlib-render-evidence.json").write_text(json.dumps(evidence, indent=2)+"\n")

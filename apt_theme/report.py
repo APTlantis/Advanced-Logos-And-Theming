@@ -64,14 +64,14 @@ def review(directory, name, colors, candidates, roles, notices, results, diagnos
         for label, filename in result.get("palette_artifacts", {}).items():
             path = html.escape(result["target"] + "/" + filename, quote=True)
             pieces.append(f'<p><a href="{path}" download>Download target {label}</a></p>')
-        named = result.get("named_exports", {})
+        named = result.get("artifact_manifest", {})
         if named:
             links = "".join('<li><a download href="' + html.escape(result["target"] + "/" + item["file"], quote=True) + '">' + html.escape(item["file"]) + '</a></li>' for item in named["files"])
-            pieces.append('<details><summary>Named files for collection</summary><ul>' + links + '</ul></details>')
+            pieces.append('<details><summary>Artifact inventory</summary><ul>' + links + '</ul></details>')
         if result["target"] == "kmindz":
-            pieces.append('<p><a href="kmindz/KMINDS.json" download>Download Kmindz package</a> · <a href="kmindz/preview.svg">Authored dark hierarchy preview</a></p>')
+            pieces.append('<p><a href="kmindz/KMINDS.json" download>Download Kmindz package</a> · <a href="kmindz/' + html.escape(result['kmindz']['preview'], quote=True) + '">Authored dark hierarchy preview</a></p>')
         if "examples" in result:
-            pieces.append('<p><a href="' + result['target'] + '/examples.html">Open visual examples</a></p>')
+            pieces.append('<p><a href="' + result['target'] + '/' + html.escape(result['artifact_paths']['examples.html'], quote=True) + '">Open visual examples</a></p>')
         style = f'background:{t["background"]["hex"]};color:{t["foreground"]["hex"]};padding:24px;border-radius:8px'
         if result["target"] in ("windows_terminal", "alacritty"):
             from .targets import ANSI

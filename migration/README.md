@@ -1,3 +1,7 @@
+## Version-aware naming - 2026-10-18
+
+Future generation/import uses [the versioned naming contract](../docs/OUTPUT-NAMING.md). Retain prior runs and follow their own integration instructions for recovery; no historical files or archives are renamed. Fresh [acceptance evidence](version-naming-acceptance-2026-10-18.json) is additive. No parent registration, root identity, lifecycle or release promotion changes require portfolio/root record updates.
+
 ## Complete Atlas collection - 2026-10-16
 
 [Current acceptance](chromatic-atlas-collection-acceptance-2026-10-16.json) supersedes the initial 13-theme record for the current Atlas link. It covers all 19 supplied apt/dnf runs, 608 canonical colors, 171 copied offline examples and 53 passing tests. The original pilot is preserved at `pilot/chromatic-atlas-initial-2026-10-16`; source outputs are unchanged. The copied example manifest records every file hash. [Contract](../docs/CHROMATIC-ATLAS.md).
