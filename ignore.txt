@@ -1,0 +1,29 @@
+apt-theme generate assets\sources\apt-blackgold-logo.png --output output\apt-BlackGold --name 'Aptlantis-BlackGold' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-crystal-logo.png --output output\apt-Crystal --name 'Aptlantis-Crystal' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-factor-logo.png --output output\apt-Factor --name 'Aptlantis-Factor' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-neonink-logo.png --output output\apt-NeonInk --name 'Aptlantis-NeonInk' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-pnpm-logo.png --output output\apt-PNPM --name 'Aptlantis-PNPM' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-racket-logo.png --output output\apt-Racket --name 'Aptlantis-Racket' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-scratch-logo.png --output output\apt-Scratch --name 'Aptlantis-Scratch' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-spark-logo.png --output output\apt-Spark --name 'Aptlantis-Spark' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-swift-logo.png --output output\apt-Swift --name 'Aptlantis-Swift' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-blueslate-logo.png --output output\apt-BlueSlate --name 'Aptlantis-BlueSlate' --overwrite --theme-version 1
+
+apt-theme generate assets\sources\dnf-ada-logo.png --output output\dnf-Ada --name 'Aptlantis-Ada' --overwrite --theme-version 2
+apt-theme generate assets\sources\dnf-assembly-logo.png --output output\dnf-Assembly --name 'Aptlantis-Assembly' --overwrite --theme-version 2
+apt-theme generate assets\sources\dnf-caddy-logo.png --output output\dnf-Caddy --name 'Aptlantis-Caddy' --overwrite --theme-version 2
+apt-theme generate assets\sources\dnf-clojure-logo.png --output output\dnf-Clojure --name 'Aptlantis-Clojure' --overwrite --theme-version 2
+apt-theme generate assets\sources\dnf-cloudflare-logo.png --output output\dnf-Clooudflare --name 'Aptlantis-Cloudflare' --overwrite --theme-version 2
+apt-theme generate assets\sources\dnf-dbase-logo.png --output output\dnf-DBase --name 'Aptlantis-DBase' --overwrite
+apt-theme generate assets\sources\dnf-flathub-logo.png --output output\dnf-Flathub --name 'Aptlantis-Flathub' --overwrite
+apt-theme generate assets\sources\dnf-fsharp-logo.png --output output\dnf-Fsharp --name 'Aptlantis-Fsharp' --overwrite
+apt-theme generate assets\sources\dnf-julia-logo.png --output output\dnf-Julia --name 'Aptlantis-Julia' --overwrite
+apt-theme generate assets\sources\dnf-neonink-logo.png --output output\dnf-NeonInk --name 'Aptlantis-NeonInk' --overwrite
+apt-theme generate assets\sources\dnf-php-logo.png --output output\dnf-PHP --name 'Aptlantis-PHP' --overwrite
+apt-theme generate assets\sources\dnf-powershell-logo.png --output output\dnf-PowerShell --name 'Aptlantis-PowerShell' --overwrite
+apt-theme generate assets\sources\dnf-qbasic-logo.png --output output\dnf-QBasic --name 'Aptlantis-QBasic' --overwrite
+apt-theme generate assets\sources\dnf-r-logo.png --output output\dnf-R --name 'Aptlantis-R' --overwrite
+apt-theme generate assets\sources\dnf-scratch-logo.png --output output\dnf-Scratch --name 'Aptlantis-Scratch' --overwrite
+apt-theme generate assets\sources\dnf-zig-logo.png --output output\dnf-Zig --name 'Aptlantis-Zig' --overwrite
+
+apt-theme generate assets\sources\rpm-blackgold-logo.png --output output\rpm-BlackGold --name 'Aptlantis-BlackGold' --overwrite --theme-version 3
