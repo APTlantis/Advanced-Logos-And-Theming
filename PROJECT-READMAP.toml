@@ -3,7 +3,7 @@ version = "1.0"
 
 [project]
 name = "Logos-And-Theming"
-generated_by = "Source-checked evaluator preparation 2026-10-10; Typora discovery extension 2026-10-11; dated operator presentation discovery 2026-10-17; version-aware naming discovery 2026-10-18"
+generated_by = "Source-checked evaluator preparation 2026-10-10; Typora discovery extension 2026-10-11; dated operator presentation discovery 2026-10-17; version-aware naming discovery 2026-10-18; stabilization and SVG finishing 2026-10-25"
 
 [budget]
 analyzer_file_budget = 25
@@ -78,17 +78,17 @@ reason = "Extraction, semantics and fifteen target budgets"
 [[priority]]
 path = "apt_theme/cli.py"
 rank = 14
-reason = "Generate/import orchestration, safeguards and CLI implementation"
+reason = "CLI presentation and compatibility entry points; orchestration is in pipeline.py"
 
 [[priority]]
 path = "apt_theme/targets.py"
 rank = 15
-reason = "Default targets, adaptation and native exporter dispatch"
+reason = "Default targets, adaptation and compatibility exporter wrappers"
 
 [[priority]]
-path = "apt_theme/website.py"
+path = "apt_theme/pipeline.py"
 rank = 16
-reason = "Latest scoped browser target and specimen implementation"
+reason = "Generation/import orchestration and source-preserving run assembly"
 
 [[priority]]
 path = "tests/test_pipeline.py"
@@ -96,9 +96,9 @@ rank = 17
 reason = "Canonical preservation, formats, determinism and output safety"
 
 [[priority]]
-path = "tests/test_website.py"
+path = "apt_theme/exporters.py"
 rank = 18
-reason = "Website scoping, provenance and independent contrast checks"
+reason = "Native output dispatch and unchanged specialized writer contracts"
 
 [[priority]]
 path = "tests/test_logo_tools.py"
@@ -242,14 +242,14 @@ path = "docs/KMINDZ-TARGET.md"
 reason = "Kmindz output contract and native import/rendering limits"
 
 [[priority]]
-path = "apt_theme/browser_themes.py"
+path = "apt_theme/output_names.py"
 rank = 20
-reason = "Portable Markdown and CodeMirror 5/6 native exporters and offline previews"
+reason = "Shared authoritative inventory and bounded artifact validation"
 
 [[priority]]
-path = "tests/test_browser_themes.py"
+path = "tests/test_finishing.py"
 rank = 21
-reason = "Determinism, canonical preservation, contracts, scope and vendor integrity"
+reason = "Explicit finishing, SESM integration, artifact guards and rollback checks"
 
 [[secondary]]
 path = "docs/MARKDOWN-EDITORS.md"
@@ -297,10 +297,6 @@ path = "docs/OUTPUT-NAMING.md"
 reason = "Version-aware authoritative filenames, native exceptions and v2 manifest contract"
 
 [[secondary]]
-path = "apt_theme/output_names.py"
-reason = "Authoritative artifact inventory, collision detection and final-byte hash receipts"
-
-[[secondary]]
 path = "tests/test_output_names.py"
 reason = "Five-version fifteen-target naming, local references, identities and native exceptions"
 
@@ -312,3 +308,57 @@ reason = "Shared artwork version mapping, bounded source inference and conflict 
 [[evidence]]
 path = "migration/version-naming-acceptance-2026-10-18.json"
 reason = "Fresh version-aware naming tests, local browser evidence and source preservation limits"
+
+[[priority]]
+path = "docs/ARCHITECTURE.md"
+rank = 24
+reason = "Current subsystem ownership and stabilization boundaries"
+
+[[priority]]
+path = "apt_theme/finishing.py"
+rank = 25
+reason = "Selected PNG finishing and independent SESM orchestration"
+
+[[secondary]]
+path = "docs/STABILIZATION-AUDIT.md"
+reason = "Prioritized source-backed findings, dispositions and tool classification"
+
+[[secondary]]
+path = "apt_theme/transactions.py"
+reason = "Shared staging and failed commit recovery"
+
+[[secondary]]
+path = "apt_theme/svg_converter.py"
+reason = "Package-owned converter behind the preserved script interface"
+
+[[secondary]]
+path = "docs/examples/finish-selected.toml"
+reason = "Four explicit representative local selections"
+
+[[evidence]]
+path = "evidence/stabilization-2026-10-25.json"
+reason = "Baseline/fixture comparisons, regression, wheel and browser checks; native limits"
+
+[[exclude]]
+path = "docs/history/"
+reason = "Exact pre-stabilization overview snapshots; current docs are authoritative"
+
+[[secondary]]
+path = "apt_theme/website.py"
+reason = "Supporting target source/tests or finishing contract; current core paths have priority"
+
+[[secondary]]
+path = "tests/test_website.py"
+reason = "Supporting target source/tests or finishing contract; current core paths have priority"
+
+[[secondary]]
+path = "apt_theme/browser_themes.py"
+reason = "Supporting target source/tests or finishing contract; current core paths have priority"
+
+[[secondary]]
+path = "tests/test_browser_themes.py"
+reason = "Supporting target source/tests or finishing contract; current core paths have priority"
+
+[[secondary]]
+path = "docs/SVG-FINISHING.md"
+reason = "Supporting target source/tests or finishing contract; current core paths have priority"

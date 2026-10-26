@@ -26,7 +26,7 @@ def module(filename: str):
 
 
 ico = module("Convert-to-ICO.py")
-svg = module("Convert-to-SVG.py")
+from apt_theme import svg_converter as svg
 
 
 

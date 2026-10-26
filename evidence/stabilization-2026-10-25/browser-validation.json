@@ -1,0 +1,44 @@
+{
+  "browser": "156.0.8078.4",
+  "assets": [
+    {
+      "file": "apt-ada-logo.svg",
+      "width": 1024,
+      "height": 1024,
+      "metadata_pixel_differences": 0,
+      "embedded_png_equal": true,
+      "labels_checked": 0,
+      "trace_comparison": null
+    },
+    {
+      "file": "apt-blackgold-canonical.svg",
+      "width": 1200,
+      "height": 912,
+      "metadata_pixel_differences": 0,
+      "embedded_png_equal": null,
+      "labels_checked": 65,
+      "trace_comparison": null
+    },
+    {
+      "file": "apt-blackgold-terminal-swatch.svg",
+      "width": 1200,
+      "height": 597,
+      "metadata_pixel_differences": 0,
+      "embedded_png_equal": null,
+      "labels_checked": 61,
+      "trace_comparison": null
+    },
+    {
+      "file": "apt-blackgold-preview.svg",
+      "width": 1024,
+      "height": 1232,
+      "metadata_pixel_differences": 0,
+      "embedded_png_equal": true,
+      "labels_checked": 0,
+      "trace_comparison": null
+    }
+  ],
+  "external_requests": [],
+  "errors": [],
+  "passed": true
+}

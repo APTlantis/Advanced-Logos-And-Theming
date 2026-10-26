@@ -1,3 +1,13 @@
+# Current validation and evidence limits
+
+The [2026-10-25 stabilization acceptance record](../evidence/stabilization-2026-10-25.json) is the current verification index. It separates the original 59-test baseline, complete generation/import hash comparisons, current regression tests, installed-wheel resource/use checks, actual SESM validation and offline browser rendering. Earlier evidence below remains attached to its original source/artifacts.
+
+Real tracing fidelity, native SVG editor import and downstream application acceptance are not established by static, stub or browser checks. No theme installation/activation, public asset changes or publication occurred. [Stabilization findings](STABILIZATION-AUDIT.md).
+
+<details><summary>Historical validation entries</summary>
+
+All counts and uses of “current” below refer to their original dated entries.
+
 Version-aware naming implementation and local validation: [acceptance record](../migration/version-naming-acceptance-2026-10-18.json). This changes future generation/import only; dated runs, public copies and native acceptance remain separate.
 
 ## Complete Atlas collection - 2026-10-16
@@ -78,3 +88,6 @@ The 2026-10-09 PowerPoint template replacement preserves the supplied 23-slide/1
 
 [Acceptance record](../migration/output-naming-acceptance-2026-10-16.json): 55 tests passed, including two-theme/fifteen-target flat-name uniqueness, byte/hash equality, collision rejection and native SiYuan ZIP entry preservation. [Fresh Ada sample](../pilot/output-naming-2026-10-16/ada/review.html) generated all fifteen targets with zero declared contrast failures. Initial sandbox runs were blocked by Windows path-resolution permissions; the passing suite ran outside the sandbox using workspace temporary files. Native applications and browser rendering were not rerun. Existing generated/public runs and recovery archives were not modified.
 
+
+
+</details>

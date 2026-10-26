@@ -58,7 +58,7 @@ class OutputNameTests(unittest.TestCase):
             source.write_bytes(b'Identity must be checked before extraction')
             for extra, message in (([], 'Cannot determine'), (['--name','dnf-Ada','--theme-version','1'], 'Conflicting')):
                 out, err = io.StringIO(), io.StringIO()
-                with patch('apt_theme.cli.extract') as extract, redirect_stdout(out), redirect_stderr(err):
+                with patch('apt_theme.pipeline.extract') as extract, redirect_stdout(out), redirect_stderr(err):
                     code = main(['generate',str(source),'--output',str(root/'output'),'--json',*extra])
                 self.assertEqual(code, 1)
                 extract.assert_not_called()

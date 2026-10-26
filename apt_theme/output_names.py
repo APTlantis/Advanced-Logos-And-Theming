@@ -68,19 +68,59 @@ def artifact_stem(name, target, theme_version=None):
     return resolve_identity(name, theme_version).key + "-" + slug(target)
 
 
-def artifact_file(run, target, logical):
+def manifest_path(metadata, target):
+    """Return a bounded manifest path, or None for historical generic outputs."""
+    if not isinstance(target, str) or not target or '/' in target or '\\' in target or target in ('.', '..'):
+        raise ValueError('Unsafe target name')
+    if 'artifact_manifests' not in metadata:
+        return None
+    relative = metadata['artifact_manifests'].get(target)
+    if not isinstance(relative, str) or PurePosixPath(relative).parts != (target, PurePosixPath(relative).name) or '\\' in relative:
+        raise ValueError('Unsafe artifact manifest path')
+    return relative
+
+
+def manifest_records(manifest, target):
+    """Validate one authoritative inventory without constructing filenames."""
+    if manifest.get('schema') != SCHEMA or manifest.get('target') != target:
+        raise ValueError('Unexpected artifact manifest')
+    records, filenames = {}, set()
+    for record in manifest['files']:
+        filename, logical = record['file'], record['logical_name']
+        if not isinstance(filename, str) or not filename or '/' in filename or '\\' in filename or filename in ('.', '..'):
+            raise ValueError('Unsafe artifact filename')
+        if not isinstance(logical, str) or logical in records or filename in filenames:
+            raise ValueError('Duplicate artifact identity')
+        records[logical] = record
+        filenames.add(filename)
+    return records
+
+
+def artifact_file(run, target, logical, *, verify=False):
     """Locate a new manifest artifact or a historical generic entry point."""
     run = Path(run)
     metadata = json.loads((run / 'run.json').read_text(encoding='utf-8-sig'))
-    if 'artifact_manifests' not in metadata:
-        return run / target / logical
-    relative = metadata['artifact_manifests'][target]
-    if Path(relative).parts != (target, Path(relative).name) or '\\' in relative:
-        raise ValueError('Unsafe artifact manifest path')
+    relative = manifest_path(metadata, target)
+    if not isinstance(logical, str) or not logical or '/' in logical or '\\' in logical or logical in ('.', '..'):
+        raise ValueError('Unsafe logical artifact')
+    if relative is None:
+        file = run / target / logical
+        if not file.resolve().is_relative_to(run.resolve()):
+            raise ValueError('Artifact escapes run')
+        return file
+    if not (run / relative).resolve().is_relative_to(run.resolve()):
+        raise ValueError('Artifact manifest escapes run')
     manifest = json.loads((run / relative).read_text(encoding='utf-8-sig'))
-    if manifest.get('schema') != SCHEMA or manifest.get('target') != target:
-        raise ValueError('Unexpected artifact manifest')
-    matches = [r['file'] for r in manifest['files'] if r['logical_name'] == logical]
-    if len(matches) != 1 or PurePosixPath(matches[0]).name != matches[0] or '\\' in matches[0] or matches[0] in ('.', '..'):
-        raise ValueError('Missing, duplicate or unsafe artifact: ' + logical)
-    return run / target / matches[0]
+    records = manifest_records(manifest, target)
+    if logical not in records:
+        raise ValueError('Missing artifact: ' + logical)
+    record = records[logical]
+    file = run / target / record['file']
+    if not file.resolve().is_relative_to(run.resolve()):
+        raise ValueError('Artifact escapes run')
+    if verify:
+        if manifest.get('theme_identity') != metadata.get('theme_identity'):
+            raise ValueError('Artifact manifest identity mismatch')
+        if hashlib.sha256(file.read_bytes()).hexdigest() != record['sha256']:
+            raise ValueError('Artifact hash mismatch: ' + str(file))
+    return file

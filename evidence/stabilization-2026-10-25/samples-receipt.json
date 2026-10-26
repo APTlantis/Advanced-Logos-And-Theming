@@ -1,0 +1,256 @@
+{
+  "schema": "aptlantis.finish-receipt.v1",
+  "written": true,
+  "output": "D:\\CTS\\Logos-And-Theming\\.build\\stabilization-wheel-final\\verification\\finished",
+  "sources": {
+    "D:\\CTS\\Logos-And-Theming\\docs\\examples\\finish-selected.toml": "265414fdbfc7f8b5cfc4b5cf0c929d3150677ed3ca29b62570ab09ecea3da058",
+    "D:\\CTS\\Logos-And-Theming\\assets\\png\\apt-ada-logo.png": "f98bd86034794c94ca258dd1b2a92e8c2492d9a773252764790fd03a22832522",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\run.json": "f5bd8a143a17052fc4a4ad907741f780001ccf5060708ff32ad2d4a7ad8afd1f",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\palette.toml": "25e6eb7cd65b9a4423363818fa1a66330433ab5b91c2f1310959c608183b42e3",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\palette.png": "a676536fadcc9c95a01ae207f582b01f3b59e1fe20457d35098bc5ad05bbd225",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\windows_terminal\\apt-blackgold-windows-terminal-files.json": "a8e730ebb72d5afb75a386dfcd54231c7dfc07578a70bd1cce565200e55e6a52",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\windows_terminal\\apt-blackgold-windows-terminal-palette.toml": "12a8a3df2a76d43cbd1ac549a588fafbe7f25c6cbd7980c52ffbf12eb04718f0",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\windows_terminal\\apt-blackgold-windows-terminal-tokens.json": "c8b8c97804ac938b5fd10b6df132bd960b17faa3edead0ee93c01d82a1f4508f",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\windows_terminal\\apt-blackgold-windows-terminal-swatch.png": "55a43589b5176621b2a0aa1e911c2a2884c5986faace0ac4e8f0af8515f4ac7c",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\siyuan\\apt-blackgold-siyuan-files.json": "c5836cffeb838f4a2f618e9a12b9de4e1559d45c5fb67ad3d27d9f6e6f2f1a0b",
+    "D:\\CTS\\Logos-And-Theming\\output\\apt-BlackGold\\siyuan\\preview.png": "3f92356ae0ad2f8f99d87d4a7009cc0f6400ff81cedc44a36647e42b9241b76a"
+  },
+  "tools": {
+    "apt-theme": "0.1.0",
+    "pillow": "12.3.0",
+    "generator_python": "3.13.15",
+    "sesm_python": "Python 3.13.15",
+    "sesm_metadata_version": "0.3.0",
+    "sesm_sources": {
+      "D:\\CTS\\SESM-Metadata-Embedder\\scripts\\Embed-SESM.py": "3fd77e7d5e9bdb900ccc2245a37e227d7d3c0507a37e0308cc97e4edb7583788",
+      "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py": "0c6f52ea478b55b03ce89c23ae9597bd4d37fce40135f3ae491aecccc15a0bb9",
+      "D:\\.city_hall\\SESM\\svg_asset.schema.json": "b8dc402528f0746c49621b6e2748239566da69f39f15ace00c226b22981100a2"
+    },
+    "implementation_sources": {
+      "D:\\CTS\\Logos-And-Theming\\.build\\stabilization-wheel-final\\installed\\apt_theme\\finishing.py": "06562db0d3ab4945f17f96d53a9d8746fa940cfefcd0ded917185f9a0616c15d",
+      "D:\\CTS\\Logos-And-Theming\\.build\\stabilization-wheel-final\\installed\\apt_theme\\svg_converter.py": "db5052eec57770f7b8757c86cbf20b92b57f6562c31a3719c107e4817fe8d3f0"
+    }
+  },
+  "assets": [
+    {
+      "id": "apt-ada-logo",
+      "file": "apt-ada-logo.svg",
+      "settings": {
+        "mode": "embed"
+      },
+      "sha256": "dc265ae38d2146e0a98523225fe888e92c920328f2005c71094c69f13e61b87f",
+      "artwork_sha256": "460d9c76a9d44c2382ec481d4e923e1f358b816d68506e8b7b66c5cc71505811",
+      "identity_resolution": {
+        "version": 1,
+        "prefix": "apt",
+        "slug": "ada",
+        "evidence": [
+          {
+            "source": "--theme-version",
+            "version": 1
+          }
+        ]
+      },
+      "recorded_theme_identity": null,
+      "schema_validation": "passed",
+      "validation": {
+        "status": "ok",
+        "profile": "sesm-safe",
+        "file": "apt-ada-logo.svg",
+        "errors": [],
+        "warnings": [],
+        "metadata_version": "0.3.0",
+        "schema": "D:\\.city_hall\\SESM\\svg_asset.schema.json",
+        "safe_profile_checked": true
+      }
+    },
+    {
+      "id": "apt-blackgold-canonical",
+      "file": "apt-blackgold-canonical.svg",
+      "settings": {
+        "mode": "palette"
+      },
+      "sha256": "d5d928da0dceb7c32d200e990b671f4935568616ae159942376584cdfe60a6c3",
+      "artwork_sha256": "c749477c3e8be43cb6ec61de59d6b3a6df238b0f435862f78c2bb20f5520aa70",
+      "identity_resolution": {
+        "version": 1,
+        "prefix": "apt",
+        "slug": "blackgold",
+        "evidence": [
+          {
+            "source": "imported.theme.theme_identity",
+            "version": 1
+          },
+          {
+            "source": "imported.theme.prefix",
+            "version": 1
+          },
+          {
+            "source": "source.directory",
+            "version": 1
+          },
+          {
+            "source": "source.run.theme_identity",
+            "version": 1
+          },
+          {
+            "source": "source.run.prefix",
+            "version": 1
+          }
+        ]
+      },
+      "recorded_theme_identity": {
+        "version": 1,
+        "prefix": "apt",
+        "slug": "blackgold",
+        "evidence": [
+          {
+            "source": "--theme-version",
+            "version": 1
+          },
+          {
+            "source": "source.filename",
+            "version": 1
+          }
+        ]
+      },
+      "schema_validation": "passed",
+      "validation": {
+        "status": "ok",
+        "profile": "sesm-safe",
+        "file": "apt-blackgold-canonical.svg",
+        "errors": [],
+        "warnings": [],
+        "metadata_version": "0.3.0",
+        "schema": "D:\\.city_hall\\SESM\\svg_asset.schema.json",
+        "safe_profile_checked": true
+      }
+    },
+    {
+      "id": "apt-blackgold-terminal-swatch",
+      "file": "apt-blackgold-terminal-swatch.svg",
+      "settings": {
+        "mode": "palette"
+      },
+      "sha256": "e13e212a405887440a37b48e582bc1e06f9246c13108ed94608f341a57c5db6a",
+      "artwork_sha256": "17155b39439247a3c98053b52827f8582006a377ea3ace456747485420fe14f6",
+      "identity_resolution": {
+        "version": 1,
+        "prefix": "apt",
+        "slug": "blackgold",
+        "evidence": [
+          {
+            "source": "imported.theme.theme_identity",
+            "version": 1
+          },
+          {
+            "source": "imported.theme.prefix",
+            "version": 1
+          },
+          {
+            "source": "source.directory",
+            "version": 1
+          },
+          {
+            "source": "source.run.theme_identity",
+            "version": 1
+          },
+          {
+            "source": "source.run.prefix",
+            "version": 1
+          }
+        ]
+      },
+      "recorded_theme_identity": {
+        "version": 1,
+        "prefix": "apt",
+        "slug": "blackgold",
+        "evidence": [
+          {
+            "source": "--theme-version",
+            "version": 1
+          },
+          {
+            "source": "source.filename",
+            "version": 1
+          }
+        ]
+      },
+      "schema_validation": "passed",
+      "validation": {
+        "status": "ok",
+        "profile": "sesm-safe",
+        "file": "apt-blackgold-terminal-swatch.svg",
+        "errors": [],
+        "warnings": [],
+        "metadata_version": "0.3.0",
+        "schema": "D:\\.city_hall\\SESM\\svg_asset.schema.json",
+        "safe_profile_checked": true
+      }
+    },
+    {
+      "id": "apt-blackgold-preview",
+      "file": "apt-blackgold-preview.svg",
+      "settings": {
+        "mode": "embed"
+      },
+      "sha256": "e53faf10d59cf53380f7b0b45812e1bbe626d365f13bb9aecdb640b9570c74ce",
+      "artwork_sha256": "a5e0be70edffa96a7840c01cbbf77ca5fd768eb2aea910521af542f0df8a3056",
+      "identity_resolution": {
+        "version": 1,
+        "prefix": "apt",
+        "slug": "blackgold",
+        "evidence": [
+          {
+            "source": "imported.theme.theme_identity",
+            "version": 1
+          },
+          {
+            "source": "imported.theme.prefix",
+            "version": 1
+          },
+          {
+            "source": "source.directory",
+            "version": 1
+          },
+          {
+            "source": "source.run.theme_identity",
+            "version": 1
+          },
+          {
+            "source": "source.run.prefix",
+            "version": 1
+          }
+        ]
+      },
+      "recorded_theme_identity": {
+        "version": 1,
+        "prefix": "apt",
+        "slug": "blackgold",
+        "evidence": [
+          {
+            "source": "--theme-version",
+            "version": 1
+          },
+          {
+            "source": "source.filename",
+            "version": 1
+          }
+        ]
+      },
+      "schema_validation": "passed",
+      "validation": {
+        "status": "ok",
+        "profile": "sesm-safe",
+        "file": "apt-blackgold-preview.svg",
+        "errors": [],
+        "warnings": [],
+        "metadata_version": "0.3.0",
+        "schema": "D:\\.city_hall\\SESM\\svg_asset.schema.json",
+        "safe_profile_checked": true
+      }
+    }
+  ],
+  "warnings": [],
+  "native_application_acceptance": "not performed"
+}

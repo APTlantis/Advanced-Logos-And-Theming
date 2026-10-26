@@ -1,0 +1,35 @@
+schema = "aptlantis.finish-plan.v1"
+
+# Paths resolve from this file, never the shell working directory.
+# These explicit selections require the existing local artwork/output collection.
+[[assets]]
+id = "apt-ada-logo"
+input = "../../assets/png/apt-ada-logo.png"
+role = "logo"
+title = "Ada logo"
+theme_name = "Aptlantis-Ada"
+theme_version = 1
+# mode defaults to embed, preserving the PNG bytes inside SVG.
+
+[[assets]]
+id = "apt-blackgold-canonical"
+run = "../../output/apt-BlackGold"
+mode = "palette"
+role = "theme-board"
+title = "BlackGold / canonical 32"
+
+[[assets]]
+id = "apt-blackgold-terminal-swatch"
+run = "../../output/apt-BlackGold"
+target = "windows_terminal"
+mode = "palette"
+role = "theme-board"
+title = "BlackGold / Windows Terminal tokens"
+
+[[assets]]
+id = "apt-blackgold-preview"
+run = "../../output/apt-BlackGold"
+target = "siyuan"
+logical = "preview.png"
+role = "theme-board"
+title = "BlackGold / existing preview raster"

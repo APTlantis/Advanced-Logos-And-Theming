@@ -33,7 +33,7 @@ def syntax(tokens, directory, artifact=lambda value: value):
     from .visual_targets import PRISM
     manifest = verify_vendor()
     shutil.copytree(VENDOR, directory / "vendor/prism")
-    shutil.copytree(SOURCES, directory / "sources")
+    shutil.copytree(SOURCES, directory / "sources", ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '*.pyo'))
     css = css_tokens(tokens) + """
 pre[class*='language-'], code[class*='language-'] {
  color:var(--apt-foreground); background:var(--apt-panel);

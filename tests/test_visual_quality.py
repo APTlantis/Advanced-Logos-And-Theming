@@ -1,6 +1,7 @@
 """Resource integrity and shared chart data contracts; runtime checks live in browser tooling."""
 import re
 import json
+import shutil
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
@@ -13,6 +14,27 @@ from apt_theme.visual_targets import charts, syntax
 
 
 class VisualQualityTests(unittest.TestCase):
+    def test_installed_python_caches_are_not_exported_as_source_examples(self):
+        from apt_theme.semantics import assign
+        from apt_theme.targets import adapt
+        from apt_theme.colors import from_rgb
+        colors = {f'color_{i:02}': from_rgb([i * 7, i * 6, i * 5]) for i in range(1, 33)}
+        roles, _ = assign(colors)
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            sources = root / 'installed-sources'
+            shutil.copytree(SOURCES, sources)
+            (sources / '__pycache__').mkdir(exist_ok=True)
+            (sources / '__pycache__/palette.cpython-313.pyc').write_bytes(b'local cache')
+            (sources / 'palette.pyc').write_bytes(b'legacy cache')
+            output = root / 'output'
+            output.mkdir()
+            with patch('apt_theme.syntax_examples.SOURCES', sources):
+                syntax(adapt(colors, roles, 'syntax_highlighting', 32)['tokens'], output)
+            self.assertEqual((output / 'sources/palette.py').read_bytes(), (SOURCES / 'palette.py').read_bytes())
+            self.assertFalse((output / 'sources/__pycache__').exists())
+            self.assertFalse((output / 'sources/palette.pyc').exists())
+
     def test_pinned_vendor_dependencies_and_integrity(self):
         manifest = verify_vendor()
         self.assertEqual(manifest["version"], "1.30.0")

@@ -1,0 +1,117 @@
+test_cli_selection_and_json_envelope (test_atlas.AtlasTests.test_cli_selection_and_json_envelope) ... ok
+test_default_collection_includes_both_families_without_merging_identity (test_atlas.AtlasTests.test_default_collection_includes_both_families_without_merging_identity) ... ok
+test_deterministic_outputs_and_both_offline_data_forms (test_atlas.AtlasTests.test_deterministic_outputs_and_both_offline_data_forms) ... ok
+test_inline_data_escapes_markup_and_neutral_hue_is_flagged (test_atlas.AtlasTests.test_inline_data_escapes_markup_and_neutral_hue_is_flagged) ... ok
+test_missing_data_reported_without_inference (test_atlas.AtlasTests.test_missing_data_reported_without_inference) ... ok
+test_mixed_legacy_and_versioned_manifests (test_atlas.AtlasTests.test_mixed_legacy_and_versioned_manifests) ... ok
+test_offline_examples_are_copied_with_dependencies_and_receipts (test_atlas.AtlasTests.test_offline_examples_are_copied_with_dependencies_and_receipts) ... ok
+test_output_guards_and_failed_refresh_preserve_existing_snapshot (test_atlas.AtlasTests.test_output_guards_and_failed_refresh_preserve_existing_snapshot) ... ok
+test_rejects_false_lineage_and_inconsistent_rgb (test_atlas.AtlasTests.test_rejects_false_lineage_and_inconsistent_rgb) ... ok
+test_snapshot_identity_lineage_and_source_receipts (test_atlas.AtlasTests.test_snapshot_identity_lineage_and_source_receipts) ... ok
+test_defaults_budgets_and_deterministic_exports (test_browser_themes.BrowserThemeTests.test_defaults_budgets_and_deterministic_exports) ... ok
+test_scoping_native_interfaces_and_coverage (test_browser_themes.BrowserThemeTests.test_scoping_native_interfaces_and_coverage) ... ok
+test_selected_targets_and_review_artifact_links (test_browser_themes.BrowserThemeTests.test_selected_targets_and_review_artifact_links) ... Generating image-derived dark themes...
+Generating image-derived dark themes...
+Error: Output already exists; use --overwrite explicitly
+ok
+test_vendor_integrity_and_fail_closed (test_browser_themes.BrowserThemeTests.test_vendor_integrity_and_fail_closed) ... ok
+test_explicit_preview_preparation_and_fresh_destination (test_finishing.FinishingTests.test_explicit_preview_preparation_and_fresh_destination) ... ok
+test_four_representative_outputs_real_embedding_and_validation (test_finishing.FinishingTests.test_four_representative_outputs_real_embedding_and_validation) ... ok
+test_historical_generic_artifact_lookup_and_bounded_version_inference (test_finishing.FinishingTests.test_historical_generic_artifact_lookup_and_bounded_version_inference) ... ok
+test_invalid_selection_collisions_and_overlap (test_finishing.FinishingTests.test_invalid_selection_collisions_and_overlap) ... ok
+test_invalid_svg_rolls_back_and_existing_destination_is_untouched (test_finishing.FinishingTests.test_invalid_svg_rolls_back_and_existing_destination_is_untouched) ... ok
+test_manifest_hash_mismatch_rejects_before_writing (test_finishing.FinishingTests.test_manifest_hash_mismatch_rejects_before_writing) ... ok
+test_missing_tools_and_invalid_metadata_report_json_errors (test_finishing.FinishingTests.test_missing_tools_and_invalid_metadata_report_json_errors) ... ok
+test_missing_tracer_never_falls_back (test_finishing.FinishingTests.test_missing_tracer_never_falls_back) ... ok
+test_native_palette_preserves_order_fills_labels_and_bounds (test_finishing.FinishingTests.test_native_palette_preserves_order_fills_labels_and_bounds) ... ok
+test_palette_requires_matching_pixels_and_structure (test_finishing.FinishingTests.test_palette_requires_matching_pixels_and_structure) ... ok
+test_trace_finishing_contract_with_stub_and_real_raster_preparation (test_finishing.FinishingTests.test_trace_finishing_contract_with_stub_and_real_raster_preparation) ... ok
+test_warning_is_not_reported_as_safe_and_sources_are_rechecked (test_finishing.FinishingTests.test_warning_is_not_reported_as_safe_and_sources_are_rechecked) ... ok
+test_artifact_inventory_rejects_traversal_duplicates_and_stale_hashes (test_finishing.TransactionTests.test_artifact_inventory_rejects_traversal_duplicates_and_stale_hashes) ... ok
+test_failed_commit_restores_existing_run (test_finishing.TransactionTests.test_failed_commit_restores_existing_run) ... ok
+test_fresh_transaction_does_not_overwrite_new_destination (test_finishing.TransactionTests.test_fresh_transaction_does_not_overwrite_new_destination) ... ok
+test_canonical_preservation_determinism_and_budget (test_kmindz.KmindzTests.test_canonical_preservation_determinism_and_budget) ... ok
+test_contract_and_identity_are_template_based (test_kmindz.KmindzTests.test_contract_and_identity_are_template_based) ... ok
+test_every_exported_color_is_a_mapped_target_token (test_kmindz.KmindzTests.test_every_exported_color_is_a_mapped_target_token) ... ok
+test_exported_node_text_in_normal_and_selected_states (test_kmindz.KmindzTests.test_exported_node_text_in_normal_and_selected_states) ... ok
+test_native_files_and_common_palette_artifacts (test_kmindz.KmindzTests.test_native_files_and_common_palette_artifacts) ... ok
+test_batch_output_and_collision_guards (test_logo_tools.LogoToolTests.test_batch_output_and_collision_guards) ... Error: batch output directory must be outside the input tree
+ok
+test_ico_frames_and_collision (test_logo_tools.LogoToolTests.test_ico_frames_and_collision) ... ok
+test_svg_embed_preserves_bytes_and_dimensions (test_logo_tools.LogoToolTests.test_svg_embed_preserves_bytes_and_dimensions) ... ok
+test_svg_normalize_and_trace_dependency (test_logo_tools.LogoToolTests.test_svg_normalize_and_trace_dependency) ... Error: [WinError 2] The system cannot find the file specified
+ok
+test_trace_output_contract_with_stub (test_logo_tools.LogoToolTests.test_trace_output_contract_with_stub) ... ok
+test_all_versions_targets_inventory_links_and_preservation (test_output_names.OutputNameTests.test_all_versions_targets_inventory_links_and_preservation) ... ok
+test_cli_missing_and_conflicting_versions_fail_before_extraction (test_output_names.OutputNameTests.test_cli_missing_and_conflicting_versions_fail_before_extraction) ... ok
+test_collision_rejected_without_writing (test_output_names.OutputNameTests.test_collision_rejected_without_writing) ... ok
+test_identity_resolution_and_conflicts (test_output_names.OutputNameTests.test_identity_resolution_and_conflicts) ... ok
+test_import_identity_roundtrip_without_prefix_or_flag (test_output_names.OutputNameTests.test_import_identity_roundtrip_without_prefix_or_flag) ... ok
+test_gamut_and_hue_derivation (test_pipeline.PipelineTests.test_gamut_and_hue_derivation) ... ok
+test_generated_target_palette_names_and_review_links (test_pipeline.PipelineTests.test_generated_target_palette_names_and_review_links) ... Generating image-derived dark themes...
+ok
+test_import_roundtrip_determinism_and_overwrite (test_pipeline.PipelineTests.test_import_roundtrip_determinism_and_overwrite) ... Generating image-derived dark themes...
+Generating image-derived dark themes...
+Error: Output already exists; use --overwrite explicitly
+Generating image-derived dark themes...
+ok
+test_invalid_input_config_and_nonpipeline_overwrite (test_pipeline.PipelineTests.test_invalid_input_config_and_nonpipeline_overwrite) ... Generating image-derived dark themes...
+Error: Expected '=' after a key in a key/value pair (at line 1, column 9)
+Generating image-derived dark themes...
+Error: Unknown configuration section
+Generating image-derived dark themes...
+Error: Refusing to overwrite a non-pipeline directory
+ok
+test_json_envelope_and_bom_configuration (test_pipeline.PipelineTests.test_json_envelope_and_bom_configuration) ... Generating image-derived dark themes...
+ok
+test_math_and_vector_conversion (test_pipeline.PipelineTests.test_math_and_vector_conversion) ... ok
+test_native_exports_and_canonical_immutability (test_pipeline.PipelineTests.test_native_exports_and_canonical_immutability) ... ok
+test_near_black_noise_does_not_consume_visible_color_slots (test_pipeline.PipelineTests.test_near_black_noise_does_not_consume_visible_color_slots) ... ok
+test_powerpoint_metadata_repair_preserves_other_package_bytes (test_pipeline.PipelineTests.test_powerpoint_metadata_repair_preserves_other_package_bytes) ... ok
+test_powerpoint_reference_hash_guard (test_pipeline.PipelineTests.test_powerpoint_reference_hash_guard) ... ok
+test_powerpoint_template_failure_preserves_previous_output (test_pipeline.PipelineTests.test_powerpoint_template_failure_preserves_previous_output) ... Generating image-derived dark themes...
+Error: PowerPoint template unavailable
+ok
+test_powerpoint_timestamp_type_namespace_is_preserved (test_pipeline.PipelineTests.test_powerpoint_timestamp_type_namespace_is_preserved) ... ok
+test_selection_observed_exact32_and_determinism (test_pipeline.PipelineTests.test_selection_observed_exact32_and_determinism) ... ok
+test_semantics_hue_suitability_overrides_and_findings (test_pipeline.PipelineTests.test_semantics_hue_suitability_overrides_and_findings) ... ok
+test_strict_mode_still_writes_failed_results (test_pipeline.PipelineTests.test_strict_mode_still_writes_failed_results) ... Generating image-derived dark themes...
+ok
+test_surface_identity_is_separate_from_black_anchor (test_pipeline.PipelineTests.test_surface_identity_is_separate_from_black_anchor) ... ok
+test_transparency_monochrome_and_insufficient_colors (test_pipeline.PipelineTests.test_transparency_monochrome_and_insufficient_colors) ... ok
+test_determinism_and_unchanged_chart_canvas (test_svg_quality.SVGQualityTests.test_determinism_and_unchanged_chart_canvas) ... ok
+test_local_references_and_editable_vector_contract (test_svg_quality.SVGQualityTests.test_local_references_and_editable_vector_contract) ... ok
+test_paints_remain_exported_tokens_at_minimum_budget (test_svg_quality.SVGQualityTests.test_paints_remain_exported_tokens_at_minimum_budget) ... ok
+test_exports_preserve_tokens_and_are_deterministic (test_typora.TyporaTests.test_exports_preserve_tokens_and_are_deterministic) ... ok
+test_native_layout_and_scoped_styles (test_typora.TyporaTests.test_native_layout_and_scoped_styles) ... ok
+test_packaged_specimens_cover_stress_cases (test_typora.TyporaTests.test_packaged_specimens_cover_stress_cases) ... ok
+test_generated_css_references_are_declared (test_visual_quality.VisualQualityTests.test_generated_css_references_are_declared) ... ok
+test_installed_python_caches_are_not_exported_as_source_examples (test_visual_quality.VisualQualityTests.test_installed_python_caches_are_not_exported_as_source_examples) ... ok
+test_pinned_vendor_dependencies_and_integrity (test_visual_quality.VisualQualityTests.test_pinned_vendor_dependencies_and_integrity) ... ok
+test_shared_chart_values_and_svg_marks (test_visual_quality.VisualQualityTests.test_shared_chart_values_and_svg_marks) ... ok
+test_source_is_escaped_and_generated_assets_match (test_visual_quality.VisualQualityTests.test_source_is_escaped_and_generated_assets_match) ... ok
+test_source_languages_and_substantial_examples (test_visual_quality.VisualQualityTests.test_source_languages_and_substantial_examples) ... ok
+test_website_export_scoping_local_assets_and_safe_name (test_website.WebsiteTests.test_website_export_scoping_local_assets_and_safe_name) ... ok
+test_website_provenance_budget_and_real_contrast_pairs (test_website.WebsiteTests.test_website_provenance_budget_and_real_contrast_pairs) ... ok
+
+----------------------------------------------------------------------
+Ran 75 tests in 72.573s
+
+OK
+Generated markdown, codemirror5, codemirror6; 0 contrast failures. Review: C:\Users\ADMINI~1\AppData\Local\Temp\tmpgs1rz4u8\run\review.html
+CONVERTED C:\Users\ADMINI~1\AppData\Local\Temp\logo tools _cx_kht8\wide logo.png -> C:\Users\ADMINI~1\AppData\Local\Temp\logo tools _cx_kht8 SVG results\wide logo.svg
+Processed 1 input(s); failures: 0
+CONVERTED C:\Users\ADMINI~1\AppData\Local\Temp\logo tools h3s4po5g\wide logo.png -> C:\Users\ADMINI~1\AppData\Local\Temp\logo tools h3s4po5g\icon.ico
+Processed 1 input(s); failures: 0
+SKIP exists: C:\Users\ADMINI~1\AppData\Local\Temp\logo tools h3s4po5g\icon.ico
+Processed 1 input(s); failures: 0
+CONVERTED C:\Users\ADMINI~1\AppData\Local\Temp\logo tools b_kdmmzk\wide logo.png -> C:\Users\ADMINI~1\AppData\Local\Temp\logo tools b_kdmmzk\wrapped.svg
+Processed 1 input(s); failures: 0
+CONVERTED C:\Users\ADMINI~1\AppData\Local\Temp\logo tools _dw2vvmm\wide logo.png -> C:\Users\ADMINI~1\AppData\Local\Temp\logo tools _dw2vvmm\normalized.svg
+Processed 1 input(s); failures: 0
+CONVERTED C:\Users\ADMINI~1\AppData\Local\Temp\logo tools i2ojsw9b\wide logo.png -> C:\Users\ADMINI~1\AppData\Local\Temp\logo tools i2ojsw9b\traced.svg
+Processed 1 input(s); failures: 0
+Generated windows_terminal, notepad_plus_plus, website; 0 contrast failures. Review: C:\Users\ADMINI~1\AppData\Local\Temp\tmp2vv5ydq8\generated\review.html
+Generated windows_terminal, siyuan, typora, powerpoint, alacritty, notepad_plus_plus, sublime_text, svg, syntax_highlighting, data_visualization, website, kmindz, markdown, codemirror5, codemirror6; 0 contrast failures. Review: C:\Users\ADMINI~1\AppData\Local\Temp\tmpgec08z95\output\review.html
+Generated windows_terminal, siyuan, typora, powerpoint, alacritty, notepad_plus_plus, sublime_text, svg, syntax_highlighting, data_visualization, website, kmindz, markdown, codemirror5, codemirror6; 0 contrast failures. Review: C:\Users\ADMINI~1\AppData\Local\Temp\tmpgec08z95\output\review.html
+Generated windows_terminal, siyuan, typora, powerpoint, alacritty, notepad_plus_plus, sublime_text, svg, syntax_highlighting, data_visualization, website, kmindz, markdown, codemirror5, codemirror6; 653 contrast failures. Review: C:\Users\ADMINI~1\AppData\Local\Temp\tmplw3mf_c6\strict\review.html

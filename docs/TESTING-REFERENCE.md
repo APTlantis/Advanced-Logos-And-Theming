@@ -1,3 +1,15 @@
+# Current testing reference
+
+Current stabilization suite: **75 methods** (59 baseline plus 15 finishing/transaction/artifact checks and one installed-cache regression). See [acceptance](../evidence/stabilization-2026-10-25.json) for actual results, not just inventory. Run ` .\.venv\Scripts\python.exe -m unittest discover -s tests -v` from the project root. The managed sandbox produced temporary-file permission failures; outside-sandbox baseline and current results are recorded separately.
+
+`tools/check_stabilization.py NEW_DIRECTORY [--compare HASHES_JSON]` captures fresh generation/import fixtures across all fifteen targets and compares every emitted file hash. Never point it at an existing run. `tools/check_finishing.cjs FINISHED_DIRECTORY PLAYWRIGHT_MODULE CHROMIUM_EXECUTABLE EVIDENCE_DIRECTORY` verifies browser rendering, exact embedded PNG hashes, palette fills/order, labels and zero pixel changes from SESM insertion. It requires an existing finishing receipt and writes to the selected evidence directory.
+
+Finishing tests cover four representative selections, schema/safe-profile integration, bad metadata, missing tools, warning classification, input changes, legacy discovery, trace stubs, path/collision/hash guards and failed commit recovery. External SESM tools and ImageMagick are local integration dependencies. Real VTracer execution and native import remain separate gates. See [architecture](ARCHITECTURE.md) and [finishing](SVG-FINISHING.md).
+
+<details><summary>Dated test inventories and earlier verification recipes</summary>
+
+All counts and uses of “current” below refer to their original dated entries, not the stabilization inventory above.
+
 Version-aware naming tests cover all five generations and fifteen targets, artifact inventories/hashes/references, identity inference/conflicts, native exceptions and mixed Atlas formats. Existing exporter tests now use the generated inventory; exact filename assertions live in `tests/test_output_names.py`. See [fresh evidence](../migration/version-naming-acceptance-2026-10-18.json) for the current suite result.
 
 ## Complete Atlas collection - 2026-10-16
@@ -356,3 +368,6 @@ Keep new evidence beside a new dated pilot or in a new dated migration receipt; 
 This documentation does not perform native installation, theme activation, hosted regeneration, publication, archive retirement or a Writerside refresh. Parent discovery records remain unchanged because ownership, identity and roots are unchanged. Update this reference when methods/tools/contracts change, and keep [VALIDATION.md](VALIDATION.md) as the concise result/evidence entry point.
 Output naming extension (2026-10-16): the current suite has 55 methods. `tests/test_output_names.py` adds cross-theme/target filename uniqueness, byte/hash equality, SiYuan archive member preservation and pre-copy collision rejection. [Recorded run](../migration/output-naming-acceptance-2026-10-16.json). Earlier inventories below are dated.
 
+
+
+</details>

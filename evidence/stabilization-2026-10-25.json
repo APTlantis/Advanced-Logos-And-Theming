@@ -1,0 +1,231 @@
+{
+  "schema": "aptlantis.stabilization-acceptance.v1",
+  "review_date": "2026-10-25",
+  "project": "Logos-And-Theming",
+  "version": "0.1.0",
+  "stage": "local-pilot",
+  "local_acceptance": "passed_with_declared_limits",
+  "environment": {
+    "managed_sandbox": "WinError 5 prevented a reliable baseline; isolated checks were run outside the sandbox",
+    "baseline": {
+      "passed": true,
+      "methods": 59,
+      "elapsed_seconds": 57.97
+    },
+    "final": {
+      "passed": true,
+      "methods": 75,
+      "elapsed_seconds": 72.573
+    }
+  },
+  "compatibility": {
+    "targets": 15,
+    "fixture_files": {
+      "import": 356,
+      "generate": 356
+    },
+    "source_changed_paths": 0,
+    "installed_wheel_changed_paths": 0,
+    "canonical_and_native_payload_bytes_preserved": true
+  },
+  "package": {
+    "passed": true,
+    "wheel": ".build/stabilization-wheel-final/aptlantis_theme_pipeline-0.1.0-py3-none-any.whl",
+    "sha256": "51b8ea1ddf9f0af5de1d0de1cd556bc27945323d8f7888a0043e76f9207f5fee",
+    "resources_compared": 113,
+    "apt_theme_modules_verified_from_isolated_install": 26,
+    "isolated_generation_import_and_finishing": true,
+    "cache_export_regression_fixed": true,
+    "dependencies_downloaded": false
+  },
+  "finishing": {
+    "representative_assets": 4,
+    "real_trace_assets": 1,
+    "all_schema_results": "passed",
+    "all_safe_profile_results": "sesm-safe",
+    "sources_and_tools_rehashed_unchanged": true,
+    "artwork_byte_preservation_checked": true,
+    "browser": {
+      "browser": "156.0.8078.4",
+      "assets": [
+        {
+          "file": "apt-ada-logo.svg",
+          "width": 1024,
+          "height": 1024,
+          "metadata_pixel_differences": 0,
+          "embedded_png_equal": true,
+          "labels_checked": 0,
+          "trace_comparison": null
+        },
+        {
+          "file": "apt-blackgold-canonical.svg",
+          "width": 1200,
+          "height": 912,
+          "metadata_pixel_differences": 0,
+          "embedded_png_equal": null,
+          "labels_checked": 65,
+          "trace_comparison": null
+        },
+        {
+          "file": "apt-blackgold-terminal-swatch.svg",
+          "width": 1200,
+          "height": 597,
+          "metadata_pixel_differences": 0,
+          "embedded_png_equal": null,
+          "labels_checked": 61,
+          "trace_comparison": null
+        },
+        {
+          "file": "apt-blackgold-preview.svg",
+          "width": 1024,
+          "height": 1232,
+          "metadata_pixel_differences": 0,
+          "embedded_png_equal": true,
+          "labels_checked": 0,
+          "trace_comparison": null
+        }
+      ],
+      "external_requests": [],
+      "errors": [],
+      "passed": true
+    },
+    "trace_browser": {
+      "browser": "156.0.8078.4",
+      "assets": [
+        {
+          "file": "apt-ada-logo-traced.svg",
+          "width": 1024,
+          "height": 1024,
+          "metadata_pixel_differences": 0,
+          "embedded_png_equal": null,
+          "labels_checked": 0,
+          "trace_comparison": {
+            "mean_absolute_channel_difference": 7.621160268783569,
+            "changed_channel_fraction": 0.7331795692443848,
+            "note": "Lossy raster-to-vector comparison; no universal fidelity threshold claimed"
+          }
+        }
+      ],
+      "external_requests": [],
+      "errors": [],
+      "passed": true
+    },
+    "largest_fixture_palette_metadata_bytes": 34109
+  },
+  "real_tracing": {
+    "executable": "C:\\Users\\Administrator\\Downloads\\vtracer-x86_64-pc-windows-msvc\\vtracer.exe",
+    "sha256": "185c20424a5eed31f2ed0caf9d72b6cc7ae86480bab05199fd5cbde55d4b40b1",
+    "version": "vtracer 1.0.0-alpha.4",
+    "file": ".build\\stabilization-real-trace\\finished\\apt-ada-logo-traced.svg",
+    "bytes": 1378472,
+    "path_count": 6865,
+    "embedded_raster_count": 0,
+    "settings": {
+      "mode": "trace",
+      "normalize": false,
+      "resize": null,
+      "background": "none",
+      "filter": "Lanczos",
+      "blur": null,
+      "colors": null,
+      "mono": false,
+      "threshold": "auto",
+      "invert": false,
+      "simplify": 2.0,
+      "curves": "spline",
+      "hierarchical": "cutout",
+      "filter_speckle": 4,
+      "color_precision": 6,
+      "path_precision": 2,
+      "max_colors": null,
+      "magick": "magick",
+      "vtracer": "C:\\Users\\Administrator\\Downloads\\vtracer-x86_64-pc-windows-msvc\\vtracer.exe"
+    },
+    "visual_assessment": "Recognizable composition; default tracing visibly posterizes texture and simplifies letter edges. Pixel fidelity and general logo suitability are not claimed."
+  },
+  "review_artifacts": {
+    "four_samples": ".build/stabilization-review-final/browser/review.html",
+    "four_samples_screenshot": ".build/stabilization-review-final/browser/review.png",
+    "original_vs_trace": ".build/stabilization-real-trace/browser/review.html",
+    "original_vs_trace_screenshot": ".build/stabilization-real-trace/browser/review.png",
+    "screenshots_visually_inspected": true,
+    "note": "Browser review artifacts are local .build outputs; tracked receipts and reproducible commands are retained here."
+  },
+  "documentation": {
+    "mandatory_records": 4,
+    "priority_records": 21,
+    "all_25_selected_paths_exist": true,
+    "original_overview_snapshot_sha256": {
+      "Project-Proposal.md": "0304d8865210183f319a031816e736b2dccf02c4cde7fbd8d00e0333d50bb547",
+      "Project-README.md": "eb0d7820af1f314a5485ef3cc6fc9a2364757ea031f0657cdc8ca1ed0f24f2d1",
+      "README.md": "750655601fb68201aa4f8dbc6af3f25df6af047a98ece69e4104f9ffd15f3ed5"
+    },
+    "parent_records_change_needed": false,
+    "parent_records_reason": "Identity, ownership, root and registrations are unchanged.",
+    "current_local_links_checked": 113,
+    "current_local_links_broken": 0
+  },
+  "not_performed": [
+    "native SVG editor import",
+    "native application installation or activation",
+    "public asset updates",
+    "publication",
+    "operator production fidelity approval"
+  ],
+  "preserved": [
+    "canonical 32 RGB values and IDs",
+    "original artwork and selected runs/manifests",
+    "historical artifacts and recovery archives",
+    "independent SESM tooling ownership"
+  ],
+  "evidence_files": {
+    "baseline-hashes.json": {
+      "path": "evidence/stabilization-2026-10-25/baseline-hashes.json",
+      "sha256": "6c54d01ef9a95e7ab9f404c24914b8e0977bf121ce33bf990ee6934659b75f30"
+    },
+    "source-final-hashes.json": {
+      "path": "evidence/stabilization-2026-10-25/source-final-hashes.json",
+      "sha256": "6c54d01ef9a95e7ab9f404c24914b8e0977bf121ce33bf990ee6934659b75f30"
+    },
+    "wheel-final-hashes.json": {
+      "path": "evidence/stabilization-2026-10-25/wheel-final-hashes.json",
+      "sha256": "6c54d01ef9a95e7ab9f404c24914b8e0977bf121ce33bf990ee6934659b75f30"
+    },
+    "baseline-tests.log": {
+      "path": "evidence/stabilization-2026-10-25/baseline-tests.log",
+      "sha256": "f2bed838e2a8ac9131fd23be8d429763d951221f932ed95e99575a9fc885b80e"
+    },
+    "final-tests.log": {
+      "path": "evidence/stabilization-2026-10-25/final-tests.log",
+      "sha256": "24bde2b3ec7be36ee5d23ac9b34407a1755f85655a7c10dca3f279e769713b08"
+    },
+    "package-validation.json": {
+      "path": "evidence/stabilization-2026-10-25/package-validation.json",
+      "sha256": "b05d1bfa128ea4c75af6ef8200ee44a2497502d29f8e217073cb5b059403f38b"
+    },
+    "samples-receipt.json": {
+      "path": "evidence/stabilization-2026-10-25/samples-receipt.json",
+      "sha256": "9175619b70a1c823df14da0552301afe679b4011580e460abebb651653f75fa6"
+    },
+    "trace-receipt.json": {
+      "path": "evidence/stabilization-2026-10-25/trace-receipt.json",
+      "sha256": "d19d7bce742ee1bba8dc25f980656abc4bca717ab2772e9073c666de122dad52"
+    },
+    "browser-validation.json": {
+      "path": "evidence/stabilization-2026-10-25/browser-validation.json",
+      "sha256": "feb370944e1a4be23b8ac60eace3c663d62b8ad7e884f5a86da2f1075ccac862"
+    },
+    "trace-browser-validation.json": {
+      "path": "evidence/stabilization-2026-10-25/trace-browser-validation.json",
+      "sha256": "51c1b1d524c95ccf9e8ff029f9a6fda804828fba5b8ffe131c1b6d53f586d1f0"
+    },
+    "palette-metadata-sizes.json": {
+      "path": "evidence/stabilization-2026-10-25/palette-metadata-sizes.json",
+      "sha256": "52d8eae05f86aee73df31edd3132da27026c8c78be48604ffbdc2f86394b1d38"
+    },
+    "documentation-validation.json": {
+      "path": "evidence/stabilization-2026-10-25/documentation-validation.json",
+      "sha256": "1c5bc3303c373142fc47b0f005d7ecba40ac57e5de4b92210b2f6a6be6d64aec"
+    }
+  }
+}

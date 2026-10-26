@@ -3367,3 +3367,26 @@ dist/
 /docs/
 /migration/
 /docs/
+
+# Stabilization source and documentation; generated collections remain ignored.
+!/apt_theme/pipeline.py
+!/apt_theme/exporters.py
+!/apt_theme/transactions.py
+!/apt_theme/svg_converter.py
+!/apt_theme/finishing.py
+!/docs/
+/docs/*
+!/docs/ARCHITECTURE.md
+!/docs/STABILIZATION-AUDIT.md
+!/docs/SVG-FINISHING.md
+!/docs/examples/
+/docs/examples/*
+!/docs/examples/finish-selected.toml
+!/docs/examples/finish-trace.toml
+!/docs/history/
+/docs/history/*
+!/docs/history/stabilization-2026-10-25/
+!/evidence/
+/evidence/*
+!/evidence/stabilization-2026-10-25.json
+!/evidence/stabilization-2026-10-25/

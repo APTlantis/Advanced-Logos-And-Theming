@@ -1,3 +1,9 @@
+# Current output reference
+
+Stabilization review: **2026-10-25**. The fifteen theme targets and their payload contracts remain unchanged. CLI orchestration is now in `apt_theme/pipeline.py`, native writer dispatch is in `apt_theme/exporters.py`, and shared staging is in `apt_theme/transactions.py`. [Architecture](ARCHITECTURE.md).
+
+[OUTPUT-NAMING.md](OUTPUT-NAMING.md) is the authority for current filenames and manifest discovery. Historical generic filenames below describe logical/native roles. “Current” counts and example snapshots in dated material refer to their original dates. The separate [SVG finishing command](SVG-FINISHING.md) produces selected SVGs, an exact SESM registry and a finishing receipt in a fresh directory; it does not alter the theme run schema or target manifests.
+
 Target filenames now follow the [version-aware naming contract](OUTPUT-NAMING.md). Use `run.json.artifact_manifests` to discover actual paths; the generic target paths below describe logical/native roles and dated contracts. New freely named payloads, metadata and specimens have a single versioned filename. Required native package members remain fixed.
 
 Atlas collection update (2026-10-16): the current snapshot has 19 runs and 608 canonical colors. The inspector links 171 offline examples, copied with dependencies and `examples-manifest.json` hashes. [Exact collection and contracts](CHROMATIC-ATLAS.md).
@@ -32,7 +38,7 @@ The [website target reference](WEBSITE-TARGET.md) specifies native browser CSS, 
 
 `apt-theme generate` starts from an image; `apt-theme import` starts from a 32-entry palette. Both run the same semantic mapping, adaptation, export and reporting stages. All fifteen IDs in [`DEFAULTS`](../apt_theme/targets.py) are selected by default. `--targets` accepts a comma-separated, unique subset of those exact IDs. Unsupported or duplicate IDs fail before export.
 
-Here `<slug>` means the supplied name, lowercased, with runs of non-ASCII-alphanumeric characters replaced by hyphens and leading/trailing hyphens removed. An empty result becomes `aptlantis-theme`. Without `--name`, the input filename stem supplies the name. Each target has its own directory under the chosen run directory.
+For current filenames, the shared identity resolver supplies `<prefix>-<theme>` using the exact generation evidence; see [output naming](OUTPUT-NAMING.md). The generic native filenames in this reference describe logical roles, not additional compatibility copies. Each target remains in its own directory.
 
 | App/type | Target ID | Default token budget | Current default named count | Primary output |
 |---|---|---:|---:|---|
@@ -72,7 +78,7 @@ flowchart TD
 
 ### 1. Input and normalization
 
-[`cli.build`](../apt_theme/cli.py) resolves the source and destination, validates configuration/targets, and checks destination safeguards. Image extraction in [`extraction.extract`](../apt_theme/extraction.py) hashes the original input, identifies its first frame, rejects unprofiled CMYK, applies auto-orientation and an sRGB ICC profile, then asks ImageMagick for 8-bit RGBA pixels. These normalized pixels are analysis data; the original image file is copied intact into the run.
+[`pipeline.build`](../apt_theme/pipeline.py), also available through the `cli.build` compatibility wrapper, resolves the source and destination, validates configuration/targets, and checks destination safeguards. Image extraction in [`extraction.extract`](../apt_theme/extraction.py) hashes the original input, identifies its first frame, rejects unprofiled CMYK, applies auto-orientation and an sRGB ICC profile, then asks ImageMagick for 8-bit RGBA pixels. These normalized pixels are analysis data; the original image file is copied intact into the run.
 
 Fully transparent pixels are excluded. Partial opacity contributes `alpha / 255` population weight. If more than 65,536 visible pixels remain, the default seeded sampler chooses that many without replacement. The defaults are seed 32 and up to 192 candidate clusters; configuration permits a sample limit of at least 32 and candidate counts from 32 through 1,024. Fewer than 32 distinct sampled visible RGB colors is an error, not a request to invent colors.
 
@@ -157,7 +163,7 @@ For example, follow `semantics.json.roles.primary` into `palette.toml`, then `to
 
 ### Windows Terminal
 
-Source: [`targets.export`](../apt_theme/targets.py). Files: `windows-terminal.json`, `tokens.json`, `validation.json`.
+Source: [`exporters.export`](../apt_theme/exporters.py). Files: `windows-terminal.json`, `tokens.json`, `validation.json`.
 
 The native JSON contains 21 properties: name plus 20 colors. `background`/`foreground` are direct fields; cursor becomes `cursorColor`, selection becomes `selectionBackground`. Eight ANSI names (black, red, green, yellow, blue, magenta, cyan, white) and their `brightBlack` through `brightWhite` counterparts use corresponding tokens. Bright variants request up to 0.08 additional lightness, capped at 0.99; readable adjustment may produce aliases. Foreground and ANSI text target 4.5 against background, cursor 3 against background, and foreground 4.5 against selection.
 
@@ -165,7 +171,7 @@ The artifact is a color-scheme object for operator integration with Terminal set
 
 ### SiYuan
 
-Source: [`editor_css` and `export`](../apt_theme/targets.py). Files: `theme.css`, `theme.json`, `README.md`, `icon.png`, `preview.png`, `package.zip`, plus audit JSON.
+Source: [`editor_css` and `export`](../apt_theme/exporters.py). Files: `theme.css`, `theme.json`, `README.md`, `icon.png`, `preview.png`, `package.zip`, plus audit JSON.
 
 `theme.css` declares all adapted `--apt-*` variables and maps dark-mode SiYuan `--b3-*` variables for backgrounds, surfaces, text, primary/secondary, error, border, code blocks, list hover/selection and font family. Selectors cover document body, docks/lists, dialogs, code blocks, links/headings, selection, blockquote borders, table/control borders and inputs. Eight `.hljs-*` classes consume syntax roles. `.apt-*` status/accent classes consume states; selected link/button/menu selectors use primary/secondary hover/active/subdued variants. When budget allows, scoped list/dialog syntax and text selectors consume panel/elevated variants.
 
@@ -175,7 +181,7 @@ The generated README describes manual placement in the workspace theme folder. G
 
 ### Typora
 
-Source: [`theme_css` and `export_examples`](../apt_theme/typora.py), dispatched by [`editor_css`](../apt_theme/targets.py). Files: `<slug>.css`, paired specimens and audit JSON.
+Source: [`theme_css` and `export_examples`](../apt_theme/typora.py), dispatched by [`editor_css`](../apt_theme/exporters.py). Files: `<slug>.css`, paired specimens and audit JSON.
 
 Typora exports `<slug>.css`, `examples.md`, `examples.html` and a local `example-image.png`, in addition to its token palette, swatch and validation records. `apt_theme/typora.py` owns application selectors and paired specimens; the browser page loads the actual exported CSS and is explicitly a simulation.
 
@@ -187,7 +193,7 @@ Fresh local evidence: `migration/typora-markdown-acceptance-2026-10-11.json`. Br
 
 ### PowerPoint and Office colors
 
-Sources: [`targets.export`](../apt_theme/targets.py), [`powerpoint.py`](../apt_theme/powerpoint.py), [preserved template receipt](../apt_theme/templates/provenance.json). Files: `<slug>.xml`, `<slug>-sample.pptx`, `<slug>-template.potx`, `template-provenance.json`, audit JSON.
+Sources: [`exporters.export`](../apt_theme/exporters.py), [`powerpoint.py`](../apt_theme/powerpoint.py), [preserved template receipt](../apt_theme/templates/provenance.json). Files: `<slug>.xml`, `<slug>-sample.pptx`, `<slug>-template.potx`, `template-provenance.json`, audit JSON.
 
 | Office color slot | Target token | Office color slot | Target token |
 |---|---|---|---|
@@ -208,7 +214,7 @@ Recorded native PowerPoint opening/rendering with repair disabled exists in [tem
 
 ### Alacritty
 
-Source: [`targets.export`](../apt_theme/targets.py). Files: `<slug>.toml` and audit JSON. Token derivation/checks are the terminal rules above.
+Source: [`exporters.export`](../apt_theme/exporters.py). Files: `<slug>.toml` and audit JSON. Token derivation/checks are the terminal rules above.
 
 Five TOML groups are emitted: `colors.primary` background/foreground; `colors.cursor` text=background and cursor=cursor; `colors.selection` text=foreground and background=selection; `colors.normal` eight ANSI colors; `colors.bright` eight bright colors. `tokens.json.native_slots` records those mappings. Cursor text/background contrast is not an additional dedicated check in the current adapter.
 

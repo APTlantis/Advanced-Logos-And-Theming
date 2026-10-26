@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "network_blocked_in_generator_process": true,
+  "external_sesm_processes": "local scripts; no network operations implemented",
+  "resources_compared": 113,
+  "modules": {
+    "apt_theme": "apt_theme\\__init__.py",
+    "apt_theme.colors": "apt_theme\\colors.py",
+    "apt_theme.targets": "apt_theme\\targets.py",
+    "apt_theme.cli": "apt_theme\\cli.py",
+    "apt_theme.extraction": "apt_theme\\extraction.py",
+    "apt_theme.transactions": "apt_theme\\transactions.py",
+    "apt_theme.identity": "apt_theme\\identity.py",
+    "apt_theme.output_names": "apt_theme\\output_names.py",
+    "apt_theme.atlas": "apt_theme\\atlas.py",
+    "apt_theme.svg_converter": "apt_theme\\svg_converter.py",
+    "apt_theme.report": "apt_theme\\report.py",
+    "apt_theme.semantics": "apt_theme\\semantics.py",
+    "apt_theme.pipeline": "apt_theme\\pipeline.py",
+    "apt_theme.target_palette": "apt_theme\\target_palette.py",
+    "apt_theme.finishing": "apt_theme\\finishing.py",
+    "apt_theme.website": "apt_theme\\website.py",
+    "apt_theme.kmindz": "apt_theme\\kmindz.py",
+    "apt_theme.browser_themes": "apt_theme\\browser_themes.py",
+    "apt_theme.exporters": "apt_theme\\exporters.py",
+    "apt_theme.typora": "apt_theme\\typora.py",
+    "apt_theme.powerpoint": "apt_theme\\powerpoint.py",
+    "apt_theme.native_editors": "apt_theme\\native_editors.py",
+    "apt_theme.svg_examples": "apt_theme\\svg_examples.py",
+    "apt_theme.syntax_examples": "apt_theme\\syntax_examples.py",
+    "apt_theme.chart_examples": "apt_theme\\chart_examples.py",
+    "apt_theme.visual_targets": "apt_theme\\visual_targets.py"
+  },
+  "fixture_files": {
+    "import": 356,
+    "generate": 356
+  },
+  "changed_fixture_hashes": 0,
+  "finished_assets": [
+    {
+      "file": "apt-ada-logo.svg",
+      "profile": "sesm-safe"
+    },
+    {
+      "file": "apt-blackgold-canonical.svg",
+      "profile": "sesm-safe"
+    },
+    {
+      "file": "apt-blackgold-terminal-swatch.svg",
+      "profile": "sesm-safe"
+    },
+    {
+      "file": "apt-blackgold-preview.svg",
+      "profile": "sesm-safe"
+    }
+  ]
+}

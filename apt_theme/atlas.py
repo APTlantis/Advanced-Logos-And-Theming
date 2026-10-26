@@ -4,13 +4,13 @@ import hashlib
 import json
 import shutil
 import sys
-import tempfile
+from .transactions import staged_directory
 from pathlib import Path
 
 from .colors import from_rgb, lab
 from .extraction import load_palette
 from .identity import PREFIXES, resolve_identity
-from .output_names import SCHEMA as ARTIFACT_SCHEMA
+from .output_names import manifest_path, manifest_records
 
 SCHEMA = 'aptlantis.chromatic-atlas.v1'
 ASSETS = Path(__file__).parent / 'atlas_assets'
@@ -82,21 +82,15 @@ def snapshot(collection, patterns=DEFAULT_PATTERNS):
                 raise ValueError('Unsafe target name')
             paths = {}
             receipts = {}
-            if 'artifact_manifests' in metadata:
-                manifest_path = metadata['artifact_manifests'].get(target)
-                if not isinstance(manifest_path, str) or Path(manifest_path).parts != (target, Path(manifest_path).name) or '\\' in manifest_path:
-                    raise ValueError('Unsafe artifact manifest path')
-                text, _ = read(run/manifest_path, 'artifact_manifest')
+            relative = manifest_path(metadata, target)
+            if relative is not None:
+                text, _ = read(run/relative, 'artifact_manifest')
                 manifest = json.loads(text)
-                if manifest.get('schema') != ARTIFACT_SCHEMA or manifest.get('target') != target or manifest.get('theme_identity') != metadata.get('theme_identity'):
+                records = manifest_records(manifest, target)
+                if manifest.get('theme_identity') != metadata.get('theme_identity'):
                     raise ValueError('Artifact manifest identity mismatch')
-                for record in manifest['files']:
-                    filename, logical = record['file'], record['logical_name']
-                    if not isinstance(filename, str) or Path(filename).name != filename or filename in ('.', '..') or '/' in filename or '\\' in filename:
-                        raise ValueError('Unsafe artifact filename')
-                    if logical in paths or filename in paths.values():
-                        raise ValueError('Duplicate artifact identity')
-                    paths[logical], receipts[filename] = filename, record['sha256']
+                paths = {logical: record['file'] for logical, record in records.items()}
+                receipts = {record['file']: record['sha256'] for record in records.values()}
                 if 'tokens.json' not in paths:
                     raise ValueError('Artifact manifest omits target tokens')
             file = run/target/paths.get('tokens.json', 'tokens.json')
@@ -152,8 +146,7 @@ def build(collection, output, patterns=DEFAULT_PATTERNS, overwrite=False):
             raise ValueError('Refusing to overwrite a non-atlas directory')
     data = snapshot(collection,patterns)
     output.parent.mkdir(parents=True,exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix='apt-atlas-',dir=output.parent) as temp:
-        stage = Path(temp)/'atlas'
+    with staged_directory(output, prefix='apt-atlas-', name='atlas', overwrite=overwrite) as stage:
         shutil.copytree(ASSETS,stage)
         example_files = []
         for theme in data['themes']:
@@ -184,16 +177,6 @@ def build(collection, output, patterns=DEFAULT_PATTERNS, overwrite=False):
         (stage/'atlas-data.js').write_text('window.ATLAS_DATA='+payload.replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')+';\n',encoding='utf-8')
         (stage/'.atlas-run.json').write_text(json.dumps({'schema':SCHEMA,'counts':data['counts']},indent=2)+'\n',encoding='utf-8')
         (stage/'README.md').write_text('# Chromatic Atlas local snapshot\n\nOpen index.html directly, or serve only this directory over loopback HTTP. atlas.json is the inspectable snapshot; atlas-data.js contains identical data for offline loading. Sources are hashed and read only at snapshot generation. Refresh explicitly using apt-theme atlas. Browser selections are temporary and never modify palettes. Copied offline examples are listed in the inspector; examples-manifest.json records all copied asset hashes. CodeMirror 6 examples require a local HTTP server serving this Atlas directory.\n\nThe OKLab plot omits L from its projection; nearest-neighbor distances use all L,a,b coordinates. Near-neutral hue is not treated as red. Exported token lineage is separate from proven native property/selector usage.\n',encoding='utf-8')
-        if output.exists():
-            backup = Path(temp)/'previous'
-            output.rename(backup)
-            try:
-                stage.rename(output)
-            except BaseException:
-                backup.rename(output)
-                raise
-        else:
-            stage.rename(output)
     return {'schema':SCHEMA,**data['counts'],'findings':data['findings'],'output':str(output),'read_only':True}
 
 

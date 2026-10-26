@@ -1,3 +1,13 @@
+# Evaluator starting context — stabilization
+
+Source boundary: **2026-10-25**, package **0.1.0 local pilot**. Begin with [PROJECT-READMAP.toml](../PROJECT-READMAP.toml), [architecture](ARCHITECTURE.md), [audit](STABILIZATION-AUDIT.md) and [current acceptance](../evidence/stabilization-2026-10-25.json). The read map now has four mandatory and twenty-one priority records; the 25-file mandatory/priority budget is full. Secondary sources remain available for deeper review.
+
+The fifteen theme targets, canonical color contract, native interfaces and existing run formats remain stable. CLI presentation, pipeline orchestration, target adaptation and exporter dispatch now have separate owners. Shared transactions preserve rollback. The independent `finish` command processes explicit existing PNG selections; SESM ownership stays in the sibling project. [Finishing contract](SVG-FINISHING.md).
+
+Current test inventory is 75 methods; consult recorded results for actual pass/failure evidence. Historical entries below contain earlier inventories. Native acceptance, real tracing fidelity, installation and publication are separate. Historical migration tools that overwrite outputs/records must not be run as harmless checks.
+
+<details><summary>Historical evaluator context and dated extensions</summary>
+
 Version-aware naming (2026-10-18): [contract](OUTPUT-NAMING.md), shared identity resolver and authoritative artifact inventories replace compatibility copies in future runs. [Fresh evidence](../migration/version-naming-acceptance-2026-10-18.json). Earlier evaluator/native/hosting records remain dated.
 
 Current Atlas scope: all 19 apt/dnf runs, with offline example links. [Collection contract](CHROMATIC-ATLAS.md) and [acceptance](../migration/chromatic-atlas-collection-acceptance-2026-10-16.json). Earlier 13-theme records are historical.
@@ -29,3 +39,6 @@ No project identity, ownership, lifecycle stage, parent registration or root rel
 Typora refinement (2026-10-11): `apt_theme/typora.py`, `tests/test_typora.py` and `docs/TYPORA-REVIEW.md` supply additional implementation and native review pointers. Evidence: `migration/typora-markdown-acceptance-2026-10-11.json`. Prior preflight records remain dated.
 Output naming (2026-10-16): [contract](OUTPUT-NAMING.md), shared `apt_theme/output_names.py` and `tests/test_output_names.py` add collectable files alongside native entry points. Existing Atlas snapshots and generated runs remain dated; they are not refreshed by this change.
 
+
+
+</details>

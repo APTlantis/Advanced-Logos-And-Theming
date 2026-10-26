@@ -1,0 +1,81 @@
+{
+  "schema": "aptlantis.finish-receipt.v1",
+  "written": true,
+  "output": "D:\\CTS\\Logos-And-Theming\\.build\\stabilization-real-trace\\finished",
+  "sources": {
+    "D:\\CTS\\Logos-And-Theming\\docs\\examples\\finish-trace.toml": "a3dc7cb07fe0fee4bc426cec89ca2902ea8957d4fa49913d6662150ed6b6302a",
+    "D:\\CTS\\Logos-And-Theming\\assets\\png\\apt-ada-logo.png": "f98bd86034794c94ca258dd1b2a92e8c2492d9a773252764790fd03a22832522"
+  },
+  "tools": {
+    "apt-theme": "0.1.0",
+    "pillow": "12.3.0",
+    "generator_python": "3.13.15",
+    "sesm_python": "Python 3.13.15",
+    "sesm_metadata_version": "0.3.0",
+    "sesm_sources": {
+      "D:\\CTS\\SESM-Metadata-Embedder\\scripts\\Embed-SESM.py": "3fd77e7d5e9bdb900ccc2245a37e227d7d3c0507a37e0308cc97e4edb7583788",
+      "D:\\.city_hall\\SESM\\Validate-SESM-Safe.py": "0c6f52ea478b55b03ce89c23ae9597bd4d37fce40135f3ae491aecccc15a0bb9",
+      "D:\\.city_hall\\SESM\\svg_asset.schema.json": "b8dc402528f0746c49621b6e2748239566da69f39f15ace00c226b22981100a2"
+    },
+    "implementation_sources": {
+      "D:\\CTS\\Logos-And-Theming\\apt_theme\\finishing.py": "06562db0d3ab4945f17f96d53a9d8746fa940cfefcd0ded917185f9a0616c15d",
+      "D:\\CTS\\Logos-And-Theming\\apt_theme\\svg_converter.py": "db5052eec57770f7b8757c86cbf20b92b57f6562c31a3719c107e4817fe8d3f0"
+    },
+    "vtracer": "vtracer 1.0.0-alpha.4",
+    "magick": "Version: ImageMagick 7.1.2-31 Q16 x64 fb965f1:20260903 https://imagemagick.org"
+  },
+  "assets": [
+    {
+      "id": "apt-ada-logo-traced",
+      "file": "apt-ada-logo-traced.svg",
+      "settings": {
+        "mode": "trace",
+        "normalize": false,
+        "resize": null,
+        "background": "none",
+        "filter": "Lanczos",
+        "blur": null,
+        "colors": null,
+        "mono": false,
+        "threshold": "auto",
+        "invert": false,
+        "simplify": 2.0,
+        "curves": "spline",
+        "hierarchical": "cutout",
+        "filter_speckle": 4,
+        "color_precision": 6,
+        "path_precision": 2,
+        "max_colors": null,
+        "magick": "magick",
+        "vtracer": "C:\\Users\\Administrator\\Downloads\\vtracer-x86_64-pc-windows-msvc\\vtracer.exe"
+      },
+      "sha256": "712150d185459ff8e74aee2612cb0ffad63e48e3a0eee53fdc92c800145e1382",
+      "artwork_sha256": "5410d707326b11ca7a3c88addd3c4487d97919b935d9ffba73106a9b6996dd7c",
+      "identity_resolution": {
+        "version": 1,
+        "prefix": "apt",
+        "slug": "ada",
+        "evidence": [
+          {
+            "source": "--theme-version",
+            "version": 1
+          }
+        ]
+      },
+      "recorded_theme_identity": null,
+      "schema_validation": "passed",
+      "validation": {
+        "status": "ok",
+        "profile": "sesm-safe",
+        "file": "apt-ada-logo-traced.svg",
+        "errors": [],
+        "warnings": [],
+        "metadata_version": "0.3.0",
+        "schema": "D:\\.city_hall\\SESM\\svg_asset.schema.json",
+        "safe_profile_checked": true
+      }
+    }
+  ],
+  "warnings": [],
+  "native_application_acceptance": "not performed"
+}

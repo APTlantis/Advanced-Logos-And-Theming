@@ -1,0 +1,11 @@
+schema = "aptlantis.finish-plan.v1"
+
+# Explicit optional tracing sample; select the compatible executable with --vtracer.
+[[assets]]
+id = "apt-ada-logo-traced"
+input = "../../assets/png/apt-ada-logo.png"
+mode = "trace"
+role = "logo"
+title = "Ada vector trace"
+theme_name = "Aptlantis-Ada"
+theme_version = 1

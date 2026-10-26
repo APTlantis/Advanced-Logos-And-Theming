@@ -1,0 +1,21 @@
+{
+  "browser": "156.0.8078.4",
+  "assets": [
+    {
+      "file": "apt-ada-logo-traced.svg",
+      "width": 1024,
+      "height": 1024,
+      "metadata_pixel_differences": 0,
+      "embedded_png_equal": null,
+      "labels_checked": 0,
+      "trace_comparison": {
+        "mean_absolute_channel_difference": 7.621160268783569,
+        "changed_channel_fraction": 0.7331795692443848,
+        "note": "Lossy raster-to-vector comparison; no universal fidelity threshold claimed"
+      }
+    }
+  ],
+  "external_requests": [],
+  "errors": [],
+  "passed": true
+}

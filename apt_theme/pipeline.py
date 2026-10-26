@@ -1,0 +1,93 @@
+"""Generation/import orchestration; CLI presentation is kept in cli.py."""
+import json
+import shutil
+import tomllib
+from pathlib import Path
+
+from .extraction import digest, extract, load_palette, metrics, palette_toml, select, selection_diagnostics
+from .report import review, swatch
+from .semantics import assign, background_choice
+from .targets import DEFAULTS, adapt, export
+from .identity import resolve_identity
+from .transactions import staged_directory
+
+
+def write_json(path, value):
+    path.write_text(json.dumps(value, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+
+
+def build(args):
+    source = args.input.resolve(strict=True)
+    output = args.output.resolve()
+    if output == source or output in source.parents:
+        raise ValueError("Output cannot contain the input source")
+    if output.exists() and not args.overwrite:
+        raise ValueError("Output already exists; use --overwrite explicitly")
+    if output.exists() and not output.is_dir():
+        raise ValueError("Output must be a directory")
+    if output.exists() and (output / "run.json").exists() is False and any(output.iterdir()):
+        raise ValueError("Refusing to overwrite a non-pipeline directory")
+    config = {}
+    if args.config:
+        config = tomllib.loads(args.config.read_text(encoding="utf-8-sig"))
+    if set(config) - {"profiles", "extraction", "semantics", "overrides"}:
+        raise ValueError("Unknown configuration section")
+    targets = args.targets.split(",")
+    if len(set(targets)) != len(targets) or any(t not in DEFAULTS for t in targets):
+        raise ValueError("Targets must be unique names from " + ", ".join(DEFAULTS))
+    imported = load_palette(source) if args.command == "import" else None
+    name = args.name or (imported[1].get("theme", {}).get("name") if imported else None) or source.stem
+    identity = resolve_identity(name, args.theme_version, source, imported[1] if imported else None)
+    comparison, old = None, {}
+    if args.command == "generate":
+        candidates, provenance, coords, weights = extract(source, config.get("extraction", {}))
+        colors = select(candidates, int(config.get("extraction", {}).get("seed", 32)))
+        diagnostics = {"canonical": metrics(coords, weights, colors), "selection_policy": selection_diagnostics(candidates, colors)}
+    else:
+        colors, old = imported
+        provenance = {"sha256": digest(source), "kind": "imported_palette", "legacy_roles": old.get("roles", {})}
+        candidates = list(colors.values())
+        diagnostics = {"kind": "import", "canonical_colors_preserved": True}
+    if args.compare:
+        comparison, _ = load_palette(args.compare)
+        if args.command == "generate":
+            diagnostics["previous"] = metrics(coords, weights, comparison)
+        diagnostics["comparison_sha256"] = digest(args.compare)
+    semantic_settings = config.get("semantics", {})
+    roles, notices = assign(colors, config.get("overrides", {}), semantic_settings)
+    _, reason = background_choice(colors, semantic_settings)
+    diagnostics["background_selection"] = {"source": roles["background"], "hex": colors[roles["background"]]["hex"],
+        "reason": "Explicit semantic override" if "background" in config.get("overrides", {}) else reason,
+        "mode": semantic_settings.get("background_mode", "identity"),
+        "target_oklch_lightness": semantic_settings.get("background_lightness", .20),
+        "darkest_hex": min(colors.values(), key=lambda c: c["oklch"][0])["hex"]}
+    results = [adapt(colors, roles, target, int(config.get("profiles", {}).get(target, {}).get("budget", DEFAULTS[target]))) for target in targets]
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with staged_directory(output, prefix="apt-build-", overwrite=args.overwrite) as stage:
+        stage.mkdir()
+        source_dir = stage / "source"
+        source_dir.mkdir()
+        shutil.copy2(source, source_dir / source.name)
+        if digest(source_dir / source.name) != provenance["sha256"]:
+            raise ValueError("Source changed before preservation")
+        (stage / "palette.toml").write_text(palette_toml(colors, name, provenance["sha256"], identity.record()), encoding="utf-8")
+        (stage / "palette.txt").write_text("\n".join(f'{key}\t{c["hex"]}' for key, c in colors.items()) + "\n", encoding="utf-8")
+        (stage / "palette.css").write_text(":root {\n" + "\n".join(f'  --apt-{key.replace("_", "-")}: {c["hex"]};' for key, c in colors.items()) + "\n}\n", encoding="utf-8")
+        swatch(colors, stage / "palette.png", name + " canonical 32")
+        write_json(stage / "candidates.json", candidates)
+        write_json(stage / "selection.json", diagnostics)
+        write_json(stage / "semantics.json", {"roles": roles, "findings": notices})
+        write_json(stage / "provenance.json", provenance)
+        for result in results:
+            export(result, stage / result["target"], name, colors, provenance["sha256"], identity=identity)
+        review(stage, name, colors, candidates, roles, notices, results, diagnostics,
+               source_dir / source.name if args.command == "generate" else None, comparison)
+        failures = sum(r["contrast_failures"] for r in results)
+        run = {"schema": "aptlantis.theme-run.v1", "name": name, "variant": "dark", "source_sha256": provenance["sha256"],
+               "theme_identity": identity.record(),
+               "artifact_manifests": {r["target"]: r["target"] + "/" + r["artifact_manifest"]["manifest"] for r in results},
+               "targets": targets, "contrast_failures": failures, "semantic_findings": notices,
+               "native_application_acceptance": "pending", "installation": "not performed"}
+        write_json(stage / "run.json", run)
+    return run
+

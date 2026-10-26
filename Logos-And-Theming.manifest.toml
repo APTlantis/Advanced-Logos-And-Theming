@@ -3,7 +3,7 @@ schema = "APTlantis Entity Manifest"
 schema_version = "2.4"
 manifest_type = "project"
 canonical_name = "Logos-And-Theming.manifest.toml"
-last_updated = "2026-10-18"
+last_updated = "2026-10-25"
 maintainer = "Herb"
 
 [entity]
@@ -28,16 +28,20 @@ additional_standard_paths = ["D:/.city_hall/WGS/README.md", "D:/.city_hall/PPS/R
 inherits_from = "D:/CTS/CTS.manifest.toml"
 
 [lifecycle]
+notes = "Exporter expansion paused for output refinement and bounded stabilization; SVG finishing is a separate asset utility."
 state = "active"
 created = "2026-10-08"
-last_updated = "2026-10-16"
-last_reviewed = "2026-10-10"
+last_updated = "2026-10-25"
+last_reviewed = "2026-10-25"
 maintainer = "Herb"
 
 [paths]
 root = "D:\\CTS\\Logos-And-Theming"
 
 [documentation]
+architecture_reference = "docs/ARCHITECTURE.md"
+stabilization_audit = "docs/STABILIZATION-AUDIT.md"
+svg_finishing_reference = "docs/SVG-FINISHING.md"
 output_naming_reference = "docs/OUTPUT-NAMING.md"
 chromatic_atlas_reference = "docs/CHROMATIC-ATLAS.md"
 markdown_editors_reference = "docs/MARKDOWN-EDITORS.md"
@@ -62,6 +66,7 @@ related_projects = ["SESM-Metadata-Embedder"]
 child_projects = []
 
 [verification]
+stabilization_evidence = "evidence/stabilization-2026-10-25.json"
 operator_presentations_evidence = "docs/presentations/operators-2026-10-17/validation/delivery.json"
 output_naming_evidence = "migration/version-naming-acceptance-2026-10-18.json"
 chromatic_atlas_evidence = "migration/chromatic-atlas-collection-acceptance-2026-10-16.json"
