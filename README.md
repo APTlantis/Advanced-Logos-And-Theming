@@ -4,6 +4,8 @@ Local image-to-theme engine and artwork utilities. Package **0.1.0**, **local pi
 
 Start with [architecture](docs/ARCHITECTURE.md), [the stabilization audit](docs/STABILIZATION-AUDIT.md), [command contracts](docs/COMMAND-CONTRACT.md) and [output naming](docs/OUTPUT-NAMING.md). [Project records](Project-README.md) distinguish implementation from native acceptance.
 
+Explore [eight themed visual documentation volumes](docs/documentation-suite/visual-volumes-2026-10-31/README.md): 192 editable slides, slide PDFs, illustrated guides and guide PDFs, actual generated specimens, and an offline index. The 2026-10-31 collection preserves existing runs and distinguishes documentation rendering from downstream application acceptance.
+
 ## Setup and theme generation
 
 Python 3.12+ and ImageMagick are required for image generation. Setup creates the project-local environment from locked dependencies; runtime generation needs no Node or network access.

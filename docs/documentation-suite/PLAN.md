@@ -1,5 +1,11 @@
 # Logos-And-Theming documentation suite plan
 
+## Visual documentation collection — 2026-10-31
+
+[Eight themed visual volumes](visual-volumes-2026-10-31/README.md) provide 192 editable slides, matching slide PDFs, eight illustrated Markdown guides and separately typeset guide PDFs, actual generated specimens, and an offline reading index. Themes are rpm-BlackGold, apt-Crystal, apt-Factor, dnf-Caddy, dnf-Clojure, dnf-Cloudflare, dnf-Flathub, and apt-Swift, preserving their current physical run identities.
+
+The topic volumes cover the project tour, canonical selection, semantics/adaptation, website/hosting contracts, writing/editors, Atlas/visual outputs, artwork custody, and safe operation. They support the original operator, design, adapter, acceptance, custody, recovery, and handbook program below; they do not mark every proposed deep-reference chapter or downstream native acceptance gate complete. Current source contracts take precedence over dated examples below. The collection has its own source snapshot and verification receipts. No historical deck, theme run, public copy, or website is regenerated or published.
+
 **Planning date:** 8 October 2026. **Status updated:** 10 October 2026; two comprehensive references are authored, while the remaining volumes below retain their proposed scope. **Owner:** Logos-And-Theming, with an independently owned SESM companion. **Presentation entry point:** [24-slide Black-Gold overview](../presentations/Logos-And-Theming-Overview.pptx).
 
 ## Authored references — 2026-10-09

@@ -3,7 +3,7 @@ version = "1.0"
 
 [project]
 name = "Logos-And-Theming"
-generated_by = "Source-checked evaluator preparation 2026-10-10; Typora discovery extension 2026-10-11; dated operator presentation discovery 2026-10-17; version-aware naming discovery 2026-10-18; stabilization and SVG finishing 2026-10-25"
+generated_by = "Source-checked evaluator preparation 2026-10-10; Typora discovery extension 2026-10-11; dated operator presentation discovery 2026-10-17; version-aware naming discovery 2026-10-18; stabilization and SVG finishing 2026-10-25; visual documentation collection 2026-10-31"
 
 [budget]
 analyzer_file_budget = 25
@@ -362,3 +362,7 @@ reason = "Supporting target source/tests or finishing contract; current core pat
 [[secondary]]
 path = "docs/SVG-FINISHING.md"
 reason = "Supporting target source/tests or finishing contract; current core paths have priority"
+
+[[secondary]]
+path = "docs/documentation-suite/visual-volumes-2026-10-31/README.md"
+reason = "Eight dated visual topic volumes, editable presentations, illustrated guides, offline specimens, source snapshots and delivery evidence; no downstream acceptance or publication claim"

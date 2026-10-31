@@ -8,6 +8,8 @@ The pipeline preserves original source bytes and selects/imports exactly 32 cano
 
 ## Read first
 
+- [Eight visual documentation volumes](docs/documentation-suite/visual-volumes-2026-10-31/README.md): dated 2026-10-31, with editable slides, illustrated guides, offline specimens, and separate validation records. Historical presentations and source runs remain preserved.
+
 - [README](README.md): setup and operator entry points.
 - [Architecture](docs/ARCHITECTURE.md) and [audit](docs/STABILIZATION-AUDIT.md): current code boundaries, findings and dispositions.
 - [Command contract](docs/COMMAND-CONTRACT.md), [output naming](docs/OUTPUT-NAMING.md), [SVG finishing](docs/SVG-FINISHING.md): maintained interfaces.

@@ -3390,3 +3390,17 @@ dist/
 /evidence/*
 !/evidence/stabilization-2026-10-25.json
 !/evidence/stabilization-2026-10-25/
+
+# Visual documentation authoring and reading entry points; generated media stays local.
+!/docs/documentation-suite/
+/docs/documentation-suite/*
+!/docs/documentation-suite/PLAN.md
+!/docs/documentation-suite/visual-volumes-2026-10-31/
+/docs/documentation-suite/visual-volumes-2026-10-31/*
+!/docs/documentation-suite/visual-volumes-2026-10-31/README.md
+!/docs/documentation-suite/visual-volumes-2026-10-31/index.html
+!/docs/documentation-suite/visual-volumes-2026-10-31/source/
+/docs/documentation-suite/visual-volumes-2026-10-31/source/*
+!/docs/documentation-suite/visual-volumes-2026-10-31/source/*.py
+!/docs/documentation-suite/visual-volumes-2026-10-31/source/*.ps1
+!/docs/documentation-suite/visual-volumes-2026-10-31/source/*.cjs

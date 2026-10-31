@@ -13,7 +13,7 @@ apt-theme generate assets\sources\dnf-ada-logo.png --output output\dnf-Ada --nam
 apt-theme generate assets\sources\dnf-assembly-logo.png --output output\dnf-Assembly --name 'Aptlantis-Assembly' --overwrite --theme-version 2
 apt-theme generate assets\sources\dnf-caddy-logo.png --output output\dnf-Caddy --name 'Aptlantis-Caddy' --overwrite --theme-version 2
 apt-theme generate assets\sources\dnf-clojure-logo.png --output output\dnf-Clojure --name 'Aptlantis-Clojure' --overwrite --theme-version 2
-apt-theme generate assets\sources\dnf-cloudflare-logo.png --output output\dnf-Clooudflare --name 'Aptlantis-Cloudflare' --overwrite --theme-version 2
+apt-theme generate assets\sources\dnf-cloudflare-logo.png --output output\dnf-Cloudflare --name 'Aptlantis-Cloudflare' --overwrite --theme-version 2
 apt-theme generate assets\sources\dnf-dbase-logo.png --output output\dnf-DBase --name 'Aptlantis-DBase' --overwrite
 apt-theme generate assets\sources\dnf-flathub-logo.png --output output\dnf-Flathub --name 'Aptlantis-Flathub' --overwrite
 apt-theme generate assets\sources\dnf-fsharp-logo.png --output output\dnf-Fsharp --name 'Aptlantis-Fsharp' --overwrite
