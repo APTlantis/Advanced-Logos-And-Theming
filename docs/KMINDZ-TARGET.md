@@ -1,4 +1,4 @@
-New support files follow [version-aware naming](OUTPUT-NAMING.md). `KMINDS.json` remains the fixed native package name and has no duplicate prefixed alias.
+Support files follow [version-aware naming](OUTPUT-NAMING.md). New packages use `<prefix>-<theme>-kmindz.kmind-theme.json`; `KMINDS.json` remains the logical manifest lookup key and historical fallback, with no duplicate package copy.
 
 # Kmindz target
 

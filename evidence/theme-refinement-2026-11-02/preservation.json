@@ -1,0 +1,12 @@
+{
+  "files_checked": 38194,
+  "changed": [],
+  "missing": [],
+  "baseline_sha256": "aa820e0eb19ac128655969813e12119b369144d24a0900945ddd896df56564f9",
+  "roots": [
+    "output",
+    "assets",
+    "A:/doc-sites/Logos-Themes/public"
+  ],
+  "A_webserver_writes": "none; no commands mutate this root"
+}

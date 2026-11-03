@@ -1,0 +1,334 @@
+{
+  "kind": "kmind.theme-package",
+  "schemaVersion": 1,
+  "id": "aptlantis-blackgold-canonical32",
+  "name": "Aptlantis BlackGold · Canonical 32",
+  "theme": {
+    "schemaVersion": 1,
+    "id": "aptlantis-blackgold-canonical32",
+    "name": "Aptlantis BlackGold · Canonical 32",
+    "description": "Aptlantis BlackGold canonical 32-color mind-map theme, with warm gold and cool cyan hierarchy.",
+    "variants": {
+      "light": {
+        "tokens": {
+          "layout": {
+            "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            "fontSize": 15,
+            "fontWeight": 500,
+            "lineHeight": 1.45,
+            "textAlign": "left",
+            "paddingX": 16,
+            "paddingY": 11,
+            "nodeMinWidth": 60,
+            "nodeMinHeight": 40
+          },
+          "paint": {
+            "bg": "#FCFDF7",
+            "panel": "#FDEFB4",
+            "text": "#21211C",
+            "muted": "#5B5752",
+            "border": "#A98C76",
+            "nodeFill": "#FDEFB4",
+            "nodeFillSelected": "#FBD484",
+            "nodeStroke": "#D6AE7E",
+            "nodeStrokeSelected": "#845328",
+            "edgeStroke": "#845328",
+            "relationStroke": "#18556A",
+            "relationStrokeSelected": "#0279A3",
+            "summaryStroke": "#A98C76"
+          }
+        },
+        "edges": {
+          "strokeWidth": 3,
+          "cap": "round",
+          "join": "round",
+          "routeType": "orthogonal-rounded"
+        },
+        "relations": {
+          "strokeWidth": 2,
+          "cap": "round",
+          "join": "round"
+        },
+        "nodeShape": {
+          "type": "rounded-rect",
+          "radius": 14,
+          "strokeWidth": 1
+        },
+        "rainbow": {
+          "enabled": true,
+          "palette": [
+            "#EDAF57",
+            "#24BDD8",
+            "#A66B35",
+            "#4A9FAE",
+            "#C7833D",
+            "#89B2A7",
+            "#0279A3",
+            "#D6AE7E",
+            "#73DDEA",
+            "#845328",
+            "#DC9848",
+            "#35737D"
+          ]
+        },
+        "background": {
+          "color": "#FCFDF7"
+        },
+        "rules": {
+          "nodeRules": [
+            {
+              "id": "m3-root",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 0
+              },
+              "apply": {
+                "layout": {
+                  "textAlign": "center",
+                  "fontWeight": 700,
+                  "fontSize": 24,
+                  "paddingX": 18,
+                  "paddingY": 12
+                },
+                "paint": {
+                  "nodeFill": "#664024",
+                  "nodeFillSelected": "#845328",
+                  "nodeStroke": "#A66B35",
+                  "text": "#FCFDF7"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-1",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 1
+              },
+              "apply": {
+                "layout": {
+                  "fontWeight": 650,
+                  "fontSize": 18
+                },
+                "paint": {
+                  "nodeFill": "#FBD484",
+                  "nodeStroke": "#DC9848",
+                  "text": "#413422"
+                },
+                "incomingEdge": {
+                  "strokeColor": "#A66B35",
+                  "routeType": "center-quadratic"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-2",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 2
+              },
+              "apply": {
+                "incomingEdge": {
+                  "strokeColor": "#35737D"
+                },
+                "paint": {
+                  "nodeFill": "#AAF1F3",
+                  "nodeStroke": "#4A9FAE",
+                  "text": "#0A1924"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-3plus",
+              "priority": 10,
+              "when": {
+                "kind": "depthRange",
+                "minDepth": 3
+              },
+              "apply": {
+                "incomingEdge": {
+                  "strokeWidth": 2,
+                  "strokeColor": "#817763"
+                },
+                "paint": {
+                  "nodeFill": "#FDEFB4",
+                  "nodeStroke": "#D6AE7E",
+                  "text": "#413422"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "dark": {
+        "tokens": {
+          "layout": {
+            "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            "fontSize": 15,
+            "fontWeight": 500,
+            "lineHeight": 1.45,
+            "textAlign": "left",
+            "paddingX": 16,
+            "paddingY": 11,
+            "nodeMinWidth": 60,
+            "nodeMinHeight": 40
+          },
+          "paint": {
+            "bg": "#01060E",
+            "panel": "#0A1924",
+            "text": "#FCFDF7",
+            "muted": "#C0C8A9",
+            "border": "#35737D",
+            "nodeFill": "#0A1924",
+            "nodeFillSelected": "#18556A",
+            "nodeStroke": "#18556A",
+            "nodeStrokeSelected": "#F8C265",
+            "edgeStroke": "#A66B35",
+            "relationStroke": "#4A9FAE",
+            "relationStrokeSelected": "#FBD484",
+            "summaryStroke": "#817763"
+          }
+        },
+        "edges": {
+          "strokeWidth": 3,
+          "cap": "round",
+          "join": "round",
+          "routeType": "orthogonal-rounded"
+        },
+        "relations": {
+          "strokeWidth": 2,
+          "cap": "round",
+          "join": "round"
+        },
+        "nodeShape": {
+          "type": "rounded-rect",
+          "radius": 14,
+          "strokeWidth": 1
+        },
+        "rainbow": {
+          "enabled": true,
+          "palette": [
+            "#EDAF57",
+            "#24BDD8",
+            "#A66B35",
+            "#4A9FAE",
+            "#C7833D",
+            "#89B2A7",
+            "#0279A3",
+            "#D6AE7E",
+            "#73DDEA",
+            "#845328",
+            "#DC9848",
+            "#35737D"
+          ]
+        },
+        "background": {
+          "color": "#051019"
+        },
+        "rules": {
+          "nodeRules": [
+            {
+              "id": "m3-root",
+              "name": "Root",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 0
+              },
+              "apply": {
+                "layout": {
+                  "textAlign": "center",
+                  "fontWeight": 700,
+                  "fontSize": 24,
+                  "paddingX": 18,
+                  "paddingY": 12
+                },
+                "paint": {
+                  "nodeFill": "#664024",
+                  "nodeFillSelected": "#845328",
+                  "nodeStroke": "#EDAF57",
+                  "text": "#FCFDF7"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-1",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 1
+              },
+              "apply": {
+                "layout": {
+                  "fontWeight": 650,
+                  "fontSize": 18
+                },
+                "paint": {
+                  "nodeFill": "#022742",
+                  "nodeStroke": "#35737D",
+                  "text": "#FDEFB4"
+                },
+                "incomingEdge": {
+                  "strokeColor": "#EDAF57",
+                  "routeType": "center-quadratic"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-2",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 2
+              },
+              "apply": {
+                "paint": {
+                  "nodeFill": "#0B3F57",
+                  "nodeStroke": "#35737D",
+                  "text": "#AAF1F3"
+                },
+                "incomingEdge": {
+                  "strokeColor": "#4A9FAE"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-3plus",
+              "priority": 10,
+              "when": {
+                "kind": "depthRange",
+                "minDepth": 3
+              },
+              "apply": {
+                "incomingEdge": {
+                  "strokeWidth": 2,
+                  "strokeColor": "#35737D"
+                },
+                "paint": {
+                  "nodeFill": "#0A1924",
+                  "nodeStroke": "#18556A",
+                  "text": "#C0C8A9"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "updatedAt": 1791881884055
+  },
+  "updatedAt": 1791881884055,
+  "description": "Aptlantis BlackGold canonical 32-color mind-map theme, with warm gold and cool cyan hierarchy.",
+  "preview": {
+    "thumbnail": {
+      "source": "theme-preview-svg-v1",
+      "dataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22244%22%20height%3D%2296%22%20viewBox%3D%220%200%20244%2096%22%3E%3Cg%20transform%3D%22translate%280%200%29%22%3E%3Crect%20width%3D%22122%22%20height%3D%2296%22%20fill%3D%22%23FCFDF7%22%2F%3E%3Cpath%20d%3D%22M43%2048%20Q53%2048%2062%2027%20M43%2048%20Q53%2048%2062%2069%22%20stroke%3D%22%23A66B35%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2234%22%20width%3D%2239%22%20height%3D%2228%22%20rx%3D%2210%22%20fill%3D%22%23664024%22%20stroke%3D%22%23A66B35%22%2F%3E%3Crect%20x%3D%2263%22%20y%3D%2215%22%20width%3D%2249%22%20height%3D%2224%22%20rx%3D%229%22%20fill%3D%22%23FBD484%22%20stroke%3D%22%23DC9848%22%2F%3E%3Crect%20x%3D%2263%22%20y%3D%2257%22%20width%3D%2249%22%20height%3D%2224%22%20rx%3D%229%22%20fill%3D%22%23AAF1F3%22%20stroke%3D%22%234A9FAE%22%2F%3E%3Cpath%20d%3D%22M18%2048h19%22%20stroke%3D%22%23FCFDF7%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M73%2027h29%22%20stroke%3D%22%23413422%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M73%2069h29%22%20stroke%3D%22%230A1924%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28122%200%29%22%3E%3Crect%20width%3D%22122%22%20height%3D%2296%22%20fill%3D%22%23051019%22%2F%3E%3Cpath%20d%3D%22M43%2048%20Q53%2048%2062%2027%20M43%2048%20Q53%2048%2062%2069%22%20stroke%3D%22%23EDAF57%22%20stroke-width%3D%222.5%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2234%22%20width%3D%2239%22%20height%3D%2228%22%20rx%3D%2210%22%20fill%3D%22%23664024%22%20stroke%3D%22%23EDAF57%22%2F%3E%3Crect%20x%3D%2263%22%20y%3D%2215%22%20width%3D%2249%22%20height%3D%2224%22%20rx%3D%229%22%20fill%3D%22%23022742%22%20stroke%3D%22%2335737D%22%2F%3E%3Crect%20x%3D%2263%22%20y%3D%2257%22%20width%3D%2249%22%20height%3D%2224%22%20rx%3D%229%22%20fill%3D%22%230B3F57%22%20stroke%3D%22%2335737D%22%2F%3E%3Cpath%20d%3D%22M18%2048h19%22%20stroke%3D%22%23FCFDF7%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M73%2027h29%22%20stroke%3D%22%23FDEFB4%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M73%2069h29%22%20stroke%3D%22%23AAF1F3%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E",
+      "width": 244,
+      "height": 96,
+      "generatedAt": 1791881884055
+    }
+  },
+  "createdAt": 1791853227870
+}

@@ -1,0 +1,10 @@
+{
+  "plugin": "siyuan-kmind-zen",
+  "version": "0.46.0",
+  "plugin_index_sha256": "9cb25d78ad7504735254fec04c531656457133c0432ed0b3ffaa51201413089e",
+  "supplied_filename": "local-kmind-slate.kmind-theme.json",
+  "supplied_sha256": "b295b979daa5a37d417b7d4b5774bc439ced252b56dd6f893b2121607df96940",
+  "validator_requirement": "WYe validates light and dark with qYe; missing slots report Theme variant is required.",
+  "timestamp_policy": "ah/Uq accept finite zero timestamps",
+  "native_acceptance": "pending"
+}

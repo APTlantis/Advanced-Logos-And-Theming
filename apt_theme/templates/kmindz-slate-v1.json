@@ -1,0 +1,303 @@
+{
+  "kind": "kmind.theme-package",
+  "schemaVersion": 1,
+  "id": "local-kmind-slate",
+  "name": "KMind Slate",
+  "theme": {
+    "schemaVersion": 1,
+    "id": "local-kmind-slate",
+    "name": "KMind Slate",
+    "description": "Material 3 seed #303745",
+    "variants": {
+      "light": {
+        "tokens": {
+          "layout": {
+            "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 450,
+            "lineHeight": 1.45,
+            "textAlign": "left",
+            "paddingX": 14,
+            "paddingY": 10,
+            "nodeMinWidth": 60,
+            "nodeMinHeight": 40
+          },
+          "paint": {
+            "bg": "#f6f7fb",
+            "panel": "#ffffff",
+            "text": "#1a1f27",
+            "muted": "#525b6b",
+            "border": "#e1e6ef",
+            "nodeFill": "#eef1f6",
+            "nodeFillSelected": "#dfe5f0",
+            "nodeStroke": "transparent",
+            "nodeStrokeSelected": "#303745",
+            "edgeStroke": "#606a7a",
+            "relationStroke": "#4f5d78",
+            "relationStrokeSelected": "#ba1a1a",
+            "summaryStroke": "#c5cad4"
+          }
+        },
+        "edges": {
+          "strokeWidth": 4,
+          "cap": "round",
+          "join": "round",
+          "routeType": "orthogonal-rounded"
+        },
+        "relations": {
+          "strokeWidth": 2,
+          "cap": "round",
+          "join": "round"
+        },
+        "nodeShape": {
+          "type": "rounded-rect",
+          "radius": 16,
+          "strokeWidth": 0
+        },
+        "rainbow": {
+          "enabled": false,
+          "palette": [
+            "#303745",
+            "#1b5fa7",
+            "#0ea5e9",
+            "#14b8a6",
+            "#22c55e",
+            "#f59e0b",
+            "#fb7185",
+            "#a78bfa"
+          ]
+        },
+        "background": {
+          "color": "#f6f7fb"
+        },
+        "rules": {
+          "nodeRules": [
+            {
+              "id": "m3-root",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 0
+              },
+              "apply": {
+                "layout": {
+                  "textAlign": "center",
+                  "fontWeight": 700,
+                  "fontSize": 24,
+                  "paddingX": 18,
+                  "paddingY": 12
+                },
+                "paint": {
+                  "nodeFill": "#3949a9",
+                  "nodeFillSelected": "#c9d3e5",
+                  "text": "#ffffff"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-1",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 1
+              },
+              "apply": {
+                "layout": {
+                  "fontWeight": 600,
+                  "fontSize": 18
+                },
+                "paint": {
+                  "nodeFill": "#eef1f6",
+                  "text": "#1a1f27"
+                },
+                "incomingEdge": {
+                  "strokeColor": "#303745",
+                  "routeType": "center-quadratic"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-2",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 2
+              },
+              "apply": {
+                "incomingEdge": {
+                  "strokeColor": "#4f5d78"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-3plus",
+              "priority": 10,
+              "when": {
+                "kind": "depthRange",
+                "minDepth": 3
+              },
+              "apply": {
+                "incomingEdge": {
+                  "strokeWidth": 1.75
+                }
+              }
+            }
+          ]
+        }
+      },
+      "dark": {
+        "tokens": {
+          "layout": {
+            "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 450,
+            "lineHeight": 1.45,
+            "textAlign": "left",
+            "paddingX": 14,
+            "paddingY": 10,
+            "nodeMinWidth": 60,
+            "nodeMinHeight": 40
+          },
+          "paint": {
+            "bg": "#0e1219",
+            "panel": "#151a24",
+            "text": "#e6e9ef",
+            "muted": "#c5cad4",
+            "border": "rgba(197, 202, 212, 0.22)",
+            "nodeFill": "#1a202b",
+            "nodeFillSelected": "#303745",
+            "nodeStroke": "transparent",
+            "nodeStrokeSelected": "#dfe5f0",
+            "edgeStroke": "#a9b0bd",
+            "relationStroke": "#8bb4ff",
+            "relationStrokeSelected": "#ffb4ab",
+            "summaryStroke": "#525b6b"
+          }
+        },
+        "edges": {
+          "strokeWidth": 4,
+          "cap": "round",
+          "join": "round",
+          "routeType": "orthogonal-rounded"
+        },
+        "relations": {
+          "strokeWidth": 2,
+          "cap": "round",
+          "join": "round"
+        },
+        "nodeShape": {
+          "type": "rounded-rect",
+          "radius": 16,
+          "strokeWidth": 0
+        },
+        "rainbow": {
+          "enabled": false,
+          "palette": [
+            "#303745",
+            "#1b5fa7",
+            "#0ea5e9",
+            "#14b8a6",
+            "#22c55e",
+            "#f59e0b",
+            "#fb7185",
+            "#a78bfa"
+          ]
+        },
+        "background": {
+          "color": "#0e1219"
+        },
+        "rules": {
+          "nodeRules": [
+            {
+              "id": "m3-root",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 0
+              },
+              "apply": {
+                "layout": {
+                  "textAlign": "center",
+                  "fontWeight": 700,
+                  "fontSize": 24,
+                  "paddingX": 18,
+                  "paddingY": 12
+                },
+                "paint": {
+                  "nodeFill": "#303745",
+                  "nodeFillSelected": "#3a4354",
+                  "text": "#f6f7fb"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-1",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 1
+              },
+              "apply": {
+                "layout": {
+                  "fontWeight": 600,
+                  "fontSize": 18
+                },
+                "paint": {
+                  "nodeFill": "#242b37",
+                  "text": "#e6e9ef"
+                },
+                "incomingEdge": {
+                  "strokeColor": "#c5cad4",
+                  "routeType": "center-quadratic"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-2",
+              "priority": 10,
+              "when": {
+                "kind": "depth",
+                "depth": 2
+              },
+              "apply": {
+                "paint": {
+                  "nodeFill": "#1a2435",
+                  "text": "#dce3f3"
+                },
+                "incomingEdge": {
+                  "strokeColor": "#8bb4ff"
+                }
+              }
+            },
+            {
+              "id": "m3-depth-3plus",
+              "priority": 10,
+              "when": {
+                "kind": "depthRange",
+                "minDepth": 3
+              },
+              "apply": {
+                "incomingEdge": {
+                  "strokeWidth": 1.75
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "updatedAt": 1793502562710
+  },
+  "updatedAt": 1793502562710,
+  "description": "Material 3 seed #303745",
+  "preview": {
+    "thumbnail": {
+      "source": "theme-preview-svg-v1",
+      "dataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20role%3D%22presentation%22%20viewBox%3D%220%200%20244%2096%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20aria-hidden%3D%22true%22%20height%3D%2296%22%20width%3D%22244%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22_r_29_-local-kmind-slate-theme-preview-card-clip%22%3E%3Crect%20height%3D%2296%22%20rx%3D%2212%22%20width%3D%22244%22%20x%3D%220%22%20y%3D%220%22%3E%3C%2Frect%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%23_r_29_-local-kmind-slate-theme-preview-card-clip)%22%3E%3Cg%20transform%3D%22translate(0%200)%22%3E%3CclipPath%20id%3D%22_r_29_-local-kmind-slate-light-theme-preview-clip%22%3E%3Crect%20height%3D%2296%22%20width%3D%22122%22%20x%3D%220%22%20y%3D%220%22%3E%3C%2Frect%3E%3C%2FclipPath%3E%3Cg%20clip-path%3D%22url(%23_r_29_-local-kmind-slate-light-theme-preview-clip)%22%3E%3Crect%20fill%3D%22%23f6f7fb%22%20height%3D%2296%22%20width%3D%22122%22%20x%3D%220%22%20y%3D%220%22%3E%3C%2Frect%3E%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M%2036.53567708333333%2048%20Q%2036.53567708333333%2027.5%2066%2027.5%22%20stroke%3D%22%23303745%22%20stroke-width%3D%222.2%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%2036.58515625%2048%20Q%2036.58515625%2067.5%2066%2067.5%22%20stroke%3D%22%23303745%22%20stroke-width%3D%222.2%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Crect%20fill%3D%22%233949a9%22%20stroke%3D%22transparent%22%20stroke-width%3D%220%22%20height%3D%2224%22%20rx%3D%2212%22%20ry%3D%2212%22%20width%3D%2238%22%20x%3D%2210%22%20y%3D%2236%22%3E%3C%2Frect%3E%3Crect%20fill%3D%22%23eef1f6%22%20stroke%3D%22transparent%22%20stroke-width%3D%220%22%20height%3D%2219%22%20rx%3D%229.5%22%20ry%3D%229.5%22%20width%3D%2236%22%20x%3D%2266%22%20y%3D%2218%22%3E%3C%2Frect%3E%3Crect%20fill%3D%22%23eef1f6%22%20stroke%3D%22transparent%22%20stroke-width%3D%220%22%20height%3D%2219%22%20rx%3D%229.5%22%20ry%3D%229.5%22%20width%3D%2236%22%20x%3D%2266%22%20y%3D%2258%22%3E%3C%2Frect%3E%3C%2Fg%3E%3Cg%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M%2022.5%2048%20H%2035.5%22%20opacity%3D%220.72%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.5%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%2077.9%2027.5%20H%2090.1%22%20opacity%3D%220.72%22%20stroke%3D%22%231a1f27%22%20stroke-width%3D%221.5%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%2077.9%2067.5%20H%2090.1%22%20opacity%3D%220.72%22%20stroke%3D%22%231a1f27%22%20stroke-width%3D%221.5%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%20fill%3D%22none%22%20opacity%3D%220.74%22%20stroke%3D%22%23f59e0b%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%221.2%22%20transform%3D%22translate(11%2010)%22%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%223.2%22%20fill%3D%22%23f59e0b%22%20stroke%3D%22none%22%3E%3C%2Fcircle%3E%3Cpath%20d%3D%22M%200%20-7%20V%20-5.2%20M%200%205.2%20V%207%20M%20-7%200%20H%20-5.2%20M%205.2%200%20H%207%20M%20-5%20-5%20L%20-3.8%20-3.8%20M%205%20-5%20L%203.8%20-3.8%20M%20-5%205%20L%20-3.8%203.8%20M%205%205%20L%203.8%203.8%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(122%200)%22%3E%3CclipPath%20id%3D%22_r_29_-local-kmind-slate-dark-theme-preview-clip%22%3E%3Crect%20height%3D%2296%22%20width%3D%22122%22%20x%3D%220%22%20y%3D%220%22%3E%3C%2Frect%3E%3C%2FclipPath%3E%3Cg%20clip-path%3D%22url(%23_r_29_-local-kmind-slate-dark-theme-preview-clip)%22%3E%3Crect%20fill%3D%22%230e1219%22%20height%3D%2296%22%20width%3D%22122%22%20x%3D%220%22%20y%3D%220%22%3E%3C%2Frect%3E%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M%2036.53567708333333%2048%20Q%2036.53567708333333%2027.5%2066%2027.5%22%20stroke%3D%22%23c5cad4%22%20stroke-width%3D%222.2%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%2036.58515625%2048%20Q%2036.58515625%2067.5%2066%2067.5%22%20stroke%3D%22%23c5cad4%22%20stroke-width%3D%222.2%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Crect%20fill%3D%22%23303745%22%20stroke%3D%22transparent%22%20stroke-width%3D%220%22%20height%3D%2224%22%20rx%3D%2212%22%20ry%3D%2212%22%20width%3D%2238%22%20x%3D%2210%22%20y%3D%2236%22%3E%3C%2Frect%3E%3Crect%20fill%3D%22%23242b37%22%20stroke%3D%22transparent%22%20stroke-width%3D%220%22%20height%3D%2219%22%20rx%3D%229.5%22%20ry%3D%229.5%22%20width%3D%2236%22%20x%3D%2266%22%20y%3D%2218%22%3E%3C%2Frect%3E%3Crect%20fill%3D%22%23242b37%22%20stroke%3D%22transparent%22%20stroke-width%3D%220%22%20height%3D%2219%22%20rx%3D%229.5%22%20ry%3D%229.5%22%20width%3D%2236%22%20x%3D%2266%22%20y%3D%2258%22%3E%3C%2Frect%3E%3C%2Fg%3E%3Cg%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M%2022.5%2048%20H%2035.5%22%20opacity%3D%220.72%22%20stroke%3D%22%23f6f7fb%22%20stroke-width%3D%221.5%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%2077.9%2027.5%20H%2090.1%22%20opacity%3D%220.72%22%20stroke%3D%22%23e6e9ef%22%20stroke-width%3D%221.5%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M%2077.9%2067.5%20H%2090.1%22%20opacity%3D%220.72%22%20stroke%3D%22%23e6e9ef%22%20stroke-width%3D%221.5%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%20opacity%3D%220.82%22%20transform%3D%22translate(105%2010)%22%3E%3Cpath%20d%3D%22M%205.8%20-5.8%20C%203.2%20-4.9%201.4%20-2.4%201.4%200.4%20C%201.4%204.2%204.4%207.2%208.2%207.2%20C%2010.2%207.2%2012%206.4%2013.2%205.1%20C%2012.4%205.4%2011.5%205.5%2010.6%205.5%20C%206.8%205.5%203.8%202.5%203.8%20-1.3%20C%203.8%20-3%204.5%20-4.6%205.8%20-5.8%20Z%22%20fill%3D%22%23cbd5e1%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3Cpath%20d%3D%22M%20122%208%20V%2088%22%20opacity%3D%220.22%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%221%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Crect%20fill%3D%22none%22%20height%3D%2295%22%20rx%3D%2212%22%20stroke%3D%22rgba(15%2C%2023%2C%2042%2C%200.12)%22%20width%3D%22243%22%20x%3D%220.5%22%20y%3D%220.5%22%3E%3C%2Frect%3E%3C%2Fsvg%3E",
+      "width": 244,
+      "height": 96,
+      "generatedAt": 1793502562710
+    }
+  },
+  "createdAt": 1793502532236
+}

@@ -1,0 +1,20 @@
+{
+  "kmind": {
+    "plugin": "siyuan-kmind-zen",
+    "version": "0.46.0",
+    "plugin_index_sha256": "9cb25d78ad7504735254fec04c531656457133c0432ed0b3ffaa51201413089e",
+    "supplied_filename": "local-kmind-slate.kmind-theme.json",
+    "supplied_sha256": "b295b979daa5a37d417b7d4b5774bc439ced252b56dd6f893b2121607df96940",
+    "validator_requirement": "WYe validates light and dark with qYe; missing slots report Theme variant is required.",
+    "timestamp_policy": "ah/Uq accept finite zero timestamps",
+    "native_acceptance": "pending"
+  },
+  "siyuan": {
+    "version": "3.8.9",
+    "stylesheet": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\SiYuan\\resources\\stage\\build\\desktop\\base.2a97d70b345d5431d8ce.css",
+    "stylesheet_sha256": "8ed3ad95c6498858a8078cdae4c634b6ee5d0ebf520df8ef15e5826bd0e58703",
+    "script": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\SiYuan\\resources\\stage\\build\\desktop\\main.eb7bd3ccb5e97bd946d4.js",
+    "script_sha256": "e0752b1de571d6efd9b8c60a3fa48370751d5e101d73d778cae10f42bec6b7c4",
+    "selector_authority": "Installed application assets; read-only inspection, not native runtime acceptance"
+  }
+}

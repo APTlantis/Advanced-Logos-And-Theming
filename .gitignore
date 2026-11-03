@@ -3404,3 +3404,16 @@ dist/
 !/docs/documentation-suite/visual-volumes-2026-10-31/source/*.py
 !/docs/documentation-suite/visual-volumes-2026-10-31/source/*.ps1
 !/docs/documentation-suite/visual-volumes-2026-10-31/source/*.cjs
+
+# Maintained KMind compatibility and SiYuan component refinement.
+!/apt_theme/siyuan.py
+!/apt_theme/templates/
+/apt_theme/templates/*
+!/apt_theme/templates/kmindz-template.json
+!/apt_theme/templates/kmindz-slate-v1.json
+!/apt_theme/templates/kmindz-contract.json
+!/docs/SIYUAN-STYLING.md
+!/evidence/theme-refinement-2026-11-02/
+/evidence/theme-refinement-2026-11-02/*
+!/evidence/theme-refinement-2026-11-02/*.json
+!/evidence/theme-refinement-2026-11-02/*.log
