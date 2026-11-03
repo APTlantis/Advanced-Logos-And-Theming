@@ -1,6 +1,6 @@
 # Version-aware output naming
 
-Current contract: 2026-10-18. This supersedes the 2026-10-16 compatibility-copy convention for future `generate` and `import` runs. Existing generated runs, Atlas snapshots, recovery archives, dated presentations and public copies remain untouched.
+Current contract: 2026-10-18, with the native KMind extension correction on 2026-11-02. This supersedes the 2026-10-16 compatibility-copy convention for future `generate` and `import` runs. Existing generated runs, Atlas snapshots, recovery archives, dated presentations and public copies remain untouched.
 
 ## Artwork generation identity
 
@@ -43,12 +43,13 @@ Examples for V2 Ada:
 | CodeMirror 5 CSS | `dnf-ada-codemirror5.css` |
 | CodeMirror 6 module | `dnf-ada-codemirror6.mjs` |
 | PowerPoint preview/template | `dnf-ada-powerpoint-sample.pptx`, `dnf-ada-powerpoint-template.potx` |
+| KMind package | `dnf-ada-kmindz.kmind-theme.json` |
 | SiYuan distributable | `dnf-ada-siyuan.zip` |
 | Target palette/swatch | `dnf-ada-<target>-palette.toml`, `dnf-ada-<target>-swatch.png` |
 | Target metadata | `dnf-ada-<target>-tokens.json`, `dnf-ada-<target>-validation.json` |
 | Integration instructions | `dnf-ada-<target>-readme.md` |
 
-SiYuan retains `theme.css`, `theme.json`, `README.md`, `icon.png` and `preview.png`, including inside its ZIP. Kmindz retains `KMINDS.json` under the supplied package contract. These fixed-name exceptions have no prefixed aliases and are identified in the manifest. Keep them in their target/theme directories when collecting multiple themes.
+SiYuan retains `theme.css`, `theme.json`, `README.md`, `icon.png` and `preview.png`, including inside its ZIP. KMind downloads use `<prefix>-<theme>-kmindz.kmind-theme.json`; `KMINDS.json` remains the logical manifest key and historical lookup fallback. SiYuan fixed-name exceptions have no prefixed aliases and are identified in the manifest. Keep native SiYuan members in their target/theme directories when collecting multiple themes.
 
 Run-root `run.json`, `palette.toml`, `palette.txt`, `palette.css`, `palette.png`, provenance/diagnostic JSON, `review.html` and `markdown-editors.html` remain stable. Original inputs under `source/`, vendor assets and nested upstream syntax source downloads keep their identities. Native Office package members remain unchanged except for the existing color adaptation.
 

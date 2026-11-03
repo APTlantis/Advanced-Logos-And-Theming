@@ -22,6 +22,8 @@ Artwork versions 1–5 use `apt`, `dnf`, `rpm`, `yum`, `eopkg`. Explicit and inf
 
 ## Existing theme targets
 
+The [2026-11-02 output refinement](docs/SIYUAN-STYLING.md) adds scoped SiYuan component mappings and [KMind Zen compatibility](docs/KMINDZ-TARGET.md). Review the fresh [three-theme pilot](pilot/theme-refinement-2026-11-02-review/index.html); existing runs and public copies remain unchanged. Native import/apply/rendering remains pending.
+
 All fifteen generate by default. Select a comma-separated subset with `--targets`:
 
 `windows_terminal,siyuan,typora,powerpoint,alacritty,notepad_plus_plus,sublime_text,svg,syntax_highlighting,data_visualization,website,kmindz,markdown,codemirror5,codemirror6`

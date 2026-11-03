@@ -1,6 +1,6 @@
 # Current validation and evidence limits
 
-The [2026-10-25 stabilization acceptance record](../evidence/stabilization-2026-10-25.json) is the current verification index. It separates the original 59-test baseline, complete generation/import hash comparisons, current regression tests, installed-wheel resource/use checks, actual SESM validation and offline browser rendering. Earlier evidence below remains attached to its original source/artifacts.
+The [2026-11-02 refinement acceptance](../evidence/theme-refinement-2026-11-02/acceptance.json) records KMind compatibility, scoped SiYuan styling, the three-theme pilot, preservation checks, and source/browser/installed-wheel gates. Native application import/apply/rendering remains pending. The [2026-10-25 stabilization acceptance record](../evidence/stabilization-2026-10-25.json) remains the stabilization verification index. It separates the original 59-test baseline, complete generation/import hash comparisons, current regression tests, installed-wheel resource/use checks, actual SESM validation and offline browser rendering. Earlier evidence below remains attached to its original source/artifacts.
 
 Real tracing fidelity, native SVG editor import and downstream application acceptance are not established by static, stub or browser checks. No theme installation/activation, public asset changes or publication occurred. [Stabilization findings](STABILIZATION-AUDIT.md).
 

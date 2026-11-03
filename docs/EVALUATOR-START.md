@@ -4,7 +4,9 @@ Source boundary: **2026-10-25**, package **0.1.0 local pilot**. Begin with [PROJ
 
 The fifteen theme targets, canonical color contract, native interfaces and existing run formats remain stable. CLI presentation, pipeline orchestration, target adaptation and exporter dispatch now have separate owners. Shared transactions preserve rollback. The independent `finish` command processes explicit existing PNG selections; SESM ownership stays in the sibling project. [Finishing contract](SVG-FINISHING.md).
 
-Current test inventory is 75 methods; consult recorded results for actual pass/failure evidence. Historical entries below contain earlier inventories. Native acceptance, real tracing fidelity, installation and publication are separate. Historical migration tools that overwrite outputs/records must not be run as harmless checks.
+The 2026-11-02 [KMind compatibility](KMINDZ-TARGET.md) and [SiYuan component refinement](SIYUAN-STYLING.md) update existing outputs only. KMind uses a version-prefixed `.kmind-theme.json` download with `KMINDS.json` retained as its logical manifest key, and identical dark styling in both host-required variant slots. SiYuan mappings now live in `apt_theme/siyuan.py`. Review [the refinement evidence](../evidence/theme-refinement-2026-11-02/acceptance.json) and the fresh three-theme pilot before native testing.
+
+Current test inventory is 81 methods; consult recorded results for actual pass/failure evidence. Historical entries below contain earlier inventories. Native acceptance, real tracing fidelity, installation and publication are separate. Historical migration tools that overwrite outputs/records must not be run as harmless checks.
 
 <details><summary>Historical evaluator context and dated extensions</summary>
 

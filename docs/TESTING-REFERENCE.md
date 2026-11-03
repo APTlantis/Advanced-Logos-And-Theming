@@ -1,10 +1,16 @@
 # Current testing reference
 
-Current stabilization suite: **75 methods** (59 baseline plus 15 finishing/transaction/artifact checks and one installed-cache regression). See [acceptance](../evidence/stabilization-2026-10-25.json) for actual results, not just inventory. Run ` .\.venv\Scripts\python.exe -m unittest discover -s tests -v` from the project root. The managed sandbox produced temporary-file permission failures; outside-sandbox baseline and current results are recorded separately.
+Current suite: **81 methods** (the 75-method stabilization suite plus five SiYuan contracts and one KMind provenance/variant regression). See [2026-11-02 acceptance](../evidence/theme-refinement-2026-11-02/acceptance.json) for current results; [stabilization acceptance](../evidence/stabilization-2026-10-25.json) retains its original scope. Run ` .\.venv\Scripts\python.exe -m unittest discover -s tests -v` from the project root. The managed sandbox produced temporary-file permission failures; outside-sandbox baseline and current results are recorded separately.
 
 `tools/check_stabilization.py NEW_DIRECTORY [--compare HASHES_JSON]` captures fresh generation/import fixtures across all fifteen targets and compares every emitted file hash. Never point it at an existing run. `tools/check_finishing.cjs FINISHED_DIRECTORY PLAYWRIGHT_MODULE CHROMIUM_EXECUTABLE EVIDENCE_DIRECTORY` verifies browser rendering, exact embedded PNG hashes, palette fills/order, labels and zero pixel changes from SESM insertion. It requires an existing finishing receipt and writes to the selected evidence directory.
 
 Finishing tests cover four representative selections, schema/safe-profile integration, bad metadata, missing tools, warning classification, input changes, legacy discovery, trace stubs, path/collision/hash guards and failed commit recovery. External SESM tools and ImageMagick are local integration dependencies. Real VTracer execution and native import remain separate gates. See [architecture](ARCHITECTURE.md) and [finishing](SVG-FINISHING.md).
+
+## Component refinement QA — 2026-11-02
+
+`tools/prepare_theme_refinement.py FRESH_DIRECTORY` creates only the explicit three-theme pilot from read-only source palettes and recorded semantic overrides. `tools/check_theme_refinement.cjs PILOT PLAYWRIGHT_MODULE CHROMIUM_EXECUTABLE INSTALLED_KMIND_PLUGIN EVIDENCE_DIRECTORY [NATIVE_STYLESHEET]` checks nine viewport scenarios, independent computed contrast, hover/pressed/focus/selection, table alignment, explicit user colors, unrelated controls, the installed KMind validator functions, and optional composition with the installed SiYuan stylesheet. Node is not required for Python generation. `tools/verify_theme_refinement_package.py INSTALLED_PACKAGE FIXTURE NEW_OUTPUT RECEIPT` compares an isolated installed-wheel import across all targets with networking and child processes blocked.
+
+Native import/apply/rendering remains separate and pending.
 
 <details><summary>Dated test inventories and earlier verification recipes</summary>
 

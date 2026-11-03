@@ -1,6 +1,6 @@
 # Architecture and stabilization
 
-Current source boundary: 2026-10-25. Package 0.1.0 remains a local pilot. Exporter expansion is paused while existing outputs are refined. SVG finishing is a separate asset utility, not a sixteenth theme target.
+Stabilization boundary: 2026-10-25; existing-output refinement: 2026-11-02. Package 0.1.0 remains a local pilot. Exporter expansion is paused while existing outputs are refined. SVG finishing is a separate asset utility, not a sixteenth theme target. [SiYuan component styling](SIYUAN-STYLING.md) and [KMind compatibility](KMINDZ-TARGET.md) record the subsequent bounded refinements.
 
 ## Data flow
 
@@ -30,6 +30,7 @@ flowchart LR
 | Color selection and assignment | `extraction`, `colors`, `semantics` | Canonical values remain independent of target tokens |
 | Target adaptation | `apt_theme.targets` | Fifteen target IDs, budgets and `adapt`; compatibility exporter helpers |
 | Native output dispatch | `apt_theme.exporters` | Existing specialized modules, native packages and target artifacts |
+| SiYuan components | `apt_theme.siyuan` | Palette aliases, native scoped selectors, surface checks and external offline specimens |
 | Identity and artifact lookup | `identity`, `output_names` | Five generation prefixes, authoritative manifests, historical fallback |
 | Output commit/rollback | `apt_theme.transactions` | Sibling staging; failed replacement restores the prior run |
 | Collection exploration | `apt_theme.atlas` | Read-only selected run snapshots; no theme regeneration |

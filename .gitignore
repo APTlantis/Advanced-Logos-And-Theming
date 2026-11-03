@@ -3417,3 +3417,7 @@ dist/
 /evidence/theme-refinement-2026-11-02/*
 !/evidence/theme-refinement-2026-11-02/*.json
 !/evidence/theme-refinement-2026-11-02/*.log
+!/evidence/theme-refinement-2026-11-02/*.json.gz
+!/evidence/theme-refinement-2026-11-02/browser/
+/evidence/theme-refinement-2026-11-02/browser/*
+!/evidence/theme-refinement-2026-11-02/browser/browser.json

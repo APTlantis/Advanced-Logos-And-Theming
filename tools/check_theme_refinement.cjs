@@ -1,7 +1,7 @@
 // Offline authored-specimen QA plus the installed KMind validator (no app writes).
 const fs = require('node:fs'), path = require('node:path'), assert = require('node:assert/strict');
 const vm = require('node:vm'), crypto = require('node:crypto');
-const [pilot, playwright, executablePath, plugin, evidence] = process.argv.slice(2);
+const [pilot, playwright, executablePath, plugin, evidence, nativeStylesheet] = process.argv.slice(2);
 const root = path.resolve(pilot), output = path.resolve(evidence);
 const {chromium} = require(playwright);
 const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -109,6 +109,27 @@ function hostValidator(source) {
       await page.setContent(fs.readFileSync(path.join(root,entry.theme+'-before.html'),'utf8'));
       await page.screenshot({path:path.join(output,entry.theme+'-before.png'),fullPage:true});
       record.themes.push(result);
+      if (nativeStylesheet) {
+        const nativeCss=fs.readFileSync(nativeStylesheet,'utf8');
+        const specimen=fs.readFileSync(artifact(run,'siyuan','examples.html'),'utf8');
+        await page.setContent(specimen.replace('<style>','<style>'+nativeCss+'</style><style>'));
+        // Compose the generated CSS with the real host stylesheet; fixture
+        // geometry remains authored. This still does not exercise the app.
+        const colors=await page.evaluate(()=>{
+          const style=s=>getComputedStyle(document.querySelector(s));
+          return {heading:style('.h2').color,link:style('#reference-link').color,
+            selected:style('#tree-selected .b3-list-item__toggle').color,
+            even:style('tbody tr:nth-child(2)').backgroundColor,
+            syntax:style('.hljs-title.function_').color,
+            font:style('.protyle-wysiwyg').fontFamily,
+            explicit:style('#explicit-color').color};
+        });
+        const rgb=key=>`rgb(${tokens.tokens[key].rgb.join(', ')})`;
+        assert.equal(colors.heading,rgb('secondary'));assert.equal(colors.link,rgb('primary'));
+        assert.equal(colors.selected,rgb('selection_text'));assert.equal(colors.even,rgb('panel'));
+        assert.equal(colors.syntax,rgb('function_on_panel'));assert.equal(colors.explicit,'rgb(170, 187, 204)');
+        result.installed_stylesheet_composition={passed:true,sha256:crypto.createHash('sha256').update(nativeCss).digest('hex'),computed:colors};
+      }
     }
     assert.deepEqual(record.external_requests,[]);assert.deepEqual(record.errors,[]);
     fs.writeFileSync(path.join(output,'browser.json'),JSON.stringify(record,null,2)+'\n');

@@ -1,12 +1,14 @@
 # Logos-And-Theming
 
-Reviewed **2026-10-25**. Owner: Herb. CTS project group, **0.1.0 local pilot**. Exporter expansion is paused for output refinement and codebase stabilization. Identity, physical root, ownership and release stage remain unchanged.
+Reviewed **2026-11-02**. Owner: Herb. CTS project group, **0.1.0 local pilot**. Exporter expansion is paused for output refinement and codebase stabilization. Identity, physical root, ownership and release stage remain unchanged.
 
 The group owns image-to-theme generation, artwork/catalogs, ICO/SVG conversion and atlas utilities. SVG metadata authoring remains independently governed by [SESM-Metadata-Embedder](../SESM-Metadata-Embedder/README.md). Finishing integrates that tool through its existing explicit root/configuration/write interface; it does not absorb the sibling project.
 
 The pipeline preserves original source bytes and selects/imports exactly 32 canonical colors. Semantic roles and dark target adaptation remain separate, without new hue families. Fifteen existing targets retain their native contracts, naming, token budgets and package resources. `finish` is an independent command for explicitly selected existing PNGs, with preview by default and fresh staged output on `--write`.
 
 ## Read first
+
+- [SiYuan component styling](docs/SIYUAN-STYLING.md) and [KMind compatibility](docs/KMINDZ-TARGET.md): 2026-11-02 output refinement, with a fresh three-theme pilot and [separate evidence](evidence/theme-refinement-2026-11-02/acceptance.json). No installation, activation, publication, or historical-run replacement.
 
 - [Eight visual documentation volumes](docs/documentation-suite/visual-volumes-2026-10-31/README.md): dated 2026-10-31, with editable slides, illustrated guides, offline specimens, and separate validation records. Historical presentations and source runs remain preserved.
 

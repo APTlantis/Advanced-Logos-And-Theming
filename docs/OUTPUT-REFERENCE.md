@@ -53,7 +53,7 @@ For current filenames, the shared identity resolver supplies `<prefix>-<theme>` 
 | Offline Prism syntax examples | `syntax_highlighting` | 32 | 30 | CSS, twelve pages, sources and runtime |
 | Data visualization / Matplotlib | `data_visualization` | 48 | 37 | Style, scales, fixture, three authored SVG charts |
 | Full website / scoped browser CSS | `website` | 112 | 89 | `theme.css`, landing/component specimens and neutral review index |
-| Kmindz mind-map package | `kmindz` | 40 | 32 | `KMINDS.json`, authored dark preview, palette/swatch and audit JSON |
+| Kmindz mind-map package | `kmindz` | 40 | 32 | `<prefix>-<theme>-kmindz.kmind-theme.json`, authored dark preview, palette/swatch and audit JSON |
 
 Budgets cap **named tokens**, not unique RGB colors, application fields, file counts or canonical palette size. Aliases are expected; an image with narrow hues cannot supply conventional red/green/blue distinctions without breaking the image-color rule. Exporters do not pad unused budget with arbitrary tokens. The first four application targets are not the only targets selected by default.
 
@@ -173,7 +173,7 @@ The artifact is a color-scheme object for operator integration with Terminal set
 
 Source: [`editor_css` and `export`](../apt_theme/exporters.py). Files: `theme.css`, `theme.json`, `README.md`, `icon.png`, `preview.png`, `package.zip`, plus audit JSON.
 
-`theme.css` declares all adapted `--apt-*` variables and maps dark-mode SiYuan `--b3-*` variables for backgrounds, surfaces, text, primary/secondary, error, border, code blocks, list hover/selection and font family. Selectors cover document body, docks/lists, dialogs, code blocks, links/headings, selection, blockquote borders, table/control borders and inputs. Eight `.hljs-*` classes consume syntax roles. `.apt-*` status/accent classes consume states; selected link/button/menu selectors use primary/secondary hover/active/subdued variants. When budget allows, scoped list/dialog syntax and text selectors consume panel/elevated variants.
+`theme.css` declares adapted `--apt-*` variables, separate semantic aliases, native dark-mode `--b3-*` mappings, and scoped component rules owned by `apt_theme/siyuan.py`. Typography, navigation, active/hover/focus states, tables, code, quotes, embeds, and database headers/cards use recorded foreground/surface roles. Expanded Highlight.js mappings remain editor-scoped. Fonts, explicit document colors, native table layout/alignment/resizing, and plugin-owned content are preserved. The external version-prefixed `examples.html` is an authored browser specimen, excluded from the unchanged five-member native ZIP. `tokens.json.siyuan` records selectors, aliases, and pending native acceptance. See [the component contract](SIYUAN-STYLING.md).
 
 Metadata declares slug name, display name, version 0.1.0, minAppVersion 3.7.0, modes `[dark]`, frontends `[all]`, and README/icon/preview paths. These are emitted declarations, not proof of compatibility with every frontend/version. Pillow creates the token swatch preview and a resized 160×160 icon. ZIP contains exactly the five theme files above, at its root, with fixed entry timestamps; audit JSON stays outside the theme ZIP.
 
@@ -185,7 +185,7 @@ Source: [`theme_css` and `export_examples`](../apt_theme/typora.py), dispatched 
 
 Typora exports `<slug>.css`, `examples.md`, `examples.html` and a local `example-image.png`, in addition to its token palette, swatch and validation records. `apt_theme/typora.py` owns application selectors and paired specimens; the browser page loads the actual exported CSS and is explicitly a simulation.
 
-Document rules are scoped under `#write`. Tables retain native layout and Markdown alignment, with collapsed borders, padded cells, elevated headers, alternating background/panel rows and wrapping long content. All six headings, nested/task lists, quotes, inline/fenced code, links, emphasis, highlights, footnotes, TOC and images receive screen styling. Existing CodeMirror syntax mappings and the 40-token budget are retained. No new colors or hue families are introduced. SiYuan CSS remains independently unchanged.
+Document rules are scoped under `#write`. Tables retain native layout and Markdown alignment, with collapsed borders, padded cells, elevated headers, alternating background/panel rows and wrapping long content. All six headings, nested/task lists, quotes, inline/fenced code, links, emphasis, highlights, footnotes, TOC and images receive screen styling. Existing CodeMirror syntax mappings and the 40-token budget are retained. No new colors or hue families are introduced. SiYuan has its own independent component mapping; Typora output is unchanged by the 2026-11-02 SiYuan refinement.
 
 Specimens include a 100-row table, a 12-column table, left/center/right alignment and long URLs. No scroll wrappers, sticky headers or forced table display modes are added. Very dense tables may wrap heavily at narrow widths; native editing and layout must be reviewed separately. Print/PDF styling, exhaustive application chrome, math and diagram rendering are outside this pass. Official selector guidance: [Typora custom themes](https://theme.typora.io/doc/Write-Custom-Theme/).
 
@@ -319,7 +319,7 @@ Current contract authority is the source and active project/governance records. 
 
 ## Kmindz package
 
-The twelfth target is `kmindz`, implemented in [`kmindz.py`](../apt_theme/kmindz.py). The supplied `kmind.theme-package` v1 structure is bundled as a reference template; exported identity and every color come from the current run. Only the dark variant is emitted. See [native structure, mappings, provenance and acceptance limits](KMINDZ-TARGET.md).
+The twelfth target is `kmindz`, implemented in [`kmindz.py`](../apt_theme/kmindz.py). The supplied `kmind.theme-package` v1 structure is bundled as a reference template; exported identity and every color come from the current run. Both required variant keys contain identical dark styling and the package defaults to dark. `KMINDS.json` is the logical manifest key; the physical filename uses `.kmind-theme.json`. See [native structure, mappings, provenance and acceptance limits](KMINDZ-TARGET.md).
 # Collectable filenames (2026-10-16)
 
 New generation/import runs emit freely named top-level target files through the `<prefix>-<theme>-<target>[-<role>]` convention, without compatibility copies. Generic names in this reference identify logical roles; only documented native package requirements retain fixed filenames. [Output naming](OUTPUT-NAMING.md) defines main files, supporting roles, hash manifests and dependency limits.

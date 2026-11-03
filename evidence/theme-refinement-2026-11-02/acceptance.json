@@ -1,0 +1,174 @@
+{
+  "date": "2026-11-02",
+  "timezone": "America/New_York",
+  "scope": "KMind Zen compatibility and restrained SiYuan component mapping, three-theme pilot only",
+  "pilot": "pilot/theme-refinement-2026-11-02-review/index.html",
+  "themes": [
+    {
+      "theme": "apt-Codex",
+      "source_run": "D:\\CTS\\Logos-And-Theming\\output\\apt-Codex",
+      "canonical_colors_unchanged": 32,
+      "source_palette_sha256": "75aa462325fd8dc2076fc6abeb2cf84e0d0bd9569f5d585ac08ae71df89bfebf",
+      "named_tokens": 62,
+      "contrast_checks": 179,
+      "contrast_failures": 0,
+      "status_collision": false,
+      "native_application_acceptance": "pending"
+    },
+    {
+      "theme": "apt-BlueSlate",
+      "source_run": "D:\\CTS\\Logos-And-Theming\\output\\apt-BlueSlate",
+      "canonical_colors_unchanged": 32,
+      "source_palette_sha256": "e134a3c08759c4fba5568b19686fbe4cf14dccd74b387f032f20502e16094ba5",
+      "named_tokens": 62,
+      "contrast_checks": 178,
+      "contrast_failures": 0,
+      "status_collision": false,
+      "native_application_acceptance": "pending"
+    },
+    {
+      "theme": "rpm-BlackGold",
+      "source_run": "D:\\CTS\\Logos-And-Theming\\output\\rpm-BlackGold",
+      "canonical_colors_unchanged": 32,
+      "source_palette_sha256": "a49eb1cfa7d9c5dfe2d7f26c7b652c2ae2425b41277ae7da348b308d117f010b",
+      "named_tokens": 62,
+      "contrast_checks": 178,
+      "contrast_failures": 0,
+      "status_collision": false,
+      "native_application_acceptance": "pending"
+    }
+  ],
+  "tests": {
+    "passed": 81,
+    "duration_seconds": 66.719,
+    "log": "final-tests.log",
+    "environment": "Outside managed sandbox after baseline WinError 5; ImageMagick Q16-HDRI first on PATH"
+  },
+  "browser": {
+    "version": "156.0.8078.80",
+    "themes": 3,
+    "viewport_scenarios": 9,
+    "widths": [
+      1440,
+      900,
+      390
+    ],
+    "external_requests": [],
+    "errors": [],
+    "record": "browser/browser.json",
+    "installed_siyuan_stylesheet_composition": true,
+    "minimum_observed_text_contrast": 4.501781025352478,
+    "visual_review": "Codex inspected Codex and BlackGold after screenshots; authored browser fixtures, not native app screenshots"
+  },
+  "kmind_host_theme_validator": {
+    "version": "0.46.0",
+    "source_sha256": "9cb25d78ad7504735254fec04c531656457133c0432ed0b3ffaa51201413089e",
+    "generated_themes": "all three accepted",
+    "previous_single_variant": "all three rejected; missing theme.variants.light",
+    "scope": "Exact installed WYe/qYe/color/route validation functions executed in isolated VM, not native import/apply"
+  },
+  "fixture_comparison": {
+    "import": {
+      "before_files": 356,
+      "after_files": 357,
+      "changed": [
+        "kmindz/KMINDS.json",
+        "kmindz/apt-stabilization-kmindz-files.json",
+        "kmindz/apt-stabilization-kmindz-format-provenance.json",
+        "kmindz/apt-stabilization-kmindz-tokens.json",
+        "kmindz/apt-stabilization-kmindz.kmind-theme.json",
+        "review.html",
+        "siyuan/apt-stabilization-siyuan-examples.html",
+        "siyuan/apt-stabilization-siyuan-files.json",
+        "siyuan/apt-stabilization-siyuan-palette.toml",
+        "siyuan/apt-stabilization-siyuan-swatch.png",
+        "siyuan/apt-stabilization-siyuan-tokens.json",
+        "siyuan/apt-stabilization-siyuan-validation.json",
+        "siyuan/apt-stabilization-siyuan.zip",
+        "siyuan/icon.png",
+        "siyuan/preview.png",
+        "siyuan/theme.css"
+      ],
+      "unrelated_target_files_unchanged": 326,
+      "unexpected_changes": [],
+      "canonical_files_unchanged": true
+    },
+    "generate": {
+      "before_files": 356,
+      "after_files": 357,
+      "changed": [
+        "kmindz/KMINDS.json",
+        "kmindz/apt-stabilization-kmindz-files.json",
+        "kmindz/apt-stabilization-kmindz-format-provenance.json",
+        "kmindz/apt-stabilization-kmindz-tokens.json",
+        "kmindz/apt-stabilization-kmindz.kmind-theme.json",
+        "review.html",
+        "siyuan/apt-stabilization-siyuan-examples.html",
+        "siyuan/apt-stabilization-siyuan-files.json",
+        "siyuan/apt-stabilization-siyuan-palette.toml",
+        "siyuan/apt-stabilization-siyuan-swatch.png",
+        "siyuan/apt-stabilization-siyuan-tokens.json",
+        "siyuan/apt-stabilization-siyuan-validation.json",
+        "siyuan/apt-stabilization-siyuan.zip",
+        "siyuan/icon.png",
+        "siyuan/preview.png",
+        "siyuan/theme.css"
+      ],
+      "unrelated_target_files_unchanged": 326,
+      "unexpected_changes": [],
+      "canonical_files_unchanged": true
+    }
+  },
+  "preservation": {
+    "files_checked": 38194,
+    "changed": [],
+    "missing": [],
+    "baseline_sha256": "aa820e0eb19ac128655969813e12119b369144d24a0900945ddd896df56564f9",
+    "roots": [
+      "output",
+      "assets",
+      "A:/doc-sites/Logos-Themes/public"
+    ],
+    "A_webserver_writes": "none; no commands mutate this root"
+  },
+  "installed_wheel": {
+    "file": ".build\\theme-refinement-2026-11-02\\wheels\\aptlantis_theme_pipeline-0.1.0-py3-none-any.whl",
+    "sha256": "b3e2cae3a816de484ade2331ad4103074c0a0aa630a9b2aed92e31313fcf15f0",
+    "module": "D:\\CTS\\Logos-And-Theming\\.build\\theme-refinement-2026-11-02\\installed\\apt_theme\\__init__.py",
+    "all_target_files_identical": 357,
+    "changed_files": [],
+    "network_blocked": true,
+    "child_processes_blocked": true,
+    "native_application_acceptance": "pending"
+  },
+  "versions": {
+    "python": "3.13.16",
+    "node": "v24.22.2",
+    "imagemagick": "Version: ImageMagick 7.1.2-34 Q16-HDRI x64 a0c4bf7:20261014 https://imagemagick.org"
+  },
+  "source_hashes": "source-hashes.json",
+  "contract_provenance": "native-contracts.json",
+  "pending": [
+    "Native KMind import and Apply",
+    "Native SiYuan rendering",
+    "Edit/save/reopen and other app versions/frontends",
+    "User visual acceptance"
+  ],
+  "operations_not_performed": [
+    "Theme installation or activation",
+    "Public-copy update or publication",
+    "Collection-wide regeneration"
+  ],
+  "discovery_records": "Read map, project manifest, maintained output/naming/testing/validation references updated; parent manifests and drive index unchanged because identity, ownership, scope boundaries and roots are unchanged.",
+  "documentation": "documentation.json",
+  "commands": {
+    "cwd": "D:\\CTS\\Logos-And-Theming",
+    "baseline": ".venv/Scripts/python.exe tools/check_stabilization.py .build/theme-refinement-2026-11-02/before-reliable",
+    "final_fixture": ".venv/Scripts/python.exe tools/check_stabilization.py .build/theme-refinement-2026-11-02/final",
+    "tests": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "pilot": ".venv/Scripts/python.exe tools/prepare_theme_refinement.py pilot/theme-refinement-2026-11-02-review",
+    "browser_tool": "tools/check_theme_refinement.cjs (explicit installed Playwright, Chrome, KMind plugin and SiYuan stylesheet paths recorded in native-contracts.json/browser.json)",
+    "wheel": "pip wheel --no-deps --no-build-isolation --no-index; pip install --no-deps --no-index --target .build/theme-refinement-2026-11-02/installed",
+    "installed_check": ".venv/Scripts/python.exe tools/verify_theme_refinement_package.py .build/theme-refinement-2026-11-02/installed .build/theme-refinement-2026-11-02/final .build/theme-refinement-2026-11-02/wheel-run evidence/theme-refinement-2026-11-02/package.json"
+  }
+}

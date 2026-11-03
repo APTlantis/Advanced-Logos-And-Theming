@@ -1,0 +1,142 @@
+{
+  "browser": "156.0.8078.80",
+  "plugin": "0.46.0",
+  "plugin_index_sha256": "9cb25d78ad7504735254fec04c531656457133c0432ed0b3ffaa51201413089e",
+  "themes": [
+    {
+      "theme": "apt-Codex",
+      "host_theme_validator": "passed",
+      "previous_single_variant": "rejected",
+      "viewports": [
+        {
+          "width": 1440,
+          "text_pairs": 56,
+          "minimum_contrast": 4.515412932399286,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        },
+        {
+          "width": 900,
+          "text_pairs": 56,
+          "minimum_contrast": 4.515412932399286,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        },
+        {
+          "width": 390,
+          "text_pairs": 56,
+          "minimum_contrast": 4.515412932399286,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        }
+      ],
+      "installed_stylesheet_composition": {
+        "passed": true,
+        "sha256": "8ed3ad95c6498858a8078cdae4c634b6ee5d0ebf520df8ef15e5826bd0e58703",
+        "computed": {
+          "heading": "rgb(118, 148, 184)",
+          "link": "rgb(29, 249, 162)",
+          "selected": "rgb(254, 254, 254)",
+          "even": "rgb(18, 36, 40)",
+          "syntax": "rgb(238, 127, 11)",
+          "font": "system-ui, sans-serif",
+          "explicit": "rgb(170, 187, 204)"
+        }
+      }
+    },
+    {
+      "theme": "apt-BlueSlate",
+      "host_theme_validator": "passed",
+      "previous_single_variant": "rejected",
+      "viewports": [
+        {
+          "width": 1440,
+          "text_pairs": 56,
+          "minimum_contrast": 4.501781025352478,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        },
+        {
+          "width": 900,
+          "text_pairs": 56,
+          "minimum_contrast": 4.501781025352478,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        },
+        {
+          "width": 390,
+          "text_pairs": 56,
+          "minimum_contrast": 4.501781025352478,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        }
+      ],
+      "installed_stylesheet_composition": {
+        "passed": true,
+        "sha256": "8ed3ad95c6498858a8078cdae4c634b6ee5d0ebf520df8ef15e5826bd0e58703",
+        "computed": {
+          "heading": "rgb(128, 144, 176)",
+          "link": "rgb(73, 141, 255)",
+          "selected": "rgb(253, 254, 254)",
+          "even": "rgb(16, 32, 54)",
+          "syntax": "rgb(78, 136, 210)",
+          "font": "system-ui, sans-serif",
+          "explicit": "rgb(170, 187, 204)"
+        }
+      }
+    },
+    {
+      "theme": "rpm-BlackGold",
+      "host_theme_validator": "passed",
+      "previous_single_variant": "rejected",
+      "viewports": [
+        {
+          "width": 1440,
+          "text_pairs": 56,
+          "minimum_contrast": 4.5150086807889664,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        },
+        {
+          "width": 900,
+          "text_pairs": 56,
+          "minimum_contrast": 4.5150086807889664,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        },
+        {
+          "width": 390,
+          "text_pairs": 56,
+          "minimum_contrast": 4.5150086807889664,
+          "overflow": false,
+          "hover_focus_pressed_selection": "passed",
+          "alignment_user_color_isolation": "passed"
+        }
+      ],
+      "installed_stylesheet_composition": {
+        "passed": true,
+        "sha256": "8ed3ad95c6498858a8078cdae4c634b6ee5d0ebf520df8ef15e5826bd0e58703",
+        "computed": {
+          "heading": "rgb(250, 239, 178)",
+          "link": "rgb(216, 121, 69)",
+          "selected": "rgb(254, 254, 252)",
+          "even": "rgb(25, 34, 40)",
+          "syntax": "rgb(250, 239, 178)",
+          "font": "system-ui, sans-serif",
+          "explicit": "rgb(170, 187, 204)"
+        }
+      }
+    }
+  ],
+  "external_requests": [],
+  "errors": [],
+  "native_application_acceptance": "pending"
+}
