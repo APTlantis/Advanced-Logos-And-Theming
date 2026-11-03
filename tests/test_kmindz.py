@@ -10,6 +10,8 @@ from apt_theme.colors import from_rgb,contrast
 from apt_theme.semantics import assign
 from apt_theme.targets import DEFAULTS,adapt,export
 from apt_theme.kmindz import package
+from importlib.resources import files
+import hashlib
 
 class KmindzTests(unittest.TestCase):
     def setUp(self):
@@ -26,7 +28,9 @@ class KmindzTests(unittest.TestCase):
         self.assertEqual(p['schemaVersion'],1)
         self.assertEqual(p['id'],'aptlantis-cyan-test-canonical32')
         self.assertEqual(p['theme']['id'],p['id'])
-        self.assertEqual(set(p['theme']['variants']),{'dark'})
+        self.assertEqual(set(p['theme']['variants']),{'light','dark'})
+        self.assertEqual(p['theme']['variants']['light'],p['theme']['variants']['dark'])
+        self.assertEqual(p['defaults']['appearance'],'dark')
         v=p['theme']['variants']['dark']
         self.assertEqual(len(v['rules']['nodeRules']),4)
         self.assertEqual(v['edges']['routeType'],'orthogonal-rounded')
@@ -68,8 +72,22 @@ class KmindzTests(unittest.TestCase):
             before=copy.deepcopy(self.colors)
             export(self.result,dest,'Test',self.colors,'a'*64, theme_version=1)
             p=json.loads((dest / self.result["artifact_paths"]["KMINDS.json"]).read_text())
+            self.assertEqual(self.result['artifact_paths']['KMINDS.json'],'apt-test-kmindz.kmind-theme.json')
             self.assertEqual(p['theme']['variants']['dark']['tokens']['paint']['bg'],self.result['tokens']['background']['hex'])
             for f in ['preview.svg','format-provenance.json','tokens.json','validation.json','apt-test-kmindz-palette.toml','apt-test-kmindz-swatch.png']:
                 self.assertTrue((dest/self.result["artifact_paths"].get(f,f)).is_file(),f)
             self.assertEqual(self.colors,before)
             self.assertEqual(json.loads((dest / self.result["artifact_paths"]["validation.json"]).read_text())['native_visual_acceptance'],'pending')
+
+    def test_supplied_contract_provenance_and_previous_single_slot_regression(self):
+        from apt_theme.kmindz import TEMPLATE, CONTRACT
+        receipt = json.loads(files('apt_theme').joinpath(CONTRACT).read_text(encoding='utf-8'))
+        self.assertEqual(hashlib.sha256(files('apt_theme').joinpath(TEMPLATE).read_bytes()).hexdigest(), receipt['supplied_sha256'])
+        self.assertEqual(receipt['version'], '0.46.0')
+        out, *_ = package(self.result, 'Test')
+        # The host's WYe validator visits both keys; a single dark slot is invalid.
+        def missing_slots(value):
+            return [slot for slot in ('light', 'dark') if not value['theme']['variants'].get(slot)]
+        self.assertEqual(missing_slots(out), [])
+        del out['theme']['variants']['light']
+        self.assertEqual(missing_slots(out), ['light'])

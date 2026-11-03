@@ -8,7 +8,8 @@ import xml.etree.ElementTree as ET
 
 from .colors import contrast
 
-TEMPLATE = 'templates/kmindz-template.json'
+TEMPLATE = 'templates/kmindz-slate-v1.json'
+CONTRACT = 'templates/kmindz-contract.json'
 RAINBOW = ('primary', 'secondary', 'keyword', 'string', 'number', 'type',
            'function', 'operator', 'constant', 'success', 'info', 'warning')
 
@@ -70,7 +71,10 @@ def package(result, name):
     identity=(result.get('theme_identity', {}).get('prefix', '')+'-'+result.get('theme_identity', {}).get('slug', '') if 'theme_identity' in result else slug(name))+'-canonical32'; display=name+' Â· Canonical 32'
     description=f'{name}: image-derived dark mind-map theme from the canonical 32-color palette.'
     out.update(id=identity,name=display,description=description,createdAt=0,updatedAt=0)
-    out['theme'].update(id=identity,name=display,description=description,updatedAt=0,variants={'dark':variant})
+    # KMind Zen 0.46.0 validates both slots, even for a dark-only theme.
+    out['theme'].update(id=identity,name=display,description=description,updatedAt=0,
+                        variants={'light':copy.deepcopy(variant),'dark':variant})
+    out['defaults'] = {'appearance':'dark'}
     svg=preview_svg(variant)
     out['preview']={'thumbnail':{'source':'theme-preview-svg-v1','dataUrl':'data:image/svg+xml;charset=utf-8,'+quote(svg,safe=''),
                                  'width':244,'height':96,'generatedAt':0}}
@@ -88,8 +92,10 @@ def export_kmindz(result,directory,name):
     (directory/artifact('KMINDS.json')).write_text(json.dumps(out,indent=2,ensure_ascii=False,allow_nan=False)+'\n',encoding='utf-8')
     (directory/artifact('preview.svg')).write_text(svg+'\n',encoding='utf-8')
     (directory/artifact('format-provenance.json')).write_text(json.dumps({
-        'contract':'kmind.theme-package','schemaVersion':1,'source':f"User-supplied {artifact('KMINDS.json')} template",
+        'contract':'kmind.theme-package','schemaVersion':1,'source':'User-supplied local-kmind-slate.kmind-theme.json',
+        'compatibility':json.loads(files('apt_theme').joinpath(CONTRACT).read_text(encoding='utf-8')),
+        'light_slot':'Identical dark styling required by the host validator; no light theme generated',
         'template_sha256':template_hash,'variant':'dark','timestamps':'0 = unspecified reproducible export timestamp',
         'native_import_acceptance':'pending','preview':'Authored color preview, not a native Kmindz render'},indent=2)+'\n',encoding='utf-8')
     result['native_slots']=slots
-    result['kmindz']={'package':artifact('KMINDS.json'),'preview':artifact('preview.svg'),'template_sha256':template_hash,'variant':'dark'}
+    result['kmindz']={'package':artifact('KMINDS.json'),'preview':artifact('preview.svg'),'template_sha256':template_hash,'variant':'dark','light_slot':'dark compatibility mirror'}

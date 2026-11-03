@@ -29,13 +29,15 @@ class ArtifactNames:
         path = PurePosixPath(logical)
         if path.name != logical or logical in (".", ".."):
             raise ValueError("Artifact keys must be top-level filenames: " + logical)
-        fixed = (self.target == "siyuan" and logical in SIYUAN) or (self.target == "kmindz" and logical == "KMINDS.json")
+        fixed = self.target == "siyuan" and logical in SIYUAN
         role = "primary" if logical == self.primary or logical == "KMINDS.json" else slug(path.stem)
         if role.startswith(slug(self.target) + "-"):
             role = role[len(slug(self.target)) + 1:]
         if self.target == "powerpoint" and path.suffix in (".pptx", ".potx"):
             role = "sample" if path.suffix == ".pptx" else "template"
         destination = logical if fixed else self.stem + ("" if role == "primary" else "-" + role) + path.suffix.lower()
+        if self.target == "kmindz" and logical == "KMINDS.json":
+            destination = self.stem + ".kmind-theme.json"
         if destination in self.paths.values():
             raise ValueError("Artifact naming collision: " + destination)
         self.paths[logical], self.roles[logical] = destination, role

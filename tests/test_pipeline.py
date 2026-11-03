@@ -233,7 +233,7 @@ class PipelineTests(unittest.TestCase):
             elif target == "kmindz":
                 native = json.loads((destination / result["artifact_paths"]["KMINDS.json"]).read_text())
                 self.assertEqual(native["kind"], "kmind.theme-package")
-                self.assertEqual(set(native["theme"]["variants"]), {"dark"})
+                self.assertEqual(set(native["theme"]["variants"]), {"light", "dark"})
                 self.assertEqual(native["theme"]["variants"]["dark"]["tokens"]["paint"]["bg"], result["tokens"]["background"]["hex"])
                 self.assertTrue((destination / result["artifact_paths"]["preview.svg"]).is_file())
             else:

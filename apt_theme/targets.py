@@ -93,6 +93,9 @@ def adapt(colors, roles, target, budget):
                 if len(tokens) < budget:
                     add(key, role, key.replace("_", " ") + " text", minimum=4.5)
         if target in ("siyuan", "typora"):
+            if target == "siyuan":
+                from .siyuan import refine_status
+                refine_status(tokens, add)
             # These state tokens are consumed by selectors, not budget filler.
             for state in ("hover", "pressed", "subdued"):
                 for role in ("primary", "secondary", "warning", "error", "success", "info"):
@@ -119,11 +122,15 @@ def adapt(colors, roles, target, budget):
     aliases = {}
     for key, c in tokens.items():
         aliases.setdefault(c["hex"], []).append(key)
-    return {"target": target, "budget": budget, "named_count": len(tokens),
+    result = {"target": target, "budget": budget, "named_count": len(tokens),
             "unique_count": len(aliases), "tokens": tokens, "checks": checks,
             "omitted_canonical": [key for key in colors if key not in used],
             "aliases": [v for v in aliases.values() if len(v) > 1],
             "contrast_failures": sum(not c["pass"] for c in checks)}
+    if target == "siyuan":
+        from .siyuan import validate
+        validate(result)
+    return result
 
 
 def css_tokens(tokens):

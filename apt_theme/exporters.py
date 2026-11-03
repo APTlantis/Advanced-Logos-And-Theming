@@ -14,56 +14,8 @@ def editor_css(tokens, siyuan=False):
     if not siyuan:
         from .typora import theme_css
         return css_tokens(tokens) + theme_css(tokens)
-    css = css_tokens(tokens)
-    if siyuan:
-        css += """html[data-theme-mode='dark'] {
- --b3-theme-background: var(--apt-background); --b3-theme-surface: var(--apt-panel);
- --b3-theme-surface-light: var(--apt-elevated); --b3-theme-on-background: var(--apt-foreground);
- --b3-theme-on-surface: var(--apt-foreground); --b3-theme-on-surface-light: var(--apt-muted);
- --b3-theme-primary: var(--apt-primary); --b3-theme-on-primary: var(--apt-background);
- --b3-theme-primary-light: var(--apt-selection); --b3-theme-secondary: var(--apt-secondary);
- --b3-theme-error: var(--apt-error); --b3-border-color: var(--apt-border);
- --b3-protyle-code-background: var(--apt-panel); --b3-protyle-code-linenumber-hl: var(--apt-muted);
- --b3-list-hover: var(--apt-elevated); --b3-list-background: var(--apt-selection);
- --b3-font-family: system-ui, sans-serif;
-}
-body, .protyle-wysiwyg { background: var(--apt-background); color: var(--apt-foreground); }
-.layout__dockl, .layout__dockr, .layout__dockb, .b3-list { background: var(--apt-panel); color: var(--apt-foreground); }
-.b3-dialog__container { background: var(--apt-elevated); color: var(--apt-foreground); }
-"""
-        css += ".protyle-wysiwyg [data-type='NodeCodeBlock'] { background:var(--apt-panel); color:var(--apt-foreground); }\n"
-    css += """a, h1, h2, h3 { color:var(--apt-primary); }
-::selection { background:var(--apt-selection); color:var(--apt-selection-text); }
-blockquote { border-left:3px solid var(--apt-primary); color:var(--apt-muted); }
-table, td, th, hr, input { border-color:var(--apt-border); }
-code { background:var(--apt-panel); }
-input, textarea, button { background:var(--apt-panel); color:var(--apt-foreground); }
-"""
-    for role in SYNTAX:
-        css += f".hljs-{role} {{ color:var(--apt-{role}); }}\n"
-    for role in ("primary", "secondary", "warning", "error", "success", "info"):
-        for state, pseudo in (("hover", ":hover"), ("pressed", ":active"), ("subdued", "[aria-disabled='true']")):
-            key = role + "_" + state
-            if key in tokens:
-                css += f".apt-{role}{pseudo} {{ color:var(--apt-{key.replace('_', '-')}); }}\n"
-                if role == "primary":
-                    css += f"a{pseudo}, .b3-button--outline{pseudo} {{ color:var(--apt-{key.replace('_', '-')}); }}\n"
-                elif role == "secondary":
-                    css += f"button{pseudo}, .b3-menu__item{pseudo} {{ color:var(--apt-{key.replace('_', '-')}); }}\n"
-        css += f".apt-{role} {{ color:var(--apt-{role}); }}\n"
-    for surface, selectors in (("panel", ".b3-list, .protyle-wysiwyg [data-type='NodeCodeBlock']"),
-                               ("elevated", ".b3-dialog__container")):
-        if siyuan:
-            key = "foreground_on_" + surface
-            if key in tokens:
-                css += f"{selectors} {{ color:var(--apt-{key.replace('_', '-')}); }}\n"
-            for role in ("muted", "primary", *SYNTAX):
-                key = role + "_on_" + surface
-                if key in tokens:
-                    prefix = ".b3-list" if surface == "panel" else ".b3-dialog__container"
-                    cls = f".hljs-{role}" if role in SYNTAX else f".apt-{role}"
-                    css += f"{prefix} {cls} {{ color:var(--apt-{key.replace('_', '-')}); }}\n"
-    return css
+    from .siyuan import theme_css
+    return css_tokens(tokens) + theme_css(tokens)
 
 
 def export(result, directory, name, canonical, source_hash, identity=None, theme_version=None):
@@ -132,6 +84,10 @@ def export(result, directory, name, canonical, source_hash, identity=None, theme
             from .typora import export_examples
             export_examples(result, directory, name, filename)
         if target == "siyuan":
+            from .siyuan import mapping, specimen
+            result['siyuan'] = mapping(tokens)
+            (directory / artifact('examples.html')).write_text(specimen(css, name), encoding='utf-8')
+            result['examples'] = {'html': artifact('examples.html')}
             from .report import swatch
             swatch(tokens, directory / artifact('preview.png'), name)
             from PIL import Image

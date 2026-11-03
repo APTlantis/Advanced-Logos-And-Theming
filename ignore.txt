@@ -1,3 +1,4 @@
+apt-theme generate assets\sources\apt-ada-logo.png --output output\apt-Ada --name 'Aptlantis-Ada' --overwrite --theme-version 1
 apt-theme generate assets\sources\apt-blackgold-logo.png --output output\apt-BlackGold --name 'Aptlantis-BlackGold' --overwrite --theme-version 1
 apt-theme generate assets\sources\apt-crystal-logo.png --output output\apt-Crystal --name 'Aptlantis-Crystal' --overwrite --theme-version 1
 apt-theme generate assets\sources\apt-factor-logo.png --output output\apt-Factor --name 'Aptlantis-Factor' --overwrite --theme-version 1
@@ -8,6 +9,8 @@ apt-theme generate assets\sources\apt-scratch-logo.png --output output\apt-Scrat
 apt-theme generate assets\sources\apt-spark-logo.png --output output\apt-Spark --name 'Aptlantis-Spark' --overwrite --theme-version 1
 apt-theme generate assets\sources\apt-swift-logo.png --output output\apt-Swift --name 'Aptlantis-Swift' --overwrite --theme-version 1
 apt-theme generate assets\sources\apt-blueslate-logo.png --output output\apt-BlueSlate --name 'Aptlantis-BlueSlate' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-codex-logo.png --output output\apt-Codex --name 'Aptlantis-Codex' --overwrite --theme-version 1
+apt-theme generate assets\sources\apt-zig-dark-logo.png --output output\apt-Zig-Dark --name 'Aptlantis-Zig-Dark' --overwrite --theme-version 1
 
 apt-theme generate assets\sources\dnf-ada-logo.png --output output\dnf-Ada --name 'Aptlantis-Ada' --overwrite --theme-version 2
 apt-theme generate assets\sources\dnf-assembly-logo.png --output output\dnf-Assembly --name 'Aptlantis-Assembly' --overwrite --theme-version 2
